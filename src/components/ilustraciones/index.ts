@@ -1,6 +1,8 @@
 import type { ComponentType } from 'react'
 import CorchoLamina from './CorchoLamina.tsx'
 import MicroscopioLeeuwenhoek from './MicroscopioLeeuwenhoek.tsx'
+import TejidoVegetal from './TejidoVegetal.tsx'
+import TejidoAnimal from './TejidoAnimal.tsx'
 import GotaAnimalculos from './GotaAnimalculos.tsx'
 import MicroscopioHooke from './MicroscopioHooke.tsx'
 
@@ -10,4 +12,6 @@ export const ILUSTRACIONES_SVG: Record<string, ComponentType> = {
   'microscopio-hooke': MicroscopioHooke,
   'microscopio-leeuwenhoek': MicroscopioLeeuwenhoek,
   'gota-animalculos': GotaAnimalculos,
+  'tejido-vegetal': TejidoVegetal,
+  'tejido-animal': TejidoAnimal,
 }

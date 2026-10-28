@@ -1,7 +1,7 @@
 import { useEffect, useId, useRef, useState } from 'react'
 import type { KeyboardEvent } from 'react'
 import type { Bloque } from '../data/schema.ts'
-import { DIAGRAMAS } from './diagramas/index.ts'
+import { DIAGRAMAS } from './diagramas/index.tsx'
 import { NivelInsignia, BorradorInsignia } from './Insignia.tsx'
 import Retrato from './Retrato.tsx'
 import Ilustraciones from './Ilustraciones.tsx'

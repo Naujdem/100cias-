@@ -34,9 +34,43 @@ function MiniGota() {
   )
 }
 
+function MiniPlanta() {
+  return (
+    <svg viewBox="0 0 160 100" className="h-full w-full" aria-hidden="true">
+      <rect width="160" height="100" fill="#f1f7df" />
+      {[0, 1, 2, 3].map((f) => [0, 1, 2, 3, 4].map((c) => (
+        <g key={`${f}${c}`}>
+          <rect x={10 + c * 28} y={8 + f * 22} width="28" height="22" fill="#cfe8f2" stroke="#6b8a2f" strokeWidth="3" />
+          <circle cx={(f + c) % 2 ? 32 + c * 28 : 16 + c * 28} cy={14 + f * 22} r="2.6" fill="#c9a0dc" stroke="#7a4a8a" />
+        </g>
+      )))}
+    </svg>
+  )
+}
+
+function MiniAnimal() {
+  return (
+    <svg viewBox="0 0 160 100" className="h-full w-full" aria-hidden="true">
+      <rect width="160" height="100" fill="#f6e3e3" />
+      {[0, 1, 2, 3].map((f) => [0, 1, 2, 3, 4].map((c) => {
+        const x = 14 + c * 32 + (f % 2 ? 16 : 0)
+        const y = 12 + f * 25
+        return (
+          <g key={`${f}${c}`}>
+            <circle cx={x} cy={y} r="14" fill="#f8d9d4" stroke="#b05a5a" strokeWidth="1.5" />
+            <circle cx={x} cy={y} r="4.2" fill="#c9a0dc" stroke="#7a4a8a" />
+          </g>
+        )
+      }))}
+    </svg>
+  )
+}
+
 const MINIATURAS: Record<string, () => React.JSX.Element> = {
   'corcho-hooke': MiniCorcho,
   'gota-leeuwenhoek': MiniGota,
+  'tejido-planta': MiniPlanta,
+  'tejido-animal': MiniAnimal,
 }
 
 function iniciales(nombre: string): string {

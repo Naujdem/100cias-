@@ -251,7 +251,7 @@
     {
       "id": "schleiden",
       "titulo": "Matthias Schleiden: las plantas son células",
-      "resumen": "Concluyó que todas las plantas están formadas por células.",
+      "resumen": "Estudió plantas al microscopio y concluyó que todas están formadas por células, con un núcleo.",
       "anio": 1838,
       "nivel": "basico",
       "nucleo": true,
@@ -265,11 +265,30 @@
       "ficha": {
         "quien": "Matthias Schleiden",
         "cuando": "1838",
-        "idea": "Afirmó que todas las plantas están formadas por células y que la célula es la unidad básica de los vegetales.",
+        "idea": "Schleiden estudió el desarrollo de los tejidos vegetales y concluyó que todas las plantas están formadas por células, y que la célula es la unidad básica de la planta. Dio mucha importancia al núcleo, que Robert Brown había descrito en 1831. Publicó sus ideas en 1838.",
         "evidencia": [
-          "Observación de tejidos vegetales al microscopio."
+          "Observó tejidos de muchas plantas al microscopio y vio células en todas.",
+          "Publicó sus ideas en 1838 en un trabajo sobre el origen y desarrollo de las plantas."
         ],
-        "limites": "Propuso que las células nuevas se formaban a partir de material sin estructura dentro de otras células, idea que luego se corrigió."
+        "limites": "Creía que las células nuevas se formaban a partir de material sin estructura, alrededor de un núcleo, como si se «cristalizaran». Esa idea era incorrecta y la corrigieron Remak y Virchow.",
+        "contexto": [
+          {
+            "titulo": "De abogado a botánico",
+            "texto": "Estudió derecho y ejerció poco tiempo; después se pasó a la botánica y a la medicina, donde se hizo conocido por su forma directa de criticar a otros científicos."
+          },
+          {
+            "titulo": "Microscopios mejores",
+            "texto": "En los años 1830 mejoraron mucho las lentes (corregían los colores), y eso permitió ver más claro el interior de los tejidos que en tiempos de Hooke."
+          },
+          {
+            "titulo": "El núcleo, protagonista",
+            "texto": "Robert Brown lo describió en 1831 en células de orquídeas. Schleiden pensó que el núcleo (que llamó «citoblasto») era el punto de partida para que se formara cada célula nueva."
+          },
+          {
+            "titulo": "Una cena famosa",
+            "texto": "Según se cuenta, en 1837 Schleiden le habló a Schwann del núcleo en las células vegetales, y Schwann recordó haber visto algo parecido en células animales. Esa conversación habría puesto en marcha la teoría celular."
+          }
+        ]
       },
       "preguntas": [
         {
@@ -283,14 +302,60 @@
           ],
           "correcta": 1,
           "explicacion": "Schleiden estudió las plantas (1838) y Schwann los animales (1839); juntos se asocian con los primeros postulados."
+        },
+        {
+          "id": "sc-1",
+          "enunciado": "¿Qué organismos estudió Schleiden para llegar a su conclusión?",
+          "opciones": [
+            "Animales",
+            "Plantas",
+            "Bacterias",
+            "Hongos"
+          ],
+          "correcta": 1,
+          "explicacion": "Schleiden era botánico: estudió tejidos vegetales y concluyó que las plantas están formadas por células."
+        },
+        {
+          "id": "sc-2",
+          "enunciado": "¿Qué error cometió Schleiden sobre las células nuevas?",
+          "opciones": [
+            "Pensó que no tenían núcleo",
+            "Creyó que se formaban a partir de material sin estructura, y no de otra célula",
+            "Pensó que solo existían en animales",
+            "Creyó que eran más grandes de lo que son"
+          ],
+          "correcta": 1,
+          "explicacion": "Creía que las células nuevas «cristalizaban» de un material sin forma. Después se demostró que provienen de otras células."
+        },
+        {
+          "id": "sc-3",
+          "enunciado": "¿Quién había descrito el núcleo celular en 1831?",
+          "opciones": [
+            "Rudolf Virchow",
+            "Robert Brown",
+            "Louis Pasteur",
+            "Robert Hooke"
+          ],
+          "correcta": 1,
+          "explicacion": "Robert Brown lo describió en 1831 en células de orquídeas. Schleiden lo consideró muy importante."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "diagrama": "tejido-planta",
+      "ilustraciones": [
+        {
+          "id": "tejido",
+          "titulo": "Tejido vegetal",
+          "tipo": "svg",
+          "recurso": "tejido-vegetal",
+          "pie": "Células vegetales: pared gruesa, vacuola grande, núcleo y cloroplastos. Se parecen a las «cajitas» de Hooke, pero ahora se ve su interior."
+        }
+      ]
     },
     {
       "id": "schwann",
       "titulo": "Theodor Schwann: los animales también",
-      "resumen": "Extendió la idea a los animales y, junto con Schleiden, formuló los dos primeros postulados.",
+      "resumen": "Vio que los animales también están hechos de células y, con Schleiden, unió plantas y animales en una misma idea.",
       "anio": 1839,
       "nivel": "basico",
       "nucleo": true,
@@ -307,11 +372,30 @@
       "ficha": {
         "quien": "Theodor Schwann",
         "cuando": "1839",
-        "idea": "Concluyó que todos los animales están formados por células. Con Schleiden formuló los dos primeros postulados: todos los seres vivos están formados por una o más células, y la célula es la unidad estructural y funcional de los seres vivos.",
+        "idea": "Schwann estudió tejidos animales y vio que sus células se parecían a las que Schleiden describía en las plantas: tenían núcleo y membrana, aunque no pared. En 1839 concluyó que animales y plantas están formados por células. Con Schleiden se asocian los dos primeros postulados: todos los seres vivos están formados por una o más células, y la célula es la unidad básica de la estructura y función de los seres vivos.",
         "evidencia": [
-          "Observación de tejidos animales al microscopio."
+          "Comparó tejidos animales como el cartílago y la notocorda con tejidos de plantas, y encontró células parecidas.",
+          "Su libro de 1839 reúne sus observaciones de muchos tejidos animales."
         ],
-        "limites": "Compartió el error sobre cómo se forman las células nuevas, corregido después por Remak y Virchow."
+        "limites": "Compartió el error de Schleiden sobre cómo se forman las células nuevas. Tampoco tuvo el tercer postulado: que toda célula proviene de otra célula, que llegó con Remak y Virchow.",
+        "contexto": [
+          {
+            "titulo": "La cena (según se cuenta)",
+            "texto": "Hacia 1837, Schleiden le habló del núcleo en las células vegetales. Schwann recordó haberlo visto en células animales, y al día siguiente fueron a mirarlo juntos al microscopio."
+          },
+          {
+            "titulo": "Tan distintas y tan parecidas",
+            "texto": "Las células animales no tienen pared rígida como las vegetales. Schwann se fijó en lo que sí tenían en común: núcleo y membrana, y que ambas nacen y crecen como unidades."
+          },
+          {
+            "titulo": "La obra de 1839",
+            "texto": "Su libro lleva un título largo que habla de la «concordancia» en la estructura y el crecimiento de animales y plantas. En él reúne tejidos muy distintos y los explica con una sola idea."
+          },
+          {
+            "titulo": "Mucho más que células",
+            "texto": "Descubrió las células de Schwann, que envuelven las fibras nerviosas; la pepsina, una enzima digestiva; y propuso la palabra «metabolismo». También defendió que la fermentación la hacen levaduras vivas."
+          }
+        ]
       },
       "preguntas": [
         {
@@ -325,9 +409,55 @@
           ],
           "correcta": 1,
           "explicacion": "La teoría celular afirma que todos los seres vivos, sean unicelulares o pluricelulares, están formados por células. Las otras opciones son falsas."
+        },
+        {
+          "id": "sw-1",
+          "enunciado": "¿Qué tiene una célula vegetal típica que una animal no tiene?",
+          "opciones": [
+            "Núcleo",
+            "Membrana",
+            "Pared rígida y cloroplastos",
+            "Citoplasma"
+          ],
+          "correcta": 2,
+          "explicacion": "Las células vegetales tienen pared y cloroplastos. Las animales no. Núcleo, membrana y citoplasma están en ambas."
+        },
+        {
+          "id": "sw-2",
+          "enunciado": "¿Qué vio Schwann en tejidos animales que le recordó lo de Schleiden?",
+          "opciones": [
+            "Cloroplastos",
+            "Células con núcleo",
+            "Paredes gruesas",
+            "Vacuolas enormes"
+          ],
+          "correcta": 1,
+          "explicacion": "Vio células con núcleo, como las que Schleiden describía en las plantas. Eso lo llevó a unir plantas y animales en una misma idea."
+        },
+        {
+          "id": "sw-3",
+          "enunciado": "¿Qué postulado de la teoría celular todavía no habían formulado Schleiden y Schwann?",
+          "opciones": [
+            "Los seres vivos están hechos de células",
+            "La célula es la unidad básica de los seres vivos",
+            "Toda célula proviene de otra célula",
+            "Plantas y animales tienen células"
+          ],
+          "correcta": 2,
+          "explicacion": "Ellos pensaban que las células nuevas surgían de material sin estructura. El postulado de que toda célula proviene de otra llegó con Virchow."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "diagrama": "tejido-animal",
+      "ilustraciones": [
+        {
+          "id": "tejido",
+          "titulo": "Tejido animal",
+          "tipo": "svg",
+          "recurso": "tejido-animal",
+          "pie": "Células animales juntas: sin pared, con membrana y núcleo. Su forma es más irregular que la de las células vegetales."
+        }
+      ]
     },
     {
       "id": "virchow",
