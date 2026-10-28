@@ -56,8 +56,10 @@ export interface Bloque {
   id: string
   titulo: string
   resumen: string
-  /** año usado para ordenar la línea de tiempo */
+  /** año usado para ordenar la línea de tiempo (en temas que no son históricos, el número de orden) */
   anio: number
+  /** texto que se muestra en lugar del año (p. ej. «Nivel 3») */
+  etiqueta?: string
   nivel: Nivel
   /** si es true, no se puede desactivar (lo esencial del tema) */
   nucleo?: boolean
@@ -81,6 +83,16 @@ export interface Tema {
   titulo: string
   subtema: string
   fuentes: string[]
+  /** posición del subtema dentro de su área (para el selector) */
+  orden?: number
+  /** numeración corta que se muestra en el selector, p. ej. «1.1» */
+  etiqueta?: string
+  /** vistas permitidas (ids de components/linea/vistas); por defecto las de línea de tiempo */
+  vistas?: string[]
+  /** título de la sección que muestra los bloques; por defecto «Línea de tiempo» */
+  tituloVista?: string
+  /** cómo se llama cada bloque en el contador («Hito», «Nivel»); por defecto «Hito» */
+  unidad?: string
   bloques: Bloque[]
 }
 

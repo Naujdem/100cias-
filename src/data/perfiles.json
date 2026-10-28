@@ -10,6 +10,14 @@
         "schleiden",
         "schwann",
         "virchow"
+      ],
+      "niveles-organizacion": [
+        "organulos",
+        "celula",
+        "tejido",
+        "organo",
+        "sistema",
+        "organismo"
       ]
     },
     "nivelDibujo": "basico"
@@ -26,6 +34,16 @@
         "schwann",
         "virchow",
         "pasteur"
+      ],
+      "niveles-organizacion": [
+        "moleculas",
+        "macromoleculas",
+        "organulos",
+        "celula",
+        "tejido",
+        "organo",
+        "sistema",
+        "organismo"
       ]
     },
     "nivelDibujo": "intermedio"
@@ -44,6 +62,18 @@
         "pasteur",
         "endosimbiosis",
         "teoria-moderna"
+      ],
+      "niveles-organizacion": [
+        "atomos",
+        "moleculas",
+        "macromoleculas",
+        "organulos",
+        "celula",
+        "tejido",
+        "organo",
+        "sistema",
+        "organismo",
+        "mas-alla"
       ]
     },
     "nivelDibujo": "avanzado"

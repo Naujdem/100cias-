@@ -3,9 +3,7 @@ import type { Bloque } from '../data/schema.ts'
 import { guardar, leer } from '../lib/almacen.ts'
 import { usePantallaCompleta } from '../lib/usePantallaCompleta.ts'
 import DetalleBloque from './DetalleBloque.tsx'
-import { VISTAS, VISTA_INICIAL } from './linea/vistas.ts'
-
-const CLAVE_VISTA = 'cien:vista-linea'
+import type { Vista } from './linea/vistas.ts'
 
 function IconoPantalla({ completa }: { completa: boolean }) {
   return (
@@ -19,11 +17,20 @@ function IconoPantalla({ completa }: { completa: boolean }) {
   )
 }
 
-export default function LineaTiempo({ bloques }: { bloques: Bloque[] }) {
+interface Props {
+  bloques: Bloque[]
+  vistas: Vista[]
+  /** clave de localStorage donde se recuerda la vista elegida */
+  claveVista: string
+  /** cómo se llama cada bloque en el contador y la ayuda («Hito», «Nivel») */
+  unidad?: string
+}
+
+export default function LineaTiempo({ bloques, vistas: VISTAS, claveVista: CLAVE_VISTA, unidad = 'Hito' }: Props) {
   const [abierto, setAbierto] = useState<string | null>(null)
   const [vistaId, setVistaId] = useState(() => {
-    const v = leer<string>(CLAVE_VISTA, VISTA_INICIAL)
-    return VISTAS.some((x) => x.id === v) ? v : VISTA_INICIAL
+    const v = leer<string>(CLAVE_VISTA, VISTAS[0].id)
+    return VISTAS.some((x) => x.id === v) ? v : VISTAS[0].id
   })
   const carril = useRef<HTMLDivElement>(null)
   const raiz = useRef<HTMLDivElement>(null)
@@ -83,14 +90,14 @@ export default function LineaTiempo({ bloques }: { bloques: Bloque[] }) {
         else pantalla.entrar()
         return
       }
-      if (!['ArrowRight', 'ArrowLeft', 'Home', 'End'].includes(e.key)) return
+      if (!['ArrowRight', 'ArrowLeft', 'ArrowUp', 'ArrowDown', 'Home', 'End'].includes(e.key)) return
       const nodos = [...(raiz.current?.querySelectorAll<HTMLElement>('[data-hito]') ?? [])]
       if (!nodos.length) return
       e.preventDefault()
       const actual = nodos.indexOf(document.activeElement as HTMLElement)
       let i = actual
-      if (e.key === 'ArrowRight') i = actual < 0 ? 0 : Math.min(nodos.length - 1, actual + 1)
-      else if (e.key === 'ArrowLeft') i = actual < 0 ? 0 : Math.max(0, actual - 1)
+      if (e.key === 'ArrowRight' || e.key === 'ArrowUp') i = actual < 0 ? 0 : Math.min(nodos.length - 1, actual + 1)
+      else if (e.key === 'ArrowLeft' || e.key === 'ArrowDown') i = actual < 0 ? 0 : Math.max(0, actual - 1)
       else if (e.key === 'Home') i = 0
       else i = nodos.length - 1
       llevarA(nodos[i])
@@ -114,6 +121,7 @@ export default function LineaTiempo({ bloques }: { bloques: Bloque[] }) {
       className={pantalla.activa ? 'fixed inset-0 z-40 overflow-auto bg-[var(--fondo)] p-4 sm:p-6' : undefined}
     >
       <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
+        {VISTAS.length > 1 ? (
         <div role="group" aria-label="Ver como" className="inline-flex rounded-full border border-[var(--linea)] bg-[var(--tarjeta)] p-1">
           {VISTAS.map((v) => (
             <button
@@ -130,24 +138,31 @@ export default function LineaTiempo({ bloques }: { bloques: Bloque[] }) {
             </button>
           ))}
         </div>
+        ) : (
+          <span />
+        )}
         <div className="flex items-center gap-2">
-          <p className="hidden text-sm text-[var(--suave)] lg:block">← → moverse · Enter abrir · F pantalla completa</p>
-          <button
-            type="button"
-            onClick={() => mover(-1)}
-            aria-label="Desplazar a la izquierda"
-            className="h-11 w-11 rounded-full border border-[var(--linea)] bg-[var(--tarjeta)]"
-          >
-            ‹
-          </button>
-          <button
-            type="button"
-            onClick={() => mover(1)}
-            aria-label="Desplazar a la derecha"
-            className="h-11 w-11 rounded-full border border-[var(--linea)] bg-[var(--tarjeta)]"
-          >
-            ›
-          </button>
+          <p className="hidden text-sm text-[var(--suave)] lg:block">{vista.ayuda ?? '← → moverse · Enter abrir · F pantalla completa'}</p>
+          {vista.desplazable !== false && (
+            <>
+              <button
+                type="button"
+                onClick={() => mover(-1)}
+                aria-label="Desplazar a la izquierda"
+                className="h-11 w-11 rounded-full border border-[var(--linea)] bg-[var(--tarjeta)]"
+              >
+                ‹
+              </button>
+              <button
+                type="button"
+                onClick={() => mover(1)}
+                aria-label="Desplazar a la derecha"
+                className="h-11 w-11 rounded-full border border-[var(--linea)] bg-[var(--tarjeta)]"
+              >
+                ›
+              </button>
+            </>
+          )}
           <button
             type="button"
             onClick={pantalla.activa ? pantalla.salir : pantalla.entrar}
@@ -176,6 +191,7 @@ export default function LineaTiempo({ bloques }: { bloques: Bloque[] }) {
           bloque={seleccionado}
           onCerrar={cerrar}
           posicion={{ actual: indice + 1, total: ordenados.length }}
+          unidad={unidad}
           onAnterior={indice > 0 ? () => setAbierto(ordenados[indice - 1].id) : undefined}
           onSiguiente={indice < ordenados.length - 1 ? () => setAbierto(ordenados[indice + 1].id) : undefined}
         />

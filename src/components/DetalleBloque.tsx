@@ -8,6 +8,8 @@ import Ilustraciones from './Ilustraciones.tsx'
 
 type Pestana = 'historia' | 'diagrama' | 'evidencia'
 
+const plural = (u: string) => (/[aeiou]$/i.test(u) ? `${u.toLowerCase()}s` : `${u.toLowerCase()}es`)
+
 const FOCALIZABLES = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
 
 /**
@@ -21,16 +23,18 @@ interface Props {
   posicion?: { actual: number; total: number }
   onAnterior?: () => void
   onSiguiente?: () => void
+  /** cómo se llama cada bloque en el contador («Hito», «Nivel») */
+  unidad?: string
 }
 
-export default function DetalleBloque({ bloque: b, onCerrar, posicion, onAnterior, onSiguiente }: Props) {
+export default function DetalleBloque({ bloque: b, onCerrar, posicion, onAnterior, onSiguiente, unidad = 'Hito' }: Props) {
   const idTitulo = useId()
   const caja = useRef<HTMLDivElement>(null)
   const Diagrama = b.diagrama ? DIAGRAMAS[b.diagrama] : undefined
   const pestanas: { id: Pestana; texto: string }[] = [
-    { id: 'historia', texto: 'Historia' },
+    { id: 'historia', texto: b.etiqueta ? 'Idea' : 'Historia' },
     ...(Diagrama ? [{ id: 'diagrama' as Pestana, texto: 'Diagrama' }] : []),
-    { id: 'evidencia', texto: 'Evidencia y límites' },
+    { id: 'evidencia', texto: b.etiqueta ? 'Ejemplos y límites' : 'Evidencia y límites' },
   ]
   const [activa, setActiva] = useState<Pestana>('historia')
   const [principal, ...otros] = b.autores ?? []
@@ -159,7 +163,7 @@ export default function DetalleBloque({ bloque: b, onCerrar, posicion, onAnterio
 
           <div className="min-w-0">
             <p className="flex flex-wrap items-center gap-2 pr-12">
-              <span className="text-sm font-semibold text-[var(--acento)]">{b.anio}</span>
+              <span className="text-sm font-semibold text-[var(--acento)]">{b.etiqueta ?? b.anio}</span>
               <NivelInsignia nivel={b.nivel} />
               {!b.revisado && <BorradorInsignia />}
             </p>
@@ -211,7 +215,7 @@ export default function DetalleBloque({ bloque: b, onCerrar, posicion, onAnterio
                 <div className="space-y-3">
                   {b.ficha.evidencia && (
                     <div>
-                      <p className="font-semibold">Evidencia</p>
+                      <p className="font-semibold">{b.etiqueta ? 'Ejemplos' : 'Evidencia'}</p>
                       <ul className="ml-5 list-disc">
                         {b.ficha.evidencia.map((e) => (
                           <li key={e}>{e}</li>
@@ -243,10 +247,10 @@ export default function DetalleBloque({ bloque: b, onCerrar, posicion, onAnterio
           <div className="min-w-0 text-center text-xs text-[var(--suave)]">
             {posicion && (
               <p aria-live="polite" className="font-semibold">
-                Hito {posicion.actual} de {posicion.total}
+                {unidad} {posicion.actual} de {posicion.total}
               </p>
             )}
-            <p className="hidden md:block">← → hitos · ↑ ↓ pestañas · + − aumento · F pantalla completa · Esc cerrar</p>
+            <p className="hidden md:block">← → {plural(unidad)} · ↑ ↓ pestañas · + − aumento · F pantalla completa · Esc cerrar</p>
           </div>
           <button
             type="button"

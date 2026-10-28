@@ -2,12 +2,17 @@ import type { ComponentType } from 'react'
 import type { PropsVista } from './tipos.ts'
 import VistaTarjetas from './VistaTarjetas.tsx'
 import VistaAlternada from './VistaAlternada.tsx'
+import VistaNiveles from './VistaNiveles.tsx'
 
 export interface Vista {
   id: string
   nombre: string
   descripcion: string
   Componente: ComponentType<PropsVista>
+  /** false si la vista no se desplaza en horizontal (se ocultan los botones ‹ ›) */
+  desplazable?: boolean
+  /** texto de ayuda de teclado */
+  ayuda?: string
 }
 
 /**
@@ -18,6 +23,14 @@ export interface Vista {
 export const VISTAS: Vista[] = [
   { id: 'alternada', nombre: 'Alternada', descripcion: 'Hitos arriba y abajo de una línea, con imagen', Componente: VistaAlternada },
   { id: 'tarjetas', nombre: 'Tarjetas', descripcion: 'Línea con tarjetas compactas', Componente: VistaTarjetas },
+  { id: 'niveles', nombre: 'Niveles', descripcion: 'Pila de niveles, de lo más pequeño (abajo) a lo más grande (arriba)', Componente: VistaNiveles, desplazable: false, ayuda: '↑ ↓ moverse · Enter abrir · F pantalla completa' },
 ]
 
-export const VISTA_INICIAL = VISTAS[0].id
+export const VISTAS_LINEA = ['alternada', 'tarjetas']
+
+/** Vistas permitidas para un tema (por defecto, las de línea de tiempo). */
+export const vistasDe = (ids?: string[]) => {
+  const lista = VISTAS.filter((v) => (ids ?? VISTAS_LINEA).includes(v.id))
+  return lista.length ? lista : VISTAS.filter((v) => VISTAS_LINEA.includes(v.id))
+}
+

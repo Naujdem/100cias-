@@ -1,0 +1,619 @@
+{
+  "id": "niveles-organizacion",
+  "materia": "biologia",
+  "area": "celular",
+  "titulo": "Teoría celular y niveles de organización",
+  "subtema": "Niveles de organización: de las moléculas al organismo",
+  "orden": 2,
+  "etiqueta": "1.2",
+  "vistas": [
+    "niveles"
+  ],
+  "tituloVista": "Niveles de organización",
+  "unidad": "Nivel",
+  "fuentes": [
+    "Presentación «La célula» de JuanMed (referencia)",
+    "Plan de área del colegio (solo guía)"
+  ],
+  "bloques": [
+    {
+      "id": "atomos",
+      "titulo": "Átomos",
+      "resumen": "Los ladrillos de toda la materia, vivos o no.",
+      "anio": 1,
+      "etiqueta": "Nivel 1",
+      "nivel": "intermedio",
+      "diagrama": "nivel-atomos",
+      "ficha": {
+        "idea": "Los átomos son las partículas básicas con las que está hecha toda la materia. En los seres vivos predominan unos pocos: carbono, hidrógeno, oxígeno y nitrógeno, que juntos son cerca del 96 % de la masa del cuerpo humano.",
+        "contexto": [
+          {
+            "titulo": "Los mismos átomos en todo",
+            "texto": "Los átomos de un ser vivo son los mismos que hay en una roca o en el aire. Lo que cambia es cómo están organizados."
+          },
+          {
+            "titulo": "Carbono, el protagonista",
+            "texto": "Puede unirse con muchos átomos y formar cadenas largas, por eso es la base de las moléculas de la vida."
+          },
+          {
+            "titulo": "Otros átomos importantes",
+            "texto": "El fósforo está en el ADN y en la molécula que guarda energía (ATP); el calcio en huesos y dientes; el hierro en la sangre."
+          }
+        ],
+        "evidencia": [
+          "Una molécula de agua tiene 2 átomos de hidrógeno y 1 de oxígeno.",
+          "El carbono forma el «esqueleto» de azúcares, grasas y proteínas."
+        ],
+        "limites": "Un átomo no está vivo. La vida no está en ninguna partícula en particular, sino en cómo se organizan."
+      },
+      "preguntas": [
+        {
+          "id": "at-1",
+          "enunciado": "¿Cuáles son los átomos más abundantes en los seres vivos?",
+          "opciones": [
+            "Hierro, calcio, oro y plata",
+            "Carbono, hidrógeno, oxígeno y nitrógeno",
+            "Helio, neón, argón y cloro",
+            "Sodio, potasio, litio y plomo"
+          ],
+          "correcta": 1,
+          "explicacion": "Carbono, hidrógeno, oxígeno y nitrógeno forman cerca del 96 % de la masa del cuerpo humano."
+        },
+        {
+          "id": "at-2",
+          "enunciado": "¿Un átomo de carbono está vivo?",
+          "opciones": [
+            "Sí, porque está dentro de un ser vivo",
+            "No: la vida aparece en niveles más complejos",
+            "Sí, porque se mueve",
+            "Solo si es de una planta"
+          ],
+          "correcta": 1,
+          "explicacion": "Los átomos no están vivos. La vida aparece cuando hay organización, y la unidad más sencilla de vida es la célula."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "moleculas",
+      "titulo": "Moléculas",
+      "resumen": "Átomos unidos entre sí: agua, glucosa, oxígeno.",
+      "anio": 2,
+      "etiqueta": "Nivel 2",
+      "nivel": "basico",
+      "diagrama": "nivel-moleculas",
+      "ficha": {
+        "idea": "Una molécula es un grupo de átomos unidos por enlaces. En los seres vivos hay moléculas pequeñas, como el agua, el oxígeno (O₂) y la glucosa, que participan en casi todo lo que ocurre dentro de una célula.",
+        "contexto": [
+          {
+            "titulo": "El agua, la molécula de la vida",
+            "texto": "Es entre la mitad y dos tercios del cuerpo humano adulto, y las reacciones de la célula ocurren disueltas en ella."
+          },
+          {
+            "titulo": "Moléculas orgánicas e inorgánicas",
+            "texto": "Las orgánicas tienen carbono unido a hidrógeno (glucosa); las inorgánicas, como el agua o el CO₂, no siguen ese patrón."
+          },
+          {
+            "titulo": "Una molécula pequeña, mucha energía",
+            "texto": "La glucosa guarda energía que la célula libera al «quemarla» con oxígeno."
+          }
+        ],
+        "evidencia": [
+          "Agua (H₂O), oxígeno (O₂), dióxido de carbono (CO₂), glucosa (C₆H₁₂O₆).",
+          "La fotosíntesis convierte CO₂ y agua en glucosa y oxígeno."
+        ],
+        "limites": "Una molécula sola no está viva, aunque sea esencial para la vida."
+      },
+      "preguntas": [
+        {
+          "id": "mo-1",
+          "enunciado": "¿Qué es una molécula?",
+          "opciones": [
+            "Una célula muy pequeña",
+            "Dos o más átomos unidos por enlaces",
+            "Un tejido sin células",
+            "La parte central de un átomo"
+          ],
+          "correcta": 1,
+          "explicacion": "Una molécula es un conjunto de átomos unidos, como el agua (H₂O)."
+        },
+        {
+          "id": "mo-2",
+          "enunciado": "¿Cuál de estas es una molécula pequeña importante en los seres vivos?",
+          "opciones": [
+            "Glucosa",
+            "ADN",
+            "Hemoglobina",
+            "Músculo"
+          ],
+          "correcta": 0,
+          "explicacion": "La glucosa es una molécula pequeña. El ADN y la hemoglobina son macromoléculas, y el músculo es un tejido."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "macromoleculas",
+      "titulo": "Macromoléculas",
+      "resumen": "Moléculas enormes: proteínas, ácidos nucleicos, carbohidratos y lípidos.",
+      "anio": 3,
+      "etiqueta": "Nivel 3",
+      "nivel": "intermedio",
+      "diagrama": "nivel-macromoleculas",
+      "ficha": {
+        "idea": "Las macromoléculas son moléculas muy grandes, muchas veces formadas por cadenas de piezas más pequeñas. Hay cuatro tipos: carbohidratos, lípidos, proteínas y ácidos nucleicos. Con ellas se construyen y funcionan las células.",
+        "contexto": [
+          {
+            "titulo": "Piezas que se encadenan",
+            "texto": "Los aminoácidos forman proteínas; los nucleótidos, ácidos nucleicos (ADN y ARN); y los azúcares simples, carbohidratos grandes como el almidón y la celulosa."
+          },
+          {
+            "titulo": "Cada tipo, un oficio",
+            "texto": "Proteínas: construyen y hacen funcionar (enzimas, músculo). Ácidos nucleicos: guardan la información. Carbohidratos: energía y estructura. Lípidos: reserva y membranas."
+          },
+          {
+            "titulo": "Una proteína, mil formas",
+            "texto": "Hay miles de proteínas distintas, y su forma tridimensional decide lo que hacen."
+          }
+        ],
+        "evidencia": [
+          "La hemoglobina es una proteína que lleva oxígeno en la sangre.",
+          "El ADN es un ácido nucleico que guarda la información hereditaria.",
+          "La celulosa es un carbohidrato que forma las paredes de las células vegetales."
+        ],
+        "limites": "Los lípidos suelen contarse como macromoléculas, aunque no son cadenas de piezas repetidas como las demás. Ninguna macromolécula está viva por sí sola."
+      },
+      "preguntas": [
+        {
+          "id": "mm-1",
+          "enunciado": "¿Cuál de estos grupos son macromoléculas biológicas?",
+          "opciones": [
+            "Agua, oxígeno y sal",
+            "Proteínas, ácidos nucleicos, carbohidratos y lípidos",
+            "Átomos, iones y electrones",
+            "Células, tejidos y órganos"
+          ],
+          "correcta": 1,
+          "explicacion": "Los cuatro grandes grupos de macromoléculas son carbohidratos, lípidos, proteínas y ácidos nucleicos."
+        },
+        {
+          "id": "mm-2",
+          "enunciado": "El ADN guarda la información hereditaria. ¿A qué tipo de macromolécula pertenece?",
+          "opciones": [
+            "Proteína",
+            "Lípido",
+            "Ácido nucleico",
+            "Carbohidrato"
+          ],
+          "correcta": 2,
+          "explicacion": "El ADN y el ARN son ácidos nucleicos."
+        }
+      ],
+      "revisado": false,
+      "requiere": [
+        "moleculas"
+      ]
+    },
+    {
+      "id": "organulos",
+      "titulo": "Orgánulos",
+      "resumen": "Estructuras dentro de la célula, cada una con su trabajo.",
+      "anio": 4,
+      "etiqueta": "Nivel 4",
+      "nivel": "basico",
+      "diagrama": "nivel-organulos",
+      "ficha": {
+        "idea": "Los orgánulos son estructuras dentro de la célula que cumplen una función. En una célula eucariota hay, por ejemplo, núcleo, mitocondrias, ribosomas y, en las plantas, cloroplastos. Cada uno hace una tarea, como si fueran los órganos de la célula.",
+        "contexto": [
+          {
+            "titulo": "Como pequeños órganos",
+            "texto": "El nombre viene de eso: «orgánulo» significa «órgano pequeño»."
+          },
+          {
+            "titulo": "No todas las células los tienen igual",
+            "texto": "Las células procariotas (bacterias) no tienen orgánulos rodeados de membrana, solo estructuras sencillas como los ribosomas."
+          },
+          {
+            "titulo": "Un origen curioso",
+            "texto": "Se cree que las mitocondrias y los cloroplastos fueron antes bacterias, como cuenta la hipótesis endosimbiótica del subtema 1.1."
+          }
+        ],
+        "evidencia": [
+          "La mitocondria libera energía de los alimentos.",
+          "El cloroplasto hace la fotosíntesis.",
+          "El núcleo guarda el ADN."
+        ],
+        "limites": "Un orgánulo solo funciona dentro de su célula y no puede vivir por sí mismo."
+      },
+      "preguntas": [
+        {
+          "id": "ou-1",
+          "enunciado": "¿Qué orgánulo libera energía de los alimentos en las células?",
+          "opciones": [
+            "Núcleo",
+            "Mitocondria",
+            "Cloroplasto",
+            "Vacuola"
+          ],
+          "correcta": 1,
+          "explicacion": "La mitocondria libera la energía de los alimentos usando oxígeno."
+        },
+        {
+          "id": "ou-2",
+          "enunciado": "¿Un orgánulo puede vivir por sí solo fuera de la célula?",
+          "opciones": [
+            "Sí, siempre",
+            "No: depende de su célula",
+            "Sí, si tiene núcleo",
+            "Solo en las plantas"
+          ],
+          "correcta": 1,
+          "explicacion": "Los orgánulos son partes de la célula y dependen de ella, aunque algunos, como las mitocondrias, tengan ADN propio."
+        }
+      ],
+      "revisado": false,
+      "requiere": [
+        "celula"
+      ]
+    },
+    {
+      "id": "celula",
+      "titulo": "Célula",
+      "resumen": "La unidad básica de la vida: el primer nivel que está vivo.",
+      "anio": 5,
+      "etiqueta": "Nivel 5",
+      "nivel": "basico",
+      "diagrama": "nivel-celula",
+      "ficha": {
+        "idea": "La célula es la unidad más pequeña que puede considerarse viva. Está rodeada por una membrana, contiene material genético y hace su propio metabolismo. Algunos seres vivos son una sola célula, y otros, como las personas, tienen billones.",
+        "contexto": [
+          {
+            "titulo": "Aparece la vida",
+            "texto": "Ninguno de los niveles anteriores está vivo por sí solo. Es una propiedad emergente: aparece cuando todas las piezas trabajan juntas en la célula."
+          },
+          {
+            "titulo": "Cuántas células tiene una persona",
+            "texto": "Se estima que unos 30 a 40 billones (millones de millones), de unos 200 tipos distintos."
+          },
+          {
+            "titulo": "Célula y organismo a la vez",
+            "texto": "Una bacteria es una sola célula y también un organismo completo: en los seres unicelulares, estos dos niveles coinciden."
+          }
+        ],
+        "evidencia": [
+          "Una célula muscular del corazón se contrae y se relaja.",
+          "Una bacteria hace todo por sí sola: se alimenta, se reproduce y reacciona."
+        ],
+        "limites": "Los virus se discuten como caso límite: tienen material genético, pero no son células. Más sobre esto en el subtema «Postulados de la teoría celular»."
+      },
+      "preguntas": [
+        {
+          "id": "ce-1",
+          "enunciado": "¿Cuál es el nivel más pequeño que está vivo?",
+          "opciones": [
+            "Átomo",
+            "Molécula",
+            "Célula",
+            "Orgánulo"
+          ],
+          "correcta": 2,
+          "explicacion": "La célula es la unidad básica de la vida: es el primer nivel en el que hay un ser vivo."
+        },
+        {
+          "id": "ce-2",
+          "enunciado": "¿Qué significa que la vida sea una «propiedad emergente»?",
+          "opciones": [
+            "Que aparece al organizarse las partes, aunque ninguna parte sola esté viva",
+            "Que sale de la nada",
+            "Que solo ocurre en las plantas",
+            "Que depende de un solo átomo"
+          ],
+          "correcta": 0,
+          "explicacion": "La vida no está en ninguna molécula en particular: aparece al trabajar juntas las partes de la célula."
+        }
+      ],
+      "revisado": false,
+      "nucleo": true
+    },
+    {
+      "id": "tejido",
+      "titulo": "Tejido",
+      "resumen": "Células parecidas que trabajan juntas.",
+      "anio": 6,
+      "etiqueta": "Nivel 6",
+      "nivel": "basico",
+      "diagrama": "nivel-tejido",
+      "ficha": {
+        "idea": "Un tejido es un grupo de células parecidas que cumplen juntas una misma función. En los animales hay cuatro grandes tipos: epitelial, conectivo, muscular y nervioso. Las plantas también tienen tejidos, como el que hace la fotosíntesis y el que conduce el agua.",
+        "contexto": [
+          {
+            "titulo": "Cuatro tejidos animales",
+            "texto": "Epitelial (cubre y reviste), conectivo (une y sostiene, incluye hueso y sangre), muscular (se contrae) y nervioso (transmite señales)."
+          },
+          {
+            "titulo": "Tejidos de las plantas",
+            "texto": "Hay tejidos que crecen (meristemáticos), que protegen (epidermis), que hacen fotosíntesis y almacenan (parénquima) y que transportan agua y azúcares (xilema y floema)."
+          },
+          {
+            "titulo": "La sangre también es un tejido",
+            "texto": "Es un tejido conectivo líquido: sus células flotan en un líquido llamado plasma."
+          }
+        ],
+        "evidencia": [
+          "El tejido muscular cardíaco está formado por células que se contraen juntas.",
+          "La piel tiene un tejido epitelial en su capa externa."
+        ],
+        "limites": "Las células de un tejido no son idénticas, solo parecidas, y a veces hay más de un tipo de célula en el mismo tejido."
+      },
+      "preguntas": [
+        {
+          "id": "te-1",
+          "enunciado": "¿Qué es un tejido?",
+          "opciones": [
+            "Un conjunto de células parecidas que cumplen una función",
+            "Una molécula grande",
+            "Un órgano completo",
+            "Una célula muy grande"
+          ],
+          "correcta": 0,
+          "explicacion": "Un tejido es un conjunto de células parecidas que trabajan juntas."
+        },
+        {
+          "id": "te-2",
+          "enunciado": "¿Cuál de estos es un tipo de tejido animal?",
+          "opciones": [
+            "Xilema",
+            "Epitelial",
+            "Parénquima",
+            "Meristemático"
+          ],
+          "correcta": 1,
+          "explicacion": "El tejido epitelial es animal. Xilema, parénquima y meristemático son tejidos de plantas."
+        }
+      ],
+      "revisado": false,
+      "requiere": [
+        "celula"
+      ]
+    },
+    {
+      "id": "organo",
+      "titulo": "Órgano",
+      "resumen": "Varios tejidos que trabajan juntos.",
+      "anio": 7,
+      "etiqueta": "Nivel 7",
+      "nivel": "basico",
+      "diagrama": "nivel-organo",
+      "ficha": {
+        "idea": "Un órgano está formado por varios tejidos distintos que cooperan para cumplir una función. El corazón, por ejemplo, tiene tejido muscular que bombea, tejido conectivo que lo sostiene, tejido epitelial que lo reviste y tejido nervioso que coordina los latidos.",
+        "contexto": [
+          {
+            "titulo": "Más que la suma",
+            "texto": "Un órgano hace algo que ninguno de sus tejidos haría solo: el corazón bombea sangre, y una célula muscular aislada no."
+          },
+          {
+            "titulo": "Órganos de las plantas",
+            "texto": "Raíz, tallo, hoja, flor y fruto son órganos vegetales, formados también por varios tejidos."
+          },
+          {
+            "titulo": "Otro ejemplo: la piel",
+            "texto": "Se suele considerar el órgano más grande del cuerpo humano."
+          }
+        ],
+        "evidencia": [
+          "El estómago tiene tejido muscular, epitelial, conectivo y nervioso.",
+          "Una hoja tiene epidermis, parénquima y tejidos que conducen agua."
+        ],
+        "limites": "La frontera entre tejido y órgano no siempre es nítida; en organismos sencillos, como las esponjas, no hay órganos verdaderos."
+      },
+      "preguntas": [
+        {
+          "id": "og-1",
+          "enunciado": "El corazón está formado por varios tejidos que trabajan juntos. ¿Qué nivel es?",
+          "opciones": [
+            "Tejido",
+            "Órgano",
+            "Sistema",
+            "Organismo"
+          ],
+          "correcta": 1,
+          "explicacion": "Varios tejidos que cooperan forman un órgano."
+        },
+        {
+          "id": "og-2",
+          "enunciado": "¿Cuál de estos es un órgano de una planta?",
+          "opciones": [
+            "Hoja",
+            "Neurona",
+            "Mitocondria",
+            "Sangre"
+          ],
+          "correcta": 0,
+          "explicacion": "La hoja es un órgano vegetal, formado por varios tejidos."
+        }
+      ],
+      "revisado": false,
+      "requiere": [
+        "tejido"
+      ]
+    },
+    {
+      "id": "sistema",
+      "titulo": "Sistema de órganos",
+      "resumen": "Varios órganos que cooperan para una función mayor.",
+      "anio": 8,
+      "etiqueta": "Nivel 8",
+      "nivel": "basico",
+      "diagrama": "nivel-sistema",
+      "ficha": {
+        "idea": "Un sistema de órganos es un grupo de órganos que trabajan juntos en una función más amplia. El sistema circulatorio, por ejemplo, reúne el corazón, los vasos sanguíneos y la sangre para transportar sustancias por todo el cuerpo.",
+        "contexto": [
+          {
+            "titulo": "Los sistemas del cuerpo humano",
+            "texto": "Se suelen distinguir circulatorio, respiratorio, digestivo, nervioso, excretor, muscular, óseo, endocrino, inmunitario y reproductor."
+          },
+          {
+            "titulo": "Trabajan en equipo",
+            "texto": "El oxígeno entra por el sistema respiratorio, lo lleva el circulatorio y lo usan las células de todos los demás."
+          },
+          {
+            "titulo": "En las plantas",
+            "texto": "A veces se habla de sistema de la raíz (que absorbe agua) y del vástago (tallo y hojas)."
+          }
+        ],
+        "evidencia": [
+          "El sistema digestivo incluye boca, esófago, estómago e intestinos.",
+          "El sistema nervioso incluye cerebro, médula y nervios."
+        ],
+        "limites": "No todos los organismos tienen sistemas de órganos: hongos, esponjas y muchos organismos sencillos se organizan de otra manera."
+      },
+      "preguntas": [
+        {
+          "id": "si-1",
+          "enunciado": "¿Cuál de estos es un sistema de órganos?",
+          "opciones": [
+            "Circulatorio",
+            "Mitocondria",
+            "Músculo cardíaco",
+            "Glucosa"
+          ],
+          "correcta": 0,
+          "explicacion": "El sistema circulatorio reúne varios órganos: corazón, vasos y sangre."
+        },
+        {
+          "id": "si-2",
+          "enunciado": "¿Qué muestra el ejemplo del oxígeno que entra, circula y llega a las células?",
+          "opciones": [
+            "Que los sistemas trabajan de forma independiente",
+            "Que varios sistemas cooperan entre sí",
+            "Que el oxígeno es un tejido",
+            "Que las células no necesitan oxígeno"
+          ],
+          "correcta": 1,
+          "explicacion": "Respiratorio y circulatorio cooperan para llevar el oxígeno hasta las células."
+        }
+      ],
+      "revisado": false,
+      "requiere": [
+        "organo"
+      ]
+    },
+    {
+      "id": "organismo",
+      "titulo": "Organismo",
+      "resumen": "Un ser vivo completo.",
+      "anio": 9,
+      "etiqueta": "Nivel 9",
+      "nivel": "basico",
+      "diagrama": "nivel-organismo",
+      "ficha": {
+        "idea": "Un organismo es un ser vivo completo, capaz de vivir por sí mismo. Puede ser unicelular, como una bacteria, o pluricelular, como una planta o una persona, con muchos sistemas que trabajan coordinados.",
+        "contexto": [
+          {
+            "titulo": "Unicelular o pluricelular",
+            "texto": "En un organismo unicelular, célula y organismo son lo mismo. En uno pluricelular intervienen todos los niveles anteriores."
+          },
+          {
+            "titulo": "Un solo ser, muchos niveles",
+            "texto": "Cuando comes, actúan a la vez moléculas, orgánulos, células, tejidos, órganos y sistemas."
+          },
+          {
+            "titulo": "Saltarse niveles",
+            "texto": "Una bacteria no tiene tejidos ni órganos; un hongo o una esponja tampoco tienen sistemas como los animales complejos."
+          }
+        ],
+        "evidencia": [
+          "Una persona: sistemas, órganos, tejidos y células trabajan coordinados.",
+          "Una ameba: un organismo de una sola célula."
+        ],
+        "limites": "No todos los organismos pasan por todos los niveles: los más sencillos se saltan los intermedios."
+      },
+      "preguntas": [
+        {
+          "id": "or-1",
+          "enunciado": "Una bacteria es una sola célula. ¿Qué otro nivel es al mismo tiempo?",
+          "opciones": [
+            "Órgano",
+            "Tejido",
+            "Organismo",
+            "Sistema"
+          ],
+          "correcta": 2,
+          "explicacion": "En los seres unicelulares, la célula es también el organismo completo."
+        },
+        {
+          "id": "or-2",
+          "enunciado": "¿Qué tienen en común todos los organismos?",
+          "opciones": [
+            "Tienen órganos y sistemas",
+            "Están formados por una o más células",
+            "Todos son pluricelulares",
+            "Todos tienen tejidos"
+          ],
+          "correcta": 1,
+          "explicacion": "Todos están formados por una o más células, aunque no todos tengan tejidos, órganos o sistemas."
+        }
+      ],
+      "revisado": false,
+      "nucleo": true
+    },
+    {
+      "id": "mas-alla",
+      "titulo": "Más allá del organismo",
+      "resumen": "Poblaciones, comunidades, ecosistemas y biosfera.",
+      "anio": 10,
+      "etiqueta": "Nivel 10",
+      "nivel": "avanzado",
+      "diagrama": "nivel-mas-alla",
+      "ficha": {
+        "idea": "Los seres vivos no viven aislados. Los organismos de una misma especie que viven juntos forman una población; las poblaciones de distintas especies, una comunidad; la comunidad con su ambiente, un ecosistema; y todos los ecosistemas del planeta, la biosfera.",
+        "contexto": [
+          {
+            "titulo": "Cuatro peldaños más",
+            "texto": "Población → comunidad → ecosistema → biosfera. Estos niveles se estudian en ecología."
+          },
+          {
+            "titulo": "Entre organismos y ambiente",
+            "texto": "En un ecosistema importan tanto los seres vivos como el agua, el suelo y el clima."
+          },
+          {
+            "titulo": "Por qué importa",
+            "texto": "Las decisiones que afectan un ecosistema, como talar un bosque, cambian también a las poblaciones y organismos que viven en él."
+          }
+        ],
+        "evidencia": [
+          "Los peces de una laguna son una población.",
+          "Los peces, plantas, insectos y aves de la laguna forman una comunidad."
+        ],
+        "limites": "Esta ficha solo introduce estos niveles. En el área de relaciones ecosistémicas se trabajan con más detalle."
+      },
+      "preguntas": [
+        {
+          "id": "ma-1",
+          "enunciado": "Todos los peces de una misma especie que viven en una laguna forman...",
+          "opciones": [
+            "Una comunidad",
+            "Una población",
+            "Un ecosistema",
+            "Un órgano"
+          ],
+          "correcta": 1,
+          "explicacion": "Los individuos de una misma especie que viven juntos forman una población."
+        },
+        {
+          "id": "ma-2",
+          "enunciado": "¿Qué incluye un ecosistema?",
+          "opciones": [
+            "Solo los animales",
+            "Los seres vivos y su ambiente no vivo",
+            "Solo las plantas",
+            "Solo el suelo"
+          ],
+          "correcta": 1,
+          "explicacion": "Un ecosistema reúne la comunidad y los factores no vivos, como agua, suelo y clima."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}
