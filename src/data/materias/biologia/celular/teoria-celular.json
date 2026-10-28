@@ -19,7 +19,10 @@
         {
           "nombre": "Robert Hooke",
           "vida": "1635–1703",
-          "aporte": "Científico inglés. Publicó Micrographia (1665), un libro con dibujos detallados de lo que observaba con su microscopio compuesto, y acuñó el término «célula»."
+          "aporte": "Científico inglés. Publicó Micrographia (1665), un libro con dibujos detallados de lo que observaba con su microscopio compuesto, y acuñó el término «célula».",
+          "imagen": "imagenes/hooke-retrato-rita-greer.jpg",
+          "credito": "Hecha a partir de las descripciones de sus colegas Aubrey y Waller. Archivo «13 Portrait of Robert Hooke.JPG», Wikimedia Commons. Autora: Rita Greer. Licencia: Free Art License. Versión reducida y recortada por el marco; se distribuye bajo la misma licencia.",
+          "pieImagen": "Reconstrucción moderna de Rita Greer (2004): no se conserva ningún retrato de Hooke de su época."
         }
       ],
       "ficha": {

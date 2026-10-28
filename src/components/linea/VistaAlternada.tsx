@@ -20,10 +20,11 @@ export default function VistaAlternada({ bloques, abierto, onSeleccionar, carril
             <li key={b.id} className="pointer-events-none relative w-36 shrink-0">
               <button
                 type="button"
+                data-hito={b.id}
                 aria-expanded={sel}
                 aria-label={`${b.anio}: ${b.titulo}`}
                 onClick={() => onSeleccionar(b.id)}
-                className="pointer-events-auto absolute left-1/2 top-1/2 z-10 flex h-11 w-11 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-4 border-[var(--tarjeta)] bg-[var(--acento)] text-2xl font-bold leading-none text-[var(--fondo)] shadow transition hover:scale-110"
+                className="pointer-events-auto focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-2 focus-visible:outline-[var(--tinta)] absolute left-1/2 top-1/2 z-10 flex h-11 w-11 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-4 border-[var(--tarjeta)] bg-[var(--acento)] text-2xl font-bold leading-none text-[var(--fondo)] shadow transition hover:scale-110"
               >
                 <span aria-hidden="true" className={`transition-transform ${sel ? 'rotate-45' : ''}`}>
                   +

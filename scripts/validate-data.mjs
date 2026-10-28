@@ -27,7 +27,13 @@ for (const f of archivos(join(raiz, 'materias'))) {
     ids.add(b.id)
     if (!NIVELES.includes(b.nivel)) err(`${ctx}: nivel inválido (${b.nivel})`)
     if (!b.ficha?.idea) err(`${ctx}: falta ficha.idea`)
-    for (const a of b.autores ?? []) if (!a.nombre || !a.aporte) err(`${ctx}: autor sin nombre o aporte`)
+    for (const a of b.autores ?? []) {
+      if (!a.nombre || !a.aporte) err(`${ctx}: autor sin nombre o aporte`)
+      if (a.imagen) {
+        if (!existsSync(join(raiz, '../../public', a.imagen))) err(`${ctx}: no existe public/${a.imagen}`)
+        if (!a.credito) err(`${ctx}: la imagen de ${a.nombre} necesita crédito y licencia`)
+      }
+    }
     for (const i of b.ilustraciones ?? []) {
       if (!['svg', 'imagen'].includes(i.tipo)) err(`${ctx}/${i.id}: tipo de ilustración inválido`)
       if (!i.titulo || !i.pie) err(`${ctx}/${i.id}: falta título o pie`)

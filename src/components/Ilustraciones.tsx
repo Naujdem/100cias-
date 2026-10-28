@@ -2,6 +2,7 @@ import { useState } from 'react'
 import type { Ilustracion } from '../data/schema.ts'
 import { ILUSTRACIONES_SVG } from './ilustraciones/index.ts'
 import VisorZoom from './VisorZoom.tsx'
+import PantallaCompleta from './PantallaCompleta.tsx'
 
 const ruta = (r: string) => `${import.meta.env.BASE_URL}${r.replace(/^\//, '')}`
 
@@ -45,16 +46,16 @@ export default function Ilustraciones({ items }: { items: Ilustracion[] }) {
       </ul>
 
       {actual && (
-        <figure className="mt-3">
+        <PantallaCompleta className="mt-3">
           <VisorZoom etiqueta={actual.titulo}>
             <Contenido i={actual} />
           </VisorZoom>
-          <figcaption className="mt-2 text-sm">
+          <div className="mt-2 text-sm">
             <p>{actual.pie}</p>
             {actual.credito && <p className="mt-1 text-xs text-[var(--suave)]">{actual.credito}</p>}
             {actual.tipo === 'svg' && <p className="mt-1 text-xs text-[var(--suave)]">Ilustración esquemática, no está a escala.</p>}
-          </figcaption>
-        </figure>
+          </div>
+        </PantallaCompleta>
       )}
     </section>
   )

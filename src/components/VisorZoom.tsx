@@ -1,5 +1,6 @@
 import { useCallback, useRef, useState } from 'react'
 import type { PointerEvent, ReactNode, WheelEvent, KeyboardEvent } from 'react'
+import { usePantallaDelContenedor } from './PantallaCompleta.tsx'
 
 interface Vista {
   k: number
@@ -26,6 +27,7 @@ export default function VisorZoom({
   etiqueta: string
 }) {
   const caja = useRef<HTMLDivElement>(null)
+  const pantalla = usePantallaDelContenedor()
   const [v, setV] = useState<Vista>({ k: 1, x: 0, y: 0 })
   const punteros = useRef(new Map<number, { x: number; y: number }>())
   const gesto = useRef({ dist: 0, movido: 0 })
@@ -148,9 +150,10 @@ export default function VisorZoom({
           e.preventDefault()
         }
       }}
-      className={`relative w-full select-none overflow-hidden rounded-xl bg-[#efe3cc] ${alto} ${
-        v.k > 1 ? 'cursor-grab' : 'cursor-zoom-in'
-      }`}
+      data-zoomed={v.k > 1}
+      className={`relative w-full select-none overflow-hidden rounded-xl bg-[#efe3cc] ${
+        pantalla?.activa ? 'min-h-0 flex-1' : alto
+      } ${v.k > 1 ? 'cursor-grab' : 'cursor-zoom-in'}`}
       style={{ touchAction: v.k > 1 ? 'none' : 'pan-y' }}
     >
       <div
@@ -167,6 +170,20 @@ export default function VisorZoom({
         <button type="button" className={boton} onClick={() => zoomEn(1 / 1.5)} aria-label="Alejar" disabled={v.k <= 1}>
           −
         </button>
+        {pantalla && (
+          <button
+            type="button"
+            className={boton}
+            onClick={pantalla.alternar}
+            aria-pressed={pantalla.activa}
+            aria-label={pantalla.activa ? 'Salir de pantalla completa' : 'Pantalla completa'}
+            title={pantalla.activa ? 'Salir (F)' : 'Pantalla completa (F)'}
+          >
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              {pantalla.activa ? <path d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5" /> : <path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" />}
+            </svg>
+          </button>
+        )}
         <button
           type="button"
           className={`${boton} text-xs`}
@@ -178,7 +195,7 @@ export default function VisorZoom({
         </button>
       </div>
       <p data-control className="pointer-events-none absolute bottom-2 left-2 rounded bg-black/55 px-2 py-0.5 text-xs text-white" aria-hidden="true">
-        {v.k > 1 ? `${v.k.toFixed(1)}×` : 'Toca dos veces o usa + para acercar'}
+        {v.k > 1 ? `${v.k.toFixed(1)}× · flechas mueven · 0 restablece` : 'Toca dos veces o usa + para acercar'}
       </p>
     </div>
   )

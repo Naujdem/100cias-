@@ -30,6 +30,8 @@ export interface Autor {
   aporte: string
   /** ruta de una imagen libre de derechos (retrato o ilustración); si falta, se muestra una silueta ilustrada */
   imagen?: string
+  /** línea corta, siempre visible, sobre la naturaleza de la imagen (p. ej. «Reconstrucción moderna») */
+  pieImagen?: string
   /** autor y licencia de la imagen, p. ej. «Pintura anónima, dominio público (Wikimedia Commons)» */
   credito?: string
 }

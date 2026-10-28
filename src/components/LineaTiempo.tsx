@@ -46,6 +46,60 @@ export default function LineaTiempo({ bloques }: { bloques: Bloque[] }) {
     }
   }, [abierto, pantalla.activa])
 
+  const indice = ordenados.findIndex((b) => b.id === abierto)
+
+  const nodo = (id: string | null) => (id ? raiz.current?.querySelector<HTMLElement>(`[data-hito="${id}"]`) : null)
+  const llevarA = (el: HTMLElement | null | undefined) => {
+    if (!el) return
+    el.focus({ preventScroll: true })
+    el.scrollIntoView({ inline: 'center', block: 'nearest', behavior: 'smooth' })
+  }
+  const cerrar = () => {
+    const id = abierto
+    setAbierto(null)
+    requestAnimationFrame(() => llevarA(nodo(id)))
+  }
+
+  // Al pasar de un hito a otro con el recuadro abierto, la línea de fondo sigue al hito actual.
+  useEffect(() => {
+    if (abierto) nodo(abierto)?.scrollIntoView({ inline: 'center', block: 'nearest', behavior: 'smooth' })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [abierto])
+
+  // Teclado en la línea de tiempo (recuadro cerrado): ← → Inicio Fin mueven el foco entre hitos,
+  // Enter o Espacio abren el hito enfocado y F activa la pantalla completa.
+  useEffect(() => {
+    if (abierto) return
+    const alTeclear = (e: KeyboardEvent) => {
+      if (e.ctrlKey || e.metaKey || e.altKey) return
+      const t = e.target as HTMLElement | null
+      if (t && /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName)) return
+      const dentro = !!raiz.current?.contains(document.activeElement)
+      if (!pantalla.activa && !dentro) return
+
+      if (e.key.toLowerCase() === 'f') {
+        e.preventDefault()
+        if (pantalla.activa) pantalla.salir()
+        else pantalla.entrar()
+        return
+      }
+      if (!['ArrowRight', 'ArrowLeft', 'Home', 'End'].includes(e.key)) return
+      const nodos = [...(raiz.current?.querySelectorAll<HTMLElement>('[data-hito]') ?? [])]
+      if (!nodos.length) return
+      e.preventDefault()
+      const actual = nodos.indexOf(document.activeElement as HTMLElement)
+      let i = actual
+      if (e.key === 'ArrowRight') i = actual < 0 ? 0 : Math.min(nodos.length - 1, actual + 1)
+      else if (e.key === 'ArrowLeft') i = actual < 0 ? 0 : Math.max(0, actual - 1)
+      else if (e.key === 'Home') i = 0
+      else i = nodos.length - 1
+      llevarA(nodos[i])
+    }
+    window.addEventListener('keydown', alTeclear)
+    return () => window.removeEventListener('keydown', alTeclear)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [abierto, pantalla.activa])
+
   const mover = (dir: 1 | -1) => carril.current?.scrollBy({ left: dir * 280, behavior: 'smooth' })
   const elegirVista = (id: string) => {
     setVistaId(id)
@@ -77,7 +131,7 @@ export default function LineaTiempo({ bloques }: { bloques: Bloque[] }) {
           ))}
         </div>
         <div className="flex items-center gap-2">
-          <p className="hidden text-sm text-[var(--suave)] lg:block">Toca un hito para ver más.</p>
+          <p className="hidden text-sm text-[var(--suave)] lg:block">← → moverse · Enter abrir · F pantalla completa</p>
           <button
             type="button"
             onClick={() => mover(-1)}
@@ -116,7 +170,16 @@ export default function LineaTiempo({ bloques }: { bloques: Bloque[] }) {
         completa={pantalla.activa}
       />
 
-      {seleccionado && <DetalleBloque key={seleccionado.id} bloque={seleccionado} onCerrar={() => setAbierto(null)} />}
+      {seleccionado && (
+        <DetalleBloque
+          key={seleccionado.id}
+          bloque={seleccionado}
+          onCerrar={cerrar}
+          posicion={{ actual: indice + 1, total: ordenados.length }}
+          onAnterior={indice > 0 ? () => setAbierto(ordenados[indice - 1].id) : undefined}
+          onSiguiente={indice < ordenados.length - 1 ? () => setAbierto(ordenados[indice + 1].id) : undefined}
+        />
+      )}
     </div>
   )
 }

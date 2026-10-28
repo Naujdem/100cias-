@@ -1,5 +1,6 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import VisorZoom from '../VisorZoom.tsx'
+import PantallaCompleta from '../PantallaCompleta.tsx'
 
 // Ilustración (no a escala real) de lo que Hooke observó en 1665:
 // una lámina de corcho vista a simple vista, con lupa y con su microscopio.
@@ -68,6 +69,14 @@ function etiquetaAumento(s: number): string {
 }
 
 export default function CorchoHooke() {
+  return (
+    <PantallaCompleta>
+      <Contenido />
+    </PantallaCompleta>
+  )
+}
+
+function Contenido() {
   const [s, setS] = useState(1)
   const [punto, setPunto] = useState<Punto | null>(null)
   const celdas = useMemo(generarCeldas, [])
@@ -80,13 +89,27 @@ export default function CorchoHooke() {
   }
   const pantalla = (p: { x: number; y: number }) => ({ x: CX + s * p.x, y: CY + s * p.y })
 
+  // Teclas + y − cambian el aumento (útil en el aula, sin mouse).
+  useEffect(() => {
+    const alTeclear = (e: KeyboardEvent) => {
+      if (e.ctrlKey || e.metaKey || e.altKey) return
+      const mas = e.key === '+' || e.key === '='
+      const menos = e.key === '-' || e.key === '_'
+      if (!mas && !menos) return
+      setS((a) => Math.min(6, Math.max(1, Math.round((a + (mas ? 0.5 : -0.5)) * 100) / 100)))
+      setPunto(null)
+    }
+    window.addEventListener('keydown', alTeclear)
+    return () => window.removeEventListener('keydown', alTeclear)
+  }, [])
+
   const opacidadParedes = Math.min(1, Math.max(0, (s - 1.6) / 2))
   const verPuntos = s >= 4.5
 
   const d = celdas.map((c) => `M${c.x} ${c.y}h${c.w}v${c.h}h${-c.w}z`).join('')
 
   return (
-    <div>
+    <>
       <VisorZoom etiqueta="Corcho observado con distintos aumentos" alto="aspect-[4/3]">
       <svg
         viewBox={`0 0 ${W} ${H}`}
@@ -101,7 +124,7 @@ export default function CorchoHooke() {
         </defs>
 
         {/* lámina de corcho a simple vista */}
-        <rect x="0" y="0" width={W} height={H} fill="#d9b77f" />
+        <rect x="-1500" y="-1500" width="3400" height="3300" fill="#d9b77f" />
         {puntos.map((p, i) => (
           <circle key={i} cx={p.x} cy={p.y} r={p.r} fill="#a27d45" opacity="0.55" />
         ))}
@@ -167,6 +190,8 @@ export default function CorchoHooke() {
             setS(Number(e.target.value))
             setPunto(null)
           }}
+          // al soltar, el control devuelve el foco al recuadro para que las flechas sigan cambiando de hito
+          onPointerUp={(e) => e.currentTarget.closest<HTMLElement>('[role=dialog]')?.focus()}
           className="mt-1 h-8 w-full accent-[var(--acento)]"
         />
       </div>
@@ -186,6 +211,6 @@ export default function CorchoHooke() {
         )}
       </div>
       <p className="mt-2 text-xs text-[var(--suave)]">Ilustración esquemática, no es el dibujo original de Hooke ni está a escala.</p>
-    </div>
+    </>
   )
 }

@@ -10,7 +10,7 @@ export default function Retrato({ autor }: { autor: Autor }) {
       <div className="relative rounded-md bg-gradient-to-br from-[#9a7640] to-[#4a3416] p-2 shadow-lg">
         <div className="relative aspect-[3/4] overflow-hidden rounded-sm bg-[#efe3cc]">
           {autor.imagen ? (
-            <img src={autor.imagen} alt={`Imagen de ${autor.nombre}`} className="h-full w-full object-cover" />
+            <img src={`${import.meta.env.BASE_URL}${autor.imagen.replace(/^\//, '')}`} alt={`Imagen de ${autor.nombre}`} className="h-full w-full object-cover" />
           ) : (
             <svg viewBox="0 0 150 200" role="img" aria-label={`Silueta ilustrada de ${autor.nombre}`} className="h-full w-full">
               <defs>

@@ -14,7 +14,16 @@ const FOCALIZABLES = 'button, [href], input, select, textarea, [tabindex]:not([t
  * Recuadro emergente con la ficha de un hito: retrato y descripción a la izquierda,
  * pestañas y contenido a la derecha. Se cierra con la X, con Esc o tocando fuera.
  */
-export default function DetalleBloque({ bloque: b, onCerrar }: { bloque: Bloque; onCerrar: () => void }) {
+interface Props {
+  bloque: Bloque
+  onCerrar: () => void
+  /** posición del hito en la línea de tiempo, para el contador y los botones Anterior/Siguiente */
+  posicion?: { actual: number; total: number }
+  onAnterior?: () => void
+  onSiguiente?: () => void
+}
+
+export default function DetalleBloque({ bloque: b, onCerrar, posicion, onAnterior, onSiguiente }: Props) {
   const idTitulo = useId()
   const caja = useRef<HTMLDivElement>(null)
   const Diagrama = b.diagrama ? DIAGRAMAS[b.diagrama] : undefined
@@ -33,12 +42,48 @@ export default function DetalleBloque({ bloque: b, onCerrar }: { bloque: Bloque;
     return () => previo?.focus?.()
   }, [])
 
-  const alTeclear = (e: KeyboardEvent<HTMLDivElement>) => {
-    if (e.key === 'Escape') {
-      e.stopPropagation()
-      onCerrar()
-      return
+  // Teclado (pensado para el aula, sin mouse). Se escucha en todo el documento para que funcione
+  // aunque el foco esté en el fondo del recuadro. Se ejecuta en la fase de captura.
+  useEffect(() => {
+    const ids = pestanas.map((p) => p.id)
+    const alTeclear = (e: globalThis.KeyboardEvent) => {
+      if (e.ctrlKey || e.metaKey || e.altKey) return
+      if (e.key === 'Escape') {
+        // si hay un diagrama en pantalla completa de respaldo, Esc sale de él primero
+        if (caja.current?.querySelector('[data-fs="true"]')) return
+        e.preventDefault()
+        e.stopPropagation()
+        onCerrar()
+        return
+      }
+      const t = e.target as HTMLElement | null
+      if (t && /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName)) return
+      // con zoom, las flechas mueven la imagen (las maneja el visor)
+      if (t?.closest('[data-zoomed="true"]') && e.key.startsWith('Arrow')) return
+
+      if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === 'ArrowLeft' || e.key === 'PageUp') {
+        const siguiente = e.key === 'ArrowRight' || e.key === 'PageDown'
+        const ir = siguiente ? onSiguiente : onAnterior
+        if (ir) {
+          e.preventDefault()
+          e.stopPropagation()
+          ir()
+        }
+        return
+      }
+      if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+        e.preventDefault()
+        e.stopPropagation()
+        const d = e.key === 'ArrowDown' ? 1 : -1
+        setActiva((a) => ids[(ids.indexOf(a) + d + ids.length) % ids.length])
+      }
     }
+    document.addEventListener('keydown', alTeclear, true)
+    return () => document.removeEventListener('keydown', alTeclear, true)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [onCerrar, onSiguiente, onAnterior, Diagrama])
+
+  const alTeclear = (e: KeyboardEvent<HTMLDivElement>) => {
     if (e.key !== 'Tab' || !caja.current) return
     const lista = [...caja.current.querySelectorAll<HTMLElement>(FOCALIZABLES)].filter((x) => !x.hasAttribute('disabled'))
     if (!lista.length) return
@@ -90,7 +135,15 @@ export default function DetalleBloque({ bloque: b, onCerrar }: { bloque: Bloque;
               <div className="min-w-0 text-sm md:mt-3">
                 <p>{principal.aporte}</p>
                 {principal.imagen ? (
-                  principal.credito && <p className="mt-2 text-xs text-[var(--suave)]">{principal.credito}</p>
+                  <>
+                    {principal.pieImagen && <p className="mt-2 text-xs text-[var(--suave)]">{principal.pieImagen}</p>}
+                    {principal.credito && (
+                      <details className="mt-1 text-xs text-[var(--suave)]">
+                        <summary className="cursor-pointer">Crédito de la imagen</summary>
+                        <p className="mt-1">{principal.credito}</p>
+                      </details>
+                    )}
+                  </>
                 ) : (
                   <p className="mt-2 text-xs text-[var(--suave)]">Silueta ilustrativa, no es un retrato.</p>
                 )}
@@ -167,6 +220,33 @@ export default function DetalleBloque({ bloque: b, onCerrar }: { bloque: Bloque;
             </div>
           </div>
         </div>
+
+        <footer className="sticky bottom-0 flex items-center justify-between gap-2 border-t border-[var(--linea)] bg-[var(--tarjeta)] px-3 py-2 sm:px-5">
+          <button
+            type="button"
+            onClick={onAnterior}
+            disabled={!onAnterior}
+            className="min-h-11 rounded-full border border-[var(--linea)] px-4 text-sm font-semibold disabled:opacity-40"
+          >
+            ‹ Anterior
+          </button>
+          <div className="min-w-0 text-center text-xs text-[var(--suave)]">
+            {posicion && (
+              <p aria-live="polite" className="font-semibold">
+                Hito {posicion.actual} de {posicion.total}
+              </p>
+            )}
+            <p className="hidden md:block">← → hitos · ↑ ↓ pestañas · + − aumento · F pantalla completa · Esc cerrar</p>
+          </div>
+          <button
+            type="button"
+            onClick={onSiguiente}
+            disabled={!onSiguiente}
+            className="min-h-11 rounded-full border border-[var(--linea)] px-4 text-sm font-semibold disabled:opacity-40"
+          >
+            Siguiente ›
+          </button>
+        </footer>
       </div>
     </div>
   )

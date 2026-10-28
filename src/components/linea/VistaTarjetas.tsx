@@ -14,10 +14,11 @@ export default function VistaTarjetas({ bloques, abierto, onSeleccionar, carril 
               <p className="text-center text-sm font-bold text-[var(--acento)]">{b.anio}</p>
               <button
                 type="button"
+                data-hito={b.id}
                 aria-expanded={sel}
                 aria-label={`${b.anio}: ${b.titulo}`}
                 onClick={() => onSeleccionar(b.id)}
-                className="relative z-10 mx-auto mt-2 flex h-9 w-9 items-center justify-center rounded-full border-[3px] border-[var(--acento)] transition"
+                className="relative z-10 focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-2 focus-visible:outline-[var(--tinta)] mx-auto mt-2 flex h-9 w-9 items-center justify-center rounded-full border-[3px] border-[var(--acento)] transition"
                 style={{ background: sel ? 'var(--acento)' : 'var(--fondo)' }}
               >
                 <span className={`h-2.5 w-2.5 rounded-full ${sel ? 'bg-[var(--fondo)]' : 'bg-[var(--acento)]'}`} />

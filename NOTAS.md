@@ -55,8 +55,16 @@ Se profundiza **un hito a la vez**: se revisa el contenido con JuanMed, se agreg
 ## Fuente de referencia
 La presentación «La célula» de JuanMed (34 diapositivas, tres postulados, analogías de la ciudad para los organelos). El plan de área del colegio es solo guía.
 
+## Teclado y uso en el aula
+JuanMed usa la app en clase y no le resulta cómodo el mouse, así que todo se puede hacer con teclado:
+- **Línea de tiempo:** `← →` mueven el foco entre hitos, `Inicio`/`Fin` van al primero/último, `Enter` abre el hito, `F` pantalla completa.
+- **Recuadro abierto:** `← →` (o `RePág`/`AvPág`, que usan muchos controles remotos de presentación) pasan al hito anterior o siguiente; `↑ ↓` cambian de pestaña; `Esc` cierra y devuelve el foco al hito actual. Hay también botones Anterior/Siguiente y el contador «Hito X de N».
+- **Diagrama del corcho:** `+` y `−` cambian el aumento; `F` lo pone a pantalla completa (con el control de aumento y los textos).
+- **Visor con zoom:** con el visor enfocado, `+ −` acercan o alejan y `0` restablece; con zoom, las flechas mueven la imagen (pulsar `0` para volver a cambiar de hito con las flechas).
+- Pantalla completa: API nativa con respaldo para iPhone; `Esc` sale.
+
 ## Retratos de autores
-Por ahora silueta ilustrativa. Para poner una imagen real: guardarla en `public/imagenes/`, y completar `autor.imagen` y `autor.credito` (autor y licencia). Verificar siempre en la fuente (p. ej. Wikimedia Commons) **a quién retrata** la imagen y su licencia. De Hooke no se conoce ningún retrato auténtico; no etiquetar un cuadro como «Hooke» sin fuente que lo respalde.
+Hooke usa la reconstrucción de Rita Greer (2004, Free Art License, Wikimedia Commons; versión reducida en `public/imagenes/`, con `pieImagen` y `credito` en el JSON). Los demás autores usan silueta ilustrativa hasta tener imagen. Para poner una imagen real: guardarla en `public/imagenes/`, y completar `autor.imagen` y `autor.credito` (autor y licencia). Verificar siempre en la fuente (p. ej. Wikimedia Commons) **a quién retrata** la imagen y su licencia. De Hooke no se conoce ningún retrato auténtico; no etiquetar un cuadro como «Hooke» sin fuente que lo respalde.
 
 ## Pendiente (en este orden)
 1. Revisar Hooke con JuanMed y seguir con Leeuwenhoek, Schleiden, Schwann y Virchow, uno por uno, cada uno con su diagrama (ideas: gota de agua con «animálculos», tejido vegetal y animal, división celular).
