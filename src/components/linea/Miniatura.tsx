@@ -22,8 +22,21 @@ function MiniCorcho() {
   )
 }
 
+function MiniGota() {
+  return (
+    <svg viewBox="0 0 160 100" className="h-full w-full" aria-hidden="true">
+      <rect width="160" height="100" fill="#d8f0f3" />
+      <circle cx="80" cy="50" r="38" fill="#e9f8fa" stroke="#3c7f8a" strokeWidth="4" />
+      <ellipse cx="70" cy="44" rx="15" ry="6" fill="#a7d3a0" stroke="#3f7a3a" strokeWidth="1.5" transform="rotate(-20 70 44)" />
+      <ellipse cx="96" cy="62" rx="10" ry="4.5" fill="#a7d3a0" stroke="#3f7a3a" strokeWidth="1.5" transform="rotate(25 96 62)" />
+      {[[58,62],[72,70],[88,40],[100,50],[64,52],[80,64]].map(([x,y],i)=><circle key={i} cx={x} cy={y} r="1.6" fill="#7a4a8a" />)}
+    </svg>
+  )
+}
+
 const MINIATURAS: Record<string, () => React.JSX.Element> = {
   'corcho-hooke': MiniCorcho,
+  'gota-leeuwenhoek': MiniGota,
 }
 
 function iniciales(nombre: string): string {

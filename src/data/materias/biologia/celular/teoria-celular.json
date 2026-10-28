@@ -137,7 +137,7 @@
     {
       "id": "leeuwenhoek",
       "titulo": "Antonie van Leeuwenhoek: células vivas",
-      "resumen": "Con microscopios simples de una sola lente observó organismos vivos y células sueltas.",
+      "resumen": "Con microscopios de una sola lente miró gotas de agua y vio seres vivos diminutos, que llamó «animálculos».",
       "anio": 1674,
       "nivel": "basico",
       "autores": [
@@ -149,16 +149,39 @@
       ],
       "ficha": {
         "quien": "Antonie van Leeuwenhoek",
-        "cuando": "Hacia 1674",
-        "idea": "Fue de los primeros en observar células vivas: protozoos y bacterias en el agua (los llamó «animálculos»), además de glóbulos rojos y espermatozoides.",
+        "cuando": "1674–1683",
+        "idea": "Con un microscopio de una sola lente, casi una esferita de vidrio, Leeuwenhoek miró gotas de agua y vio seres vivos diminutos que se movían. Los llamó «animálculos» («animalitos»). Fue de los primeros en observar protozoos (hacia 1674) y bacterias (1676), además de glóbulos rojos y espermatozoides. Hooke había visto las paredes de células muertas; Leeuwenhoek vio, sin saberlo, células vivas.",
         "evidencia": [
-          "Sus cartas a la Royal Society describen y dibujan los organismos que observaba."
+          "Sus cartas a la Royal Society describen y dibujan lo que observaba (los dibujos solían hacerlos dibujantes que él contrataba).",
+          "Hooke repitió sus observaciones en 1677 y las confirmó."
         ],
-        "limites": "Describió lo que veía con gran detalle, pero sin proponer una teoría general sobre la célula."
+        "limites": "Describió con gran detalle lo que veía, pero no lo relacionó con las «células» de Hooke: no sabía que los animálculos eran células completas ni propuso una teoría general. Tampoco dejó su método, así que sus resultados tardaron en repetirse.",
+        "contexto": [
+          {
+            "titulo": "Un comerciante, no un científico",
+            "texto": "Vendía telas en Delft (Países Bajos), no estudió en la universidad y escribía en neerlandés. Empezó a pulir lentes para revisar la calidad de los hilos de las telas."
+          },
+          {
+            "titulo": "Un microscopio diminuto",
+            "texto": "Era una lente casi esférica, más pequeña que una lenteja, entre dos placas de metal. Se acercaba al ojo y la muestra iba clavada en una aguja. Llegaba a unos 200 aumentos o más, con más nitidez que los microscopios compuestos de la época."
+          },
+          {
+            "titulo": "Mantuvo su técnica en secreto",
+            "texto": "Hizo cientos de lentes y nunca explicó cómo las pulía. Por eso, durante años casi nadie pudo repetir sus observaciones."
+          },
+          {
+            "titulo": "Cartas a la Royal Society",
+            "texto": "Durante unos cincuenta años mandó cartas a la Royal Society de Londres. En 1677 Hooke repitió sus observaciones de «animálculos» y las confirmó."
+          },
+          {
+            "titulo": "Bacterias en sus propios dientes",
+            "texto": "En 1683 describió pequeños organismos en el sarro de sus dientes. Son de los primeros dibujos de bacterias."
+          }
+        ]
       },
       "preguntas": [
         {
-          "id": "hl-2",
+          "id": "ll-1",
           "enunciado": "¿Qué aportó Leeuwenhoek a esta historia?",
           "opciones": [
             "Formuló que toda célula proviene de otra célula",
@@ -168,9 +191,62 @@
           ],
           "correcta": 1,
           "explicacion": "Leeuwenhoek fue de los primeros en observar seres vivos microscópicos, como protozoos y bacterias. Los postulados vinieron casi dos siglos después."
+        },
+        {
+          "id": "ll-2",
+          "enunciado": "¿Cómo llamó Leeuwenhoek a los seres vivos diminutos que veía en el agua?",
+          "opciones": [
+            "Animálculos",
+            "Células",
+            "Microbios",
+            "Gérmenes"
+          ],
+          "correcta": 0,
+          "explicacion": "Los llamó «animálculos», «animalitos». Las palabras «microbio» y «célula» para estos seres vinieron después."
+        },
+        {
+          "id": "ll-3",
+          "enunciado": "¿Qué diferencia hay entre lo que vio Hooke en el corcho y lo que vio Leeuwenhoek en el agua?",
+          "opciones": [
+            "Hooke vio paredes de células muertas; Leeuwenhoek vio seres vivos que se movían",
+            "Hooke vio bacterias; Leeuwenhoek vio paredes",
+            "Los dos vieron lo mismo con distinto microscopio",
+            "Hooke vio el núcleo; Leeuwenhoek no"
+          ],
+          "correcta": 0,
+          "explicacion": "El corcho es tejido muerto, así que Hooke vio solo paredes. Leeuwenhoek observó organismos vivos de una sola célula."
+        },
+        {
+          "id": "ll-4",
+          "enunciado": "¿Por qué casi nadie pudo repetir al principio las observaciones de Leeuwenhoek?",
+          "opciones": [
+            "Mantuvo en secreto cómo pulía sus lentes",
+            "Sus cartas estaban en latín",
+            "Usaba un microscopio compuesto muy complejo",
+            "Nadie le creyó y no lo intentó"
+          ],
+          "correcta": 0,
+          "explicacion": "Hizo cientos de lentes y nunca explicó su técnica. Hooke logró repetir sus observaciones en 1677."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "diagrama": "gota-leeuwenhoek",
+      "ilustraciones": [
+        {
+          "id": "microscopio",
+          "titulo": "Su microscopio",
+          "tipo": "svg",
+          "recurso": "microscopio-leeuwenhoek",
+          "pie": "Una lente casi esférica entre dos placas de metal. La muestra va en la punta de una aguja que se regula con tornillos, y se mira muy cerca del ojo, hacia la luz."
+        },
+        {
+          "id": "gota",
+          "titulo": "Una gota de agua",
+          "tipo": "svg",
+          "recurso": "gota-animalculos",
+          "pie": "Una gota de agua de charco, vista con una lente fuerte, está llena de vida: los animálculos (protozoos) son los más grandes y las bacterias, puntos mucho más pequeños."
+        }
+      ]
     },
     {
       "id": "schleiden",

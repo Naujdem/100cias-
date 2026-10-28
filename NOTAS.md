@@ -49,10 +49,12 @@ scripts/seleccion.test.ts                   pruebas de la lógica (npm test)
 - **Diagrama interactivo del corcho de Hooke** (control de aumento y puntos tocables). Registro de diagramas en `src/components/diagramas/index.ts`; para agregar uno se crea el componente y se pone su id en `bloque.diagrama`.
 - **Comparativo corcho ↔ celdas de monasterio**: al acercar (≥ 4,5×) aparece el botón «Comparar con celdas de monasterio» (tecla `C`) con dos dibujos esquemáticos y tres parecidos; explica el origen de la palabra «célula». Borrador.
 - **Hooke ampliado (28 oct, 2.ª pasada)**: la pestaña Diagrama tiene tres actividades: *Explorar el corcho*, *Su dibujo* (lámina de Micrographia por zonas: completa, corte A, corte B) y *Calcula como Hooke* (rehacer la cuenta de 60 cavidades en 1/18 de pulgada → pulgada cúbica). La pestaña Historia suma `ficha.contexto` (por qué corcho, panal y monasterio, otras plantas, Malpighi y Grew, el libro). Origen del nombre corregido: Hooke habló de un panal; *cellula* = «cuarto pequeño». Quiz de Hooke: 4 preguntas.
+- **Leeuwenhoek ampliado (28 oct)**: mismo molde que Hooke. Diagrama `gota-leeuwenhoek` con dos actividades (*Mira una gota*: aumento, animálculos que se mueven —respeta «reducir movimiento»— y bacterias tocables; *¿Qué tan pequeño?*: eje logarítmico de 1 µm a 1 mm con el límite del ojo y el de sus lentes). Dos ilustraciones propias (su microscopio, la gota), `ficha.contexto` con cinco datos y 4 preguntas. Sigue con silueta (sin retrato) y todo en borrador.
+- Validador: ahora los ids de pregunta deben ser únicos en todo el tema (había un `hl-2` repetido, corregido).
 - Perfiles guardados en el navegador y mini-quiz.
 
 ## Método de trabajo del subtema 1.1
-Se profundiza **un hito a la vez**: se revisa el contenido con JuanMed, se agrega diagrama interactivo y se marca `revisado: true`. Hito 1 (Hooke) con segunda pasada hecha; por verificar contra el texto de Micrographia: 60 cavidades en 1/18 de pulgada, Observación 18, plantas con jugos, cita de Pepys, Grew y Malpighi.
+Se profundiza **un hito a la vez**: se revisa el contenido con JuanMed, se agrega diagrama interactivo y se marca `revisado: true`. Hito 2 (Leeuwenhoek) con primera pasada profunda; por verificar: fechas (1674 protozoos, 1676 bacterias, 1683 sarro), ~200 aumentos, cartas durante unos 50 años, confirmación de Hooke en 1677, tamaños de la escala. Hito 1 (Hooke) con segunda pasada hecha; por verificar contra el texto de Micrographia: 60 cavidades en 1/18 de pulgada, Observación 18, plantas con jugos, cita de Pepys, Grew y Malpighi.
 
 ## Fuente de referencia
 La presentación «La célula» de JuanMed (34 diapositivas, tres postulados, analogías de la ciudad para los organelos). El plan de área del colegio es solo guía.

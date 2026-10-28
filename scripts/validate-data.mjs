@@ -21,6 +21,7 @@ for (const f of archivos(join(raiz, 'materias'))) {
   const t = JSON.parse(readFileSync(f, 'utf8'))
   temas.set(t.id, t)
   const ids = new Set()
+  const pids = new Set() // los ids de pregunta deben ser únicos en todo el tema (el quiz mezcla bloques)
   for (const b of t.bloques) {
     const ctx = `${t.id}/${b.id}`
     if (ids.has(b.id)) err(`${ctx}: id de bloque repetido`)
@@ -44,7 +45,6 @@ for (const f of archivos(join(raiz, 'materias'))) {
       }
     }
     if (!b.revisado) avisos.push(`${ctx}: borrador sin revisar`)
-    const pids = new Set()
     for (const p of b.preguntas ?? []) {
       const pc = `${ctx}/${p.id}`
       if (pids.has(p.id)) err(`${pc}: id de pregunta repetido`)
