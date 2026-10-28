@@ -191,6 +191,16 @@ export default function DetalleBloque({ bloque: b, onCerrar, posicion, onAnterio
                     <p className="text-[var(--suave)]">{[b.ficha.quien, b.ficha.cuando].filter(Boolean).join(' · ')}</p>
                   ) : null}
                   <p>{b.ficha.idea}</p>
+                  {b.ficha.contexto && (
+                    <dl className="space-y-2 rounded-xl bg-[var(--fondo)] p-3">
+                      {b.ficha.contexto.map((c) => (
+                        <div key={c.titulo}>
+                          <dt className="font-semibold">{c.titulo}</dt>
+                          <dd>{c.texto}</dd>
+                        </div>
+                      ))}
+                    </dl>
+                  )}
                   {b.ilustraciones && <Ilustraciones items={b.ilustraciones} />}
                 </div>
               )}

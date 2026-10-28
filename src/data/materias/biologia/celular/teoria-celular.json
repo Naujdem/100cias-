@@ -11,7 +11,7 @@
     {
       "id": "hooke",
       "titulo": "Robert Hooke: las primeras «células»",
-      "resumen": "Al mirar corcho con un microscopio, vio cavidades parecidas a las celdas de un monasterio y las llamó células.",
+      "resumen": "Al mirar corcho con un microscopio vio cavidades en filas, parecidas a un panal, y las llamó «cells» (células).",
       "anio": 1665,
       "nivel": "basico",
       "diagrama": "corcho-hooke",
@@ -28,12 +28,34 @@
       "ficha": {
         "quien": "Robert Hooke",
         "cuando": "1665",
-        "idea": "Observó una lámina muy fina de corcho con un microscopio rudimentario y vio pequeñas cavidades ordenadas en filas. Las llamó «células» porque le recordaban a las celdas de un monasterio.",
+        "idea": "Con un microscopio compuesto de unos 30 aumentos, Hooke cortó con una navaja una lámina finísima de corcho y vio pequeñas cavidades ordenadas, separadas por paredes. Las describió como cajitas o celdillas parecidas a un panal y las llamó «cells» (células). Publicó su dibujo en Micrographia (1665).",
         "evidencia": [
-          "Micrographia (1665) incluye su dibujo del corcho.",
-          "Calculó que en una pulgada cúbica de corcho cabían más de mil millones de estas cavidades (dato por verificar)."
+          "Micrographia (1665) incluye su dibujo del corcho en dos cortes distintos, A y B.",
+          "Su cálculo: unas 60 cavidades en 1/18 de pulgada, es decir, más de mil millones por pulgada cúbica (en la pestaña Diagrama puedes rehacer la cuenta)."
         ],
-        "limites": "El corcho es tejido muerto: Hooke vio las paredes que dejaron las células, no células vivas. Tampoco tenía una teoría que explicara qué eran; para él eran solo «celdas»."
+        "limites": "El corcho es tejido muerto: Hooke vio las paredes que dejaron las células, no células vivas. Para él eran solo espacios («celdas»), no las unidades vivas que hoy llamamos células; esa idea llegó casi dos siglos después.",
+        "contexto": [
+          {
+            "titulo": "¿Por qué eligió el corcho?",
+            "texto": "Es liviano y se corta en láminas muy delgadas con una navaja afilada, y Hooke quería entender por qué flotaba y se comprimía tanto."
+          },
+          {
+            "titulo": "Un panal, y también un monasterio",
+            "texto": "Hooke comparó las cavidades con las celdillas de un panal. La palabra latina cellula significa «cuarto pequeño», como las celdas de un monasterio; por eso suele contarse ese origen del nombre."
+          },
+          {
+            "titulo": "Vio más que corcho",
+            "texto": "Encontró cavidades parecidas en otras plantas, como la médula del saúco o las zanahorias. En las plantas vivas notó que estaban llenas de jugos, no vacías como en el corcho."
+          },
+          {
+            "titulo": "No estaba solo",
+            "texto": "En esos años Marcello Malpighi (Italia) y Nehemiah Grew (Inglaterra) también estudiaban la estructura interna de las plantas."
+          },
+          {
+            "titulo": "Un libro famoso",
+            "texto": "Micrographia fue un éxito: con grandes láminas mostró un mundo invisible, como una pulga o un piojo. Samuel Pepys lo llamó «el libro más ingenioso que he leído»."
+          }
+        ]
       },
       "preguntas": [
         {
@@ -47,6 +69,42 @@
           ],
           "correcta": 0,
           "explicacion": "Hooke vio los espacios que dejan las paredes de células muertas del corcho y los llamó «células» por su parecido con las celdas de un panal o de un monasterio."
+        },
+        {
+          "id": "hl-2",
+          "enunciado": "¿Por qué lo que vio Hooke en el corcho no eran células vivas?",
+          "opciones": [
+            "El corcho es tejido muerto: solo quedan las paredes",
+            "Su microscopio no alcanzaba a ver el núcleo",
+            "El corcho no es de origen vegetal",
+            "Dibujó las cavidades de memoria"
+          ],
+          "correcta": 0,
+          "explicacion": "El corcho es corteza muerta. Hooke vio los espacios y las paredes que quedaron cuando las células murieron."
+        },
+        {
+          "id": "hl-3",
+          "enunciado": "¿De dónde viene el nombre «célula»?",
+          "opciones": [
+            "Del latín cellula, «cuarto pequeño»: las cavidades parecían celdillas",
+            "Del griego bios, «vida»",
+            "Del nombre de su ayudante",
+            "De la palabra latina para «corcho»"
+          ],
+          "correcta": 0,
+          "explicacion": "Hooke las comparó con celdillas de un panal; cellula significa «cuarto pequeño», como las celdas de un monasterio."
+        },
+        {
+          "id": "hl-4",
+          "enunciado": "¿En qué libro publicó Hooke su dibujo del corcho?",
+          "opciones": [
+            "Micrographia",
+            "Principia Mathematica",
+            "De humani corporis fabrica",
+            "Systema Naturae"
+          ],
+          "correcta": 0,
+          "explicacion": "En Micrographia (1665), un libro con grandes láminas de lo que veía con su microscopio."
         }
       ],
       "revisado": false,

@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useState } from 'react'
 import VisorZoom from '../VisorZoom.tsx'
 import PantallaCompleta from '../PantallaCompleta.tsx'
+import DibujoHooke from './DibujoHooke.tsx'
+import CalculoHooke from './CalculoHooke.tsx'
 
 // Ilustración (no a escala real) de lo que Hooke observó en 1665:
 // una lámina de corcho vista a simple vista, con lupa y con su microscopio.
@@ -58,7 +60,7 @@ const TEXTO: Record<Punto, { titulo: string; cuerpo: string }> = {
   cavidad: {
     titulo: 'La cavidad',
     cuerpo:
-      'Un espacio vacío, parecido a una habitación pequeña. Por eso las llamó «células» (del latín cellula, «celdilla»): le recordaron a las celdas de un monasterio.',
+      'Un espacio vacío y pequeño. Hooke lo comparó con las celdillas de un panal. En latín cellula significa «cuarto pequeño», como las celdas de un monasterio; de ahí el nombre.',
   },
 }
 
@@ -68,11 +70,38 @@ function etiquetaAumento(s: number): string {
   return 'Con el microscopio de Hooke (unos 30 aumentos, ilustrativo)'
 }
 
+type Modo = 'explorar' | 'dibujo' | 'calculo'
+const MODOS: { id: Modo; texto: string }[] = [
+  { id: 'explorar', texto: 'Explorar el corcho' },
+  { id: 'dibujo', texto: 'Su dibujo' },
+  { id: 'calculo', texto: 'Calcula como Hooke' },
+]
+
 export default function CorchoHooke() {
+  const [modo, setModo] = useState<Modo>('explorar')
   return (
-    <PantallaCompleta>
-      <Contenido />
-    </PantallaCompleta>
+    <div>
+      <div role="group" aria-label="Actividad" className="mb-3 flex flex-wrap gap-2">
+        {MODOS.map((m) => (
+          <button
+            key={m.id}
+            type="button"
+            aria-pressed={modo === m.id}
+            onClick={() => setModo(m.id)}
+            className="min-h-10 rounded-full border border-[var(--acento)] px-3 text-sm font-semibold text-[var(--acento)] aria-pressed:bg-[var(--acento)] aria-pressed:text-white"
+          >
+            {m.texto}
+          </button>
+        ))}
+      </div>
+      {modo === 'explorar' && (
+        <PantallaCompleta>
+          <Contenido />
+        </PantallaCompleta>
+      )}
+      {modo === 'dibujo' && <DibujoHooke />}
+      {modo === 'calculo' && <CalculoHooke />}
+    </div>
   )
 }
 
@@ -248,7 +277,7 @@ function Contenido() {
             <li>Cada uno está separado del siguiente por una pared.</li>
           </ul>
           <p className="mt-2">
-            Por eso Hooke las llamó <em>cellulae</em> (en latín, «celdillas»), de donde viene la palabra «célula». Ojo: en el corcho solo se ven las paredes de células que ya murieron.
+            Hooke las comparó con un panal y las llamó «cells». La palabra latina <em>cellula</em> («cuarto pequeño») es la que se asocia con las celdas de los monjes; de ahí «célula». Ojo: en el corcho solo se ven las paredes de células que ya murieron.
           </p>
         </div>
       ) : (

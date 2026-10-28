@@ -48,10 +48,11 @@ scripts/seleccion.test.ts                   pruebas de la lógica (npm test)
 - Miniaturas de los hitos: ilustración propia si existe (hoy solo Hooke); si no, iniciales del autor como marcador de posición.
 - **Diagrama interactivo del corcho de Hooke** (control de aumento y puntos tocables). Registro de diagramas en `src/components/diagramas/index.ts`; para agregar uno se crea el componente y se pone su id en `bloque.diagrama`.
 - **Comparativo corcho ↔ celdas de monasterio**: al acercar (≥ 4,5×) aparece el botón «Comparar con celdas de monasterio» (tecla `C`) con dos dibujos esquemáticos y tres parecidos; explica el origen de la palabra «célula». Borrador.
+- **Hooke ampliado (28 oct, 2.ª pasada)**: la pestaña Diagrama tiene tres actividades: *Explorar el corcho*, *Su dibujo* (lámina de Micrographia por zonas: completa, corte A, corte B) y *Calcula como Hooke* (rehacer la cuenta de 60 cavidades en 1/18 de pulgada → pulgada cúbica). La pestaña Historia suma `ficha.contexto` (por qué corcho, panal y monasterio, otras plantas, Malpighi y Grew, el libro). Origen del nombre corregido: Hooke habló de un panal; *cellula* = «cuarto pequeño». Quiz de Hooke: 4 preguntas.
 - Perfiles guardados en el navegador y mini-quiz.
 
 ## Método de trabajo del subtema 1.1
-Se profundiza **un hito a la vez**: se revisa el contenido con JuanMed, se agrega diagrama interactivo y se marca `revisado: true`. Hito 1 (Hooke) hecho en versión inicial; esperando revisión.
+Se profundiza **un hito a la vez**: se revisa el contenido con JuanMed, se agrega diagrama interactivo y se marca `revisado: true`. Hito 1 (Hooke) con segunda pasada hecha; por verificar contra el texto de Micrographia: 60 cavidades en 1/18 de pulgada, Observación 18, plantas con jugos, cita de Pepys, Grew y Malpighi.
 
 ## Fuente de referencia
 La presentación «La célula» de JuanMed (34 diapositivas, tres postulados, analogías de la ciudad para los organelos). El plan de área del colegio es solo guía.

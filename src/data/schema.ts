@@ -22,6 +22,8 @@ export interface Ficha {
   idea: string
   evidencia?: string[]
   limites?: string
+  /** datos de contexto breves (título + texto) que se muestran bajo la idea, en la pestaña Historia */
+  contexto?: { titulo: string; texto: string }[]
 }
 
 export interface Autor {
