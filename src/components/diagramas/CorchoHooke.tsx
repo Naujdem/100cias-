@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react'
+import VisorZoom from '../VisorZoom.tsx'
 
 // Ilustración (no a escala real) de lo que Hooke observó en 1665:
 // una lámina de corcho vista a simple vista, con lupa y con su microscopio.
@@ -86,11 +87,12 @@ export default function CorchoHooke() {
 
   return (
     <div>
+      <VisorZoom etiqueta="Corcho observado con distintos aumentos" alto="aspect-[4/3]">
       <svg
         viewBox={`0 0 ${W} ${H}`}
         role="img"
         aria-label="Lámina de corcho observada con distintos aumentos"
-        className="w-full rounded-xl bg-[#efe3cc]"
+        className="h-full w-full"
       >
         <defs>
           <clipPath id="lente">
@@ -147,6 +149,7 @@ export default function CorchoHooke() {
             )
           })}
       </svg>
+      </VisorZoom>
 
       <div className="mt-3">
         <label htmlFor="aumento" className="flex items-center justify-between text-sm font-semibold">

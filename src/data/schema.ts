@@ -30,6 +30,21 @@ export interface Autor {
   aporte: string
   /** ruta de una imagen libre de derechos (retrato o ilustración); si falta, se muestra una silueta ilustrada */
   imagen?: string
+  /** autor y licencia de la imagen, p. ej. «Pintura anónima, dominio público (Wikimedia Commons)» */
+  credito?: string
+}
+
+/** Imagen que acompaña a un hito: ilustración SVG propia o imagen de archivo. Se abre en un visor con zoom. */
+export interface Ilustracion {
+  id: string
+  titulo: string
+  /** texto que se muestra al abrirla */
+  pie: string
+  tipo: 'svg' | 'imagen'
+  /** tipo svg: clave en components/ilustraciones; tipo imagen: ruta dentro de public/ */
+  recurso: string
+  alt?: string
+  credito?: string
 }
 
 /** Unidad mínima de contenido que se puede activar o desactivar. */
@@ -46,6 +61,7 @@ export interface Bloque {
   requiere?: string[]
   ficha: Ficha
   autores?: Autor[]
+  ilustraciones?: Ilustracion[]
   /** id del diagrama interactivo que se muestra en la pestaña «Diagrama» (ver components/diagramas) */
   diagrama?: string
   /** las preguntas solo entran al quiz si el bloque está activo */

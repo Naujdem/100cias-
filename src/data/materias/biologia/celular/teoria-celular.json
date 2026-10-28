@@ -46,7 +46,32 @@
           "explicacion": "Hooke vio los espacios que dejan las paredes de células muertas del corcho y los llamó «células» por su parecido con las celdas de un panal o de un monasterio."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "ilustraciones": [
+        {
+          "id": "corcho",
+          "titulo": "El corcho",
+          "tipo": "svg",
+          "recurso": "corcho-lamina",
+          "pie": "Corteza del alcornoque. Con una navaja muy afilada, Hooke cortó láminas finísimas de corcho para que la luz pudiera atravesarlas."
+        },
+        {
+          "id": "microscopio",
+          "titulo": "El microscopio",
+          "tipo": "svg",
+          "recurso": "microscopio-hooke",
+          "pie": "Microscopio compuesto de la época: lentes en un tubo, una lámpara de aceite y un globo de vidrio con agua que concentraba la luz sobre la muestra. Aumentaba unas 30 veces."
+        },
+        {
+          "id": "dibujo",
+          "titulo": "El dibujo de Hooke",
+          "tipo": "imagen",
+          "recurso": "imagenes/hooke-micrographia.jpg",
+          "alt": "Lámina de Micrographia con dos cortes de corcho vistos al microscopio (Fig. 1) y una planta sensitiva (Fig. 2)",
+          "pie": "Lámina de Micrographia. Fig. 1: el corcho en dos cortes distintos (A y B), con sus cavidades en filas. Fig. 2: la planta sensitiva.",
+          "credito": "Robert Hooke, Micrographia (1665). Obra de dominio público."
+        }
+      ]
     },
     {
       "id": "leeuwenhoek",

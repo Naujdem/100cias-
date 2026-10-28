@@ -10,6 +10,7 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
       includeAssets: ['icon.svg'],
+      workbox: { globPatterns: ['**/*.{js,css,html,ico,png,svg,jpg,jpeg,webp}'] },
       manifest: {
         name: '100cias',
         short_name: '100cias',

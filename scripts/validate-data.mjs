@@ -1,5 +1,5 @@
 // Valida los archivos de contenido. Uso: npm run check:data
-import { readFileSync, readdirSync, statSync } from 'node:fs'
+import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs'
 import { join } from 'node:path'
 
 const raiz = new URL('../src/data/', import.meta.url).pathname
@@ -28,6 +28,15 @@ for (const f of archivos(join(raiz, 'materias'))) {
     if (!NIVELES.includes(b.nivel)) err(`${ctx}: nivel inválido (${b.nivel})`)
     if (!b.ficha?.idea) err(`${ctx}: falta ficha.idea`)
     for (const a of b.autores ?? []) if (!a.nombre || !a.aporte) err(`${ctx}: autor sin nombre o aporte`)
+    for (const i of b.ilustraciones ?? []) {
+      if (!['svg', 'imagen'].includes(i.tipo)) err(`${ctx}/${i.id}: tipo de ilustración inválido`)
+      if (!i.titulo || !i.pie) err(`${ctx}/${i.id}: falta título o pie`)
+      if (i.tipo === 'imagen') {
+        if (!existsSync(join(raiz, '../../public', i.recurso))) err(`${ctx}/${i.id}: no existe public/${i.recurso}`)
+        if (!i.credito) err(`${ctx}/${i.id}: toda imagen de archivo necesita crédito y licencia`)
+        if (!i.alt) err(`${ctx}/${i.id}: falta texto alternativo (alt)`)
+      }
+    }
     if (!b.revisado) avisos.push(`${ctx}: borrador sin revisar`)
     const pids = new Set()
     for (const p of b.preguntas ?? []) {

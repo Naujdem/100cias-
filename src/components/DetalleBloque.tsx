@@ -4,6 +4,7 @@ import type { Bloque } from '../data/schema.ts'
 import { DIAGRAMAS } from './diagramas/index.ts'
 import { NivelInsignia, BorradorInsignia } from './Insignia.tsx'
 import Retrato from './Retrato.tsx'
+import Ilustraciones from './Ilustraciones.tsx'
 
 type Pestana = 'historia' | 'diagrama' | 'evidencia'
 
@@ -88,7 +89,9 @@ export default function DetalleBloque({ bloque: b, onCerrar }: { bloque: Bloque;
               </div>
               <div className="min-w-0 text-sm md:mt-3">
                 <p>{principal.aporte}</p>
-                {!principal.imagen && (
+                {principal.imagen ? (
+                  principal.credito && <p className="mt-2 text-xs text-[var(--suave)]">{principal.credito}</p>
+                ) : (
                   <p className="mt-2 text-xs text-[var(--suave)]">Silueta ilustrativa, no es un retrato.</p>
                 )}
                 {otros.map((a) => (
@@ -135,6 +138,7 @@ export default function DetalleBloque({ bloque: b, onCerrar }: { bloque: Bloque;
                     <p className="text-[var(--suave)]">{[b.ficha.quien, b.ficha.cuando].filter(Boolean).join(' · ')}</p>
                   ) : null}
                   <p>{b.ficha.idea}</p>
+                  {b.ilustraciones && <Ilustraciones items={b.ilustraciones} />}
                 </div>
               )}
 

@@ -22,6 +22,10 @@ src/lib/seleccion.ts                        activar/desactivar con núcleo y dep
 src/components/                             SelectorContenido, LineaTiempo, DetalleBloque, Quiz, Insignia
 src/components/diagramas/                   diagramas SVG interactivos y su registro
 src/components/Retrato.tsx                  retrato enmarcado de un autor
+src/components/VisorZoom.tsx                visor con zoom y desplazamiento
+src/components/Ilustraciones.tsx            tira de imágenes del hito
+src/components/ilustraciones/               ilustraciones SVG y su registro
+public/imagenes/                            imágenes de archivo (con crédito y licencia en el JSON)
 src/lib/usePantallaCompleta.ts              pantalla completa con respaldo
 src/components/linea/                       vistas de la línea de tiempo (registro en vistas.ts), miniaturas
 scripts/validate-data.mjs                   valida los JSON (npm run check:data)
@@ -37,6 +41,8 @@ scripts/seleccion.test.ts                   pruebas de la lógica (npm test)
 - Subtema 1.1 «Postulados de la teoría celular»: 8 hitos (Hooke, Leeuwenhoek, Schleiden, Schwann, Virchow, Pasteur, endosimbiosis, teoría moderna) con fichas y 9 preguntas, todos en borrador.
 - Línea de tiempo **horizontal**. Al tocar el «+», la imagen o el texto de un hito se abre un **recuadro emergente** (fondo oscuro; se cierra con la X, Esc o tocando fuera; el foco vuelve al hito).
 - **Ficha del hito** (diseño de JuanMed en Paint): a la izquierda el retrato enmarcado con placa de nombre y descripción debajo; a la derecha las pestañas Historia, Diagrama (si existe) y Evidencia y límites. Sin imagen propia se muestra una silueta ilustrativa; para poner una imagen real libre de derechos, usar `autor.imagen`. Los autores adicionales aparecen bajo la descripción.
+- **Visor con zoom** (`VisorZoom`): botones +/−/1×, pellizco, doble toque, Ctrl + rueda y arrastre. Se usa en el diagrama del corcho y en las ilustraciones de cada hito.
+- **Ilustraciones por hito** (`bloque.ilustraciones`): tira «Mira de cerca» en la pestaña Historia. Hooke tiene el corcho, el microscopio (SVG propios, esquemáticos) y la lámina original de *Micrographia* (1665, dominio público, en `public/imagenes/`). Toda imagen de archivo debe llevar `credito` y `alt` (lo exige `npm run check:data`).
 - **Pantalla completa** de la línea de tiempo (API nativa con respaldo para iPhone); el recuadro funciona dentro de ella.
 - **Vistas intercambiables** de la línea de tiempo con selector «Ver como» (se recuerda la elección): *Alternada* (hitos arriba y abajo de la línea, con tallo, año, texto e imagen enmarcada; inspirada en la plantilla «Timeline Educación» de Genially) y *Tarjetas*. Para agregar una plantilla nueva: crear un componente que reciba `PropsVista` y añadirlo a `src/components/linea/vistas.ts`.
 - Miniaturas de los hitos: ilustración propia si existe (hoy solo Hooke); si no, iniciales del autor como marcador de posición.
@@ -48,6 +54,9 @@ Se profundiza **un hito a la vez**: se revisa el contenido con JuanMed, se agreg
 
 ## Fuente de referencia
 La presentación «La célula» de JuanMed (34 diapositivas, tres postulados, analogías de la ciudad para los organelos). El plan de área del colegio es solo guía.
+
+## Retratos de autores
+Por ahora silueta ilustrativa. Para poner una imagen real: guardarla en `public/imagenes/`, y completar `autor.imagen` y `autor.credito` (autor y licencia). Verificar siempre en la fuente (p. ej. Wikimedia Commons) **a quién retrata** la imagen y su licencia. De Hooke no se conoce ningún retrato auténtico; no etiquetar un cuadro como «Hooke» sin fuente que lo respalde.
 
 ## Pendiente (en este orden)
 1. Revisar Hooke con JuanMed y seguir con Leeuwenhoek, Schleiden, Schwann y Virchow, uno por uno, cada uno con su diagrama (ideas: gota de agua con «animálculos», tejido vegetal y animal, división celular).
