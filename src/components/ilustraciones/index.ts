@@ -4,6 +4,8 @@ import MicroscopioLeeuwenhoek from './MicroscopioLeeuwenhoek.tsx'
 import TejidoVegetal from './TejidoVegetal.tsx'
 import TejidoAnimal from './TejidoAnimal.tsx'
 import CelulaDividiendo from './CelulaDividiendo.tsx'
+import Matraz from './Matraz.tsx'
+import FrascosRedi from './FrascosRedi.tsx'
 import GotaAnimalculos from './GotaAnimalculos.tsx'
 import MicroscopioHooke from './MicroscopioHooke.tsx'
 
@@ -13,6 +15,8 @@ export const ILUSTRACIONES_SVG: Record<string, ComponentType> = {
   'microscopio-hooke': MicroscopioHooke,
   'microscopio-leeuwenhoek': MicroscopioLeeuwenhoek,
   'gota-animalculos': GotaAnimalculos,
+  'matraz-cisne': () => Matraz({ tipo: 'cisne' }),
+  'frascos-redi': () => FrascosRedi({ dia: 5 }),
   'celula-anafase': () => CelulaDividiendo({ etapa: 3 }),
   'tejido-vegetal': TejidoVegetal,
   'tejido-animal': TejidoAnimal,

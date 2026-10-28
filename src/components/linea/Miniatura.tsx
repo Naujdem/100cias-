@@ -78,9 +78,20 @@ function MiniDivision() {
   )
 }
 
+function MiniMatraz() {
+  return (
+    <svg viewBox="0 0 160 100" className="h-full w-full" aria-hidden="true">
+      <rect width="160" height="100" fill="#eef4f3" />
+      <circle cx="80" cy="64" r="26" fill="#f6e7a8" stroke="#3c7f8a" strokeWidth="3" />
+      <path d="M80 40 V26 Q80 14 92 14 Q104 14 104 26 V34" fill="none" stroke="#3c7f8a" strokeWidth="6" />
+    </svg>
+  )
+}
+
 const MINIATURAS: Record<string, () => React.JSX.Element> = {
   'corcho-hooke': MiniCorcho,
   'gota-leeuwenhoek': MiniGota,
+  'experimento-pasteur': MiniMatraz,
   'division-celular': MiniDivision,
   'tejido-planta': MiniPlanta,
   'tejido-animal': MiniAnimal,

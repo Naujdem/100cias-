@@ -574,7 +574,7 @@
     {
       "id": "pasteur",
       "titulo": "La generación espontánea queda refutada",
-      "resumen": "Los experimentos de Redi y Pasteur muestran que la vida no surge de materia sin vida en las condiciones observadas.",
+      "resumen": "Con frascos con gasa (Redi) y matraces de cuello de cisne (Pasteur) se mostró que la vida no surge de materia sin vida en las condiciones observadas.",
       "anio": 1862,
       "nivel": "intermedio",
       "requiere": [
@@ -583,12 +583,35 @@
       "ficha": {
         "quien": "Francesco Redi y Louis Pasteur",
         "cuando": "1668 (Redi) y 1861-1862 (Pasteur)",
-        "idea": "Redi mostró que las moscas nacen de huevos y no de la carne en descomposición. Pasteur usó matraces de cuello de cisne: el caldo estéril se mantenía sin microorganismos mientras el cuello impedía la entrada de partículas del aire; al romper el cuello, el caldo se contaminaba.",
+        "idea": "Durante siglos muchos creyeron que ciertos seres vivos nacían de materia sin vida: moscas de la carne podrida, microbios del caldo. En 1668, Redi mostró que las moscas nacen de huevos de otras moscas. En 1861-1862, Pasteur usó matraces de cuello de cisne: el aire entraba, pero el polvo y los microorganismos quedaban atrapados en la curva, y el caldo hervido seguía limpio; al romper el cuello, se contaminaba. Así se apoyó que la vida viene de otra vida, en línea con el postulado de Virchow.",
         "evidencia": [
-          "Experimento de Redi con frascos tapados y destapados.",
-          "Matraz de cuello de cisne de Pasteur."
+          "Experimento de Redi con frascos abiertos y cubiertos con gasa: solo aparecen larvas donde las moscas pudieron poner huevos.",
+          "Matraces de cuello de cisne de Pasteur: caldo limpio con el cuello intacto y turbio con el cuello roto.",
+          "Matraces abiertos en lugares con aire más o menos limpio."
         ],
-        "limites": "Estos experimentos refutan la generación espontánea de organismos en el presente; el origen de la primera vida en la Tierra es otra pregunta."
+        "limites": "Estos experimentos refutan la generación espontánea de organismos en el presente; el origen de la primera vida en la Tierra, hace miles de millones de años, es otra pregunta. Redi trató con moscas y larvas; fue Pasteur quien extendió la idea a los microorganismos.",
+        "contexto": [
+          {
+            "titulo": "Un químico, no un médico",
+            "texto": "Pasteur empezó estudiando cristales y fermentaciones. De sus estudios salieron la pasteurización (para conservar vino y leche) y, más tarde, vacunas como la de la rabia (1885)."
+          },
+          {
+            "titulo": "Un debate de años",
+            "texto": "Félix Pouchet defendía la generación espontánea y obtuvo resultados distintos a los de Pasteur. La Academia de Ciencias de Francia llegó a ofrecer un premio para aclarar el tema."
+          },
+          {
+            "titulo": "La objeción del aire",
+            "texto": "Antes, Needham y Spallanzani habían hervido caldos y los habían sellado, con resultados distintos. Se objetaba que sellar impedía que entrara aire, y que sin aire no podía surgir vida. Los matraces de Pasteur dejaban entrar el aire y respondían a esa objeción."
+          },
+          {
+            "titulo": "Matraces en la montaña",
+            "texto": "Pasteur abrió matraces en distintos lugares: casi todos se contaminaron en lugares de aire sucio, y muchos menos en un glaciar de los Alpes. Cuanto más limpio el aire, menos microorganismos."
+          },
+          {
+            "titulo": "Por qué Pouchet se equivocó",
+            "texto": "Algunos microorganismos forman esporas que resisten el hervido; décadas después se explicó que eso pudo contaminar los caldos de Pouchet. Se dice que algunos matraces de Pasteur se conservan en París con el caldo todavía limpio."
+          }
+        ]
       },
       "preguntas": [
         {
@@ -614,6 +637,42 @@
           ],
           "correcta": 1,
           "explicacion": "Pasteur refutó la generación espontánea y apoyó que los seres vivos provienen de otros seres vivos."
+        },
+        {
+          "id": "pa-3",
+          "enunciado": "¿Para qué cubrió Redi algunos frascos con gasa?",
+          "opciones": [
+            "Para que no entrara aire",
+            "Para que las moscas no pudieran poner huevos en la carne, pero el aire sí entrara",
+            "Para que la carne no se pudriera",
+            "Para calentar la carne"
+          ],
+          "correcta": 1,
+          "explicacion": "La gasa deja pasar el aire pero no las moscas. Así comprobó que las larvas salen de huevos de moscas y no de la carne."
+        },
+        {
+          "id": "pa-4",
+          "enunciado": "¿Qué pasó en los matraces de cuello de cisne cuando Pasteur rompió el cuello?",
+          "opciones": [
+            "Nada: el caldo siguió limpio",
+            "El caldo se contaminó",
+            "El caldo se evaporó",
+            "El caldo se volvió más claro"
+          ],
+          "correcta": 1,
+          "explicacion": "Al romper el cuello, el aire con polvo y microorganismos entró directo y el caldo se enturbió. Los microorganismos venían de afuera."
+        },
+        {
+          "id": "pa-5",
+          "enunciado": "¿Por qué era importante que los matraces de Pasteur dejaran entrar el aire?",
+          "opciones": [
+            "Para que el caldo se enfriara",
+            "Para responder a quienes decían que sin aire no podía surgir vida",
+            "Para dar oxígeno a la carne",
+            "Porque así lo exigía la Academia"
+          ],
+          "correcta": 1,
+          "explicacion": "Se decía que los frascos sellados fallaban porque el aire no entraba. Con el aire entrando y aun así sin contaminación, la objeción no valía."
         }
       ],
       "revisado": false,
@@ -627,6 +686,23 @@
           "nombre": "Francesco Redi",
           "vida": "1626–1697",
           "aporte": "Médico y naturalista italiano. Con frascos tapados y destapados mostró que las larvas salen de huevos de moscas y no de la carne."
+        }
+      ],
+      "diagrama": "experimento-pasteur",
+      "ilustraciones": [
+        {
+          "id": "redi",
+          "titulo": "Frascos de Redi",
+          "tipo": "svg",
+          "recurso": "frascos-redi",
+          "pie": "Dos frascos con carne: el abierto se llena de larvas; el cubierto con gasa, no. Las moscas no pudieron poner huevos en la carne del segundo."
+        },
+        {
+          "id": "matraz",
+          "titulo": "Matraz de cuello de cisne",
+          "tipo": "svg",
+          "recurso": "matraz-cisne",
+          "pie": "El aire entra y sale por la curva, pero el polvo y los microorganismos quedan atrapados. El caldo hervido se mantiene limpio."
         }
       ]
     },
