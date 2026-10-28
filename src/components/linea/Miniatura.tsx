@@ -88,9 +88,34 @@ function MiniMatraz() {
   )
 }
 
+function MiniEndo() {
+  return (
+    <svg viewBox="0 0 160 100" className="h-full w-full" aria-hidden="true">
+      <rect width="160" height="100" fill="#eef1f6" />
+      <ellipse cx="80" cy="50" rx="62" ry="40" fill="#f3e1d8" stroke="#b05a5a" strokeWidth="3" />
+      <circle cx="96" cy="38" r="13" fill="#ead3f2" stroke="#7a4a8a" strokeWidth="2" />
+      <rect x="44" y="52" width="26" height="12" rx="6" fill="#f2b27a" stroke="#a5531a" strokeWidth="1.5" />
+      <rect x="78" y="62" width="26" height="12" rx="6" fill="#f2b27a" stroke="#a5531a" strokeWidth="1.5" />
+    </svg>
+  )
+}
+
+function MiniCuenta() {
+  return (
+    <svg viewBox="0 0 160 100" className="h-full w-full" aria-hidden="true">
+      <rect width="160" height="100" fill="#eef1f6" />
+      <circle cx="50" cy="50" r="26" fill="#f8d9d4" stroke="#b05a5a" strokeWidth="3" />
+      <circle cx="50" cy="50" r="9" fill="#ead3f2" stroke="#7a4a8a" strokeWidth="2" />
+      <text x="108" y="66" fontSize="46" fontWeight="700" fill="#0f766e">?</text>
+    </svg>
+  )
+}
+
 const MINIATURAS: Record<string, () => React.JSX.Element> = {
   'corcho-hooke': MiniCorcho,
   'gota-leeuwenhoek': MiniGota,
+  'endosimbiosis': MiniEndo,
+  'cuenta-celula': MiniCuenta,
   'experimento-pasteur': MiniMatraz,
   'division-celular': MiniDivision,
   'tejido-planta': MiniPlanta,

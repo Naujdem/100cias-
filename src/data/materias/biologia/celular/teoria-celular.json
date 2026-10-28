@@ -707,21 +707,129 @@
       ]
     },
     {
+      "id": "teoria-moderna",
+      "titulo": "La teoría celular hoy",
+      "resumen": "Las versiones actuales suman la herencia y el metabolismo, y discuten casos límite como los virus.",
+      "anio": 1950,
+      "nivel": "avanzado",
+      "requiere": [
+        "schwann",
+        "virchow"
+      ],
+      "ficha": {
+        "idea": "Las versiones actuales de la teoría celular suelen añadir que la célula contiene la información hereditaria (ADN) que pasa a las células hijas, y que el metabolismo y el flujo de energía de la vida ocurren dentro de las células. Los virus se discuten como caso límite: no son celulares y necesitan una célula hospedera para reproducirse.",
+        "limites": "El número y la redacción de los postulados varían según el libro; conviene fijar una sola fuente de referencia para la app. Los virus y otros casos límite muestran que las definiciones de «célula» y de «vida» tienen bordes discutibles.",
+        "cuando": "Desde mediados del siglo XX",
+        "contexto": [
+          {
+            "titulo": "Cómo se fue armando",
+            "texto": "Schleiden y Schwann aportaron las dos primeras ideas (1838-1839) y Virchow la tercera (1855). Las otras llegaron cuando se supo qué es el ADN: en 1944 se mostró que el ADN es la molécula de la herencia, y en 1953 se propuso su estructura."
+          },
+          {
+            "titulo": "Cuántos postulados hay",
+            "texto": "Depende del libro: algunos cuentan tres, otros cinco o seis. Por eso la app los deja como casillas para que cada curso elija cuántos ver."
+          },
+          {
+            "titulo": "Casos que parecen raros",
+            "texto": "El glóbulo rojo maduro de un mamífero pierde el núcleo; la fibra del músculo tiene muchos núcleos; la yema de un huevo sin fecundar es una sola célula enorme. Todos siguen siendo células."
+          },
+          {
+            "titulo": "¿Está vivo un virus?",
+            "texto": "No tiene células ni metabolismo propio, pero sí material genético y evolución. Por eso se discute si es un ser vivo, y la respuesta depende de cómo se defina «vivo»."
+          }
+        ],
+        "evidencia": [
+          "Los estudios de genética y biología molecular del siglo XX mostraron que el material hereditario está en el ADN dentro de las células.",
+          "El estudio del metabolismo mostró que las reacciones que sostienen la vida ocurren dentro de células (o con sus enzimas)."
+        ]
+      },
+      "preguntas": [
+        {
+          "id": "tm-1",
+          "enunciado": "¿Por qué los virus se consideran un caso límite de la teoría celular?",
+          "opciones": [
+            "Porque son más grandes que las células",
+            "Porque no están formados por células y dependen de una célula hospedera para reproducirse",
+            "Porque tienen núcleo y mitocondrias",
+            "Porque se dividen por mitosis"
+          ],
+          "correcta": 1,
+          "explicacion": "Los virus no tienen estructura celular ni metabolismo propio; solo se reproducen dentro de una célula, por eso se discute si se consideran seres vivos."
+        },
+        {
+          "id": "tm-2",
+          "enunciado": "El glóbulo rojo maduro de un mamífero no tiene núcleo. ¿Deja por eso de ser una célula?",
+          "opciones": [
+            "Sí, porque no guarda ADN",
+            "No: viene de otra célula y tiene membrana y metabolismo",
+            "Sí, porque no se divide",
+            "No, porque es un virus"
+          ],
+          "correcta": 1,
+          "explicacion": "Pierde el núcleo al madurar, pero sigue siendo una célula: se formó a partir de otra y tiene membrana y metabolismo."
+        },
+        {
+          "id": "tm-3",
+          "enunciado": "¿Cuál de estas ideas NO forma parte de la teoría celular actual?",
+          "opciones": [
+            "Toda célula proviene de otra célula",
+            "La célula guarda la información hereditaria",
+            "Los seres vivos están formados por una o más células",
+            "Las células actuales surgen de materia sin vida"
+          ],
+          "correcta": 3,
+          "explicacion": "Los experimentos de Redi y Pasteur, junto con el postulado de Virchow, descartan que las células actuales nazcan de materia sin vida."
+        },
+        {
+          "id": "tm-4",
+          "enunciado": "Una fibra de músculo esquelético es una sola célula con muchos núcleos. ¿Qué muestra este caso?",
+          "opciones": [
+            "Que no es una célula",
+            "Que una célula no siempre tiene un solo núcleo",
+            "Que los músculos no están hechos de células",
+            "Que se formó de un virus"
+          ],
+          "correcta": 1,
+          "explicacion": "Es un sincitio: una célula grande con muchos núcleos. Tener un núcleo por célula es lo más habitual, pero no una regla."
+        }
+      ],
+      "revisado": false,
+      "diagrama": "cuenta-celula"
+    },
+    {
       "id": "endosimbiosis",
       "titulo": "Teoría endosimbiótica",
-      "resumen": "Las mitocondrias y los cloroplastos habrían surgido de bacterias que fueron incorporadas por otras células.",
+      "resumen": "Las mitocondrias y los cloroplastos habrían sido bacterias que pasaron a vivir dentro de otras células.",
       "anio": 1967,
       "nivel": "avanzado",
       "ficha": {
         "quien": "Lynn Margulis (con antecedentes de Konstantin Mereschkowski)",
         "cuando": "1967 (Margulis); ideas previas hacia 1905",
-        "idea": "Propone que ciertos orgánulos de las células eucariotas fueron antes bacterias de vida libre que pasaron a vivir dentro de una célula hospedera, con beneficio mutuo.",
+        "idea": "La hipótesis endosimbiótica propone que las mitocondrias y los cloroplastos fueron antes bacterias de vida libre que pasaron a vivir dentro de una célula hospedera, con beneficio mutuo. Con el tiempo dejaron de ser independientes y se volvieron orgánulos. Es una de las explicaciones más aceptadas del origen de las células eucariotas.",
         "evidencia": [
           "Mitocondrias y cloroplastos tienen su propio ADN, de forma circular como el de las bacterias.",
           "Tienen ribosomas de tipo 70S, como los procariotas.",
           "Poseen doble membrana y se multiplican por un proceso parecido a la fisión binaria."
         ],
-        "limites": "Explica bien el origen de mitocondrias y cloroplastos; el origen del núcleo y de otras estructuras se explica con otras hipótesis."
+        "limites": "Explica bien el origen de mitocondrias y cloroplastos; el origen del núcleo y de otras estructuras se explica con otras hipótesis. Es una hipótesis muy bien apoyada, pero no se pudo observar el proceso, que ocurrió hace unos 2.000 millones de años.",
+        "contexto": [
+          {
+            "titulo": "Un antecedente ruso",
+            "texto": "Konstantin Mereschkowski propuso hacia 1905 que los cloroplastos venían de organismos que vivían dentro de otras células. Más tarde, Ivan Wallin planteó algo parecido para las mitocondrias, y la idea quedó casi olvidada."
+          },
+          {
+            "titulo": "Margulis y sus dificultades",
+            "texto": "Lynn Margulis (que firmó su trabajo de 1967 como Lynn Sagan) retomó la idea con nuevas pruebas. Se cuenta que su artículo fue rechazado por muchas revistas antes de publicarse."
+          },
+          {
+            "titulo": "Pruebas con ADN",
+            "texto": "En las décadas de 1970 y 1980, al comparar secuencias de ADN, se vio que el de las mitocondrias se parece al de ciertas bacterias, y el de los cloroplastos al de las cianobacterias."
+          },
+          {
+            "titulo": "Lo que no se aceptó",
+            "texto": "Margulis también defendió que los flagelos vendrían de otras bacterias; esa parte de su propuesta no tiene apoyo. Para el núcleo se discuten otras hipótesis."
+          }
+        ]
       },
       "preguntas": [
         {
@@ -735,6 +843,42 @@
           ],
           "correcta": 0,
           "explicacion": "El ADN circular y los ribosomas 70S son rasgos típicos de bacterias, lo que sugiere que estos orgánulos descienden de ellas."
+        },
+        {
+          "id": "en-2",
+          "enunciado": "¿Qué orgánulos, según la teoría endosimbiótica, descienden de bacterias?",
+          "opciones": [
+            "El núcleo y los ribosomas",
+            "Las mitocondrias y los cloroplastos",
+            "El aparato de Golgi y los lisosomas",
+            "La pared celular y la vacuola"
+          ],
+          "correcta": 1,
+          "explicacion": "Las mitocondrias vendrían de bacterias que usaban oxígeno, y los cloroplastos de cianobacterias."
+        },
+        {
+          "id": "en-3",
+          "enunciado": "¿Qué idea explica que las mitocondrias tengan su propio ADN circular?",
+          "opciones": [
+            "Que se formaron dentro del núcleo",
+            "Que descienden de bacterias, que también tienen ADN circular",
+            "Que no necesitan ADN",
+            "Que el ADN circular lo fabrica el citoplasma"
+          ],
+          "correcta": 1,
+          "explicacion": "El ADN circular es típico de las bacterias; las mitocondrias lo conservan como recuerdo de su origen."
+        },
+        {
+          "id": "en-4",
+          "enunciado": "¿Qué NO explica bien la teoría endosimbiótica?",
+          "opciones": [
+            "El origen de las mitocondrias",
+            "El origen de los cloroplastos",
+            "El origen del núcleo",
+            "Por qué las mitocondrias se dividen en dos"
+          ],
+          "correcta": 2,
+          "explicacion": "Para el origen del núcleo se proponen otras hipótesis."
         }
       ],
       "revisado": false,
@@ -749,37 +893,17 @@
           "vida": "1855–1921",
           "aporte": "Botánico ruso. Hacia 1905 planteó que los cloroplastos descienden de organismos simbiontes."
         }
-      ]
-    },
-    {
-      "id": "teoria-moderna",
-      "titulo": "La teoría celular hoy",
-      "resumen": "Se suman ideas sobre herencia, metabolismo y los casos límite como los virus.",
-      "anio": 1950,
-      "nivel": "avanzado",
-      "requiere": [
-        "schwann",
-        "virchow"
       ],
-      "ficha": {
-        "idea": "Las versiones actuales suelen añadir que la célula contiene la información hereditaria (ADN) que pasa a las células hijas, y que el metabolismo y el flujo de energía de la vida ocurren dentro de las células. Los virus se discuten como caso límite: no son celulares y necesitan una célula hospedera para reproducirse.",
-        "limites": "El número y la redacción de los postulados varían según el libro; conviene fijar una sola fuente de referencia para la app."
-      },
-      "preguntas": [
+      "diagrama": "endosimbiosis",
+      "ilustraciones": [
         {
-          "id": "tm-1",
-          "enunciado": "¿Por qué los virus se consideran un caso límite de la teoría celular?",
-          "opciones": [
-            "Porque son más grandes que las células",
-            "Porque no están formados por células y dependen de una célula hospedera para reproducirse",
-            "Porque tienen núcleo y mitocondrias",
-            "Porque se dividen por mitosis"
-          ],
-          "correcta": 1,
-          "explicacion": "Los virus no tienen estructura celular ni metabolismo propio; solo se reproducen dentro de una célula, por eso se discute si se consideran seres vivos."
+          "id": "mito",
+          "titulo": "Mitocondrias",
+          "tipo": "svg",
+          "recurso": "endosimbiosis-mito",
+          "pie": "Una célula eucariota con mitocondrias dentro, que según esta hipótesis fueron antes bacterias. Dibujo esquemático."
         }
-      ],
-      "revisado": false
+      ]
     }
   ]
 }

@@ -6,6 +6,7 @@ import TejidoAnimal from './TejidoAnimal.tsx'
 import CelulaDividiendo from './CelulaDividiendo.tsx'
 import Matraz from './Matraz.tsx'
 import FrascosRedi from './FrascosRedi.tsx'
+import EscenaEndosimbiosis from './EscenaEndosimbiosis.tsx'
 import GotaAnimalculos from './GotaAnimalculos.tsx'
 import MicroscopioHooke from './MicroscopioHooke.tsx'
 
@@ -15,6 +16,7 @@ export const ILUSTRACIONES_SVG: Record<string, ComponentType> = {
   'microscopio-hooke': MicroscopioHooke,
   'microscopio-leeuwenhoek': MicroscopioLeeuwenhoek,
   'gota-animalculos': GotaAnimalculos,
+  'endosimbiosis-mito': () => EscenaEndosimbiosis({ paso: 4 }),
   'matraz-cisne': () => Matraz({ tipo: 'cisne' }),
   'frascos-redi': () => FrascosRedi({ dia: 5 }),
   'celula-anafase': () => CelulaDividiendo({ etapa: 3 }),
