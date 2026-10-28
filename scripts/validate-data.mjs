@@ -27,6 +27,7 @@ for (const f of archivos(join(raiz, 'materias'))) {
     ids.add(b.id)
     if (!NIVELES.includes(b.nivel)) err(`${ctx}: nivel inválido (${b.nivel})`)
     if (!b.ficha?.idea) err(`${ctx}: falta ficha.idea`)
+    for (const a of b.autores ?? []) if (!a.nombre || !a.aporte) err(`${ctx}: autor sin nombre o aporte`)
     if (!b.revisado) avisos.push(`${ctx}: borrador sin revisar`)
     const pids = new Set()
     for (const p of b.preguntas ?? []) {

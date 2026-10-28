@@ -8,7 +8,8 @@ const bloques = tema.bloques as any[]
 
 test('normalizar agrega el núcleo y los requisitos', () => {
   const s = normalizar(bloques, ['pasteur'])
-  assert.ok(s.has('schleiden-schwann'))
+  assert.ok(s.has('schwann'))
+  assert.ok(s.has('schleiden'))
   assert.ok(s.has('virchow'))
   assert.ok(s.has('pasteur'))
 })

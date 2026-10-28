@@ -19,7 +19,8 @@ src/data/schema.ts                          tipos: Bloque, Tema, Capa, Dibujo, P
 src/data/materias/<materia>/<area>/*.json   un archivo por tema
 src/data/perfiles.json                      perfiles (6°, 9°, 11°)
 src/lib/seleccion.ts                        activar/desactivar con núcleo y dependencias
-src/components/                             SelectorContenido, LineaTiempo, Quiz, Insignia
+src/components/                             SelectorContenido, LineaTiempo, DetalleBloque, Quiz, Insignia
+src/components/diagramas/                   diagramas SVG interactivos y su registro
 scripts/validate-data.mjs                   valida los JSON (npm run check:data)
 scripts/seleccion.test.ts                   pruebas de la lógica (npm test)
 ```
@@ -29,17 +30,26 @@ scripts/seleccion.test.ts                   pruebas de la lógica (npm test)
 
 ## Hecho
 - Esqueleto del proyecto, PWA, modo claro/oscuro.
-- Esquema de datos (bloques, capas, perfiles).
-- Subtema 1.1 «Postulados de la teoría celular»: 6 bloques con fichas y 9 preguntas (todos en borrador).
-- Línea de tiempo con casillas, perfiles guardados en el navegador y mini-quiz.
+- Esquema de datos (bloques, autores, diagramas, capas, perfiles).
+- Subtema 1.1 «Postulados de la teoría celular»: 8 hitos (Hooke, Leeuwenhoek, Schleiden, Schwann, Virchow, Pasteur, endosimbiosis, teoría moderna) con fichas y 9 preguntas, todos en borrador.
+- Línea de tiempo **horizontal** (estilo Genially) con panel de detalle por pestañas: Historia (con autores), Diagrama (si existe) y Evidencia y límites.
+- **Diagrama interactivo del corcho de Hooke** (control de aumento y puntos tocables). Registro de diagramas en `src/components/diagramas/index.ts`; para agregar uno se crea el componente y se pone su id en `bloque.diagrama`.
+- Perfiles guardados en el navegador y mini-quiz.
+
+## Método de trabajo del subtema 1.1
+Se profundiza **un hito a la vez**: se revisa el contenido con JuanMed, se agrega diagrama interactivo y se marca `revisado: true`. Hito 1 (Hooke) hecho en versión inicial; esperando revisión.
+
+## Fuente de referencia
+La presentación «La célula» de JuanMed (34 diapositivas, tres postulados, analogías de la ciudad para los organelos). El plan de área del colegio es solo guía.
 
 ## Pendiente (en este orden)
-1. Revisar y corregir el contenido de teoría celular contra la fuente elegida; marcar `revisado: true`.
-2. Fijar una sola fuente para la redacción de los postulados (tres o cuatro según el libro).
-3. Primer dibujo SVG con **capas**: célula procariota y eucariota, con fichas al tocar cada parte y nivel básico/intermedio/completo (usa los tipos `Dibujo` y `Capa`).
-4. Resto de subtemas del tema 1 (niveles de organización, endosimbiosis, uni/pluricelulares).
-5. Después: login compartido con Supabase y tablas `lab_` para guardar progreso.
-6. Desplegar en Vercel.
+1. Revisar Hooke con JuanMed y seguir con Leeuwenhoek, Schleiden, Schwann y Virchow, uno por uno, cada uno con su diagrama (ideas: gota de agua con «animálculos», tejido vegetal y animal, división celular).
+2. Contenido de mayor profundidad: historia ampliada (Brown, Purkinje, Remak, Flemming), postulados como hipótesis con evidencia, excepciones y casos límite (virus, sincitios, glóbulos rojos, neuronas, origen de la primera célula), interactivos («¿cuenta como célula?», relación superficie/volumen, escalas), preguntas de análisis.
+3. Decidir hasta dónde llega el nivel avanzado (11° o cercano a universidad).
+4. Dibujo SVG de la célula con **capas** (procariota, eucariota animal y vegetal) usando las analogías de la ciudad como nivel básico de cada ficha (tipos `Dibujo` y `Capa`).
+5. Resto de subtemas del tema 1 (niveles de organización, uni/pluricelulares).
+6. Login compartido con Supabase y tablas `lab_` para guardar progreso.
+7. Desplegar en Vercel.
 
 ## Decisiones abiertas
 - Nombre definitivo de la app (provisional: «100cias»).

@@ -24,6 +24,12 @@ export interface Ficha {
   limites?: string
 }
 
+export interface Autor {
+  nombre: string
+  vida?: string
+  aporte: string
+}
+
 /** Unidad mínima de contenido que se puede activar o desactivar. */
 export interface Bloque {
   id: string
@@ -37,6 +43,9 @@ export interface Bloque {
   /** ids de bloques del mismo tema que deben estar activos para que éste tenga sentido */
   requiere?: string[]
   ficha: Ficha
+  autores?: Autor[]
+  /** id del diagrama interactivo que se muestra en la pestaña «Diagrama» (ver components/diagramas) */
+  diagrama?: string
   /** las preguntas solo entran al quiz si el bloque está activo */
   preguntas: Pregunta[]
   /** false = borrador pendiente de verificación humana contra una fuente */

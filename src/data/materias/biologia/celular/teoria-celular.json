@@ -9,20 +9,28 @@
   ],
   "bloques": [
     {
-      "id": "hooke-leeuwenhoek",
-      "titulo": "Primeras observaciones de células",
-      "resumen": "El microscopio permite ver por primera vez estructuras diminutas en tejidos y en organismos vivos.",
+      "id": "hooke",
+      "titulo": "Robert Hooke: las primeras «células»",
+      "resumen": "Al mirar corcho con un microscopio, vio cavidades parecidas a las celdas de un monasterio y las llamó células.",
       "anio": 1665,
       "nivel": "basico",
+      "diagrama": "corcho-hooke",
+      "autores": [
+        {
+          "nombre": "Robert Hooke",
+          "vida": "1635–1703",
+          "aporte": "Científico inglés. Publicó Micrographia (1665), un libro con dibujos detallados de lo que observaba con su microscopio compuesto, y acuñó el término «célula»."
+        }
+      ],
       "ficha": {
-        "quien": "Robert Hooke y Antonie van Leeuwenhoek",
-        "cuando": "1665 (Hooke) y hacia 1674 (Leeuwenhoek)",
-        "idea": "Hooke observó láminas de corcho al microscopio y llamó «células» a las cavidades que veía. Leeuwenhoek, con microscopios simples, describió organismos vivos microscópicos en el agua.",
+        "quien": "Robert Hooke",
+        "cuando": "1665",
+        "idea": "Observó una lámina muy fina de corcho con un microscopio rudimentario y vio pequeñas cavidades ordenadas en filas. Las llamó «células» porque le recordaban a las celdas de un monasterio.",
         "evidencia": [
-          "Micrographia (Hooke, 1665) incluye dibujos del corcho.",
-          "Leeuwenhoek describió protozoos y bacterias, a los que llamó «animálculos»."
+          "Micrographia (1665) incluye su dibujo del corcho.",
+          "Calculó que en una pulgada cúbica de corcho cabían más de mil millones de estas cavidades (dato por verificar)."
         ],
-        "limites": "Hooke vio paredes de células muertas, no células vivas; todavía no existía una teoría que explicara qué eran."
+        "limites": "El corcho es tejido muerto: Hooke vio las paredes que dejaron las células, no células vivas. Tampoco tenía una teoría que explicara qué eran; para él eran solo «celdas»."
       },
       "preguntas": [
         {
@@ -36,7 +44,33 @@
           ],
           "correcta": 0,
           "explicacion": "Hooke vio los espacios que dejan las paredes de células muertas del corcho y los llamó «células» por su parecido con las celdas de un panal o de un monasterio."
-        },
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "leeuwenhoek",
+      "titulo": "Antonie van Leeuwenhoek: células vivas",
+      "resumen": "Con microscopios simples de una sola lente observó organismos vivos y células sueltas.",
+      "anio": 1674,
+      "nivel": "basico",
+      "autores": [
+        {
+          "nombre": "Antonie van Leeuwenhoek",
+          "vida": "1632–1723",
+          "aporte": "Comerciante de telas neerlandés que fabricaba sus propias lentes. Describió protozoos, bacterias, glóbulos rojos y espermatozoides."
+        }
+      ],
+      "ficha": {
+        "quien": "Antonie van Leeuwenhoek",
+        "cuando": "Hacia 1674",
+        "idea": "Fue de los primeros en observar células vivas: protozoos y bacterias en el agua (los llamó «animálculos»), además de glóbulos rojos y espermatozoides.",
+        "evidencia": [
+          "Sus cartas a la Royal Society describen y dibujan los organismos que observaba."
+        ],
+        "limites": "Describió lo que veía con gran detalle, pero sin proponer una teoría general sobre la célula."
+      },
+      "preguntas": [
         {
           "id": "hl-2",
           "enunciado": "¿Qué aportó Leeuwenhoek a esta historia?",
@@ -53,34 +87,29 @@
       "revisado": false
     },
     {
-      "id": "schleiden-schwann",
-      "titulo": "Todos los seres vivos están formados por células",
-      "resumen": "Plantas y animales comparten la misma unidad básica: la célula.",
-      "anio": 1839,
+      "id": "schleiden",
+      "titulo": "Matthias Schleiden: las plantas son células",
+      "resumen": "Concluyó que todas las plantas están formadas por células.",
+      "anio": 1838,
       "nivel": "basico",
       "nucleo": true,
+      "autores": [
+        {
+          "nombre": "Matthias Schleiden",
+          "vida": "1804–1881",
+          "aporte": "Botánico alemán. Estudió el desarrollo de los tejidos vegetales."
+        }
+      ],
       "ficha": {
-        "quien": "Matthias Schleiden y Theodor Schwann",
-        "cuando": "1838 (plantas) y 1839 (animales)",
-        "idea": "Schleiden concluyó que las plantas están formadas por células y Schwann extendió esa idea a los animales. De ahí salen los dos primeros postulados: todos los seres vivos están formados por una o más células, y la célula es la unidad básica de estructura y función de la vida.",
+        "quien": "Matthias Schleiden",
+        "cuando": "1838",
+        "idea": "Afirmó que todas las plantas están formadas por células y que la célula es la unidad básica de los vegetales.",
         "evidencia": [
-          "Observación de tejidos vegetales (Schleiden) y animales (Schwann) al microscopio."
+          "Observación de tejidos vegetales al microscopio."
         ],
-        "limites": "Ambos proponían una explicación errónea sobre cómo se forman las células nuevas (a partir de material sin estructura), idea que luego se corrigió."
+        "limites": "Propuso que las células nuevas se formaban a partir de material sin estructura dentro de otras células, idea que luego se corrigió."
       },
       "preguntas": [
-        {
-          "id": "ss-1",
-          "enunciado": "¿Cuál de estas ideas forma parte de los postulados de la teoría celular?",
-          "opciones": [
-            "Las células pueden surgir de materia sin vida",
-            "Todos los seres vivos están formados por una o más células",
-            "Solo los animales tienen células",
-            "Las células solo existen en organismos pluricelulares"
-          ],
-          "correcta": 1,
-          "explicacion": "La teoría celular afirma que todos los seres vivos, sean unicelulares o pluricelulares, están formados por células. Las otras opciones son falsas."
-        },
         {
           "id": "ss-2",
           "enunciado": "¿Quiénes extendieron la idea de la célula a plantas y animales respectivamente?",
@@ -97,13 +126,57 @@
       "revisado": false
     },
     {
+      "id": "schwann",
+      "titulo": "Theodor Schwann: los animales también",
+      "resumen": "Extendió la idea a los animales y, junto con Schleiden, formuló los dos primeros postulados.",
+      "anio": 1839,
+      "nivel": "basico",
+      "nucleo": true,
+      "requiere": [
+        "schleiden"
+      ],
+      "autores": [
+        {
+          "nombre": "Theodor Schwann",
+          "vida": "1810–1882",
+          "aporte": "Fisiólogo alemán. Estudió tejidos animales y publicó en 1839 su obra sobre la semejanza entre animales y plantas."
+        }
+      ],
+      "ficha": {
+        "quien": "Theodor Schwann",
+        "cuando": "1839",
+        "idea": "Concluyó que todos los animales están formados por células. Con Schleiden formuló los dos primeros postulados: todos los seres vivos están formados por una o más células, y la célula es la unidad estructural y funcional de los seres vivos.",
+        "evidencia": [
+          "Observación de tejidos animales al microscopio."
+        ],
+        "limites": "Compartió el error sobre cómo se forman las células nuevas, corregido después por Remak y Virchow."
+      },
+      "preguntas": [
+        {
+          "id": "ss-1",
+          "enunciado": "¿Cuál de estas ideas forma parte de los postulados de la teoría celular?",
+          "opciones": [
+            "Las células pueden surgir de materia sin vida",
+            "Todos los seres vivos están formados por una o más células",
+            "Solo los animales tienen células",
+            "Las células solo existen en organismos pluricelulares"
+          ],
+          "correcta": 1,
+          "explicacion": "La teoría celular afirma que todos los seres vivos, sean unicelulares o pluricelulares, están formados por células. Las otras opciones son falsas."
+        }
+      ],
+      "revisado": false
+    },
+    {
       "id": "virchow",
       "titulo": "Toda célula proviene de otra célula",
       "resumen": "Las células nuevas se originan por la división de células preexistentes.",
       "anio": 1855,
       "nivel": "basico",
       "nucleo": true,
-      "requiere": ["schleiden-schwann"],
+      "requiere": [
+        "schwann"
+      ],
       "ficha": {
         "quien": "Rudolf Virchow",
         "cuando": "1855",
@@ -136,7 +209,9 @@
       "resumen": "Los experimentos de Redi y Pasteur muestran que la vida no surge de materia sin vida en las condiciones observadas.",
       "anio": 1862,
       "nivel": "intermedio",
-      "requiere": ["virchow"],
+      "requiere": [
+        "virchow"
+      ],
       "ficha": {
         "quien": "Francesco Redi y Louis Pasteur",
         "cuando": "1668 (Redi) y 1861-1862 (Pasteur)",
@@ -214,7 +289,10 @@
       "resumen": "Se suman ideas sobre herencia, metabolismo y los casos límite como los virus.",
       "anio": 1950,
       "nivel": "avanzado",
-      "requiere": ["schleiden-schwann", "virchow"],
+      "requiere": [
+        "schwann",
+        "virchow"
+      ],
       "ficha": {
         "idea": "Las versiones actuales suelen añadir que la célula contiene la información hereditaria (ADN) que pasa a las células hijas, y que el metabolismo y el flujo de energía de la vida ocurren dentro de las células. Los virus se discuten como caso límite: no son celulares y necesitan una célula hospedera para reproducirse.",
         "limites": "El número y la redacción de los postulados varían según el libro; conviene fijar una sola fuente de referencia para la app."

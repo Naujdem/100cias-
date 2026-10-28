@@ -56,7 +56,7 @@ export default function App() {
   const visibles = TEMA.bloques.filter((b) => activos.has(b.id))
 
   return (
-    <div className="mx-auto max-w-2xl px-4 pb-16 pt-6">
+    <div className="mx-auto max-w-4xl px-4 pb-16 pt-6">
       <header>
         <p className="text-sm font-semibold text-[var(--acento)]">Biología · Biología celular</p>
         <h1 className="mt-1 text-2xl font-bold leading-tight">{TEMA.titulo}</h1>

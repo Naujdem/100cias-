@@ -2,15 +2,32 @@
   {
     "id": "grado-6",
     "nombre": "6° (básico)",
-    "descripcion": "Tres hitos: primeras observaciones y los postulados.",
-    "bloques": { "teoria-celular": ["hooke-leeuwenhoek", "schleiden-schwann", "virchow"] },
+    "descripcion": "Cinco hitos: primeras observaciones y los tres postulados.",
+    "bloques": {
+      "teoria-celular": [
+        "hooke",
+        "leeuwenhoek",
+        "schleiden",
+        "schwann",
+        "virchow"
+      ]
+    },
     "nivelDibujo": "basico"
   },
   {
     "id": "grado-9",
     "nombre": "9° (intermedio)",
     "descripcion": "Suma la refutación de la generación espontánea.",
-    "bloques": { "teoria-celular": ["hooke-leeuwenhoek", "schleiden-schwann", "virchow", "pasteur"] },
+    "bloques": {
+      "teoria-celular": [
+        "hooke",
+        "leeuwenhoek",
+        "schleiden",
+        "schwann",
+        "virchow",
+        "pasteur"
+      ]
+    },
     "nivelDibujo": "intermedio"
   },
   {
@@ -18,7 +35,16 @@
     "nombre": "11° (completo)",
     "descripcion": "Todo el contenido disponible del tema.",
     "bloques": {
-      "teoria-celular": ["hooke-leeuwenhoek", "schleiden-schwann", "virchow", "pasteur", "endosimbiosis", "teoria-moderna"]
+      "teoria-celular": [
+        "hooke",
+        "leeuwenhoek",
+        "schleiden",
+        "schwann",
+        "virchow",
+        "pasteur",
+        "endosimbiosis",
+        "teoria-moderna"
+      ]
     },
     "nivelDibujo": "avanzado"
   }
