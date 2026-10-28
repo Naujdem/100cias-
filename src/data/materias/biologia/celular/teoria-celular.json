@@ -201,7 +201,14 @@
           "explicacion": "Es el postulado que establece que las células nuevas se forman por la división de células ya existentes, no de la nada."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "autores": [
+        {
+          "nombre": "Rudolf Virchow",
+          "vida": "1821–1902",
+          "aporte": "Médico y patólogo alemán. Popularizó la frase «omnis cellula e cellula» y desarrolló la patología celular, que explica las enfermedades a partir de lo que ocurre en las células."
+        }
+      ]
     },
     {
       "id": "pasteur",
@@ -248,7 +255,19 @@
           "explicacion": "Pasteur refutó la generación espontánea y apoyó que los seres vivos provienen de otros seres vivos."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "autores": [
+        {
+          "nombre": "Louis Pasteur",
+          "vida": "1822–1895",
+          "aporte": "Químico y microbiólogo francés. Con sus matraces de cuello de cisne ayudó a refutar la generación espontánea."
+        },
+        {
+          "nombre": "Francesco Redi",
+          "vida": "1626–1697",
+          "aporte": "Médico y naturalista italiano. Con frascos tapados y destapados mostró que las larvas salen de huevos de moscas y no de la carne."
+        }
+      ]
     },
     {
       "id": "endosimbiosis",
@@ -281,7 +300,19 @@
           "explicacion": "El ADN circular y los ribosomas 70S son rasgos típicos de bacterias, lo que sugiere que estos orgánulos descienden de ellas."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "autores": [
+        {
+          "nombre": "Lynn Margulis",
+          "vida": "1938–2011",
+          "aporte": "Bióloga estadounidense. En 1967 propuso la teoría endosimbiótica para explicar el origen de las mitocondrias y los cloroplastos."
+        },
+        {
+          "nombre": "Konstantin Mereschkowski",
+          "vida": "1855–1921",
+          "aporte": "Botánico ruso. Hacia 1905 planteó que los cloroplastos descienden de organismos simbiontes."
+        }
+      ]
     },
     {
       "id": "teoria-moderna",

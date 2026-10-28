@@ -28,6 +28,8 @@ export interface Autor {
   nombre: string
   vida?: string
   aporte: string
+  /** ruta de una imagen libre de derechos (retrato o ilustración); si falta, se muestra una silueta ilustrada */
+  imagen?: string
 }
 
 /** Unidad mínima de contenido que se puede activar o desactivar. */

@@ -7,6 +7,8 @@ export interface PropsVista {
   bloques: Bloque[]
   abierto: string | null
   onSeleccionar: (id: string) => void
+  /** true cuando la línea de tiempo está en pantalla completa */
+  completa: boolean
   /** contenedor desplazable, para que los botones ‹ › funcionen con cualquier vista */
   carril: RefObject<HTMLDivElement | null>
 }
