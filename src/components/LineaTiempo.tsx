@@ -1,25 +1,55 @@
 import { useEffect, useRef, useState } from 'react'
 import type { Bloque } from '../data/schema.ts'
+import { guardar, leer } from '../lib/almacen.ts'
 import DetalleBloque from './DetalleBloque.tsx'
+import { VISTAS, VISTA_INICIAL } from './linea/vistas.ts'
+
+const CLAVE_VISTA = 'cien:vista-linea'
 
 export default function LineaTiempo({ bloques }: { bloques: Bloque[] }) {
   const [abierto, setAbierto] = useState<string | null>(null)
+  const [vistaId, setVistaId] = useState(() => {
+    const v = leer<string>(CLAVE_VISTA, VISTA_INICIAL)
+    return VISTAS.some((x) => x.id === v) ? v : VISTA_INICIAL
+  })
   const carril = useRef<HTMLDivElement>(null)
   const ordenados = [...bloques].sort((a, b) => a.anio - b.anio)
+  const vista = VISTAS.find((v) => v.id === vistaId) ?? VISTAS[0]
 
   // Si el bloque abierto se desactiva, se cierra el detalle.
   useEffect(() => {
     if (abierto && !bloques.some((b) => b.id === abierto)) setAbierto(null)
   }, [bloques, abierto])
 
-  const mover = (dir: 1 | -1) => carril.current?.scrollBy({ left: dir * 260, behavior: 'smooth' })
+  const mover = (dir: 1 | -1) => carril.current?.scrollBy({ left: dir * 280, behavior: 'smooth' })
+  const elegirVista = (id: string) => {
+    setVistaId(id)
+    guardar(CLAVE_VISTA, id)
+  }
   const seleccionado = ordenados.find((b) => b.id === abierto)
+  const Vista = vista.Componente
 
   return (
     <div>
-      <div className="mb-2 flex items-center justify-between">
-        <p className="text-sm text-[var(--suave)]">Toca un hito para ver más.</p>
-        <div className="flex gap-2">
+      <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
+        <div role="group" aria-label="Ver como" className="inline-flex rounded-full border border-[var(--linea)] bg-[var(--tarjeta)] p-1">
+          {VISTAS.map((v) => (
+            <button
+              key={v.id}
+              type="button"
+              aria-pressed={v.id === vista.id}
+              title={v.descripcion}
+              onClick={() => elegirVista(v.id)}
+              className={`min-h-10 rounded-full px-4 text-sm font-medium ${
+                v.id === vista.id ? 'bg-[var(--acento)] text-[var(--fondo)]' : 'text-[var(--suave)]'
+              }`}
+            >
+              {v.nombre}
+            </button>
+          ))}
+        </div>
+        <div className="flex items-center gap-2">
+          <p className="hidden text-sm text-[var(--suave)] sm:block">Toca un hito para ver más.</p>
           <button
             type="button"
             onClick={() => mover(-1)}
@@ -39,47 +69,14 @@ export default function LineaTiempo({ bloques }: { bloques: Bloque[] }) {
         </div>
       </div>
 
-      <div ref={carril} className="snap-x snap-proximity overflow-x-auto pb-3" tabIndex={0} aria-label="Línea de tiempo, desplazable">
-        <ol className="flex min-w-max">
-          {ordenados.map((b) => {
-            const sel = abierto === b.id
-            return (
-              <li
-                key={b.id}
-                className="relative w-52 shrink-0 snap-center px-2 before:absolute before:left-0 before:right-0 before:top-[3.25rem] before:h-0.5 before:bg-[var(--linea)] first:before:left-1/2 last:before:right-1/2"
-              >
-                <p className="text-center text-sm font-bold text-[var(--acento)]">{b.anio}</p>
-                <button
-                  type="button"
-                  aria-expanded={sel}
-                  aria-label={`${b.anio}: ${b.titulo}`}
-                  onClick={() => setAbierto(sel ? null : b.id)}
-                  className="relative z-10 mx-auto mt-2 flex h-9 w-9 items-center justify-center rounded-full border-[3px] border-[var(--acento)] transition"
-                  style={{ background: sel ? 'var(--acento)' : 'var(--fondo)' }}
-                >
-                  <span className={`h-2.5 w-2.5 rounded-full ${sel ? 'bg-[var(--fondo)]' : 'bg-[var(--acento)]'}`} />
-                </button>
-                <button
-                  type="button"
-                  tabIndex={-1}
-                  aria-hidden="true"
-                  onClick={() => setAbierto(sel ? null : b.id)}
-                  className={`mt-3 block w-full rounded-2xl border p-3 text-left transition ${
-                    sel ? 'border-[var(--acento)] bg-[var(--acento-suave)]/40' : 'border-[var(--linea)] bg-[var(--tarjeta)]'
-                  }`}
-                >
-                  <span className="block text-sm font-semibold leading-snug">{b.titulo}</span>
-                  <span className="mt-1 block text-xs text-[var(--suave)]">{b.resumen}</span>
-                </button>
-              </li>
-            )
-          })}
-        </ol>
-      </div>
+      <Vista
+        bloques={ordenados}
+        abierto={abierto}
+        onSeleccionar={(id) => setAbierto(abierto === id ? null : id)}
+        carril={carril}
+      />
 
-      {seleccionado && (
-        <DetalleBloque key={seleccionado.id} bloque={seleccionado} onCerrar={() => setAbierto(null)} />
-      )}
+      {seleccionado && <DetalleBloque key={seleccionado.id} bloque={seleccionado} onCerrar={() => setAbierto(null)} />}
     </div>
   )
 }

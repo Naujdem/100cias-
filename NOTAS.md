@@ -21,6 +21,7 @@ src/data/perfiles.json                      perfiles (6°, 9°, 11°)
 src/lib/seleccion.ts                        activar/desactivar con núcleo y dependencias
 src/components/                             SelectorContenido, LineaTiempo, DetalleBloque, Quiz, Insignia
 src/components/diagramas/                   diagramas SVG interactivos y su registro
+src/components/linea/                       vistas de la línea de tiempo (registro en vistas.ts), miniaturas
 scripts/validate-data.mjs                   valida los JSON (npm run check:data)
 scripts/seleccion.test.ts                   pruebas de la lógica (npm test)
 ```
@@ -32,7 +33,9 @@ scripts/seleccion.test.ts                   pruebas de la lógica (npm test)
 - Esqueleto del proyecto, PWA, modo claro/oscuro.
 - Esquema de datos (bloques, autores, diagramas, capas, perfiles).
 - Subtema 1.1 «Postulados de la teoría celular»: 8 hitos (Hooke, Leeuwenhoek, Schleiden, Schwann, Virchow, Pasteur, endosimbiosis, teoría moderna) con fichas y 9 preguntas, todos en borrador.
-- Línea de tiempo **horizontal** (estilo Genially) con panel de detalle por pestañas: Historia (con autores), Diagrama (si existe) y Evidencia y límites.
+- Línea de tiempo **horizontal** con panel de detalle por pestañas: Historia (con autores), Diagrama (si existe) y Evidencia y límites.
+- **Vistas intercambiables** de la línea de tiempo con selector «Ver como» (se recuerda la elección): *Alternada* (hitos arriba y abajo de la línea, con tallo, año, texto e imagen enmarcada; inspirada en la plantilla «Timeline Educación» de Genially) y *Tarjetas*. Para agregar una plantilla nueva: crear un componente que reciba `PropsVista` y añadirlo a `src/components/linea/vistas.ts`.
+- Miniaturas de los hitos: ilustración propia si existe (hoy solo Hooke); si no, iniciales del autor como marcador de posición.
 - **Diagrama interactivo del corcho de Hooke** (control de aumento y puntos tocables). Registro de diagramas en `src/components/diagramas/index.ts`; para agregar uno se crea el componente y se pone su id en `bloque.diagrama`.
 - Perfiles guardados en el navegador y mini-quiz.
 
