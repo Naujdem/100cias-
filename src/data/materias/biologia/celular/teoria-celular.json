@@ -1,0 +1,239 @@
+{
+  "id": "teoria-celular",
+  "materia": "biologia",
+  "area": "celular",
+  "titulo": "Teoría celular y niveles de organización",
+  "subtema": "Postulados de la teoría celular",
+  "fuentes": [
+    "BORRADOR: contenido redactado como punto de partida; verificar cada bloque contra el libro o apuntes de referencia antes de marcarlo como revisado."
+  ],
+  "bloques": [
+    {
+      "id": "hooke-leeuwenhoek",
+      "titulo": "Primeras observaciones de células",
+      "resumen": "El microscopio permite ver por primera vez estructuras diminutas en tejidos y en organismos vivos.",
+      "anio": 1665,
+      "nivel": "basico",
+      "ficha": {
+        "quien": "Robert Hooke y Antonie van Leeuwenhoek",
+        "cuando": "1665 (Hooke) y hacia 1674 (Leeuwenhoek)",
+        "idea": "Hooke observó láminas de corcho al microscopio y llamó «células» a las cavidades que veía. Leeuwenhoek, con microscopios simples, describió organismos vivos microscópicos en el agua.",
+        "evidencia": [
+          "Micrographia (Hooke, 1665) incluye dibujos del corcho.",
+          "Leeuwenhoek describió protozoos y bacterias, a los que llamó «animálculos»."
+        ],
+        "limites": "Hooke vio paredes de células muertas, no células vivas; todavía no existía una teoría que explicara qué eran."
+      },
+      "preguntas": [
+        {
+          "id": "hl-1",
+          "enunciado": "¿Qué observó Robert Hooke en 1665 al mirar corcho con un microscopio?",
+          "opciones": [
+            "Cavidades pequeñas que llamó «células»",
+            "Bacterias vivas moviéndose",
+            "El núcleo de una célula animal",
+            "Glóbulos rojos"
+          ],
+          "correcta": 0,
+          "explicacion": "Hooke vio los espacios que dejan las paredes de células muertas del corcho y los llamó «células» por su parecido con las celdas de un panal o de un monasterio."
+        },
+        {
+          "id": "hl-2",
+          "enunciado": "¿Qué aportó Leeuwenhoek a esta historia?",
+          "opciones": [
+            "Formuló que toda célula proviene de otra célula",
+            "Describió organismos vivos microscópicos con microscopios simples",
+            "Demostró que las plantas están hechas de células",
+            "Descubrió la mitocondria"
+          ],
+          "correcta": 1,
+          "explicacion": "Leeuwenhoek fue de los primeros en observar seres vivos microscópicos, como protozoos y bacterias. Los postulados vinieron casi dos siglos después."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "schleiden-schwann",
+      "titulo": "Todos los seres vivos están formados por células",
+      "resumen": "Plantas y animales comparten la misma unidad básica: la célula.",
+      "anio": 1839,
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "quien": "Matthias Schleiden y Theodor Schwann",
+        "cuando": "1838 (plantas) y 1839 (animales)",
+        "idea": "Schleiden concluyó que las plantas están formadas por células y Schwann extendió esa idea a los animales. De ahí salen los dos primeros postulados: todos los seres vivos están formados por una o más células, y la célula es la unidad básica de estructura y función de la vida.",
+        "evidencia": [
+          "Observación de tejidos vegetales (Schleiden) y animales (Schwann) al microscopio."
+        ],
+        "limites": "Ambos proponían una explicación errónea sobre cómo se forman las células nuevas (a partir de material sin estructura), idea que luego se corrigió."
+      },
+      "preguntas": [
+        {
+          "id": "ss-1",
+          "enunciado": "¿Cuál de estas ideas forma parte de los postulados de la teoría celular?",
+          "opciones": [
+            "Las células pueden surgir de materia sin vida",
+            "Todos los seres vivos están formados por una o más células",
+            "Solo los animales tienen células",
+            "Las células solo existen en organismos pluricelulares"
+          ],
+          "correcta": 1,
+          "explicacion": "La teoría celular afirma que todos los seres vivos, sean unicelulares o pluricelulares, están formados por células. Las otras opciones son falsas."
+        },
+        {
+          "id": "ss-2",
+          "enunciado": "¿Quiénes extendieron la idea de la célula a plantas y animales respectivamente?",
+          "opciones": [
+            "Schwann a las plantas y Schleiden a los animales",
+            "Schleiden a las plantas y Schwann a los animales",
+            "Hooke a las plantas y Virchow a los animales",
+            "Pasteur a las plantas y Redi a los animales"
+          ],
+          "correcta": 1,
+          "explicacion": "Schleiden estudió las plantas (1838) y Schwann los animales (1839); juntos se asocian con los primeros postulados."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "virchow",
+      "titulo": "Toda célula proviene de otra célula",
+      "resumen": "Las células nuevas se originan por la división de células preexistentes.",
+      "anio": 1855,
+      "nivel": "basico",
+      "nucleo": true,
+      "requiere": ["schleiden-schwann"],
+      "ficha": {
+        "quien": "Rudolf Virchow",
+        "cuando": "1855",
+        "idea": "Virchow popularizó la frase «omnis cellula e cellula»: toda célula se origina a partir de otra célula que ya existía. Es el tercer postulado de la teoría celular.",
+        "evidencia": [
+          "Observación de la división celular en tejidos.",
+          "Se apoya después en los experimentos que refutan la generación espontánea."
+        ],
+        "limites": "La idea ya había sido planteada por otros científicos antes que él; Virchow es quien más la difundió."
+      },
+      "preguntas": [
+        {
+          "id": "vi-1",
+          "enunciado": "«Omnis cellula e cellula» significa que...",
+          "opciones": [
+            "toda célula tiene un núcleo",
+            "toda célula proviene de otra célula preexistente",
+            "toda célula es visible a simple vista",
+            "toda célula puede vivir fuera de un organismo"
+          ],
+          "correcta": 1,
+          "explicacion": "Es el postulado que establece que las células nuevas se forman por la división de células ya existentes, no de la nada."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "pasteur",
+      "titulo": "La generación espontánea queda refutada",
+      "resumen": "Los experimentos de Redi y Pasteur muestran que la vida no surge de materia sin vida en las condiciones observadas.",
+      "anio": 1862,
+      "nivel": "intermedio",
+      "requiere": ["virchow"],
+      "ficha": {
+        "quien": "Francesco Redi y Louis Pasteur",
+        "cuando": "1668 (Redi) y 1861-1862 (Pasteur)",
+        "idea": "Redi mostró que las moscas nacen de huevos y no de la carne en descomposición. Pasteur usó matraces de cuello de cisne: el caldo estéril se mantenía sin microorganismos mientras el cuello impedía la entrada de partículas del aire; al romper el cuello, el caldo se contaminaba.",
+        "evidencia": [
+          "Experimento de Redi con frascos tapados y destapados.",
+          "Matraz de cuello de cisne de Pasteur."
+        ],
+        "limites": "Estos experimentos refutan la generación espontánea de organismos en el presente; el origen de la primera vida en la Tierra es otra pregunta."
+      },
+      "preguntas": [
+        {
+          "id": "pa-1",
+          "enunciado": "En el experimento de Pasteur, ¿por qué el caldo del matraz de cuello de cisne no se contaminaba?",
+          "opciones": [
+            "Porque el caldo era ácido",
+            "Porque el cuello curvo atrapaba las partículas y microorganismos del aire",
+            "Porque el calor mataba a las células nuevas que se formaban",
+            "Porque no había oxígeno dentro del matraz"
+          ],
+          "correcta": 1,
+          "explicacion": "El aire podía entrar, pero el cuello curvo retenía los microorganismos. Al romper el cuello, estos llegaban al caldo y lo contaminaban, lo que muestra que provenían del exterior."
+        },
+        {
+          "id": "pa-2",
+          "enunciado": "¿Qué idea refuta el experimento de Pasteur?",
+          "opciones": [
+            "Que todas las células tienen membrana",
+            "Que la vida puede surgir espontáneamente de materia sin vida",
+            "Que los microorganismos existen",
+            "Que el aire contiene oxígeno"
+          ],
+          "correcta": 1,
+          "explicacion": "Pasteur refutó la generación espontánea y apoyó que los seres vivos provienen de otros seres vivos."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "endosimbiosis",
+      "titulo": "Teoría endosimbiótica",
+      "resumen": "Las mitocondrias y los cloroplastos habrían surgido de bacterias que fueron incorporadas por otras células.",
+      "anio": 1967,
+      "nivel": "avanzado",
+      "ficha": {
+        "quien": "Lynn Margulis (con antecedentes de Konstantin Mereschkowski)",
+        "cuando": "1967 (Margulis); ideas previas hacia 1905",
+        "idea": "Propone que ciertos orgánulos de las células eucariotas fueron antes bacterias de vida libre que pasaron a vivir dentro de una célula hospedera, con beneficio mutuo.",
+        "evidencia": [
+          "Mitocondrias y cloroplastos tienen su propio ADN, de forma circular como el de las bacterias.",
+          "Tienen ribosomas de tipo 70S, como los procariotas.",
+          "Poseen doble membrana y se multiplican por un proceso parecido a la fisión binaria."
+        ],
+        "limites": "Explica bien el origen de mitocondrias y cloroplastos; el origen del núcleo y de otras estructuras se explica con otras hipótesis."
+      },
+      "preguntas": [
+        {
+          "id": "en-1",
+          "enunciado": "¿Cuál de estas características apoya la teoría endosimbiótica?",
+          "opciones": [
+            "Las mitocondrias tienen ADN circular propio y ribosomas 70S",
+            "Las mitocondrias carecen de membrana",
+            "Los cloroplastos solo existen en animales",
+            "Las mitocondrias se forman en el núcleo"
+          ],
+          "correcta": 0,
+          "explicacion": "El ADN circular y los ribosomas 70S son rasgos típicos de bacterias, lo que sugiere que estos orgánulos descienden de ellas."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "teoria-moderna",
+      "titulo": "La teoría celular hoy",
+      "resumen": "Se suman ideas sobre herencia, metabolismo y los casos límite como los virus.",
+      "anio": 1950,
+      "nivel": "avanzado",
+      "requiere": ["schleiden-schwann", "virchow"],
+      "ficha": {
+        "idea": "Las versiones actuales suelen añadir que la célula contiene la información hereditaria (ADN) que pasa a las células hijas, y que el metabolismo y el flujo de energía de la vida ocurren dentro de las células. Los virus se discuten como caso límite: no son celulares y necesitan una célula hospedera para reproducirse.",
+        "limites": "El número y la redacción de los postulados varían según el libro; conviene fijar una sola fuente de referencia para la app."
+      },
+      "preguntas": [
+        {
+          "id": "tm-1",
+          "enunciado": "¿Por qué los virus se consideran un caso límite de la teoría celular?",
+          "opciones": [
+            "Porque son más grandes que las células",
+            "Porque no están formados por células y dependen de una célula hospedera para reproducirse",
+            "Porque tienen núcleo y mitocondrias",
+            "Porque se dividen por mitosis"
+          ],
+          "correcta": 1,
+          "explicacion": "Los virus no tienen estructura celular ni metabolismo propio; solo se reproducen dentro de una célula, por eso se discute si se consideran seres vivos."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}

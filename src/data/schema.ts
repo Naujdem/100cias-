@@ -1,0 +1,81 @@
+// ESQUEMA DE DATOS de 100cias
+// Idea central: cada tema guarda TODO su contenido; cada curso o docente
+// decide qué se activa mediante un perfil (casillas). Los grados son
+// etiquetas en los perfiles, no carpetas.
+
+export type Nivel = 'basico' | 'intermedio' | 'avanzado'
+
+export interface Pregunta {
+  id: string
+  enunciado: string
+  opciones: string[]
+  /** índice de la opción correcta dentro de `opciones` */
+  correcta: number
+  /** por qué la correcta es correcta (y, si aplica, el error típico) */
+  explicacion: string
+}
+
+export interface Ficha {
+  quien?: string
+  cuando?: string
+  /** la idea central en una o dos frases */
+  idea: string
+  evidencia?: string[]
+  limites?: string
+}
+
+/** Unidad mínima de contenido que se puede activar o desactivar. */
+export interface Bloque {
+  id: string
+  titulo: string
+  resumen: string
+  /** año usado para ordenar la línea de tiempo */
+  anio: number
+  nivel: Nivel
+  /** si es true, no se puede desactivar (lo esencial del tema) */
+  nucleo?: boolean
+  /** ids de bloques del mismo tema que deben estar activos para que éste tenga sentido */
+  requiere?: string[]
+  ficha: Ficha
+  /** las preguntas solo entran al quiz si el bloque está activo */
+  preguntas: Pregunta[]
+  /** false = borrador pendiente de verificación humana contra una fuente */
+  revisado: boolean
+}
+
+export interface Tema {
+  id: string
+  materia: string
+  area: string
+  titulo: string
+  subtema: string
+  fuentes: string[]
+  bloques: Bloque[]
+}
+
+/** Parte de un dibujo SVG que se puede encender o apagar (p. ej. un orgánulo). */
+export interface Capa {
+  id: string
+  nombre: string
+  nivel: Nivel
+  /** ids de capas que deben estar visibles si ésta lo está */
+  requiere?: string[]
+  /** ficha que se abre al tocar la capa; puede variar según el nivel activo */
+  fichas: Partial<Record<Nivel, string>>
+}
+
+export interface Dibujo {
+  id: string
+  titulo: string
+  capas: Capa[]
+}
+
+/** Configuración reutilizable: qué bloques y qué nivel de dibujo se muestran. */
+export interface Perfil {
+  id: string
+  nombre: string
+  descripcion: string
+  /** por tema: ids de bloques activos */
+  bloques: Record<string, string[]>
+  nivelDibujo: Nivel
+}
