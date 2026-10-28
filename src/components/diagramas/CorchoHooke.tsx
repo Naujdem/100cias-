@@ -79,6 +79,7 @@ export default function CorchoHooke() {
 function Contenido() {
   const [s, setS] = useState(1)
   const [punto, setPunto] = useState<Punto | null>(null)
+  const [comparar, setComparar] = useState(false)
   const celdas = useMemo(generarCeldas, [])
   const puntos = useMemo(motas, [])
 
@@ -93,6 +94,13 @@ function Contenido() {
   useEffect(() => {
     const alTeclear = (e: KeyboardEvent) => {
       if (e.ctrlKey || e.metaKey || e.altKey) return
+      if ((e.key === 'c' || e.key === 'C') && !(e.target instanceof HTMLInputElement)) {
+        setS((a) => {
+          if (a >= 4.5) setComparar((v) => !v)
+          return a
+        })
+        return
+      }
       const mas = e.key === '+' || e.key === '='
       const menos = e.key === '-' || e.key === '_'
       if (!mas && !menos) return
@@ -105,6 +113,7 @@ function Contenido() {
 
   const opacidadParedes = Math.min(1, Math.max(0, (s - 1.6) / 2))
   const verPuntos = s >= 4.5
+  const verComparar = comparar && verPuntos
 
   const d = celdas.map((c) => `M${c.x} ${c.y}h${c.w}v${c.h}h${-c.w}z`).join('')
 
@@ -196,20 +205,68 @@ function Contenido() {
         />
       </div>
 
-      <div aria-live="polite" className="mt-2 min-h-[4.5rem] rounded-xl bg-[var(--fondo)] p-3 text-sm">
-        {punto ? (
-          <>
-            <p className="font-semibold">{TEXTO[punto].titulo}</p>
-            <p>{TEXTO[punto].cuerpo}</p>
-          </>
-        ) : verPuntos ? (
-          <p className="text-[var(--suave)]">Toca los puntos del dibujo para ver qué es cada cosa.</p>
-        ) : (
-          <p className="text-[var(--suave)]">
-            Sube el aumento con el control de arriba. A simple vista el corcho parece una superficie continua.
+      {verPuntos && (
+        <button
+          type="button"
+          aria-pressed={comparar}
+          onClick={() => setComparar((v) => !v)}
+          className="mt-2 rounded-xl border border-[var(--acento)] px-3 py-2 text-sm font-semibold text-[var(--acento)] aria-pressed:bg-[var(--acento)] aria-pressed:text-white"
+        >
+          {comparar ? 'Ocultar comparación' : 'Comparar con celdas de monasterio'} <span className="font-normal opacity-70">(C)</span>
+        </button>
+      )}
+
+      {verComparar ? (
+        <div className="mt-2 rounded-xl bg-[var(--fondo)] p-3 text-sm">
+          <div className="grid grid-cols-2 gap-3">
+            <figure>
+              <svg viewBox="0 0 120 90" role="img" aria-label="Cavidades del corcho: cuartitos pequeños en filas" className="w-full rounded-lg">
+                <rect width="120" height="90" fill="#d9b77f" />
+                <path d={Array.from({ length: 6 }, (_, f) => Array.from({ length: 8 }, (_, k) => `M${6 + k * 13 + (f % 2) * 4} ${6 + f * 13}h11v11h-11z`).join('')).join('')} fill="#f3e7c9" stroke="#6b4a1f" strokeWidth="1.5" />
+              </svg>
+              <figcaption className="mt-1 text-center text-xs font-semibold">Cavidades del corcho</figcaption>
+            </figure>
+            <figure>
+              <svg viewBox="0 0 120 90" role="img" aria-label="Celdas de un monasterio: cuartos pequeños a lo largo de un pasillo" className="w-full rounded-lg">
+                <rect width="120" height="90" fill="#cfc7b8" />
+                <rect x="4" y="34" width="112" height="22" fill="#ece6d8" />
+                {Array.from({ length: 8 }, (_, k) => (
+                  <g key={k}>
+                    <rect x={4 + k * 14} y="6" width="14" height="28" fill="#f3e7c9" stroke="#5b4a32" strokeWidth="1.5" />
+                    <rect x={4 + k * 14} y="56" width="14" height="28" fill="#f3e7c9" stroke="#5b4a32" strokeWidth="1.5" />
+                  </g>
+                ))}
+                <text x="60" y="49" textAnchor="middle" fontSize="7" fill="#5b4a32">pasillo</text>
+              </svg>
+              <figcaption className="mt-1 text-center text-xs font-semibold">Celdas de un monasterio</figcaption>
+            </figure>
+          </div>
+          <p className="mt-2 font-semibold">¿Qué se parecen?</p>
+          <ul className="list-disc pl-5">
+            <li>Son espacios pequeños y casi iguales.</li>
+            <li>Están ordenados en filas, uno junto a otro.</li>
+            <li>Cada uno está separado del siguiente por una pared.</li>
+          </ul>
+          <p className="mt-2">
+            Por eso Hooke las llamó <em>cellulae</em> (en latín, «celdillas»), de donde viene la palabra «célula». Ojo: en el corcho solo se ven las paredes de células que ya murieron.
           </p>
-        )}
-      </div>
+        </div>
+      ) : (
+        <div aria-live="polite" className="mt-2 min-h-[4.5rem] rounded-xl bg-[var(--fondo)] p-3 text-sm">
+          {punto ? (
+            <>
+              <p className="font-semibold">{TEXTO[punto].titulo}</p>
+              <p>{TEXTO[punto].cuerpo}</p>
+            </>
+          ) : verPuntos ? (
+            <p className="text-[var(--suave)]">Toca los puntos del dibujo para ver qué es cada cosa.</p>
+          ) : (
+            <p className="text-[var(--suave)]">
+              Sube el aumento con el control de arriba. A simple vista el corcho parece una superficie continua.
+            </p>
+          )}
+        </div>
+      )}
       <p className="mt-2 text-xs text-[var(--suave)]">Ilustración esquemática, no es el dibujo original de Hooke ni está a escala.</p>
     </>
   )

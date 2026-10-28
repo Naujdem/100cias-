@@ -47,6 +47,7 @@ scripts/seleccion.test.ts                   pruebas de la lógica (npm test)
 - **Vistas intercambiables** de la línea de tiempo con selector «Ver como» (se recuerda la elección): *Alternada* (hitos arriba y abajo de la línea, con tallo, año, texto e imagen enmarcada; inspirada en la plantilla «Timeline Educación» de Genially) y *Tarjetas*. Para agregar una plantilla nueva: crear un componente que reciba `PropsVista` y añadirlo a `src/components/linea/vistas.ts`.
 - Miniaturas de los hitos: ilustración propia si existe (hoy solo Hooke); si no, iniciales del autor como marcador de posición.
 - **Diagrama interactivo del corcho de Hooke** (control de aumento y puntos tocables). Registro de diagramas en `src/components/diagramas/index.ts`; para agregar uno se crea el componente y se pone su id en `bloque.diagrama`.
+- **Comparativo corcho ↔ celdas de monasterio**: al acercar (≥ 4,5×) aparece el botón «Comparar con celdas de monasterio» (tecla `C`) con dos dibujos esquemáticos y tres parecidos; explica el origen de la palabra «célula». Borrador.
 - Perfiles guardados en el navegador y mini-quiz.
 
 ## Método de trabajo del subtema 1.1
@@ -59,7 +60,7 @@ La presentación «La célula» de JuanMed (34 diapositivas, tres postulados, an
 JuanMed usa la app en clase y no le resulta cómodo el mouse, así que todo se puede hacer con teclado:
 - **Línea de tiempo:** `← →` mueven el foco entre hitos, `Inicio`/`Fin` van al primero/último, `Enter` abre el hito, `F` pantalla completa.
 - **Recuadro abierto:** `← →` (o `RePág`/`AvPág`, que usan muchos controles remotos de presentación) pasan al hito anterior o siguiente; `↑ ↓` cambian de pestaña; `Esc` cierra y devuelve el foco al hito actual. Hay también botones Anterior/Siguiente y el contador «Hito X de N».
-- **Diagrama del corcho:** `+` y `−` cambian el aumento; `F` lo pone a pantalla completa (con el control de aumento y los textos).
+- **Diagrama del corcho:** `+` y `−` cambian el aumento; `C` activa la comparación con celdas de monasterio (con zoom alto); `F` lo pone a pantalla completa (con el control de aumento y los textos).
 - **Visor con zoom:** con el visor enfocado, `+ −` acercan o alejan y `0` restablece; con zoom, las flechas mueven la imagen (pulsar `0` para volver a cambiar de hito con las flechas).
 - Pantalla completa: API nativa con respaldo para iPhone; `Esc` sale.
 
