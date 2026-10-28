@@ -461,8 +461,8 @@
     },
     {
       "id": "virchow",
-      "titulo": "Toda célula proviene de otra célula",
-      "resumen": "Las células nuevas se originan por la división de células preexistentes.",
+      "titulo": "Rudolf Virchow: toda célula proviene de otra célula",
+      "resumen": "Sostuvo que las células nuevas nacen de la división de células que ya existían, y no de material sin forma.",
       "anio": 1855,
       "nivel": "basico",
       "nucleo": true,
@@ -472,12 +472,35 @@
       "ficha": {
         "quien": "Rudolf Virchow",
         "cuando": "1855",
-        "idea": "Virchow popularizó la frase «omnis cellula e cellula»: toda célula se origina a partir de otra célula que ya existía. Es el tercer postulado de la teoría celular.",
+        "idea": "Virchow, médico alemán, sostuvo en 1855 que toda célula se origina a partir de otra célula que ya existía: «omnis cellula e cellula». Es el tercer postulado de la teoría celular. Corrige la idea de Schleiden y Schwann de que las células nacían de material sin forma, y permite explicar las enfermedades por lo que pasa dentro de las células.",
         "evidencia": [
-          "Observación de la división celular en tejidos.",
-          "Se apoya después en los experimentos que refutan la generación espontánea."
+          "Observaciones de células en división en distintos tejidos (Remak, Virchow y otros).",
+          "Los dibujos de Flemming con colorantes mostraron los pasos de la división, la mitosis.",
+          "Los experimentos de Redi y Pasteur refuerzan la idea: la vida no surge de materia sin vida."
         ],
-        "limites": "La idea ya había sido planteada por otros científicos antes que él; Virchow es quien más la difundió."
+        "limites": "El postulado vale para las células que existen hoy; no explica cómo apareció la primera célula. Además, la idea ya circulaba antes y Virchow no dio todo el crédito a Remak.",
+        "contexto": [
+          {
+            "titulo": "Un médico con mirada social",
+            "texto": "En 1848 estudió una epidemia de tifus en Silesia y concluyó que sus causas también eran sociales: pobreza y falta de servicios. Fue además político y defendió la salud pública."
+          },
+          {
+            "titulo": "La frase no era suya",
+            "texto": "El francés François-Vincent Raspail la había usado antes, hacia 1825. Virchow la hizo famosa y la apoyó con observaciones."
+          },
+          {
+            "titulo": "Y Remak",
+            "texto": "Robert Remak ya había visto células dividiéndose y defendía que las células vienen de otras células. Virchow adoptó la idea sin darle mucho crédito, y eso causó una polémica entre ambos."
+          },
+          {
+            "titulo": "Patología celular",
+            "texto": "En su libro de 1858 propuso que la enfermedad es un cambio en las células. A él se le atribuyen términos médicos como «leucemia» y «embolia»."
+          },
+          {
+            "titulo": "Ver cómo se divide una célula",
+            "texto": "Los pasos de la división se vieron con claridad años después, cuando Walther Flemming usó colorantes que teñían los cromosomas y llamó «mitosis» a ese proceso (hacia 1880)."
+          }
+        ]
       },
       "preguntas": [
         {
@@ -491,6 +514,42 @@
           ],
           "correcta": 1,
           "explicacion": "Es el postulado que establece que las células nuevas se forman por la división de células ya existentes, no de la nada."
+        },
+        {
+          "id": "vi-2",
+          "enunciado": "¿Qué idea de Schleiden y Schwann corrigió Virchow?",
+          "opciones": [
+            "Que las plantas tienen células",
+            "Que las células nuevas nacen de material sin forma",
+            "Que los animales tienen células",
+            "Que las células tienen núcleo"
+          ],
+          "correcta": 1,
+          "explicacion": "Schleiden y Schwann creían que las células nuevas surgían de material sin estructura. Virchow sostuvo que provienen de otras células."
+        },
+        {
+          "id": "vi-3",
+          "enunciado": "En la división de una célula animal, ¿qué ocurre justo antes de que se parta en dos?",
+          "opciones": [
+            "Los cromosomas desaparecen",
+            "Las dos copias de cada cromosoma se separan hacia extremos opuestos",
+            "La célula pierde su núcleo para siempre",
+            "Las dos células se fusionan"
+          ],
+          "correcta": 1,
+          "explicacion": "Cada cromosoma duplicado reparte sus dos copias, una para cada extremo. Así cada célula nueva recibe el mismo material genético."
+        },
+        {
+          "id": "vi-4",
+          "enunciado": "Si cada célula se divide en dos en cada generación y se empieza con una, ¿cuántas hay tras 4 generaciones?",
+          "opciones": [
+            "8",
+            "12",
+            "16",
+            "32"
+          ],
+          "correcta": 2,
+          "explicacion": "1 → 2 → 4 → 8 → 16. Cada generación duplica el número de células."
         }
       ],
       "revisado": false,
@@ -499,6 +558,16 @@
           "nombre": "Rudolf Virchow",
           "vida": "1821–1902",
           "aporte": "Médico y patólogo alemán. Popularizó la frase «omnis cellula e cellula» y desarrolló la patología celular, que explica las enfermedades a partir de lo que ocurre en las células."
+        }
+      ],
+      "diagrama": "division-celular",
+      "ilustraciones": [
+        {
+          "id": "anafase",
+          "titulo": "Una célula en división",
+          "tipo": "svg",
+          "recurso": "celula-anafase",
+          "pie": "Una célula animal a punto de partirse en dos: cada copia de los cromosomas viaja hacia un extremo. Dibujo simplificado, con solo 4 cromosomas."
         }
       ]
     },

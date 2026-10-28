@@ -66,9 +66,22 @@ function MiniAnimal() {
   )
 }
 
+function MiniDivision() {
+  return (
+    <svg viewBox="0 0 160 100" className="h-full w-full" aria-hidden="true">
+      <rect width="160" height="100" fill="#f3e7ef" />
+      <circle cx="56" cy="50" r="30" fill="#f8d9d4" stroke="#b05a5a" strokeWidth="3" />
+      <circle cx="104" cy="50" r="30" fill="#f8d9d4" stroke="#b05a5a" strokeWidth="3" />
+      <circle cx="56" cy="50" r="12" fill="#ead3f2" stroke="#7a4a8a" strokeWidth="2" />
+      <circle cx="104" cy="50" r="12" fill="#ead3f2" stroke="#7a4a8a" strokeWidth="2" />
+    </svg>
+  )
+}
+
 const MINIATURAS: Record<string, () => React.JSX.Element> = {
   'corcho-hooke': MiniCorcho,
   'gota-leeuwenhoek': MiniGota,
+  'division-celular': MiniDivision,
   'tejido-planta': MiniPlanta,
   'tejido-animal': MiniAnimal,
 }
