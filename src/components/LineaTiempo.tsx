@@ -24,9 +24,11 @@ interface Props {
   claveVista: string
   /** cómo se llama cada bloque en el contador y la ayuda («Hito», «Nivel») */
   unidad?: string
+  /** pide abrir un bloque (por la búsqueda); `n` cambia en cada petición para poder repetir el mismo */
+  abrir?: { id: string; n: number } | null
 }
 
-export default function LineaTiempo({ bloques, vistas: VISTAS, claveVista: CLAVE_VISTA, unidad = 'Hito' }: Props) {
+export default function LineaTiempo({ bloques, vistas: VISTAS, claveVista: CLAVE_VISTA, unidad = 'Hito', abrir = null }: Props) {
   const [abierto, setAbierto] = useState<string | null>(null)
   const [vistaId, setVistaId] = useState(() => {
     const v = leer<string>(CLAVE_VISTA, VISTAS[0].id)
@@ -37,6 +39,16 @@ export default function LineaTiempo({ bloques, vistas: VISTAS, claveVista: CLAVE
   const pantalla = usePantallaCompleta(raiz)
   const ordenados = [...bloques].sort((a, b) => a.anio - b.anio)
   const vista = VISTAS.find((v) => v.id === vistaId) ?? VISTAS[0]
+
+  // Abre el bloque que pide la búsqueda, una sola vez por petición, en cuanto esté entre los visibles.
+  const atendido = useRef(0)
+  useEffect(() => {
+    if (!abrir || abrir.n === atendido.current) return
+    if (bloques.some((b) => b.id === abrir.id)) {
+      atendido.current = abrir.n
+      setAbierto(abrir.id)
+    }
+  }, [abrir, bloques])
 
   // Si el bloque abierto se desactiva, se cierra el detalle.
   useEffect(() => {

@@ -45,3 +45,15 @@ test('los perfiles ya vienen normalizados', () => {
     assert.deepEqual([...n].sort(), [...ids].sort(), `perfil ${p.id}`)
   }
 })
+
+import { buscar, normalizarTexto } from '../src/lib/buscar.ts'
+
+test('buscar ignora tildes y mayúsculas y exige todas las palabras', () => {
+  assert.equal(normalizarTexto('Órgano ÁTOMO'), 'organo atomo')
+  const t = tema as any
+  const r = buscar([t], 'HOOKE corcho')
+  assert.equal(r[0]?.bloqueId, 'hooke')
+  assert.equal(buscar([t], 'hooke xyzinexistente').length, 0)
+  assert.ok(buscar([t], 'celula').length > 3)
+  assert.equal(buscar([t], 'a').length, 0) // palabras de una letra no cuentan
+})

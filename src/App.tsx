@@ -1,4 +1,4 @@
-import { useCallback, useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import perfilesJson from './data/perfiles.json'
 import type { Perfil, Tema } from './data/schema.ts'
 import { alternar, normalizar } from './lib/seleccion.ts'
@@ -7,6 +7,8 @@ import SelectorContenido from './components/SelectorContenido.tsx'
 import LineaTiempo from './components/LineaTiempo.tsx'
 import Quiz from './components/Quiz.tsx'
 import { vistasDe } from './components/linea/vistas.ts'
+import Buscador from './components/Buscador.tsx'
+import type { Resultado } from './lib/buscar.ts'
 
 // Todos los subtemas del contenido, ordenados. Para agregar uno basta con crear su JSON en data/materias.
 const TEMAS = Object.values(import.meta.glob('./data/materias/**/*.json', { eager: true, import: 'default' }))
@@ -26,12 +28,19 @@ export default function App() {
     return TEMAS.some((t) => t.id === g) ? g : TEMAS[0].id
   })
   const tema = TEMAS.find((t) => t.id === temaId) ?? TEMAS[0]
+  const [salto, setSalto] = useState<{ id: string; n: number } | null>(null)
+  const ir = (r: Resultado) => {
+    setTemaId(r.temaId)
+    guardar(CLAVE_TEMA, r.temaId)
+    setSalto({ id: r.bloqueId, n: Date.now() })
+  }
   return (
     <div className="mx-auto max-w-4xl px-4 pb-16 pt-6">
       <header>
         <p className="text-sm font-semibold text-[var(--acento)]">Biología · Biología celular</p>
         <h1 className="mt-1 text-2xl font-bold leading-tight">{tema.titulo}</h1>
       </header>
+      <Buscador temas={TEMAS} onIr={ir} />
       {TEMAS.length > 1 && (
         <nav aria-label="Subtemas" className="mt-4">
           <div className="flex flex-wrap gap-2">
@@ -52,12 +61,12 @@ export default function App() {
           </div>
         </nav>
       )}
-      <TemaView key={tema.id} TEMA={tema} />
+      <TemaView key={tema.id} TEMA={tema} salto={salto} />
     </div>
   )
 }
 
-function TemaView({ TEMA }: { TEMA: Tema }) {
+function TemaView({ TEMA, salto }: { TEMA: Tema; salto: { id: string; n: number } | null }) {
   const CLAVE = `cien:${TEMA.id}`
   const inicial = useMemo<Guardado>(() => {
     const g = leer<Guardado | null>(CLAVE, null)
@@ -93,6 +102,19 @@ function TemaView({ TEMA }: { TEMA: Tema }) {
     setPerfil('personalizado')
     persistir('personalizado', r.activos)
   }
+
+  // Si la búsqueda lleva a un bloque que el perfil tiene apagado, se enciende (con sus requisitos).
+  const atendido = useRef(0)
+  useEffect(() => {
+    if (!salto || salto.n === atendido.current) return
+    atendido.current = salto.n
+    if (!TEMA.bloques.some((b) => b.id === salto.id) || activos.has(salto.id)) return
+    const r = alternar(TEMA.bloques, activos, salto.id)
+    setActivos(r.activos)
+    setPerfil('personalizado')
+    persistir('personalizado', r.activos)
+    setAviso('Ese contenido estaba oculto en tu perfil y se activó para mostrarlo.')
+  }, [salto, TEMA, activos, persistir])
 
   const visibles = TEMA.bloques.filter((b) => activos.has(b.id))
 
@@ -141,6 +163,7 @@ function TemaView({ TEMA }: { TEMA: Tema }) {
           vistas={vistasDe(TEMA.vistas)}
           claveVista={TEMA.vistas ? `cien:vista-${TEMA.id}` : 'cien:vista-linea'}
           unidad={TEMA.unidad}
+          abrir={salto}
         />
       </section>
 
