@@ -5,6 +5,7 @@ import { DIAGRAMAS } from './diagramas/index.tsx'
 import { NivelInsignia, BorradorInsignia } from './Insignia.tsx'
 import Retrato from './Retrato.tsx'
 import Ilustraciones from './Ilustraciones.tsx'
+import Acordeon from './Acordeon.tsx'
 
 type Pestana = 'historia' | 'diagrama' | 'evidencia'
 
@@ -196,14 +197,10 @@ export default function DetalleBloque({ bloque: b, onCerrar, posicion, onAnterio
                   ) : null}
                   <p>{b.ficha.idea}</p>
                   {b.ficha.contexto && (
-                    <dl className="space-y-2 rounded-xl bg-[var(--fondo)] p-3">
-                      {b.ficha.contexto.map((c) => (
-                        <div key={c.titulo}>
-                          <dt className="font-semibold">{c.titulo}</dt>
-                          <dd>{c.texto}</dd>
-                        </div>
-                      ))}
-                    </dl>
+                    <Acordeon
+                      key={b.id}
+                      items={b.ficha.contexto.map((c) => ({ id: c.titulo, titulo: c.titulo, contenido: <p>{c.texto}</p> }))}
+                    />
                   )}
                   {b.ilustraciones && <Ilustraciones items={b.ilustraciones} />}
                 </div>
