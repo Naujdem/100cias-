@@ -195,6 +195,7 @@ export default function DetalleBloque({ bloque: b, onCerrar, posicion, onAnterio
                   {!principal && (b.ficha.quien || b.ficha.cuando) ? (
                     <p className="text-[var(--suave)]">{[b.ficha.quien, b.ficha.cuando].filter(Boolean).join(' · ')}</p>
                   ) : null}
+                  {b.ilustraciones && <Ilustraciones items={b.ilustraciones} />}
                   <p>{b.ficha.idea}</p>
                   {b.ficha.contexto && (
                     <Acordeon
@@ -202,7 +203,6 @@ export default function DetalleBloque({ bloque: b, onCerrar, posicion, onAnterio
                       items={b.ficha.contexto.map((c) => ({ id: c.titulo, titulo: c.titulo, contenido: <p>{c.texto}</p> }))}
                     />
                   )}
-                  {b.ilustraciones && <Ilustraciones items={b.ilustraciones} />}
                 </div>
               )}
 
