@@ -195,8 +195,8 @@ export default function DetalleBloque({ bloque: b, onCerrar, posicion, onAnterio
                   {!principal && (b.ficha.quien || b.ficha.cuando) ? (
                     <p className="text-[var(--suave)]">{[b.ficha.quien, b.ficha.cuando].filter(Boolean).join(' · ')}</p>
                   ) : null}
-                  {b.ilustraciones && <Ilustraciones items={b.ilustraciones} />}
                   <p>{b.ficha.idea}</p>
+                  {b.ilustraciones && <Ilustraciones items={b.ilustraciones} />}
                   {b.ficha.contexto && (
                     <Acordeon
                       key={b.id}
