@@ -1,3 +1,4 @@
+import Resguardo from './Resguardo.tsx'
 import { useEffect, useId, useRef, useState } from 'react'
 import type { KeyboardEvent } from 'react'
 import type { Autor, Bloque } from '../data/schema.ts'
@@ -283,7 +284,7 @@ export default function DetalleBloque({ bloque: b, onCerrar, posicion, onAnterio
 
               {activa === 'diagrama' && Diagrama && (
                 <div data-diagrama>
-                  <Diagrama />
+                  <Resguardo titulo="No se pudo mostrar el diagrama."><Diagrama /></Resguardo>
                 </div>
               )}
 

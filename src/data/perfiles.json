@@ -28,6 +28,13 @@
         "pro-eu",
         "animal-vegetal",
         "virus"
+      ],
+      "celula-eucariota": [
+        "membrana",
+        "citoplasma",
+        "nucleo",
+        "mitocondrias",
+        "cloroplastos"
       ]
     },
     "nivelDibujo": "basico",
@@ -35,7 +42,8 @@
       "teoria-celular": "Cinco hitos: primeras observaciones y los tres postulados.",
       "niveles-organizacion": "Seis niveles: de los orgánulos al organismo.",
       "unicelulares-pluricelulares": "Tres pasos: unicelulares, pluricelulares y la división del trabajo.",
-      "tipos-de-celulas": "Tres pasos: procariota o eucariota, animal o vegetal, y los virus."
+      "tipos-de-celulas": "Tres pasos: procariota o eucariota, animal o vegetal, y los virus.",
+      "celula-eucariota": "Cinco pasos: membrana, citoplasma, núcleo, mitocondrias y cloroplastos."
     }
   },
   {
@@ -75,6 +83,15 @@
         "animal-vegetal",
         "especializadas",
         "virus"
+      ],
+      "celula-eucariota": [
+        "membrana",
+        "citoplasma",
+        "nucleo",
+        "ruta-proteinas",
+        "mitocondrias",
+        "cloroplastos",
+        "lisosomas"
       ]
     },
     "nivelDibujo": "intermedio",
@@ -82,7 +99,8 @@
       "teoria-celular": "Seis hitos: suma la refutación de la generación espontánea.",
       "niveles-organizacion": "Ocho niveles: suma las moléculas y las macromoléculas.",
       "unicelulares-pluricelulares": "Cinco pasos: suma las colonias y las ventajas y costos de ser pluricelular.",
-      "tipos-de-celulas": "Seis pasos: suma bacterias y arqueas, los grupos eucariotas y las células especializadas."
+      "tipos-de-celulas": "Seis pasos: suma bacterias y arqueas, los grupos eucariotas y las células especializadas.",
+      "celula-eucariota": "Siete pasos: suma la ruta de las proteínas y los lisosomas."
     }
   },
   {
@@ -127,6 +145,16 @@
         "animal-vegetal",
         "especializadas",
         "virus"
+      ],
+      "celula-eucariota": [
+        "membrana",
+        "citoplasma",
+        "nucleo",
+        "ruta-proteinas",
+        "mitocondrias",
+        "cloroplastos",
+        "lisosomas",
+        "celula-completa"
       ]
     },
     "nivelDibujo": "avanzado",
@@ -134,7 +162,8 @@
       "teoria-celular": "Todo el contenido: ocho hitos, con la endosimbiosis y la teoría celular hoy.",
       "niveles-organizacion": "Diez niveles: de los átomos a más allá del organismo.",
       "unicelulares-pluricelulares": "Seis pasos: suma el origen de la pluricelularidad.",
-      "tipos-de-celulas": "Todo el contenido: los seis pasos, con el detalle de los cuadernos avanzados."
+      "tipos-de-celulas": "Todo el contenido: los seis pasos, con el detalle de los cuadernos avanzados.",
+      "celula-eucariota": "Todo el contenido: ocho pasos, con la célula completa."
     }
   }
 ]

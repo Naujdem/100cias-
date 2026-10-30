@@ -10,7 +10,7 @@ import { useFlechas } from '../../lib/flechasDiagrama.ts'
 
 /* ── piezas comunes ───────────────────────────────────────────────────────── */
 
-function Pestanas<T extends string>({ valor, opciones, onCambio, etiqueta }: { valor: T; opciones: [T, string][]; onCambio: (v: T) => void; etiqueta: string }) {
+export function Pestanas<T extends string>({ valor, opciones, onCambio, etiqueta }: { valor: T; opciones: [T, string][]; onCambio: (v: T) => void; etiqueta: string }) {
   return (
     <div role="group" aria-label={etiqueta} className="mb-3 flex flex-wrap gap-2">
       {opciones.map(([id, texto]) => (
@@ -35,7 +35,7 @@ interface ItemClasifica {
 }
 
 /** Juego de clasificar: una afirmación o un caso y dos o tres opciones. Se mueve con ← → y se responde con un toque. */
-function Clasifica({ intro, pregunta, items, opciones }: { intro: string; pregunta: string; items: ItemClasifica[]; opciones: [string, string][] }) {
+export function Clasifica({ intro, pregunta, items, opciones, pista = 'Piensa en el núcleo, la pared y los orgánulos.' }: { intro: string; pregunta: string; items: ItemClasifica[]; opciones: [string, string][]; pista?: string }) {
   const [i, setI] = useState(0)
   const [resp, setResp] = useState<(string | null)[]>(items.map(() => null))
   const it = items[i]
@@ -90,7 +90,7 @@ function Clasifica({ intro, pregunta, items, opciones }: { intro: string; pregun
           </p>
         ) : (
           <p>
-            <span className="font-semibold">Todavía no.</span> Piensa en el núcleo, la pared y los orgánulos. Inténtalo otra vez.
+            <span className="font-semibold">Todavía no.</span> {pista} Inténtalo otra vez.
           </p>
         )}
       </div>
@@ -98,7 +98,7 @@ function Clasifica({ intro, pregunta, items, opciones }: { intro: string; pregun
   )
 }
 
-const Nota = ({ children }: { children: string }) => <p className="mt-2 text-xs text-[var(--suave)]">{children}</p>
+export const Nota = ({ children }: { children: string }) => <p className="mt-2 text-xs text-[var(--suave)]">{children}</p>
 
 /* ── 1. Procariota vs eucariota ───────────────────────────────────────────── */
 

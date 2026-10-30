@@ -156,6 +156,11 @@
                 "Más grande"
               ]
             }
+          },
+          "atajo": {
+            "texto": "Orgánulos de la eucariota",
+            "tema": "celula-eucariota",
+            "bloque": "celula-completa"
           }
         },
         {
@@ -754,6 +759,11 @@
                 "texto": "guarda agua"
               }
             ]
+          },
+          "atajo": {
+            "texto": "Cloroplastos y vacuola",
+            "tema": "celula-eucariota",
+            "bloque": "cloroplastos"
           }
         },
         {

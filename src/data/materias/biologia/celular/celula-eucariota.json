@@ -1,0 +1,1425 @@
+{
+  "id": "celula-eucariota",
+  "materia": "biologia",
+  "area": "celular",
+  "titulo": "Estructura y función de la célula eucariota",
+  "subtema": "Estructura y función de la célula eucariota",
+  "orden": 5,
+  "etiqueta": "3",
+  "vistas": [
+    "celula"
+  ],
+  "tituloVista": "Una célula por dentro",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Nombrar los orgánulos principales de una célula eucariota y decir qué hace cada uno.",
+    "Seguir la ruta de una proteína desde el ADN hasta la salida de la célula.",
+    "Explicar cómo se relacionan cloroplastos y mitocondrias en el uso de la energía.",
+    "Distinguir lo que tienen en común y lo que cambia entre célula animal y vegetal."
+  ],
+  "fuentes": [
+    "Presentación «La célula» de JuanMed (referencia)",
+    "Plan de área del colegio (solo guía)",
+    "BORRADOR: contenido redactado como punto de partida; verificar cada paso contra el libro o apuntes antes de marcarlo como revisado. A verificar: modelo del mosaico fluido (Singer y Nicolson 1972), Palade y De Duve (años y atribuciones), insulina como ejemplo, número de cromosomas y largo del ADN, centriolos solo en animales, funciones de peroxisomas, vacuola y reciclaje en plantas."
+  ],
+  "bloques": [
+    {
+      "id": "membrana",
+      "titulo": "La membrana: la frontera de la célula",
+      "resumen": "Rodea la célula y decide qué entra y qué sale.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "La membrana plasmática es la capa que rodea a toda célula. Está hecha de una doble capa de lípidos con proteínas incrustadas. Es selectiva: deja pasar unas sustancias y frena otras, y así mantiene el interior de la célula distinto del exterior.",
+        "contexto": [
+          {
+            "titulo": "Dos capas de lípidos",
+            "texto": "Cada lípido tiene una cabeza que se lleva bien con el agua y dos colas que la rechazan. Por eso forman dos capas con las colas hacia adentro, como un sándwich."
+          },
+          {
+            "titulo": "Las proteínas hacen el trabajo",
+            "texto": "Algunas forman canales o transportadores, otras reciben señales (receptores) y otras identifican a la célula. La membrana «recuerda» un mosaico de lípidos y proteínas."
+          },
+          {
+            "titulo": "Cómo cruzan las cosas",
+            "texto": "Las moléculas pequeñas sin carga, como el oxígeno, pasan entre los lípidos. Las grandes o con carga necesitan canales, transportadores o vesículas. A veces la célula gasta energía para mover sustancias contra su tendencia natural."
+          },
+          {
+            "titulo": "En todas las células",
+            "texto": "Las procariotas, las animales y las vegetales tienen membrana. Las vegetales, además, tienen una pared celular por fuera."
+          }
+        ],
+        "evidencia": [
+          "Al microscopio electrónico, la membrana se ve como dos líneas oscuras paralelas separadas por una zona clara.",
+          "Las células se hinchan o se encogen según la concentración de sales del agua que las rodea."
+        ],
+        "limites": "El «mosaico fluido» es un modelo: la membrana real tiene más componentes (colesterol, carbohidratos) y zonas con organización distinta.",
+        "cuaderno": {
+          "facil": [
+            "La membrana rodea la célula y controla lo que entra y sale.",
+            "Es selectiva."
+          ],
+          "media": [
+            "Está hecha de dos capas de lípidos con proteínas.",
+            "Las proteínas forman canales, transportadores y receptores."
+          ],
+          "avanzada": [
+            "Cruce: difusión simple, canales y transportadores, y endocitosis o exocitosis para partículas grandes.",
+            "Modelo del mosaico fluido (Singer y Nicolson, 1972)."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Qué pasaría si una célula dejara entrar todo lo que toca?",
+          "actividad": "Con el diagrama «Cómo cruzan la membrana», que cada estudiante prediga por dónde pasa cada molécula antes de elegirla.",
+          "errores": [
+            "Creer que la membrana es una pared rígida con huecos.",
+            "Pensar que todo entra y sale por los mismos poros.",
+            "Confundir membrana con pared celular."
+          ],
+          "minutos": 15
+        },
+        "analogia": {
+          "titulo": "Una aduana",
+          "texto": "La membrana es como la aduana de un país: revisa lo que llega y lo que sale."
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Una frontera con control",
+          "visual": {
+            "tipo": "ilustracion",
+            "recurso": "celula-membrana",
+            "pie": "Dos capas de lípidos y proteínas"
+          }
+        },
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Qué hace la membrana?",
+            "opciones": [
+              "Controla qué entra y sale",
+              "Guarda el ADN",
+              "Hace fotosíntesis"
+            ],
+            "correcta": 0,
+            "explicacion": "La membrana es la frontera selectiva de la célula."
+          }
+        },
+        {
+          "titulo": "Tres caminos para cruzar",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "➡️",
+                "titulo": "Entre los lípidos",
+                "texto": "O₂ y CO₂"
+              },
+              {
+                "icono": "🚪",
+                "titulo": "Canales y transportadores",
+                "texto": "agua, glucosa, iones"
+              },
+              {
+                "icono": "🫧",
+                "titulo": "Vesículas",
+                "texto": "partículas grandes"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Membrana y pared",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "🧫",
+              "titulo": "Membrana",
+              "puntos": [
+                "En todas las células",
+                "Selectiva",
+                "De lípidos y proteínas"
+              ]
+            },
+            "der": {
+              "icono": "🧱",
+              "titulo": "Pared celular",
+              "puntos": [
+                "Solo plantas, hongos y bacterias",
+                "Rígida y protectora",
+                "Por fuera de la membrana"
+              ]
+            }
+          }
+        }
+      ],
+      "ilustraciones": [
+        {
+          "id": "celula-membrana",
+          "titulo": "La membrana celular",
+          "pie": "Dos capas de lípidos con un canal y un receptor. Esquema no a escala.",
+          "tipo": "svg",
+          "recurso": "celula-membrana"
+        }
+      ],
+      "diagrama": "membrana-transporte",
+      "preguntas": [
+        {
+          "id": "ce-me-1",
+          "enunciado": "¿De qué está hecha principalmente la membrana?",
+          "opciones": [
+            "De celulosa",
+            "De dos capas de lípidos con proteínas",
+            "De ADN y ARN",
+            "De agua pura"
+          ],
+          "correcta": 1,
+          "explicacion": "Es una bicapa lipídica con proteínas."
+        },
+        {
+          "id": "ce-me-2",
+          "enunciado": "¿Qué significa que la membrana sea selectiva?",
+          "opciones": [
+            "Que deja pasar todo",
+            "Que no deja pasar nada",
+            "Que deja pasar unas sustancias y frena otras",
+            "Que solo cambia de color"
+          ],
+          "correcta": 2,
+          "explicacion": "Controla qué entra y sale."
+        },
+        {
+          "id": "ce-me-3",
+          "enunciado": "¿Qué molécula atraviesa la membrana directamente entre los lípidos?",
+          "opciones": [
+            "Oxígeno",
+            "Una proteína grande",
+            "Un ion con carga"
+          ],
+          "correcta": 0,
+          "explicacion": "El oxígeno es pequeño y sin carga."
+        },
+        {
+          "id": "ce-me-4",
+          "enunciado": "¿Para qué sirven las proteínas de la membrana?",
+          "opciones": [
+            "Solo para dar color",
+            "Canales, transporte y señales",
+            "Guardar el ADN",
+            "Hacer fotosíntesis"
+          ],
+          "correcta": 1,
+          "explicacion": "Forman canales, transportadores y receptores."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "citoplasma",
+      "titulo": "Citoplasma y citoesqueleto",
+      "resumen": "El gel donde está todo y el andamio que da forma y movimiento.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "requiere": [
+        "membrana"
+      ],
+      "ficha": {
+        "idea": "El citoplasma es todo lo que hay dentro de la membrana, sin contar el núcleo: un gel (citosol) lleno de orgánulos. Dentro hay una red de filamentos, el citoesqueleto, que da forma a la célula, mantiene en su sitio a los orgánulos y permite el movimiento.",
+        "contexto": [
+          {
+            "titulo": "El citosol",
+            "texto": "Es la parte líquida del citoplasma, formada sobre todo por agua con sales y moléculas disueltas. Allí ocurren muchas reacciones químicas."
+          },
+          {
+            "titulo": "Tres tipos de filamentos",
+            "texto": "Microfilamentos (de actina), filamentos intermedios y microtúbulos. Juntos funcionan como andamio y como rieles."
+          },
+          {
+            "titulo": "Movimiento",
+            "texto": "Los filamentos ayudan a que la célula cambie de forma, se desplace (como una ameba), mueva vesículas y separe los cromosomas al dividirse."
+          },
+          {
+            "titulo": "Centriolos",
+            "texto": "En las células animales hay dos centriolos formados por microtúbulos, que participan en la división celular."
+          }
+        ],
+        "evidencia": [
+          "Con colorantes fluorescentes se ven los filamentos como una red dentro de la célula."
+        ],
+        "limites": "Se suele dibujar el citoplasma «vacío» entre orgánulos, pero está lleno de moléculas y filamentos; es un lugar muy concurrido.",
+        "cuaderno": {
+          "facil": [
+            "El citoplasma es el gel que llena la célula.",
+            "El citoesqueleto da forma y movimiento."
+          ],
+          "media": [
+            "El citosol es la parte líquida.",
+            "Los filamentos funcionan como rieles para mover cargas."
+          ],
+          "avanzada": [
+            "Hay tres tipos de filamentos: microfilamentos, intermedios y microtúbulos.",
+            "Los centriolos son típicos de las células animales."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Qué mantiene la forma de una célula que no tiene pared?",
+          "actividad": "Con el explorador de la célula, ubiquen el citoplasma y discutan qué pasaría sin citoesqueleto.",
+          "errores": [
+            "Creer que el citoplasma es solo agua.",
+            "Pensar que el citoesqueleto es un hueso."
+          ],
+          "minutos": 10
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Todo ocurre aquí",
+          "visual": {
+            "tipo": "ilustracion",
+            "recurso": "celula-citoplasma",
+            "pie": "Un gel con una red de filamentos"
+          }
+        },
+        {
+          "titulo": "Dos partes",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "💧",
+                "titulo": "Citosol",
+                "texto": "el gel con agua y moléculas"
+              },
+              {
+                "icono": "🕸️",
+                "titulo": "Citoesqueleto",
+                "texto": "la red de filamentos"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Para qué sirven los filamentos",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🧱",
+                "titulo": "Dan forma"
+              },
+              {
+                "icono": "🛤️",
+                "titulo": "Mueven cargas"
+              },
+              {
+                "icono": "🏃",
+                "titulo": "Permiten moverse"
+              }
+            ]
+          }
+        }
+      ],
+      "ilustraciones": [
+        {
+          "id": "celula-citoplasma",
+          "titulo": "Citoplasma y citoesqueleto",
+          "pie": "Filamentos que sostienen la célula y llevan una vesícula. Esquema no a escala.",
+          "tipo": "svg",
+          "recurso": "celula-citoplasma"
+        }
+      ],
+      "diagrama": "explorador-celula",
+      "preguntas": [
+        {
+          "id": "ce-ci-1",
+          "enunciado": "¿Qué es el citoplasma?",
+          "opciones": [
+            "El gel que llena la célula, fuera del núcleo",
+            "Solo el núcleo",
+            "La membrana",
+            "Un tejido"
+          ],
+          "correcta": 0,
+          "explicacion": "Es el interior de la célula, sin el núcleo."
+        },
+        {
+          "id": "ce-ci-2",
+          "enunciado": "¿Qué hace el citoesqueleto?",
+          "opciones": [
+            "Da forma y permite el movimiento",
+            "Guarda el ADN",
+            "Hace la fotosíntesis"
+          ],
+          "correcta": 0,
+          "explicacion": "Es el andamio y los rieles de la célula."
+        },
+        {
+          "id": "ce-ci-3",
+          "enunciado": "El citosol es…",
+          "opciones": [
+            "La parte líquida del citoplasma",
+            "Un orgánulo",
+            "Una proteína"
+          ],
+          "correcta": 0,
+          "explicacion": "Es el líquido donde flotan los orgánulos."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "nucleo",
+      "titulo": "El núcleo: el centro de control",
+      "resumen": "Guarda el ADN y dirige lo que hace la célula.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "El núcleo es el orgánulo que guarda el ADN, la información hereditaria. Está rodeado por una envoltura de dos membranas con poros, y dentro tiene el ADN enrollado con proteínas (cromatina) y el nucleolo. Desde allí se dirige lo que hace la célula.",
+        "contexto": [
+          {
+            "titulo": "Envoltura con poros",
+            "texto": "La doble membrana separa el ADN del citoplasma, y los poros dejan pasar mensajes y moléculas en ambos sentidos."
+          },
+          {
+            "titulo": "Cromatina y cromosomas",
+            "texto": "El ADN está enrollado con proteínas formando la cromatina. Cuando la célula se va a dividir, se condensa en cromosomas visibles."
+          },
+          {
+            "titulo": "Nucleolo",
+            "texto": "Es una zona densa del núcleo donde se arman las piezas de los ribosomas."
+          },
+          {
+            "titulo": "Células sin núcleo o con muchos",
+            "texto": "El glóbulo rojo maduro de los mamíferos no tiene núcleo; las fibras del músculo esquelético tienen muchos. Las procariotas no tienen núcleo verdadero."
+          }
+        ],
+        "evidencia": [
+          "Al microscopio óptico el núcleo se ve con colorantes; con el electrónico se ven sus poros.",
+          "Un núcleo trasplantado a una célula sin núcleo puede dirigirla (experimentos con ameba y rana)."
+        ],
+        "limites": "El núcleo «dirige» sin ser un jefe: las señales de la célula y su entorno también regulan qué partes del ADN se usan.",
+        "cuaderno": {
+          "facil": [
+            "El núcleo guarda el ADN.",
+            "Tiene una envoltura con poros."
+          ],
+          "media": [
+            "Dentro hay cromatina y un nucleolo.",
+            "El nucleolo arma los ribosomas."
+          ],
+          "avanzada": [
+            "La cromatina se condensa en cromosomas al dividirse.",
+            "Los poros regulan el paso de moléculas y mensajes."
+          ]
+        },
+        "docente": {
+          "abrir": "Si la célula es una ciudad, ¿dónde se guardan los planos?",
+          "actividad": "Con el explorador, pidan que señalen el núcleo en la célula animal y la vegetal, y comparen su posición.",
+          "errores": [
+            "Pensar que el núcleo es «el cerebro» que piensa.",
+            "Creer que el núcleo es una bolsa sin aberturas.",
+            "Confundir nucleolo con núcleo."
+          ],
+          "minutos": 12
+        },
+        "analogia": {
+          "titulo": "La biblioteca",
+          "texto": "El ADN es un libro de recetas que no sale de la biblioteca: se sacan copias (ARN) para llevarlas a la cocina."
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "El centro de control",
+          "visual": {
+            "tipo": "ilustracion",
+            "recurso": "celula-nucleo",
+            "pie": "Envoltura, poros, nucleolo y cromatina"
+          }
+        },
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Qué guarda el núcleo?",
+            "opciones": [
+              "El ADN",
+              "La energía",
+              "Las enzimas digestivas"
+            ],
+            "correcta": 0,
+            "explicacion": "El ADN, la información hereditaria."
+          }
+        },
+        {
+          "titulo": "Tres partes",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🛡️",
+                "titulo": "Envoltura",
+                "texto": "doble membrana con poros"
+              },
+              {
+                "icono": "🧬",
+                "titulo": "Cromatina",
+                "texto": "ADN con proteínas"
+              },
+              {
+                "icono": "⚙️",
+                "titulo": "Nucleolo",
+                "texto": "arma los ribosomas"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Casos curiosos",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🩸",
+                "titulo": "Glóbulo rojo",
+                "texto": "sin núcleo"
+              },
+              {
+                "icono": "💪",
+                "titulo": "Fibra muscular",
+                "texto": "muchos núcleos"
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Tipos de células",
+            "tema": "tipos-de-celulas",
+            "bloque": "pro-eu"
+          }
+        }
+      ],
+      "ilustraciones": [
+        {
+          "id": "celula-nucleo",
+          "titulo": "El núcleo",
+          "pie": "Envoltura con poros, nucleolo y cromatina. Esquema no a escala.",
+          "tipo": "svg",
+          "recurso": "celula-nucleo"
+        }
+      ],
+      "diagrama": "explorador-celula",
+      "preguntas": [
+        {
+          "id": "ce-nu-1",
+          "enunciado": "¿Qué función principal tiene el núcleo?",
+          "opciones": [
+            "Guardar el ADN",
+            "Producir energía",
+            "Hacer la fotosíntesis",
+            "Digerir alimentos"
+          ],
+          "correcta": 0,
+          "explicacion": "Guarda el ADN y dirige a la célula."
+        },
+        {
+          "id": "ce-nu-2",
+          "enunciado": "¿Para qué sirven los poros de la envoltura?",
+          "opciones": [
+            "Dejar pasar mensajes y moléculas",
+            "Hacer fotosíntesis",
+            "Fabricar lípidos"
+          ],
+          "correcta": 0,
+          "explicacion": "Comunican el núcleo con el citoplasma."
+        },
+        {
+          "id": "ce-nu-3",
+          "enunciado": "El nucleolo…",
+          "opciones": [
+            "Arma las piezas de los ribosomas",
+            "Es la membrana del núcleo",
+            "Guarda el oxígeno",
+            "Es un tipo de célula"
+          ],
+          "correcta": 0,
+          "explicacion": "Allí se arman los ribosomas."
+        },
+        {
+          "id": "ce-nu-4",
+          "enunciado": "¿Qué célula madura de mamífero no tiene núcleo?",
+          "opciones": [
+            "Glóbulo rojo",
+            "Neurona",
+            "Célula muscular"
+          ],
+          "correcta": 0,
+          "explicacion": "El glóbulo rojo maduro lo pierde."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "ruta-proteinas",
+      "titulo": "La ruta de las proteínas",
+      "resumen": "Ribosomas, retículo y Golgi: cómo se fabrica y se reparte.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "intermedio",
+      "requiere": [
+        "nucleo"
+      ],
+      "ficha": {
+        "idea": "Las proteínas se arman en los ribosomas siguiendo una receta que viene del ADN. Las que se van a exportar o a usar en la membrana pasan por el retículo endoplasmático rugoso, donde se pliegan, y por el aparato de Golgi, que las modifica, las empaca en vesículas y las reparte.",
+        "contexto": [
+          {
+            "titulo": "Ribosomas",
+            "texto": "Son pequeñas máquinas hechas de ARN y proteínas. Están libres en el citoplasma o pegados al retículo. Leen la receta y unen aminoácidos."
+          },
+          {
+            "titulo": "Retículo endoplasmático",
+            "texto": "El rugoso tiene ribosomas y procesa proteínas; el liso no los tiene y fabrica lípidos y ayuda a eliminar sustancias dañinas."
+          },
+          {
+            "titulo": "Aparato de Golgi",
+            "texto": "Es una pila de sacos aplanados. Recibe lo que llega del retículo, lo modifica y lo empaca en vesículas."
+          },
+          {
+            "titulo": "Un ejemplo",
+            "texto": "Las células del páncreas que fabrican insulina siguen esta ruta: ribosoma, retículo, Golgi y salida por exocitosis hacia la sangre."
+          }
+        ],
+        "evidencia": [
+          "Experimentos con aminoácidos marcados siguieron el recorrido de las proteínas: del retículo al Golgi y a la salida (George Palade y colaboradores, años 1960-1970)."
+        ],
+        "limites": "Es una ruta simplificada: no todas las proteínas pasan por ella (muchas se quedan en el citosol) y hay más pasos y moléculas.",
+        "cuaderno": {
+          "facil": [
+            "Los ribosomas arman las proteínas.",
+            "El retículo las procesa y el Golgi las empaca y reparte."
+          ],
+          "media": [
+            "El retículo rugoso tiene ribosomas; el liso fabrica lípidos.",
+            "Las vesículas llevan las proteínas de un lugar a otro."
+          ],
+          "avanzada": [
+            "La proteína sale de la célula por exocitosis.",
+            "La insulina sigue esta ruta en las células del páncreas."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Cómo llega una pizza a tu casa? ¿Quién la hace, quién la empaca y quién la reparte?",
+          "actividad": "Con «Sigue la ruta», recorran los cinco pasos y luego pídanles que ordenen tarjetas con «¿En qué paso?».",
+          "errores": [
+            "Creer que todas las proteínas se hacen en el núcleo.",
+            "Pensar que el Golgi fabrica las proteínas.",
+            "Confundir ribosoma con retículo."
+          ],
+          "minutos": 20
+        },
+        "analogia": {
+          "titulo": "La fábrica de correos",
+          "texto": "El ribosoma arma el producto, el retículo lo revisa, el Golgi lo empaca y las vesículas son los camiones de reparto."
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "De la receta a la proteína",
+          "visual": {
+            "tipo": "ilustracion",
+            "recurso": "celula-ruta-proteina",
+            "pie": "Cinco pasos desde el ADN hasta la salida"
+          }
+        },
+        {
+          "titulo": "Sigue la ruta",
+          "visual": {
+            "tipo": "diagrama",
+            "id": "ruta-proteina"
+          }
+        },
+        {
+          "titulo": "Quién hace qué",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "⚙️",
+                "titulo": "Ribosoma",
+                "texto": "arma la cadena"
+              },
+              {
+                "icono": "🌊",
+                "titulo": "Retículo",
+                "texto": "pliega y revisa"
+              },
+              {
+                "icono": "📦",
+                "titulo": "Golgi",
+                "texto": "empaca y reparte"
+              },
+              {
+                "icono": "🚚",
+                "titulo": "Vesícula",
+                "texto": "transporta"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Qué orgánulo empaca y reparte las proteínas?",
+            "opciones": [
+              "Mitocondria",
+              "Aparato de Golgi",
+              "Núcleo"
+            ],
+            "correcta": 1,
+            "explicacion": "El Golgi empaca las proteínas en vesículas y las reparte."
+          }
+        }
+      ],
+      "ilustraciones": [
+        {
+          "id": "celula-ruta-proteina",
+          "titulo": "La ruta de una proteína",
+          "pie": "Del ADN al ribosoma, el retículo, el Golgi y la salida. Esquema no a escala.",
+          "tipo": "svg",
+          "recurso": "celula-ruta-proteina"
+        }
+      ],
+      "diagrama": "ruta-proteina",
+      "preguntas": [
+        {
+          "id": "ce-rp-1",
+          "enunciado": "¿Dónde se arman las proteínas?",
+          "opciones": [
+            "En los ribosomas",
+            "En el nucleolo",
+            "En el Golgi",
+            "En la membrana"
+          ],
+          "correcta": 0,
+          "explicacion": "Los ribosomas unen aminoácidos."
+        },
+        {
+          "id": "ce-rp-2",
+          "enunciado": "¿Qué hace el aparato de Golgi?",
+          "opciones": [
+            "Modifica, empaca y reparte",
+            "Guarda el ADN",
+            "Produce energía"
+          ],
+          "correcta": 0,
+          "explicacion": "Es el centro de empaque y envío."
+        },
+        {
+          "id": "ce-rp-3",
+          "enunciado": "El retículo rugoso se llama así porque…",
+          "opciones": [
+            "Tiene ribosomas pegados",
+            "Es duro",
+            "No tiene membrana",
+            "Es muy grande"
+          ],
+          "correcta": 0,
+          "explicacion": "Los ribosomas le dan aspecto rugoso."
+        },
+        {
+          "id": "ce-rp-4",
+          "enunciado": "¿Cómo sale una proteína de la célula?",
+          "opciones": [
+            "Por una vesícula que se fusiona con la membrana",
+            "Por los poros del núcleo",
+            "Atraviesa la membrana entre los lípidos"
+          ],
+          "correcta": 0,
+          "explicacion": "Es la exocitosis."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "mitocondrias",
+      "titulo": "Mitocondrias: la central de energía",
+      "resumen": "Liberan la energía de los alimentos en forma de ATP.",
+      "anio": 5,
+      "etiqueta": "Paso 5",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "Las mitocondrias liberan la energía de los alimentos en una molécula que la célula puede usar: el ATP. Tienen dos membranas, y la interna forma pliegues llamados crestas. Casi todas las células eucariotas las tienen.",
+        "contexto": [
+          {
+            "titulo": "Doble membrana y crestas",
+            "texto": "La membrana interna se pliega en crestas, lo que aumenta su superficie. Dentro queda la matriz, donde ocurren muchas reacciones."
+          },
+          {
+            "titulo": "Respiración celular",
+            "texto": "La célula usa glucosa y oxígeno para obtener ATP, y libera CO₂ y agua. Por eso respiramos: para que llegue oxígeno a las mitocondrias."
+          },
+          {
+            "titulo": "ADN propio",
+            "texto": "Las mitocondrias tienen ADN circular y ribosomas parecidos a los de las bacterias. Es una de las pruebas de la teoría endosimbiótica."
+          },
+          {
+            "titulo": "No todas las células tienen las mismas",
+            "texto": "Las células con mucho gasto de energía, como las del músculo o el hígado, tienen muchas. Los glóbulos rojos maduros de mamíferos no tienen."
+          }
+        ],
+        "evidencia": [
+          "Al microscopio electrónico se ven sus crestas.",
+          "Su ADN circular y sus ribosomas se parecen a los de las bacterias."
+        ],
+        "limites": "«Producen energía» es una forma corta de decir que transforman la energía de los alimentos en ATP: la energía no se crea.",
+        "cuaderno": {
+          "facil": [
+            "La mitocondria libera energía como ATP.",
+            "Tiene doble membrana."
+          ],
+          "media": [
+            "La membrana interna forma crestas.",
+            "Usa glucosa y oxígeno."
+          ],
+          "avanzada": [
+            "La respiración celular libera CO₂ y agua.",
+            "Tiene ADN propio, como apoya la teoría endosimbiótica."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Para qué respiramos?",
+          "actividad": "Con «Cloroplasto y mitocondria», comparen qué entra y qué sale. Pidan una frase que conecte respiración y mitocondria.",
+          "errores": [
+            "Creer que las mitocondrias «crean» energía.",
+            "Pensar que solo las células animales las tienen.",
+            "Confundir ATP con glucosa."
+          ],
+          "minutos": 15
+        },
+        "analogia": {
+          "titulo": "La central eléctrica",
+          "texto": "La mitocondria es como una central eléctrica: convierte combustible (glucosa) en electricidad que se puede usar (ATP)."
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "La central de energía",
+          "visual": {
+            "tipo": "ilustracion",
+            "recurso": "nivel-organulos",
+            "pie": "Una mitocondria: membranas, crestas y matriz"
+          }
+        },
+        {
+          "titulo": "Entra y sale",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🔋",
+            "valor": "Glucosa + O₂ → ATP",
+            "texto": "También sale CO₂ y agua."
+          }
+        },
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Para qué sirve el oxígeno que respiramos?",
+            "opciones": [
+              "Para que las mitocondrias liberen energía",
+              "Para llenar los pulmones",
+              "Para fabricar ADN"
+            ],
+            "correcta": 0,
+            "explicacion": "Las mitocondrias lo usan para obtener ATP."
+          }
+        },
+        {
+          "titulo": "Un origen curioso",
+          "visual": {
+            "tipo": "ilustracion",
+            "recurso": "endosimbiosis-mito",
+            "pie": "Bacterias que se quedaron dentro de otra célula"
+          },
+          "atajo": {
+            "texto": "Teoría endosimbiótica (1.1)",
+            "tema": "teoria-celular",
+            "bloque": "endosimbiosis"
+          }
+        }
+      ],
+      "ilustraciones": [
+        {
+          "id": "nivel-organulos",
+          "titulo": "La mitocondria",
+          "pie": "Doble membrana, crestas y matriz. Esquema no a escala.",
+          "tipo": "svg",
+          "recurso": "nivel-organulos"
+        }
+      ],
+      "diagrama": "energia-celular",
+      "preguntas": [
+        {
+          "id": "ce-mi-1",
+          "enunciado": "¿Qué hace la mitocondria?",
+          "opciones": [
+            "Libera energía como ATP",
+            "Guarda el ADN",
+            "Digiere residuos",
+            "Hace fotosíntesis"
+          ],
+          "correcta": 0,
+          "explicacion": "Transforma la energía de los alimentos en ATP."
+        },
+        {
+          "id": "ce-mi-2",
+          "enunciado": "¿Qué son las crestas?",
+          "opciones": [
+            "Pliegues de la membrana interna",
+            "Un tipo de proteína",
+            "Los poros de la envoltura"
+          ],
+          "correcta": 0,
+          "explicacion": "Son los pliegues de la membrana interna."
+        },
+        {
+          "id": "ce-mi-3",
+          "enunciado": "¿Qué usa la mitocondria para obtener ATP?",
+          "opciones": [
+            "Glucosa y oxígeno",
+            "Luz y CO₂",
+            "Solo agua"
+          ],
+          "correcta": 0,
+          "explicacion": "Es la respiración celular."
+        },
+        {
+          "id": "ce-mi-4",
+          "enunciado": "¿Qué pista apoya el origen bacteriano de la mitocondria?",
+          "opciones": [
+            "Tiene ADN circular propio",
+            "Es de color verde",
+            "Está en el núcleo"
+          ],
+          "correcta": 0,
+          "explicacion": "Su ADN circular recuerda al de las bacterias."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "cloroplastos",
+      "titulo": "Cloroplastos y vacuola: lo propio de las plantas",
+      "resumen": "La fotosíntesis y la vacuola central, además de la pared.",
+      "anio": 6,
+      "etiqueta": "Paso 6",
+      "nivel": "basico",
+      "requiere": [
+        "mitocondrias"
+      ],
+      "ficha": {
+        "idea": "Los cloroplastos son los orgánulos donde las plantas y las algas hacen la fotosíntesis: con luz, CO₂ y agua fabrican glucosa y liberan oxígeno. La célula vegetal también tiene una vacuola central grande que guarda agua y mantiene firme a la célula, y una pared celular.",
+        "contexto": [
+          {
+            "titulo": "Clorofila",
+            "texto": "Es el pigmento verde que capta la luz. Está en unas bolsas aplanadas, los tilacoides, apiladas en grupos llamados grana."
+          },
+          {
+            "titulo": "Dos membranas y ADN propio",
+            "texto": "Como la mitocondria, el cloroplasto tiene doble membrana, ADN circular y ribosomas parecidos a los bacterianos."
+          },
+          {
+            "titulo": "Vacuola central",
+            "texto": "Guarda agua y otras sustancias. Cuando está llena, empuja el contenido contra la pared y la célula queda firme (turgente); por eso una planta sin agua se marchita."
+          },
+          {
+            "titulo": "Mitocondrias también",
+            "texto": "Las plantas también respiran: tienen mitocondrias que usan parte de la glucosa que fabrican los cloroplastos."
+          }
+        ],
+        "evidencia": [
+          "Al microscopio óptico se ven los cloroplastos como puntos verdes dentro de las células de una hoja."
+        ],
+        "limites": "No todas las células vegetales tienen cloroplastos: las de la raíz, por ejemplo, no los tienen.",
+        "cuaderno": {
+          "facil": [
+            "Los cloroplastos hacen la fotosíntesis.",
+            "Solo los tienen plantas y algas."
+          ],
+          "media": [
+            "Fabrican glucosa y liberan oxígeno.",
+            "La vacuola central guarda agua y da firmeza."
+          ],
+          "avanzada": [
+            "La clorofila está en los tilacoides.",
+            "Los cloroplastos tienen ADN propio."
+          ]
+        },
+        "docente": {
+          "abrir": "¿De dónde saca su alimento una planta?",
+          "actividad": "Con «Cloroplasto y mitocondria» en «Los dos juntos», sigan el recorrido del oxígeno y la glucosa.",
+          "errores": [
+            "Creer que las plantas no respiran.",
+            "Pensar que todas las células vegetales son verdes.",
+            "Creer que la vacuola central es un orgánulo «vacío»."
+          ],
+          "minutos": 15
+        },
+        "analogia": {
+          "titulo": "Paneles solares",
+          "texto": "El cloroplasto es como un panel solar que convierte la luz en alimento."
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Una célula vegetal",
+          "visual": {
+            "tipo": "ilustracion",
+            "recurso": "celula-vegetal-rotulada",
+            "pie": "Pared, cloroplastos y vacuola central"
+          }
+        },
+        {
+          "titulo": "Fabricar con luz",
+          "visual": {
+            "tipo": "ilustracion",
+            "recurso": "celula-energia",
+            "pie": "Cloroplasto y mitocondria"
+          }
+        },
+        {
+          "titulo": "Lo propio de las plantas",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🌿",
+                "titulo": "Cloroplastos",
+                "texto": "fotosíntesis"
+              },
+              {
+                "icono": "💧",
+                "titulo": "Vacuola central",
+                "texto": "agua y firmeza"
+              },
+              {
+                "icono": "🧱",
+                "titulo": "Pared celular",
+                "texto": "forma y protección"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Una planta respira?",
+            "opciones": [
+              "Sí, con sus mitocondrias",
+              "No, solo hace fotosíntesis",
+              "Solo de noche con los cloroplastos"
+            ],
+            "correcta": 0,
+            "explicacion": "Las plantas hacen fotosíntesis y también respiración."
+          },
+          "atajo": {
+            "texto": "Animal frente a vegetal",
+            "tema": "tipos-de-celulas",
+            "bloque": "animal-vegetal"
+          }
+        }
+      ],
+      "ilustraciones": [
+        {
+          "id": "celula-vegetal-rotulada",
+          "titulo": "Célula vegetal",
+          "pie": "Con pared, cloroplastos y una vacuola central. Esquema no a escala.",
+          "tipo": "svg",
+          "recurso": "celula-vegetal-rotulada"
+        }
+      ],
+      "diagrama": "energia-celular",
+      "preguntas": [
+        {
+          "id": "ce-cl-1",
+          "enunciado": "¿Qué hace un cloroplasto?",
+          "opciones": [
+            "La fotosíntesis",
+            "La respiración",
+            "Guardar el ADN"
+          ],
+          "correcta": 0,
+          "explicacion": "Fabrica glucosa con luz."
+        },
+        {
+          "id": "ce-cl-2",
+          "enunciado": "¿Qué pigmento capta la luz?",
+          "opciones": [
+            "Clorofila",
+            "Hemoglobina",
+            "Melanina"
+          ],
+          "correcta": 0,
+          "explicacion": "La clorofila es verde."
+        },
+        {
+          "id": "ce-cl-3",
+          "enunciado": "¿Qué hace la vacuola central?",
+          "opciones": [
+            "Guarda agua y mantiene la firmeza",
+            "Produce energía",
+            "Arma ribosomas"
+          ],
+          "correcta": 0,
+          "explicacion": "Llena de agua, mantiene firme a la célula."
+        },
+        {
+          "id": "ce-cl-4",
+          "enunciado": "¿Dónde hay cloroplastos?",
+          "opciones": [
+            "En plantas y algas",
+            "En todos los animales",
+            "En las bacterias"
+          ],
+          "correcta": 0,
+          "explicacion": "Son propios de plantas y algas."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "lisosomas",
+      "titulo": "Lisosomas: digestión y reciclaje",
+      "resumen": "Digieren lo que entra y reciclan lo que ya no sirve.",
+      "anio": 7,
+      "etiqueta": "Paso 7",
+      "nivel": "intermedio",
+      "requiere": [
+        "membrana"
+      ],
+      "ficha": {
+        "idea": "Los lisosomas son pequeñas bolsas con enzimas digestivas. Digieren partículas que entran a la célula, bacterias y orgánulos viejos, y devuelven las piezas reutilizables. Son muy típicos de las células animales.",
+        "contexto": [
+          {
+            "titulo": "Enzimas protegidas",
+            "texto": "Las enzimas funcionan en un medio ácido que mantiene el lisosoma; si se escaparan, podrían dañar la célula."
+          },
+          {
+            "titulo": "Defensa",
+            "texto": "Los glóbulos blancos engullen bacterias y las destruyen con lisosomas."
+          },
+          {
+            "titulo": "Autofagia",
+            "texto": "La célula también recicla sus propios orgánulos viejos: los rodea con una membrana y los lleva a un lisosoma."
+          },
+          {
+            "titulo": "Peroxisomas",
+            "texto": "Otro tipo de bolsa con enzimas: descomponen sustancias como el peróxido de hidrógeno y algunos ácidos grasos."
+          }
+        ],
+        "evidencia": [
+          "Christian de Duve los descubrió en los años 1950 al estudiar enzimas en fragmentos de células."
+        ],
+        "limites": "En las plantas, parte de este trabajo la hace la vacuola; el modelo de «lisosoma» como orgánulo aparte describe sobre todo células animales.",
+        "cuaderno": {
+          "facil": [
+            "Los lisosomas digieren y reciclan.",
+            "Tienen enzimas."
+          ],
+          "media": [
+            "Digieren alimento, bacterias y orgánulos viejos.",
+            "Son típicos de las células animales."
+          ],
+          "avanzada": [
+            "Autofagia: reciclan orgánulos propios.",
+            "Los peroxisomas descomponen peróxido de hidrógeno."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Qué hace una ciudad con su basura?",
+          "actividad": "Con «¿Quién lo hace?», que respondan qué orgánulo digiere y recicla, y por qué conviene que sus enzimas estén encerradas.",
+          "errores": [
+            "Creer que los lisosomas «matan» a la célula.",
+            "Pensar que el lisosoma fabrica proteínas."
+          ],
+          "minutos": 10
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "El reciclaje de la célula",
+          "visual": {
+            "tipo": "ilustracion",
+            "recurso": "celula-lisosoma",
+            "pie": "Entra, se digiere y se reutiliza"
+          }
+        },
+        {
+          "titulo": "Para qué sirven",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🍽️",
+                "titulo": "Digerir alimento"
+              },
+              {
+                "icono": "🛡️",
+                "titulo": "Destruir bacterias"
+              },
+              {
+                "icono": "♻️",
+                "titulo": "Reciclar orgánulos viejos"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Por qué las enzimas están dentro de una bolsa?",
+            "opciones": [
+              "Para no dañar el resto de la célula",
+              "Para que brillen",
+              "Para que floten"
+            ],
+            "correcta": 0,
+            "explicacion": "La membrana del lisosoma las mantiene encerradas."
+          }
+        }
+      ],
+      "ilustraciones": [
+        {
+          "id": "celula-lisosoma",
+          "titulo": "El lisosoma",
+          "pie": "Digiere un alimento y devuelve piezas reutilizables. Esquema no a escala.",
+          "tipo": "svg",
+          "recurso": "celula-lisosoma"
+        }
+      ],
+      "diagrama": "celula-quien-hace",
+      "preguntas": [
+        {
+          "id": "ce-li-1",
+          "enunciado": "¿Qué contienen los lisosomas?",
+          "opciones": [
+            "Enzimas digestivas",
+            "ADN",
+            "Clorofila"
+          ],
+          "correcta": 0,
+          "explicacion": "Tienen enzimas que digieren."
+        },
+        {
+          "id": "ce-li-2",
+          "enunciado": "¿Qué hace un lisosoma?",
+          "opciones": [
+            "Digiere y recicla",
+            "Produce ATP",
+            "Arma ribosomas"
+          ],
+          "correcta": 0,
+          "explicacion": "Digiere y recicla."
+        },
+        {
+          "id": "ce-li-3",
+          "enunciado": "¿Qué es la autofagia?",
+          "opciones": [
+            "Reciclar los propios orgánulos viejos",
+            "Comer otras células",
+            "Producir energía"
+          ],
+          "correcta": 0,
+          "explicacion": "La célula recicla sus propios componentes."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "celula-completa",
+      "titulo": "La célula completa: todo trabaja junto",
+      "resumen": "Cómo se coordinan los orgánulos en una sola historia.",
+      "anio": 8,
+      "etiqueta": "Paso 8",
+      "nivel": "avanzado",
+      "requiere": [
+        "membrana",
+        "nucleo",
+        "mitocondrias"
+      ],
+      "ficha": {
+        "idea": "Ningún orgánulo trabaja solo. El núcleo da la receta, los ribosomas y el retículo fabrican, el Golgi empaca, las mitocondrias dan la energía, los lisosomas reciclan y la membrana controla el intercambio. La vida de la célula es la suma coordinada de todo esto.",
+        "contexto": [
+          {
+            "titulo": "Un día en una célula del páncreas",
+            "texto": "Recibe una señal por un receptor de su membrana. El núcleo manda la receta de la insulina, los ribosomas y el retículo la arman, el Golgi la empaca y una vesícula la libera. Las mitocondrias pagan la energía de todo el proceso."
+          },
+          {
+            "titulo": "Animal frente a vegetal",
+            "texto": "Se suman la pared, los cloroplastos y la vacuola central en la vegetal; los lisosomas y los centriolos aparecen sobre todo en la animal."
+          },
+          {
+            "titulo": "Y las procariotas",
+            "texto": "No tienen estos orgánulos con membrana, pero hacen lo mismo con estructuras más sencillas. Más en el tema «Tipos de células»."
+          },
+          {
+            "titulo": "Cuando algo falla",
+            "texto": "Algunas enfermedades vienen del mal funcionamiento de un orgánulo (por ejemplo, ciertos fallos de mitocondrias o de lisosomas). Estudiarlas ayuda a entender qué hace cada uno."
+          }
+        ],
+        "evidencia": [
+          "Todo lo anterior se apoya en microscopía electrónica, marcado de moléculas y estudios bioquímicos del siglo XX."
+        ],
+        "limites": "Los esquemas muestran orgánulos separados y ordenados, pero la célula real es un espacio apretado y dinámico, con orgánulos en movimiento constante.",
+        "cuaderno": {
+          "facil": [
+            "Los orgánulos trabajan juntos.",
+            "Cada uno tiene su trabajo."
+          ],
+          "media": [
+            "Núcleo: receta. Ribosomas y retículo: fabrican. Golgi: empaca. Mitocondria: energía.",
+            "La vegetal suma pared, cloroplastos y vacuola."
+          ],
+          "avanzada": [
+            "Cada paso requiere energía de las mitocondrias.",
+            "Un fallo en un orgánulo puede causar enfermedades."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Cómo se coordina una ciudad con tantas tareas a la vez?",
+          "actividad": "Con la analogía de la ciudad, que los grupos asignen un oficio a cada orgánulo y luego lo comparen con el esquema. Cierren con «¿Quién lo hace?».",
+          "errores": [
+            "Aprender los orgánulos como una lista sin relacionarlos.",
+            "Pensar que cada orgánulo funciona aislado."
+          ],
+          "minutos": 20
+        },
+        "analogia": {
+          "titulo": "Una ciudad",
+          "texto": "Núcleo: ayuntamiento. Mitocondria: central eléctrica. Membrana: aduana. Retículo y Golgi: fábrica y correos. Lisosomas: reciclaje."
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "La célula completa",
+          "visual": {
+            "tipo": "ilustracion",
+            "recurso": "celula-rotulada",
+            "pie": "Una célula animal con sus orgánulos"
+          }
+        },
+        {
+          "titulo": "Cada orgánulo, un oficio",
+          "visual": {
+            "tipo": "ilustracion",
+            "recurso": "celula-resumen-organulos",
+            "pie": "Seis orgánulos en una palabra"
+          }
+        },
+        {
+          "titulo": "La célula como ciudad",
+          "visual": {
+            "tipo": "ilustracion",
+            "recurso": "celula-ciudad",
+            "pie": "Cada orgánulo con su equivalente"
+          }
+        },
+        {
+          "titulo": "¿Quién lo hace?",
+          "visual": {
+            "tipo": "diagrama",
+            "id": "celula-quien-hace"
+          }
+        },
+        {
+          "titulo": "Y las demás células",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🧫",
+                "titulo": "Procariotas",
+                "texto": "sin estos orgánulos"
+              },
+              {
+                "icono": "🌿",
+                "titulo": "Vegetales",
+                "texto": "suman cloroplastos y pared"
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Tipos de células",
+            "tema": "tipos-de-celulas",
+            "bloque": "pro-eu"
+          }
+        }
+      ],
+      "ilustraciones": [
+        {
+          "id": "celula-rotulada",
+          "titulo": "Célula animal",
+          "pie": "Con núcleo, retículo, Golgi, mitocondrias y lisosomas. Esquema no a escala.",
+          "tipo": "svg",
+          "recurso": "celula-rotulada"
+        }
+      ],
+      "diagrama": "celula-quien-hace",
+      "preguntas": [
+        {
+          "id": "ce-cc-1",
+          "enunciado": "¿Qué orgánulo da la receta para fabricar proteínas?",
+          "opciones": [
+            "El núcleo",
+            "El lisosoma",
+            "El cloroplasto"
+          ],
+          "correcta": 0,
+          "explicacion": "El ADN del núcleo tiene la receta."
+        },
+        {
+          "id": "ce-cc-2",
+          "enunciado": "¿Qué orgánulo aporta la energía para toda la ruta de la proteína?",
+          "opciones": [
+            "La mitocondria",
+            "El Golgi",
+            "La vacuola"
+          ],
+          "correcta": 0,
+          "explicacion": "Las mitocondrias producen el ATP."
+        },
+        {
+          "id": "ce-cc-3",
+          "enunciado": "¿Cuál es el orden correcto de la ruta de una proteína de exportación?",
+          "opciones": [
+            "ADN, ribosoma, retículo, Golgi, salida",
+            "Golgi, ribosoma, ADN, retículo, salida",
+            "Ribosoma, Golgi, núcleo, retículo, salida"
+          ],
+          "correcta": 0,
+          "explicacion": "El orden es ADN, ribosoma, retículo, Golgi y salida."
+        },
+        {
+          "id": "ce-cc-4",
+          "enunciado": "¿Qué se suma en una célula vegetal frente a una animal?",
+          "opciones": [
+            "Pared, cloroplastos y vacuola central",
+            "Núcleo y mitocondrias",
+            "Membrana y ribosomas"
+          ],
+          "correcta": 0,
+          "explicacion": "Pared, cloroplastos y vacuola central."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}

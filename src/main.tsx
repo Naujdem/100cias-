@@ -2,9 +2,12 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.tsx'
+import Resguardo from './components/Resguardo.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App />
+    <Resguardo titulo="La app tuvo un problema.">
+      <App />
+    </Resguardo>
   </StrictMode>,
 )

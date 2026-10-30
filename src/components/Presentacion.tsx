@@ -1,3 +1,4 @@
+import Resguardo from './Resguardo.tsx'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import type { KeyboardEvent as KeyEvt, ReactNode } from 'react'
 import type { Bloque } from '../data/schema.ts'
@@ -432,7 +433,7 @@ function Lamina({
       <div>
         <Etiqueta>{`Actividad · ${b.etiqueta ?? b.anio} ${b.titulo}`}</Etiqueta>
         <div data-diagrama className="mt-2 rounded-2xl border border-[var(--linea)] bg-[var(--tarjeta)] p-3 sm:p-4">
-          <Diagrama />
+          <Resguardo titulo="No se pudo mostrar el diagrama."><Diagrama /></Resguardo>
         </div>
       </div>
     )

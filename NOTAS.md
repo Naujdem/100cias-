@@ -139,3 +139,10 @@ Hooke usa la reconstrucción de Rita Greer (2004, Free Art License, Wikimedia Co
 - Quiz: 48 preguntas cuyas opciones correctas eran evidentemente más largas o cuyas distractoras eran absurdas se reescribieron con opciones plausibles y de largo parecido (el orden ya se mezcla al preguntar).
 - 1.1 ahora tiene láminas propias (36) y botón «Ver como diapositivas»; reutiliza las ilustraciones SVG existentes.
 - Presentación: el pie muestra el año cuando un bloque no tiene etiqueta (1.1).
+
+## Tema 3 · Estructura y función de la célula eucariota (borrador)
+- `celula-eucariota.json`: 8 pasos (membrana, citoplasma, núcleo, ruta de las proteínas, mitocondrias, cloroplastos y vacuola, lisosomas, célula completa). Perfiles: 6° = 5 pasos; 9° = 7 (sin «célula completa»); 11° = 8.
+- Vista nueva «Célula» (`linea/VistaCelula.tsx`): una célula animal o vegetal que se toca; cada orgánulo abre su paso (puntos en `ilustraciones/CelulaEuc.tsx`, `PUNTOS_ANIMAL/VEGETAL`). Debajo, la lista de pasos como respaldo.
+- Diagramas (`diagramas/CelulaEucDiagramas.tsx`): `explorador-celula` (+ «¿Quién lo hace?»), `ruta-proteina` (+ «¿En qué paso?»), `energia-celular` (cloroplasto / mitocondria / juntos), `membrana-transporte`.
+- Nuevo `Resguardo.tsx`: si un diagrama falla, se avisa en su lugar y la app sigue (antes, un error dejaba la pantalla en blanco).
+- A verificar: Singer y Nicolson 1972, Palade y De Duve (fechas y atribuciones), insulina como ejemplo, ADN/cromosomas, centriolos, peroxisomas, vacuola y reciclaje en plantas.

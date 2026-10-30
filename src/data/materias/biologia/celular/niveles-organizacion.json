@@ -725,8 +725,9 @@
             "pie": "Tres orgánulos clave"
           },
           "atajo": {
-            "texto": "Estructura y función de la célula eucariota",
-            "tema": "celula-eucariota"
+            "texto": "Célula eucariota",
+            "tema": "celula-eucariota",
+            "bloque": "celula-completa"
           }
         },
         {

@@ -1,3 +1,4 @@
+import Resguardo from './Resguardo.tsx'
 import { useEffect, useState } from 'react'
 import type { Lamina, Visual } from '../data/schema.ts'
 import { ILUSTRACIONES_SVG } from './ilustraciones/index.ts'
@@ -193,7 +194,7 @@ function VisualVista({ v, visibles }: { v: Visual; visibles: number }) {
     const D = DIAGRAMAS[v.id]
     return D ? (
       <div data-diagrama className="rounded-2xl border border-[var(--linea)] bg-[var(--tarjeta)] p-3 sm:p-4">
-        <D />
+        <Resguardo titulo="No se pudo mostrar el diagrama."><D /></Resguardo>
       </div>
     ) : null
   }

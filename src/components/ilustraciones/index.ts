@@ -14,6 +14,7 @@ import { PasoCelulas, EjemplosUnicelulares, SuperficieVolumen, OrigenesPluri } f
 import { NivCuatroAtomos, NivOtrosAtomos, NivMoleculasEjemplos, NivAguaCuerpo, NivGlucosaEnergia, NivMacroCuatro, NivProteinaForma, NivOrganulosTres, NivProEuc, NivUnoMuchas, NivTejidosPlantas, NivCorazon, NivSistemaCadena, NivEcologia, NivSangre, NivPlantaOrganos } from './Escenas12.tsx'
 import { UniFunciones, UniNucleo, UniInvisible, UniFision, PluriCigoto, PluriSenales, DivOficios, DivMismoAdn, VenTransporte, OriDosFormas, OriCopoNieve, ColEspectro, ColCoanoflagelado } from './Escenas13.tsx'
 import { EscenaProEuLado, EscenaAnimalVegetalLado, EscenaBacteriasFormas, EscenaEucariotas, EscenaEspecializadas, EscenaVirusCelula, EscenaArbol } from './CelulasTipos.tsx'
+import { EscenaCelulaRotulada, EscenaVegetalRotulada, EscenaMembrana, EscenaNucleo, EscenaRutaProteina, EscenaEnergia, EscenaLisosoma, EscenaCitoplasma, EscenaCiudad, EscenaResumenOrganulos } from './CelulaEuc.tsx'
 import { PostuladoSeres, PostuladoUnidad, PostuladoOrigen } from './Postulados.tsx'
 
 /** Registro de ilustraciones SVG. La clave es el `recurso` de una ilustración de tipo «svg». */
@@ -85,4 +86,14 @@ export const ILUSTRACIONES_SVG: Record<string, ComponentType> = {
   'tipos-especializadas': EscenaEspecializadas,
   'tipos-virus-celula': EscenaVirusCelula,
   'tipos-arbol': EscenaArbol,
+  'celula-rotulada': EscenaCelulaRotulada,
+  'celula-vegetal-rotulada': EscenaVegetalRotulada,
+  'celula-membrana': EscenaMembrana,
+  'celula-nucleo': EscenaNucleo,
+  'celula-ruta-proteina': EscenaRutaProteina,
+  'celula-energia': EscenaEnergia,
+  'celula-lisosoma': EscenaLisosoma,
+  'celula-citoplasma': EscenaCitoplasma,
+  'celula-ciudad': EscenaCiudad,
+  'celula-resumen-organulos': EscenaResumenOrganulos,
 }

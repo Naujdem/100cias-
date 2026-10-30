@@ -8,6 +8,7 @@ import Endosimbiosis from './Endosimbiosis.tsx'
 import NivelesOrganizacion, { NIVELES } from './NivelesOrganizacion.tsx'
 import GotaLeeuwenhoek from './GotaLeeuwenhoek.tsx'
 import UniPluri from './UniPluri.tsx'
+import { ExploradorCelula, RutaProteinaDiagrama, EnergiaCelular, MembranaTransporte } from './CelulaEucDiagramas.tsx'
 import { ComparadorProEu, ComparadorAnimalVegetal, ExploradorBacterias, GaleriaEspecializadas } from './TiposCelulas.tsx'
 
 /** Registro de diagramas interactivos. La clave es el valor de `bloque.diagrama`. */
@@ -31,6 +32,13 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'explorador-bacterias': () => <ExploradorBacterias />,
   'bacterias-donde-viven': () => <ExploradorBacterias modo="donde" />,
   'galeria-especializadas': GaleriaEspecializadas,
+  // subtema 3: célula eucariota
+  'explorador-celula': () => <ExploradorCelula />,
+  'celula-quien-hace': () => <ExploradorCelula modo="une" />,
+  'ruta-proteina': () => <RutaProteinaDiagrama />,
+  'ruta-proteina-pasos': () => <RutaProteinaDiagrama modo="ordena" />,
+  'energia-celular': EnergiaCelular,
+  'membrana-transporte': MembranaTransporte,
   'cuenta-celula': CuentaComoCelula,
   'endosimbiosis': Endosimbiosis,
   'experimento-pasteur': ExperimentoPasteur,
