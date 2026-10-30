@@ -1,5 +1,11 @@
 import type { PropsVista } from './tipos.ts'
 
+/** El número que aparece en la etiqueta («Nivel 5» → 5), para que la pila y la ficha digan lo mismo aunque haya bloques ocultos. */
+const numero = (etiqueta?: string) => {
+  const m = etiqueta?.match(/\d+/)
+  return m ? Number(m[0]) : null
+}
+
 /**
  * Pila de niveles: el primero (el más pequeño) queda abajo y el último arriba.
  * El orden del DOM es de menor a mayor; la pila se invierte solo visualmente.
@@ -25,7 +31,7 @@ export default function VistaNiveles({ bloques, abierto, onSeleccionar, carril }
                 }`}
               >
                 <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[var(--acento)] text-sm font-bold text-[var(--fondo)]" aria-hidden="true">
-                  {i + 1}
+                  {numero(b.etiqueta) ?? i + 1}
                 </span>
                 <span className="min-w-0">
                   <span className="block text-sm font-semibold leading-snug">{b.titulo}</span>

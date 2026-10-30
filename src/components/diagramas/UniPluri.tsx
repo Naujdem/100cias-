@@ -76,7 +76,7 @@ function Pasos({ inicial }: { inicial: number }) {
           className="mt-1 h-8 w-full accent-[var(--acento)]"
         />
       </div>
-      <div aria-live="polite" className="mt-2 min-h-[8rem] rounded-xl bg-[var(--fondo)] p-3 text-sm">
+      <div aria-live="polite" className="mt-2 min-h-[6.5rem] rounded-xl bg-[var(--fondo)] p-3 text-sm">
         <p className="font-semibold">{p.nombre}</p>
         <p>{p.que}</p>
         <dl className="mt-2 grid grid-cols-[auto_1fr] gap-x-3 gap-y-1">

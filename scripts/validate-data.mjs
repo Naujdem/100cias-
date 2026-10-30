@@ -84,6 +84,8 @@ for (const f of archivos(join(raiz, 'materias'))) {
 const perfiles = JSON.parse(readFileSync(join(raiz, 'perfiles.json'), 'utf8'))
 for (const p of perfiles) {
   if (!NIVELES.includes(p.nivelDibujo)) err(`perfil ${p.id}: nivelDibujo inválido`)
+  for (const tid of Object.keys(p.descripciones ?? {})) if (!temas.has(tid)) err(`perfil ${p.id}: descripción de un tema inexistente (${tid})`)
+  for (const t of temas.values()) if (p.bloques[t.id] && !p.descripciones?.[t.id]) avisos.push(`perfil ${p.id}: falta la descripción para ${t.id}`)
   for (const [tid, ids] of Object.entries(p.bloques)) {
     const t = temas.get(tid)
     if (!t) { err(`perfil ${p.id}: tema inexistente (${tid})`); continue }

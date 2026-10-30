@@ -290,7 +290,7 @@ export default function DetalleBloque({ bloque: b, onCerrar, posicion, onAnterio
           <div className="min-w-0 text-center text-xs text-[var(--suave)]">
             {posicion && (
               <p aria-live="polite" className="font-semibold">
-                {unidad} {posicion.actual} de {posicion.total}
+                {b.etiqueta ? `${b.etiqueta} · ${posicion.actual} de ${posicion.total} en tu perfil` : `${unidad} ${posicion.actual} de ${posicion.total}`}
               </p>
             )}
             <p className="hidden md:block">

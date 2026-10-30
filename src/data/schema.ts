@@ -132,7 +132,10 @@ export interface Dibujo {
 export interface Perfil {
   id: string
   nombre: string
+  /** texto general, por si un subtema no tiene el suyo */
   descripcion: string
+  /** por subtema (id del tema): qué muestra este perfil ahí */
+  descripciones?: Record<string, string>
   /** por tema: ids de bloques activos */
   bloques: Record<string, string[]>
   nivelDibujo: Nivel

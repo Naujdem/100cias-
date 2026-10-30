@@ -145,7 +145,10 @@ function TemaView({ TEMA, salto }: { TEMA: Tema; salto: { id: string; n: number 
           )}
         </div>
         <p className="mt-2 text-sm text-[var(--suave)]">
-          {PERFILES.find((p) => p.id === perfil)?.descripcion ?? 'Elegiste tu propia combinación de contenido.'}
+          {(() => {
+            const p = PERFILES.find((x) => x.id === perfil)
+            return p ? (p.descripciones?.[TEMA.id] ?? p.descripcion) : 'Elegiste tu propia combinación de contenido.'
+          })()}
         </p>
       </section>
 

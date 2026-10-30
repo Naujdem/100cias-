@@ -152,7 +152,7 @@ export default function VisorZoom({
       }}
       data-zoomed={v.k > 1}
       className={`relative w-full select-none overflow-hidden rounded-xl bg-[#efe3cc] ${
-        pantalla?.activa ? 'min-h-0 flex-1' : alto
+        pantalla?.activa ? 'min-h-0 flex-1' : `${alto} max-h-[32dvh]` // tope de alto: los controles y la explicación de abajo deben verse sin desplazarse
       } ${v.k > 1 ? 'cursor-grab' : 'cursor-zoom-in'}`}
       style={{ touchAction: v.k > 1 ? 'none' : 'pan-y' }}
     >
