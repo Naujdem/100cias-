@@ -9,7 +9,7 @@ export type Diapositiva =
   | { tipo: 'idea' }
   | { tipo: 'ilustracion'; ilustracion: Ilustracion }
   | { tipo: 'analogia' }
-  | { tipo: 'contexto'; titulo: string; texto: string }
+  | { tipo: 'contexto'; datos: { titulo: string; texto: string }[] }
   | { tipo: 'ejemplos' }
   | { tipo: 'diagrama' }
   | { tipo: 'comprueba' }
@@ -19,25 +19,37 @@ export type Diapositiva =
 export interface Item {
   bloque: Bloque
   d: Diapositiva
-  /** posición de la diapositiva dentro de su bloque (1…) y total del bloque */
+  /** «contenido» va primero para todos los bloques; las actividades quedan juntas al final */
+  seccion: 'contenido' | 'actividades'
+  /** posición de la diapositiva dentro de su bloque y sección (1…) y total */
   n: number
   de: number
 }
 
-/** Orden: portada, idea, imágenes, analogía, datos de contexto, ejemplos y límites, diagrama, comprueba, para recordar y, en modo docente, notas. */
+/**
+ * Primero el contenido de todos los bloques (portada, idea, imágenes, analogía, datos, ejemplos y límites, para recordar y,
+ * en modo docente, notas); al final, las actividades (diagrama y Comprueba) de todos los bloques.
+ */
 export function construir(bloques: Bloque[], ajustes: Pick<Ajustes, 'analogias' | 'docente'>): Item[] {
-  return bloques.flatMap((b) => {
+  const contenido = bloques.flatMap((b) => {
     const f = b.ficha
     const ds: Diapositiva[] = [{ tipo: 'portada' }, { tipo: 'idea' }]
-    // la primera imagen ya está en la portada
+    // la primera imagen acompaña a casi todas las diapositivas del bloque; las demás tienen su propia diapositiva
     for (const i of (b.ilustraciones ?? []).slice(1)) ds.push({ tipo: 'ilustracion', ilustracion: i })
     if (ajustes.analogias && f.analogia) ds.push({ tipo: 'analogia' })
-    for (const c of f.contexto ?? []) ds.push({ tipo: 'contexto', titulo: c.titulo, texto: c.texto })
+    // los datos de contexto van de dos en dos para no alargar la presentación
+    const datos = f.contexto ?? []
+    for (let k = 0; k < datos.length; k += 2) ds.push({ tipo: 'contexto', datos: datos.slice(k, k + 2) })
     if ((f.evidencia && f.evidencia.length) || f.limites) ds.push({ tipo: 'ejemplos' })
-    if (b.diagrama) ds.push({ tipo: 'diagrama' })
-    if (b.preguntas.length) ds.push({ tipo: 'comprueba' })
     if (f.cuaderno) ds.push({ tipo: 'recuerda' })
     if (ajustes.docente && f.docente) ds.push({ tipo: 'docente' })
-    return ds.map((d, k) => ({ bloque: b, d, n: k + 1, de: ds.length }))
+    return ds.map((d, k): Item => ({ bloque: b, d, seccion: 'contenido', n: k + 1, de: ds.length }))
   })
+  const actividades = bloques.flatMap((b) => {
+    const ds: Diapositiva[] = []
+    if (b.diagrama) ds.push({ tipo: 'diagrama' })
+    if (b.preguntas.length) ds.push({ tipo: 'comprueba' })
+    return ds.map((d, k): Item => ({ bloque: b, d, seccion: 'actividades', n: k + 1, de: ds.length }))
+  })
+  return [...contenido, ...actividades]
 }

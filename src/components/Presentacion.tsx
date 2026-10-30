@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
-import type { KeyboardEvent as KeyEvt } from 'react'
+import type { KeyboardEvent as KeyEvt, ReactNode } from 'react'
 import type { Bloque } from '../data/schema.ts'
 import { construir } from '../lib/diapositivas.ts'
 import type { Item } from '../lib/diapositivas.ts'
@@ -45,12 +45,15 @@ export default function Presentacion({ bloques, inicio, temaId, unidad = 'Hito',
   const it = items[Math.min(i, items.length - 1)]
 
   const ir = (k: number) => setI(Math.max(0, Math.min(items.length - 1, k)))
+  // ↑ ↓ saltan de bloque dentro de la misma sección (contenido o actividades)
   const irBloque = (dir: 1 | -1) => {
-    const ids = bloques.map((b) => b.id)
+    const sec = items[iRef.current].seccion
+    const ids = bloques.map((b) => b.id).filter((id) => items.some((x) => x.bloque.id === id && x.seccion === sec))
     const k = ids.indexOf(items[iRef.current].bloque.id) + dir
     if (k < 0 || k >= ids.length) return
-    ir(items.findIndex((x) => x.bloque.id === ids[k]))
+    ir(items.findIndex((x) => x.bloque.id === ids[k] && x.seccion === sec))
   }
+  const primeraActividad = items.findIndex((x) => x.seccion === 'actividades')
 
   useEffect(() => {
     if (it) marcarVisto(temaId, it.bloque.id)
@@ -138,6 +141,7 @@ export default function Presentacion({ bloques, inicio, temaId, unidad = 'Hito',
   const b = it.bloque
   const idxBloque = bloques.findIndex((x) => x.id === b.id)
   const siguienteBloque = bloques[idxBloque + 1]
+  const enActividades = it.seccion === 'actividades'
 
   return (
     <div
@@ -158,7 +162,7 @@ export default function Presentacion({ bloques, inicio, temaId, unidad = 'Hito',
               aria-current={x.id === b.id ? 'step' : undefined}
               aria-label={`${unidad} ${numero(x.etiqueta, k)}: ${x.titulo}`}
               title={x.titulo}
-              onClick={() => ir(items.findIndex((y) => y.bloque.id === x.id))}
+              onClick={() => ir(items.findIndex((y) => y.bloque.id === x.id && y.seccion === it.seccion))}
               className={`flex h-9 min-w-9 shrink-0 items-center justify-center rounded-full border px-2 text-sm font-bold ${
                 x.id === b.id ? 'border-[var(--acento)] bg-[var(--acento)] text-[var(--fondo)]' : 'border-[var(--linea)] text-[var(--suave)]'
               }`}
@@ -167,6 +171,19 @@ export default function Presentacion({ bloques, inicio, temaId, unidad = 'Hito',
             </button>
           ))}
         </nav>
+        {primeraActividad >= 0 && (
+          <button
+            type="button"
+            aria-pressed={enActividades}
+            onClick={() => ir(enActividades ? 0 : primeraActividad)}
+            title={enActividades ? 'Volver al contenido' : 'Ir a las actividades'}
+            className={`min-h-9 shrink-0 rounded-full border px-3 text-sm font-semibold ${
+              enActividades ? 'border-[var(--acento)] bg-[var(--acento)] text-[var(--fondo)]' : 'border-[var(--acento)] text-[var(--acento)]'
+            }`}
+          >
+            {enActividades ? '‹ Contenido' : 'Actividades ›'}
+          </button>
+        )}
         <button
           type="button"
           onClick={onCerrar}
@@ -189,7 +206,12 @@ export default function Presentacion({ bloques, inicio, temaId, unidad = 'Hito',
 
       <main className="min-h-0 flex-1 overflow-y-auto px-4 py-5 sm:px-8">
         <div key={`${b.id}-${it.n}`} className="mx-auto flex min-h-full w-full max-w-5xl flex-col justify-center">
-          <Lamina it={it} onVerFicha={onVerFicha} siguienteBloque={siguienteBloque} onIrBloque={() => irBloque(1)} />
+          <Lamina
+            it={it}
+            onVerFicha={onVerFicha}
+            siguienteBloque={siguienteBloque}
+            onSiguiente={() => (siguienteBloque ? irBloque(1) : primeraActividad >= 0 && ir(primeraActividad))}
+          />
         </div>
       </main>
 
@@ -204,7 +226,8 @@ export default function Presentacion({ bloques, inicio, temaId, unidad = 'Hito',
         </button>
         <div className="min-w-0 text-center text-xs text-[var(--suave)]">
           <p aria-live="polite" className="font-semibold">
-            {b.etiqueta ?? ''} · diapositiva {it.n} de {it.de} · {i + 1} de {items.length} en total
+            {enActividades ? 'Actividades · ' : ''}
+            {b.etiqueta ?? ''} · {it.n} de {it.de} · {i + 1} de {items.length} en total
           </p>
           <p className="hidden md:block">
             {it.d.tipo === 'diagrama'
@@ -229,53 +252,75 @@ function Etiqueta({ children }: { children: string }) {
   return <p className="text-sm font-bold uppercase tracking-wide text-[var(--acento)]">{children}</p>
 }
 
+/** Imagen del bloque, siempre en el mismo sitio: así el estudiante la reconoce y el texto cambia a su lado. */
+function Figura({ b, children }: { b: Bloque; children: ReactNode }) {
+  const img = b.ilustraciones?.[0]
+  if (!img) return <div className="mx-auto w-full max-w-3xl">{children}</div>
+  return (
+    <div className="grid items-center gap-5 md:grid-cols-[1.05fr_1fr] md:gap-8">
+      <div className="order-2 min-w-0 md:order-1">{children}</div>
+      <figure className="order-1 min-w-0 md:order-2">
+        <div className="mx-auto aspect-[4/3] max-h-[30dvh] w-full overflow-hidden rounded-2xl bg-[#efe3cc] shadow md:max-h-[55dvh]">
+          <Contenido i={img} />
+        </div>
+        <figcaption className="mt-2 hidden text-sm text-[var(--suave)] md:block">{img.pie}</figcaption>
+      </figure>
+    </div>
+  )
+}
+
+/** Divide una idea en la frase principal y el resto, para leerla de un vistazo. */
+function frases(texto: string): string[] {
+  return texto.split(/(?<=[.!?])\s+/).filter(Boolean)
+}
+
 function Lamina({
   it,
   onVerFicha,
   siguienteBloque,
-  onIrBloque,
+  onSiguiente,
 }: {
   it: Item
   onVerFicha: (id: string) => void
   siguienteBloque?: Bloque
-  onIrBloque: () => void
+  onSiguiente: () => void
 }) {
   const { bloque: b, d } = it
   const Diagrama = b.diagrama ? DIAGRAMAS[b.diagrama] : undefined
 
   if (d.tipo === 'portada') {
-    const img = b.ilustraciones?.[0]
     return (
-      <div className={`grid items-center gap-6 ${img ? 'md:grid-cols-2' : ''}`}>
-        <div>
-          <p className="flex flex-wrap items-center gap-2">
-            <span className="text-lg font-bold text-[var(--acento)]">{b.etiqueta ?? b.anio}</span>
-            <NivelInsignia nivel={b.nivel} />
-            {!b.revisado && <BorradorInsignia />}
-          </p>
-          <h2 className="mt-2 text-3xl font-extrabold leading-tight sm:text-5xl">{b.titulo}</h2>
-          <p className="mt-4 text-lg text-[var(--suave)] sm:text-2xl">{b.resumen}</p>
-        </div>
-        {img && (
-          <figure>
-            <div className="aspect-[4/3] max-h-[55dvh] w-full overflow-hidden rounded-2xl bg-[#efe3cc] shadow">
-              <Contenido i={img} />
-            </div>
-            <figcaption className="mt-2 text-sm text-[var(--suave)]">{img.pie}</figcaption>
-          </figure>
-        )}
-      </div>
+      <Figura b={b}>
+        <p className="flex flex-wrap items-center gap-2">
+          <span className="text-lg font-bold text-[var(--acento)]">{b.etiqueta ?? b.anio}</span>
+          <NivelInsignia nivel={b.nivel} />
+          {!b.revisado && <BorradorInsignia />}
+        </p>
+        <h2 className="mt-2 text-3xl font-extrabold leading-tight sm:text-5xl">{b.titulo}</h2>
+        <p className="mt-4 text-lg text-[var(--suave)] sm:text-2xl">{b.resumen}</p>
+      </Figura>
     )
   }
 
   if (d.tipo === 'idea') {
+    const [principal, ...resto] = frases(b.ficha.idea)
     return (
-      <div>
+      <Figura b={b}>
         <Etiqueta>La idea</Etiqueta>
-        <h2 className="mt-1 text-xl font-bold text-[var(--suave)] sm:text-2xl">{b.titulo}</h2>
-        {b.ficha.quien || b.ficha.cuando ? <p className="mt-2 text-[var(--suave)]">{[b.ficha.quien, b.ficha.cuando].filter(Boolean).join(' · ')}</p> : null}
-        <p className="mt-4 text-2xl font-semibold leading-snug sm:text-4xl">{b.ficha.idea}</p>
-      </div>
+        <h2 className="mt-1 text-lg font-bold text-[var(--suave)] sm:text-xl">{b.titulo}</h2>
+        {b.ficha.quien || b.ficha.cuando ? <p className="mt-1 text-sm text-[var(--suave)]">{[b.ficha.quien, b.ficha.cuando].filter(Boolean).join(' · ')}</p> : null}
+        <p className="mt-3 text-2xl font-bold leading-snug sm:text-4xl">{principal}</p>
+        {resto.length > 0 && (
+          <ul className="mt-4 space-y-2 text-lg sm:text-xl">
+            {resto.map((r) => (
+              <li key={r} className="flex gap-3">
+                <span aria-hidden="true" className="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-[var(--acento)]" />
+                <span>{r}</span>
+              </li>
+            ))}
+          </ul>
+        )}
+      </Figura>
     )
   }
 
@@ -296,51 +341,62 @@ function Lamina({
 
   if (d.tipo === 'analogia' && b.ficha.analogia) {
     return (
-      <div className="rounded-3xl border-2 border-dashed border-[var(--acento)] bg-[var(--acento-suave)]/30 p-6 sm:p-10">
-        <Etiqueta>Analogía</Etiqueta>
-        <h2 className="mt-1 text-2xl font-bold sm:text-4xl">{b.ficha.analogia.titulo}</h2>
-        <p className="mt-4 text-xl leading-snug sm:text-2xl">{b.ficha.analogia.texto}</p>
-      </div>
+      <Figura b={b}>
+        <div className="rounded-3xl border-2 border-dashed border-[var(--acento)] bg-[var(--acento-suave)]/30 p-5 sm:p-8">
+          <Etiqueta>Analogía</Etiqueta>
+          <h2 className="mt-1 text-2xl font-bold sm:text-3xl">{b.ficha.analogia.titulo}</h2>
+          <p className="mt-3 text-lg leading-snug sm:text-xl">{b.ficha.analogia.texto}</p>
+        </div>
+      </Figura>
     )
   }
 
   if (d.tipo === 'contexto') {
     return (
-      <div>
+      <Figura b={b}>
         <Etiqueta>Para saber más</Etiqueta>
-        <h2 className="mt-1 text-2xl font-bold sm:text-4xl">{d.titulo}</h2>
-        <p className="mt-4 text-xl leading-snug sm:text-2xl">{d.texto}</p>
-      </div>
+        <div className="mt-2 space-y-4">
+          {d.datos.map((c) => (
+            <section key={c.titulo} className="rounded-2xl border border-[var(--linea)] bg-[var(--tarjeta)] p-4">
+              <h2 className="text-lg font-bold sm:text-2xl">{c.titulo}</h2>
+              <p className="mt-1 text-base leading-snug sm:text-xl">{c.texto}</p>
+            </section>
+          ))}
+        </div>
+      </Figura>
     )
   }
 
   if (d.tipo === 'ejemplos') {
     return (
-      <div className="grid gap-6 md:grid-cols-2">
+      <Figura b={b}>
         {b.ficha.evidencia && b.ficha.evidencia.length > 0 && (
           <div>
             <Etiqueta>{b.etiqueta ? 'Ejemplos' : 'Evidencia'}</Etiqueta>
-            <ul className="mt-2 list-disc space-y-2 pl-6 text-lg sm:text-xl">
+            <ul className="mt-2 space-y-2 text-lg sm:text-xl">
               {b.ficha.evidencia.map((e) => (
-                <li key={e}>{e}</li>
+                <li key={e} className="flex gap-3">
+                  <span aria-hidden="true" className="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-[var(--acento)]" />
+                  <span>{e}</span>
+                </li>
               ))}
             </ul>
           </div>
         )}
         {b.ficha.limites && (
-          <div className="rounded-2xl border border-[var(--linea)] bg-[var(--tarjeta)] p-4">
-            <Etiqueta>Límites</Etiqueta>
-            <p className="mt-2 text-lg sm:text-xl">{b.ficha.limites}</p>
+          <div className="mt-4 rounded-2xl border border-[var(--linea)] bg-[var(--tarjeta)] p-4">
+            <Etiqueta>Ojo con esto</Etiqueta>
+            <p className="mt-1 text-base sm:text-lg">{b.ficha.limites}</p>
           </div>
         )}
-      </div>
+      </Figura>
     )
   }
 
   if (d.tipo === 'diagrama' && Diagrama) {
     return (
       <div>
-        <Etiqueta>Actividad</Etiqueta>
+        <Etiqueta>{`Actividad · ${b.etiqueta ?? ''} ${b.titulo}`}</Etiqueta>
         <div data-diagrama className="mt-2 rounded-2xl border border-[var(--linea)] bg-[var(--tarjeta)] p-3 sm:p-4">
           <Diagrama />
         </div>
@@ -351,7 +407,7 @@ function Lamina({
   if (d.tipo === 'comprueba') {
     return (
       <div>
-        <Etiqueta>Comprueba</Etiqueta>
+        <Etiqueta>{`Comprueba · ${b.etiqueta ?? ''} ${b.titulo}`}</Etiqueta>
         <div className="mt-2 text-base">
           <Comprueba key={b.id} bloque={b} />
         </div>
@@ -361,12 +417,15 @@ function Lamina({
 
   if (d.tipo === 'recuerda' && b.ficha.cuaderno) {
     return (
-      <div>
+      <Figura b={b}>
         <Etiqueta>Para recordar</Etiqueta>
-        <h2 className="mt-1 text-xl font-bold text-[var(--suave)] sm:text-2xl">{b.titulo}</h2>
-        <ul className="mt-3 list-disc space-y-2 pl-6 text-xl sm:text-3xl">
+        <h2 className="mt-1 text-lg font-bold text-[var(--suave)] sm:text-xl">{b.titulo}</h2>
+        <ul className="mt-3 space-y-3 text-xl sm:text-2xl">
           {b.ficha.cuaderno.facil.map((f) => (
-            <li key={f}>{f}</li>
+            <li key={f} className="flex gap-3">
+              <span aria-hidden="true" className="mt-2.5 h-2.5 w-2.5 shrink-0 rounded-full bg-[var(--acento)]" />
+              <span>{f}</span>
+            </li>
           ))}
         </ul>
         <div className="mt-6 flex flex-wrap gap-2">
@@ -377,13 +436,11 @@ function Lamina({
           >
             Ver la ficha completa
           </button>
-          {siguienteBloque && (
-            <button type="button" onClick={onIrBloque} className="min-h-11 rounded-full bg-[var(--acento)] px-5 text-sm font-semibold text-[var(--fondo)]">
-              Seguir con: {siguienteBloque.titulo} ›
-            </button>
-          )}
+          <button type="button" onClick={onSiguiente} className="min-h-11 rounded-full bg-[var(--acento)] px-5 text-sm font-semibold text-[var(--fondo)]">
+            {siguienteBloque ? `Seguir con: ${siguienteBloque.titulo} ›` : 'Ir a las actividades ›'}
+          </button>
         </div>
-      </div>
+      </Figura>
     )
   }
 
