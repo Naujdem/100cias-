@@ -123,3 +123,7 @@ Hooke usa la reconstrucción de Rita Greer (2004, Free Art License, Wikimedia Co
 - Si un bloque no tiene `diapositivas`, se arman solas desde la ficha (versión anterior). Las actividades largas (diagrama y Comprueba) siguen al final de la presentación.
 - Los iconos son emojis (rápido y claro en clase). Todo en borrador: revisar textos y datos (30–40 billones, 96 %, ½ a ⅔, más de 20 veces, etc. ya estaban en VERIFICAR.md).
 - Pendiente a futuro: más ilustraciones propias (hoy 1 por nivel + las de 1.3), y pasar las diapositivas de JuanMed para ajustar el estilo.
+
+## Ilustraciones de las láminas (1.2 y 1.3)
+- 29 ilustraciones SVG nuevas en `src/components/ilustraciones/Escenas12.tsx` y `Escenas13.tsx` (helpers en `Dibujo.tsx`), registradas en `index.ts` (`niv-*`, `uni-*`, `pluri-*`, `div-*`, `ven-*`, `ori-*`, `col-*`).
+- Sustituyen a varias láminas de emojis/cifras en `niveles-organizacion.json` y `unicelulares-pluricelulares.json`. Siguen siendo borrador (`revisado:false`): revisar la ciencia y los rótulos.

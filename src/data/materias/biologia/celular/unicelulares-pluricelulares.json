@@ -128,25 +128,9 @@
         {
           "titulo": "Una célula, un ser vivo completo",
           "visual": {
-            "tipo": "tarjetas",
-            "items": [
-              {
-                "icono": "🍽️",
-                "titulo": "Se alimenta"
-              },
-              {
-                "icono": "⚡",
-                "titulo": "Produce energía"
-              },
-              {
-                "icono": "👀",
-                "titulo": "Responde a su entorno"
-              },
-              {
-                "icono": "✂️",
-                "titulo": "Se reproduce"
-              }
-            ]
+            "tipo": "ilustracion",
+            "recurso": "uni-funciones",
+            "pie": "Una sola célula hace todo"
           },
           "nota": "Y todo lo hace ella sola."
         },
@@ -168,23 +152,9 @@
         {
           "titulo": "Dos grandes grupos",
           "visual": {
-            "tipo": "compara",
-            "izq": {
-              "icono": "🦠",
-              "titulo": "Sin núcleo",
-              "puntos": [
-                "Bacterias",
-                "Arqueas"
-              ]
-            },
-            "der": {
-              "icono": "🔬",
-              "titulo": "Con núcleo",
-              "puntos": [
-                "Amebas y paramecios",
-                "Euglenas y levaduras"
-              ]
-            }
+            "tipo": "ilustracion",
+            "recurso": "uni-nucleo",
+            "pie": "Con núcleo y sin núcleo"
           },
           "atajo": {
             "texto": "Tipos de células",
@@ -194,19 +164,9 @@
         {
           "titulo": "Un mundo casi invisible",
           "visual": {
-            "tipo": "tarjetas",
-            "items": [
-              {
-                "icono": "🔬",
-                "titulo": "Casi todos",
-                "texto": "Solo se ven con microscopio"
-              },
-              {
-                "icono": "👀",
-                "titulo": "Unos pocos gigantes",
-                "texto": "Thiomargarita magnifica pasa de 1 cm"
-              }
-            ]
+            "tipo": "ilustracion",
+            "recurso": "uni-invisible",
+            "pie": "Un mundo casi invisible"
           },
           "atajo": {
             "texto": "Leeuwenhoek y sus «animálculos»",
@@ -218,8 +178,8 @@
           "titulo": "Se reproducen dividiéndose",
           "visual": {
             "tipo": "ilustracion",
-            "recurso": "celula-anafase",
-            "pie": "Una célula en división: se reparten el material genético."
+            "recurso": "uni-fision",
+            "pie": "Se reproducen dividiéndose"
           },
           "puntos": [
             "Una célula se divide en dos",
@@ -390,33 +350,18 @@
         {
           "titulo": "¿Colonia o pluricelular?",
           "visual": {
-            "tipo": "compara",
-            "izq": {
-              "icono": "🔗",
-              "titulo": "Colonia sencilla",
-              "puntos": [
-                "Cada célula podría vivir sola",
-                "Pocas diferencias entre células"
-              ]
-            },
-            "der": {
-              "icono": "🧬",
-              "titulo": "Pluricelular",
-              "puntos": [
-                "Ya no pueden vivir solas",
-                "Células especializadas"
-              ]
-            }
+            "tipo": "ilustracion",
+            "recurso": "col-espectro",
+            "pie": "De la colonia al pluricelular"
           },
           "nota": "La frontera no es nítida: es un espectro."
         },
         {
           "titulo": "Parientes de los animales",
           "visual": {
-            "tipo": "cifra",
-            "icono": "🧬",
-            "valor": "Coanoflagelados",
-            "texto": "Unicelulares que a veces forman colonias: los parientes vivos más cercanos de los animales."
+            "tipo": "ilustracion",
+            "recurso": "col-coanoflagelado",
+            "pie": "Coanoflagelados: parientes de los animales"
           }
         }
       ]
@@ -544,10 +489,9 @@
         {
           "titulo": "Todas vienen de una",
           "visual": {
-            "tipo": "cifra",
-            "icono": "🥚",
-            "valor": "1 → billones",
-            "texto": "Casi todos los pluricelulares empiezan como una sola célula, el cigoto, que se divide muchas veces."
+            "tipo": "ilustracion",
+            "recurso": "pluri-cigoto",
+            "pie": "Todo empieza en una sola célula"
           }
         },
         {
@@ -578,10 +522,9 @@
         {
           "titulo": "Unidas y conectadas",
           "visual": {
-            "tipo": "cifra",
-            "icono": "💬",
-            "valor": "Se comunican",
-            "texto": "Las células se mantienen pegadas y se mandan señales, por ejemplo químicas."
+            "tipo": "ilustracion",
+            "recurso": "pluri-senales",
+            "pie": "Las células se comunican"
           }
         },
         {
@@ -718,55 +661,17 @@
         {
           "titulo": "Cada célula, su oficio",
           "visual": {
-            "tipo": "tarjetas",
-            "items": [
-              {
-                "icono": "💪",
-                "titulo": "Muscular",
-                "texto": "Se contrae"
-              },
-              {
-                "icono": "⚡",
-                "titulo": "Nerviosa",
-                "texto": "Transmite señales"
-              },
-              {
-                "icono": "🩸",
-                "titulo": "Glóbulo rojo",
-                "texto": "Lleva oxígeno"
-              },
-              {
-                "icono": "🍃",
-                "titulo": "De la hoja",
-                "texto": "Hace fotosíntesis"
-              },
-              {
-                "icono": "🌱",
-                "titulo": "De la raíz",
-                "texto": "Absorbe agua"
-              }
-            ]
+            "tipo": "ilustracion",
+            "recurso": "div-oficios",
+            "pie": "Cada célula, su oficio"
           }
         },
         {
           "titulo": "Mismo ADN, células distintas",
           "visual": {
-            "tipo": "compara",
-            "izq": {
-              "icono": "🧬",
-              "titulo": "Mismo ADN",
-              "puntos": [
-                "Casi todas las células de un organismo lo comparten"
-              ]
-            },
-            "der": {
-              "icono": "🎛️",
-              "titulo": "Distinto uso",
-              "puntos": [
-                "Cada tipo usa solo una parte",
-                "Por eso una neurona y un glóbulo rojo son tan distintos"
-              ]
-            }
+            "tipo": "ilustracion",
+            "recurso": "div-mismo-adn",
+            "pie": "Mismo ADN, distintos genes activos"
           },
           "atajo": {
             "texto": "De la célula al organismo",
@@ -962,25 +867,9 @@
         {
           "titulo": "Los costos de ser pluricelular",
           "visual": {
-            "tipo": "tarjetas",
-            "items": [
-              {
-                "icono": "🔗",
-                "titulo": "Dependen unas de otras"
-              },
-              {
-                "icono": "🚚",
-                "titulo": "Transportar sustancias"
-              },
-              {
-                "icono": "📡",
-                "titulo": "Coordinarse"
-              },
-              {
-                "icono": "💀",
-                "titulo": "Muerte celular programada"
-              }
-            ]
+            "tipo": "ilustracion",
+            "recurso": "ven-transporte",
+            "pie": "Ser grande exige transporte"
           },
           "atajo": {
             "texto": "Procesos celulares",
@@ -1139,23 +1028,9 @@
         {
           "titulo": "Dos formas de empezar",
           "visual": {
-            "tipo": "compara",
-            "izq": {
-              "icono": "👯",
-              "titulo": "Se quedan juntas",
-              "puntos": [
-                "Las células no se separan tras dividirse",
-                "Se cree en animales y plantas"
-              ]
-            },
-            "der": {
-              "icono": "🧲",
-              "titulo": "Se juntan",
-              "puntos": [
-                "Células que vivían solas se agrupan cuando falta alimento",
-                "Ej.: Dictyostelium"
-              ]
-            }
+            "tipo": "ilustracion",
+            "recurso": "ori-dos-formas",
+            "pie": "Dos formas de empezar"
           }
         },
         {
@@ -1174,10 +1049,9 @@
         {
           "titulo": "Un experimento",
           "visual": {
-            "tipo": "cifra",
-            "icono": "🧪",
-            "valor": "En semanas",
-            "texto": "Levaduras sometidas a selección por tamaño formaron grupos con forma de copo de nieve (Ratcliff y colaboradores, 2012)."
+            "tipo": "ilustracion",
+            "recurso": "ori-copo-nieve",
+            "pie": "Levadura «copo de nieve»"
           }
         },
         {
