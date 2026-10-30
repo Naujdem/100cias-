@@ -254,7 +254,7 @@ export default function Presentacion({ bloques, inicio, temaId, unidad = 'Hito',
         <div className="min-w-0 text-center text-xs text-[var(--suave)]">
           <p aria-live="polite" className="font-semibold">
             {enActividades ? 'Actividades · ' : ''}
-            {b.etiqueta ?? ''} · {it.n} de {it.de} · {i + 1} de {items.length} en total
+            {b.etiqueta ?? b.anio} · {it.n} de {it.de} · {i + 1} de {items.length} en total
           </p>
           <p className="hidden md:block">
             {it.d.tipo === 'lamina' && paso < pasosDe(it.d)
@@ -430,7 +430,7 @@ function Lamina({
   if (d.tipo === 'diagrama' && Diagrama) {
     return (
       <div>
-        <Etiqueta>{`Actividad · ${b.etiqueta ?? ''} ${b.titulo}`}</Etiqueta>
+        <Etiqueta>{`Actividad · ${b.etiqueta ?? b.anio} ${b.titulo}`}</Etiqueta>
         <div data-diagrama className="mt-2 rounded-2xl border border-[var(--linea)] bg-[var(--tarjeta)] p-3 sm:p-4">
           <Diagrama />
         </div>
@@ -441,7 +441,7 @@ function Lamina({
   if (d.tipo === 'comprueba') {
     return (
       <div>
-        <Etiqueta>{`Comprueba · ${b.etiqueta ?? ''} ${b.titulo}`}</Etiqueta>
+        <Etiqueta>{`Comprueba · ${b.etiqueta ?? b.anio} ${b.titulo}`}</Etiqueta>
         <div className="mt-2 text-base">
           <Comprueba key={b.id} bloque={b} />
         </div>

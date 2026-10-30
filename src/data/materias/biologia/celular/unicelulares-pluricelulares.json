@@ -91,9 +91,9 @@
           "enunciado": "¿Qué es un organismo unicelular?",
           "opciones": [
             "Un ser vivo formado por una sola célula",
-            "Un ser vivo sin células",
-            "Un conjunto de tejidos",
-            "Una parte de un órgano"
+            "Un ser vivo sin células, hecho de una sola molécula",
+            "Un conjunto de tejidos que viven juntos",
+            "Una parte pequeña de un órgano"
           ],
           "correcta": 0,
           "explicacion": "Un unicelular es un organismo completo hecho de una sola célula."
@@ -274,10 +274,10 @@
           "id": "col-1",
           "enunciado": "¿Qué es una colonia?",
           "opciones": [
-            "Una sola célula muy grande",
-            "Un órgano",
+            "Una sola célula muy grande con varios núcleos",
+            "Un órgano formado por tejidos distintos",
             "Un grupo de células que viven juntas, a veces con tareas repartidas",
-            "Un grupo de especies distintas"
+            "Un grupo de especies distintas que viven juntas"
           ],
           "correcta": 2,
           "explicacion": "Una colonia es un grupo de células que viven juntas; en algunas ya hay un reparto sencillo de tareas."
@@ -287,9 +287,9 @@
           "enunciado": "¿Qué ayuda a entender la existencia de colonias como Volvox?",
           "opciones": [
             "Cómo pudo surgir la pluricelularidad",
-            "Por qué existen los átomos",
-            "Cómo funciona un virus",
-            "Por qué hay estaciones"
+            "Por qué existen los átomos en las células",
+            "Cómo funciona un virus dentro de una célula",
+            "Por qué los animales tienen sistemas de órganos"
           ],
           "correcta": 0,
           "explicacion": "Las colonias muestran un paso intermedio entre una célula sola y un organismo pluricelular."
@@ -440,9 +440,9 @@
           "enunciado": "¿Qué caracteriza a un ser pluricelular?",
           "opciones": [
             "Está formado por muchas células que dependen unas de otras",
-            "Está formado por una sola célula grande",
-            "No tiene células",
-            "Solo vive en el agua"
+            "Está formado por una sola célula muy grande",
+            "Está formado por células que no dependen unas de otras",
+            "No tiene células, sino tejidos"
           ],
           "correcta": 0,
           "explicacion": "En un pluricelular las células trabajan juntas y ninguna vive sola por mucho tiempo."
@@ -451,10 +451,10 @@
           "id": "plu-2",
           "enunciado": "¿Cómo empieza la vida de casi todos los pluricelulares?",
           "opciones": [
-            "Como un órgano pequeño",
+            "Como un órgano muy pequeño que luego crece",
             "Como una sola célula que se divide muchas veces",
-            "Como un tejido",
-            "Como un sistema de órganos"
+            "Como un tejido ya formado",
+            "Como un sistema de órganos en miniatura"
           ],
           "correcta": 1,
           "explicacion": "Casi todos parten de una célula, como el cigoto, que se divide muchas veces."
@@ -626,8 +626,8 @@
           "opciones": [
             "Que cada tipo de célula se encarga de una tarea",
             "Que todas las células hacen lo mismo",
-            "Que las células se dividen en dos",
-            "Que el organismo se parte en dos"
+            "Que las células se dividen en dos al reproducirse",
+            "Que el organismo se parte en dos partes iguales"
           ],
           "correcta": 0,
           "explicacion": "Cada tipo de célula se especializa en una tarea, y el organismo funciona gracias al conjunto."
@@ -648,9 +648,9 @@
           "id": "div-3",
           "enunciado": "¿Qué se pierde al especializarse una célula?",
           "opciones": [
-            "El ADN",
-            "La membrana",
-            "Toda su energía",
+            "El ADN, porque cada tipo usa solo parte",
+            "La membrana, porque ya no la necesita",
+            "Toda su energía, porque ya no la produce",
             "La capacidad de hacer todo por sí sola"
           ],
           "correcta": 3,
@@ -810,10 +810,10 @@
           "id": "ven-2",
           "enunciado": "¿Por qué un organismo grande necesita sistemas de transporte?",
           "opciones": [
-            "Porque tienen más ADN",
-            "Porque no tienen membrana",
+            "Porque tienen más ADN que los pequeños",
+            "Porque sus células no tienen membrana",
             "Porque las células del interior no pueden recibir sustancias directamente del exterior",
-            "Porque son más antiguos"
+            "Porque los organismos grandes son más antiguos"
           ],
           "correcta": 2,
           "explicacion": "El volumen crece más rápido que la superficie, así que el interior no alcanza a intercambiar sustancias con el entorno."
@@ -823,9 +823,9 @@
           "enunciado": "¿Es mejor ser pluricelular que unicelular?",
           "opciones": [
             "No: cada forma tiene ventajas y costos, y las bacterias son muy exitosas",
-            "Sí, siempre",
-            "Sí, porque los unicelulares ya desaparecieron",
-            "No, los pluricelulares no existen"
+            "Sí: es mejor porque siempre vive más tiempo",
+            "Sí: los unicelulares ya desaparecieron casi todos",
+            "No: los pluricelulares no existen en realidad"
           ],
           "correcta": 0,
           "explicacion": "Ninguna forma es «mejor» en general: los unicelulares son muy abundantes y siguen viviendo en casi todos los ambientes."
@@ -983,10 +983,10 @@
           "id": "ori-1",
           "enunciado": "¿Cuántas veces apareció la pluricelularidad en la historia de la vida?",
           "opciones": [
-            "Una sola vez",
+            "Una sola vez, en el ancestro de todos los seres vivos",
             "Muchas veces, en linajes distintos",
-            "Nunca, es una ilusión",
-            "Solo en los animales"
+            "Nunca: es una ilusión producida por las colonias",
+            "Solo en los animales, y los demás grupos no la tuvieron"
           ],
           "correcta": 1,
           "explicacion": "Surgió de forma independiente en varios grupos, como animales, plantas, hongos y algas."
@@ -1007,10 +1007,10 @@
           "id": "ori-3",
           "enunciado": "¿Por qué la ameba social Dictyostelium es un buen ejemplo?",
           "opciones": [
-            "Es una planta",
-            "Nunca se agrupa",
+            "Es una planta que forma colonias en el suelo",
+            "Nunca se agrupa: siempre vive aislada",
             "Vive sola, pero se agrupa en un cuerpo con células distintas cuando falta alimento",
-            "Es un órgano"
+            "Es un órgano que forma parte de los hongos"
           ],
           "correcta": 2,
           "explicacion": "Muestra cómo células que viven solas pueden unirse y repartirse tareas."

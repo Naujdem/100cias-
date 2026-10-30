@@ -121,9 +121,9 @@
           "enunciado": "¿De dónde viene el nombre «célula»?",
           "opciones": [
             "Del latín cellula, «cuarto pequeño»: las cavidades parecían celdillas",
-            "Del griego bios, «vida»",
-            "Del nombre de su ayudante",
-            "De la palabra latina para «corcho»"
+            "Del griego bios, «vida»: Hooke creyó que estaban vivas",
+            "Del nombre de su ayudante, que las dibujó primero",
+            "De la palabra latina para «corcho», porque lo estudió"
           ],
           "correcta": 0,
           "explicacion": "Hooke las comparó con celdillas de un panal; cellula significa «cuarto pequeño», como las celdas de un monasterio."
@@ -165,6 +165,73 @@
           "alt": "Lámina de Micrographia con dos cortes de corcho vistos al microscopio (Fig. 1) y una planta sensitiva (Fig. 2)",
           "pie": "Lámina de Micrographia. Fig. 1: el corcho en dos cortes distintos (A y B), con sus cavidades en filas. Fig. 2: la planta sensitiva.",
           "credito": "Robert Hooke, Micrographia (1665). Obra de dominio público."
+        }
+      ],
+      "diapositivas": [
+        {
+          "titulo": "Una lámina finísima de corcho",
+          "visual": {
+            "tipo": "ilustracion",
+            "recurso": "corcho-lamina",
+            "pie": "Una lámina finísima, cortada con navaja"
+          },
+          "puntos": [
+            "Cortó el corcho con una navaja",
+            "Vio cavidades ordenadas, como un panal"
+          ]
+        },
+        {
+          "titulo": "Su microscopio",
+          "visual": {
+            "tipo": "ilustracion",
+            "recurso": "microscopio-hooke",
+            "pie": "Un microscopio compuesto de unos 30 aumentos"
+          }
+        },
+        {
+          "titulo": "Las llamó «cells»",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🧱",
+            "valor": "cellula = cuarto pequeño",
+            "texto": "Las cavidades parecían las celdas de un panal o de un monasterio."
+          }
+        },
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Qué vio realmente Hooke en el corcho?",
+            "opciones": [
+              "Células vivas",
+              "Paredes de células que ya habían muerto",
+              "Bacterias"
+            ],
+            "correcta": 1,
+            "explicacion": "El corcho es tejido muerto: Hooke vio las paredes que dejaron las células."
+          }
+        },
+        {
+          "titulo": "Un libro famoso",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "📖",
+                "titulo": "Micrographia",
+                "texto": "1665"
+              },
+              {
+                "icono": "🪰",
+                "titulo": "Una pulga"
+              },
+              {
+                "icono": "🐜",
+                "titulo": "Un piojo"
+              }
+            ]
+          },
+          "nota": "Mostró un mundo invisible con grandes láminas."
         }
       ]
     },
@@ -251,8 +318,8 @@
           "opciones": [
             "Formuló que toda célula proviene de otra célula",
             "Describió organismos vivos microscópicos con microscopios simples",
-            "Demostró que las plantas están hechas de células",
-            "Descubrió la mitocondria"
+            "Demostró que todas las plantas están hechas de células",
+            "Descubrió los orgánulos que hay dentro de la célula"
           ],
           "correcta": 1,
           "explicacion": "Leeuwenhoek fue de los primeros en observar seres vivos microscópicos, como protozoos y bacterias. Los postulados vinieron casi dos siglos después."
@@ -274,9 +341,9 @@
           "enunciado": "¿Qué diferencia hay entre lo que vio Hooke en el corcho y lo que vio Leeuwenhoek en el agua?",
           "opciones": [
             "Hooke vio paredes de células muertas; Leeuwenhoek vio seres vivos que se movían",
-            "Hooke vio bacterias; Leeuwenhoek vio paredes",
-            "Los dos vieron lo mismo con distinto microscopio",
-            "Hooke vio el núcleo; Leeuwenhoek no"
+            "Hooke vio bacterias vivas; Leeuwenhoek solo vio paredes",
+            "Los dos vieron lo mismo, con distinto microscopio",
+            "Hooke vio el núcleo; Leeuwenhoek vio mitocondrias"
           ],
           "correcta": 0,
           "explicacion": "El corcho es tejido muerto, así que Hooke vio solo paredes. Leeuwenhoek observó organismos vivos de una sola célula."
@@ -310,6 +377,86 @@
           "tipo": "svg",
           "recurso": "gota-animalculos",
           "pie": "Una gota de agua de charco, vista con una lente fuerte, está llena de vida: los animálculos (protozoos) son los más grandes y las bacterias, puntos mucho más pequeños."
+        }
+      ],
+      "diapositivas": [
+        {
+          "titulo": "Una lente casi esférica",
+          "visual": {
+            "tipo": "ilustracion",
+            "recurso": "microscopio-leeuwenhoek",
+            "pie": "Más pequeño que una lenteja, con unos 200 aumentos"
+          }
+        },
+        {
+          "titulo": "Una gota de agua llena de vida",
+          "visual": {
+            "tipo": "ilustracion",
+            "recurso": "gota-animalculos",
+            "pie": "Los «animálculos» que se movían"
+          },
+          "puntos": [
+            "Los llamó «animalitos»",
+            "Vio protozoos y bacterias"
+          ]
+        },
+        {
+          "titulo": "Un comerciante curioso",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🧵",
+                "titulo": "Vendía telas",
+                "texto": "en Delft"
+              },
+              {
+                "icono": "🔍",
+                "titulo": "Pulía lentes",
+                "texto": "para revisar hilos"
+              },
+              {
+                "icono": "🤫",
+                "titulo": "Guardó su técnica"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Hooke y Leeuwenhoek",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "🧱",
+              "titulo": "Hooke (1665)",
+              "puntos": [
+                "Corcho muerto",
+                "Paredes de células"
+              ]
+            },
+            "der": {
+              "icono": "🦠",
+              "titulo": "Leeuwenhoek (1674)",
+              "puntos": [
+                "Agua con vida",
+                "Seres que se movían"
+              ]
+            }
+          }
+        },
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Sin saberlo, ¿qué vio Leeuwenhoek en el agua?",
+            "opciones": [
+              "Células vivas",
+              "Solo polvo",
+              "Paredes de corcho"
+            ],
+            "correcta": 0,
+            "explicacion": "Los animálculos eran células vivas, aunque él no lo sabía."
+          }
         }
       ]
     },
@@ -414,10 +561,10 @@
           "id": "sc-2",
           "enunciado": "¿Qué error cometió Schleiden sobre las células nuevas?",
           "opciones": [
-            "Pensó que no tenían núcleo",
+            "Pensó que las células vegetales no tenían núcleo",
             "Creyó que se formaban a partir de material sin estructura, y no de otra célula",
-            "Pensó que solo existían en animales",
-            "Creyó que eran más grandes de lo que son"
+            "Creyó que solo existían en las plantas y no en animales",
+            "Pensó que las células eran siempre más grandes de lo que son"
           ],
           "correcta": 1,
           "explicacion": "Creía que las células nuevas «cristalizaban» de un material sin forma. Después se demostró que provienen de otras células."
@@ -444,6 +591,57 @@
           "tipo": "svg",
           "recurso": "tejido-vegetal",
           "pie": "Células vegetales: pared gruesa, vacuola grande, núcleo y cloroplastos. Se parecen a las «cajitas» de Hooke, pero ahora se ve su interior."
+        }
+      ],
+      "diapositivas": [
+        {
+          "titulo": "Todas las plantas, hechas de células",
+          "visual": {
+            "tipo": "ilustracion",
+            "recurso": "tejido-vegetal",
+            "pie": "Tejido vegetal visto al microscopio"
+          },
+          "puntos": [
+            "Año 1838",
+            "La célula, unidad básica de la planta"
+          ]
+        },
+        {
+          "titulo": "El protagonista: el núcleo",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "⚪",
+            "valor": "Núcleo",
+            "texto": "Brown lo describió en 1831; Schleiden le dio mucha importancia."
+          }
+        },
+        {
+          "titulo": "Mejores microscopios",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🔬",
+                "titulo": "Lentes corregidas",
+                "texto": "años 1830"
+              },
+              {
+                "icono": "🌿",
+                "titulo": "Más claro el interior",
+                "texto": "de los tejidos"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Un error célebre",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "❌",
+            "valor": "Células «cristalizadas»",
+            "texto": "Creía que las nuevas nacían de material sin forma."
+          },
+          "nota": "Más tarde se corrigió."
         }
       ]
     },
@@ -540,10 +738,10 @@
           "id": "sw-1",
           "enunciado": "¿Qué tiene una célula vegetal típica que una animal no tiene?",
           "opciones": [
-            "Núcleo",
-            "Membrana",
+            "Núcleo y membrana celular",
+            "Mitocondrias y ribosomas",
             "Pared rígida y cloroplastos",
-            "Citoplasma"
+            "Citoplasma y material genético"
           ],
           "correcta": 2,
           "explicacion": "Las células vegetales tienen pared y cloroplastos. Las animales no. Núcleo, membrana y citoplasma están en ambas."
@@ -582,6 +780,94 @@
           "tipo": "svg",
           "recurso": "tejido-animal",
           "pie": "Células animales juntas: sin pared, con membrana y núcleo. Su forma es más irregular que la de las células vegetales."
+        }
+      ],
+      "diapositivas": [
+        {
+          "titulo": "Y los animales también",
+          "visual": {
+            "tipo": "ilustracion",
+            "recurso": "tejido-animal",
+            "pie": "Tejido animal visto al microscopio"
+          },
+          "puntos": [
+            "Año 1839",
+            "Núcleo y membrana, pero sin pared"
+          ]
+        },
+        {
+          "titulo": "La cena (según se cuenta)",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🗣️",
+                "titulo": "Schleiden habla del núcleo"
+              },
+              {
+                "icono": "💡",
+                "titulo": "Schwann lo recuerda en animales"
+              },
+              {
+                "icono": "🔬",
+                "titulo": "Lo miran juntos"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Planta y animal",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "🌿",
+              "titulo": "Planta",
+              "puntos": [
+                "Con pared rígida",
+                "Con núcleo y membrana"
+              ]
+            },
+            "der": {
+              "icono": "🐟",
+              "titulo": "Animal",
+              "puntos": [
+                "Sin pared",
+                "Con núcleo y membrana"
+              ]
+            }
+          }
+        },
+        {
+          "titulo": "Los dos primeros postulados",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "1️⃣",
+                "titulo": "Todos los seres vivos",
+                "texto": "tienen una o más células"
+              },
+              {
+                "icono": "2️⃣",
+                "titulo": "La célula",
+                "texto": "es la unidad básica"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Qué tenían en común las células de plantas y animales?",
+            "opciones": [
+              "Núcleo y membrana",
+              "Pared y cloroplastos",
+              "Nada"
+            ],
+            "correcta": 0,
+            "explicacion": "Las dos tienen núcleo y membrana; la pared es solo de las plantas."
+          }
         }
       ]
     },
@@ -672,10 +958,10 @@
           "id": "vi-2",
           "enunciado": "¿Qué idea de Schleiden y Schwann corrigió Virchow?",
           "opciones": [
-            "Que las plantas tienen células",
+            "Que las plantas están formadas por células",
             "Que las células nuevas nacen de material sin forma",
-            "Que los animales tienen células",
-            "Que las células tienen núcleo"
+            "Que los animales están formados por células",
+            "Que las células tienen un núcleo en su interior"
           ],
           "correcta": 1,
           "explicacion": "Schleiden y Schwann creían que las células nuevas surgían de material sin estructura. Virchow sostuvo que provienen de otras células."
@@ -684,10 +970,10 @@
           "id": "vi-3",
           "enunciado": "En la división de una célula animal, ¿qué ocurre justo antes de que se parta en dos?",
           "opciones": [
-            "Los cromosomas desaparecen",
+            "Los cromosomas se deshacen y desaparecen",
             "Las dos copias de cada cromosoma se separan hacia extremos opuestos",
-            "La célula pierde su núcleo para siempre",
-            "Las dos células se fusionan"
+            "La célula pierde su núcleo y luego forma otro nuevo",
+            "Las dos copias de cada cromosoma se fusionan en una sola"
           ],
           "correcta": 1,
           "explicacion": "Cada cromosoma duplicado reparte sus dos copias, una para cada extremo. Así cada célula nueva recibe el mismo material genético."
@@ -724,6 +1010,82 @@
           "tipo": "svg",
           "recurso": "celula-anafase",
           "pie": "Una célula animal a punto de partirse en dos: cada copia de los cromosomas viaja hacia un extremo. Dibujo simplificado, con solo 4 cromosomas."
+        }
+      ],
+      "diapositivas": [
+        {
+          "titulo": "Toda célula viene de otra",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🔁",
+            "valor": "omnis cellula e cellula",
+            "texto": "Año 1855: el tercer postulado."
+          }
+        },
+        {
+          "titulo": "Una célula que se divide",
+          "visual": {
+            "tipo": "ilustracion",
+            "recurso": "celula-anafase",
+            "pie": "Los cromosomas se separan hacia extremos opuestos"
+          }
+        },
+        {
+          "titulo": "Antes y después",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "❌",
+              "titulo": "Antes",
+              "puntos": [
+                "Células de material sin forma"
+              ]
+            },
+            "der": {
+              "icono": "✅",
+              "titulo": "Virchow",
+              "puntos": [
+                "Células de otras células"
+              ]
+            }
+          }
+        },
+        {
+          "titulo": "Quién más lo vio",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🔬",
+                "titulo": "Remak",
+                "texto": "ya vio células dividirse"
+              },
+              {
+                "icono": "🩺",
+                "titulo": "Virchow",
+                "texto": "lo hizo famoso"
+              },
+              {
+                "icono": "🧪",
+                "titulo": "Flemming",
+                "texto": "llamó «mitosis»"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿De dónde viene una célula nueva?",
+            "opciones": [
+              "De material sin vida",
+              "De otra célula",
+              "Del aire"
+            ],
+            "correcta": 1,
+            "explicacion": "Toda célula proviene de otra célula que ya existía."
+          }
         }
       ]
     },
@@ -804,10 +1166,10 @@
           "id": "pa-1",
           "enunciado": "En el experimento de Pasteur, ¿por qué el caldo del matraz de cuello de cisne no se contaminaba?",
           "opciones": [
-            "Porque el caldo era ácido",
+            "Porque el caldo era demasiado ácido para cualquier ser vivo",
             "Porque el cuello curvo atrapaba las partículas y microorganismos del aire",
             "Porque el calor mataba a las células nuevas que se formaban",
-            "Porque no había oxígeno dentro del matraz"
+            "Porque dentro del matraz nunca había oxígeno"
           ],
           "correcta": 1,
           "explicacion": "El aire podía entrar, pero el cuello curvo retenía los microorganismos. Al romper el cuello, estos llegaban al caldo y lo contaminaban, lo que muestra que provenían del exterior."
@@ -816,10 +1178,10 @@
           "id": "pa-2",
           "enunciado": "¿Qué idea refuta el experimento de Pasteur?",
           "opciones": [
-            "Que todas las células tienen membrana",
+            "Que todas las células tienen membrana y citoplasma",
             "Que la vida puede surgir espontáneamente de materia sin vida",
-            "Que los microorganismos existen",
-            "Que el aire contiene oxígeno"
+            "Que los microorganismos existen y se pueden ver",
+            "Que el aire contiene oxígeno y otros gases"
           ],
           "correcta": 1,
           "explicacion": "Pasteur refutó la generación espontánea y apoyó que los seres vivos provienen de otros seres vivos."
@@ -828,10 +1190,10 @@
           "id": "pa-3",
           "enunciado": "¿Para qué cubrió Redi algunos frascos con gasa?",
           "opciones": [
-            "Para que no entrara aire",
+            "Para que no entrara aire, ya que lo creía dañino",
             "Para que las moscas no pudieran poner huevos en la carne, pero el aire sí entrara",
-            "Para que la carne no se pudriera",
-            "Para calentar la carne"
+            "Para evitar que la carne se pudriera por completo",
+            "Para que se calentara y se descompusiera más rápido"
           ],
           "correcta": 1,
           "explicacion": "La gasa deja pasar el aire pero no las moscas. Así comprobó que las larvas salen de huevos de moscas y no de la carne."
@@ -852,10 +1214,10 @@
           "id": "pa-5",
           "enunciado": "¿Por qué era importante que los matraces de Pasteur dejaran entrar el aire?",
           "opciones": [
-            "Para que el caldo se enfriara",
+            "Para que el caldo se enfriara más rápidamente",
             "Para responder a quienes decían que sin aire no podía surgir vida",
-            "Para dar oxígeno a la carne",
-            "Porque así lo exigía la Academia"
+            "Para dar oxígeno a los microorganismos que estudiaba",
+            "Para que el contenido se mantuviera dentro del matraz"
           ],
           "correcta": 1,
           "explicacion": "Se decía que los frascos sellados fallaban porque el aire no entraba. Con el aire entrando y aun así sin contaminación, la objeción no valía."
@@ -895,6 +1257,78 @@
           "tipo": "svg",
           "recurso": "matraz-cisne",
           "pie": "El aire entra y sale por la curva, pero el polvo y los microorganismos quedan atrapados. El caldo hervido se mantiene limpio."
+        }
+      ],
+      "diapositivas": [
+        {
+          "titulo": "Moscas de la carne",
+          "visual": {
+            "tipo": "ilustracion",
+            "recurso": "frascos-redi",
+            "pie": "Frascos con y sin gasa"
+          },
+          "puntos": [
+            "Redi, 1668",
+            "Solo hay larvas donde entran moscas"
+          ]
+        },
+        {
+          "titulo": "El cuello de cisne",
+          "visual": {
+            "tipo": "ilustracion",
+            "recurso": "matraz-cisne",
+            "pie": "El aire entra, los microbios quedan atrapados"
+          },
+          "puntos": [
+            "Pasteur, 1861–1862",
+            "Caldo limpio con el cuello intacto"
+          ]
+        },
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Pasteur rompió el cuello del matraz. ¿Qué pasó con el caldo?",
+            "opciones": [
+              "Siguió limpio",
+              "Se contaminó",
+              "Se evaporó"
+            ],
+            "correcta": 1,
+            "explicacion": "Al romper el cuello, los microbios del aire entraron y el caldo se enturbió."
+          }
+        },
+        {
+          "titulo": "La objeción del aire",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "💨",
+            "valor": "¿Sin aire no hay vida?",
+            "texto": "El cuello de cisne dejaba entrar el aire, y aun así el caldo seguía limpio."
+          }
+        },
+        {
+          "titulo": "La vida viene de otra vida",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🪰",
+                "titulo": "Redi",
+                "texto": "moscas de huevos"
+              },
+              {
+                "icono": "🧫",
+                "titulo": "Pasteur",
+                "texto": "microbios del aire"
+              },
+              {
+                "icono": "🔁",
+                "titulo": "Virchow",
+                "texto": "células de células"
+              }
+            ]
+          }
         }
       ]
     },
@@ -967,10 +1401,10 @@
           "id": "tm-1",
           "enunciado": "¿Por qué los virus se consideran un caso límite de la teoría celular?",
           "opciones": [
-            "Porque son más grandes que las células",
+            "Porque son más grandes que cualquier célula",
             "Porque no están formados por células y dependen de una célula hospedera para reproducirse",
-            "Porque tienen núcleo y mitocondrias",
-            "Porque se dividen por mitosis"
+            "Porque tienen núcleo y mitocondrias, pero no membrana",
+            "Porque se dividen por mitosis como las demás células"
           ],
           "correcta": 1,
           "explicacion": "Los virus no tienen estructura celular ni metabolismo propio; solo se reproducen dentro de una célula, por eso se discute si se consideran seres vivos."
@@ -979,10 +1413,10 @@
           "id": "tm-2",
           "enunciado": "El glóbulo rojo maduro de un mamífero no tiene núcleo. ¿Deja por eso de ser una célula?",
           "opciones": [
-            "Sí, porque no guarda ADN",
+            "Sí: sin núcleo no guarda ADN, así que no es célula",
             "No: viene de otra célula y tiene membrana y metabolismo",
-            "Sí, porque no se divide",
-            "No, porque es un virus"
+            "Sí: no se divide, y toda célula debe poder dividirse",
+            "No: en realidad es un tipo de virus de la sangre"
           ],
           "correcta": 1,
           "explicacion": "Pierde el núcleo al madurar, pero sigue siendo una célula: se formó a partir de otra y tiene membrana y metabolismo."
@@ -1035,6 +1469,88 @@
           "pie": "Tercer postulado: toda célula proviene de otra célula que ya existía («omnis cellula e cellula», Virchow, 1855).",
           "tipo": "svg",
           "recurso": "postulado-origen"
+        }
+      ],
+      "diapositivas": [
+        {
+          "titulo": "Los tres postulados",
+          "visual": {
+            "tipo": "ilustracion",
+            "recurso": "postulado-seres",
+            "pie": "Todos los seres vivos tienen células"
+          }
+        },
+        {
+          "titulo": "La unidad de la vida",
+          "visual": {
+            "tipo": "ilustracion",
+            "recurso": "postulado-unidad",
+            "pie": "La célula, unidad básica"
+          }
+        },
+        {
+          "titulo": "Toda célula viene de otra",
+          "visual": {
+            "tipo": "ilustracion",
+            "recurso": "postulado-origen",
+            "pie": "El tercer postulado"
+          }
+        },
+        {
+          "titulo": "Hoy se añade",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🧬",
+                "titulo": "ADN",
+                "texto": "la información hereditaria"
+              },
+              {
+                "icono": "⚡",
+                "titulo": "Metabolismo",
+                "texto": "ocurre dentro de las células"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Casos que parecen raros",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🩸",
+                "titulo": "Glóbulo rojo",
+                "texto": "sin núcleo"
+              },
+              {
+                "icono": "💪",
+                "titulo": "Fibra muscular",
+                "texto": "muchos núcleos"
+              },
+              {
+                "icono": "🥚",
+                "titulo": "Yema sin fecundar",
+                "texto": "una sola célula enorme"
+              }
+            ]
+          },
+          "nota": "Todos siguen siendo células."
+        },
+        {
+          "titulo": "¿Está vivo un virus?",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🦠",
+            "valor": "Caso límite",
+            "texto": "Tiene material genético, pero no células ni metabolismo propio."
+          },
+          "atajo": {
+            "texto": "Tipos de células",
+            "tema": "tipos-de-celulas",
+            "bloque": "virus"
+          }
         }
       ]
     },
@@ -1107,9 +1623,9 @@
           "enunciado": "¿Cuál de estas características apoya la teoría endosimbiótica?",
           "opciones": [
             "Las mitocondrias tienen ADN circular propio y ribosomas 70S",
-            "Las mitocondrias carecen de membrana",
-            "Los cloroplastos solo existen en animales",
-            "Las mitocondrias se forman en el núcleo"
+            "Las mitocondrias carecen de membrana propia",
+            "Los cloroplastos solo existen en las células animales",
+            "Las mitocondrias se forman dentro del núcleo"
           ],
           "correcta": 0,
           "explicacion": "El ADN circular y los ribosomas 70S son rasgos típicos de bacterias, lo que sugiere que estos orgánulos descienden de ellas."
@@ -1130,10 +1646,10 @@
           "id": "en-3",
           "enunciado": "¿Qué idea explica que las mitocondrias tengan su propio ADN circular?",
           "opciones": [
-            "Que se formaron dentro del núcleo",
+            "Que se formaron dentro del núcleo y luego salieron",
             "Que descienden de bacterias, que también tienen ADN circular",
-            "Que no necesitan ADN",
-            "Que el ADN circular lo fabrica el citoplasma"
+            "Que no necesitan ADN para funcionar",
+            "Que su ADN circular lo fabrica el citoplasma de la célula"
           ],
           "correcta": 1,
           "explicacion": "El ADN circular es típico de las bacterias; las mitocondrias lo conservan como recuerdo de su origen."
@@ -1176,7 +1692,77 @@
           "recurso": "endosimbiosis-mito",
           "pie": "Una célula eucariota con mitocondrias dentro, que según esta hipótesis fueron antes bacterias. Dibujo esquemático."
         }
+      ],
+      "diapositivas": [
+        {
+          "titulo": "Una célula engulle a otra",
+          "visual": {
+            "tipo": "ilustracion",
+            "recurso": "endosimbiosis-mito",
+            "pie": "Bacterias que se quedaron adentro"
+          }
+        },
+        {
+          "titulo": "Quiénes la propusieron",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🇷🇺",
+                "titulo": "Mereschkowski",
+                "texto": "hacia 1905"
+              },
+              {
+                "icono": "🔬",
+                "titulo": "Lynn Margulis",
+                "texto": "1967"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Pistas a favor",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🧬",
+                "titulo": "ADN propio",
+                "texto": "circular, como las bacterias"
+              },
+              {
+                "icono": "⚙️",
+                "titulo": "Ribosomas 70S",
+                "texto": "como los procariotas"
+              },
+              {
+                "icono": "🛡️",
+                "titulo": "Doble membrana"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Qué orgánulos vendrían de bacterias según esta hipótesis?",
+            "opciones": [
+              "Mitocondrias y cloroplastos",
+              "Núcleo y ribosomas",
+              "Vacuolas y lisosomas"
+            ],
+            "correcta": 0,
+            "explicacion": "La hipótesis explica el origen de mitocondrias y cloroplastos; el núcleo tiene otras explicaciones."
+          },
+          "atajo": {
+            "texto": "Niveles: orgánulos (1.2)",
+            "tema": "niveles-organizacion",
+            "bloque": "organulos"
+          }
+        }
       ]
     }
-  ]
+  ],
+  "diapositivas": true
 }

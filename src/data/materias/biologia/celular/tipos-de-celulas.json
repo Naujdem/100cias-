@@ -234,7 +234,7 @@
           "opciones": [
             "Tiene núcleo con membrana",
             "Tiene ADN",
-            "Tiene membrana",
+            "Tiene membrana celular",
             "Tiene ribosomas"
           ],
           "correcta": 0,
@@ -267,10 +267,10 @@
           "id": "tc-pe-4",
           "enunciado": "¿Dónde está el ADN de una procariota?",
           "opciones": [
-            "Dentro de un núcleo",
+            "Dentro de un núcleo con membrana",
             "Suelto en el citoplasma, en el nucleoide",
-            "Fuera de la célula",
-            "En las mitocondrias"
+            "Fuera de la célula, protegido por la pared",
+            "Dentro de las mitocondrias, en el centro"
           ],
           "correcta": 1,
           "explicacion": "Sin núcleo, el ADN queda en una zona del citoplasma llamada nucleoide."
@@ -426,10 +426,10 @@
           "id": "tc-ba-1",
           "enunciado": "¿Qué forma tiene un bacilo?",
           "opciones": [
-            "Redonda",
+            "Redonda, como una pelota",
             "Alargada, como bastón",
-            "En espiral",
-            "Ramificada"
+            "En espiral, como un resorte",
+            "Curva, con forma de coma"
           ],
           "correcta": 1,
           "explicacion": "Bacilo viene de «bastoncito»: es alargado."
@@ -438,10 +438,10 @@
           "id": "tc-ba-2",
           "enunciado": "¿Qué son las arqueas?",
           "opciones": [
-            "Bacterias muy grandes",
+            "Bacterias de gran tamaño que viven en el mar",
             "Un grupo de procariotas distinto de las bacterias",
-            "Células eucariotas",
-            "Virus"
+            "Células eucariotas muy sencillas con núcleo",
+            "Virus que infectan a las bacterias"
           ],
           "correcta": 1,
           "explicacion": "Las arqueas son procariotas, pero forman un grupo aparte de las bacterias."
@@ -835,10 +835,10 @@
           "id": "tc-av-1",
           "enunciado": "¿Qué tiene la célula vegetal que la animal NO tiene?",
           "opciones": [
-            "Núcleo",
-            "Mitocondrias",
+            "Núcleo y membrana",
+            "Mitocondrias y ribosomas",
             "Cloroplastos y pared celular",
-            "Membrana"
+            "Citoplasma y membrana"
           ],
           "correcta": 2,
           "explicacion": "Pared, cloroplastos y vacuola grande son propios de la célula vegetal."
@@ -1048,8 +1048,8 @@
           "enunciado": "¿Qué ventaja dan las microvellosidades del intestino?",
           "opciones": [
             "Más superficie para absorber nutrientes",
-            "Más velocidad",
-            "Más defensa"
+            "Más velocidad al mover los alimentos",
+            "Más defensa contra los microbios"
           ],
           "correcta": 0,
           "explicacion": "Aumentan la superficie de contacto con los alimentos digeridos."
@@ -1198,10 +1198,10 @@
           "id": "tc-vi-2",
           "enunciado": "¿Dónde se multiplican los virus?",
           "opciones": [
-            "En el aire",
+            "En el aire, al flotar libremente",
             "Dentro de una célula",
-            "En el agua",
-            "Solos"
+            "En el agua, igual que una bacteria",
+            "Solos, con su propio metabolismo"
           ],
           "correcta": 1,
           "explicacion": "Necesitan los recursos de una célula hospedera."
@@ -1210,10 +1210,10 @@
           "id": "tc-vi-3",
           "enunciado": "Los virus…",
           "opciones": [
-            "Son procariotas",
-            "Son eucariotas",
+            "Son procariotas muy pequeños",
+            "Son eucariotas muy sencillos",
             "No son ni procariotas ni eucariotas",
-            "Son hongos"
+            "Son hongos microscópicos"
           ],
           "correcta": 2,
           "explicacion": "Procariota y eucariota son tipos de células; los virus no son células."

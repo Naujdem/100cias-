@@ -134,3 +134,8 @@ Hooke usa la reconstrucción de Rita Greer (2004, Free Art License, Wikimedia Co
 - Perfiles: 6° = pro-eu, animal-vegetal, virus; 9° y 11° = los seis.
 - Atajos desde 1.2 y 1.3 ya apuntan a bloques concretos de este tema.
 - A verificar: tamaño relativo (≈10 veces) procariota/eucariota y virus/bacteria; ejemplos de arqueas y formas de bacterias; centriolos en plantas con flores; 1977 (Woese). Todo con `revisado:false`.
+
+## Mejoras tras la auditoría
+- Quiz: 48 preguntas cuyas opciones correctas eran evidentemente más largas o cuyas distractoras eran absurdas se reescribieron con opciones plausibles y de largo parecido (el orden ya se mezcla al preguntar).
+- 1.1 ahora tiene láminas propias (36) y botón «Ver como diapositivas»; reutiliza las ilustraciones SVG existentes.
+- Presentación: el pie muestra el año cuando un bloque no tiene etiqueta (1.1).

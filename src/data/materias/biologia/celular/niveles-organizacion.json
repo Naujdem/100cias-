@@ -88,10 +88,10 @@
           "id": "at-1",
           "enunciado": "¿Cuáles son los átomos más abundantes en los seres vivos?",
           "opciones": [
-            "Hierro, calcio, oro y plata",
+            "Hierro, calcio, fósforo y potasio",
             "Carbono, hidrógeno, oxígeno y nitrógeno",
-            "Helio, neón, argón y cloro",
-            "Sodio, potasio, litio y plomo"
+            "Helio, neón, nitrógeno y oxígeno",
+            "Sodio, cloro, azufre y calcio"
           ],
           "correcta": 1,
           "explicacion": "Carbono, hidrógeno, oxígeno y nitrógeno forman cerca del 96 % de la masa del cuerpo humano."
@@ -451,10 +451,10 @@
           "id": "mm-1",
           "enunciado": "¿Cuál de estos grupos son macromoléculas biológicas?",
           "opciones": [
-            "Agua, oxígeno y sal",
+            "Agua, oxígeno, sales y vitaminas",
             "Proteínas, ácidos nucleicos, carbohidratos y lípidos",
-            "Átomos, iones y electrones",
-            "Células, tejidos y órganos"
+            "Átomos, iones, electrones y neutrones",
+            "Células, tejidos, órganos y sistemas"
           ],
           "correcta": 1,
           "explicacion": "Los cuatro grandes grupos de macromoléculas son carbohidratos, lípidos, proteínas y ácidos nucleicos."
@@ -683,9 +683,9 @@
           "enunciado": "Según la teoría endosimbiótica, ¿de dónde vienen las mitocondrias y los cloroplastos?",
           "opciones": [
             "De bacterias que fueron engullidas por otra célula",
-            "De virus",
-            "De átomos de hierro",
-            "Del núcleo de la célula"
+            "De virus que se quedaron dentro de otra célula",
+            "De fragmentos del núcleo que se separaron",
+            "De cristales de minerales del ambiente"
           ],
           "correcta": 0,
           "explicacion": "Lynn Margulis propuso que fueron bacterias que acabaron viviendo dentro de otra célula."
@@ -858,9 +858,9 @@
           "enunciado": "¿Qué significa que la vida sea una «propiedad emergente»?",
           "opciones": [
             "Que aparece al organizarse las partes, aunque ninguna parte sola esté viva",
-            "Que sale de la nada",
-            "Que solo ocurre en las plantas",
-            "Que depende de un solo átomo"
+            "Que solo aparece cuando hay un cerebro que la perciba",
+            "Que cada átomo ya está vivo por separado",
+            "Que ocurre solo en los organismos más grandes"
           ],
           "correcta": 0,
           "explicacion": "La vida no está en ninguna molécula en particular: aparece al trabajar juntas las partes de la célula."
@@ -869,10 +869,10 @@
           "id": "ce-3",
           "enunciado": "¿Los virus son células?",
           "opciones": [
-            "Sí, son las células más pequeñas",
+            "Sí: son las células más pequeñas que existen",
             "No: tienen material genético, pero no son células",
-            "Sí, pero solo las de las plantas",
-            "No: son tejidos"
+            "Sí: tienen núcleo, pero muy pequeño",
+            "No: son tejidos muy simples de los animales"
           ],
           "correcta": 1,
           "explicacion": "Los virus se discuten como caso límite porque tienen material genético, pero no tienen estructura de célula."
@@ -881,10 +881,10 @@
           "id": "ce-4",
           "enunciado": "¿Qué tiene toda célula?",
           "opciones": [
-            "Cloroplastos",
+            "Cloroplastos, pared celular y vacuola grande",
             "Membrana, material genético y metabolismo propio",
-            "Órganos y sistemas",
-            "Varios tejidos"
+            "Núcleo, mitocondrias y orgánulos con membrana",
+            "Tejidos, órganos y sistemas coordinados"
           ],
           "correcta": 1,
           "explicacion": "Estas características definen a la célula; los cloroplastos solo están en algunas."
@@ -1049,9 +1049,9 @@
           "enunciado": "¿Qué es un tejido?",
           "opciones": [
             "Un conjunto de células parecidas que cumplen una función",
-            "Una molécula grande",
-            "Un órgano completo",
-            "Una célula muy grande"
+            "Una molécula grande formada por muchas piezas",
+            "Un conjunto de órganos que trabajan en equipo",
+            "Una célula muy grande con varios núcleos"
           ],
           "correcta": 0,
           "explicacion": "Un tejido es un conjunto de células parecidas que trabajan juntas."
@@ -1084,10 +1084,10 @@
           "id": "te-4",
           "enunciado": "¿Por qué decimos que las células de un tejido son «parecidas» y no idénticas?",
           "opciones": [
-            "Porque cada una pertenece a un tejido distinto",
-            "Porque no son células",
+            "Porque cada una de ellas pertenece a un tejido distinto",
+            "Porque las células de un tejido no son células completas",
             "Porque no son idénticas y a veces un tejido tiene más de un tipo de célula",
-            "Porque solo algunas tienen núcleo"
+            "Porque solo algunas de ellas tienen núcleo y otras no"
           ],
           "correcta": 2,
           "explicacion": "Las células de un tejido comparten función, pero no son copias exactas, y un tejido puede mezclar varios tipos."
@@ -1269,10 +1269,10 @@
           "id": "og-3",
           "enunciado": "¿Es la sangre un órgano?",
           "opciones": [
-            "Sí, porque recorre todo el cuerpo",
+            "Sí: recorre todo el cuerpo y hace una función",
             "No: es un tejido, y el corazón es el órgano que la bombea",
-            "Sí, porque tiene células",
-            "No: es una molécula"
+            "Sí: está formada por células y tiene función",
+            "No: es una molécula que lleva el oxígeno"
           ],
           "correcta": 1,
           "explicacion": "La sangre es un tejido. El corazón, hecho de varios tejidos, es el órgano que la bombea."
@@ -1281,10 +1281,10 @@
           "id": "og-4",
           "enunciado": "¿Qué significa que un órgano sea «más que la suma de sus tejidos»?",
           "opciones": [
-            "Que pesa más que sus tejidos",
+            "Que pesa más que la suma de todos sus tejidos",
             "Que juntos hacen una función que ningún tejido hace solo",
-            "Que tiene más células que su tejido",
-            "Que no tiene tejidos"
+            "Que tiene más células que cada uno de sus tejidos",
+            "Que sus tejidos funcionan igual por separado que juntos"
           ],
           "correcta": 1,
           "explicacion": "Al trabajar juntos, los tejidos logran algo nuevo, como bombear la sangre."
@@ -1475,10 +1475,10 @@
           "id": "si-4",
           "enunciado": "¿Todos los organismos tienen sistemas de órganos?",
           "opciones": [
-            "Sí, todos los seres vivos",
+            "Sí: todos los seres vivos tienen sistemas de órganos",
             "No: los organismos más sencillos no los tienen",
-            "Solo las plantas",
-            "Solo las bacterias"
+            "Solo las plantas y los animales los tienen",
+            "Solo los organismos que viven en el agua los tienen"
           ],
           "correcta": 1,
           "explicacion": "Hongos, esponjas y muchos organismos sencillos no tienen sistemas de órganos."
@@ -1664,10 +1664,10 @@
           "id": "or-2",
           "enunciado": "¿Qué tienen en común todos los organismos?",
           "opciones": [
-            "Tienen órganos y sistemas",
+            "Tienen órganos y sistemas de órganos",
             "Están formados por una o más células",
-            "Todos son pluricelulares",
-            "Todos tienen tejidos"
+            "Todos son pluricelulares y tienen tejidos",
+            "Todos tienen núcleo y mitocondrias"
           ],
           "correcta": 1,
           "explicacion": "Todos están formados por una o más células, aunque no todos tengan tejidos, órganos o sistemas."
@@ -1863,10 +1863,10 @@
           "id": "ma-2",
           "enunciado": "¿Qué incluye un ecosistema?",
           "opciones": [
-            "Solo los animales",
+            "Solo los animales que viven en él",
             "Los seres vivos y su ambiente no vivo",
-            "Solo las plantas",
-            "Solo el suelo"
+            "Solo las plantas y los animales que viven allí",
+            "Solo el suelo y el agua del lugar"
           ],
           "correcta": 1,
           "explicacion": "Un ecosistema reúne la comunidad y los factores no vivos, como agua, suelo y clima."
