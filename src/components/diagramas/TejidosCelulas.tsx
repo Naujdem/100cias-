@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import VisorZoom from '../VisorZoom.tsx'
 import PantallaCompleta from '../PantallaCompleta.tsx'
+import { useFlechas } from '../../lib/flechasDiagrama.ts'
 import TejidoVegetal, { type ParteVegetal } from '../ilustraciones/TejidoVegetal.tsx'
 import TejidoAnimal, { type ParteAnimal } from '../ilustraciones/TejidoAnimal.tsx'
 
@@ -39,6 +40,15 @@ export default function TejidosCelulas({ inicial }: { inicial: Modo }) {
   }
   const lista = modo === 'planta' ? PLANTA : ANIMAL
   const actual = lista.find((p) => p.id === parte)
+
+  // ← → recorren las partes de la célula (ninguna, la primera, la siguiente…); en «Compara» no hay nada que mover
+  useFlechas((dir) => {
+    if (modo === 'compara') return false
+    const i = lista.findIndex((p) => p.id === parte)
+    const n = Math.max(-1, Math.min(lista.length - 1, i + dir))
+    setParte(n < 0 ? null : lista[n].id)
+    return true
+  })
 
   return (
     <div>
@@ -87,7 +97,7 @@ export default function TejidosCelulas({ inicial }: { inicial: Modo }) {
           <p className="mt-2 text-xs text-[var(--suave)]">Ilustración esquemática, no es un dibujo de Schleiden ni de Schwann ni está a escala.</p>
         </PantallaCompleta>
       ) : (
-        <div>
+        <PantallaCompleta conBoton>
           <div className="grid grid-cols-2 gap-2">
             <figure>
               <div className="aspect-[4/3] overflow-hidden rounded-lg"><TejidoVegetal /></div>
@@ -115,7 +125,7 @@ export default function TejidosCelulas({ inicial }: { inicial: Modo }) {
             </ul>
             <p className="mt-2">Plantas y animales se ven muy distintos, pero comparten lo esencial. Esa semejanza fue lo que vieron Schleiden y Schwann.</p>
           </div>
-        </div>
+        </PantallaCompleta>
       )}
     </div>
   )

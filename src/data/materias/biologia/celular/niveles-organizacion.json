@@ -44,7 +44,25 @@
           "Una molécula de agua tiene 2 átomos de hidrógeno y 1 de oxígeno.",
           "El carbono forma el «esqueleto» de azúcares, grasas y proteínas."
         ],
-        "limites": "Un átomo no está vivo. La vida no está en ninguna partícula en particular, sino en cómo se organizan."
+        "limites": "Un átomo no está vivo. La vida no está en ninguna partícula en particular, sino en cómo se organizan.",
+        "cuaderno": {
+          "facil": [
+            "Los átomos son las partículas básicas de toda la materia, viva o no.",
+            "En los seres vivos predominan carbono, hidrógeno, oxígeno y nitrógeno.",
+            "Un átomo no está vivo."
+          ],
+          "media": [
+            "Esos cuatro átomos son cerca del 96 % de la masa del cuerpo humano.",
+            "Los átomos de un ser vivo son los mismos que hay en una roca o en el aire; cambia cómo están organizados.",
+            "El carbono puede unirse con muchos átomos y formar cadenas largas: es la base de las moléculas de la vida."
+          ],
+          "avanzada": [
+            "Otros átomos importantes: fósforo (ADN y ATP), calcio (huesos y dientes), hierro (sangre).",
+            "Una molécula de agua tiene 2 átomos de hidrógeno y 1 de oxígeno.",
+            "El carbono forma el «esqueleto» de azúcares, grasas y proteínas.",
+            "La vida no está en ninguna partícula en particular, sino en cómo se organizan."
+          ]
+        }
       },
       "preguntas": [
         {
@@ -102,7 +120,24 @@
           "Agua (H₂O), oxígeno (O₂), dióxido de carbono (CO₂), glucosa (C₆H₁₂O₆).",
           "La fotosíntesis convierte CO₂ y agua en glucosa y oxígeno."
         ],
-        "limites": "Una molécula sola no está viva, aunque sea esencial para la vida."
+        "limites": "Una molécula sola no está viva, aunque sea esencial para la vida.",
+        "cuaderno": {
+          "facil": [
+            "Una molécula es un grupo de átomos unidos por enlaces.",
+            "Ejemplos: agua (H₂O), oxígeno (O₂) y glucosa.",
+            "Una molécula sola no está viva, aunque sea esencial para la vida."
+          ],
+          "media": [
+            "Participan en casi todo lo que ocurre dentro de una célula.",
+            "El agua es entre la mitad y dos tercios del cuerpo humano adulto; las reacciones de la célula ocurren disueltas en ella.",
+            "La glucosa guarda energía que la célula libera al «quemarla» con oxígeno."
+          ],
+          "avanzada": [
+            "Orgánicas: tienen carbono unido a hidrógeno (glucosa). Inorgánicas: como el agua o el CO₂.",
+            "Fórmulas: agua H₂O, oxígeno O₂, dióxido de carbono CO₂, glucosa C₆H₁₂O₆.",
+            "La fotosíntesis convierte CO₂ y agua en glucosa y oxígeno."
+          ]
+        }
       },
       "preguntas": [
         {
@@ -161,7 +196,24 @@
           "El ADN es un ácido nucleico que guarda la información hereditaria.",
           "La celulosa es un carbohidrato que forma las paredes de las células vegetales."
         ],
-        "limites": "Los lípidos suelen contarse como macromoléculas, aunque no son cadenas de piezas repetidas como las demás. Ninguna macromolécula está viva por sí sola."
+        "limites": "Los lípidos suelen contarse como macromoléculas, aunque no son cadenas de piezas repetidas como las demás. Ninguna macromolécula está viva por sí sola.",
+        "cuaderno": {
+          "facil": [
+            "Las macromoléculas son moléculas muy grandes, muchas veces cadenas de piezas más pequeñas.",
+            "Hay cuatro tipos: carbohidratos, lípidos, proteínas y ácidos nucleicos.",
+            "Con ellas se construyen y funcionan las células."
+          ],
+          "media": [
+            "Aminoácidos → proteínas; nucleótidos → ácidos nucleicos (ADN y ARN); azúcares simples → carbohidratos grandes (almidón, celulosa).",
+            "Proteínas: construyen y hacen funcionar (enzimas, músculo).",
+            "Ácidos nucleicos: guardan la información. Carbohidratos: energía y estructura. Lípidos: reserva y membranas."
+          ],
+          "avanzada": [
+            "Hay miles de proteínas distintas y su forma tridimensional decide lo que hacen.",
+            "Ejemplos: hemoglobina (proteína que lleva oxígeno), ADN (guarda la herencia), celulosa (paredes de las células vegetales).",
+            "Los lípidos suelen contarse como macromoléculas, aunque no son cadenas de piezas repetidas."
+          ]
+        }
       },
       "preguntas": [
         {
@@ -223,7 +275,22 @@
           "El cloroplasto hace la fotosíntesis.",
           "El núcleo guarda el ADN."
         ],
-        "limites": "Un orgánulo solo funciona dentro de su célula y no puede vivir por sí mismo."
+        "limites": "Un orgánulo solo funciona dentro de su célula y no puede vivir por sí mismo.",
+        "cuaderno": {
+          "facil": [
+            "Los orgánulos son estructuras dentro de la célula, cada una con una función.",
+            "Ejemplos: núcleo, mitocondrias, ribosomas y, en las plantas, cloroplastos.",
+            "«Orgánulo» significa «órgano pequeño»."
+          ],
+          "media": [
+            "El núcleo guarda el ADN; la mitocondria libera energía de los alimentos; el cloroplasto hace la fotosíntesis.",
+            "Las bacterias (procariotas) no tienen orgánulos rodeados de membrana, solo estructuras sencillas como los ribosomas.",
+            "Un orgánulo solo funciona dentro de su célula y no puede vivir por sí mismo."
+          ],
+          "avanzada": [
+            "Se cree que las mitocondrias y los cloroplastos fueron antes bacterias (hipótesis endosimbiótica, subtema 1.1)."
+          ]
+        }
       },
       "preguntas": [
         {
@@ -284,7 +351,23 @@
           "Una célula muscular del corazón se contrae y se relaja.",
           "Una bacteria hace todo por sí sola: se alimenta, se reproduce y reacciona."
         ],
-        "limites": "Los virus se discuten como caso límite: tienen material genético, pero no son células. Más sobre esto en el subtema «Postulados de la teoría celular»."
+        "limites": "Los virus se discuten como caso límite: tienen material genético, pero no son células. Más sobre esto en el subtema «Postulados de la teoría celular».",
+        "cuaderno": {
+          "facil": [
+            "La célula es la unidad más pequeña que puede considerarse viva.",
+            "Tiene membrana, material genético y hace su propio metabolismo.",
+            "Algunos seres vivos son una sola célula; otros, como las personas, tienen billones."
+          ],
+          "media": [
+            "Ninguno de los niveles anteriores está vivo por sí solo: la vida aparece cuando las piezas trabajan juntas (propiedad emergente).",
+            "Una bacteria es una sola célula y también un organismo completo.",
+            "Ejemplos: una célula muscular del corazón se contrae y se relaja; una bacteria se alimenta, se reproduce y reacciona."
+          ],
+          "avanzada": [
+            "Se estima que una persona tiene unos 30 a 40 billones de células, de unos 200 tipos distintos.",
+            "Los virus son un caso límite: tienen material genético, pero no son células."
+          ]
+        }
       },
       "preguntas": [
         {
@@ -343,7 +426,23 @@
           "El tejido muscular cardíaco está formado por células que se contraen juntas.",
           "La piel tiene un tejido epitelial en su capa externa."
         ],
-        "limites": "Las células de un tejido no son idénticas, solo parecidas, y a veces hay más de un tipo de célula en el mismo tejido."
+        "limites": "Las células de un tejido no son idénticas, solo parecidas, y a veces hay más de un tipo de célula en el mismo tejido.",
+        "cuaderno": {
+          "facil": [
+            "Un tejido es un grupo de células parecidas que cumplen juntas una misma función.",
+            "En los animales hay cuatro tipos: epitelial, conectivo, muscular y nervioso.",
+            "Las plantas también tienen tejidos."
+          ],
+          "media": [
+            "Epitelial: cubre y reviste. Conectivo: une y sostiene (incluye hueso y sangre). Muscular: se contrae. Nervioso: transmite señales.",
+            "Tejidos de las plantas: meristemáticos (crecen), epidermis (protege), parénquima (fotosíntesis y almacenamiento), xilema y floema (transportan agua y azúcares)."
+          ],
+          "avanzada": [
+            "La sangre es un tejido conectivo líquido: sus células flotan en un líquido llamado plasma.",
+            "Ejemplos: el tejido muscular cardíaco; el tejido epitelial de la capa externa de la piel.",
+            "Las células de un tejido no son idénticas, solo parecidas."
+          ]
+        }
       },
       "preguntas": [
         {
@@ -404,7 +503,23 @@
           "El estómago tiene tejido muscular, epitelial, conectivo y nervioso.",
           "Una hoja tiene epidermis, parénquima y tejidos que conducen agua."
         ],
-        "limites": "La frontera entre tejido y órgano no siempre es nítida; en organismos sencillos, como las esponjas, no hay órganos verdaderos."
+        "limites": "La frontera entre tejido y órgano no siempre es nítida; en organismos sencillos, como las esponjas, no hay órganos verdaderos.",
+        "cuaderno": {
+          "facil": [
+            "Un órgano está formado por varios tejidos distintos que cooperan en una función.",
+            "Ejemplo: el corazón.",
+            "Un órgano hace algo que ninguno de sus tejidos haría solo."
+          ],
+          "media": [
+            "El corazón tiene tejido muscular (bombea), conectivo (sostiene), epitelial (reviste) y nervioso (coordina los latidos).",
+            "Órganos de las plantas: raíz, tallo, hoja, flor y fruto.",
+            "La piel se suele considerar el órgano más grande del cuerpo humano."
+          ],
+          "avanzada": [
+            "Otros ejemplos: el estómago (con los cuatro tejidos) y una hoja (epidermis, parénquima y tejidos que conducen agua).",
+            "La frontera entre tejido y órgano no siempre es nítida; las esponjas no tienen órganos verdaderos."
+          ]
+        }
       },
       "preguntas": [
         {
@@ -465,7 +580,23 @@
           "El sistema digestivo incluye boca, esófago, estómago e intestinos.",
           "El sistema nervioso incluye cerebro, médula y nervios."
         ],
-        "limites": "No todos los organismos tienen sistemas de órganos: hongos, esponjas y muchos organismos sencillos se organizan de otra manera."
+        "limites": "No todos los organismos tienen sistemas de órganos: hongos, esponjas y muchos organismos sencillos se organizan de otra manera.",
+        "cuaderno": {
+          "facil": [
+            "Un sistema de órganos es un grupo de órganos que trabajan juntos en una función más amplia.",
+            "Ejemplo: el sistema circulatorio (corazón, vasos sanguíneos y sangre) transporta sustancias por el cuerpo.",
+            "Los sistemas trabajan en equipo."
+          ],
+          "media": [
+            "Sistemas del cuerpo humano: circulatorio, respiratorio, digestivo, nervioso, excretor, muscular, óseo, endocrino, inmunitario y reproductor.",
+            "El oxígeno entra por el sistema respiratorio, lo lleva el circulatorio y lo usan las células de todos los demás."
+          ],
+          "avanzada": [
+            "Digestivo: boca, esófago, estómago e intestinos. Nervioso: cerebro, médula y nervios.",
+            "En las plantas se habla del sistema de la raíz (absorbe agua) y del vástago (tallo y hojas).",
+            "No todos los organismos tienen sistemas de órganos: hongos, esponjas y muchos organismos sencillos se organizan de otra manera."
+          ]
+        }
       },
       "preguntas": [
         {
@@ -526,7 +657,22 @@
           "Una persona: sistemas, órganos, tejidos y células trabajan coordinados.",
           "Una ameba: un organismo de una sola célula."
         ],
-        "limites": "No todos los organismos pasan por todos los niveles: los más sencillos se saltan los intermedios."
+        "limites": "No todos los organismos pasan por todos los niveles: los más sencillos se saltan los intermedios.",
+        "cuaderno": {
+          "facil": [
+            "Un organismo es un ser vivo completo, capaz de vivir por sí mismo.",
+            "Puede ser unicelular (una bacteria) o pluricelular (una planta, una persona).",
+            "En un organismo pluricelular, muchos sistemas trabajan coordinados."
+          ],
+          "media": [
+            "En un organismo unicelular, célula y organismo son lo mismo.",
+            "En uno pluricelular intervienen todos los niveles anteriores: moléculas, orgánulos, células, tejidos, órganos y sistemas.",
+            "Ejemplos: una persona; una ameba, que es un organismo de una sola célula."
+          ],
+          "avanzada": [
+            "No todos los organismos pasan por todos los niveles: una bacteria no tiene tejidos ni órganos; un hongo o una esponja no tienen sistemas como los animales complejos."
+          ]
+        }
       },
       "preguntas": [
         {
@@ -585,7 +731,24 @@
           "Los peces de una laguna son una población.",
           "Los peces, plantas, insectos y aves de la laguna forman una comunidad."
         ],
-        "limites": "Esta ficha solo introduce estos niveles. En el área de relaciones ecosistémicas se trabajan con más detalle."
+        "limites": "Esta ficha solo introduce estos niveles. En el área de relaciones ecosistémicas se trabajan con más detalle.",
+        "cuaderno": {
+          "facil": [
+            "Los seres vivos no viven aislados.",
+            "Orden: población → comunidad → ecosistema → biosfera.",
+            "Estos niveles se estudian en ecología."
+          ],
+          "media": [
+            "Población: organismos de una misma especie que viven juntos.",
+            "Comunidad: poblaciones de distintas especies. Ecosistema: la comunidad con su ambiente.",
+            "Biosfera: todos los ecosistemas del planeta."
+          ],
+          "avanzada": [
+            "Ejemplo: los peces de una laguna son una población; peces, plantas, insectos y aves forman una comunidad.",
+            "En un ecosistema importan tanto los seres vivos como el agua, el suelo y el clima.",
+            "Las decisiones que afectan un ecosistema, como talar un bosque, cambian también a las poblaciones y organismos que viven en él."
+          ]
+        }
       },
       "preguntas": [
         {

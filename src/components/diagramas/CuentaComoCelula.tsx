@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import PantallaCompleta from '../PantallaCompleta.tsx'
+import { useFlechas } from '../../lib/flechasDiagrama.ts'
 
 // «¿Cuenta como célula?»: casos típicos y casos límite de la teoría celular.
 
@@ -36,8 +38,15 @@ export default function CuentaComoCelula() {
   const respondidos = CASOS.filter((c) => c.id in apuestas)
   const aciertos = respondidos.filter((c) => apuestas[c.id] === c.cuenta).length
 
+  // ← → pasan al caso anterior o siguiente
+  useFlechas((dir) => {
+    const i = CASOS.findIndex((c) => c.id === sel)
+    setSel(CASOS[Math.max(0, Math.min(CASOS.length - 1, i + dir))].id)
+    return true
+  })
+
   return (
-    <div>
+    <PantallaCompleta conBoton>
       <p className="text-sm">Elige un caso, di si cuenta como célula y mira por qué. La teoría celular tiene casos que parecen raros.</p>
 
       <div role="group" aria-label="Casos" className="mt-3 flex flex-wrap gap-2">
@@ -96,6 +105,6 @@ export default function CuentaComoCelula() {
         {respondidos.length === 0 ? 'Aún no has respondido ninguno.' : `Aciertos: ${aciertos} de ${respondidos.length} respondidos.`}
       </p>
       <p className="mt-1 text-xs text-[var(--suave)]">Los criterios son una guía didáctica, no una definición oficial. ≈ significa «en parte».</p>
-    </div>
+    </PantallaCompleta>
   )
 }

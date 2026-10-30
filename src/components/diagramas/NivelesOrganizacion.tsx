@@ -175,7 +175,7 @@ function Ordena() {
   }
 
   return (
-    <div>
+    <PantallaCompleta conBoton>
       <p className="text-sm">Toca los niveles en orden, del más pequeño al más grande. Cada uno contiene al anterior.</p>
       <div role="group" aria-label="Niveles por ordenar" className="mt-3 flex flex-wrap gap-2">
         {orden.map((id) => {
@@ -215,6 +215,6 @@ function Ordena() {
       <button type="button" onClick={reiniciar} className="mt-2 min-h-10 rounded-lg border border-[var(--linea)] px-4 text-sm font-semibold">
         Mezclar y empezar de nuevo
       </button>
-    </div>
+    </PantallaCompleta>
   )
 }

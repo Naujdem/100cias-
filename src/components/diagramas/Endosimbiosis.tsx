@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import VisorZoom from '../VisorZoom.tsx'
 import PantallaCompleta from '../PantallaCompleta.tsx'
+import { useFlechas } from '../../lib/flechasDiagrama.ts'
 import EscenaEndosimbiosis, { PASOS_ENDO } from '../ilustraciones/EscenaEndosimbiosis.tsx'
 
 type Modo = 'pasos' | 'pruebas'
@@ -78,8 +79,13 @@ function Pruebas() {
   const [sel, setSel] = useState<number | null>(null)
   const f = sel === null ? null : FILAS[sel]
   const marca = (v: boolean) => (v ? '✔' : '✘')
+  // ← → pasan al rasgo anterior o siguiente de la tabla
+  useFlechas((dir) => {
+    setSel((s) => Math.max(0, Math.min(FILAS.length - 1, (s ?? (dir > 0 ? -1 : FILAS.length)) + dir)))
+    return true
+  })
   return (
-    <div>
+    <PantallaCompleta conBoton>
       <p className="text-sm">Compara una bacteria, una mitocondria y el resto de la célula. Toca un rasgo para ver por qué es una pista.</p>
       <div className="mt-3 overflow-x-auto">
         <table className="w-full text-sm">
@@ -117,6 +123,6 @@ function Pruebas() {
         {f ? <p>{f.explica}</p> : <p className="text-[var(--suave)]">Las mitocondrias se parecen a las bacterias y no al resto de la célula. Esa es la pista que apoya la hipótesis.</p>}
       </div>
       <p className="mt-2 text-xs text-[var(--suave)]">Los cloroplastos comparten estos rasgos con las cianobacterias. El tamaño de las mitocondrias es aproximado.</p>
-    </div>
+    </PantallaCompleta>
   )
 }

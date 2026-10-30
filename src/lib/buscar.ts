@@ -38,6 +38,7 @@ function camposDe(b: Tema['bloques'][number]): Campo[] {
     ...(f.contexto ?? []).flatMap((c) => [{ texto: c.titulo, peso: 2 }, { texto: c.texto, peso: 1 }]),
     ...(f.evidencia ?? []).map((texto) => ({ texto, peso: 1 })),
     ...(f.limites ? [{ texto: f.limites, peso: 1 }] : []),
+    ...(f.cuaderno ? [...f.cuaderno.facil, ...f.cuaderno.media, ...f.cuaderno.avanzada].map((texto) => ({ texto, peso: 1 })) : []),
     ...(b.autores ?? []).map((a) => ({ texto: a.aporte, peso: 1 })),
     ...b.preguntas.map((p) => ({ texto: p.enunciado, peso: 1 })),
   ]

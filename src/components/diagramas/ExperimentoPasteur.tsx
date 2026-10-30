@@ -115,6 +115,7 @@ function Pasteur() {
         {tipo === 'cisne' && (
           <button
             type="button"
+            data-principal
             onClick={() => setRotoEn(rotoEn === null ? dias : null)}
             className="min-h-10 rounded-lg border border-[var(--acento)] px-3 text-sm font-semibold text-[var(--acento)]"
           >

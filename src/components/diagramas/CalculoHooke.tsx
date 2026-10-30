@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import PantallaCompleta from '../PantallaCompleta.tsx'
 
 // Rehacer la cuenta de Hooke: contar cavidades en una línea corta y proyectar a un volumen.
 // Dato de partida (por verificar en el texto): unas 60 cavidades en 1/18 de pulgada.
@@ -13,7 +14,7 @@ export default function CalculoHooke() {
   const porCm3 = Math.round(porPulgada3 / 16.387064)
 
   return (
-    <div>
+    <PantallaCompleta conBoton>
       <p className="text-sm">
         Hooke no pudo contar mil millones de cavidades una por una. Contó las que caben en una línea muy corta y multiplicó. Rehaz su cuenta.
       </p>
@@ -64,6 +65,6 @@ export default function CalculoHooke() {
         </p>
         <p className="mt-1 text-[var(--suave)]">Una cuenta pequeña, hecha con una línea corta, le permitió estimar algo imposible de contar a mano. Además supone que las cavidades son parecidas en las tres direcciones.</p>
       </div>
-    </div>
+    </PantallaCompleta>
   )
 }

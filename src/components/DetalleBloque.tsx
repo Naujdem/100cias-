@@ -1,13 +1,31 @@
 import { useEffect, useId, useRef, useState } from 'react'
 import type { KeyboardEvent } from 'react'
-import type { Bloque } from '../data/schema.ts'
+import type { Autor, Bloque } from '../data/schema.ts'
 import { DIAGRAMAS } from './diagramas/index.tsx'
 import { NivelInsignia, BorradorInsignia } from './Insignia.tsx'
 import Retrato from './Retrato.tsx'
 import Ilustraciones from './Ilustraciones.tsx'
 import Acordeon from './Acordeon.tsx'
+import Cuaderno from './Cuaderno.tsx'
+import { enviarFlecha, moverDeslizador } from '../lib/flechasDiagrama.ts'
 
-type Pestana = 'historia' | 'diagrama' | 'evidencia'
+type Pestana = 'historia' | 'diagrama' | 'evidencia' | 'cuaderno'
+
+/** Línea sobre la naturaleza de la imagen y, plegado, su crédito y licencia. No muestra nada si el autor no tiene imagen. */
+function PieImagen({ autor }: { autor: Autor }) {
+  if (!autor.imagen) return null
+  return (
+    <>
+      {autor.pieImagen && <p className="mt-2 text-xs text-[var(--suave)]">{autor.pieImagen}</p>}
+      {autor.credito && (
+        <details className="mt-1 text-xs text-[var(--suave)]">
+          <summary className="cursor-pointer">Crédito de la imagen</summary>
+          <p className="mt-1">{autor.credito}</p>
+        </details>
+      )}
+    </>
+  )
+}
 
 const plural = (u: string) => (/[aeiou]$/i.test(u) ? `${u.toLowerCase()}s` : `${u.toLowerCase()}es`)
 
@@ -36,8 +54,11 @@ export default function DetalleBloque({ bloque: b, onCerrar, posicion, onAnterio
     { id: 'historia', texto: b.etiqueta ? 'Idea' : 'Historia' },
     ...(Diagrama ? [{ id: 'diagrama' as Pestana, texto: 'Diagrama' }] : []),
     { id: 'evidencia', texto: b.etiqueta ? 'Ejemplos y límites' : 'Evidencia y límites' },
+    ...(b.ficha.cuaderno ? [{ id: 'cuaderno' as Pestana, texto: 'Para el cuaderno' }] : []),
   ]
   const [activa, setActiva] = useState<Pestana>('historia')
+  const activaRef = useRef(activa)
+  activaRef.current = activa
   const [principal, ...otros] = b.autores ?? []
 
   // Foco: entra al diálogo y, al cerrar, vuelve a donde estaba.
@@ -65,6 +86,29 @@ export default function DetalleBloque({ bloque: b, onCerrar, posicion, onAnterio
       if (t && /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName)) return
       // con zoom, las flechas mueven la imagen (las maneja el visor)
       if (t?.closest('[data-zoomed="true"]') && e.key.startsWith('Arrow')) return
+
+      // En Diagrama y Para el cuaderno, ← → son de la pestaña: cambian el control principal
+      // (paso, días, aumento, caso, nivel). Los hitos se cambian con RePág/AvPág o con los botones.
+      const enControles = activaRef.current === 'diagrama' || activaRef.current === 'cuaderno'
+      if (enControles && (e.key === 'ArrowRight' || e.key === 'ArrowLeft')) {
+        const dir = e.key === 'ArrowRight' ? 1 : -1
+        const panel = caja.current?.querySelector<HTMLElement>('[data-diagrama]')
+        if (enviarFlecha(dir) || (activaRef.current === 'diagrama' && panel && moverDeslizador(panel, dir))) {
+          e.preventDefault()
+          e.stopPropagation()
+          return
+        }
+      }
+      // Espacio o Enter pulsan el botón principal del diagrama (Dividir, Romper el cuello…) si el foco no está en un control
+      if (activaRef.current === 'diagrama' && (e.key === 'Enter' || e.key === ' ') && !(t && /^(BUTTON|A|SUMMARY)$/.test(t.tagName))) {
+        const principalBtn = caja.current?.querySelector<HTMLButtonElement>('[data-principal]:not([disabled])')
+        if (principalBtn) {
+          e.preventDefault()
+          e.stopPropagation()
+          principalBtn.click()
+          return
+        }
+      }
 
       if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === 'ArrowLeft' || e.key === 'PageUp') {
         const siguiente = e.key === 'ArrowRight' || e.key === 'PageDown'
@@ -139,24 +183,20 @@ export default function DetalleBloque({ bloque: b, onCerrar, posicion, onAnterio
               </div>
               <div className="min-w-0 text-sm md:mt-3">
                 <p>{principal.aporte}</p>
-                {principal.imagen ? (
-                  <>
-                    {principal.pieImagen && <p className="mt-2 text-xs text-[var(--suave)]">{principal.pieImagen}</p>}
-                    {principal.credito && (
-                      <details className="mt-1 text-xs text-[var(--suave)]">
-                        <summary className="cursor-pointer">Crédito de la imagen</summary>
-                        <p className="mt-1">{principal.credito}</p>
-                      </details>
-                    )}
-                  </>
-                ) : (
-                  <p className="mt-2 text-xs text-[var(--suave)]">Silueta ilustrativa, no es un retrato.</p>
-                )}
+                {principal.imagen ? <PieImagen autor={principal} /> : <p className="mt-2 text-xs text-[var(--suave)]">Silueta ilustrativa, no es un retrato.</p>}
                 {otros.map((a) => (
-                  <p key={a.nombre} className="mt-3 border-t border-[var(--linea)] pt-3">
-                    <span className="font-semibold">{a.nombre}</span>
-                    {a.vida && <span className="text-[var(--suave)]"> ({a.vida})</span>}. {a.aporte}
-                  </p>
+                  <div key={a.nombre} className="mt-3 border-t border-[var(--linea)] pt-3">
+                    {a.imagen && (
+                      <div className="mb-2 w-24 md:w-32">
+                        <Retrato autor={a} />
+                      </div>
+                    )}
+                    <p>
+                      <span className="font-semibold">{a.nombre}</span>
+                      {a.vida && <span className="text-[var(--suave)]"> ({a.vida})</span>}. {a.aporte}
+                    </p>
+                    <PieImagen autor={a} />
+                  </div>
                 ))}
               </div>
             </aside>
@@ -206,7 +246,13 @@ export default function DetalleBloque({ bloque: b, onCerrar, posicion, onAnterio
                 </div>
               )}
 
-              {activa === 'diagrama' && Diagrama && <Diagrama />}
+              {activa === 'diagrama' && Diagrama && (
+                <div data-diagrama>
+                  <Diagrama />
+                </div>
+              )}
+
+              {activa === 'cuaderno' && b.ficha.cuaderno && <Cuaderno cuaderno={b.ficha.cuaderno} titulo={b.titulo} />}
 
               {activa === 'evidencia' && (
                 <div className="space-y-3">
@@ -247,7 +293,11 @@ export default function DetalleBloque({ bloque: b, onCerrar, posicion, onAnterio
                 {unidad} {posicion.actual} de {posicion.total}
               </p>
             )}
-            <p className="hidden md:block">← → {plural(unidad)} · ↑ ↓ pestañas · + − aumento · F pantalla completa · Esc cerrar</p>
+            <p className="hidden md:block">
+              {activa === 'diagrama' || activa === 'cuaderno'
+                ? `← → controles · RePág/AvPág ${plural(unidad)} · ↑ ↓ pestañas · F pantalla completa · Esc cerrar`
+                : `← → ${plural(unidad)} · ↑ ↓ pestañas · + − aumento · F pantalla completa · Esc cerrar`}
+            </p>
           </div>
           <button
             type="button"

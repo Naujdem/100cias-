@@ -15,6 +15,19 @@ export interface Pregunta {
   explicacion: string
 }
 
+/**
+ * Resumen opcional «para el cuaderno»: frases cortas para dictar o decir en clase.
+ * Los niveles se suman: Fácil muestra `facil`; Media, `facil` + `media`; Avanzada, las tres listas.
+ */
+export interface Cuaderno {
+  /** lo más importante */
+  facil: string[]
+  /** detalles que se suman a lo fácil */
+  media: string[]
+  /** más detalles que se suman a lo anterior */
+  avanzada: string[]
+}
+
 export interface Ficha {
   quien?: string
   cuando?: string
@@ -24,6 +37,8 @@ export interface Ficha {
   limites?: string
   /** datos de contexto breves (título + texto) que se muestran bajo la idea, en la pestaña Historia */
   contexto?: { titulo: string; texto: string }[]
+  /** resumen por niveles de lectura (pestaña opcional «Para el cuaderno») */
+  cuaderno?: Cuaderno
 }
 
 export interface Autor {

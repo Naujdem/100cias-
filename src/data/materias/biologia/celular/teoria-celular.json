@@ -57,7 +57,25 @@
             "titulo": "Un libro famoso",
             "texto": "Micrographia fue un éxito: con grandes láminas mostró un mundo invisible, como una pulga o un piojo. Samuel Pepys lo llamó «el libro más ingenioso que he leído»."
           }
-        ]
+        ],
+        "cuaderno": {
+          "facil": [
+            "En 1665, Robert Hooke observó con un microscopio una lámina muy delgada de corcho.",
+            "Vio cavidades pequeñas y ordenadas, como las celdillas de un panal, y las llamó «cells» (células).",
+            "Lo que vio eran las paredes de células muertas, no células vivas."
+          ],
+          "media": [
+            "Su microscopio era compuesto y aumentaba unas 30 veces; cortó el corcho con una navaja afilada.",
+            "Publicó su dibujo en el libro Micrographia (1665), en dos cortes distintos, A y B.",
+            "Para Hooke eran solo espacios («celdas»); la idea de que son las unidades vivas llegó casi dos siglos después."
+          ],
+          "avanzada": [
+            "Su cálculo: unas 60 cavidades en 1/18 de pulgada, es decir, más de mil millones por pulgada cúbica.",
+            "La palabra latina «cellula» significa «cuarto pequeño», como las celdas de un monasterio.",
+            "Encontró cavidades parecidas en otras plantas, como la médula del saúco y la zanahoria; en las plantas vivas estaban llenas de jugos.",
+            "En esos años Malpighi (Italia) y Grew (Inglaterra) también estudiaban la estructura interna de las plantas."
+          ]
+        }
       },
       "preguntas": [
         {
@@ -146,7 +164,10 @@
         {
           "nombre": "Antonie van Leeuwenhoek",
           "vida": "1632–1723",
-          "aporte": "Comerciante de telas neerlandés que fabricaba sus propias lentes. Describió protozoos, bacterias, glóbulos rojos y espermatozoides."
+          "aporte": "Comerciante de telas neerlandés que fabricaba sus propias lentes. Describió protozoos, bacterias, glóbulos rojos y espermatozoides.",
+          "imagen": "imagenes/leeuwenhoek-retrato-verkolje.jpg",
+          "pieImagen": "Pintura de Jan Verkolje, siglo XVII.",
+          "credito": "Jan Verkolje (Rijksmuseum). Dominio público (Wikimedia Commons). Reducida de tamaño."
         }
       ],
       "ficha": {
@@ -179,7 +200,26 @@
             "titulo": "Bacterias en sus propios dientes",
             "texto": "En 1683 describió pequeños organismos en el sarro de sus dientes. Son de los primeros dibujos de bacterias."
           }
-        ]
+        ],
+        "cuaderno": {
+          "facil": [
+            "Antonie van Leeuwenhoek miró gotas de agua con un microscopio de una sola lente (desde 1674).",
+            "Vio seres vivos diminutos que se movían y los llamó «animálculos» («animalitos»).",
+            "Sin saberlo, estaba viendo células vivas."
+          ],
+          "media": [
+            "Era un comerciante de telas de Delft (Países Bajos) que fabricaba sus propias lentes.",
+            "Su microscopio era una lente casi esférica entre dos placas de metal y llegaba a unos 200 aumentos o más.",
+            "Observó protozoos (hacia 1674), bacterias (1676), glóbulos rojos y espermatozoides.",
+            "Hooke había visto paredes de células muertas; Leeuwenhoek vio células vivas."
+          ],
+          "avanzada": [
+            "Mandó cartas a la Royal Society de Londres durante unos cincuenta años; Hooke repitió sus observaciones en 1677 y las confirmó.",
+            "Mantuvo en secreto cómo pulía sus lentes, por eso casi nadie pudo repetir sus resultados al principio.",
+            "No relacionó sus animálculos con las «células» de Hooke ni propuso una teoría general.",
+            "En 1683 describió organismos pequeños en el sarro de sus dientes: son de los primeros dibujos de bacterias."
+          ]
+        }
       },
       "preguntas": [
         {
@@ -261,7 +301,10 @@
         {
           "nombre": "Matthias Schleiden",
           "vida": "1804–1881",
-          "aporte": "Botánico alemán. Estudió el desarrollo de los tejidos vegetales."
+          "aporte": "Botánico alemán. Estudió el desarrollo de los tejidos vegetales.",
+          "imagen": "imagenes/schleiden-retrato-grabado.jpg",
+          "pieImagen": "Grabado en acero, hacia 1850.",
+          "credito": "Autor desconocido. Dominio público (Wikimedia Commons). Reducida de tamaño."
         }
       ],
       "ficha": {
@@ -290,7 +333,25 @@
             "titulo": "Una cena famosa",
             "texto": "Según se cuenta, en 1837 Schleiden le habló a Schwann del núcleo en las células vegetales, y Schwann recordó haber visto algo parecido en células animales. Esa conversación habría puesto en marcha la teoría celular."
           }
-        ]
+        ],
+        "cuaderno": {
+          "facil": [
+            "Matthias Schleiden, botánico alemán, estudió tejidos de plantas al microscopio.",
+            "En 1838 concluyó que todas las plantas están formadas por células.",
+            "Para él, la célula es la unidad básica de la planta."
+          ],
+          "media": [
+            "Dio mucha importancia al núcleo, que Robert Brown había descrito en 1831.",
+            "Pensó que el núcleo (que llamó «citoblasto») era el punto de partida de cada célula nueva.",
+            "En los años 1830 mejoraron las lentes (corregían los colores) y se vio más claro el interior de los tejidos."
+          ],
+          "avanzada": [
+            "Error: creía que las células nuevas se formaban a partir de material sin estructura, alrededor de un núcleo, como si se «cristalizaran».",
+            "Esa idea la corrigieron Remak y Virchow.",
+            "Estudió derecho antes de dedicarse a la botánica y a la medicina.",
+            "Según se cuenta, en 1837 le habló del núcleo a Schwann, y esa conversación habría puesto en marcha la teoría celular."
+          ]
+        }
       },
       "preguntas": [
         {
@@ -368,7 +429,10 @@
         {
           "nombre": "Theodor Schwann",
           "vida": "1810–1882",
-          "aporte": "Fisiólogo alemán. Estudió tejidos animales y publicó en 1839 su obra sobre la semejanza entre animales y plantas."
+          "aporte": "Fisiólogo alemán. Estudió tejidos animales y publicó en 1839 su obra sobre la semejanza entre animales y plantas.",
+          "imagen": "imagenes/schwann-retrato-hoffmann.jpg",
+          "pieImagen": "Litografía de Rudolf Hoffmann, 1857.",
+          "credito": "Rudolf Hoffmann, 1857. Dominio público (Wikimedia Commons). Reducida de tamaño."
         }
       ],
       "ficha": {
@@ -397,7 +461,26 @@
             "titulo": "Mucho más que células",
             "texto": "Descubrió las células de Schwann, que envuelven las fibras nerviosas; la pepsina, una enzima digestiva; y propuso la palabra «metabolismo». También defendió que la fermentación la hacen levaduras vivas."
           }
-        ]
+        ],
+        "cuaderno": {
+          "facil": [
+            "Theodor Schwann estudió tejidos de animales.",
+            "Vio que sus células se parecían a las de las plantas: tienen núcleo y membrana.",
+            "En 1839 concluyó que animales y plantas están formados por células."
+          ],
+          "media": [
+            "Las células animales no tienen pared, a diferencia de las vegetales.",
+            "Con Schleiden se asocian los dos primeros postulados de la teoría celular.",
+            "Postulado 1: todos los seres vivos están formados por una o más células.",
+            "Postulado 2: la célula es la unidad básica de la estructura y función de los seres vivos."
+          ],
+          "avanzada": [
+            "Comparó tejidos animales (cartílago, notocorda) con tejidos de plantas y encontró células parecidas.",
+            "Compartió el error de Schleiden sobre cómo se forman las células nuevas.",
+            "No tuvo el tercer postulado (toda célula proviene de otra célula): llegó con Remak y Virchow.",
+            "Descubrió las células de Schwann (envuelven fibras nerviosas) y la pepsina, y propuso la palabra «metabolismo»."
+          ]
+        }
       },
       "preguntas": [
         {
@@ -502,7 +585,25 @@
             "titulo": "Ver cómo se divide una célula",
             "texto": "Los pasos de la división se vieron con claridad años después, cuando Walther Flemming usó colorantes que teñían los cromosomas y llamó «mitosis» a ese proceso (hacia 1880)."
           }
-        ]
+        ],
+        "cuaderno": {
+          "facil": [
+            "Rudolf Virchow, médico alemán, sostuvo en 1855: «omnis cellula e cellula».",
+            "Significa que toda célula proviene de otra célula que ya existía.",
+            "Es el tercer postulado de la teoría celular."
+          ],
+          "media": [
+            "Corrige la idea de Schleiden y Schwann de que las células nacían de material sin forma.",
+            "Las células nuevas nacen por división de células que ya existían.",
+            "Permite explicar las enfermedades por lo que ocurre dentro de las células (patología celular)."
+          ],
+          "avanzada": [
+            "La idea ya circulaba antes: Remak había visto células dividiéndose y Virchow no le dio todo el crédito.",
+            "Flemming, con colorantes, mostró los pasos de la división (mitosis) hacia 1880.",
+            "Límite: el postulado vale para las células que existen hoy; no explica cómo apareció la primera célula.",
+            "En su libro de 1858 propuso que la enfermedad es un cambio en las células."
+          ]
+        }
       },
       "preguntas": [
         {
@@ -559,7 +660,10 @@
         {
           "nombre": "Rudolf Virchow",
           "vida": "1821–1902",
-          "aporte": "Médico y patólogo alemán. Popularizó la frase «omnis cellula e cellula» y desarrolló la patología celular, que explica las enfermedades a partir de lo que ocurre en las células."
+          "aporte": "Médico y patólogo alemán. Popularizó la frase «omnis cellula e cellula» y desarrolló la patología celular, que explica las enfermedades a partir de lo que ocurre en las células.",
+          "imagen": "imagenes/virchow-retrato-schaarwachter.jpg",
+          "pieImagen": "Fotografía de 1891: Virchow ya de mayor.",
+          "credito": "Julius Cornelius Schaarwächter, 1891 (Wellcome Collection). Licencia CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Reducida de tamaño."
         }
       ],
       "diagrama": "division-celular",
@@ -613,7 +717,28 @@
             "titulo": "Por qué Pouchet se equivocó",
             "texto": "Algunos microorganismos forman esporas que resisten el hervido; décadas después se explicó que eso pudo contaminar los caldos de Pouchet. Se dice que algunos matraces de Pasteur se conservan en París con el caldo todavía limpio."
           }
-        ]
+        ],
+        "cuaderno": {
+          "facil": [
+            "Antes se creía que algunos seres vivos nacían de materia sin vida (generación espontánea).",
+            "Redi (1668) mostró que las moscas nacen de huevos de otras moscas.",
+            "Pasteur (1861-1862) mostró que los microorganismos del caldo llegan con el aire y el polvo, no nacen del caldo.",
+            "Conclusión: la vida viene de otra vida."
+          ],
+          "media": [
+            "Redi usó frascos con carne, abiertos y cubiertos con gasa: solo aparecieron larvas donde las moscas pudieron poner huevos.",
+            "Pasteur usó matraces de cuello de cisne: el aire entraba, pero el polvo y los microorganismos quedaban atrapados en la curva.",
+            "El caldo hervido seguía limpio; al romper el cuello, se contaminaba.",
+            "Esto va en línea con el postulado de Virchow: toda célula viene de otra célula."
+          ],
+          "avanzada": [
+            "Objeción del aire: se decía que sellar los caldos (Needham, Spallanzani) impedía que entrara aire. Los matraces de Pasteur sí dejaban entrar aire.",
+            "Félix Pouchet defendía la generación espontánea y obtuvo resultados distintos a los de Pasteur.",
+            "Algunos microorganismos forman esporas que resisten el hervido; eso pudo contaminar los caldos de Pouchet.",
+            "Límite: estos experimentos refutan la generación espontánea en el presente; el origen de la primera vida en la Tierra es otra pregunta.",
+            "Redi trabajó con moscas y larvas; Pasteur extendió la idea a los microorganismos."
+          ]
+        }
       },
       "preguntas": [
         {
@@ -682,12 +807,18 @@
         {
           "nombre": "Louis Pasteur",
           "vida": "1822–1895",
-          "aporte": "Químico y microbiólogo francés. Con sus matraces de cuello de cisne ayudó a refutar la generación espontánea."
+          "aporte": "Químico y microbiólogo francés. Con sus matraces de cuello de cisne ayudó a refutar la generación espontánea.",
+          "imagen": "imagenes/pasteur-retrato-nadar.jpg",
+          "pieImagen": "Fotografía de Paul Nadar, antes de 1895 (versión restaurada).",
+          "credito": "Paul Nadar. Dominio público (Wikimedia Commons). Versión restaurada, reducida de tamaño."
         },
         {
           "nombre": "Francesco Redi",
           "vida": "1626–1697",
-          "aporte": "Médico y naturalista italiano. Con frascos tapados y destapados mostró que las larvas salen de huevos de moscas y no de la carne."
+          "aporte": "Médico y naturalista italiano. Con frascos tapados y destapados mostró que las larvas salen de huevos de moscas y no de la carne.",
+          "imagen": "imagenes/redi-retrato-voet.jpg",
+          "pieImagen": "Retrato de Jacob Ferdinand Voet, siglo XVII.",
+          "credito": "Jacob Ferdinand Voet. Dominio público (Wikimedia Commons). Reducida de tamaño."
         }
       ],
       "diagrama": "experimento-pasteur",
@@ -743,7 +874,25 @@
         "evidencia": [
           "Los estudios de genética y biología molecular del siglo XX mostraron que el material hereditario está en el ADN dentro de las células.",
           "El estudio del metabolismo mostró que las reacciones que sostienen la vida ocurren dentro de células (o con sus enzimas)."
-        ]
+        ],
+        "cuaderno": {
+          "facil": [
+            "Las versiones actuales de la teoría celular suman nuevas ideas a los tres postulados clásicos.",
+            "La célula contiene la información hereditaria (ADN), que pasa a las células hijas.",
+            "El metabolismo y el flujo de energía de la vida ocurren dentro de las células."
+          ],
+          "media": [
+            "Schleiden y Schwann aportaron las dos primeras ideas (1838-1839) y Virchow la tercera (1855).",
+            "El número de postulados cambia según el libro: algunos cuentan tres, otros cinco o seis.",
+            "Los virus son un caso límite: no son celulares y necesitan una célula hospedera para reproducirse."
+          ],
+          "avanzada": [
+            "En 1944 se mostró que el ADN es la molécula de la herencia, y en 1953 se propuso su estructura.",
+            "Casos que parecen raros y siguen siendo células: el glóbulo rojo maduro de mamífero (sin núcleo), la fibra de músculo (muchos núcleos) y la yema de un huevo sin fecundar (una sola célula enorme).",
+            "Un virus no tiene células ni metabolismo propio, pero sí material genético y evolución; si está vivo depende de cómo se defina «vivo».",
+            "Las definiciones de «célula» y de «vida» tienen bordes discutibles."
+          ]
+        }
       },
       "preguntas": [
         {
@@ -796,7 +945,30 @@
         }
       ],
       "revisado": false,
-      "diagrama": "cuenta-celula"
+      "diagrama": "cuenta-celula",
+      "ilustraciones": [
+        {
+          "id": "postulado-seres",
+          "titulo": "1.º Seres vivos con células",
+          "pie": "Primer postulado: todos los seres vivos están formados por una o más células. Una planta y un pez tienen muchas; una bacteria es una sola célula.",
+          "tipo": "svg",
+          "recurso": "postulado-seres"
+        },
+        {
+          "id": "postulado-unidad",
+          "titulo": "2.º La célula, unidad básica",
+          "pie": "Segundo postulado: la célula es la unidad básica de la estructura y de la función de los seres vivos.",
+          "tipo": "svg",
+          "recurso": "postulado-unidad"
+        },
+        {
+          "id": "postulado-origen",
+          "titulo": "3.º Toda célula viene de otra",
+          "pie": "Tercer postulado: toda célula proviene de otra célula que ya existía («omnis cellula e cellula», Virchow, 1855).",
+          "tipo": "svg",
+          "recurso": "postulado-origen"
+        }
+      ]
     },
     {
       "id": "endosimbiosis",
@@ -831,7 +1003,26 @@
             "titulo": "Lo que no se aceptó",
             "texto": "Margulis también defendió que los flagelos vendrían de otras bacterias; esa parte de su propuesta no tiene apoyo. Para el núcleo se discuten otras hipótesis."
           }
-        ]
+        ],
+        "cuaderno": {
+          "facil": [
+            "Las mitocondrias y los cloroplastos habrían sido antes bacterias de vida libre.",
+            "Pasaron a vivir dentro de otra célula, con beneficio mutuo, y con el tiempo se volvieron orgánulos.",
+            "La propuso Lynn Margulis en 1967."
+          ],
+          "media": [
+            "Es una de las explicaciones más aceptadas del origen de las células eucariotas.",
+            "Prueba: tienen ADN propio y circular, como las bacterias.",
+            "Prueba: tienen ribosomas de tipo 70S, como los procariotas.",
+            "Prueba: tienen doble membrana y se multiplican de forma parecida a la fisión binaria."
+          ],
+          "avanzada": [
+            "Antecedente: Konstantin Mereschkowski propuso hacia 1905 que los cloroplastos venían de organismos que vivían dentro de otras células.",
+            "Se cuenta que el artículo de Margulis fue rechazado por muchas revistas antes de publicarse.",
+            "En las décadas de 1970 y 1980, el ADN de las mitocondrias se vio parecido al de ciertas bacterias, y el de los cloroplastos al de las cianobacterias.",
+            "Límite: explica mitocondrias y cloroplastos, no el origen del núcleo; el proceso ocurrió hace unos 2.000 millones de años y no se pudo observar."
+          ]
+        }
       },
       "preguntas": [
         {
@@ -888,7 +1079,10 @@
         {
           "nombre": "Lynn Margulis",
           "vida": "1938–2011",
-          "aporte": "Bióloga estadounidense. En 1967 propuso la teoría endosimbiótica para explicar el origen de las mitocondrias y los cloroplastos."
+          "aporte": "Bióloga estadounidense. En 1967 propuso la teoría endosimbiótica para explicar el origen de las mitocondrias y los cloroplastos.",
+          "imagen": "imagenes/margulis-retrato-jpedreira.jpg",
+          "pieImagen": "Fotografía de 2005, durante una conferencia.",
+          "credito": "Jpedreira, 2005 (Wikimedia Commons). Licencia CC BY-SA 2.5 (https://creativecommons.org/licenses/by-sa/2.5/). Reducida de tamaño; conserva la misma licencia."
         },
         {
           "nombre": "Konstantin Mereschkowski",

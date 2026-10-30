@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import VisorZoom from '../VisorZoom.tsx'
 import PantallaCompleta from '../PantallaCompleta.tsx'
+import { useFlechas } from '../../lib/flechasDiagrama.ts'
 
 // Ilustración (no a escala real) de una gota de agua vista con lentes cada vez más fuertes.
 
@@ -259,8 +260,14 @@ const eje = (um: number) => 20 + (Math.log10(um) / 3) * 360 // 1 µm → 20, 100
 function Escala() {
   const [sel, setSel] = useState<string>('bacteria')
   const c = COSAS.find((x) => x.id === sel)!
+  // ← → pasan al objeto anterior o siguiente del eje
+  useFlechas((dir) => {
+    const i = COSAS.findIndex((x) => x.id === sel)
+    setSel(COSAS[Math.max(0, Math.min(COSAS.length - 1, i + dir))].id)
+    return true
+  })
   return (
-    <div>
+    <PantallaCompleta conBoton>
       <p className="text-sm">Toca cada cosa para ver su tamaño (el eje va de 1 µm a 1000 µm, 1 mm). Cada paso a la derecha es diez veces más grande.</p>
       <svg viewBox="0 0 400 130" role="img" aria-label="Eje de tamaños en escala logarítmica, de una micra a un milímetro" className="mt-3 w-full">
         <rect x="0" y="0" width="400" height="130" fill="var(--fondo)" rx="10" />
@@ -305,6 +312,6 @@ function Escala() {
         </ul>
       </div>
       <p className="mt-2 text-xs text-[var(--suave)]">Tamaños aproximados, para dar una idea del orden de magnitud. 1 µm es una milésima de milímetro.</p>
-    </div>
+    </PantallaCompleta>
   )
 }

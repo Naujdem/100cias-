@@ -28,6 +28,19 @@ for (const f of archivos(join(raiz, 'materias'))) {
     ids.add(b.id)
     if (!NIVELES.includes(b.nivel)) err(`${ctx}: nivel inválido (${b.nivel})`)
     if (!b.ficha?.idea) err(`${ctx}: falta ficha.idea`)
+    if (b.ficha?.cuaderno) {
+      const c = b.ficha.cuaderno
+      const vistos = new Set()
+      for (const nivel of ['facil', 'media', 'avanzada']) {
+        if (!Array.isArray(c[nivel])) { err(`${ctx}: cuaderno.${nivel} debe ser una lista`); continue }
+        if (nivel === 'facil' && c.facil.length === 0) err(`${ctx}: cuaderno.facil no puede estar vacío`)
+        for (const l of c[nivel]) {
+          if (typeof l !== 'string' || !l.trim()) err(`${ctx}: cuaderno.${nivel} tiene una frase vacía`)
+          else if (vistos.has(l)) err(`${ctx}: frase repetida en cuaderno (${l.slice(0, 40)}…)`)
+          else vistos.add(l)
+        }
+      }
+    }
     for (const a of b.autores ?? []) {
       if (!a.nombre || !a.aporte) err(`${ctx}: autor sin nombre o aporte`)
       if (a.imagen) {

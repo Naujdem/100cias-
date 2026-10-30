@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import VisorZoom from '../VisorZoom.tsx'
 import PantallaCompleta from '../PantallaCompleta.tsx'
+import { useFlechas } from '../../lib/flechasDiagrama.ts'
 
 // La lámina original de Micrographia (1665, dominio público), recortada por zonas con el viewBox.
 
@@ -30,6 +31,12 @@ const ZONAS: Record<Zona, { boton: string; vista: string; titulo: string; texto:
 export default function DibujoHooke() {
   const [zona, setZona] = useState<Zona>('lamina')
   const z = ZONAS[zona]
+  // ← → pasan de la lámina completa al corte A y al corte B
+  useFlechas((dir) => {
+    const claves = Object.keys(ZONAS) as Zona[]
+    setZona(claves[Math.max(0, Math.min(claves.length - 1, claves.indexOf(zona) + dir))])
+    return true
+  })
   return (
     <PantallaCompleta>
       <div className="mb-2 flex flex-wrap gap-2">

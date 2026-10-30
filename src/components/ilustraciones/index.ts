@@ -9,6 +9,7 @@ import FrascosRedi from './FrascosRedi.tsx'
 import EscenaEndosimbiosis from './EscenaEndosimbiosis.tsx'
 import GotaAnimalculos from './GotaAnimalculos.tsx'
 import MicroscopioHooke from './MicroscopioHooke.tsx'
+import { PostuladoSeres, PostuladoUnidad, PostuladoOrigen } from './Postulados.tsx'
 
 /** Registro de ilustraciones SVG. La clave es el `recurso` de una ilustración de tipo «svg». */
 export const ILUSTRACIONES_SVG: Record<string, ComponentType> = {
@@ -22,4 +23,7 @@ export const ILUSTRACIONES_SVG: Record<string, ComponentType> = {
   'celula-anafase': () => CelulaDividiendo({ etapa: 3 }),
   'tejido-vegetal': TejidoVegetal,
   'tejido-animal': TejidoAnimal,
+  'postulado-seres': PostuladoSeres,
+  'postulado-unidad': PostuladoUnidad,
+  'postulado-origen': PostuladoOrigen,
 }
