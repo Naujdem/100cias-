@@ -24,6 +24,19 @@ Cuando confirmes uno con una fuente, márcalo con `[x]`, escribe la fuente al la
 - [ ] **Más allá**: definiciones de población, comunidad, ecosistema y biosfera.
 - [ ] **Conexión con 1.1**: Schleiden y Schwann, 1838–1839; Leeuwenhoek vio organismos unicelulares en la década de 1670; endosimbiosis (Margulis).
 
+## Subtema 1.3 · Unicelulares y pluricelulares
+
+- [ ] **Unicelulares**: *Thiomargarita magnifica* pasa de un centímetro y se ve a simple vista (hallazgo de 2022).
+- [ ] **Unicelulares**: la reproducción por división en muchos unicelulares; lista de ejemplos procariotas y eucariotas.
+- [ ] **Colonias**: *Volvox* forma una esfera de cientos o miles de células y solo unas pocas se reproducen; sus células con flagelo ya no pueden vivir separadas.
+- [ ] **Colonias**: los coanoflagelados son los parientes vivos más cercanos de los animales.
+- [ ] **Pluricelulares**: casi todos empiezan como una sola célula; qué grupos de hongos son pluricelulares.
+- [ ] **División del trabajo**: casi todas las células de un organismo tienen el mismo ADN y cada tipo usa una parte.
+- [ ] **Esponja**: varios tipos de células pero sin tejidos verdaderos (actividad y dibujo).
+- [ ] **Ventajas y costos**: relación superficie/volumen (cubos de lado 1, 2 y 3: 6, 3 y 2) y su uso como explicación del transporte.
+- [ ] **Origen**: «más de 20 veces» en eucariotas; *Dictyostelium* (agregación cuando falta alimento); experimento de las levaduras «copo de nieve» (Ratcliff y colaboradores, 2012, y que ocurrió en unas semanas).
+- [ ] **Dibujos**: son esquemas no a escala (ejemplos unicelulares, *Volvox*, esponja, organismo con tejidos, cubos, árbol de orígenes).
+
 ## Subtema 1.1 · Teoría celular
 
 - [ ] Raspail ~1825, polémica con Remak, libro de 1858, términos «leucemia» y «embolia», Flemming ~1880 (ficha de Virchow).

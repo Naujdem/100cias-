@@ -18,6 +18,11 @@
         "organo",
         "sistema",
         "organismo"
+      ],
+      "unicelulares-pluricelulares": [
+        "unicelulares",
+        "pluricelulares",
+        "division-trabajo"
       ]
     },
     "nivelDibujo": "basico"
@@ -44,6 +49,13 @@
         "organo",
         "sistema",
         "organismo"
+      ],
+      "unicelulares-pluricelulares": [
+        "unicelulares",
+        "colonias",
+        "pluricelulares",
+        "division-trabajo",
+        "ventajas"
       ]
     },
     "nivelDibujo": "intermedio"
@@ -74,6 +86,14 @@
         "sistema",
         "organismo",
         "mas-alla"
+      ],
+      "unicelulares-pluricelulares": [
+        "unicelulares",
+        "colonias",
+        "pluricelulares",
+        "division-trabajo",
+        "ventajas",
+        "origen"
       ]
     },
     "nivelDibujo": "avanzado"

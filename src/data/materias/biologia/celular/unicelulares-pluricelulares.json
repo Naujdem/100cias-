@@ -1,0 +1,593 @@
+{
+  "id": "unicelulares-pluricelulares",
+  "materia": "biologia",
+  "area": "celular",
+  "titulo": "Teoría celular y niveles de organización",
+  "subtema": "Unicelulares y pluricelulares",
+  "orden": 3,
+  "etiqueta": "1.3",
+  "vistas": [
+    "niveles"
+  ],
+  "tituloVista": "De una célula a muchas",
+  "unidad": "Paso",
+  "fuentes": [
+    "Presentación «La célula» de JuanMed (referencia)",
+    "Plan de área del colegio (solo guía)",
+    "BORRADOR: contenido redactado como punto de partida; verificar cada bloque contra el libro o apuntes de referencia antes de marcarlo como revisado."
+  ],
+  "bloques": [
+    {
+      "id": "unicelulares",
+      "titulo": "Unicelulares: una sola célula",
+      "resumen": "Una sola célula es todo el organismo y hace todo lo necesario para vivir.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "Un ser unicelular es un organismo formado por una sola célula. Esa única célula hace todo lo que necesita para vivir: obtiene alimento, produce energía, responde a su entorno y se reproduce.",
+        "contexto": [
+          {
+            "titulo": "Dos grandes grupos",
+            "texto": "Las bacterias y las arqueas son unicelulares procariotas (sin núcleo). Las amebas, los paramecios, las euglenas y las levaduras son unicelulares eucariotas (con núcleo). Más sobre esto en el tema «Tipos de células»."
+          },
+          {
+            "titulo": "Un mundo casi invisible",
+            "texto": "La mayoría de los unicelulares solo se ven con microscopio, como los que descubrió Leeuwenhoek. Hay excepciones: algunas bacterias gigantes, como Thiomargarita magnifica, pasan de un centímetro y se ven a simple vista."
+          },
+          {
+            "titulo": "Se reproducen dividiéndose",
+            "texto": "Muchos unicelulares se reproducen dividiéndose en dos, y cada célula hija es un organismo nuevo. Conecta con el tercer postulado de la teoría celular: toda célula viene de otra célula."
+          }
+        ],
+        "evidencia": [
+          "Una ameba atrapa su alimento, lo digiere y se desplaza, todo con una sola célula.",
+          "Un paramecio nada con sus cilios y se aleja de sustancias dañinas."
+        ],
+        "limites": "Tener una sola célula no la hace «simple»: una ameba o un paramecio tienen muchos orgánulos y comportamientos complejos.",
+        "cuaderno": {
+          "facil": [
+            "Un ser unicelular está formado por una sola célula.",
+            "Esa célula hace todo: se alimenta, produce energía, reacciona y se reproduce."
+          ],
+          "media": [
+            "Ejemplos: bacterias, amebas, paramecios y levaduras.",
+            "Muchos se reproducen dividiéndose en dos."
+          ],
+          "avanzada": [
+            "Los hay procariotas (bacterias y arqueas) y eucariotas (ameba, paramecio, levadura).",
+            "Una célula sola no es «simple»: puede tener muchos orgánulos y comportamientos complejos."
+          ]
+        }
+      },
+      "ilustraciones": [
+        {
+          "id": "uni-ejemplos",
+          "titulo": "Cuatro seres de una sola célula",
+          "pie": "Una bacteria (procariota) y tres eucariotas: levadura, ameba y paramecio. Cada una es una célula y un organismo completo. Esquemas no a escala.",
+          "tipo": "svg",
+          "recurso": "uni-ejemplos"
+        }
+      ],
+      "diagrama": "uni-paso-0",
+      "preguntas": [
+        {
+          "id": "uni-1",
+          "enunciado": "¿Qué es un organismo unicelular?",
+          "opciones": [
+            "Un ser vivo formado por una sola célula",
+            "Un ser vivo sin células",
+            "Un conjunto de tejidos",
+            "Una parte de un órgano"
+          ],
+          "correcta": 0,
+          "explicacion": "Un unicelular es un organismo completo hecho de una sola célula."
+        },
+        {
+          "id": "uni-2",
+          "enunciado": "¿Cuál de estos seres es unicelular?",
+          "opciones": [
+            "Roble",
+            "Ameba",
+            "Persona",
+            "Esponja"
+          ],
+          "correcta": 1,
+          "explicacion": "La ameba es una sola célula. El roble, la persona y la esponja son pluricelulares."
+        },
+        {
+          "id": "uni-3",
+          "enunciado": "Una bacteria se reproduce dividiéndose en dos. ¿Qué es cada célula hija?",
+          "opciones": [
+            "Un tejido",
+            "Un órgano",
+            "Un organismo nuevo",
+            "Un orgánulo"
+          ],
+          "correcta": 2,
+          "explicacion": "En un unicelular, cada célula es un organismo completo; por eso la célula hija es un organismo nuevo."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "colonias",
+      "titulo": "Colonias: el paso intermedio",
+      "resumen": "Células que viven juntas, a veces con tareas sencillas repartidas.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "intermedio",
+      "requiere": [
+        "unicelulares"
+      ],
+      "ficha": {
+        "idea": "Una colonia es un grupo de células que viven juntas, a veces con un reparto de tareas sencillo. Es un paso intermedio entre ser unicelular y ser pluricelular, y ayuda a imaginar cómo pudo surgir la pluricelularidad.",
+        "contexto": [
+          {
+            "titulo": "El caso de Volvox",
+            "texto": "Volvox es un alga verde que forma una esfera hueca de cientos o miles de células con flagelos que la hacen nadar. Solo unas pocas células de la esfera se encargan de reproducirse."
+          },
+          {
+            "titulo": "¿Colonia o pluricelular?",
+            "texto": "La frontera no es nítida. Se suele decir que en una colonia sencilla cada célula todavía podría vivir sola, y que en un pluricelular ya no."
+          },
+          {
+            "titulo": "Parientes de los animales",
+            "texto": "Los coanoflagelados, unicelulares que a veces forman colonias, son los parientes vivos más cercanos de los animales."
+          }
+        ],
+        "evidencia": [
+          "En colonias sencillas, como algunas cadenas de algas, una célula separada puede seguir viviendo sola.",
+          "En Volvox, las células con flagelos mueven la esfera y unas pocas células reproductoras producen nuevas colonias."
+        ],
+        "limites": "Hay colonias muy distintas entre sí. En Volvox, las células con flagelos ya no pueden vivir separadas, así que «colonia» y «pluricelular» forman un espectro y no dos cajas cerradas.",
+        "cuaderno": {
+          "facil": [
+            "Una colonia es un grupo de células que viven juntas.",
+            "Es un paso entre ser unicelular y ser pluricelular."
+          ],
+          "media": [
+            "Ejemplo: Volvox, una esfera de cientos o miles de células, donde unas nadan y unas pocas se reproducen.",
+            "En una colonia sencilla, cada célula todavía puede vivir sola."
+          ],
+          "avanzada": [
+            "La frontera entre colonia y pluricelular no es nítida.",
+            "Los coanoflagelados, que a veces forman colonias, son los parientes vivos más cercanos de los animales."
+          ]
+        }
+      },
+      "ilustraciones": [
+        {
+          "id": "uni-volvox",
+          "titulo": "Una colonia: Volvox",
+          "pie": "Esquema de Volvox: una esfera de células con flagelos que nadan y unas pocas células reproductoras en el interior.",
+          "tipo": "svg",
+          "recurso": "uni-paso-2"
+        }
+      ],
+      "diagrama": "uni-paso-2",
+      "preguntas": [
+        {
+          "id": "col-1",
+          "enunciado": "¿Qué es una colonia?",
+          "opciones": [
+            "Una sola célula muy grande",
+            "Un órgano",
+            "Un grupo de células que viven juntas, a veces con tareas repartidas",
+            "Un grupo de especies distintas"
+          ],
+          "correcta": 2,
+          "explicacion": "Una colonia es un grupo de células que viven juntas; en algunas ya hay un reparto sencillo de tareas."
+        },
+        {
+          "id": "col-2",
+          "enunciado": "¿Qué ayuda a entender la existencia de colonias como Volvox?",
+          "opciones": [
+            "Cómo pudo surgir la pluricelularidad",
+            "Por qué existen los átomos",
+            "Cómo funciona un virus",
+            "Por qué hay estaciones"
+          ],
+          "correcta": 0,
+          "explicacion": "Las colonias muestran un paso intermedio entre una célula sola y un organismo pluricelular."
+        },
+        {
+          "id": "col-3",
+          "enunciado": "En Volvox, ¿qué hacen unas pocas células de la esfera?",
+          "opciones": [
+            "Forman un corazón",
+            "Se encargan de reproducirse",
+            "Se convierten en huesos",
+            "Producen leche"
+          ],
+          "correcta": 1,
+          "explicacion": "Unas células nadan con sus flagelos y unas pocas se encargan de la reproducción: un reparto de tareas sencillo."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "pluricelulares",
+      "titulo": "Pluricelulares: muchas células, un solo ser",
+      "resumen": "Muchas células que trabajan juntas y dependen unas de otras.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "Un ser pluricelular está formado por muchas células que trabajan juntas y dependen unas de otras. Ninguna puede vivir sola por mucho tiempo: el organismo funciona como un todo.",
+        "contexto": [
+          {
+            "titulo": "Células unidas",
+            "texto": "Las células de un pluricelular se mantienen pegadas y se comunican entre sí, por ejemplo con señales químicas."
+          },
+          {
+            "titulo": "Todas vienen de una",
+            "texto": "Casi todos los pluricelulares empiezan como una sola célula, como el cigoto, que se divide muchas veces."
+          },
+          {
+            "titulo": "Dónde los encontramos",
+            "texto": "Los animales, las plantas y muchos hongos son pluricelulares. También hay algas pluricelulares, como las algas pardas."
+          }
+        ],
+        "evidencia": [
+          "Una célula de la piel de una persona no sobreviviría sola: necesita del resto del cuerpo.",
+          "Todas las células de una persona vienen de una sola, el cigoto, que se dividió muchas veces."
+        ],
+        "limites": "Ser pluricelular no es lo mismo que ser grande: hay pluricelulares muy pequeños y unicelulares que se ven a simple vista.",
+        "cuaderno": {
+          "facil": [
+            "Un ser pluricelular tiene muchas células.",
+            "Las células trabajan juntas y dependen unas de otras."
+          ],
+          "media": [
+            "Casi todos empiezan como una sola célula que se divide muchas veces.",
+            "Son pluricelulares los animales, las plantas y muchos hongos."
+          ],
+          "avanzada": [
+            "Las células se mantienen unidas y se comunican con señales químicas.",
+            "Ser pluricelular no es lo mismo que ser grande."
+          ]
+        }
+      },
+      "ilustraciones": [
+        {
+          "id": "uni-paso-4",
+          "titulo": "Un organismo con tejidos y órganos",
+          "pie": "Esquema de un pluricelular: tejido de revestimiento, tejido muscular y un órgano. Muchas células de tipos distintos que dependen unas de otras.",
+          "tipo": "svg",
+          "recurso": "uni-paso-4"
+        }
+      ],
+      "diagrama": "uni-clasifica",
+      "preguntas": [
+        {
+          "id": "plu-1",
+          "enunciado": "¿Qué caracteriza a un ser pluricelular?",
+          "opciones": [
+            "Está formado por muchas células que dependen unas de otras",
+            "Está formado por una sola célula grande",
+            "No tiene células",
+            "Solo vive en el agua"
+          ],
+          "correcta": 0,
+          "explicacion": "En un pluricelular las células trabajan juntas y ninguna vive sola por mucho tiempo."
+        },
+        {
+          "id": "plu-2",
+          "enunciado": "¿Cómo empieza la vida de casi todos los pluricelulares?",
+          "opciones": [
+            "Como un órgano pequeño",
+            "Como una sola célula que se divide muchas veces",
+            "Como un tejido",
+            "Como un sistema de órganos"
+          ],
+          "correcta": 1,
+          "explicacion": "Casi todos parten de una célula, como el cigoto, que se divide muchas veces."
+        },
+        {
+          "id": "plu-3",
+          "enunciado": "¿Cuál de estos seres es pluricelular?",
+          "opciones": [
+            "Levadura",
+            "Bacteria",
+            "Roble",
+            "Ameba"
+          ],
+          "correcta": 2,
+          "explicacion": "El roble es una planta pluricelular. La levadura, la bacteria y la ameba son unicelulares."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "division-trabajo",
+      "titulo": "División del trabajo: células que se especializan",
+      "resumen": "Cada tipo de célula se encarga de una tarea.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "basico",
+      "requiere": [
+        "pluricelulares"
+      ],
+      "ficha": {
+        "idea": "En un pluricelular las células no son todas iguales: cada tipo se especializa en una tarea, como transportar oxígeno, contraerse o captar luz. Esa división del trabajo permite que el organismo sea más grande y complejo.",
+        "contexto": [
+          {
+            "titulo": "Un mismo ADN, muchos tipos de células",
+            "texto": "Casi todas las células de un organismo tienen el mismo ADN, pero cada tipo usa solo una parte de él. Por eso un glóbulo rojo y una neurona son tan distintos."
+          },
+          {
+            "titulo": "Diferenciación",
+            "texto": "El proceso por el que una célula se vuelve de un tipo especializado se llama diferenciación celular. Se ve con más detalle en el tema «De la célula al organismo»."
+          },
+          {
+            "titulo": "Una cosa a cambio de otra",
+            "texto": "Al especializarse, una célula gana eficiencia en su tarea, pero pierde la capacidad de hacer todo por sí sola."
+          }
+        ],
+        "evidencia": [
+          "Las células musculares se contraen, las nerviosas transmiten señales y los glóbulos rojos llevan oxígeno.",
+          "En una planta, las células de la hoja hacen fotosíntesis y las de la raíz absorben agua."
+        ],
+        "limites": "La especialización no es total: muchas células conservan funciones básicas y algunas, como las células madre, pueden volverse de varios tipos.",
+        "cuaderno": {
+          "facil": [
+            "En un pluricelular cada tipo de célula tiene su trabajo.",
+            "A eso se le llama división del trabajo."
+          ],
+          "media": [
+            "Ejemplos: las musculares se contraen, las nerviosas envían señales y los glóbulos rojos llevan oxígeno.",
+            "El proceso por el que una célula se especializa se llama diferenciación."
+          ],
+          "avanzada": [
+            "Casi todas las células de un organismo tienen el mismo ADN, pero cada tipo usa solo una parte.",
+            "Al especializarse, una célula gana eficiencia pero ya no puede vivir sola."
+          ]
+        }
+      },
+      "ilustraciones": [
+        {
+          "id": "uni-paso-3",
+          "titulo": "Varios tipos de células: una esponja",
+          "pie": "Esquema de una esponja: células de revestimiento, células con flagelo y células móviles. Hay división del trabajo, pero no tejidos verdaderos.",
+          "tipo": "svg",
+          "recurso": "uni-paso-3"
+        }
+      ],
+      "diagrama": "uni-paso-3",
+      "preguntas": [
+        {
+          "id": "div-1",
+          "enunciado": "¿Qué es la división del trabajo en un ser pluricelular?",
+          "opciones": [
+            "Que cada tipo de célula se encarga de una tarea",
+            "Que todas las células hacen lo mismo",
+            "Que las células se dividen en dos",
+            "Que el organismo se parte en dos"
+          ],
+          "correcta": 0,
+          "explicacion": "Cada tipo de célula se especializa en una tarea, y el organismo funciona gracias al conjunto."
+        },
+        {
+          "id": "div-2",
+          "enunciado": "¿Cómo se llama el proceso por el que una célula se vuelve de un tipo especializado?",
+          "opciones": [
+            "Fotosíntesis",
+            "Fisión binaria",
+            "Diferenciación celular",
+            "Endosimbiosis"
+          ],
+          "correcta": 2,
+          "explicacion": "La diferenciación celular es el proceso por el que una célula se especializa."
+        },
+        {
+          "id": "div-3",
+          "enunciado": "¿Qué se pierde al especializarse una célula?",
+          "opciones": [
+            "El ADN",
+            "La membrana",
+            "Toda su energía",
+            "La capacidad de hacer todo por sí sola"
+          ],
+          "correcta": 3,
+          "explicacion": "La célula especializada gana eficiencia en su tarea, pero depende del resto para lo demás. Conserva su ADN."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "ventajas",
+      "titulo": "Ventajas y costos de ser pluricelular",
+      "resumen": "Crecer permite más, pero exige transporte y coordinación.",
+      "anio": 5,
+      "etiqueta": "Paso 5",
+      "nivel": "intermedio",
+      "requiere": [
+        "pluricelulares"
+      ],
+      "ficha": {
+        "idea": "Ser pluricelular permite crecer más y especializar las células, pero tiene costos: las células dependen unas de otras, hace falta transportar sustancias hasta todas ellas y coordinar el conjunto.",
+        "contexto": [
+          {
+            "titulo": "Más grande",
+            "texto": "Crecer permite, por ejemplo, tener más reservas, desplazarse más lejos o escapar de depredadores pequeños."
+          },
+          {
+            "titulo": "El problema de la superficie",
+            "texto": "Una célula intercambia sustancias con el entorno por su superficie. Al crecer un organismo, su volumen aumenta más rápido que su superficie, y por eso las células del interior necesitan sistemas de transporte, como la sangre o los vasos de una planta."
+          },
+          {
+            "titulo": "Coordinación",
+            "texto": "Las células deben comunicarse y coordinarse, y a veces una célula muere por el bien del conjunto: es la muerte celular programada, que se ve en el tema «Procesos celulares»."
+          }
+        ],
+        "evidencia": [
+          "Una bacteria intercambia sustancias directamente con el agua que la rodea; una persona necesita pulmones, corazón y vasos para que el oxígeno llegue a cada célula.",
+          "Una planta grande transporta agua y azúcares por tubos especializados, el xilema y el floema."
+        ],
+        "limites": "Ser pluricelular no es «mejor» que ser unicelular: las bacterias están entre los seres más abundantes y llevan miles de millones de años en la Tierra.",
+        "cuaderno": {
+          "facil": [
+            "Ser pluricelular permite crecer más y tener células especializadas.",
+            "Tiene costos: las células dependen unas de otras."
+          ],
+          "media": [
+            "Al crecer, el volumen aumenta más rápido que la superficie, y por eso hacen falta sistemas de transporte.",
+            "Ser pluricelular no es «mejor»: las bacterias llevan miles de millones de años."
+          ],
+          "avanzada": [
+            "Las células deben comunicarse y coordinarse; a veces una célula muere por el bien del conjunto (muerte celular programada).",
+            "Ejemplos de transporte: la sangre en animales, y el xilema y el floema en plantas."
+          ]
+        }
+      },
+      "ilustraciones": [
+        {
+          "id": "uni-superficie-volumen",
+          "titulo": "Superficie y volumen",
+          "pie": "Cubos de lado 1, 2 y 3: la superficie crece con el cuadrado del lado y el volumen con el cubo, así que la relación superficie ÷ volumen baja.",
+          "tipo": "svg",
+          "recurso": "uni-superficie-volumen"
+        }
+      ],
+      "diagrama": "uni-paso-4",
+      "preguntas": [
+        {
+          "id": "ven-1",
+          "enunciado": "¿Qué ventaja da ser pluricelular?",
+          "opciones": [
+            "Permite no necesitar energía",
+            "Permite crecer más y tener células especializadas",
+            "Elimina la necesidad de alimentarse",
+            "Hace que las células vivan sin membrana"
+          ],
+          "correcta": 1,
+          "explicacion": "Un cuerpo de muchas células puede crecer y repartir tareas entre células especializadas."
+        },
+        {
+          "id": "ven-2",
+          "enunciado": "¿Por qué un organismo grande necesita sistemas de transporte?",
+          "opciones": [
+            "Porque tienen más ADN",
+            "Porque no tienen membrana",
+            "Porque las células del interior no pueden recibir sustancias directamente del exterior",
+            "Porque son más antiguos"
+          ],
+          "correcta": 2,
+          "explicacion": "El volumen crece más rápido que la superficie, así que el interior no alcanza a intercambiar sustancias con el entorno."
+        },
+        {
+          "id": "ven-3",
+          "enunciado": "¿Es mejor ser pluricelular que unicelular?",
+          "opciones": [
+            "No: cada forma tiene ventajas y costos, y las bacterias son muy exitosas",
+            "Sí, siempre",
+            "Sí, porque los unicelulares ya desaparecieron",
+            "No, los pluricelulares no existen"
+          ],
+          "correcta": 0,
+          "explicacion": "Ninguna forma es «mejor» en general: los unicelulares son muy abundantes y siguen viviendo en casi todos los ambientes."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "origen",
+      "titulo": "El origen de la pluricelularidad",
+      "resumen": "Apareció muchas veces, a partir de unicelulares que quedaron unidos.",
+      "anio": 6,
+      "etiqueta": "Paso 6",
+      "nivel": "avanzado",
+      "requiere": [
+        "colonias"
+      ],
+      "ficha": {
+        "idea": "La pluricelularidad no apareció una sola vez: surgió de manera independiente en varios linajes, como los animales, las plantas, los hongos y varios grupos de algas. Se cree que empezó con unicelulares que quedaron unidos y fueron repartiendo tareas.",
+        "contexto": [
+          {
+            "titulo": "Muchas veces, no una",
+            "texto": "Se ha propuesto que la pluricelularidad evolucionó de forma independiente más de 20 veces en los eucariotas. La cifra exacta se sigue discutiendo."
+          },
+          {
+            "titulo": "Dos formas de empezar",
+            "texto": "En animales y plantas se cree que las células se quedaron juntas tras dividirse. En otros casos, como la ameba social Dictyostelium, células que vivían solas se agrupan cuando falta el alimento."
+          },
+          {
+            "titulo": "Un experimento",
+            "texto": "En el laboratorio, levaduras unicelulares sometidas a selección por tamaño formaron en unas semanas grupos de células con forma de copo de nieve (experimento de Ratcliff y colaboradores, 2012)."
+          }
+        ],
+        "evidencia": [
+          "Los coanoflagelados, unicelulares emparentados con los animales, a veces forman colonias en forma de roseta.",
+          "Dictyostelium vive sola, pero se agrupa en un cuerpo con células distintas cuando falta alimento."
+        ],
+        "limites": "Cómo fueron los primeros pasos sigue siendo un tema de investigación: lo que se sabe viene de organismos actuales y de experimentos, no de observar el origen.",
+        "cuaderno": {
+          "facil": [
+            "La pluricelularidad apareció muchas veces, no una sola vez.",
+            "Empezó con células que quedaron unidas y se repartieron tareas."
+          ],
+          "media": [
+            "Surgió de forma independiente en animales, plantas, hongos y algunas algas.",
+            "En animales y plantas, las células se quedaron juntas tras dividirse."
+          ],
+          "avanzada": [
+            "Dictyostelium vive sola, pero se agrupa en un cuerpo con células distintas cuando falta alimento.",
+            "En experimentos, levaduras unicelulares formaron grupos de células en pocas semanas."
+          ]
+        }
+      },
+      "ilustraciones": [
+        {
+          "id": "uni-origenes",
+          "titulo": "Varios orígenes de lo pluricelular",
+          "pie": "Esquema: desde ancestros unicelulares, la pluricelularidad apareció por separado en varios grupos. No muestra parentescos reales.",
+          "tipo": "svg",
+          "recurso": "uni-origenes"
+        }
+      ],
+      "diagrama": "uni-paso-1",
+      "preguntas": [
+        {
+          "id": "ori-1",
+          "enunciado": "¿Cuántas veces apareció la pluricelularidad en la historia de la vida?",
+          "opciones": [
+            "Una sola vez",
+            "Muchas veces, en linajes distintos",
+            "Nunca, es una ilusión",
+            "Solo en los animales"
+          ],
+          "correcta": 1,
+          "explicacion": "Surgió de forma independiente en varios grupos, como animales, plantas, hongos y algas."
+        },
+        {
+          "id": "ori-2",
+          "enunciado": "¿Cuál de estos grupos de unicelulares es pariente cercano de los animales?",
+          "opciones": [
+            "Coanoflagelados",
+            "Bacterias",
+            "Arqueas",
+            "Cianobacterias"
+          ],
+          "correcta": 0,
+          "explicacion": "Los coanoflagelados, que a veces forman colonias, son los parientes vivos más cercanos de los animales."
+        },
+        {
+          "id": "ori-3",
+          "enunciado": "¿Por qué la ameba social Dictyostelium es un buen ejemplo?",
+          "opciones": [
+            "Es una planta",
+            "Nunca se agrupa",
+            "Vive sola, pero se agrupa en un cuerpo con células distintas cuando falta alimento",
+            "Es un órgano"
+          ],
+          "correcta": 2,
+          "explicacion": "Muestra cómo células que viven solas pueden unirse y repartirse tareas."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}

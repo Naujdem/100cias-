@@ -7,7 +7,7 @@ import type { PropsVista } from './tipos.ts'
 export default function VistaNiveles({ bloques, abierto, onSeleccionar, carril }: PropsVista) {
   const n = bloques.length
   return (
-    <div ref={carril} aria-label="Niveles de organización, de menor a mayor">
+    <div ref={carril} aria-label="Pila de elementos: el primero abajo y el último arriba">
       <ol className="flex flex-col-reverse items-center gap-2">
         {bloques.map((b, i) => {
           const sel = abierto === b.id
