@@ -8,6 +8,7 @@ import LineaTiempo from './components/LineaTiempo.tsx'
 import Quiz from './components/Quiz.tsx'
 import { vistasDe } from './components/linea/vistas.ts'
 import Buscador from './components/Buscador.tsx'
+import Guia from './components/Guia.tsx'
 import type { Resultado } from './lib/buscar.ts'
 
 // Todos los subtemas del contenido, ordenados. Para agregar uno basta con crear su JSON en data/materias.
@@ -16,6 +17,7 @@ const TEMAS = Object.values(import.meta.glob('./data/materias/**/*.json', { eage
   .sort((a, b) => (a.orden ?? 99) - (b.orden ?? 99))
 const PERFILES = perfilesJson as unknown as Perfil[]
 const CLAVE_TEMA = 'cien:tema-activo'
+const CLAVE_PERFIL = 'cien:perfil' // el último perfil elegido: vale para todos los subtemas
 
 interface Guardado {
   perfil: string
@@ -71,7 +73,8 @@ function TemaView({ TEMA, salto }: { TEMA: Tema; salto: { id: string; n: number 
   const inicial = useMemo<Guardado>(() => {
     const g = leer<Guardado | null>(CLAVE, null)
     if (g) return g
-    const p = PERFILES[0]
+    // sin guardado propio, el subtema hereda el último perfil elegido en cualquier subtema
+    const p = PERFILES.find((x) => x.id === leer<string>(CLAVE_PERFIL, PERFILES[0].id)) ?? PERFILES[0]
     return { perfil: p.id, activos: p.bloques[TEMA.id] ?? TEMA.bloques.map((b) => b.id) }
   }, [CLAVE, TEMA])
 
@@ -87,6 +90,13 @@ function TemaView({ TEMA, salto }: { TEMA: Tema; salto: { id: string; n: number 
     setActivos(a)
     setAviso('')
     persistir(p.id, a)
+    // un solo perfil para todos los subtemas: se guarda también en los demás
+    guardar(CLAVE_PERFIL, p.id)
+    for (const t of TEMAS) {
+      if (t.id === TEMA.id) continue
+      const otros = normalizar(t.bloques, p.bloques[t.id] ?? t.bloques.map((b) => b.id))
+      guardar(`cien:${t.id}`, { perfil: p.id, activos: [...otros] })
+    }
   }
 
   const alternarBloque = (id: string) => {
@@ -117,6 +127,11 @@ function TemaView({ TEMA, salto }: { TEMA: Tema; salto: { id: string; n: number 
   }, [salto, TEMA, activos, persistir])
 
   const visibles = TEMA.bloques.filter((b) => activos.has(b.id))
+
+  // «Empezar» abre el primer bloque visible; si hubo una búsqueda más reciente, gana la búsqueda
+  const [empezar, setEmpezar] = useState<{ id: string; n: number } | null>(null)
+  const primero = [...visibles].sort((a, b) => a.anio - b.anio)[0]
+  const pedido = empezar && (!salto || empezar.n > salto.n) ? empezar : salto
 
   return (
     <div>
@@ -150,14 +165,17 @@ function TemaView({ TEMA, salto }: { TEMA: Tema; salto: { id: string; n: number 
             return p ? (p.descripciones?.[TEMA.id] ?? p.descripcion) : 'Elegiste tu propia combinación de contenido.'
           })()}
         </p>
+        <p className="mt-1 text-xs text-[var(--suave)]">El perfil que elijas vale para todos los subtemas.</p>
       </section>
 
       <div className="mt-5">
         <SelectorContenido bloques={TEMA.bloques} activos={activos} onAlternar={alternarBloque} />
-        <p aria-live="polite" className="mt-2 min-h-5 text-sm text-[var(--suave)]">
+        <p aria-live="polite" className={aviso ? 'mt-2 text-sm text-[var(--suave)]' : 'sr-only'}>
           {aviso}
         </p>
       </div>
+
+      <Guia tema={TEMA} visibles={visibles.length} onEmpezar={() => primero && setEmpezar({ id: primero.id, n: Date.now() })} />
 
       <section aria-label={TEMA.tituloVista ?? 'Línea de tiempo'} className="mt-6">
         <h2 className="mb-3 text-lg font-bold">{TEMA.tituloVista ?? 'Línea de tiempo'}</h2>
@@ -166,7 +184,7 @@ function TemaView({ TEMA, salto }: { TEMA: Tema; salto: { id: string; n: number 
           vistas={vistasDe(TEMA.vistas)}
           claveVista={TEMA.vistas ? `cien:vista-${TEMA.id}` : 'cien:vista-linea'}
           unidad={TEMA.unidad}
-          abrir={salto}
+          abrir={pedido}
         />
       </section>
 

@@ -1,3 +1,4 @@
+import { useId, useState } from 'react'
 import type { Bloque } from '../data/schema.ts'
 import { NivelInsignia, BorradorInsignia } from './Insignia.tsx'
 
@@ -8,6 +9,34 @@ interface Props {
 }
 
 export default function SelectorContenido({ bloques, activos, onAlternar }: Props) {
+  // Plegado al empezar: el contenido es lo primero que se ve y esta lista es un ajuste del docente.
+  const [abierto, setAbierto] = useState(false)
+  const id = useId()
+  return (
+    <div>
+      <button
+        type="button"
+        aria-expanded={abierto}
+        aria-controls={id}
+        onClick={() => setAbierto((v) => !v)}
+        className="flex min-h-11 w-full items-center justify-between gap-3 rounded-xl border border-[var(--linea)] bg-[var(--tarjeta)] px-4 text-left text-sm font-semibold"
+      >
+        <span>
+          Personalizar contenido
+          <span className="ml-2 font-normal text-[var(--suave)]">
+            {activos.size} de {bloques.length} mostrados
+          </span>
+        </span>
+        <span aria-hidden="true">{abierto ? '▴' : '▾'}</span>
+      </button>
+      <div id={id} hidden={!abierto} className="mt-2">
+        <Lista bloques={bloques} activos={activos} onAlternar={onAlternar} />
+      </div>
+    </div>
+  )
+}
+
+function Lista({ bloques, activos, onAlternar }: Props) {
   return (
     <fieldset className="rounded-2xl border border-[var(--linea)] bg-[var(--tarjeta)] p-4">
       <legend className="px-2 text-sm font-semibold">Qué mostrar</legend>
