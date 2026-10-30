@@ -38,6 +38,10 @@
           {
             "titulo": "Otros átomos importantes",
             "texto": "El fósforo está en el ADN y en la molécula que guarda energía (ATP); el calcio en huesos y dientes; el hierro en la sangre."
+          },
+          {
+            "titulo": "Hilo: una gota de sangre",
+            "texto": "En una gota de sangre hay átomos de hidrógeno y oxígeno (del agua), de carbono y nitrógeno (de las proteínas) y también de hierro, que está en la hemoglobina."
           }
         ],
         "evidencia": [
@@ -54,7 +58,8 @@
           "media": [
             "Esos cuatro átomos son cerca del 96 % de la masa del cuerpo humano.",
             "Los átomos de un ser vivo son los mismos que hay en una roca o en el aire; cambia cómo están organizados.",
-            "El carbono puede unirse con muchos átomos y formar cadenas largas: es la base de las moléculas de la vida."
+            "El carbono puede unirse con muchos átomos y formar cadenas largas: es la base de las moléculas de la vida.",
+            "Hilo de la sangre: una gota tiene hidrógeno, oxígeno, carbono, nitrógeno y hierro, entre otros átomos."
           ],
           "avanzada": [
             "Otros átomos importantes: fósforo (ADN y ATP), calcio (huesos y dientes), hierro (sangre).",
@@ -88,9 +93,42 @@
           ],
           "correcta": 1,
           "explicacion": "Los átomos no están vivos. La vida aparece cuando hay organización, y la unidad más sencilla de vida es la célula."
+        },
+        {
+          "id": "at-3",
+          "enunciado": "¿Qué átomo es el «protagonista» de las moléculas de los seres vivos?",
+          "opciones": [
+            "Carbono",
+            "Helio",
+            "Oro",
+            "Neón"
+          ],
+          "correcta": 0,
+          "explicacion": "El carbono puede formar cadenas y anillos, y por eso es la base de las moléculas de la vida."
+        },
+        {
+          "id": "at-4",
+          "enunciado": "¿Qué átomo está en el centro de cada grupo de la hemoglobina y ayuda a transportar el oxígeno de la sangre?",
+          "opciones": [
+            "Oro",
+            "Hierro",
+            "Plomo",
+            "Helio"
+          ],
+          "correcta": 1,
+          "explicacion": "Cada una de las cuatro cadenas de la hemoglobina tiene un grupo con un átomo de hierro."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "ilustraciones": [
+        {
+          "id": "nivel-atomos",
+          "titulo": "Un átomo de carbono",
+          "pie": "Esquema de un átomo de carbono: un núcleo diminuto (protones y neutrones) y seis electrones en dos capas. No está a escala.",
+          "tipo": "svg",
+          "recurso": "nivel-atomos"
+        }
+      ]
     },
     {
       "id": "moleculas",
@@ -114,6 +152,10 @@
           {
             "titulo": "Una molécula pequeña, mucha energía",
             "texto": "La glucosa guarda energía que la célula libera al «quemarla» con oxígeno."
+          },
+          {
+            "titulo": "Hilo: una gota de sangre",
+            "texto": "La parte líquida de la sangre (el plasma) es sobre todo agua, y en ella viajan moléculas como la glucosa y el oxígeno disuelto."
           }
         ],
         "evidencia": [
@@ -130,7 +172,8 @@
           "media": [
             "Participan en casi todo lo que ocurre dentro de una célula.",
             "El agua es entre la mitad y dos tercios del cuerpo humano adulto; las reacciones de la célula ocurren disueltas en ella.",
-            "La glucosa guarda energía que la célula libera al «quemarla» con oxígeno."
+            "La glucosa guarda energía que la célula libera al «quemarla» con oxígeno.",
+            "Hilo de la sangre: el plasma es sobre todo agua, y lleva glucosa y otras moléculas."
           ],
           "avanzada": [
             "Orgánicas: tienen carbono unido a hidrógeno (glucosa). Inorgánicas: como el agua o el CO₂.",
@@ -163,9 +206,42 @@
           ],
           "correcta": 0,
           "explicacion": "La glucosa es una molécula pequeña. El ADN y la hemoglobina son macromoléculas, y el músculo es un tejido."
+        },
+        {
+          "id": "mo-3",
+          "enunciado": "¿Qué molécula es el componente principal de la parte líquida de la sangre (el plasma)?",
+          "opciones": [
+            "Agua",
+            "ADN",
+            "Hemoglobina",
+            "Hierro"
+          ],
+          "correcta": 0,
+          "explicacion": "El plasma es sobre todo agua, y en ella viajan otras moléculas como la glucosa."
+        },
+        {
+          "id": "mo-4",
+          "enunciado": "¿Cuántos átomos tiene una molécula de agua?",
+          "opciones": [
+            "2",
+            "3",
+            "4",
+            "6"
+          ],
+          "correcta": 1,
+          "explicacion": "H₂O: dos átomos de hidrógeno y uno de oxígeno, en total tres."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "ilustraciones": [
+        {
+          "id": "nivel-moleculas",
+          "titulo": "Agua y glucosa",
+          "pie": "Dos moléculas: el agua (un oxígeno y dos hidrógenos) y la glucosa (un anillo con carbonos y un oxígeno). Los átomos unidos forman moléculas.",
+          "tipo": "svg",
+          "recurso": "nivel-moleculas"
+        }
+      ]
     },
     {
       "id": "macromoleculas",
@@ -189,6 +265,10 @@
           {
             "titulo": "Una proteína, mil formas",
             "texto": "Hay miles de proteínas distintas, y su forma tridimensional decide lo que hacen."
+          },
+          {
+            "titulo": "Hilo: una gota de sangre",
+            "texto": "La hemoglobina es una proteína que transporta el oxígeno en la sangre. Está formada por cuatro cadenas de aminoácidos, cada una con un grupo que contiene hierro."
           }
         ],
         "evidencia": [
@@ -206,7 +286,8 @@
           "media": [
             "Aminoácidos → proteínas; nucleótidos → ácidos nucleicos (ADN y ARN); azúcares simples → carbohidratos grandes (almidón, celulosa).",
             "Proteínas: construyen y hacen funcionar (enzimas, músculo).",
-            "Ácidos nucleicos: guardan la información. Carbohidratos: energía y estructura. Lípidos: reserva y membranas."
+            "Ácidos nucleicos: guardan la información. Carbohidratos: energía y estructura. Lípidos: reserva y membranas.",
+            "Hilo de la sangre: la hemoglobina es la proteína que lleva el oxígeno."
           ],
           "avanzada": [
             "Hay miles de proteínas distintas y su forma tridimensional decide lo que hacen.",
@@ -239,11 +320,44 @@
           ],
           "correcta": 2,
           "explicacion": "El ADN y el ARN son ácidos nucleicos."
+        },
+        {
+          "id": "mm-3",
+          "enunciado": "¿De qué piezas pequeñas están hechas las proteínas?",
+          "opciones": [
+            "Aminoácidos",
+            "Moléculas de agua",
+            "Átomos sueltos de hierro",
+            "Orgánulos"
+          ],
+          "correcta": 0,
+          "explicacion": "Las proteínas son cadenas de aminoácidos que se pliegan."
+        },
+        {
+          "id": "mm-4",
+          "enunciado": "Una cadena de aminoácidos se pliega. ¿Qué decide el oficio de la proteína?",
+          "opciones": [
+            "Su forma tridimensional",
+            "Su color",
+            "El tamaño de la célula",
+            "La cantidad de agua a su alrededor"
+          ],
+          "correcta": 0,
+          "explicacion": "La forma de la proteína decide con qué puede unirse y qué puede hacer."
         }
       ],
       "revisado": false,
       "requiere": [
         "moleculas"
+      ],
+      "ilustraciones": [
+        {
+          "id": "nivel-macromoleculas",
+          "titulo": "De la cadena a la proteína",
+          "pie": "Una cadena de aminoácidos se pliega y forma una proteína; su forma decide su oficio. Una proteína real tiene cientos de piezas.",
+          "tipo": "svg",
+          "recurso": "nivel-macromoleculas"
+        }
       ]
     },
     {
@@ -268,6 +382,14 @@
           {
             "titulo": "Un origen curioso",
             "texto": "Se cree que las mitocondrias y los cloroplastos fueron antes bacterias, como cuenta la hipótesis endosimbiótica del subtema 1.1."
+          },
+          {
+            "titulo": "Hilo: una gota de sangre",
+            "texto": "Un caso curioso: el glóbulo rojo maduro de los mamíferos no tiene núcleo ni mitocondrias, y casi todo su espacio lo ocupa la hemoglobina. Los glóbulos blancos sí tienen orgánulos."
+          },
+          {
+            "titulo": "Conexión con la teoría celular",
+            "texto": "Según la teoría endosimbiótica (Lynn Margulis), las mitocondrias y los cloroplastos vienen de bacterias que fueron engullidas por otra célula. Se ve en el tema «Teoría celular»."
           }
         ],
         "evidencia": [
@@ -285,10 +407,12 @@
           "media": [
             "El núcleo guarda el ADN; la mitocondria libera energía de los alimentos; el cloroplasto hace la fotosíntesis.",
             "Las bacterias (procariotas) no tienen orgánulos rodeados de membrana, solo estructuras sencillas como los ribosomas.",
-            "Un orgánulo solo funciona dentro de su célula y no puede vivir por sí mismo."
+            "Un orgánulo solo funciona dentro de su célula y no puede vivir por sí mismo.",
+            "Hilo de la sangre: el glóbulo rojo maduro de los mamíferos casi no tiene orgánulos."
           ],
           "avanzada": [
-            "Se cree que las mitocondrias y los cloroplastos fueron antes bacterias (hipótesis endosimbiótica, subtema 1.1)."
+            "Se cree que las mitocondrias y los cloroplastos fueron antes bacterias (hipótesis endosimbiótica, subtema 1.1).",
+            "Conexión: las mitocondrias y los cloroplastos vienen de bacterias antiguas (endosimbiosis)."
           ]
         }
       },
@@ -316,11 +440,44 @@
           ],
           "correcta": 1,
           "explicacion": "Los orgánulos son partes de la célula y dependen de ella, aunque algunos, como las mitocondrias, tengan ADN propio."
+        },
+        {
+          "id": "ou-3",
+          "enunciado": "¿Cómo se llaman los pliegues de la membrana interna de la mitocondria?",
+          "opciones": [
+            "Matriz",
+            "Crestas",
+            "Núcleo",
+            "Pared celular"
+          ],
+          "correcta": 1,
+          "explicacion": "Las crestas aumentan la superficie de la membrana interna de la mitocondria."
+        },
+        {
+          "id": "ou-4",
+          "enunciado": "Según la teoría endosimbiótica, ¿de dónde vienen las mitocondrias y los cloroplastos?",
+          "opciones": [
+            "De bacterias que fueron engullidas por otra célula",
+            "De virus",
+            "De átomos de hierro",
+            "Del núcleo de la célula"
+          ],
+          "correcta": 0,
+          "explicacion": "Lynn Margulis propuso que fueron bacterias que acabaron viviendo dentro de otra célula."
         }
       ],
       "revisado": false,
       "requiere": [
         "celula"
+      ],
+      "ilustraciones": [
+        {
+          "id": "nivel-organulos",
+          "titulo": "Una mitocondria",
+          "pie": "Esquema de una mitocondria con su membrana externa, la membrana interna plegada en crestas y la matriz.",
+          "tipo": "svg",
+          "recurso": "nivel-organulos"
+        }
       ]
     },
     {
@@ -345,6 +502,14 @@
           {
             "titulo": "Célula y organismo a la vez",
             "texto": "Una bacteria es una sola célula y también un organismo completo: en los seres unicelulares, estos dos niveles coinciden."
+          },
+          {
+            "titulo": "Hilo: una gota de sangre",
+            "texto": "Un glóbulo rojo es una célula especializada en llevar oxígeno. En una gota de sangre hay millones de ellos."
+          },
+          {
+            "titulo": "Conexión con la teoría celular",
+            "texto": "La célula es el centro de la teoría celular: es la unidad básica de los seres vivos y toda célula viene de otra célula. Se ve en el tema «Teoría celular»."
           }
         ],
         "evidencia": [
@@ -361,11 +526,13 @@
           "media": [
             "Ninguno de los niveles anteriores está vivo por sí solo: la vida aparece cuando las piezas trabajan juntas (propiedad emergente).",
             "Una bacteria es una sola célula y también un organismo completo.",
-            "Ejemplos: una célula muscular del corazón se contrae y se relaja; una bacteria se alimenta, se reproduce y reacciona."
+            "Ejemplos: una célula muscular del corazón se contrae y se relaja; una bacteria se alimenta, se reproduce y reacciona.",
+            "Hilo de la sangre: el glóbulo rojo es la célula que transporta el oxígeno."
           ],
           "avanzada": [
             "Se estima que una persona tiene unos 30 a 40 billones de células, de unos 200 tipos distintos.",
-            "Los virus son un caso límite: tienen material genético, pero no son células."
+            "Los virus son un caso límite: tienen material genético, pero no son células.",
+            "Conexión: la teoría celular dice que la célula es la unidad básica y que toda célula viene de otra."
           ]
         }
       },
@@ -393,10 +560,43 @@
           ],
           "correcta": 0,
           "explicacion": "La vida no está en ninguna molécula en particular: aparece al trabajar juntas las partes de la célula."
+        },
+        {
+          "id": "ce-3",
+          "enunciado": "¿Los virus son células?",
+          "opciones": [
+            "Sí, son las células más pequeñas",
+            "No: tienen material genético, pero no son células",
+            "Sí, pero solo las de las plantas",
+            "No: son tejidos"
+          ],
+          "correcta": 1,
+          "explicacion": "Los virus se discuten como caso límite porque tienen material genético, pero no tienen estructura de célula."
+        },
+        {
+          "id": "ce-4",
+          "enunciado": "¿Qué tiene toda célula?",
+          "opciones": [
+            "Cloroplastos",
+            "Membrana, material genético y metabolismo propio",
+            "Órganos y sistemas",
+            "Varios tejidos"
+          ],
+          "correcta": 1,
+          "explicacion": "Estas características definen a la célula; los cloroplastos solo están en algunas."
         }
       ],
       "revisado": false,
-      "nucleo": true
+      "nucleo": true,
+      "ilustraciones": [
+        {
+          "id": "nivel-celula",
+          "titulo": "Una célula con sus orgánulos",
+          "pie": "Esquema de una célula animal: membrana, núcleo, mitocondrias, retículo y citoplasma. Es el primer nivel con vida.",
+          "tipo": "svg",
+          "recurso": "nivel-celula"
+        }
+      ]
     },
     {
       "id": "tejido",
@@ -420,6 +620,14 @@
           {
             "titulo": "La sangre también es un tejido",
             "texto": "Es un tejido conectivo líquido: sus células flotan en un líquido llamado plasma."
+          },
+          {
+            "titulo": "Hilo: una gota de sangre",
+            "texto": "Los glóbulos rojos, los glóbulos blancos y las plaquetas, junto con el plasma, forman el tejido sanguíneo."
+          },
+          {
+            "titulo": "Conexión con la teoría celular",
+            "texto": "Los tejidos se entendieron al ver que plantas y animales están hechos de células (Schleiden y Schwann, 1838–1839). Se ve en el tema «Teoría celular»."
           }
         ],
         "evidencia": [
@@ -435,12 +643,14 @@
           ],
           "media": [
             "Epitelial: cubre y reviste. Conectivo: une y sostiene (incluye hueso y sangre). Muscular: se contrae. Nervioso: transmite señales.",
-            "Tejidos de las plantas: meristemáticos (crecen), epidermis (protege), parénquima (fotosíntesis y almacenamiento), xilema y floema (transportan agua y azúcares)."
+            "Tejidos de las plantas: meristemáticos (crecen), epidermis (protege), parénquima (fotosíntesis y almacenamiento), xilema y floema (transportan agua y azúcares).",
+            "Hilo de la sangre: las células sanguíneas y el plasma forman el tejido sanguíneo."
           ],
           "avanzada": [
             "La sangre es un tejido conectivo líquido: sus células flotan en un líquido llamado plasma.",
             "Ejemplos: el tejido muscular cardíaco; el tejido epitelial de la capa externa de la piel.",
-            "Las células de un tejido no son idénticas, solo parecidas."
+            "Las células de un tejido no son idénticas, solo parecidas.",
+            "Conexión: Schleiden y Schwann mostraron que plantas y animales están hechos de células."
           ]
         }
       },
@@ -468,11 +678,44 @@
           ],
           "correcta": 1,
           "explicacion": "El tejido epitelial es animal. Xilema, parénquima y meristemático son tejidos de plantas."
+        },
+        {
+          "id": "te-3",
+          "enunciado": "Los glóbulos rojos, los blancos y las plaquetas, junto con el plasma, forman…",
+          "opciones": [
+            "Un órgano",
+            "Un sistema",
+            "Una macromolécula",
+            "Un tejido (la sangre)"
+          ],
+          "correcta": 3,
+          "explicacion": "La sangre es un tejido: células que trabajan juntas en un medio líquido."
+        },
+        {
+          "id": "te-4",
+          "enunciado": "¿Por qué decimos que las células de un tejido son «parecidas» y no idénticas?",
+          "opciones": [
+            "Porque cada una pertenece a un tejido distinto",
+            "Porque no son células",
+            "Porque no son idénticas y a veces un tejido tiene más de un tipo de célula",
+            "Porque solo algunas tienen núcleo"
+          ],
+          "correcta": 2,
+          "explicacion": "Las células de un tejido comparten función, pero no son copias exactas, y un tejido puede mezclar varios tipos."
         }
       ],
       "revisado": false,
       "requiere": [
         "celula"
+      ],
+      "ilustraciones": [
+        {
+          "id": "nivel-tejido",
+          "titulo": "Un tejido muscular",
+          "pie": "Un tejido es un grupo de células parecidas que trabajan juntas en una misma función; aquí, células musculares.",
+          "tipo": "svg",
+          "recurso": "nivel-tejido"
+        }
       ]
     },
     {
@@ -497,6 +740,10 @@
           {
             "titulo": "Otro ejemplo: la piel",
             "texto": "Se suele considerar el órgano más grande del cuerpo humano."
+          },
+          {
+            "titulo": "Hilo: una gota de sangre",
+            "texto": "La sangre no es un órgano sino un tejido, pero el corazón, un órgano de músculo cardíaco, la bombea por todo el cuerpo."
           }
         ],
         "evidencia": [
@@ -513,7 +760,8 @@
           "media": [
             "El corazón tiene tejido muscular (bombea), conectivo (sostiene), epitelial (reviste) y nervioso (coordina los latidos).",
             "Órganos de las plantas: raíz, tallo, hoja, flor y fruto.",
-            "La piel se suele considerar el órgano más grande del cuerpo humano."
+            "La piel se suele considerar el órgano más grande del cuerpo humano.",
+            "Hilo de la sangre: el corazón es el órgano que la bombea."
           ],
           "avanzada": [
             "Otros ejemplos: el estómago (con los cuatro tejidos) y una hoja (epidermis, parénquima y tejidos que conducen agua).",
@@ -545,11 +793,44 @@
           ],
           "correcta": 0,
           "explicacion": "La hoja es un órgano vegetal, formado por varios tejidos."
+        },
+        {
+          "id": "og-3",
+          "enunciado": "¿Es la sangre un órgano?",
+          "opciones": [
+            "Sí, porque recorre todo el cuerpo",
+            "No: es un tejido, y el corazón es el órgano que la bombea",
+            "Sí, porque tiene células",
+            "No: es una molécula"
+          ],
+          "correcta": 1,
+          "explicacion": "La sangre es un tejido. El corazón, hecho de varios tejidos, es el órgano que la bombea."
+        },
+        {
+          "id": "og-4",
+          "enunciado": "¿Qué significa que un órgano sea «más que la suma de sus tejidos»?",
+          "opciones": [
+            "Que pesa más que sus tejidos",
+            "Que juntos hacen una función que ningún tejido hace solo",
+            "Que tiene más células que su tejido",
+            "Que no tiene tejidos"
+          ],
+          "correcta": 1,
+          "explicacion": "Al trabajar juntos, los tejidos logran algo nuevo, como bombear la sangre."
         }
       ],
       "revisado": false,
       "requiere": [
         "tejido"
+      ],
+      "ilustraciones": [
+        {
+          "id": "nivel-organo",
+          "titulo": "El corazón, un órgano",
+          "pie": "El corazón reúne varios tejidos (muscular, conectivo, nervioso y epitelial) que trabajan juntos para bombear la sangre.",
+          "tipo": "svg",
+          "recurso": "nivel-organo"
+        }
       ]
     },
     {
@@ -574,6 +855,10 @@
           {
             "titulo": "En las plantas",
             "texto": "A veces se habla de sistema de la raíz (que absorbe agua) y del vástago (tallo y hojas)."
+          },
+          {
+            "titulo": "Hilo: una gota de sangre",
+            "texto": "Corazón, vasos y sangre forman el sistema circulatorio, que reparte oxígeno y nutrientes y recoge desechos."
           }
         ],
         "evidencia": [
@@ -589,7 +874,8 @@
           ],
           "media": [
             "Sistemas del cuerpo humano: circulatorio, respiratorio, digestivo, nervioso, excretor, muscular, óseo, endocrino, inmunitario y reproductor.",
-            "El oxígeno entra por el sistema respiratorio, lo lleva el circulatorio y lo usan las células de todos los demás."
+            "El oxígeno entra por el sistema respiratorio, lo lleva el circulatorio y lo usan las células de todos los demás.",
+            "Hilo de la sangre: corazón, vasos y sangre forman el sistema circulatorio."
           ],
           "avanzada": [
             "Digestivo: boca, esófago, estómago e intestinos. Nervioso: cerebro, médula y nervios.",
@@ -622,11 +908,44 @@
           ],
           "correcta": 1,
           "explicacion": "Respiratorio y circulatorio cooperan para llevar el oxígeno hasta las células."
+        },
+        {
+          "id": "si-3",
+          "enunciado": "Además de repartir oxígeno y nutrientes, ¿qué hace el sistema circulatorio?",
+          "opciones": [
+            "Digiere los alimentos",
+            "Hace la fotosíntesis",
+            "Recoge desechos de las células",
+            "Produce los huesos"
+          ],
+          "correcta": 2,
+          "explicacion": "La sangre también retira desechos de las células para que otros órganos los eliminen."
+        },
+        {
+          "id": "si-4",
+          "enunciado": "¿Todos los organismos tienen sistemas de órganos?",
+          "opciones": [
+            "Sí, todos los seres vivos",
+            "No: los organismos más sencillos no los tienen",
+            "Solo las plantas",
+            "Solo las bacterias"
+          ],
+          "correcta": 1,
+          "explicacion": "Hongos, esponjas y muchos organismos sencillos no tienen sistemas de órganos."
         }
       ],
       "revisado": false,
       "requiere": [
         "organo"
+      ],
+      "ilustraciones": [
+        {
+          "id": "nivel-sistema",
+          "titulo": "El sistema circulatorio",
+          "pie": "Corazón, vasos y sangre cooperan para repartir oxígeno y nutrientes. Esquema muy simplificado.",
+          "tipo": "svg",
+          "recurso": "nivel-sistema"
+        }
       ]
     },
     {
@@ -651,6 +970,14 @@
           {
             "titulo": "Saltarse niveles",
             "texto": "Una bacteria no tiene tejidos ni órganos; un hongo o una esponja tampoco tienen sistemas como los animales complejos."
+          },
+          {
+            "titulo": "Hilo: una gota de sangre",
+            "texto": "Esa gota de sangre le sirve al organismo entero: lleva oxígeno hasta cada célula de la persona."
+          },
+          {
+            "titulo": "Conexión con la teoría celular",
+            "texto": "Leeuwenhoek fue de los primeros en ver organismos de una sola célula, en la década de 1670. Se ve en el tema «Teoría celular»."
           }
         ],
         "evidencia": [
@@ -667,10 +994,12 @@
           "media": [
             "En un organismo unicelular, célula y organismo son lo mismo.",
             "En uno pluricelular intervienen todos los niveles anteriores: moléculas, orgánulos, células, tejidos, órganos y sistemas.",
-            "Ejemplos: una persona; una ameba, que es un organismo de una sola célula."
+            "Ejemplos: una persona; una ameba, que es un organismo de una sola célula.",
+            "Hilo de la sangre: la sangre lleva oxígeno a todas las células del organismo."
           ],
           "avanzada": [
-            "No todos los organismos pasan por todos los niveles: una bacteria no tiene tejidos ni órganos; un hongo o una esponja no tienen sistemas como los animales complejos."
+            "No todos los organismos pasan por todos los niveles: una bacteria no tiene tejidos ni órganos; un hongo o una esponja no tienen sistemas como los animales complejos.",
+            "Conexión: Leeuwenhoek vio por primera vez organismos de una sola célula."
           ]
         }
       },
@@ -698,10 +1027,43 @@
           ],
           "correcta": 1,
           "explicacion": "Todos están formados por una o más células, aunque no todos tengan tejidos, órganos o sistemas."
+        },
+        {
+          "id": "or-3",
+          "enunciado": "¿Todo organismo pasa por todos los niveles de organización?",
+          "opciones": [
+            "Sí: todos tienen tejidos, órganos y sistemas",
+            "No: los más sencillos se saltan algunos niveles",
+            "Solo los animales",
+            "Solo los que viven en el agua"
+          ],
+          "correcta": 1,
+          "explicacion": "Una bacteria, por ejemplo, pasa de la célula directamente al organismo."
+        },
+        {
+          "id": "or-4",
+          "enunciado": "¿Cuál de estos es un organismo unicelular?",
+          "opciones": [
+            "Un glóbulo rojo",
+            "Una bacteria",
+            "Un corazón",
+            "Una hoja"
+          ],
+          "correcta": 1,
+          "explicacion": "Un glóbulo rojo es una célula, pero es parte de un organismo pluricelular; la bacteria es ella sola todo el organismo."
         }
       ],
       "revisado": false,
-      "nucleo": true
+      "nucleo": true,
+      "ilustraciones": [
+        {
+          "id": "nivel-organismo",
+          "titulo": "Persona y bacteria",
+          "pie": "Dos organismos completos: una persona (muchas células) y una bacteria (una sola célula). Tamaños no a escala.",
+          "tipo": "svg",
+          "recurso": "nivel-organismo"
+        }
+      ]
     },
     {
       "id": "mas-alla",
@@ -725,6 +1087,10 @@
           {
             "titulo": "Por qué importa",
             "texto": "Las decisiones que afectan un ecosistema, como talar un bosque, cambian también a las poblaciones y organismos que viven en él."
+          },
+          {
+            "titulo": "Hilo: una gota de sangre",
+            "texto": "La persona de la que sale esa sangre forma parte de una población y de un ecosistema, y respira el oxígeno que producen las plantas y las algas."
           }
         ],
         "evidencia": [
@@ -741,7 +1107,8 @@
           "media": [
             "Población: organismos de una misma especie que viven juntos.",
             "Comunidad: poblaciones de distintas especies. Ecosistema: la comunidad con su ambiente.",
-            "Biosfera: todos los ecosistemas del planeta."
+            "Biosfera: todos los ecosistemas del planeta.",
+            "Hilo de la sangre: el oxígeno que lleva viene de plantas y algas del ecosistema."
           ],
           "avanzada": [
             "Ejemplo: los peces de una laguna son una población; peces, plantas, insectos y aves forman una comunidad.",
@@ -774,9 +1141,42 @@
           ],
           "correcta": 1,
           "explicacion": "Un ecosistema reúne la comunidad y los factores no vivos, como agua, suelo y clima."
+        },
+        {
+          "id": "ma-3",
+          "enunciado": "Una laguna con peces, plantas, bacterias y otros seres vivos que viven juntos (sin contar el agua ni el suelo) forma…",
+          "opciones": [
+            "Una población",
+            "Un organismo",
+            "Una comunidad",
+            "Una biosfera"
+          ],
+          "correcta": 2,
+          "explicacion": "Una comunidad reúne las poblaciones de varias especies que viven en el mismo lugar."
+        },
+        {
+          "id": "ma-4",
+          "enunciado": "¿Cuál de estos es el nivel más grande?",
+          "opciones": [
+            "Comunidad",
+            "Biosfera",
+            "Población",
+            "Ecosistema"
+          ],
+          "correcta": 1,
+          "explicacion": "La biosfera reúne todos los ecosistemas del planeta."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "ilustraciones": [
+        {
+          "id": "nivel-mas-alla",
+          "titulo": "De la población a la biosfera",
+          "pie": "Población (una especie en un lugar), comunidad (varias especies), ecosistema (seres vivos y ambiente) y biosfera (todos los ecosistemas).",
+          "tipo": "svg",
+          "recurso": "nivel-mas-alla"
+        }
+      ]
     }
   ]
 }

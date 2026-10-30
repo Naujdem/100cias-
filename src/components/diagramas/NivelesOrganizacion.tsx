@@ -1,6 +1,7 @@
-import { useMemo, useState } from 'react'
+import { useMemo, useRef, useState } from 'react'
 import VisorZoom from '../VisorZoom.tsx'
 import PantallaCompleta from '../PantallaCompleta.tsx'
+import { useFlechas } from '../../lib/flechasDiagrama.ts'
 
 // Niveles de organización de la vida, de átomos a más allá del organismo, con un ejemplo seguido de punta a punta.
 
@@ -26,7 +27,7 @@ export const NIVELES: Nivel[] = [
   { id: 'mas-alla', nombre: 'Más allá del organismo', corto: 'Más allá', persona: 'Población, comunidad y ecosistema donde vive.', planta: 'Un bosque y el ecosistema que forma.', que: 'Organismos que viven juntos y se relacionan entre sí y con su entorno, hasta la biosfera.' },
 ]
 
-type Modo = 'zoom' | 'ordena'
+type Modo = 'zoom' | 'ordena' | 'seres' | 'emergente'
 type Ejemplo = 'persona' | 'planta'
 
 export default function NivelesOrganizacion({ inicial = 4 }: { inicial?: number }) {
@@ -34,7 +35,7 @@ export default function NivelesOrganizacion({ inicial = 4 }: { inicial?: number 
   return (
     <div>
       <div role="group" aria-label="Actividad" className="mb-3 flex flex-wrap gap-2">
-        {([['zoom', 'Niveles anidados'], ['ordena', 'Ordénalos']] as [Modo, string][]).map(([id, texto]) => (
+        {([['zoom', 'Niveles anidados'], ['ordena', 'Ordénalos'], ['seres', '¿Qué niveles tiene?'], ['emergente', '¿Qué aparece?']] as [Modo, string][]).map(([id, texto]) => (
           <button
             key={id}
             type="button"
@@ -46,7 +47,7 @@ export default function NivelesOrganizacion({ inicial = 4 }: { inicial?: number 
           </button>
         ))}
       </div>
-      {modo === 'zoom' ? <Anidados inicial={inicial} /> : <Ordena />}
+      {modo === 'zoom' ? <Anidados inicial={inicial} /> : modo === 'ordena' ? <Ordena /> : modo === 'seres' ? <Seres /> : <Emergente />}
     </div>
   )
 }
@@ -215,6 +216,201 @@ function Ordena() {
       <button type="button" onClick={reiniciar} className="mt-2 min-h-10 rounded-lg border border-[var(--linea)] px-4 text-sm font-semibold">
         Mezclar y empezar de nuevo
       </button>
+    </PantallaCompleta>
+  )
+}
+
+// ---------------------------------------------------------------------------------------------
+// ¿Qué niveles tiene cada ser vivo? No todos pasan por todos los niveles.
+
+const SERES = ['Persona', 'Planta de fríjol', 'Bacteria']
+const FILAS = [
+  { id: 'celula', nombre: 'Célula', tiene: [true, true, true] },
+  { id: 'tejido', nombre: 'Tejido', tiene: [true, true, false] },
+  { id: 'organo', nombre: 'Órgano', tiene: [true, true, false] },
+  { id: 'sistema', nombre: 'Sistema de órganos', tiene: [true, true, false] },
+  { id: 'organismo', nombre: 'Organismo', tiene: [true, true, true] },
+]
+const EXPLICA = [
+  'Una persona tiene todos los niveles: células, tejidos, órganos, sistemas y el organismo completo.',
+  'Una planta tiene tejidos (como el parénquima), órganos (raíz, tallo, hoja) y sistemas, como el de la raíz y el del vástago.',
+  'Una bacteria es una sola célula: no tiene tejidos, órganos ni sistemas. La célula ya es el organismo completo.',
+]
+
+function Seres() {
+  const [marcas, setMarcas] = useState<Record<string, boolean>>({})
+  const [revisado, setRevisado] = useState(false)
+  const caja = useRef<HTMLDivElement>(null)
+  const llave = (f: number, s: number) => `${f}-${s}`
+  const aciertos = FILAS.reduce((n, f, i) => n + SERES.filter((_, j) => !!marcas[llave(i, j)] === f.tiene[j]).length, 0)
+  const total = FILAS.length * SERES.length
+
+  // ← → pasan el foco de una casilla a la siguiente o la anterior
+  useFlechas((dir) => {
+    const celdas = [...(caja.current?.querySelectorAll<HTMLElement>('[data-celda]') ?? [])]
+    if (!celdas.length) return false
+    const i = celdas.indexOf(document.activeElement as HTMLElement)
+    celdas[i < 0 ? (dir > 0 ? 0 : celdas.length - 1) : Math.max(0, Math.min(celdas.length - 1, i + dir))].focus()
+    return true
+  })
+
+  const reiniciar = () => {
+    setMarcas({})
+    setRevisado(false)
+  }
+
+  return (
+    <PantallaCompleta conBoton>
+      <p className="text-sm">Marca con «Sí» los niveles que tiene cada ser vivo y pulsa «Comprobar». Con ← → te mueves entre casillas y con Espacio marcas.</p>
+      <div ref={caja} className="mt-3 overflow-x-auto">
+        <table className="w-full min-w-[20rem] border-separate border-spacing-1 text-sm">
+          <thead>
+            <tr>
+              <th scope="col" className="text-left font-semibold"><span className="sr-only">Nivel</span></th>
+              {SERES.map((n) => (
+                <th key={n} scope="col" className="px-1 text-center font-semibold">{n}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {FILAS.map((f, i) => (
+              <tr key={f.id}>
+                <th scope="row" className="pr-2 text-left font-semibold">{f.nombre}</th>
+                {SERES.map((s, j) => {
+                  const marcada = !!marcas[llave(i, j)]
+                  const ok = marcada === f.tiene[j]
+                  return (
+                    <td key={s} className="text-center">
+                      <button
+                        type="button"
+                        data-celda
+                        aria-pressed={marcada}
+                        aria-label={`${s}: ${f.nombre}${revisado ? (ok ? ' (correcto)' : f.tiene[j] ? ' (sí lo tiene)' : ' (no lo tiene)') : ''}`}
+                        onClick={() => {
+                          setMarcas((m) => ({ ...m, [llave(i, j)]: !marcada }))
+                          setRevisado(false)
+                        }}
+                        className={`min-h-10 w-full rounded-lg border-2 px-2 text-sm font-semibold transition aria-pressed:bg-[var(--acento-suave)]/50 ${
+                          revisado ? (ok ? 'border-green-700' : 'border-red-700') : 'border-[var(--linea)] hover:border-[var(--acento)]'
+                        }`}
+                      >
+                        {marcada ? 'Sí' : '—'}
+                        {revisado && <span aria-hidden="true">{ok ? ' ✓' : ' ✗'}</span>}
+                      </button>
+                    </td>
+                  )
+                })}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <div className="mt-3 flex flex-wrap gap-2">
+        <button type="button" data-principal onClick={() => setRevisado(true)} className="min-h-10 rounded-lg bg-[var(--acento)] px-4 text-sm font-semibold text-white">
+          Comprobar
+        </button>
+        <button type="button" onClick={reiniciar} className="min-h-10 rounded-lg border border-[var(--linea)] px-4 text-sm font-semibold">
+          Borrar todo
+        </button>
+      </div>
+      <div aria-live="polite" className="mt-3 min-h-[3.5rem] rounded-xl bg-[var(--fondo)] p-3 text-sm">
+        {revisado ? (
+          <>
+            <p className="font-semibold">{aciertos === total ? '¡Todo bien!' : `Aciertas ${aciertos} de ${total}.`}</p>
+            <ul className="mt-1 list-disc space-y-1 pl-5">
+              {EXPLICA.map((t) => (
+                <li key={t}>{t}</li>
+              ))}
+            </ul>
+          </>
+        ) : (
+          <p className="text-[var(--suave)]">No todos los seres vivos pasan por todos los niveles.</p>
+        )}
+      </div>
+    </PantallaCompleta>
+  )
+}
+
+// ---------------------------------------------------------------------------------------------
+// ¿Qué aparece? En cada nivel surge algo que ninguna de las partes tiene por sí sola (propiedad emergente).
+
+interface Paso {
+  de: string
+  a: string
+  opciones: string[]
+  correcta: number
+  explicacion: string
+}
+
+const PASOS: Paso[] = [
+  { de: 'moléculas y macromoléculas', a: 'una célula', opciones: ['La vida: metabolismo y reproducción', 'Más átomos de carbono', 'Un color nuevo'], correcta: 0, explicacion: 'Ninguna molécula está viva. La vida aparece cuando las piezas trabajan juntas dentro de la célula.' },
+  { de: 'células musculares', a: 'un tejido muscular', opciones: ['Perder la membrana', 'Hacer fuerza al contraerse juntas', 'Convertirse en moléculas'], correcta: 1, explicacion: 'Una célula sola casi no mueve nada; muchas contrayéndose a la vez generan fuerza.' },
+  { de: 'tejidos', a: 'un órgano, el corazón', opciones: ['Hacer fotosíntesis', 'Producir ADN nuevo', 'Bombear la sangre'], correcta: 2, explicacion: 'Ningún tejido por sí solo bombea sangre: lo logran el músculo, el tejido conectivo y el nervioso trabajando juntos.' },
+  { de: 'órganos', a: 'el sistema circulatorio', opciones: ['Formar átomos nuevos', 'Repartir oxígeno y nutrientes por todo el cuerpo', 'Digerir los alimentos'], correcta: 1, explicacion: 'El corazón, los vasos y la sangre cooperan para llevar lo que cada célula necesita.' },
+  { de: 'sistemas de órganos', a: 'un organismo', opciones: ['Mantenerse vivo como un todo: reaccionar, moverse y reproducirse', 'Quedarse sin células', 'Ser más pequeño'], correcta: 0, explicacion: 'Cuando todos los sistemas funcionan a la vez aparece el ser vivo completo.' },
+]
+
+function Emergente() {
+  const [paso, setPaso] = useState(0)
+  const [resp, setResp] = useState<(number | null)[]>(PASOS.map(() => null))
+  const p = PASOS[paso]
+  const elegida = resp[paso]
+
+  useFlechas((dir) => {
+    setPaso((x) => Math.max(0, Math.min(PASOS.length - 1, x + dir)))
+    return true
+  })
+
+  return (
+    <PantallaCompleta conBoton>
+      <p className="text-sm">En cada nivel aparece algo nuevo que ninguna de las partes tiene por sí sola. Se llama propiedad emergente. Con ← → cambias de paso.</p>
+      <div role="group" aria-label="Pasos" className="mt-3 flex flex-wrap gap-2">
+        {PASOS.map((x, i) => (
+          <button
+            key={x.a}
+            type="button"
+            aria-pressed={paso === i}
+            aria-label={`Paso ${i + 1}${resp[i] === null ? '' : resp[i] === x.correcta ? ', acertado' : ', por repasar'}`}
+            onClick={() => setPaso(i)}
+            className="min-h-10 min-w-10 rounded-full border border-[var(--linea)] px-3 text-sm font-semibold aria-pressed:border-[var(--acento)] aria-pressed:bg-[var(--acento-suave)]/50"
+          >
+            {i + 1}
+            {resp[i] !== null && <span aria-hidden="true">{resp[i] === x.correcta ? ' ✓' : ' ✗'}</span>}
+          </button>
+        ))}
+      </div>
+      <p className="mt-3 text-sm font-semibold">
+        Paso {paso + 1} de {PASOS.length}: de {p.de} a {p.a}, ¿qué aparece que las partes no tienen solas?
+      </p>
+      <div role="group" aria-label="Opciones" className="mt-2 flex flex-col gap-2">
+        {p.opciones.map((o, i) => {
+          const marca = elegida === null ? '' : i === p.correcta ? 'border-green-700 bg-[var(--acento-suave)]/40' : i === elegida ? 'border-red-700' : 'opacity-60'
+          return (
+            <button
+              key={o}
+              type="button"
+              disabled={elegida === p.correcta}
+              onClick={() => setResp((r) => r.map((v, k) => (k === paso ? i : v)))}
+              className={`min-h-10 rounded-lg border-2 border-[var(--linea)] px-3 py-2 text-left text-sm enabled:hover:border-[var(--acento)] ${marca}`}
+            >
+              {o}
+            </button>
+          )
+        })}
+      </div>
+      <div aria-live="polite" className="mt-3 min-h-[3.5rem] rounded-xl bg-[var(--fondo)] p-3 text-sm">
+        {elegida === null ? (
+          <p className="text-[var(--suave)]">Elige una opción.</p>
+        ) : elegida === p.correcta ? (
+          <p>
+            <span className="font-semibold">¡Eso es!</span> {p.explicacion}
+          </p>
+        ) : (
+          <p>
+            <span className="font-semibold">Todavía no.</span> Piensa en algo que ninguna parte hace sola e inténtalo otra vez.
+          </p>
+        )}
+      </div>
     </PantallaCompleta>
   )
 }
