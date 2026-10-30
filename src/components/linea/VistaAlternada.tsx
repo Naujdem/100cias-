@@ -1,9 +1,10 @@
 import type { PropsVista } from './tipos.ts'
 import Miniatura from './Miniatura.tsx'
+import InsigniaProgreso from '../InsigniaProgreso.tsx'
 
 // Hitos que alternan arriba y abajo de una línea central, cada uno con su tallo,
 // año, texto corto e imagen enmarcada. El nodo «+» abre el detalle.
-export default function VistaAlternada({ bloques, abierto, onSeleccionar, carril, completa }: PropsVista) {
+export default function VistaAlternada({ bloques, abierto, onSeleccionar, carril, completa, estados }: PropsVista) {
   return (
     <div
       ref={carril}
@@ -53,6 +54,9 @@ export default function VistaAlternada({ bloques, abierto, onSeleccionar, carril
                   <span className="block font-serif text-xl font-bold">{b.anio}</span>
                   <span className="block text-sm font-semibold leading-snug">{b.titulo}</span>
                   <span className="mt-1 line-clamp-3 block text-sm text-[var(--suave)]">{b.resumen}</span>
+                  <span className="mt-1 block">
+                    <InsigniaProgreso estado={estados?.[b.id]} />
+                  </span>
                 </button>
                 {arriba && (
                   <button type="button" onClick={() => onSeleccionar(b.id)} tabIndex={-1} aria-hidden="true" className="mt-3 self-start text-left">

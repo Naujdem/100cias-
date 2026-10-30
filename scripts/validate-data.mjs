@@ -41,6 +41,14 @@ for (const f of archivos(join(raiz, 'materias'))) {
         }
       }
     }
+    if (b.ficha?.docente) {
+      const d = b.ficha.docente
+      if (!d.abrir?.trim()) err(`${ctx}: docente.abrir vacío`)
+      if (!d.actividad?.trim()) err(`${ctx}: docente.actividad vacío`)
+      if (!Array.isArray(d.errores) || d.errores.length === 0 || d.errores.some((e) => !e?.trim())) err(`${ctx}: docente.errores debe tener frases no vacías`)
+      if (!Number.isInteger(d.minutos) || d.minutos < 1 || d.minutos > 90) err(`${ctx}: docente.minutos fuera de rango`)
+    }
+    if (b.ficha?.analogia && (!b.ficha.analogia.titulo?.trim() || !b.ficha.analogia.texto?.trim())) err(`${ctx}: analogia necesita título y texto`)
     for (const a of b.autores ?? []) {
       if (!a.nombre || !a.aporte) err(`${ctx}: autor sin nombre o aporte`)
       if (a.imagen) {

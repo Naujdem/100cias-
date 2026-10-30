@@ -3,6 +3,7 @@ import type { PropsVista } from './tipos.ts'
 import VistaTarjetas from './VistaTarjetas.tsx'
 import VistaAlternada from './VistaAlternada.tsx'
 import VistaNiveles from './VistaNiveles.tsx'
+import VistaRuta from './VistaRuta.tsx'
 
 export interface Vista {
   id: string
@@ -24,6 +25,7 @@ export const VISTAS: Vista[] = [
   { id: 'alternada', nombre: 'Alternada', descripcion: 'Hitos arriba y abajo de una línea, con imagen', Componente: VistaAlternada },
   { id: 'tarjetas', nombre: 'Tarjetas', descripcion: 'Línea con tarjetas compactas', Componente: VistaTarjetas },
   { id: 'niveles', nombre: 'Niveles', descripcion: 'Pila de niveles, de lo más pequeño (abajo) a lo más grande (arriba)', Componente: VistaNiveles, desplazable: false, ayuda: '↑ ↓ moverse · Enter abrir · F pantalla completa' },
+  { id: 'ruta', nombre: 'Ruta', descripcion: 'Pasos en vertical, de arriba hacia abajo', Componente: VistaRuta, desplazable: false, ayuda: '↑ ↓ moverse · Enter abrir · F pantalla completa' },
 ]
 
 export const VISTAS_LINEA = ['alternada', 'tarjetas']

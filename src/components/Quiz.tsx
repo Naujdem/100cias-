@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react'
 import type { Bloque, Pregunta } from '../data/schema.ts'
+import { guardarQuiz, registrarRespuesta, usarProgreso } from '../lib/progreso.ts'
 
 interface Item {
   p: Pregunta
@@ -16,11 +17,14 @@ function mezclar<T>(a: T[]): T[] {
   return r
 }
 
-export default function Quiz({ bloques }: { bloques: Bloque[] }) {
+export default function Quiz({ bloques, temaId, onIr }: { bloques: Bloque[]; temaId: string; onIr: (id: string) => void }) {
+  const progreso = usarProgreso()
+  const mejor = progreso.quiz[temaId]
   const [ronda, setRonda] = useState(0)
   const [i, setI] = useState(0)
   const [elegida, setElegida] = useState<number | null>(null)
   const [aciertos, setAciertos] = useState(0)
+  const [falladas, setFalladas] = useState<string[]>([])
 
   // Solo entran las preguntas de los bloques activos.
   const clave = bloques.map((b) => b.id).join('|')
@@ -39,16 +43,31 @@ export default function Quiz({ bloques }: { bloques: Bloque[] }) {
     setI(0)
     setElegida(null)
     setAciertos(0)
+    setFalladas([])
   }
 
   if (items.length === 0) return <p className="text-sm text-[var(--suave)]">No hay preguntas para el contenido activo.</p>
 
   if (i >= items.length) {
+    const porRepasar = bloques.filter((b) => b.preguntas.some((q) => falladas.includes(q.id)))
     return (
       <div className="rounded-2xl border border-[var(--linea)] bg-[var(--tarjeta)] p-5 text-center">
         <p className="text-lg font-semibold">
           {aciertos} de {items.length} correctas
         </p>
+        {mejor && <p className="mt-1 text-sm text-[var(--suave)]">Tu mejor resultado: {mejor.mejor} de {mejor.total}</p>}
+        {porRepasar.length > 0 && (
+          <div className="mt-3 text-sm">
+            <p className="font-semibold">Repasa:</p>
+            <div className="mt-2 flex flex-wrap justify-center gap-2">
+              {porRepasar.map((b) => (
+                <button key={b.id} type="button" onClick={() => onIr(b.id)} className="min-h-11 rounded-full border border-[var(--acento)] px-4 font-semibold text-[var(--acento)]">
+                  {b.titulo}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
         <button
           onClick={reiniciar}
           className="mt-3 min-h-11 rounded-xl bg-[var(--acento)] px-5 font-semibold text-[var(--fondo)]"
@@ -66,7 +85,10 @@ export default function Quiz({ bloques }: { bloques: Bloque[] }) {
   const elegir = (pos: number) => {
     if (respondida) return
     setElegida(pos)
-    if (orden[pos] === p.correcta) setAciertos((a) => a + 1)
+    const ok = orden[pos] === p.correcta
+    registrarRespuesta(p.id, ok)
+    if (ok) setAciertos((a) => a + 1)
+    else setFalladas((f) => [...f, p.id])
   }
 
   return (
@@ -102,6 +124,7 @@ export default function Quiz({ bloques }: { bloques: Bloque[] }) {
           <p>{p.explicacion}</p>
           <button
             onClick={() => {
+              if (i + 1 === items.length) guardarQuiz(temaId, aciertos, items.length)
               setI(i + 1)
               setElegida(null)
             }}

@@ -3,6 +3,7 @@ import type { Bloque } from '../data/schema.ts'
 import { guardar, leer } from '../lib/almacen.ts'
 import { usePantallaCompleta } from '../lib/usePantallaCompleta.ts'
 import DetalleBloque from './DetalleBloque.tsx'
+import { estadoDe, usarProgreso } from '../lib/progreso.ts'
 import type { Vista } from './linea/vistas.ts'
 
 function IconoPantalla({ completa }: { completa: boolean }) {
@@ -24,11 +25,14 @@ interface Props {
   claveVista: string
   /** cómo se llama cada bloque en el contador y la ayuda («Hito», «Nivel») */
   unidad?: string
+  /** id del subtema, para guardar el progreso */
+  temaId: string
   /** pide abrir un bloque (por la búsqueda); `n` cambia en cada petición para poder repetir el mismo */
   abrir?: { id: string; n: number } | null
 }
 
-export default function LineaTiempo({ bloques, vistas: VISTAS, claveVista: CLAVE_VISTA, unidad = 'Hito', abrir = null }: Props) {
+export default function LineaTiempo({ bloques, vistas: VISTAS, claveVista: CLAVE_VISTA, unidad = 'Hito', abrir = null, temaId }: Props) {
+  const progreso = usarProgreso()
   const [abierto, setAbierto] = useState<string | null>(null)
   const [vistaId, setVistaId] = useState(() => {
     const v = leer<string>(CLAVE_VISTA, VISTAS[0].id)
@@ -195,6 +199,7 @@ export default function LineaTiempo({ bloques, vistas: VISTAS, claveVista: CLAVE
         onSeleccionar={(id) => setAbierto(abierto === id ? null : id)}
         carril={carril}
         completa={pantalla.activa}
+        estados={Object.fromEntries(ordenados.map((b) => [b.id, estadoDe(progreso, temaId, b)]))}
       />
 
       {seleccionado && (
@@ -204,6 +209,7 @@ export default function LineaTiempo({ bloques, vistas: VISTAS, claveVista: CLAVE
           onCerrar={cerrar}
           posicion={{ actual: indice + 1, total: ordenados.length }}
           unidad={unidad}
+          temaId={temaId}
           onAnterior={indice > 0 ? () => setAbierto(ordenados[indice - 1].id) : undefined}
           onSiguiente={indice < ordenados.length - 1 ? () => setAbierto(ordenados[indice + 1].id) : undefined}
         />

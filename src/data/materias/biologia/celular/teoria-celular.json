@@ -80,6 +80,15 @@
             "Encontró cavidades parecidas en otras plantas, como la médula del saúco y la zanahoria; en las plantas vivas estaban llenas de jugos.",
             "En esos años Malpighi (Italia) y Grew (Inglaterra) también estudiaban la estructura interna de las plantas."
           ]
+        },
+        "docente": {
+          "abrir": "Si cortas corcho muy delgado y lo miras con una lupa potente, ¿qué esperas ver?",
+          "actividad": "Muestren el diagrama de aumento y pidan que estimen cuántas «celdas» caben en un milímetro. Comparen con el dibujo de Hooke.",
+          "errores": [
+            "Creer que Hooke vio células vivas: eran paredes de células muertas del corcho.",
+            "Pensar que «célula» significa unidad de la vida desde Hooke: el nombre solo describía celdillas."
+          ],
+          "minutos": 10
         }
       },
       "preguntas": [
@@ -224,6 +233,15 @@
             "No relacionó sus animálculos con las «células» de Hooke ni propuso una teoría general.",
             "En 1683 describió organismos pequeños en el sarro de sus dientes: son de los primeros dibujos de bacterias."
           ]
+        },
+        "docente": {
+          "abrir": "¿Qué habrá en una gota de agua de charco que no se ve a simple vista?",
+          "actividad": "Si hay microscopio, observen una gota de agua estancada. Si no, usen el diagrama y pidan que dibujen lo que «verían».",
+          "errores": [
+            "Creer que Leeuwenhoek usaba un microscopio como los actuales: tenía una sola lente muy pequeña.",
+            "Pensar que los «animálculos» eran animales pequeños: eran microorganismos unicelulares."
+          ],
+          "minutos": 10
         }
       },
       "preguntas": [
@@ -356,6 +374,15 @@
             "Estudió derecho antes de dedicarse a la botánica y a la medicina.",
             "Según se cuenta, en 1837 le habló del núcleo a Schwann, y esa conversación habría puesto en marcha la teoría celular."
           ]
+        },
+        "docente": {
+          "abrir": "¿Una hoja y una raíz estarán hechas de lo mismo?",
+          "actividad": "Comparen dibujos de cortes de hoja y de raíz y pidan que encuentren qué tienen en común.",
+          "errores": [
+            "Creer que la teoría celular se formuló de una sola vez: Schleiden solo habló de plantas.",
+            "Atribuir a Schleiden la idea de dónde salen las células nuevas: la explicación que dio hoy no se acepta."
+          ],
+          "minutos": 8
         }
       },
       "preguntas": [
@@ -485,6 +512,15 @@
             "No tuvo el tercer postulado (toda célula proviene de otra célula): llegó con Remak y Virchow.",
             "Descubrió las células de Schwann (envuelven fibras nerviosas) y la pepsina, y propuso la palabra «metabolismo»."
           ]
+        },
+        "docente": {
+          "abrir": "Si las plantas están hechas de células, ¿un animal también?",
+          "actividad": "Armen una tabla de dos columnas con lo que Schleiden y Schwann aportaron y pidan que escriban la conclusión conjunta.",
+          "errores": [
+            "Pensar que Schwann trabajó solo: partió de lo que le contó Schleiden.",
+            "Creer que los animales no tienen pared celular porque «no son como las plantas»: la diferencia es otra, no que carezcan de células."
+          ],
+          "minutos": 8
         }
       },
       "preguntas": [
@@ -608,6 +644,15 @@
             "Límite: el postulado vale para las células que existen hoy; no explica cómo apareció la primera célula.",
             "En su libro de 1858 propuso que la enfermedad es un cambio en las células."
           ]
+        },
+        "docente": {
+          "abrir": "¿De dónde sale una célula nueva? ¿Podría aparecer sola?",
+          "actividad": "Con el diagrama de división, sigan una célula que se divide y pregunten qué cambia y qué se conserva.",
+          "errores": [
+            "Creer que Virchow fue el primero en proponerlo: otros lo sugirieron antes.",
+            "Confundir «toda célula viene de otra» con el origen de la primera célula de la historia."
+          ],
+          "minutos": 10
         }
       },
       "preguntas": [
@@ -743,6 +788,15 @@
             "Límite: estos experimentos refutan la generación espontánea en el presente; el origen de la primera vida en la Tierra es otra pregunta.",
             "Redi trabajó con moscas y larvas; Pasteur extendió la idea a los microorganismos."
           ]
+        },
+        "docente": {
+          "abrir": "Si dejas carne al aire, aparecen moscas. ¿Nacen de la carne?",
+          "actividad": "Diseñen en el tablero el experimento del cuello de cisne: qué se mantiene igual y qué cambia. Luego usen el diagrama.",
+          "errores": [
+            "Pensar que Pasteur demostró cómo empezó la vida: solo refutó que hoy los seres vivos aparezcan de materia sin vida.",
+            "Creer que el caldo se descompone por el aire solo: lo hacen los microbios que el aire lleva."
+          ],
+          "minutos": 12
         }
       },
       "preguntas": [
@@ -897,6 +951,15 @@
             "Un virus no tiene células ni metabolismo propio, pero sí material genético y evolución; si está vivo depende de cómo se defina «vivo».",
             "Las definiciones de «célula» y de «vida» tienen bordes discutibles."
           ]
+        },
+        "docente": {
+          "abrir": "Si una célula contiene su propia información, ¿qué pasa cuando se divide?",
+          "actividad": "Pidan que reescriban, con sus palabras, los tres postulados clásicos y los añadidos modernos, y marquen qué cambió.",
+          "errores": [
+            "Creer que la teoría celular quedó igual desde 1839.",
+            "Pensar que los virus son células: no cumplen los postulados."
+          ],
+          "minutos": 10
         }
       },
       "preguntas": [
@@ -1027,6 +1090,15 @@
             "En las décadas de 1970 y 1980, el ADN de las mitocondrias se vio parecido al de ciertas bacterias, y el de los cloroplastos al de las cianobacterias.",
             "Límite: explica mitocondrias y cloroplastos, no el origen del núcleo; el proceso ocurrió hace unos 2.000 millones de años y no se pudo observar."
           ]
+        },
+        "docente": {
+          "abrir": "¿Por qué la mitocondria tiene su propio ADN, igual que una bacteria?",
+          "actividad": "Armen una tabla «mitocondria vs. bacteria» con las semejanzas y pidan que concluyan qué sugieren.",
+          "errores": [
+            "Presentarla como un hecho cerrado: es una hipótesis con mucha evidencia.",
+            "Creer que todos los orgánulos vienen de bacterias: solo mitocondrias y cloroplastos."
+          ],
+          "minutos": 12
         }
       },
       "preguntas": [

@@ -101,3 +101,11 @@ Hooke usa la reconstrucción de Rita Greer (2004, Free Art License, Wikimedia Co
 - Nombre definitivo de la app (provisional: «100cias»).
 - Cuántos niveles por tema (por ahora tres: básico, intermedio, avanzado).
 - En qué área vive la síntesis de proteínas (tema 4 de celular o área de genética) para no duplicarla.
+
+## Proceso pedagógico (progreso, Comprueba, modo docente, analogías, ruta)
+- **Progreso** (`src/lib/progreso.ts`, clave `cien:progreso`): fichas vistas, última respuesta de cada pregunta y mejor puntaje del quiz. Chips «Visto» / «Comprobado» en las vistas; la Guía muestra «Llevas N de M» y «Seguir con…»; botón «Borrar mi progreso» (dos pasos). Se guarda por navegador; entre dispositivos requerirá el inicio de sesión (Supabase).
+- **Pestaña «Comprueba»** en cada ficha con preguntas: teclas 1–4 responden.  El quiz final lista qué fichas repasar.
+- **Ajustes** (`src/lib/ajustes.ts`, en «Personalizar contenido»): modo docente y analogías.
+- **Para el docente** (`ficha.docente`: abrir, actividad, errores, minutos): borradores míos para los 24 bloques; revisar.
+- **Analogías** (`ficha.analogia`): organulos y celula salen de la presentación de JuanMed (ciudad); pluricelulares y division-trabajo son borradores míos.
+- **Vista «Ruta»** vertical, usada por 1.3.

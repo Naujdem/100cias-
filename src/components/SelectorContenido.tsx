@@ -1,6 +1,7 @@
 import { useId, useState } from 'react'
 import type { Bloque } from '../data/schema.ts'
 import { NivelInsignia, BorradorInsignia } from './Insignia.tsx'
+import { cambiarAjuste, usarAjustes } from '../lib/ajustes.ts'
 
 interface Props {
   bloques: Bloque[]
@@ -12,6 +13,7 @@ export default function SelectorContenido({ bloques, activos, onAlternar }: Prop
   // Plegado al empezar: el contenido es lo primero que se ve y esta lista es un ajuste del docente.
   const [abierto, setAbierto] = useState(false)
   const id = useId()
+  const ajustes = usarAjustes()
   return (
     <div>
       <button
@@ -30,6 +32,21 @@ export default function SelectorContenido({ bloques, activos, onAlternar }: Prop
         <span aria-hidden="true">{abierto ? '▴' : '▾'}</span>
       </button>
       <div id={id} hidden={!abierto} className="mt-2">
+        <fieldset className="mb-3 rounded-2xl border border-[var(--linea)] bg-[var(--tarjeta)] p-4">
+          <legend className="px-2 text-sm font-semibold">Ayudas</legend>
+          <label className="flex min-h-11 cursor-pointer items-center gap-3 text-sm">
+            <input type="checkbox" className="h-5 w-5 accent-[var(--acento)]" checked={ajustes.docente} onChange={(e) => cambiarAjuste('docente', e.target.checked)} />
+            <span>
+              <span className="font-medium">Modo docente</span> · añade la pestaña «Para el docente» en cada ficha
+            </span>
+          </label>
+          <label className="flex min-h-11 cursor-pointer items-center gap-3 text-sm">
+            <input type="checkbox" className="h-5 w-5 accent-[var(--acento)]" checked={ajustes.analogias} onChange={(e) => cambiarAjuste('analogias', e.target.checked)} />
+            <span>
+              <span className="font-medium">Analogías</span> · compara con algo cotidiano (por ejemplo, la célula como ciudad)
+            </span>
+          </label>
+        </fieldset>
         <Lista bloques={bloques} activos={activos} onAlternar={onAlternar} />
       </div>
     </div>

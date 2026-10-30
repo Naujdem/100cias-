@@ -7,7 +7,7 @@
   "orden": 3,
   "etiqueta": "1.3",
   "vistas": [
-    "niveles"
+    "ruta"
   ],
   "tituloVista": "De una célula a muchas",
   "unidad": "Paso",
@@ -64,6 +64,15 @@
             "Los hay procariotas (bacterias y arqueas) y eucariotas (ameba, paramecio, levadura).",
             "Una célula sola no es «simple»: puede tener muchos orgánulos y comportamientos complejos."
           ]
+        },
+        "docente": {
+          "abrir": "¿Puede un solo ser, tan pequeño, hacer todo lo que necesita para vivir?",
+          "actividad": "Con el diagrama «De una a muchas» paso 1 y luego «Clasifícalos», decidan qué seres son unicelulares.",
+          "errores": [
+            "Creer que unicelular significa «simple» o «sin vida compleja».",
+            "Pensar que todos los unicelulares son bacterias."
+          ],
+          "minutos": 10
         }
       },
       "ilustraciones": [
@@ -160,6 +169,15 @@
             "La frontera entre colonia y pluricelular no es nítida.",
             "Los coanoflagelados, que a veces forman colonias, son los parientes vivos más cercanos de los animales."
           ]
+        },
+        "docente": {
+          "abrir": "¿Qué diferencia hay entre vivir juntos y ser un solo cuerpo?",
+          "actividad": "Con el diagrama, comparen una cadena de células iguales con Volvox y digan qué tareas se reparten.",
+          "errores": [
+            "Creer que una colonia ya es un pluricelular verdadero.",
+            "Pensar que en toda colonia las células se especializan."
+          ],
+          "minutos": 10
         }
       },
       "ilustraciones": [
@@ -254,6 +272,19 @@
             "Las células se mantienen unidas y se comunican con señales químicas.",
             "Ser pluricelular no es lo mismo que ser grande."
           ]
+        },
+        "docente": {
+          "abrir": "¿Cuántas células crees que tiene tu cuerpo y ¿de dónde salieron?",
+          "actividad": "Con el diagrama, sigan el paso hacia tejidos y órganos y pidan ejemplos de la vida diaria.",
+          "errores": [
+            "Creer que el ser pluricelular es solo un «montón» de células.",
+            "Pensar que todas las células de un pluricelular son iguales."
+          ],
+          "minutos": 10
+        },
+        "analogia": {
+          "titulo": "un pueblo hecho de muchas casas",
+          "texto": "Un pueblo no es una casa grande: son muchas casas con personas que dependen unas de otras. Un pluricelular es parecido: muchas células que ya no viven solas. Borrador: pensado para esta app, no viene de la presentación."
         }
       },
       "ilustraciones": [
@@ -350,6 +381,19 @@
             "Casi todas las células de un organismo tienen el mismo ADN, pero cada tipo usa solo una parte.",
             "Al especializarse, una célula gana eficiencia pero ya no puede vivir sola."
           ]
+        },
+        "docente": {
+          "abrir": "Si una célula de tu piel y una neurona tienen el mismo ADN, ¿por qué son tan distintas?",
+          "actividad": "Armen parejas de tipos de célula y su tarea. Si activaron analogías, comparen con los oficios de una ciudad.",
+          "errores": [
+            "Creer que las células especializadas tienen ADN distinto.",
+            "Pensar que una célula especializada puede vivir sola sin problema."
+          ],
+          "minutos": 12
+        },
+        "analogia": {
+          "titulo": "los oficios de una ciudad",
+          "texto": "En una ciudad hay panaderos, médicos y bomberos; ninguno hace todo. En el cuerpo, las neuronas, las células musculares y las de la piel se reparten el trabajo. Borrador: pensado para esta app, no viene de la presentación."
         }
       },
       "ilustraciones": [
@@ -446,6 +490,15 @@
             "Las células deben comunicarse y coordinarse; a veces una célula muere por el bien del conjunto (muerte celular programada).",
             "Ejemplos de transporte: la sangre en animales, y el xilema y el floema en plantas."
           ]
+        },
+        "docente": {
+          "abrir": "Si ser pluricelular es tan útil, ¿por qué siguen existiendo los unicelulares?",
+          "actividad": "En el tablero, dos columnas: ventajas y costos. Pidan un ejemplo de cada una.",
+          "errores": [
+            "Pensar que ser pluricelular es «mejor» en todo.",
+            "Creer que los unicelulares son una etapa atrasada de la evolución."
+          ],
+          "minutos": 10
         }
       },
       "ilustraciones": [
@@ -542,6 +595,15 @@
             "Dictyostelium vive sola, pero se agrupa en un cuerpo con células distintas cuando falta alimento.",
             "En experimentos, levaduras unicelulares formaron grupos de células en pocas semanas."
           ]
+        },
+        "docente": {
+          "abrir": "¿Habrá surgido la pluricelularidad una sola vez o muchas?",
+          "actividad": "Con el diagrama de orígenes, ubiquen los grupos en que apareció por separado y comparen.",
+          "errores": [
+            "Pensar que la pluricelularidad surgió una sola vez.",
+            "Creer que es una escalera que todos los seres recorren."
+          ],
+          "minutos": 10
         }
       },
       "ilustraciones": [

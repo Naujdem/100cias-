@@ -7,9 +7,13 @@ import Retrato from './Retrato.tsx'
 import Ilustraciones from './Ilustraciones.tsx'
 import Acordeon from './Acordeon.tsx'
 import Cuaderno from './Cuaderno.tsx'
+import Comprueba from './Comprueba.tsx'
+import ParaDocente from './ParaDocente.tsx'
 import { enviarFlecha, moverDeslizador } from '../lib/flechasDiagrama.ts'
+import { marcarVisto } from '../lib/progreso.ts'
+import { usarAjustes } from '../lib/ajustes.ts'
 
-type Pestana = 'historia' | 'diagrama' | 'evidencia' | 'cuaderno'
+type Pestana = 'historia' | 'diagrama' | 'evidencia' | 'cuaderno' | 'comprueba' | 'docente'
 
 /** Línea sobre la naturaleza de la imagen y, plegado, su crédito y licencia. No muestra nada si el autor no tiene imagen. */
 function PieImagen({ autor }: { autor: Autor }) {
@@ -44,9 +48,12 @@ interface Props {
   onSiguiente?: () => void
   /** cómo se llama cada bloque en el contador («Hito», «Nivel») */
   unidad?: string
+  /** id del subtema, para guardar el progreso */
+  temaId: string
 }
 
-export default function DetalleBloque({ bloque: b, onCerrar, posicion, onAnterior, onSiguiente, unidad = 'Hito' }: Props) {
+export default function DetalleBloque({ bloque: b, onCerrar, posicion, onAnterior, onSiguiente, unidad = 'Hito', temaId }: Props) {
+  const ajustes = usarAjustes()
   const idTitulo = useId()
   const caja = useRef<HTMLDivElement>(null)
   const Diagrama = b.diagrama ? DIAGRAMAS[b.diagrama] : undefined
@@ -55,11 +62,16 @@ export default function DetalleBloque({ bloque: b, onCerrar, posicion, onAnterio
     ...(Diagrama ? [{ id: 'diagrama' as Pestana, texto: 'Diagrama' }] : []),
     { id: 'evidencia', texto: b.etiqueta ? 'Ejemplos y límites' : 'Evidencia y límites' },
     ...(b.ficha.cuaderno ? [{ id: 'cuaderno' as Pestana, texto: 'Para el cuaderno' }] : []),
+    ...(b.preguntas.length ? [{ id: 'comprueba' as Pestana, texto: 'Comprueba' }] : []),
+    ...(ajustes.docente && b.ficha.docente ? [{ id: 'docente' as Pestana, texto: 'Para el docente' }] : []),
   ]
   const [activa, setActiva] = useState<Pestana>('historia')
   const activaRef = useRef(activa)
   activaRef.current = activa
   const [principal, ...otros] = b.autores ?? []
+
+  // Al abrir la ficha queda marcada como vista.
+  useEffect(() => marcarVisto(temaId, b.id), [temaId, b.id])
 
   // Foco: entra al diálogo y, al cerrar, vuelve a donde estaba.
   useEffect(() => {
@@ -237,10 +249,15 @@ export default function DetalleBloque({ bloque: b, onCerrar, posicion, onAnterio
                   ) : null}
                   <p>{b.ficha.idea}</p>
                   {b.ilustraciones && <Ilustraciones items={b.ilustraciones} />}
-                  {b.ficha.contexto && (
+                  {(b.ficha.contexto || (ajustes.analogias && b.ficha.analogia)) && (
                     <Acordeon
-                      key={b.id}
-                      items={b.ficha.contexto.map((c) => ({ id: c.titulo, titulo: c.titulo, contenido: <p>{c.texto}</p> }))}
+                      key={`${b.id}-${ajustes.analogias}`}
+                      items={[
+                        ...(b.ficha.contexto ?? []).map((c) => ({ id: c.titulo, titulo: c.titulo, contenido: <p>{c.texto}</p> })),
+                        ...(ajustes.analogias && b.ficha.analogia
+                          ? [{ id: 'analogia', titulo: `Analogía: ${b.ficha.analogia.titulo}`, contenido: <p>{b.ficha.analogia.texto}</p> }]
+                          : []),
+                      ]}
                     />
                   )}
                 </div>
@@ -253,6 +270,10 @@ export default function DetalleBloque({ bloque: b, onCerrar, posicion, onAnterio
               )}
 
               {activa === 'cuaderno' && b.ficha.cuaderno && <Cuaderno cuaderno={b.ficha.cuaderno} titulo={b.titulo} />}
+
+              {activa === 'comprueba' && <Comprueba key={b.id} bloque={b} />}
+
+              {activa === 'docente' && b.ficha.docente && <ParaDocente docente={b.ficha.docente} revisado={b.revisado} />}
 
               {activa === 'evidencia' && (
                 <div className="space-y-3">

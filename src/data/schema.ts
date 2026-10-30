@@ -28,6 +28,18 @@ export interface Cuaderno {
   avanzada: string[]
 }
 
+/** Sugerencias de clase para un bloque. Todo en borrador hasta que el docente lo revise. */
+export interface Docente {
+  /** pregunta para abrir la clase */
+  abrir: string
+  /** qué hacer con el diagrama o la actividad */
+  actividad: string
+  /** ideas equivocadas frecuentes */
+  errores: string[]
+  /** tiempo sugerido, en minutos */
+  minutos: number
+}
+
 export interface Ficha {
   quien?: string
   cuando?: string
@@ -39,6 +51,10 @@ export interface Ficha {
   contexto?: { titulo: string; texto: string }[]
   /** resumen por niveles de lectura (pestaña opcional «Para el cuaderno») */
   cuaderno?: Cuaderno
+  /** sugerencias para quien da la clase (pestaña «Para el docente», solo en modo docente) */
+  docente?: Docente
+  /** comparación opcional (p. ej. la célula como una ciudad), que se muestra si se activan las analogías */
+  analogia?: { titulo: string; texto: string }
 }
 
 export interface Autor {

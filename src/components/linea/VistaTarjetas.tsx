@@ -1,6 +1,7 @@
 import type { PropsVista } from './tipos.ts'
+import InsigniaProgreso from '../InsigniaProgreso.tsx'
 
-export default function VistaTarjetas({ bloques, abierto, onSeleccionar, carril }: PropsVista) {
+export default function VistaTarjetas({ bloques, abierto, onSeleccionar, carril, estados }: PropsVista) {
   return (
     <div ref={carril} className="snap-x snap-proximity overflow-x-auto pb-3" tabIndex={0} aria-label="Línea de tiempo, desplazable">
       <ol className="flex min-w-max">
@@ -34,6 +35,9 @@ export default function VistaTarjetas({ bloques, abierto, onSeleccionar, carril 
               >
                 <span className="block text-sm font-semibold leading-snug">{b.titulo}</span>
                 <span className="mt-1 block text-xs text-[var(--suave)]">{b.resumen}</span>
+                <span className="mt-1 block">
+                  <InsigniaProgreso estado={estados?.[b.id]} />
+                </span>
               </button>
             </li>
           )

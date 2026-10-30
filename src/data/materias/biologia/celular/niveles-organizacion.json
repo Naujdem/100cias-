@@ -72,6 +72,15 @@
             "El carbono forma el «esqueleto» de azúcares, grasas y proteínas.",
             "La vida no está en ninguna partícula en particular, sino en cómo se organizan."
           ]
+        },
+        "docente": {
+          "abrir": "¿De qué está hecho un ser vivo si lo reduces a lo más pequeño?",
+          "actividad": "Con el diagrama «¿Qué niveles tiene?», cada estudiante marca los átomos presentes en una persona, una planta y una bacteria.",
+          "errores": [
+            "Creer que los seres vivos tienen átomos «especiales».",
+            "Pensar que el átomo está vivo: la vida aparece con la célula."
+          ],
+          "minutos": 8
         }
       },
       "preguntas": [
@@ -185,6 +194,15 @@
             "Fórmulas: agua H₂O, oxígeno O₂, dióxido de carbono CO₂, glucosa C₆H₁₂O₆.",
             "La fotosíntesis convierte CO₂ y agua en glucosa y oxígeno."
           ]
+        },
+        "docente": {
+          "abrir": "¿Qué diferencia hay entre un átomo de oxígeno y el oxígeno que respiras?",
+          "actividad": "Con fichas o dibujos, armen moléculas de agua y de dióxido de carbono y cuenten átomos.",
+          "errores": [
+            "Confundir átomo con molécula.",
+            "Creer que «molécula orgánica» significa «de seres vivos solamente» sin ver las excepciones."
+          ],
+          "minutos": 10
         }
       },
       "preguntas": [
@@ -299,6 +317,15 @@
             "Ejemplos: hemoglobina (proteína que lleva oxígeno), ADN (guarda la herencia), celulosa (paredes de las células vegetales).",
             "Los lípidos suelen contarse como macromoléculas, aunque no son cadenas de piezas repetidas."
           ]
+        },
+        "docente": {
+          "abrir": "¿Por qué una proteína puede hacer tantas cosas distintas?",
+          "actividad": "Con collares de cuentas, construyan una cadena e inventen una «proteína»: cambiar una cuenta cambia el collar.",
+          "errores": [
+            "Pensar que todas las macromoléculas son proteínas.",
+            "Creer que son seres vivos por ser grandes."
+          ],
+          "minutos": 10
         }
       },
       "preguntas": [
@@ -419,6 +446,19 @@
             "Se cree que las mitocondrias y los cloroplastos fueron antes bacterias (hipótesis endosimbiótica, subtema 1.1).",
             "Conexión: las mitocondrias y los cloroplastos vienen de bacterias antiguas (endosimbiosis)."
           ]
+        },
+        "docente": {
+          "abrir": "Si la célula fuera una casa, ¿qué «cuartos» tendría?",
+          "actividad": "Pidan que dibujen una célula y rotulen tres orgánulos con su función. Si la analogía de la ciudad está activa, comparen.",
+          "errores": [
+            "Creer que todos los orgánulos tienen membrana: los ribosomas no.",
+            "Pensar que las células procariotas tienen orgánulos con membrana."
+          ],
+          "minutos": 12
+        },
+        "analogia": {
+          "titulo": "la célula como una ciudad",
+          "texto": "La membrana es la puerta de entrada: decide qué entra y qué sale. El citoplasma son las calles por donde todo circula. El núcleo es el alcalde, que guarda los planos y da las órdenes. La mitocondria es la planta eléctrica. Como toda comparación, sirve para recordar, pero una célula no es una ciudad: pregunta dónde falla."
         }
       },
       "preguntas": [
@@ -539,6 +579,19 @@
             "Los virus son un caso límite: tienen material genético, pero no son células.",
             "Conexión: la teoría celular dice que la célula es la unidad básica y que toda célula viene de otra."
           ]
+        },
+        "docente": {
+          "abrir": "¿Qué tiene que tener algo para decir que está vivo?",
+          "actividad": "Discutan qué características cumple una célula y cuáles no un virus o una piedra.",
+          "errores": [
+            "Creer que todas las células tienen núcleo.",
+            "Pensar que la célula es siempre microscópica y redonda."
+          ],
+          "minutos": 12
+        },
+        "analogia": {
+          "titulo": "la célula como una ciudad",
+          "texto": "Una ciudad tiene entradas, calles, un centro de gobierno y una planta de energía; la célula tiene membrana, citoplasma, núcleo y mitocondrias. Imagina qué pasaría si la puerta no dejara pasar nada o si la planta eléctrica se apagara."
         }
       },
       "preguntas": [
@@ -657,6 +710,15 @@
             "Las células de un tejido no son idénticas, solo parecidas.",
             "Conexión: Schleiden y Schwann mostraron que plantas y animales están hechos de células."
           ]
+        },
+        "docente": {
+          "abrir": "¿Qué pasa si se juntan muchas células iguales en un mismo lugar?",
+          "actividad": "Observen o dibujen cortes de tejido y pidan que expliquen qué hace que sea el mismo tejido.",
+          "errores": [
+            "Creer que un tejido tiene un solo tipo de célula siempre.",
+            "Confundir tejido con órgano."
+          ],
+          "minutos": 10
         }
       },
       "preguntas": [
@@ -772,6 +834,15 @@
             "Otros ejemplos: el estómago (con los cuatro tejidos) y una hoja (epidermis, parénquima y tejidos que conducen agua).",
             "La frontera entre tejido y órgano no siempre es nítida; las esponjas no tienen órganos verdaderos."
           ]
+        },
+        "docente": {
+          "abrir": "El corazón, ¿es solo músculo?",
+          "actividad": "Con una tabla, listen los tejidos del corazón o del estómago y su función.",
+          "errores": [
+            "Creer que un órgano está hecho de un solo tejido.",
+            "Pensar que solo los animales tienen órganos: las plantas también."
+          ],
+          "minutos": 10
         }
       },
       "preguntas": [
@@ -887,6 +958,15 @@
             "En las plantas se habla del sistema de la raíz (absorbe agua) y del vástago (tallo y hojas).",
             "No todos los organismos tienen sistemas de órganos: hongos, esponjas y muchos organismos sencillos se organizan de otra manera."
           ]
+        },
+        "docente": {
+          "abrir": "Cuando corres, ¿qué órganos se ponen a trabajar a la vez?",
+          "actividad": "Tracen el recorrido de una gota de sangre usando el hilo de la ficha del sistema circulatorio.",
+          "errores": [
+            "Pensar que los sistemas funcionan separados.",
+            "Creer que todos los seres vivos tienen los mismos sistemas."
+          ],
+          "minutos": 10
         }
       },
       "preguntas": [
@@ -1006,6 +1086,15 @@
             "No todos los organismos pasan por todos los niveles: una bacteria no tiene tejidos ni órganos; un hongo o una esponja no tienen sistemas como los animales complejos.",
             "Conexión: Leeuwenhoek vio por primera vez organismos de una sola célula."
           ]
+        },
+        "docente": {
+          "abrir": "¿Una bacteria y un elefante son el mismo tipo de ser vivo?",
+          "actividad": "Completen la actividad «¿Qué aparece?» y pidan ejemplos de cada nivel para un organismo conocido.",
+          "errores": [
+            "Creer que organismo y especie son lo mismo.",
+            "Pensar que un organismo siempre tiene muchas células."
+          ],
+          "minutos": 10
         }
       },
       "preguntas": [
@@ -1120,6 +1209,15 @@
             "En un ecosistema importan tanto los seres vivos como el agua, el suelo y el clima.",
             "Las decisiones que afectan un ecosistema, como talar un bosque, cambian también a las poblaciones y organismos que viven en él."
           ]
+        },
+        "docente": {
+          "abrir": "¿Qué pasa con un animal si desaparece su ambiente?",
+          "actividad": "Armen una cadena de relaciones con ejemplos locales: población, comunidad, ecosistema.",
+          "errores": [
+            "Confundir población con comunidad.",
+            "Pensar que el ecosistema solo incluye seres vivos."
+          ],
+          "minutos": 10
         }
       },
       "preguntas": [

@@ -45,3 +45,8 @@ Cuando confirmes uno con una fuente, márcalo con `[x]`, escribe la fuente al la
 ## Dibujos
 
 - [ ] Todas las ilustraciones SVG son esquemas hechos para la app, **no a escala** y simplificados; revísalos con ojo de docente (átomo de carbono, glucosa, proteína plegada, mitocondria, célula animal, tejido, corazón, circulatorio, persona y bacteria, de la población a la biosfera, y los tres postulados).
+
+## Notas para el docente y analogías (borradores)
+- Revisar `ficha.docente` de los 24 bloques (preguntas de apertura, actividades, errores frecuentes, minutos).
+- Analogías de pluricelulares y division-trabajo: inventadas por Claude, no vienen de la presentación.
+- Pendiente: pasar el resto de la presentación «La célula» para completar analogías.

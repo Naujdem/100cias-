@@ -1,4 +1,5 @@
 import type { PropsVista } from './tipos.ts'
+import InsigniaProgreso from '../InsigniaProgreso.tsx'
 
 /** El número que aparece en la etiqueta («Nivel 5» → 5), para que la pila y la ficha digan lo mismo aunque haya bloques ocultos. */
 const numero = (etiqueta?: string) => {
@@ -10,7 +11,7 @@ const numero = (etiqueta?: string) => {
  * Pila de niveles: el primero (el más pequeño) queda abajo y el último arriba.
  * El orden del DOM es de menor a mayor; la pila se invierte solo visualmente.
  */
-export default function VistaNiveles({ bloques, abierto, onSeleccionar, carril }: PropsVista) {
+export default function VistaNiveles({ bloques, abierto, onSeleccionar, carril, estados }: PropsVista) {
   const n = bloques.length
   return (
     <div ref={carril} aria-label="Pila de elementos: el primero abajo y el último arriba">
@@ -33,10 +34,11 @@ export default function VistaNiveles({ bloques, abierto, onSeleccionar, carril }
                 <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[var(--acento)] text-sm font-bold text-[var(--fondo)]" aria-hidden="true">
                   {numero(b.etiqueta) ?? i + 1}
                 </span>
-                <span className="min-w-0">
+                <span className="min-w-0 flex-1">
                   <span className="block text-sm font-semibold leading-snug">{b.titulo}</span>
                   <span className="block text-xs text-[var(--suave)]">{b.resumen}</span>
                 </span>
+                <InsigniaProgreso estado={estados?.[b.id]} />
               </button>
             </li>
           )

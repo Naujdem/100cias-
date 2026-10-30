@@ -130,7 +130,6 @@ function TemaView({ TEMA, salto }: { TEMA: Tema; salto: { id: string; n: number 
 
   // «Empezar» abre el primer bloque visible; si hubo una búsqueda más reciente, gana la búsqueda
   const [empezar, setEmpezar] = useState<{ id: string; n: number } | null>(null)
-  const primero = [...visibles].sort((a, b) => a.anio - b.anio)[0]
   const pedido = empezar && (!salto || empezar.n > salto.n) ? empezar : salto
 
   return (
@@ -175,7 +174,7 @@ function TemaView({ TEMA, salto }: { TEMA: Tema; salto: { id: string; n: number 
         </p>
       </div>
 
-      <Guia tema={TEMA} visibles={visibles.length} onEmpezar={() => primero && setEmpezar({ id: primero.id, n: Date.now() })} />
+      <Guia tema={TEMA} visibles={[...visibles].sort((a, b) => a.anio - b.anio)} onIr={(id) => setEmpezar({ id, n: Date.now() })} />
 
       <section aria-label={TEMA.tituloVista ?? 'Línea de tiempo'} className="mt-6">
         <h2 className="mb-3 text-lg font-bold">{TEMA.tituloVista ?? 'Línea de tiempo'}</h2>
@@ -185,13 +184,14 @@ function TemaView({ TEMA, salto }: { TEMA: Tema; salto: { id: string; n: number 
           claveVista={TEMA.vistas ? `cien:vista-${TEMA.id}` : 'cien:vista-linea'}
           unidad={TEMA.unidad}
           abrir={pedido}
+          temaId={TEMA.id}
         />
       </section>
 
       <section aria-label="Quiz" className="mt-8">
         <h2 className="mb-1 text-lg font-bold">Mini-quiz</h2>
         <p className="mb-3 text-sm text-[var(--suave)]">Solo pregunta lo que tienes activado arriba.</p>
-        <Quiz bloques={visibles} />
+        <Quiz bloques={visibles} temaId={TEMA.id} onIr={(id) => setEmpezar({ id, n: Date.now() })} />
       </section>
     </div>
   )
