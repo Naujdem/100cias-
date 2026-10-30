@@ -3,6 +3,7 @@ import type { Bloque } from '../data/schema.ts'
 import { guardar, leer } from '../lib/almacen.ts'
 import { usePantallaCompleta } from '../lib/usePantallaCompleta.ts'
 import DetalleBloque from './DetalleBloque.tsx'
+import Presentacion from './Presentacion.tsx'
 import { estadoDe, usarProgreso } from '../lib/progreso.ts'
 import type { Vista } from './linea/vistas.ts'
 
@@ -27,13 +28,17 @@ interface Props {
   unidad?: string
   /** id del subtema, para guardar el progreso */
   temaId: string
+  /** ofrece ver el subtema como diapositivas */
+  diapositivas?: boolean
   /** pide abrir un bloque (por la búsqueda); `n` cambia en cada petición para poder repetir el mismo */
   abrir?: { id: string; n: number } | null
 }
 
-export default function LineaTiempo({ bloques, vistas: VISTAS, claveVista: CLAVE_VISTA, unidad = 'Hito', abrir = null, temaId }: Props) {
+export default function LineaTiempo({ bloques, vistas: VISTAS, claveVista: CLAVE_VISTA, unidad = 'Hito', abrir = null, temaId, diapositivas = false }: Props) {
   const progreso = usarProgreso()
   const [abierto, setAbierto] = useState<string | null>(null)
+  /** id del bloque con el que se abrió la presentación (null = cerrada) */
+  const [pres, setPres] = useState<string | null>(null)
   const [vistaId, setVistaId] = useState(() => {
     const v = leer<string>(CLAVE_VISTA, VISTAS[0].id)
     return VISTAS.some((x) => x.id === v) ? v : VISTAS[0].id
@@ -61,13 +66,13 @@ export default function LineaTiempo({ bloques, vistas: VISTAS, claveVista: CLAVE
 
   // Mientras hay recuadro o pantalla completa, la página de fondo no se desplaza.
   useEffect(() => {
-    if (!abierto && !pantalla.activa) return
+    if (!abierto && !pantalla.activa && !pres) return
     const previo = document.body.style.overflow
     document.body.style.overflow = 'hidden'
     return () => {
       document.body.style.overflow = previo
     }
-  }, [abierto, pantalla.activa])
+  }, [abierto, pantalla.activa, pres])
 
   const indice = ordenados.findIndex((b) => b.id === abierto)
 
@@ -92,7 +97,7 @@ export default function LineaTiempo({ bloques, vistas: VISTAS, claveVista: CLAVE
   // Teclado en la línea de tiempo (recuadro cerrado): ← → Inicio Fin mueven el foco entre hitos,
   // Enter o Espacio abren el hito enfocado y F activa la pantalla completa.
   useEffect(() => {
-    if (abierto) return
+    if (abierto || pres) return
     const alTeclear = (e: KeyboardEvent) => {
       if (e.ctrlKey || e.metaKey || e.altKey) return
       const t = e.target as HTMLElement | null
@@ -100,6 +105,11 @@ export default function LineaTiempo({ bloques, vistas: VISTAS, claveVista: CLAVE
       const dentro = !!raiz.current?.contains(document.activeElement)
       if (!pantalla.activa && !dentro) return
 
+      if (diapositivas && e.key.toLowerCase() === 'd' && ordenados.length) {
+        e.preventDefault()
+        setPres(ordenados[0].id)
+        return
+      }
       if (e.key.toLowerCase() === 'f') {
         e.preventDefault()
         if (pantalla.activa) pantalla.salir()
@@ -121,7 +131,7 @@ export default function LineaTiempo({ bloques, vistas: VISTAS, claveVista: CLAVE
     window.addEventListener('keydown', alTeclear)
     return () => window.removeEventListener('keydown', alTeclear)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [abierto, pantalla.activa])
+  }, [abierto, pantalla.activa, pres, diapositivas, ordenados.length])
 
   const mover = (dir: 1 | -1) => carril.current?.scrollBy({ left: dir * 280, behavior: 'smooth' })
   const elegirVista = (id: string) => {
@@ -154,8 +164,18 @@ export default function LineaTiempo({ bloques, vistas: VISTAS, claveVista: CLAVE
             </button>
           ))}
         </div>
-        ) : (
+        ) : diapositivas ? null : (
           <span />
+        )}
+        {diapositivas && ordenados.length > 0 && (
+          <button
+            type="button"
+            onClick={() => setPres(ordenados[0].id)}
+            title="Ver este subtema como diapositivas (D)"
+            className="flex min-h-11 items-center gap-2 rounded-full bg-[var(--acento)] px-5 text-sm font-semibold text-[var(--fondo)]"
+          >
+            <span aria-hidden="true">▶</span> Ver como diapositivas
+          </button>
         )}
         <div className="flex items-center gap-2">
           <p className="hidden text-sm text-[var(--suave)] lg:block">{vista.ayuda ?? '← → moverse · Enter abrir · F pantalla completa'}</p>
@@ -210,8 +230,27 @@ export default function LineaTiempo({ bloques, vistas: VISTAS, claveVista: CLAVE
           posicion={{ actual: indice + 1, total: ordenados.length }}
           unidad={unidad}
           temaId={temaId}
+          onDiapositivas={diapositivas ? () => { setPres(seleccionado.id); setAbierto(null) } : undefined}
           onAnterior={indice > 0 ? () => setAbierto(ordenados[indice - 1].id) : undefined}
           onSiguiente={indice < ordenados.length - 1 ? () => setAbierto(ordenados[indice + 1].id) : undefined}
+        />
+      )}
+
+      {pres && (
+        <Presentacion
+          bloques={ordenados}
+          inicio={pres}
+          temaId={temaId}
+          unidad={unidad}
+          onCerrar={() => {
+            const id = pres
+            setPres(null)
+            requestAnimationFrame(() => llevarA(nodo(id)))
+          }}
+          onVerFicha={(id) => {
+            setPres(null)
+            setAbierto(id)
+          }}
         />
       )}
     </div>

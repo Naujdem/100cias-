@@ -6,7 +6,7 @@ import PantallaCompleta from './PantallaCompleta.tsx'
 
 const ruta = (r: string) => `${import.meta.env.BASE_URL}${r.replace(/^\//, '')}`
 
-function Contenido({ i }: { i: Ilustracion }) {
+export function Contenido({ i }: { i: Ilustracion }) {
   if (i.tipo === 'imagen') {
     return <img src={ruta(i.recurso)} alt={i.alt ?? i.titulo} draggable={false} className="h-full w-full object-contain" />
   }

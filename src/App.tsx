@@ -185,6 +185,7 @@ function TemaView({ TEMA, salto }: { TEMA: Tema; salto: { id: string; n: number 
           unidad={TEMA.unidad}
           abrir={pedido}
           temaId={TEMA.id}
+          diapositivas={TEMA.diapositivas}
         />
       </section>
 

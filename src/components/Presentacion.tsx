@@ -1,0 +1,402 @@
+import { useEffect, useMemo, useRef, useState } from 'react'
+import type { KeyboardEvent as KeyEvt } from 'react'
+import type { Bloque } from '../data/schema.ts'
+import { construir } from '../lib/diapositivas.ts'
+import type { Item } from '../lib/diapositivas.ts'
+import { usarAjustes } from '../lib/ajustes.ts'
+import { marcarVisto } from '../lib/progreso.ts'
+import { enviarFlecha, moverDeslizador } from '../lib/flechasDiagrama.ts'
+import { DIAGRAMAS } from './diagramas/index.tsx'
+import { Contenido } from './Ilustraciones.tsx'
+import Comprueba from './Comprueba.tsx'
+import ParaDocente from './ParaDocente.tsx'
+import { NivelInsignia, BorradorInsignia } from './Insignia.tsx'
+
+const FOCALIZABLES = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+
+const numero = (etiqueta: string | undefined, i: number) => {
+  const m = etiqueta?.match(/\d+/)
+  return m ? Number(m[0]) : i + 1
+}
+
+interface Props {
+  /** bloques activos, ya ordenados */
+  bloques: Bloque[]
+  /** id del bloque con el que empieza */
+  inicio: string
+  temaId: string
+  unidad?: string
+  onCerrar: () => void
+  /** abre la ficha completa de un bloque */
+  onVerFicha: (id: string) => void
+}
+
+/**
+ * Presentación a pantalla completa: las fichas del subtema contadas como diapositivas.
+ * Teclado: ← → (o RePág/AvPág, Espacio) cambian de diapositiva; ↑ ↓ de {unidad}; Inicio/Fin; Esc sale.
+ */
+export default function Presentacion({ bloques, inicio, temaId, unidad = 'Hito', onCerrar, onVerFicha }: Props) {
+  const ajustes = usarAjustes()
+  const items: Item[] = useMemo(() => construir(bloques, ajustes), [bloques, ajustes])
+  const [i, setI] = useState(() => Math.max(0, items.findIndex((x) => x.bloque.id === inicio)))
+  const caja = useRef<HTMLDivElement>(null)
+  const iRef = useRef(i)
+  iRef.current = i
+  const it = items[Math.min(i, items.length - 1)]
+
+  const ir = (k: number) => setI(Math.max(0, Math.min(items.length - 1, k)))
+  const irBloque = (dir: 1 | -1) => {
+    const ids = bloques.map((b) => b.id)
+    const k = ids.indexOf(items[iRef.current].bloque.id) + dir
+    if (k < 0 || k >= ids.length) return
+    ir(items.findIndex((x) => x.bloque.id === ids[k]))
+  }
+
+  useEffect(() => {
+    if (it) marcarVisto(temaId, it.bloque.id)
+  }, [temaId, it?.bloque.id]) // eslint-disable-line react-hooks/exhaustive-deps
+
+  useEffect(() => {
+    const previo = document.activeElement as HTMLElement | null
+    caja.current?.focus()
+    const overflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.body.style.overflow = overflow
+      previo?.focus?.()
+    }
+  }, [])
+
+  useEffect(() => {
+    const alTeclear = (e: KeyboardEvent) => {
+      if (e.ctrlKey || e.metaKey || e.altKey) return
+      if (e.key === 'Escape') {
+        if (caja.current?.querySelector('[data-fs="true"]')) return
+        e.preventDefault()
+        e.stopPropagation()
+        onCerrar()
+        return
+      }
+      const t = e.target as HTMLElement | null
+      if (t && /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName)) return
+      if (t?.closest('[data-zoomed="true"]') && e.key.startsWith('Arrow')) return
+      const actual = items[iRef.current]
+      const enDiagrama = actual.d.tipo === 'diagrama'
+
+      if (enDiagrama && (e.key === 'ArrowRight' || e.key === 'ArrowLeft')) {
+        const dir = e.key === 'ArrowRight' ? 1 : -1
+        const panel = caja.current?.querySelector<HTMLElement>('[data-diagrama]')
+        if (enviarFlecha(dir) || (panel && moverDeslizador(panel, dir))) {
+          e.preventDefault()
+          e.stopPropagation()
+          return
+        }
+      }
+      if (enDiagrama && (e.key === 'Enter' || e.key === ' ') && !(t && /^(BUTTON|A|SUMMARY)$/.test(t.tagName))) {
+        const b = caja.current?.querySelector<HTMLButtonElement>('[data-principal]:not([disabled])')
+        if (b) {
+          e.preventDefault()
+          e.stopPropagation()
+          b.click()
+          return
+        }
+      }
+      let usada = true
+      if (e.key === 'ArrowRight' || e.key === 'PageDown' || (e.key === ' ' && !(t && /^(BUTTON|A|SUMMARY)$/.test(t.tagName)))) ir(iRef.current + 1)
+      else if (e.key === 'ArrowLeft' || e.key === 'PageUp') ir(iRef.current - 1)
+      else if (e.key === 'ArrowDown') irBloque(1)
+      else if (e.key === 'ArrowUp') irBloque(-1)
+      else if (e.key === 'Home') ir(0)
+      else if (e.key === 'End') ir(items.length - 1)
+      else usada = false
+      if (usada) {
+        e.preventDefault()
+        e.stopPropagation()
+      }
+    }
+    document.addEventListener('keydown', alTeclear, true)
+    return () => document.removeEventListener('keydown', alTeclear, true)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [items, onCerrar])
+
+  const atrapar = (e: KeyEvt<HTMLDivElement>) => {
+    if (e.key !== 'Tab' || !caja.current) return
+    const lista = [...caja.current.querySelectorAll<HTMLElement>(FOCALIZABLES)].filter((x) => !x.hasAttribute('disabled'))
+    if (!lista.length) return
+    const primero = lista[0]
+    const ultimo = lista[lista.length - 1]
+    if (e.shiftKey && (document.activeElement === primero || document.activeElement === caja.current)) {
+      e.preventDefault()
+      ultimo.focus()
+    } else if (!e.shiftKey && document.activeElement === ultimo) {
+      e.preventDefault()
+      primero.focus()
+    }
+  }
+
+  if (!it) return null
+  const b = it.bloque
+  const idxBloque = bloques.findIndex((x) => x.id === b.id)
+  const siguienteBloque = bloques[idxBloque + 1]
+
+  return (
+    <div
+      ref={caja}
+      role="dialog"
+      aria-modal="true"
+      aria-label={`Diapositivas: ${b.titulo}`}
+      tabIndex={-1}
+      onKeyDown={atrapar}
+      className="fixed inset-0 z-50 flex flex-col bg-[var(--fondo)] outline-none"
+    >
+      <header className="flex items-center gap-3 border-b border-[var(--linea)] bg-[var(--tarjeta)] px-3 py-2">
+        <nav aria-label={`${unidad}s`} className="flex min-w-0 flex-1 gap-1 overflow-x-auto">
+          {bloques.map((x, k) => (
+            <button
+              key={x.id}
+              type="button"
+              aria-current={x.id === b.id ? 'step' : undefined}
+              aria-label={`${unidad} ${numero(x.etiqueta, k)}: ${x.titulo}`}
+              title={x.titulo}
+              onClick={() => ir(items.findIndex((y) => y.bloque.id === x.id))}
+              className={`flex h-9 min-w-9 shrink-0 items-center justify-center rounded-full border px-2 text-sm font-bold ${
+                x.id === b.id ? 'border-[var(--acento)] bg-[var(--acento)] text-[var(--fondo)]' : 'border-[var(--linea)] text-[var(--suave)]'
+              }`}
+            >
+              {numero(x.etiqueta, k)}
+            </button>
+          ))}
+        </nav>
+        <button
+          type="button"
+          onClick={onCerrar}
+          aria-label="Salir de las diapositivas"
+          className="flex h-11 shrink-0 items-center gap-2 rounded-full border border-[var(--linea)] px-4 text-sm font-semibold"
+        >
+          <span aria-hidden="true">×</span> Salir
+        </button>
+      </header>
+      <div
+        role="progressbar"
+        aria-label="Avance de la presentación"
+        aria-valuemin={1}
+        aria-valuemax={items.length}
+        aria-valuenow={i + 1}
+        className="h-1.5 bg-[var(--linea)]"
+      >
+        <div className="h-full bg-[var(--acento)] transition-[width]" style={{ width: `${((i + 1) / items.length) * 100}%` }} />
+      </div>
+
+      <main className="min-h-0 flex-1 overflow-y-auto px-4 py-5 sm:px-8">
+        <div key={`${b.id}-${it.n}`} className="mx-auto flex min-h-full w-full max-w-5xl flex-col justify-center">
+          <Lamina it={it} onVerFicha={onVerFicha} siguienteBloque={siguienteBloque} onIrBloque={() => irBloque(1)} />
+        </div>
+      </main>
+
+      <footer className="flex items-center justify-between gap-2 border-t border-[var(--linea)] bg-[var(--tarjeta)] px-3 py-2 sm:px-5">
+        <button
+          type="button"
+          onClick={() => ir(i - 1)}
+          disabled={i === 0}
+          className="min-h-11 shrink-0 whitespace-nowrap rounded-full border border-[var(--linea)] px-3 text-sm font-semibold disabled:opacity-40 sm:px-4"
+        >
+          ‹ Anterior
+        </button>
+        <div className="min-w-0 text-center text-xs text-[var(--suave)]">
+          <p aria-live="polite" className="font-semibold">
+            {b.etiqueta ?? ''} · diapositiva {it.n} de {it.de} · {i + 1} de {items.length} en total
+          </p>
+          <p className="hidden md:block">
+            {it.d.tipo === 'diagrama'
+              ? '← → controles · RePág/AvPág diapositivas · ↑ ↓ ' + unidad.toLowerCase() + ' · Esc salir'
+              : '← → diapositivas · ↑ ↓ ' + unidad.toLowerCase() + ' · Inicio/Fin · F pantalla completa · Esc salir'}
+          </p>
+        </div>
+        <button
+          type="button"
+          onClick={() => ir(i + 1)}
+          disabled={i === items.length - 1}
+          className="min-h-11 shrink-0 whitespace-nowrap rounded-full bg-[var(--acento)] px-3 text-sm font-semibold text-[var(--fondo)] disabled:opacity-40 sm:px-4"
+        >
+          Siguiente ›
+        </button>
+      </footer>
+    </div>
+  )
+}
+
+function Etiqueta({ children }: { children: string }) {
+  return <p className="text-sm font-bold uppercase tracking-wide text-[var(--acento)]">{children}</p>
+}
+
+function Lamina({
+  it,
+  onVerFicha,
+  siguienteBloque,
+  onIrBloque,
+}: {
+  it: Item
+  onVerFicha: (id: string) => void
+  siguienteBloque?: Bloque
+  onIrBloque: () => void
+}) {
+  const { bloque: b, d } = it
+  const Diagrama = b.diagrama ? DIAGRAMAS[b.diagrama] : undefined
+
+  if (d.tipo === 'portada') {
+    const img = b.ilustraciones?.[0]
+    return (
+      <div className={`grid items-center gap-6 ${img ? 'md:grid-cols-2' : ''}`}>
+        <div>
+          <p className="flex flex-wrap items-center gap-2">
+            <span className="text-lg font-bold text-[var(--acento)]">{b.etiqueta ?? b.anio}</span>
+            <NivelInsignia nivel={b.nivel} />
+            {!b.revisado && <BorradorInsignia />}
+          </p>
+          <h2 className="mt-2 text-3xl font-extrabold leading-tight sm:text-5xl">{b.titulo}</h2>
+          <p className="mt-4 text-lg text-[var(--suave)] sm:text-2xl">{b.resumen}</p>
+        </div>
+        {img && (
+          <figure>
+            <div className="aspect-[4/3] max-h-[55dvh] w-full overflow-hidden rounded-2xl bg-[#efe3cc] shadow">
+              <Contenido i={img} />
+            </div>
+            <figcaption className="mt-2 text-sm text-[var(--suave)]">{img.pie}</figcaption>
+          </figure>
+        )}
+      </div>
+    )
+  }
+
+  if (d.tipo === 'idea') {
+    return (
+      <div>
+        <Etiqueta>La idea</Etiqueta>
+        <h2 className="mt-1 text-xl font-bold text-[var(--suave)] sm:text-2xl">{b.titulo}</h2>
+        {b.ficha.quien || b.ficha.cuando ? <p className="mt-2 text-[var(--suave)]">{[b.ficha.quien, b.ficha.cuando].filter(Boolean).join(' · ')}</p> : null}
+        <p className="mt-4 text-2xl font-semibold leading-snug sm:text-4xl">{b.ficha.idea}</p>
+      </div>
+    )
+  }
+
+  if (d.tipo === 'ilustracion') {
+    return (
+      <figure>
+        <Etiqueta>Mira de cerca</Etiqueta>
+        <h2 className="mt-1 text-2xl font-bold sm:text-3xl">{d.ilustracion.titulo}</h2>
+        <div className="mx-auto mt-4 aspect-[4/3] max-h-[55dvh] w-full overflow-hidden rounded-2xl bg-[#efe3cc] shadow">
+          <Contenido i={d.ilustracion} />
+        </div>
+        <figcaption className="mt-3 text-base sm:text-lg">{d.ilustracion.pie}</figcaption>
+        {d.ilustracion.credito && <p className="mt-1 text-xs text-[var(--suave)]">{d.ilustracion.credito}</p>}
+        {d.ilustracion.tipo === 'svg' && <p className="mt-1 text-xs text-[var(--suave)]">Ilustración esquemática, no está a escala.</p>}
+      </figure>
+    )
+  }
+
+  if (d.tipo === 'analogia' && b.ficha.analogia) {
+    return (
+      <div className="rounded-3xl border-2 border-dashed border-[var(--acento)] bg-[var(--acento-suave)]/30 p-6 sm:p-10">
+        <Etiqueta>Analogía</Etiqueta>
+        <h2 className="mt-1 text-2xl font-bold sm:text-4xl">{b.ficha.analogia.titulo}</h2>
+        <p className="mt-4 text-xl leading-snug sm:text-2xl">{b.ficha.analogia.texto}</p>
+      </div>
+    )
+  }
+
+  if (d.tipo === 'contexto') {
+    return (
+      <div>
+        <Etiqueta>Para saber más</Etiqueta>
+        <h2 className="mt-1 text-2xl font-bold sm:text-4xl">{d.titulo}</h2>
+        <p className="mt-4 text-xl leading-snug sm:text-2xl">{d.texto}</p>
+      </div>
+    )
+  }
+
+  if (d.tipo === 'ejemplos') {
+    return (
+      <div className="grid gap-6 md:grid-cols-2">
+        {b.ficha.evidencia && b.ficha.evidencia.length > 0 && (
+          <div>
+            <Etiqueta>{b.etiqueta ? 'Ejemplos' : 'Evidencia'}</Etiqueta>
+            <ul className="mt-2 list-disc space-y-2 pl-6 text-lg sm:text-xl">
+              {b.ficha.evidencia.map((e) => (
+                <li key={e}>{e}</li>
+              ))}
+            </ul>
+          </div>
+        )}
+        {b.ficha.limites && (
+          <div className="rounded-2xl border border-[var(--linea)] bg-[var(--tarjeta)] p-4">
+            <Etiqueta>Límites</Etiqueta>
+            <p className="mt-2 text-lg sm:text-xl">{b.ficha.limites}</p>
+          </div>
+        )}
+      </div>
+    )
+  }
+
+  if (d.tipo === 'diagrama' && Diagrama) {
+    return (
+      <div>
+        <Etiqueta>Actividad</Etiqueta>
+        <div data-diagrama className="mt-2 rounded-2xl border border-[var(--linea)] bg-[var(--tarjeta)] p-3 sm:p-4">
+          <Diagrama />
+        </div>
+      </div>
+    )
+  }
+
+  if (d.tipo === 'comprueba') {
+    return (
+      <div>
+        <Etiqueta>Comprueba</Etiqueta>
+        <div className="mt-2 text-base">
+          <Comprueba key={b.id} bloque={b} />
+        </div>
+      </div>
+    )
+  }
+
+  if (d.tipo === 'recuerda' && b.ficha.cuaderno) {
+    return (
+      <div>
+        <Etiqueta>Para recordar</Etiqueta>
+        <h2 className="mt-1 text-xl font-bold text-[var(--suave)] sm:text-2xl">{b.titulo}</h2>
+        <ul className="mt-3 list-disc space-y-2 pl-6 text-xl sm:text-3xl">
+          {b.ficha.cuaderno.facil.map((f) => (
+            <li key={f}>{f}</li>
+          ))}
+        </ul>
+        <div className="mt-6 flex flex-wrap gap-2">
+          <button
+            type="button"
+            onClick={() => onVerFicha(b.id)}
+            className="min-h-11 rounded-full border border-[var(--acento)] px-5 text-sm font-semibold text-[var(--acento)]"
+          >
+            Ver la ficha completa
+          </button>
+          {siguienteBloque && (
+            <button type="button" onClick={onIrBloque} className="min-h-11 rounded-full bg-[var(--acento)] px-5 text-sm font-semibold text-[var(--fondo)]">
+              Seguir con: {siguienteBloque.titulo} ›
+            </button>
+          )}
+        </div>
+      </div>
+    )
+  }
+
+  if (d.tipo === 'docente' && b.ficha.docente) {
+    return (
+      <div>
+        <Etiqueta>Para el docente</Etiqueta>
+        <div className="mt-2 text-base">
+          <ParaDocente docente={b.ficha.docente} revisado={b.revisado} />
+        </div>
+      </div>
+    )
+  }
+
+  return null
+}

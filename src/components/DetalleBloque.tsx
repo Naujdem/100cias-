@@ -50,9 +50,11 @@ interface Props {
   unidad?: string
   /** id del subtema, para guardar el progreso */
   temaId: string
+  /** si existe, ofrece pasar a las diapositivas desde este bloque */
+  onDiapositivas?: () => void
 }
 
-export default function DetalleBloque({ bloque: b, onCerrar, posicion, onAnterior, onSiguiente, unidad = 'Hito', temaId }: Props) {
+export default function DetalleBloque({ bloque: b, onCerrar, posicion, onAnterior, onSiguiente, unidad = 'Hito', temaId, onDiapositivas }: Props) {
   const ajustes = usarAjustes()
   const idTitulo = useId()
   const caja = useRef<HTMLDivElement>(null)
@@ -122,6 +124,12 @@ export default function DetalleBloque({ bloque: b, onCerrar, posicion, onAnterio
         }
       }
 
+      if (onDiapositivas && e.key.toLowerCase() === 'd') {
+        e.preventDefault()
+        e.stopPropagation()
+        onDiapositivas()
+        return
+      }
       if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === 'ArrowLeft' || e.key === 'PageUp') {
         const siguiente = e.key === 'ArrowRight' || e.key === 'PageDown'
         const ir = siguiente ? onSiguiente : onAnterior
@@ -142,7 +150,7 @@ export default function DetalleBloque({ bloque: b, onCerrar, posicion, onAnterio
     document.addEventListener('keydown', alTeclear, true)
     return () => document.removeEventListener('keydown', alTeclear, true)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [onCerrar, onSiguiente, onAnterior, Diagrama])
+  }, [onCerrar, onSiguiente, onAnterior, onDiapositivas, Diagrama])
 
   const alTeclear = (e: KeyboardEvent<HTMLDivElement>) => {
     if (e.key !== 'Tab' || !caja.current) return
@@ -219,6 +227,16 @@ export default function DetalleBloque({ bloque: b, onCerrar, posicion, onAnterio
               <span className="text-sm font-semibold text-[var(--acento)]">{b.etiqueta ?? b.anio}</span>
               <NivelInsignia nivel={b.nivel} />
               {!b.revisado && <BorradorInsignia />}
+              {onDiapositivas && (
+                <button
+                  type="button"
+                  onClick={onDiapositivas}
+                  title="Ver como diapositivas (D)"
+                  className="ml-auto min-h-9 rounded-full border border-[var(--acento)] px-3 text-xs font-semibold text-[var(--acento)]"
+                >
+                  ▶ Ver como diapositivas
+                </button>
+              )}
             </p>
             <h3 id={idTitulo} className="mt-1 pr-12 text-xl font-bold leading-snug">
               {b.titulo}

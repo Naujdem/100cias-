@@ -124,6 +124,8 @@ export interface Tema {
   tituloVista?: string
   /** cómo se llama cada bloque en el contador («Hito», «Nivel»); por defecto «Hito» */
   unidad?: string
+  /** si es true, el subtema se puede ver también como diapositivas (se arman a partir de las fichas) */
+  diapositivas?: boolean
   /** lo que el estudiante podrá hacer al terminar el subtema (se muestra en la guía, antes del contenido) */
   objetivos?: string[]
   bloques: Bloque[]

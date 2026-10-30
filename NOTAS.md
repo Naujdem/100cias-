@@ -109,3 +109,9 @@ Hooke usa la reconstrucción de Rita Greer (2004, Free Art License, Wikimedia Co
 - **Para el docente** (`ficha.docente`: abrir, actividad, errores, minutos): borradores míos para los 24 bloques; revisar.
 - **Analogías** (`ficha.analogia`): organulos y celula salen de la presentación de JuanMed (ciudad); pluricelulares y division-trabajo son borradores míos.
 - **Vista «Ruta»** vertical, usada por 1.3.
+
+## Diapositivas (1.2 y 1.3)
+- Botón «▶ Ver como diapositivas» sobre la pila/ruta (tecla D) y dentro de cada ficha. Se activa con `diapositivas: true` en el tema.
+- Las diapositivas **se arman solas desde la ficha** (`lib/diapositivas.ts`): portada con ilustración, idea, imágenes, analogía (si está activa), un dato de contexto por diapositiva, ejemplos y límites, actividad (diagrama), Comprueba, «Para recordar» (cuaderno fácil) y, en modo docente, notas. Así no se duplica contenido.
+- Teclado: ← → / RePág AvPág / Espacio cambian de diapositiva; ↑ ↓ de nivel; Inicio/Fin; Esc sale. En la actividad, ← → mueven el control y RePág/AvPág cambian de diapositiva.
+- Pendiente: diseño más a gusto de JuanMed (la estructura de sus 34 diapositivas no estaba a la vista); se puede añadir `diapositivas` escritas a mano por bloque si quiere algo distinto.
