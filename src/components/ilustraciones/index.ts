@@ -29,6 +29,8 @@ export const ILUSTRACIONES_SVG: Record<string, ComponentType> = {
   'postulado-unidad': PostuladoUnidad,
   'postulado-origen': PostuladoOrigen,
   'uni-ejemplos': EjemplosUnicelulares,
+  'uni-paso-0': () => PasoCelulas({ paso: 0 }),
+  'uni-paso-1': () => PasoCelulas({ paso: 1 }),
   'uni-paso-2': () => PasoCelulas({ paso: 2 }),
   'uni-paso-3': () => PasoCelulas({ paso: 3 }),
   'uni-paso-4': () => PasoCelulas({ paso: 4 }),

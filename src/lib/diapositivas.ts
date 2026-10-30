@@ -1,4 +1,4 @@
-import type { Bloque, Ilustracion } from '../data/schema.ts'
+import type { Bloque, Ilustracion, Lamina } from '../data/schema.ts'
 import type { Ajustes } from './ajustes.ts'
 
 // Las diapositivas no se escriben aparte: se arman a partir de la ficha de cada bloque,
@@ -6,6 +6,7 @@ import type { Ajustes } from './ajustes.ts'
 
 export type Diapositiva =
   | { tipo: 'portada' }
+  | { tipo: 'lamina'; lamina: Lamina }
   | { tipo: 'idea' }
   | { tipo: 'ilustracion'; ilustracion: Ilustracion }
   | { tipo: 'analogia' }
@@ -33,6 +34,13 @@ export interface Item {
 export function construir(bloques: Bloque[], ajustes: Pick<Ajustes, 'analogias' | 'docente'>): Item[] {
   const contenido = bloques.flatMap((b) => {
     const f = b.ficha
+    if (b.diapositivas?.length) {
+      // láminas escritas a propósito: portada, láminas, para recordar y notas del docente
+      const dl: Diapositiva[] = [{ tipo: 'portada' }, ...b.diapositivas.map((lamina): Diapositiva => ({ tipo: 'lamina', lamina }))]
+      if (f.cuaderno) dl.push({ tipo: 'recuerda' })
+      if (ajustes.docente && f.docente) dl.push({ tipo: 'docente' })
+      return dl.map((d, k): Item => ({ bloque: b, d, seccion: 'contenido', n: k + 1, de: dl.length }))
+    }
     const ds: Diapositiva[] = [{ tipo: 'portada' }, { tipo: 'idea' }]
     // la primera imagen acompaña a casi todas las diapositivas del bloque; las demás tienen su propia diapositiva
     for (const i of (b.ilustraciones ?? []).slice(1)) ds.push({ tipo: 'ilustracion', ilustracion: i })
@@ -52,4 +60,12 @@ export function construir(bloques: Bloque[], ajustes: Pick<Ajustes, 'analogias' 
     return ds.map((d, k): Item => ({ bloque: b, d, seccion: 'actividades', n: k + 1, de: ds.length }))
   })
   return [...contenido, ...actividades]
+}
+
+/** Cuántas cosas se revelan con → en una diapositiva: las del visual (tarjetas o lados) y luego los puntos. */
+export function pasosDe(d: Diapositiva): number {
+  if (d.tipo !== 'lamina') return 0
+  const v = d.lamina.visual
+  const enVisual = v?.tipo === 'tarjetas' ? v.items.length : v?.tipo === 'compara' ? 2 : 0
+  return enVisual + (d.lamina.puntos?.length ?? 0)
 }

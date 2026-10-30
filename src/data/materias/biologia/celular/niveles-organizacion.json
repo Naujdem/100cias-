@@ -142,6 +142,87 @@
           "tipo": "svg",
           "recurso": "nivel-atomos"
         }
+      ],
+      "diapositivas": [
+        {
+          "titulo": "Todo está hecho de átomos",
+          "visual": {
+            "tipo": "ilustracion",
+            "recurso": "nivel-atomos"
+          },
+          "puntos": [
+            "Los mismos en un ser vivo y en una roca",
+            "Cambia cómo se organizan",
+            "Un átomo no está vivo"
+          ]
+        },
+        {
+          "titulo": "Cuatro átomos hacen casi todo",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "C",
+                "titulo": "Carbono",
+                "texto": "El esqueleto"
+              },
+              {
+                "icono": "H",
+                "titulo": "Hidrógeno"
+              },
+              {
+                "icono": "O",
+                "titulo": "Oxígeno"
+              },
+              {
+                "icono": "N",
+                "titulo": "Nitrógeno"
+              }
+            ]
+          },
+          "nota": "Juntos, cerca del 96 % de la masa del cuerpo humano."
+        },
+        {
+          "titulo": "Otros átomos importantes",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "P",
+                "titulo": "Fósforo",
+                "texto": "ADN y ATP"
+              },
+              {
+                "icono": "Ca",
+                "titulo": "Calcio",
+                "texto": "Huesos y dientes"
+              },
+              {
+                "icono": "Fe",
+                "titulo": "Hierro",
+                "texto": "Sangre"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Carbono: el protagonista",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🔗",
+            "valor": "Cadenas largas",
+            "texto": "Puede unirse con muchos átomos: es la base de las moléculas de la vida."
+          }
+        },
+        {
+          "titulo": "Hilo: una gota de sangre",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🩸",
+            "valor": "Hierro",
+            "texto": "Además de H, O, C y N, en una gota de sangre hay hierro: está en la hemoglobina."
+          }
+        }
       ]
     },
     {
@@ -263,6 +344,93 @@
           "pie": "Dos moléculas: el agua (un oxígeno y dos hidrógenos) y la glucosa (un anillo con carbonos y un oxígeno). Los átomos unidos forman moléculas.",
           "tipo": "svg",
           "recurso": "nivel-moleculas"
+        }
+      ],
+      "diapositivas": [
+        {
+          "titulo": "Átomos unidos forman una molécula",
+          "visual": {
+            "tipo": "ilustracion",
+            "recurso": "nivel-moleculas"
+          },
+          "puntos": [
+            "Agua: H₂O",
+            "Oxígeno: O₂",
+            "Glucosa: C₆H₁₂O₆"
+          ]
+        },
+        {
+          "titulo": "Pequeñas, pero esenciales",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "💧",
+                "titulo": "Agua"
+              },
+              {
+                "icono": "🫁",
+                "titulo": "Oxígeno"
+              },
+              {
+                "icono": "🌫️",
+                "titulo": "CO₂"
+              },
+              {
+                "icono": "🍬",
+                "titulo": "Glucosa"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "El agua, la molécula de la vida",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "💧",
+            "valor": "½ a ⅔",
+            "texto": "del cuerpo humano adulto es agua, y las reacciones de la célula ocurren disueltas en ella."
+          }
+        },
+        {
+          "titulo": "Orgánicas e inorgánicas",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "🍬",
+              "titulo": "Orgánicas",
+              "puntos": [
+                "Carbono unido a hidrógeno",
+                "Ej.: glucosa"
+              ]
+            },
+            "der": {
+              "icono": "💧",
+              "titulo": "Inorgánicas",
+              "puntos": [
+                "No siguen ese patrón",
+                "Ej.: agua y CO₂"
+              ]
+            }
+          }
+        },
+        {
+          "titulo": "Pequeña, pero con mucha energía",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🔥",
+            "valor": "Glucosa + O₂",
+            "texto": "La célula «quema» la glucosa con oxígeno y libera su energía."
+          }
+        },
+        {
+          "titulo": "Hilo: una gota de sangre",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🩸",
+            "valor": "Plasma",
+            "texto": "La parte líquida es sobre todo agua, y en ella viajan glucosa y oxígeno disuelto."
+          }
         }
       ]
     },
@@ -389,6 +557,89 @@
           "pie": "Una cadena de aminoácidos se pliega y forma una proteína; su forma decide su oficio. Una proteína real tiene cientos de piezas.",
           "tipo": "svg",
           "recurso": "nivel-macromoleculas"
+        }
+      ],
+      "diapositivas": [
+        {
+          "titulo": "Moléculas gigantes hechas de piezas",
+          "visual": {
+            "tipo": "ilustracion",
+            "recurso": "nivel-macromoleculas"
+          },
+          "puntos": [
+            "Cadenas de piezas más pequeñas",
+            "Hay cuatro tipos",
+            "Con ellas se construye la célula"
+          ]
+        },
+        {
+          "titulo": "Cuatro tipos, cuatro oficios",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🥩",
+                "titulo": "Proteínas",
+                "texto": "Construyen y hacen funcionar"
+              },
+              {
+                "icono": "🧬",
+                "titulo": "Ácidos nucleicos",
+                "texto": "Guardan la información"
+              },
+              {
+                "icono": "🍞",
+                "titulo": "Carbohidratos",
+                "texto": "Energía y estructura"
+              },
+              {
+                "icono": "🧈",
+                "titulo": "Lípidos",
+                "texto": "Reserva y membranas"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Piezas que se encadenan",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🔗",
+                "titulo": "Aminoácidos",
+                "texto": "→ proteínas"
+              },
+              {
+                "icono": "🔗",
+                "titulo": "Nucleótidos",
+                "texto": "→ ADN y ARN"
+              },
+              {
+                "icono": "🔗",
+                "titulo": "Azúcares simples",
+                "texto": "→ almidón y celulosa"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Una proteína, mil formas",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🧶",
+            "valor": "La forma decide",
+            "texto": "Hay miles de proteínas distintas y su forma tridimensional decide lo que hacen."
+          }
+        },
+        {
+          "titulo": "Hilo: una gota de sangre",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🩸",
+            "valor": "Hemoglobina",
+            "texto": "Proteína de cuatro cadenas, cada una con hierro, que transporta el oxígeno."
+          }
         }
       ]
     },
@@ -523,6 +774,100 @@
           "tipo": "svg",
           "recurso": "nivel-organulos"
         }
+      ],
+      "diapositivas": [
+        {
+          "titulo": "Los órganos de la célula",
+          "visual": {
+            "tipo": "ilustracion",
+            "recurso": "nivel-organulos"
+          },
+          "puntos": [
+            "«Orgánulo» significa órgano pequeño",
+            "Cada uno hace una tarea",
+            "Solo funcionan dentro de su célula"
+          ]
+        },
+        {
+          "titulo": "Tres que debes conocer",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "⚡",
+                "titulo": "Mitocondria",
+                "texto": "Libera energía de los alimentos"
+              },
+              {
+                "icono": "🌿",
+                "titulo": "Cloroplasto",
+                "texto": "Hace la fotosíntesis"
+              },
+              {
+                "icono": "🧠",
+                "titulo": "Núcleo",
+                "texto": "Guarda el ADN"
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Estructura y función de la célula eucariota",
+            "tema": "celula-eucariota"
+          }
+        },
+        {
+          "titulo": "¿Todas las células los tienen igual?",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "🦠",
+              "titulo": "Procariotas",
+              "puntos": [
+                "Sin orgánulos con membrana",
+                "Solo estructuras sencillas, como ribosomas"
+              ]
+            },
+            "der": {
+              "icono": "🔬",
+              "titulo": "Eucariotas",
+              "puntos": [
+                "Núcleo, mitocondrias, ribosomas…",
+                "Cloroplastos en las plantas"
+              ]
+            }
+          },
+          "atajo": {
+            "texto": "Tipos de células",
+            "tema": "tipos-de-celulas"
+          }
+        },
+        {
+          "titulo": "Un origen curioso",
+          "visual": {
+            "tipo": "ilustracion",
+            "recurso": "endosimbiosis-mito",
+            "pie": "Una célula engulló bacterias que se quedaron adentro."
+          },
+          "puntos": [
+            "Mitocondrias y cloroplastos fueron bacterias",
+            "Una célula las engulló",
+            "Y se quedaron a vivir adentro"
+          ],
+          "atajo": {
+            "texto": "Teoría endosimbiótica",
+            "tema": "teoria-celular",
+            "bloque": "endosimbiosis"
+          }
+        },
+        {
+          "titulo": "Hilo: una gota de sangre",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🩸",
+            "valor": "Sin núcleo",
+            "texto": "El glóbulo rojo maduro de los mamíferos no tiene núcleo ni mitocondrias: casi todo es hemoglobina."
+          }
+        }
       ]
     },
     {
@@ -654,6 +999,82 @@
           "tipo": "svg",
           "recurso": "nivel-celula"
         }
+      ],
+      "diapositivas": [
+        {
+          "titulo": "Aquí aparece la vida",
+          "visual": {
+            "tipo": "ilustracion",
+            "recurso": "nivel-celula"
+          },
+          "puntos": [
+            "La unidad más pequeña que está viva",
+            "Tiene membrana",
+            "Tiene material genético",
+            "Hace su propio metabolismo"
+          ]
+        },
+        {
+          "titulo": "La vida emerge",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "✨",
+            "valor": "Propiedad emergente",
+            "texto": "Ningún nivel anterior está vivo por sí solo: aparece cuando todas las piezas trabajan juntas."
+          }
+        },
+        {
+          "titulo": "¿Cuántas células tiene una persona?",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🧍",
+            "valor": "30–40 billones",
+            "texto": "de células, de unos 200 tipos distintos."
+          }
+        },
+        {
+          "titulo": "Célula y organismo a la vez",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "🦠",
+              "titulo": "Bacteria",
+              "puntos": [
+                "Una célula = un organismo"
+              ]
+            },
+            "der": {
+              "icono": "🧍",
+              "titulo": "Persona",
+              "puntos": [
+                "Billones de células = un organismo"
+              ]
+            }
+          }
+        },
+        {
+          "titulo": "El caso de los virus",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "❓",
+            "valor": "¿Están vivos?",
+            "texto": "Tienen material genético, pero no son células: se discuten como caso límite."
+          },
+          "atajo": {
+            "texto": "La teoría celular hoy",
+            "tema": "teoria-celular",
+            "bloque": "teoria-moderna"
+          }
+        },
+        {
+          "titulo": "Hilo: una gota de sangre",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🩸",
+            "valor": "Millones",
+            "texto": "Un glóbulo rojo es una célula especializada en llevar oxígeno; en una gota hay millones."
+          }
+        }
       ]
     },
     {
@@ -783,6 +1204,95 @@
           "tipo": "svg",
           "recurso": "nivel-tejido"
         }
+      ],
+      "diapositivas": [
+        {
+          "titulo": "Células parecidas, un mismo trabajo",
+          "visual": {
+            "tipo": "ilustracion",
+            "recurso": "nivel-tejido"
+          },
+          "puntos": [
+            "Un grupo de células parecidas",
+            "Cumplen juntas una función",
+            "No son idénticas, solo parecidas"
+          ],
+          "atajo": {
+            "texto": "Schwann: los animales también",
+            "tema": "teoria-celular",
+            "bloque": "schwann"
+          }
+        },
+        {
+          "titulo": "Cuatro tejidos animales",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🛡️",
+                "titulo": "Epitelial",
+                "texto": "Cubre y reviste"
+              },
+              {
+                "icono": "🔗",
+                "titulo": "Conectivo",
+                "texto": "Une y sostiene"
+              },
+              {
+                "icono": "💪",
+                "titulo": "Muscular",
+                "texto": "Se contrae"
+              },
+              {
+                "icono": "⚡",
+                "titulo": "Nervioso",
+                "texto": "Transmite señales"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Tejidos de las plantas",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🌱",
+                "titulo": "Meristemático",
+                "texto": "Crece"
+              },
+              {
+                "icono": "🍃",
+                "titulo": "Epidermis",
+                "texto": "Protege"
+              },
+              {
+                "icono": "🌿",
+                "titulo": "Parénquima",
+                "texto": "Fotosíntesis y reserva"
+              },
+              {
+                "icono": "🚰",
+                "titulo": "Xilema y floema",
+                "texto": "Transportan"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "La sangre también es un tejido",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🩸",
+            "valor": "Tejido líquido",
+            "texto": "Un tejido conectivo: sus células flotan en el plasma."
+          },
+          "puntos": [
+            "Glóbulos rojos",
+            "Glóbulos blancos",
+            "Plaquetas y plasma"
+          ]
+        }
       ]
     },
     {
@@ -907,6 +1417,116 @@
           "tipo": "svg",
           "recurso": "nivel-organo"
         }
+      ],
+      "diapositivas": [
+        {
+          "titulo": "Varios tejidos, una función",
+          "visual": {
+            "tipo": "ilustracion",
+            "recurso": "nivel-organo"
+          },
+          "puntos": [
+            "Varios tejidos distintos",
+            "Cooperan",
+            "Hacen algo que ninguno haría solo"
+          ]
+        },
+        {
+          "titulo": "Tejido y órgano",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "🧱",
+              "titulo": "Tejido",
+              "puntos": [
+                "Células parecidas",
+                "Una función"
+              ]
+            },
+            "der": {
+              "icono": "🫀",
+              "titulo": "Órgano",
+              "puntos": [
+                "Varios tejidos",
+                "Una función mayor"
+              ]
+            }
+          }
+        },
+        {
+          "titulo": "El corazón junta cuatro tejidos",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "💪",
+                "titulo": "Muscular",
+                "texto": "Bombea"
+              },
+              {
+                "icono": "🔗",
+                "titulo": "Conectivo",
+                "texto": "Sostiene"
+              },
+              {
+                "icono": "🛡️",
+                "titulo": "Epitelial",
+                "texto": "Reviste"
+              },
+              {
+                "icono": "⚡",
+                "titulo": "Nervioso",
+                "texto": "Coordina los latidos"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Órganos de las plantas",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🌱",
+                "titulo": "Raíz"
+              },
+              {
+                "icono": "🌿",
+                "titulo": "Tallo"
+              },
+              {
+                "icono": "🍃",
+                "titulo": "Hoja"
+              },
+              {
+                "icono": "🌸",
+                "titulo": "Flor"
+              },
+              {
+                "icono": "🍎",
+                "titulo": "Fruto"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "La piel",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🧴",
+            "valor": "El más grande",
+            "texto": "Se suele considerar el órgano más grande del cuerpo humano."
+          }
+        },
+        {
+          "titulo": "Hilo: una gota de sangre",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🩸",
+            "valor": "Corazón",
+            "texto": "La sangre es un tejido; el corazón, un órgano, la bombea por todo el cuerpo."
+          }
+        }
       ]
     },
     {
@@ -1030,6 +1650,106 @@
           "pie": "Corazón, vasos y sangre cooperan para repartir oxígeno y nutrientes. Esquema muy simplificado.",
           "tipo": "svg",
           "recurso": "nivel-sistema"
+        }
+      ],
+      "diapositivas": [
+        {
+          "titulo": "Órganos en equipo",
+          "visual": {
+            "tipo": "ilustracion",
+            "recurso": "nivel-sistema"
+          },
+          "puntos": [
+            "Un grupo de órganos",
+            "Una función más amplia",
+            "Circulatorio: corazón, vasos y sangre"
+          ]
+        },
+        {
+          "titulo": "Algunos sistemas del cuerpo",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🫀",
+                "titulo": "Circulatorio"
+              },
+              {
+                "icono": "🫁",
+                "titulo": "Respiratorio"
+              },
+              {
+                "icono": "🍽️",
+                "titulo": "Digestivo"
+              },
+              {
+                "icono": "🧠",
+                "titulo": "Nervioso"
+              }
+            ]
+          },
+          "nota": "También: excretor, muscular, óseo, endocrino, inmunitario y reproductor."
+        },
+        {
+          "titulo": "Trabajan en cadena",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🫁",
+                "titulo": "Respiratorio",
+                "texto": "El oxígeno entra"
+              },
+              {
+                "icono": "🫀",
+                "titulo": "Circulatorio",
+                "texto": "Lo lleva"
+              },
+              {
+                "icono": "🧫",
+                "titulo": "Las células",
+                "texto": "Lo usan"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Y en las plantas",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "🌱",
+              "titulo": "Sistema de la raíz",
+              "puntos": [
+                "Absorbe agua"
+              ]
+            },
+            "der": {
+              "icono": "🌿",
+              "titulo": "Sistema del vástago",
+              "puntos": [
+                "Tallo y hojas"
+              ]
+            }
+          }
+        },
+        {
+          "titulo": "No todos tienen sistemas",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🍄",
+            "valor": "No siempre",
+            "texto": "Hongos, esponjas y muchos organismos sencillos se organizan de otra manera."
+          }
+        },
+        {
+          "titulo": "Hilo: una gota de sangre",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🩸",
+            "valor": "Circulatorio",
+            "texto": "Reparte oxígeno y nutrientes y recoge los desechos."
+          }
         }
       ]
     },
@@ -1157,6 +1877,94 @@
           "tipo": "svg",
           "recurso": "nivel-organismo"
         }
+      ],
+      "diapositivas": [
+        {
+          "titulo": "Un ser vivo completo",
+          "visual": {
+            "tipo": "ilustracion",
+            "recurso": "nivel-organismo"
+          },
+          "puntos": [
+            "Capaz de vivir por sí mismo",
+            "Unicelular o pluricelular"
+          ],
+          "atajo": {
+            "texto": "Leeuwenhoek y los seres de una célula",
+            "tema": "teoria-celular",
+            "bloque": "leeuwenhoek"
+          }
+        },
+        {
+          "titulo": "Unicelular o pluricelular",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "🦠",
+              "titulo": "Unicelular",
+              "puntos": [
+                "Célula y organismo son lo mismo"
+              ]
+            },
+            "der": {
+              "icono": "🧍",
+              "titulo": "Pluricelular",
+              "puntos": [
+                "Intervienen todos los niveles"
+              ]
+            }
+          }
+        },
+        {
+          "titulo": "Cuando comes, todo actúa a la vez",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🧪",
+                "titulo": "Moléculas"
+              },
+              {
+                "icono": "🔋",
+                "titulo": "Orgánulos"
+              },
+              {
+                "icono": "🧫",
+                "titulo": "Células"
+              },
+              {
+                "icono": "🧱",
+                "titulo": "Tejidos"
+              },
+              {
+                "icono": "🫀",
+                "titulo": "Órganos"
+              },
+              {
+                "icono": "🔄",
+                "titulo": "Sistemas"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "No todos pasan por todos los niveles",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🦠",
+            "valor": "Se saltan niveles",
+            "texto": "Una bacteria no tiene tejidos ni órganos; un hongo o una esponja, tampoco sistemas como los animales complejos."
+          }
+        },
+        {
+          "titulo": "Hilo: una gota de sangre",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🩸",
+            "valor": "Todo el cuerpo",
+            "texto": "Esa gota de sangre le sirve al organismo entero: lleva oxígeno a cada célula."
+          }
+        }
       ]
     },
     {
@@ -1278,6 +2086,93 @@
           "pie": "Población (una especie en un lugar), comunidad (varias especies), ecosistema (seres vivos y ambiente) y biosfera (todos los ecosistemas).",
           "tipo": "svg",
           "recurso": "nivel-mas-alla"
+        }
+      ],
+      "diapositivas": [
+        {
+          "titulo": "Los seres vivos no viven solos",
+          "visual": {
+            "tipo": "ilustracion",
+            "recurso": "nivel-mas-alla"
+          },
+          "puntos": [
+            "Población: misma especie",
+            "Comunidad: varias especies",
+            "Ecosistema: comunidad y ambiente"
+          ]
+        },
+        {
+          "titulo": "Cuatro peldaños más",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🐟",
+                "titulo": "Población",
+                "texto": "Misma especie"
+              },
+              {
+                "icono": "🌿",
+                "titulo": "Comunidad",
+                "texto": "Varias especies"
+              },
+              {
+                "icono": "🏞️",
+                "titulo": "Ecosistema",
+                "texto": "Comunidad y ambiente"
+              },
+              {
+                "icono": "🌍",
+                "titulo": "Biosfera",
+                "texto": "Todos los ecosistemas"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Ejemplo: una laguna",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🐟",
+                "titulo": "Los peces",
+                "texto": "Una población"
+              },
+              {
+                "icono": "🐟🌿🐦",
+                "titulo": "Peces, plantas, insectos y aves",
+                "texto": "Una comunidad"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "El ambiente también cuenta",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "💧",
+            "valor": "Agua, suelo y clima",
+            "texto": "En un ecosistema importan tanto los seres vivos como su ambiente."
+          }
+        },
+        {
+          "titulo": "Por qué importa",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🌲",
+            "valor": "Todo se conecta",
+            "texto": "Talar un bosque cambia también a las poblaciones que viven en él."
+          }
+        },
+        {
+          "titulo": "Hilo: una gota de sangre",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🩸",
+            "valor": "Una población",
+            "texto": "Esa persona forma parte de una población y de un ecosistema, y respira el oxígeno que producen plantas y algas."
+          }
         }
       ]
     }

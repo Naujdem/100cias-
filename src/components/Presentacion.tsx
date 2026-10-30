@@ -1,14 +1,16 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import type { KeyboardEvent as KeyEvt, ReactNode } from 'react'
 import type { Bloque } from '../data/schema.ts'
-import { construir } from '../lib/diapositivas.ts'
+import { construir, pasosDe } from '../lib/diapositivas.ts'
 import type { Item } from '../lib/diapositivas.ts'
 import { usarAjustes } from '../lib/ajustes.ts'
+import { useAtajos } from '../lib/atajos.ts'
 import { marcarVisto } from '../lib/progreso.ts'
 import { enviarFlecha, moverDeslizador } from '../lib/flechasDiagrama.ts'
 import { DIAGRAMAS } from './diagramas/index.tsx'
 import { Contenido } from './Ilustraciones.tsx'
 import Comprueba from './Comprueba.tsx'
+import LaminaVista from './LaminaVista.tsx'
 import ParaDocente from './ParaDocente.tsx'
 import { NivelInsignia, BorradorInsignia } from './Insignia.tsx'
 
@@ -37,6 +39,7 @@ interface Props {
  */
 export default function Presentacion({ bloques, inicio, temaId, unidad = 'Hito', onCerrar, onVerFicha }: Props) {
   const ajustes = usarAjustes()
+  const atajos = useAtajos()
   const items: Item[] = useMemo(() => construir(bloques, ajustes), [bloques, ajustes])
   const [i, setI] = useState(() => Math.max(0, items.findIndex((x) => x.bloque.id === inicio)))
   const caja = useRef<HTMLDivElement>(null)
@@ -44,7 +47,18 @@ export default function Presentacion({ bloques, inicio, temaId, unidad = 'Hito',
   iRef.current = i
   const it = items[Math.min(i, items.length - 1)]
 
-  const ir = (k: number) => setI(Math.max(0, Math.min(items.length - 1, k)))
+  // `paso` = cuántas cosas de la diapositiva ya se mostraron con → (tarjetas, lados, puntos)
+  const [paso, setPaso] = useState(0)
+  const pasoRef = useRef(0)
+  pasoRef.current = paso
+  const ir = (k: number) => {
+    const kk = Math.max(0, Math.min(items.length - 1, k))
+    // al volver atrás, la diapositiva anterior se ve completa
+    setPaso(kk < iRef.current ? pasosDe(items[kk].d) : 0)
+    setI(kk)
+  }
+  const avanzar = () => (pasoRef.current < pasosDe(items[iRef.current].d) ? setPaso((p) => p + 1) : ir(iRef.current + 1))
+  const retroceder = () => (pasoRef.current > 0 ? setPaso((p) => p - 1) : ir(iRef.current - 1))
   // ↑ ↓ saltan de bloque dentro de la misma sección (contenido o actividades)
   const irBloque = (dir: 1 | -1) => {
     const sec = items[iRef.current].seccion
@@ -84,7 +98,7 @@ export default function Presentacion({ bloques, inicio, temaId, unidad = 'Hito',
       if (t && /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName)) return
       if (t?.closest('[data-zoomed="true"]') && e.key.startsWith('Arrow')) return
       const actual = items[iRef.current]
-      const enDiagrama = actual.d.tipo === 'diagrama'
+      const enDiagrama = actual.d.tipo === 'diagrama' || (actual.d.tipo === 'lamina' && actual.d.lamina.visual?.tipo === 'diagrama')
 
       if (enDiagrama && (e.key === 'ArrowRight' || e.key === 'ArrowLeft')) {
         const dir = e.key === 'ArrowRight' ? 1 : -1
@@ -105,8 +119,10 @@ export default function Presentacion({ bloques, inicio, temaId, unidad = 'Hito',
         }
       }
       let usada = true
-      if (e.key === 'ArrowRight' || e.key === 'PageDown' || (e.key === ' ' && !(t && /^(BUTTON|A|SUMMARY)$/.test(t.tagName)))) ir(iRef.current + 1)
-      else if (e.key === 'ArrowLeft' || e.key === 'PageUp') ir(iRef.current - 1)
+      if (e.key === 'ArrowRight' || (e.key === ' ' && !(t && /^(BUTTON|A|SUMMARY)$/.test(t.tagName)))) avanzar()
+      else if (e.key === 'PageDown') ir(iRef.current + 1)
+      else if (e.key === 'ArrowLeft') retroceder()
+      else if (e.key === 'PageUp') ir(iRef.current - 1)
       else if (e.key === 'ArrowDown') irBloque(1)
       else if (e.key === 'ArrowUp') irBloque(-1)
       else if (e.key === 'Home') ir(0)
@@ -204,13 +220,24 @@ export default function Presentacion({ bloques, inicio, temaId, unidad = 'Hito',
         <div className="h-full bg-[var(--acento)] transition-[width]" style={{ width: `${((i + 1) / items.length) * 100}%` }} />
       </div>
 
-      <main className="min-h-0 flex-1 overflow-y-auto px-4 py-5 sm:px-8">
+      <main
+        className="min-h-0 flex-1 overflow-y-auto px-4 py-5 sm:px-8"
+        onClick={(e) => {
+          if ((e.target as HTMLElement).closest('button, a, input, select, textarea, summary, [data-diagrama]')) return
+          if (paso < pasosDe(it.d)) setPaso((p) => p + 1)
+        }}
+      >
         <div key={`${b.id}-${it.n}`} className="mx-auto flex min-h-full w-full max-w-5xl flex-col justify-center">
           <Lamina
             it={it}
             onVerFicha={onVerFicha}
             siguienteBloque={siguienteBloque}
             onSiguiente={() => (siguienteBloque ? irBloque(1) : primeraActividad >= 0 && ir(primeraActividad))}
+            paso={paso}
+            onAtajo={(tema, bloque) => {
+              onCerrar()
+              atajos?.ir(tema, bloque)
+            }}
           />
         </div>
       </main>
@@ -218,8 +245,8 @@ export default function Presentacion({ bloques, inicio, temaId, unidad = 'Hito',
       <footer className="flex items-center justify-between gap-2 border-t border-[var(--linea)] bg-[var(--tarjeta)] px-3 py-2 sm:px-5">
         <button
           type="button"
-          onClick={() => ir(i - 1)}
-          disabled={i === 0}
+          onClick={retroceder}
+          disabled={i === 0 && paso === 0}
           className="min-h-11 shrink-0 whitespace-nowrap rounded-full border border-[var(--linea)] px-3 text-sm font-semibold disabled:opacity-40 sm:px-4"
         >
           ‹ Anterior
@@ -230,15 +257,17 @@ export default function Presentacion({ bloques, inicio, temaId, unidad = 'Hito',
             {b.etiqueta ?? ''} · {it.n} de {it.de} · {i + 1} de {items.length} en total
           </p>
           <p className="hidden md:block">
-            {it.d.tipo === 'diagrama'
+            {it.d.tipo === 'lamina' && paso < pasosDe(it.d)
+              ? '→ o clic: mostrar lo siguiente · ← ocultar · RePág/AvPág cambian de diapositiva · Esc salir'
+              : it.d.tipo === 'diagrama'
               ? '← → controles · RePág/AvPág diapositivas · ↑ ↓ ' + unidad.toLowerCase() + ' · Esc salir'
               : '← → diapositivas · ↑ ↓ ' + unidad.toLowerCase() + ' · Inicio/Fin · F pantalla completa · Esc salir'}
           </p>
         </div>
         <button
           type="button"
-          onClick={() => ir(i + 1)}
-          disabled={i === items.length - 1}
+          onClick={avanzar}
+          disabled={i === items.length - 1 && paso >= pasosDe(it.d)}
           className="min-h-11 shrink-0 whitespace-nowrap rounded-full bg-[var(--acento)] px-3 text-sm font-semibold text-[var(--fondo)] disabled:opacity-40 sm:px-4"
         >
           Siguiente ›
@@ -279,13 +308,18 @@ function Lamina({
   onVerFicha,
   siguienteBloque,
   onSiguiente,
+  paso,
+  onAtajo,
 }: {
   it: Item
   onVerFicha: (id: string) => void
   siguienteBloque?: Bloque
   onSiguiente: () => void
+  paso: number
+  onAtajo: (tema: string, bloque?: string) => void
 }) {
   const { bloque: b, d } = it
+  if (d.tipo === 'lamina') return <LaminaVista lamina={d.lamina} paso={paso} onAtajo={onAtajo} />
   const Diagrama = b.diagrama ? DIAGRAMAS[b.diagrama] : undefined
 
   if (d.tipo === 'portada') {

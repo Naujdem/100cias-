@@ -10,6 +10,7 @@ import { vistasDe } from './components/linea/vistas.ts'
 import Buscador from './components/Buscador.tsx'
 import Guia from './components/Guia.tsx'
 import type { Resultado } from './lib/buscar.ts'
+import { ContextoAtajos } from './lib/atajos.ts'
 
 // Todos los subtemas del contenido, ordenados. Para agregar uno basta con crear su JSON en data/materias.
 const TEMAS = Object.values(import.meta.glob('./data/materias/**/*.json', { eager: true, import: 'default' }))
@@ -36,7 +37,16 @@ export default function App() {
     guardar(CLAVE_TEMA, r.temaId)
     setSalto({ id: r.bloqueId, n: Date.now() })
   }
+  const atajos = {
+    existe: (id: string) => TEMAS.some((t) => t.id === id),
+    ir: (id: string, bloqueId?: string) => {
+      setTemaId(id)
+      guardar(CLAVE_TEMA, id)
+      setSalto(bloqueId ? { id: bloqueId, n: Date.now() } : null)
+    },
+  }
   return (
+    <ContextoAtajos.Provider value={atajos}>
     <div className="mx-auto max-w-4xl px-4 pb-16 pt-6">
       <header>
         <p className="text-sm font-semibold text-[var(--acento)]">Biología · Biología celular</p>
@@ -65,6 +75,7 @@ export default function App() {
       )}
       <TemaView key={tema.id} TEMA={tema} salto={salto} />
     </div>
+    </ContextoAtajos.Provider>
   )
 }
 

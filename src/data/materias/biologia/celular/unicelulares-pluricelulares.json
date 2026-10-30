@@ -123,7 +123,125 @@
           "explicacion": "En un unicelular, cada célula es un organismo completo; por eso la célula hija es un organismo nuevo."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "diapositivas": [
+        {
+          "titulo": "Una célula, un ser vivo completo",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🍽️",
+                "titulo": "Se alimenta"
+              },
+              {
+                "icono": "⚡",
+                "titulo": "Produce energía"
+              },
+              {
+                "icono": "👀",
+                "titulo": "Responde a su entorno"
+              },
+              {
+                "icono": "✂️",
+                "titulo": "Se reproduce"
+              }
+            ]
+          },
+          "nota": "Y todo lo hace ella sola."
+        },
+        {
+          "titulo": "Pruébalo",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Cuál de estos seres es unicelular?",
+            "opciones": [
+              "Roble",
+              "Ameba",
+              "Persona",
+              "Esponja"
+            ],
+            "correcta": 1,
+            "explicacion": "La ameba es una sola célula. El roble, la persona y la esponja son pluricelulares."
+          }
+        },
+        {
+          "titulo": "Dos grandes grupos",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "🦠",
+              "titulo": "Sin núcleo",
+              "puntos": [
+                "Bacterias",
+                "Arqueas"
+              ]
+            },
+            "der": {
+              "icono": "🔬",
+              "titulo": "Con núcleo",
+              "puntos": [
+                "Amebas y paramecios",
+                "Euglenas y levaduras"
+              ]
+            }
+          },
+          "atajo": {
+            "texto": "Tipos de células",
+            "tema": "tipos-de-celulas"
+          }
+        },
+        {
+          "titulo": "Un mundo casi invisible",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🔬",
+                "titulo": "Casi todos",
+                "texto": "Solo se ven con microscopio"
+              },
+              {
+                "icono": "👀",
+                "titulo": "Unos pocos gigantes",
+                "texto": "Thiomargarita magnifica pasa de 1 cm"
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Leeuwenhoek y sus «animálculos»",
+            "tema": "teoria-celular",
+            "bloque": "leeuwenhoek"
+          }
+        },
+        {
+          "titulo": "Se reproducen dividiéndose",
+          "visual": {
+            "tipo": "ilustracion",
+            "recurso": "celula-anafase",
+            "pie": "Una célula en división: se reparten el material genético."
+          },
+          "puntos": [
+            "Una célula se divide en dos",
+            "Cada hija es un organismo nuevo",
+            "Toda célula viene de otra célula"
+          ],
+          "atajo": {
+            "texto": "Virchow: toda célula viene de otra",
+            "tema": "teoria-celular",
+            "bloque": "virchow"
+          }
+        },
+        {
+          "titulo": "Una sola célula no es «simple»",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🧩",
+            "valor": "Muchos orgánulos",
+            "texto": "Una ameba o un paramecio tienen orgánulos y comportamientos complejos."
+          }
+        }
+      ]
     },
     {
       "id": "colonias",
@@ -228,7 +346,80 @@
           "explicacion": "Unas células nadan con sus flagelos y unas pocas se encargan de la reproducción: un reparto de tareas sencillo."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "diapositivas": [
+        {
+          "titulo": "Células que viven juntas",
+          "visual": {
+            "tipo": "ilustracion",
+            "recurso": "uni-paso-1",
+            "pie": "Células iguales que quedan pegadas."
+          },
+          "puntos": [
+            "Se quedan unidas tras dividirse",
+            "Todas son iguales",
+            "Cada una podría vivir sola"
+          ]
+        },
+        {
+          "titulo": "Volvox: una esfera con reparto de tareas",
+          "visual": {
+            "tipo": "ilustracion",
+            "recurso": "uni-paso-2",
+            "pie": "Volvox: unas células nadan y unas pocas se reproducen."
+          },
+          "puntos": [
+            "Cientos o miles de células con flagelos",
+            "Las que nadan mueven la esfera",
+            "Unas pocas se encargan de reproducirse"
+          ]
+        },
+        {
+          "titulo": "Pruébalo",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "En Volvox, ¿una célula con flagelos podría vivir separada?",
+            "opciones": [
+              "Sí, igual que antes",
+              "No, ya no puede"
+            ],
+            "correcta": 1,
+            "explicacion": "Ya no puede vivir separada. Por eso «colonia» y «pluricelular» forman un espectro y no dos cajas cerradas."
+          }
+        },
+        {
+          "titulo": "¿Colonia o pluricelular?",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "🔗",
+              "titulo": "Colonia sencilla",
+              "puntos": [
+                "Cada célula podría vivir sola",
+                "Pocas diferencias entre células"
+              ]
+            },
+            "der": {
+              "icono": "🧬",
+              "titulo": "Pluricelular",
+              "puntos": [
+                "Ya no pueden vivir solas",
+                "Células especializadas"
+              ]
+            }
+          },
+          "nota": "La frontera no es nítida: es un espectro."
+        },
+        {
+          "titulo": "Parientes de los animales",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🧬",
+            "valor": "Coanoflagelados",
+            "texto": "Unicelulares que a veces forman colonias: los parientes vivos más cercanos de los animales."
+          }
+        }
+      ]
     },
     {
       "id": "pluricelulares",
@@ -335,7 +526,85 @@
           "explicacion": "El roble es una planta pluricelular. La levadura, la bacteria y la ameba son unicelulares."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "diapositivas": [
+        {
+          "titulo": "Muchas células, un solo ser",
+          "visual": {
+            "tipo": "ilustracion",
+            "recurso": "uni-paso-4",
+            "pie": "Células → tejidos → órganos."
+          },
+          "puntos": [
+            "Trabajan juntas",
+            "Dependen unas de otras",
+            "Una sola no sobrevive mucho"
+          ]
+        },
+        {
+          "titulo": "Todas vienen de una",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🥚",
+            "valor": "1 → billones",
+            "texto": "Casi todos los pluricelulares empiezan como una sola célula, el cigoto, que se divide muchas veces."
+          }
+        },
+        {
+          "titulo": "¿Dónde los encontramos?",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🐕",
+                "titulo": "Animales"
+              },
+              {
+                "icono": "🌳",
+                "titulo": "Plantas"
+              },
+              {
+                "icono": "🍄",
+                "titulo": "Muchos hongos"
+              },
+              {
+                "icono": "🌊",
+                "titulo": "Algas pluricelulares",
+                "texto": "Como las algas pardas"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Unidas y conectadas",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "💬",
+            "valor": "Se comunican",
+            "texto": "Las células se mantienen pegadas y se mandan señales, por ejemplo químicas."
+          }
+        },
+        {
+          "titulo": "Ojo: grande no es lo mismo que pluricelular",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "🔬",
+              "titulo": "Pluricelular pequeño",
+              "puntos": [
+                "Hay pluricelulares diminutos"
+              ]
+            },
+            "der": {
+              "icono": "🦠",
+              "titulo": "Unicelular visible",
+              "puntos": [
+                "Algunas bacterias gigantes se ven a simple vista"
+              ]
+            }
+          }
+        }
+      ]
     },
     {
       "id": "division-trabajo",
@@ -444,7 +713,109 @@
           "explicacion": "La célula especializada gana eficiencia en su tarea, pero depende del resto para lo demás. Conserva su ADN."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "diapositivas": [
+        {
+          "titulo": "Cada célula, su oficio",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "💪",
+                "titulo": "Muscular",
+                "texto": "Se contrae"
+              },
+              {
+                "icono": "⚡",
+                "titulo": "Nerviosa",
+                "texto": "Transmite señales"
+              },
+              {
+                "icono": "🩸",
+                "titulo": "Glóbulo rojo",
+                "texto": "Lleva oxígeno"
+              },
+              {
+                "icono": "🍃",
+                "titulo": "De la hoja",
+                "texto": "Hace fotosíntesis"
+              },
+              {
+                "icono": "🌱",
+                "titulo": "De la raíz",
+                "texto": "Absorbe agua"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Mismo ADN, células distintas",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "🧬",
+              "titulo": "Mismo ADN",
+              "puntos": [
+                "Casi todas las células de un organismo lo comparten"
+              ]
+            },
+            "der": {
+              "icono": "🎛️",
+              "titulo": "Distinto uso",
+              "puntos": [
+                "Cada tipo usa solo una parte",
+                "Por eso una neurona y un glóbulo rojo son tan distintos"
+              ]
+            }
+          },
+          "atajo": {
+            "texto": "De la célula al organismo",
+            "tema": "de-la-celula-al-organismo"
+          }
+        },
+        {
+          "titulo": "Un trato: se gana y se pierde",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "➕",
+              "titulo": "Gana",
+              "puntos": [
+                "Eficiencia en su tarea"
+              ]
+            },
+            "der": {
+              "icono": "➖",
+              "titulo": "Pierde",
+              "puntos": [
+                "La capacidad de hacer todo sola"
+              ]
+            }
+          }
+        },
+        {
+          "titulo": "Así se vuelve complejo un organismo",
+          "visual": {
+            "tipo": "ilustracion",
+            "recurso": "uni-paso-3",
+            "pie": "Células especializadas que dependen del conjunto."
+          },
+          "puntos": [
+            "Más grande",
+            "Más complejo",
+            "Con células que dependen del conjunto"
+          ]
+        },
+        {
+          "titulo": "Ojo: no es total",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🌱",
+            "valor": "Células madre",
+            "texto": "Pueden volverse de varios tipos: la especialización no es total."
+          }
+        }
+      ]
     },
     {
       "id": "ventajas",
@@ -549,7 +920,103 @@
           "explicacion": "Ninguna forma es «mejor» en general: los unicelulares son muy abundantes y siguen viviendo en casi todos los ambientes."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "diapositivas": [
+        {
+          "titulo": "Ventajas de ser grande",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "📦",
+                "titulo": "Más reservas"
+              },
+              {
+                "icono": "🏃",
+                "titulo": "Llegar más lejos"
+              },
+              {
+                "icono": "🛡️",
+                "titulo": "Escapar de depredadores pequeños"
+              },
+              {
+                "icono": "🧩",
+                "titulo": "Células especializadas"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "El problema de la superficie",
+          "visual": {
+            "tipo": "ilustracion",
+            "recurso": "uni-superficie-volumen",
+            "pie": "Al crecer, el volumen aumenta más rápido que la superficie."
+          },
+          "puntos": [
+            "El volumen crece más que la superficie",
+            "Las células del interior quedan lejos",
+            "Hace falta transporte: sangre, vasos"
+          ]
+        },
+        {
+          "titulo": "Los costos de ser pluricelular",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🔗",
+                "titulo": "Dependen unas de otras"
+              },
+              {
+                "icono": "🚚",
+                "titulo": "Transportar sustancias"
+              },
+              {
+                "icono": "📡",
+                "titulo": "Coordinarse"
+              },
+              {
+                "icono": "💀",
+                "titulo": "Muerte celular programada"
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Procesos celulares",
+            "tema": "procesos-celulares"
+          }
+        },
+        {
+          "titulo": "Una bacteria y una persona",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "🦠",
+              "titulo": "Bacteria",
+              "puntos": [
+                "Intercambia con el agua que la rodea"
+              ]
+            },
+            "der": {
+              "icono": "🧍",
+              "titulo": "Persona",
+              "puntos": [
+                "Necesita pulmones, corazón y vasos"
+              ]
+            }
+          }
+        },
+        {
+          "titulo": "No es «mejor»: es otra solución",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🦠",
+            "valor": "Miles de millones de años",
+            "texto": "Las bacterias están entre los seres más abundantes y siguen aquí."
+          }
+        }
+      ]
     },
     {
       "id": "origen",
@@ -654,7 +1121,75 @@
           "explicacion": "Muestra cómo células que viven solas pueden unirse y repartirse tareas."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "diapositivas": [
+        {
+          "titulo": "Muchas veces, no una",
+          "visual": {
+            "tipo": "ilustracion",
+            "recurso": "uni-origenes",
+            "pie": "Grupos donde apareció la pluricelularidad."
+          },
+          "puntos": [
+            "Animales, plantas, hongos y varias algas",
+            "De forma independiente",
+            "Se propuso más de 20 veces (cifra en discusión)"
+          ]
+        },
+        {
+          "titulo": "Dos formas de empezar",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "👯",
+              "titulo": "Se quedan juntas",
+              "puntos": [
+                "Las células no se separan tras dividirse",
+                "Se cree en animales y plantas"
+              ]
+            },
+            "der": {
+              "icono": "🧲",
+              "titulo": "Se juntan",
+              "puntos": [
+                "Células que vivían solas se agrupan cuando falta alimento",
+                "Ej.: Dictyostelium"
+              ]
+            }
+          }
+        },
+        {
+          "titulo": "Pruébalo",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Cuántas veces apareció la pluricelularidad?",
+            "opciones": [
+              "Solo una vez",
+              "Muchas veces, por caminos distintos"
+            ],
+            "correcta": 1,
+            "explicacion": "Apareció de forma independiente en varios linajes."
+          }
+        },
+        {
+          "titulo": "Un experimento",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🧪",
+            "valor": "En semanas",
+            "texto": "Levaduras sometidas a selección por tamaño formaron grupos con forma de copo de nieve (Ratcliff y colaboradores, 2012)."
+          }
+        },
+        {
+          "titulo": "Todavía se investiga",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🔭",
+            "valor": "Pregunta abierta",
+            "texto": "Los primeros pasos no se observaron: se deducen de organismos actuales y de experimentos."
+          }
+        }
+      ]
     }
   ],
   "diapositivas": true

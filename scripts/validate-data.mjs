@@ -6,6 +6,8 @@ const raiz = new URL('../src/data/', import.meta.url).pathname
 const errores = []
 const avisos = []
 const err = (m) => errores.push(m)
+// claves de ilustraciones registradas (components/ilustraciones/index.ts)
+const ilustraciones = new Set([...readFileSync('src/components/ilustraciones/index.ts', 'utf8').matchAll(/^\s*'([a-z0-9-]+)':/gm)].map((m) => m[1]))
 
 function archivos(dir) {
   return readdirSync(dir).flatMap((f) => {
@@ -40,6 +42,19 @@ for (const f of archivos(join(raiz, 'materias'))) {
           else vistos.add(l)
         }
       }
+    }
+    for (const [k, l] of (b.diapositivas ?? []).entries()) {
+      const c = `${ctx} lámina ${k + 1}`
+      if (!l.titulo?.trim()) err(`${c}: sin título`)
+      if ((l.puntos ?? []).length > 4) err(`${c}: demasiados puntos (máx. 4)`)
+      for (const p of l.puntos ?? []) if (p.length > 60) err(`${c}: punto largo (${p.length} car.): ${p}`)
+      const v = l.visual
+      if (!v) err(`${c}: sin visual`)
+      else if (!['ilustracion', 'cifra', 'tarjetas', 'compara', 'pregunta', 'diagrama'].includes(v.tipo)) err(`${c}: visual desconocido ${v.tipo}`)
+      else if (v.tipo === 'ilustracion' && !ilustraciones.has(v.recurso)) err(`${c}: ilustración «${v.recurso}» no registrada`)
+      else if (v.tipo === 'pregunta' && !(v.correcta >= 0 && v.correcta < v.opciones.length)) err(`${c}: pregunta con correcta fuera de rango`)
+      else if (v.tipo === 'tarjetas' && (v.items.length < 2 || v.items.length > 6)) err(`${c}: tarjetas debe tener entre 2 y 6`)
+      if (l.atajo && !l.atajo.tema) err(`${c}: atajo sin tema`)
     }
     if (b.ficha?.docente) {
       const d = b.ficha.docente

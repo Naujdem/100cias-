@@ -82,6 +82,43 @@ export interface Ilustracion {
   credito?: string
 }
 
+/** Un lado de una comparación (p. ej. «Con núcleo» frente a «Sin núcleo»). */
+export interface Lado {
+  icono?: string
+  titulo: string
+  puntos: string[]
+}
+
+/** Lo que se ve en una lámina: siempre algo para mirar o hacer, no solo texto. */
+export type Visual =
+  /** una ilustración SVG ya registrada (components/ilustraciones) */
+  | { tipo: 'ilustracion'; recurso: string; pie?: string }
+  /** un dato grande con su icono */
+  | { tipo: 'cifra'; icono?: string; valor: string; texto: string }
+  /** tarjetas que aparecen una a una */
+  | { tipo: 'tarjetas'; items: { icono?: string; titulo: string; texto?: string }[] }
+  /** dos lados que aparecen uno a uno */
+  | { tipo: 'compara'; izq: Lado; der: Lado }
+  /** pregunta rápida («¿Qué crees?»): se responde con un toque o con las teclas 1–4; no cuenta en el progreso */
+  | { tipo: 'pregunta'; enunciado: string; opciones: string[]; correcta: number; explicacion: string }
+  /** un diagrama interactivo ya registrado (components/diagramas) */
+  | { tipo: 'diagrama'; id: string }
+
+/**
+ * Una lámina de la presentación: una sola idea, poco texto y algo visual.
+ * Lo que se revela con → (tarjetas, lados y puntos) va apareciendo de a poco.
+ */
+export interface Lamina {
+  titulo: string
+  /** frases muy cortas que aparecen una a una, después de lo que se revela en el visual */
+  puntos?: string[]
+  visual?: Visual
+  /** línea pequeña al pie */
+  nota?: string
+  /** acceso directo a otro tema o ficha (si ese tema aún no existe, se muestra como «próximamente») */
+  atajo?: { texto: string; tema: string; bloque?: string }
+}
+
 /** Unidad mínima de contenido que se puede activar o desactivar. */
 export interface Bloque {
   id: string
@@ -97,6 +134,8 @@ export interface Bloque {
   /** ids de bloques del mismo tema que deben estar activos para que éste tenga sentido */
   requiere?: string[]
   ficha: Ficha
+  /** láminas de la presentación; si faltan, se arman solas a partir de la ficha */
+  diapositivas?: Lamina[]
   autores?: Autor[]
   ilustraciones?: Ilustracion[]
   /** id del diagrama interactivo que se muestra en la pestaña «Diagrama» (ver components/diagramas) */
