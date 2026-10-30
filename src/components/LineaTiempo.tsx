@@ -1,9 +1,10 @@
-import { useEffect, useRef, useState } from 'react'
+import { lazy, Suspense, useEffect, useRef, useState } from 'react'
 import type { Bloque } from '../data/schema.ts'
 import { guardar, leer } from '../lib/almacen.ts'
 import { usePantallaCompleta } from '../lib/usePantallaCompleta.ts'
 import DetalleBloque from './DetalleBloque.tsx'
-import Presentacion from './Presentacion.tsx'
+// la presentación (con todas las ilustraciones) se carga solo cuando se abre
+const Presentacion = lazy(() => import('./Presentacion.tsx'))
 import { estadoDe, usarProgreso } from '../lib/progreso.ts'
 import type { Vista } from './linea/vistas.ts'
 
@@ -237,6 +238,7 @@ export default function LineaTiempo({ bloques, vistas: VISTAS, claveVista: CLAVE
       )}
 
       {pres && (
+        <Suspense fallback={<div role="status" className="fixed inset-0 z-50 flex items-center justify-center bg-[var(--fondo)] text-sm">Cargando diapositivas…</div>}>
         <Presentacion
           bloques={ordenados}
           inicio={pres}
@@ -252,6 +254,7 @@ export default function LineaTiempo({ bloques, vistas: VISTAS, claveVista: CLAVE
             setAbierto(id)
           }}
         />
+        </Suspense>
       )}
     </div>
   )

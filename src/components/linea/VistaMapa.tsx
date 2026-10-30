@@ -71,6 +71,7 @@ export default function VistaMapa({ bloques, abierto, onSeleccionar, carril, est
         <p className="mb-2 text-xs font-semibold text-[var(--suave)]">Fuera del árbol</p>
         <div className="max-w-xs">{nodo(VIRUS, 'border-dashed')}</div>
       </div>
+      {bloques.length < 6 && <p className="mt-3 text-xs text-[var(--suave)]">Los cuadros apagados no están en tu perfil; puedes activarlos en «Personalizar contenido».</p>}
     </div>
   )
 }

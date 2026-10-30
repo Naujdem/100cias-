@@ -318,7 +318,7 @@ export function EscenaVirusCelula() {
       <T x={290} y={222} s={12} b>Es una célula</T>
       <T x={290} y={240} s={11}>membrana, citoplasma y ADN</T>
       <Flecha x1={188} y1={130} x2={208} y2={130} c="#b3a58a" w={2} />
-      <T x={200} y={280} s={11} i>el virus es unas 10–100 veces más pequeño (a verificar)</T>
+      <T x={200} y={280} s={11} i>casi siempre, el virus es mucho más pequeño que una bacteria</T>
     </Lienzo>
   )
 }
