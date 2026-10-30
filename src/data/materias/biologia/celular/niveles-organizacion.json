@@ -738,7 +738,8 @@
           },
           "atajo": {
             "texto": "Tipos de células",
-            "tema": "tipos-de-celulas"
+            "tema": "tipos-de-celulas",
+            "bloque": "pro-eu"
           }
         },
         {
@@ -962,8 +963,8 @@
           },
           "atajo": {
             "texto": "La teoría celular hoy",
-            "tema": "teoria-celular",
-            "bloque": "teoria-moderna"
+            "tema": "tipos-de-celulas",
+            "bloque": "virus"
           }
         },
         {
@@ -1157,6 +1158,11 @@
             "tipo": "ilustracion",
             "recurso": "niv-tejidos-plantas",
             "pie": "Cuatro tejidos de las plantas"
+          },
+          "atajo": {
+            "texto": "Tipos de células",
+            "tema": "tipos-de-celulas",
+            "bloque": "animal-vegetal"
           }
         },
         {

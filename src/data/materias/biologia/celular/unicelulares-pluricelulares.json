@@ -158,7 +158,8 @@
           },
           "atajo": {
             "texto": "Tipos de células",
-            "tema": "tipos-de-celulas"
+            "tema": "tipos-de-celulas",
+            "bloque": "pro-eu"
           }
         },
         {
@@ -664,6 +665,11 @@
             "tipo": "ilustracion",
             "recurso": "div-oficios",
             "pie": "Cada célula, su oficio"
+          },
+          "atajo": {
+            "texto": "Tipos de células",
+            "tema": "tipos-de-celulas",
+            "bloque": "especializadas"
           }
         },
         {

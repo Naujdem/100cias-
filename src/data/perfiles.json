@@ -23,13 +23,19 @@
         "unicelulares",
         "pluricelulares",
         "division-trabajo"
+      ],
+      "tipos-de-celulas": [
+        "pro-eu",
+        "animal-vegetal",
+        "virus"
       ]
     },
     "nivelDibujo": "basico",
     "descripciones": {
       "teoria-celular": "Cinco hitos: primeras observaciones y los tres postulados.",
       "niveles-organizacion": "Seis niveles: de los orgánulos al organismo.",
-      "unicelulares-pluricelulares": "Tres pasos: unicelulares, pluricelulares y la división del trabajo."
+      "unicelulares-pluricelulares": "Tres pasos: unicelulares, pluricelulares y la división del trabajo.",
+      "tipos-de-celulas": "Tres pasos: procariota o eucariota, animal o vegetal, y los virus."
     }
   },
   {
@@ -61,13 +67,22 @@
         "pluricelulares",
         "division-trabajo",
         "ventajas"
+      ],
+      "tipos-de-celulas": [
+        "pro-eu",
+        "bacterias-arqueas",
+        "eucariotas",
+        "animal-vegetal",
+        "especializadas",
+        "virus"
       ]
     },
     "nivelDibujo": "intermedio",
     "descripciones": {
       "teoria-celular": "Seis hitos: suma la refutación de la generación espontánea.",
       "niveles-organizacion": "Ocho niveles: suma las moléculas y las macromoléculas.",
-      "unicelulares-pluricelulares": "Cinco pasos: suma las colonias y las ventajas y costos de ser pluricelular."
+      "unicelulares-pluricelulares": "Cinco pasos: suma las colonias y las ventajas y costos de ser pluricelular.",
+      "tipos-de-celulas": "Seis pasos: suma bacterias y arqueas, los grupos eucariotas y las células especializadas."
     }
   },
   {
@@ -104,13 +119,22 @@
         "division-trabajo",
         "ventajas",
         "origen"
+      ],
+      "tipos-de-celulas": [
+        "pro-eu",
+        "bacterias-arqueas",
+        "eucariotas",
+        "animal-vegetal",
+        "especializadas",
+        "virus"
       ]
     },
     "nivelDibujo": "avanzado",
     "descripciones": {
       "teoria-celular": "Todo el contenido: ocho hitos, con la endosimbiosis y la teoría celular hoy.",
       "niveles-organizacion": "Diez niveles: de los átomos a más allá del organismo.",
-      "unicelulares-pluricelulares": "Seis pasos: suma el origen de la pluricelularidad."
+      "unicelulares-pluricelulares": "Seis pasos: suma el origen de la pluricelularidad.",
+      "tipos-de-celulas": "Todo el contenido: los seis pasos, con el detalle de los cuadernos avanzados."
     }
   }
 ]

@@ -1,0 +1,1225 @@
+{
+  "id": "tipos-de-celulas",
+  "materia": "biologia",
+  "area": "celular",
+  "titulo": "Teoría celular y niveles de organización",
+  "subtema": "Tipos de células",
+  "orden": 2,
+  "etiqueta": "2",
+  "vistas": [
+    "mapa"
+  ],
+  "tituloVista": "Mapa de tipos de células",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Decidir si una célula es procariota o eucariota a partir de sus rasgos.",
+    "Distinguir una célula animal de una vegetal.",
+    "Relacionar la forma de una célula especializada con su función.",
+    "Explicar por qué los virus no son células."
+  ],
+  "fuentes": [
+    "Presentación «La célula» de JuanMed (referencia)",
+    "Plan de área del colegio (solo guía)",
+    "BORRADOR: contenido redactado como punto de partida; verificar cada bloque contra el libro o apuntes antes de marcarlo como revisado. A verificar: tamaño relativo (unas 10 veces) procariota/eucariota y virus/bacteria; ejemplos de arqueas y de formas de bacterias; que las plantas con flores no tienen centriolos; fecha de Woese (1977)."
+  ],
+  "bloques": [
+    {
+      "id": "pro-eu",
+      "titulo": "La gran división: procariota o eucariota",
+      "resumen": "Toda célula es procariota (sin núcleo) o eucariota (con núcleo).",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "Las células se dividen en dos grandes tipos según cómo guardan su ADN. Las procariotas no tienen núcleo: su ADN anda suelto en el citoplasma. Las eucariotas tienen núcleo: su ADN está guardado dentro de una bolsa con membrana. Esa diferencia lleva consigo otras: las eucariotas también tienen orgánulos con membrana y suelen ser más grandes.",
+        "contexto": [
+          {
+            "titulo": "Lo que comparten",
+            "texto": "Las dos tienen membrana, citoplasma, ADN y ribosomas. Por eso las dos son células y siguen la teoría celular."
+          },
+          {
+            "titulo": "Lo que cambia",
+            "texto": "Núcleo (no / sí), orgánulos con membrana (no / sí) y tamaño (casi siempre más pequeñas / más grandes). El nombre lo dice: pro = antes de, eu = verdadero, karyon = núcleo."
+          },
+          {
+            "titulo": "Quiénes son",
+            "texto": "Procariotas: bacterias y arqueas. Eucariotas: protistas, hongos, plantas y animales."
+          },
+          {
+            "titulo": "Un truco para reconocerlas",
+            "texto": "Si ves una bolsa que guarda el ADN, es eucariota. Si no la ves, es procariota."
+          }
+        ],
+        "evidencia": [
+          "Al microscopio electrónico se ve la envoltura del núcleo en las eucariotas y ninguna en las procariotas.",
+          "Una bacteria mide unos pocos micrómetros; una célula animal típica, decenas."
+        ],
+        "limites": "Tamaño y forma no bastan para decidir: hay eucariotas muy pequeñas y algunas bacterias gigantes. La pista segura es el núcleo.",
+        "cuaderno": {
+          "facil": [
+            "Procariota: sin núcleo.",
+            "Eucariota: con núcleo."
+          ],
+          "media": [
+            "Las procariotas son bacterias y arqueas; las eucariotas, protistas, hongos, plantas y animales.",
+            "Las eucariotas tienen orgánulos con membrana; las procariotas, no."
+          ],
+          "avanzada": [
+            "Las procariotas tienen un cromosoma circular en una zona llamada nucleoide.",
+            "Las eucariotas suelen medir unas 10 veces más (aprox.) y sus ribosomas son un poco mayores."
+          ]
+        },
+        "docente": {
+          "abrir": "Si pudieras mirar dentro de una célula, ¿cómo sabrías qué tipo es?",
+          "actividad": "Con el comparador, enciendan las capas una a una y pidan que digan «sin / con» en voz alta. Cierren con «¿Cuál es?».",
+          "errores": [
+            "Creer que «sin núcleo» significa «sin ADN».",
+            "Pensar que las procariotas son «más simples» y por eso «peores».",
+            "Creer que las eucariotas son siempre pluricelulares."
+          ],
+          "minutos": 15
+        },
+        "analogia": {
+          "titulo": "Una biblioteca",
+          "texto": "La eucariota guarda sus libros (ADN) en una sala con puerta; la procariota los deja sobre las mesas del salón."
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Dos modos de guardar el ADN",
+          "visual": {
+            "tipo": "ilustracion",
+            "recurso": "tipos-pro-eu",
+            "pie": "Sin núcleo / con núcleo"
+          }
+        },
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Una célula tiene su ADN suelto en el citoplasma. ¿Qué tipo es?",
+            "opciones": [
+              "Procariota",
+              "Eucariota",
+              "Ninguna"
+            ],
+            "correcta": 0,
+            "explicacion": "Sin núcleo que lo guarde, el ADN queda suelto: es procariota."
+          }
+        },
+        {
+          "titulo": "Mismas piezas básicas",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🧱",
+                "titulo": "Membrana"
+              },
+              {
+                "icono": "💧",
+                "titulo": "Citoplasma"
+              },
+              {
+                "icono": "🧬",
+                "titulo": "ADN"
+              },
+              {
+                "icono": "⚙️",
+                "titulo": "Ribosomas"
+              }
+            ]
+          },
+          "nota": "Las dos son células."
+        },
+        {
+          "titulo": "Lo que cambia",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "🚫",
+              "titulo": "Procariota",
+              "puntos": [
+                "Sin núcleo",
+                "Sin orgánulos con membrana",
+                "Más pequeña"
+              ]
+            },
+            "der": {
+              "icono": "✅",
+              "titulo": "Eucariota",
+              "puntos": [
+                "Con núcleo",
+                "Con orgánulos con membrana",
+                "Más grande"
+              ]
+            }
+          }
+        },
+        {
+          "titulo": "Procariotas y eucariotas",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🦠",
+                "titulo": "Bacterias",
+                "texto": "procariotas"
+              },
+              {
+                "icono": "🔥",
+                "titulo": "Arqueas",
+                "texto": "procariotas"
+              },
+              {
+                "icono": "🍄",
+                "titulo": "Hongos",
+                "texto": "eucariotas"
+              },
+              {
+                "icono": "🌿",
+                "titulo": "Plantas",
+                "texto": "eucariotas"
+              },
+              {
+                "icono": "🐟",
+                "titulo": "Animales",
+                "texto": "eucariotas"
+              },
+              {
+                "icono": "🔬",
+                "titulo": "Protistas",
+                "texto": "eucariotas"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Pruébalo",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Qué estructura distingue a una eucariota?",
+            "opciones": [
+              "Membrana",
+              "Ribosomas",
+              "Núcleo con membrana",
+              "ADN"
+            ],
+            "correcta": 2,
+            "explicacion": "La membrana, el ADN y los ribosomas los tienen las dos. El núcleo verdadero es solo de las eucariotas."
+          },
+          "atajo": {
+            "texto": "Bacterias y arqueas",
+            "tema": "tipos-de-celulas",
+            "bloque": "bacterias-arqueas"
+          }
+        }
+      ],
+      "ilustraciones": [
+        {
+          "id": "tipos-pro-eu",
+          "titulo": "Procariota y eucariota",
+          "pie": "Sin núcleo (ADN suelto) frente a con núcleo (ADN guardado). Esquemas no a escala.",
+          "tipo": "svg",
+          "recurso": "tipos-pro-eu"
+        }
+      ],
+      "diagrama": "comparador-pro-eu",
+      "preguntas": [
+        {
+          "id": "tc-pe-1",
+          "enunciado": "¿Qué distingue a una célula eucariota de una procariota?",
+          "opciones": [
+            "Tiene núcleo con membrana",
+            "Tiene ADN",
+            "Tiene membrana",
+            "Tiene ribosomas"
+          ],
+          "correcta": 0,
+          "explicacion": "El ADN, la membrana y los ribosomas están en las dos; el núcleo verdadero es de las eucariotas."
+        },
+        {
+          "id": "tc-pe-2",
+          "enunciado": "¿Cuál es procariota?",
+          "opciones": [
+            "Una célula de levadura",
+            "Una bacteria",
+            "Una célula de hoja",
+            "Una neurona"
+          ],
+          "correcta": 1,
+          "explicacion": "Las bacterias son procariotas. La levadura, la hoja y la neurona son eucariotas."
+        },
+        {
+          "id": "tc-pe-3",
+          "enunciado": "Una célula tiene mitocondrias. ¿Qué es?",
+          "opciones": [
+            "Procariota",
+            "Eucariota",
+            "No se puede saber"
+          ],
+          "correcta": 1,
+          "explicacion": "Las mitocondrias son orgánulos con membrana: solo las eucariotas los tienen."
+        },
+        {
+          "id": "tc-pe-4",
+          "enunciado": "¿Dónde está el ADN de una procariota?",
+          "opciones": [
+            "Dentro de un núcleo",
+            "Suelto en el citoplasma, en el nucleoide",
+            "Fuera de la célula",
+            "En las mitocondrias"
+          ],
+          "correcta": 1,
+          "explicacion": "Sin núcleo, el ADN queda en una zona del citoplasma llamada nucleoide."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "bacterias-arqueas",
+      "titulo": "Bacterias y arqueas",
+      "resumen": "Los dos grupos de procariotas: formas, tamaños y dónde viven.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "intermedio",
+      "requiere": [
+        "pro-eu"
+      ],
+      "ficha": {
+        "idea": "Las bacterias y las arqueas son las dos grandes familias de procariotas. Son unicelulares, muy pequeñas y están en casi todos los ambientes. Por fuera se parecen, pero son grupos distintos con historias evolutivas diferentes.",
+        "contexto": [
+          {
+            "titulo": "Cómo se ven",
+            "texto": "Al microscopio se reconocen por su forma: cocos (redondas), bacilos (alargadas), espirilos (en espiral) y vibrios (en coma). Muchas tienen pared celular, y algunas tienen flagelos para moverse."
+          },
+          {
+            "titulo": "Dónde viven",
+            "texto": "Las bacterias están en el suelo, el agua, el aire, la piel y el intestino. Las arqueas se descubrieron primero en lugares extremos (aguas muy calientes, muy saladas), pero también viven en ambientes comunes."
+          },
+          {
+            "titulo": "No todas hacen daño",
+            "texto": "La mayoría de bacterias son inofensivas o útiles: ayudan a digerir, reciclan materia o producen alimentos como el yogur. Solo una minoría causa enfermedades."
+          },
+          {
+            "titulo": "Dos grupos distintos",
+            "texto": "Las arqueas no son bacterias: se separan por su química (por ejemplo, la composición de la membrana y de la pared) y por su historia evolutiva."
+          }
+        ],
+        "evidencia": [
+          "Carl Woese y colegas propusieron en 1977 que las arqueas son un grupo aparte, al comparar el ARN ribosómico.",
+          "Los cultivos de laboratorio muestran bacterias con formas características."
+        ],
+        "limites": "«Extremófila» no define a todas las arqueas: muchas viven en lugares nada extremos. La forma ayuda a reconocer una bacteria, pero no dice si causa enfermedad.",
+        "cuaderno": {
+          "facil": [
+            "Bacterias y arqueas son procariotas: sin núcleo.",
+            "Son unicelulares y muy pequeñas."
+          ],
+          "media": [
+            "Las bacterias tienen formas: cocos, bacilos, espirilos y vibrios.",
+            "Viven en casi todos los ambientes; solo unas pocas causan enfermedades."
+          ],
+          "avanzada": [
+            "Las arqueas son un grupo distinto de las bacterias, aunque parecen similares.",
+            "Muchas arqueas viven en ambientes extremos, pero también en suelo y mar."
+          ]
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Los dos grupos de procariotas",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🦠",
+                "titulo": "Bacterias",
+                "texto": "muy abundantes"
+              },
+              {
+                "icono": "🔥",
+                "titulo": "Arqueas",
+                "texto": "grupo aparte"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Cuatro formas de bacterias",
+          "visual": {
+            "tipo": "ilustracion",
+            "recurso": "tipos-bacterias-formas",
+            "pie": "Cocos, bacilos, espirilos y vibrios"
+          }
+        },
+        {
+          "titulo": "¿Dónde viven?",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🌱",
+                "titulo": "Suelo"
+              },
+              {
+                "icono": "🫃",
+                "titulo": "Intestino"
+              },
+              {
+                "icono": "🌊",
+                "titulo": "Agua"
+              },
+              {
+                "icono": "♨️",
+                "titulo": "Aguas termales"
+              },
+              {
+                "icono": "🧂",
+                "titulo": "Salinas"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "No todas son malas",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🤝",
+            "valor": "Pocas",
+            "texto": "Solo una minoría de las bacterias causa enfermedades."
+          },
+          "puntos": [
+            "Muchas ayudan a digerir",
+            "Otras reciclan materia muerta"
+          ]
+        },
+        {
+          "titulo": "Pruébalo",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Qué tienen en común bacterias y arqueas?",
+            "opciones": [
+              "Son procariotas",
+              "Tienen núcleo",
+              "Son pluricelulares"
+            ],
+            "correcta": 0,
+            "explicacion": "Las dos son procariotas: sin núcleo y generalmente unicelulares."
+          }
+        }
+      ],
+      "ilustraciones": [
+        {
+          "id": "tipos-bacterias-formas",
+          "titulo": "Formas de bacterias",
+          "pie": "Cocos, bacilos, espirilos y vibrios. Esquemas no a escala.",
+          "tipo": "svg",
+          "recurso": "tipos-bacterias-formas"
+        }
+      ],
+      "diagrama": "explorador-bacterias",
+      "preguntas": [
+        {
+          "id": "tc-ba-1",
+          "enunciado": "¿Qué forma tiene un bacilo?",
+          "opciones": [
+            "Redonda",
+            "Alargada, como bastón",
+            "En espiral",
+            "Ramificada"
+          ],
+          "correcta": 1,
+          "explicacion": "Bacilo viene de «bastoncito»: es alargado."
+        },
+        {
+          "id": "tc-ba-2",
+          "enunciado": "¿Qué son las arqueas?",
+          "opciones": [
+            "Bacterias muy grandes",
+            "Un grupo de procariotas distinto de las bacterias",
+            "Células eucariotas",
+            "Virus"
+          ],
+          "correcta": 1,
+          "explicacion": "Las arqueas son procariotas, pero forman un grupo aparte de las bacterias."
+        },
+        {
+          "id": "tc-ba-3",
+          "enunciado": "Sobre las bacterias, ¿cuál es correcta?",
+          "opciones": [
+            "Todas causan enfermedades",
+            "Solo viven en el intestino",
+            "Muchas son útiles o inofensivas",
+            "Tienen núcleo"
+          ],
+          "correcta": 2,
+          "explicacion": "La mayoría son inofensivas o útiles; solo unas pocas son patógenas."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "eucariotas",
+      "titulo": "Eucariotas: protistas, hongos, plantas y animales",
+      "resumen": "Los cuatro grupos de seres con células con núcleo y cómo se diferencian.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "intermedio",
+      "requiere": [
+        "pro-eu"
+      ],
+      "ficha": {
+        "idea": "Las células eucariotas forman cuatro grandes grupos de seres vivos: protistas, hongos, plantas y animales. Todos tienen núcleo y orgánulos con membrana, pero se diferencian en su pared celular, en cómo obtienen la energía y en cuántas células tienen.",
+        "contexto": [
+          {
+            "titulo": "Protistas",
+            "texto": "Un grupo variado, casi todo unicelular: amebas, paramecios, euglenas y las algas más sencillas. Algunos hacen fotosíntesis y otros se alimentan de otros seres."
+          },
+          {
+            "titulo": "Hongos",
+            "texto": "Levaduras (unicelulares) y setas y mohos (pluricelulares). Tienen pared de quitina y se alimentan absorbiendo nutrientes de lo que los rodea."
+          },
+          {
+            "titulo": "Plantas",
+            "texto": "Pluricelulares, con pared de celulosa y cloroplastos: hacen fotosíntesis y fabrican su propio alimento."
+          },
+          {
+            "titulo": "Animales",
+            "texto": "Pluricelulares, sin pared celular, que se alimentan de otros seres."
+          }
+        ],
+        "evidencia": [
+          "Al microscopio, una levadura, una ameba y una célula de cebolla muestran núcleo visible."
+        ],
+        "limites": "«Protistas» no es un grupo natural único: junta organismos muy distintos que no son plantas, animales ni hongos. Se simplifica para el aula.",
+        "cuaderno": {
+          "facil": [
+            "Eucariotas: protistas, hongos, plantas y animales.",
+            "Todos tienen núcleo."
+          ],
+          "media": [
+            "Protistas: casi todos unicelulares. Hongos: pared de quitina. Plantas: hacen fotosíntesis. Animales: sin pared."
+          ],
+          "avanzada": [
+            "Los hongos absorben nutrientes; los animales ingieren alimento; las plantas hacen fotosíntesis.",
+            "«Protistas» agrupa seres muy diversos y no es un solo linaje."
+          ]
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Cuatro grupos, un rasgo común",
+          "visual": {
+            "tipo": "ilustracion",
+            "recurso": "tipos-eucariotas",
+            "pie": "Todos tienen núcleo"
+          }
+        },
+        {
+          "titulo": "Protistas",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🔬",
+                "titulo": "Ameba"
+              },
+              {
+                "icono": "🌀",
+                "titulo": "Paramecio"
+              },
+              {
+                "icono": "🟢",
+                "titulo": "Euglena"
+              },
+              {
+                "icono": "🌊",
+                "titulo": "Algas sencillas"
+              }
+            ]
+          },
+          "nota": "Casi todos unicelulares."
+        },
+        {
+          "titulo": "Hongos",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🍄",
+                "titulo": "Setas"
+              },
+              {
+                "icono": "🍞",
+                "titulo": "Moho"
+              },
+              {
+                "icono": "🍺",
+                "titulo": "Levadura"
+              }
+            ]
+          },
+          "puntos": [
+            "Pared de quitina",
+            "Absorben su alimento"
+          ]
+        },
+        {
+          "titulo": "Plantas y animales",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "🌿",
+              "titulo": "Plantas",
+              "puntos": [
+                "Pared de celulosa",
+                "Hacen fotosíntesis"
+              ]
+            },
+            "der": {
+              "icono": "🐟",
+              "titulo": "Animales",
+              "puntos": [
+                "Sin pared",
+                "Comen otros seres"
+              ]
+            }
+          }
+        },
+        {
+          "titulo": "Pruébalo",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Qué tienen en común los cuatro grupos?",
+            "opciones": [
+              "Células con núcleo",
+              "Hacen fotosíntesis",
+              "Son pluricelulares",
+              "Tienen pared de celulosa"
+            ],
+            "correcta": 0,
+            "explicacion": "Todos son eucariotas: su ADN está en un núcleo."
+          },
+          "atajo": {
+            "texto": "Animal vs. vegetal",
+            "tema": "tipos-de-celulas",
+            "bloque": "animal-vegetal"
+          }
+        }
+      ],
+      "ilustraciones": [
+        {
+          "id": "tipos-eucariotas",
+          "titulo": "Cuatro grupos de eucariotas",
+          "pie": "Protistas, hongos, plantas y animales. Todos con núcleo.",
+          "tipo": "svg",
+          "recurso": "tipos-eucariotas"
+        }
+      ],
+      "preguntas": [
+        {
+          "id": "tc-eu-1",
+          "enunciado": "¿Cuál de estos NO es un grupo de eucariotas?",
+          "opciones": [
+            "Hongos",
+            "Animales",
+            "Bacterias",
+            "Plantas"
+          ],
+          "correcta": 2,
+          "explicacion": "Las bacterias son procariotas."
+        },
+        {
+          "id": "tc-eu-2",
+          "enunciado": "Una levadura es…",
+          "opciones": [
+            "Una bacteria",
+            "Un hongo unicelular",
+            "Una planta",
+            "Un virus"
+          ],
+          "correcta": 1,
+          "explicacion": "La levadura es un hongo de una sola célula, con núcleo."
+        },
+        {
+          "id": "tc-eu-3",
+          "enunciado": "¿Qué grupo tiene pared de quitina?",
+          "opciones": [
+            "Plantas",
+            "Animales",
+            "Hongos",
+            "Bacterias"
+          ],
+          "correcta": 2,
+          "explicacion": "La pared de los hongos es de quitina; la de las plantas es de celulosa."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "animal-vegetal",
+      "titulo": "Célula animal y célula vegetal",
+      "resumen": "Pared, cloroplastos y vacuola: las pistas para distinguirlas.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "basico",
+      "nucleo": true,
+      "requiere": [
+        "pro-eu"
+      ],
+      "ficha": {
+        "idea": "Las células animales y vegetales son eucariotas y comparten muchas piezas, pero la vegetal tiene tres cosas que la animal no: una pared celular rígida, cloroplastos para hacer fotosíntesis y una vacuola central grande.",
+        "contexto": [
+          {
+            "titulo": "Pared celular",
+            "texto": "Es una capa rígida de celulosa por fuera de la membrana. Da forma, sostiene y protege. La célula animal solo tiene membrana."
+          },
+          {
+            "titulo": "Cloroplastos",
+            "texto": "Son los orgánulos donde las plantas hacen fotosíntesis. Contienen clorofila, que da el color verde."
+          },
+          {
+            "titulo": "Vacuola central",
+            "texto": "En la célula vegetal es grande y guarda agua; empuja el contenido contra la pared y mantiene la célula firme. En la animal hay vacuolas pequeñas."
+          },
+          {
+            "titulo": "Lo que comparten",
+            "texto": "Membrana, núcleo, citoplasma, ribosomas y mitocondrias. Las plantas también tienen mitocondrias."
+          }
+        ],
+        "evidencia": [
+          "Al microscopio, una hoja de Elodea muestra paredes y cloroplastos; una muestra de mejilla muestra células sin pared."
+        ],
+        "limites": "Las plantas tienen células de varios tipos: las del interior de una raíz, por ejemplo, no tienen cloroplastos. «Animal» y «vegetal» describen lo típico.",
+        "cuaderno": {
+          "facil": [
+            "La célula vegetal tiene pared, cloroplastos y vacuola grande.",
+            "La animal no tiene pared ni cloroplastos."
+          ],
+          "media": [
+            "La pared es de celulosa y da forma.",
+            "Los cloroplastos hacen la fotosíntesis.",
+            "Las dos tienen núcleo y mitocondrias."
+          ],
+          "avanzada": [
+            "La vacuola central mantiene la presión que hace firme a la célula.",
+            "Los centriolos son típicos de las células animales; las plantas con flores no los tienen."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué una lechuga está firme y una medusa no?",
+          "actividad": "Con el comparador, apaguen las tres capas de la célula vegetal y pregunten: «¿Qué célula parece ahora?». Cierren con «¿Cuál es?».",
+          "errores": [
+            "Creer que las plantas no tienen mitocondrias.",
+            "Pensar que todas las células de una planta tienen cloroplastos.",
+            "Confundir pared celular con membrana."
+          ],
+          "minutos": 15
+        },
+        "analogia": {
+          "titulo": "Una casa",
+          "texto": "La pared es como los muros de una casa (dan forma); la célula animal es una carpa que cambia de forma. Los cloroplastos serían los paneles solares."
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Dos células parecidas",
+          "visual": {
+            "tipo": "ilustracion",
+            "recurso": "tipos-animal-vegetal",
+            "pie": "Animal frente a vegetal"
+          }
+        },
+        {
+          "titulo": "Tres pistas vegetales",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🧱",
+                "titulo": "Pared celular",
+                "texto": "rígida"
+              },
+              {
+                "icono": "🌿",
+                "titulo": "Cloroplastos",
+                "texto": "fotosíntesis"
+              },
+              {
+                "icono": "💧",
+                "titulo": "Vacuola grande",
+                "texto": "guarda agua"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Lo que comparten",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "⚪",
+                "titulo": "Núcleo"
+              },
+              {
+                "icono": "🔋",
+                "titulo": "Mitocondrias"
+              },
+              {
+                "icono": "🧬",
+                "titulo": "Ribosomas"
+              },
+              {
+                "icono": "🧱",
+                "titulo": "Membrana"
+              }
+            ]
+          },
+          "nota": "Las plantas también tienen mitocondrias."
+        },
+        {
+          "titulo": "Animal frente a vegetal",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "🐟",
+              "titulo": "Animal",
+              "puntos": [
+                "Sin pared",
+                "Sin cloroplastos",
+                "Vacuolas pequeñas"
+              ]
+            },
+            "der": {
+              "icono": "🌿",
+              "titulo": "Vegetal",
+              "puntos": [
+                "Con pared",
+                "Con cloroplastos",
+                "Vacuola grande"
+              ]
+            }
+          }
+        },
+        {
+          "titulo": "Pruébalo",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Una célula eucariota tiene pared y cloroplastos. ¿Qué es?",
+            "opciones": [
+              "Animal",
+              "Vegetal",
+              "Procariota"
+            ],
+            "correcta": 1,
+            "explicacion": "La pared de celulosa y los cloroplastos son de las células vegetales."
+          }
+        }
+      ],
+      "ilustraciones": [
+        {
+          "id": "tipos-animal-vegetal",
+          "titulo": "Célula animal y vegetal",
+          "pie": "La vegetal añade pared, cloroplastos y una vacuola grande. Esquemas no a escala.",
+          "tipo": "svg",
+          "recurso": "tipos-animal-vegetal"
+        }
+      ],
+      "diagrama": "comparador-animal-vegetal",
+      "preguntas": [
+        {
+          "id": "tc-av-1",
+          "enunciado": "¿Qué tiene la célula vegetal que la animal NO tiene?",
+          "opciones": [
+            "Núcleo",
+            "Mitocondrias",
+            "Cloroplastos y pared celular",
+            "Membrana"
+          ],
+          "correcta": 2,
+          "explicacion": "Pared, cloroplastos y vacuola grande son propios de la célula vegetal."
+        },
+        {
+          "id": "tc-av-2",
+          "enunciado": "¿Para qué sirven los cloroplastos?",
+          "opciones": [
+            "Para digerir alimentos",
+            "Para hacer fotosíntesis",
+            "Para guardar el ADN",
+            "Para dar forma rígida"
+          ],
+          "correcta": 1,
+          "explicacion": "En los cloroplastos se hace la fotosíntesis."
+        },
+        {
+          "id": "tc-av-3",
+          "enunciado": "¿De qué está hecha la pared celular de las plantas?",
+          "opciones": [
+            "Quitina",
+            "Celulosa",
+            "Proteína",
+            "Grasa"
+          ],
+          "correcta": 1,
+          "explicacion": "La pared vegetal es de celulosa; la de los hongos, de quitina."
+        },
+        {
+          "id": "tc-av-4",
+          "enunciado": "Las plantas…",
+          "opciones": [
+            "No tienen mitocondrias",
+            "Sí tienen mitocondrias",
+            "Son procariotas",
+            "No tienen núcleo"
+          ],
+          "correcta": 1,
+          "explicacion": "Las plantas hacen fotosíntesis y también respiran: tienen mitocondrias."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "especializadas",
+      "titulo": "Células especializadas",
+      "resumen": "Dentro de un organismo, cada tipo de célula tiene la forma de su trabajo.",
+      "anio": 5,
+      "etiqueta": "Paso 5",
+      "nivel": "intermedio",
+      "requiere": [
+        "pro-eu"
+      ],
+      "ficha": {
+        "idea": "En un organismo pluricelular hay muchos tipos de células, y cada una tiene una forma que le ayuda a cumplir su función. Esto es la especialización: cada tipo hace bien una tarea, y el organismo funciona gracias al conjunto.",
+        "contexto": [
+          {
+            "titulo": "Forma y función",
+            "texto": "La neurona es larga y ramificada para comunicar señales; el glóbulo rojo es un disco flexible que lleva oxígeno; la célula muscular es alargada para contraerse."
+          },
+          {
+            "titulo": "El mismo ADN, distintos genes",
+            "texto": "Casi todas las células de un organismo tienen el mismo ADN, pero cada tipo usa genes distintos. Por eso son diferentes aunque tengan el mismo «manual»."
+          },
+          {
+            "titulo": "Casos curiosos",
+            "texto": "El glóbulo rojo maduro de los mamíferos pierde su núcleo, y las fibras del músculo esquelético tienen muchos núcleos. Siguen siendo células."
+          },
+          {
+            "titulo": "En las plantas también",
+            "texto": "Las células del pelo de la raíz tienen una prolongación que aumenta la superficie para absorber agua."
+          }
+        ],
+        "evidencia": [
+          "Al microscopio se reconocen las neuronas, los glóbulos rojos y las fibras musculares por su forma."
+        ],
+        "limites": "Que una célula sea especializada no significa que sea «mejor»: depende del resto del organismo para vivir.",
+        "cuaderno": {
+          "facil": [
+            "Cada tipo de célula tiene una forma que sirve a su función.",
+            "Ejemplos: neurona, glóbulo rojo, célula muscular."
+          ],
+          "media": [
+            "Casi todas tienen el mismo ADN, pero usan genes distintos."
+          ],
+          "avanzada": [
+            "El glóbulo rojo maduro de mamífero no tiene núcleo; la fibra muscular tiene muchos.",
+            "Aumentar la superficie (microvellosidades, pelos radicales) mejora la absorción."
+          ]
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "La forma habla de la función",
+          "visual": {
+            "tipo": "ilustracion",
+            "recurso": "tipos-especializadas",
+            "pie": "Seis células, seis oficios"
+          }
+        },
+        {
+          "titulo": "Mira esta forma",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Una neurona tiene una prolongación muy larga. ¿Para qué le sirve?",
+            "opciones": [
+              "Para transmitir señales a distancia",
+              "Para hacer fotosíntesis",
+              "Para flotar"
+            ],
+            "correcta": 0,
+            "explicacion": "El axón largo lleva señales nerviosas lejos."
+          }
+        },
+        {
+          "titulo": "Más superficie, más absorción",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🫃",
+                "titulo": "Intestino",
+                "texto": "microvellosidades"
+              },
+              {
+                "icono": "🌱",
+                "titulo": "Raíz",
+                "texto": "pelos absorbentes"
+              }
+            ]
+          },
+          "puntos": [
+            "Más superficie para absorber"
+          ]
+        },
+        {
+          "titulo": "Mismo ADN, distintos genes",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🧬",
+            "valor": "Un solo manual",
+            "texto": "Cada tipo de célula usa solo los genes que necesita."
+          },
+          "atajo": {
+            "texto": "División del trabajo (1.3)",
+            "tema": "unicelulares-pluricelulares",
+            "bloque": "division-trabajo"
+          }
+        },
+        {
+          "titulo": "Casos curiosos",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🩸",
+                "titulo": "Glóbulo rojo",
+                "texto": "sin núcleo"
+              },
+              {
+                "icono": "💪",
+                "titulo": "Fibra muscular",
+                "texto": "muchos núcleos"
+              }
+            ]
+          },
+          "nota": "Siguen siendo células."
+        }
+      ],
+      "ilustraciones": [
+        {
+          "id": "tipos-especializadas",
+          "titulo": "Células especializadas",
+          "pie": "Neurona, glóbulo rojo, célula muscular, espermatozoide, epitelial intestinal y pelo de raíz. Esquemas no a escala.",
+          "tipo": "svg",
+          "recurso": "tipos-especializadas"
+        }
+      ],
+      "diagrama": "galeria-especializadas",
+      "preguntas": [
+        {
+          "id": "tc-es-1",
+          "enunciado": "¿Por qué las células especializadas tienen formas distintas?",
+          "opciones": [
+            "Por azar",
+            "Porque su forma ayuda a su función",
+            "Porque tienen ADN distinto",
+            "Porque son procariotas"
+          ],
+          "correcta": 1,
+          "explicacion": "La forma está relacionada con el trabajo que hace cada tipo de célula."
+        },
+        {
+          "id": "tc-es-2",
+          "enunciado": "Los glóbulos rojos…",
+          "opciones": [
+            "Defienden el cuerpo",
+            "Transportan oxígeno",
+            "Producen señales eléctricas",
+            "Hacen fotosíntesis"
+          ],
+          "correcta": 1,
+          "explicacion": "Los glóbulos rojos llevan oxígeno por la sangre."
+        },
+        {
+          "id": "tc-es-3",
+          "enunciado": "¿Qué ventaja dan las microvellosidades del intestino?",
+          "opciones": [
+            "Más superficie para absorber nutrientes",
+            "Más velocidad",
+            "Más defensa"
+          ],
+          "correcta": 0,
+          "explicacion": "Aumentan la superficie de contacto con los alimentos digeridos."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "virus",
+      "titulo": "Los virus: ¿por qué no son células?",
+      "resumen": "Tienen material genético, pero no estructura celular ni metabolismo propio.",
+      "anio": 6,
+      "etiqueta": "Paso 6",
+      "nivel": "basico",
+      "requiere": [
+        "pro-eu"
+      ],
+      "ficha": {
+        "idea": "Los virus no son células. Son partículas muy pequeñas formadas por material genético dentro de una cubierta de proteínas. No tienen citoplasma, ni orgánulos, ni metabolismo propio, y solo se multiplican dentro de una célula que infectan.",
+        "contexto": [
+          {
+            "titulo": "Qué les falta",
+            "texto": "No tienen membrana celular propia, ni citoplasma, ni ribosomas. No producen su energía ni crecen por sí solos."
+          },
+          {
+            "titulo": "Cómo se multiplican",
+            "texto": "Entran en una célula y usan sus recursos para fabricar copias de sí mismos. Fuera de una célula no se reproducen."
+          },
+          {
+            "titulo": "¿Están vivos?",
+            "texto": "Es una discusión real: muchos científicos los consideran un caso límite, porque no cumplen todas las características de la vida."
+          },
+          {
+            "titulo": "Tamaño",
+            "texto": "Casi siempre son mucho más pequeños que una bacteria; se ven solo con microscopio electrónico."
+          }
+        ],
+        "evidencia": [
+          "El virus del mosaico del tabaco fue uno de los primeros en identificarse como algo distinto de una bacteria."
+        ],
+        "limites": "Que causen enfermedades no los vuelve células: también hay enfermedades causadas por bacterias, hongos y protistas.",
+        "cuaderno": {
+          "facil": [
+            "Los virus no son células.",
+            "Solo se multiplican dentro de una célula."
+          ],
+          "media": [
+            "Tienen material genético y una cubierta de proteínas.",
+            "No tienen metabolismo propio."
+          ],
+          "avanzada": [
+            "Se discute si están vivos: son un caso límite.",
+            "Sirven para ver qué tiene una célula que un virus no: membrana, citoplasma y metabolismo."
+          ]
+        },
+        "docente": {
+          "abrir": "Un virus, ¿está vivo?",
+          "actividad": "Con «¿Cuenta como célula?», pidan una apuesta antes de revelar cada caso, y discutan el virus y la mitocondria.",
+          "errores": [
+            "Creer que los virus son bacterias muy pequeñas.",
+            "Pensar que los antibióticos sirven contra virus."
+          ],
+          "minutos": 10
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Un virus y una bacteria",
+          "visual": {
+            "tipo": "ilustracion",
+            "recurso": "tipos-virus-celula",
+            "pie": "Uno no es célula"
+          }
+        },
+        {
+          "titulo": "Lo que sí y lo que no",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "✅",
+              "titulo": "Tienen",
+              "puntos": [
+                "Material genético",
+                "Una cubierta de proteínas"
+              ]
+            },
+            "der": {
+              "icono": "🚫",
+              "titulo": "No tienen",
+              "puntos": [
+                "Membrana propia",
+                "Citoplasma ni orgánulos",
+                "Metabolismo propio"
+              ]
+            }
+          }
+        },
+        {
+          "titulo": "Solo dentro de una célula",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🔑",
+            "valor": "Necesitan una célula",
+            "texto": "Usan sus recursos para fabricar copias de sí mismos."
+          }
+        },
+        {
+          "titulo": "Pruébalo",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Por qué un virus no es una célula?",
+            "opciones": [
+              "No tiene estructura celular ni metabolismo propio",
+              "Es muy grande",
+              "Tiene núcleo"
+            ],
+            "correcta": 0,
+            "explicacion": "Le falta membrana, citoplasma y metabolismo propios."
+          }
+        }
+      ],
+      "ilustraciones": [
+        {
+          "id": "tipos-virus-celula",
+          "titulo": "Virus y célula",
+          "pie": "Un virus no tiene estructura celular. Esquemas no a escala.",
+          "tipo": "svg",
+          "recurso": "tipos-virus-celula"
+        }
+      ],
+      "diagrama": "cuenta-celula",
+      "preguntas": [
+        {
+          "id": "tc-vi-1",
+          "enunciado": "¿Cuál es una razón por la que los virus no son células?",
+          "opciones": [
+            "No tienen material genético",
+            "No tienen metabolismo propio",
+            "Son demasiado grandes",
+            "Tienen núcleo"
+          ],
+          "correcta": 1,
+          "explicacion": "Sin metabolismo propio y sin estructura celular, no son células."
+        },
+        {
+          "id": "tc-vi-2",
+          "enunciado": "¿Dónde se multiplican los virus?",
+          "opciones": [
+            "En el aire",
+            "Dentro de una célula",
+            "En el agua",
+            "Solos"
+          ],
+          "correcta": 1,
+          "explicacion": "Necesitan los recursos de una célula hospedera."
+        },
+        {
+          "id": "tc-vi-3",
+          "enunciado": "Los virus…",
+          "opciones": [
+            "Son procariotas",
+            "Son eucariotas",
+            "No son ni procariotas ni eucariotas",
+            "Son hongos"
+          ],
+          "correcta": 2,
+          "explicacion": "Procariota y eucariota son tipos de células; los virus no son células."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}

@@ -127,3 +127,10 @@ Hooke usa la reconstrucción de Rita Greer (2004, Free Art License, Wikimedia Co
 ## Ilustraciones de las láminas (1.2 y 1.3)
 - 29 ilustraciones SVG nuevas en `src/components/ilustraciones/Escenas12.tsx` y `Escenas13.tsx` (helpers en `Dibujo.tsx`), registradas en `index.ts` (`niv-*`, `uni-*`, `pluri-*`, `div-*`, `ven-*`, `ori-*`, `col-*`).
 - Sustituyen a varias láminas de emojis/cifras en `niveles-organizacion.json` y `unicelulares-pluricelulares.json`. Siguen siendo borrador (`revisado:false`): revisar la ciencia y los rótulos.
+
+## Tema 2 · Tipos de células (borrador)
+- `tipos-de-celulas.json`: 6 pasos (pro-eu, bacterias-arqueas, eucariotas, animal-vegetal, especializadas, virus). Vista nueva «Mapa» (`linea/VistaMapa.tsx`): árbol tocable; los virus quedan fuera, con borde punteado.
+- Diagramas (`diagramas/TiposCelulas.tsx`): `comparador-pro-eu`, `comparador-animal-vegetal` (cada uno con «Compáralas» y «¿Cuál es?»), `explorador-bacterias`, `galeria-especializadas`; virus reutiliza `cuenta-celula`. Dibujos en `ilustraciones/CelulasTipos.tsx`.
+- Perfiles: 6° = pro-eu, animal-vegetal, virus; 9° y 11° = los seis.
+- Atajos desde 1.2 y 1.3 ya apuntan a bloques concretos de este tema.
+- A verificar: tamaño relativo (≈10 veces) procariota/eucariota y virus/bacteria; ejemplos de arqueas y formas de bacterias; centriolos en plantas con flores; 1977 (Woese). Todo con `revisado:false`.

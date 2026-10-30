@@ -13,6 +13,7 @@ import { NivelAtomo, NivelMoleculas, NivelMacromoleculas, NivelOrganulo, NivelCe
 import { PasoCelulas, EjemplosUnicelulares, SuperficieVolumen, OrigenesPluri } from './UniPluri.tsx'
 import { NivCuatroAtomos, NivOtrosAtomos, NivMoleculasEjemplos, NivAguaCuerpo, NivGlucosaEnergia, NivMacroCuatro, NivProteinaForma, NivOrganulosTres, NivProEuc, NivUnoMuchas, NivTejidosPlantas, NivCorazon, NivSistemaCadena, NivEcologia, NivSangre, NivPlantaOrganos } from './Escenas12.tsx'
 import { UniFunciones, UniNucleo, UniInvisible, UniFision, PluriCigoto, PluriSenales, DivOficios, DivMismoAdn, VenTransporte, OriDosFormas, OriCopoNieve, ColEspectro, ColCoanoflagelado } from './Escenas13.tsx'
+import { EscenaProEuLado, EscenaAnimalVegetalLado, EscenaBacteriasFormas, EscenaEucariotas, EscenaEspecializadas, EscenaVirusCelula, EscenaArbol } from './CelulasTipos.tsx'
 import { PostuladoSeres, PostuladoUnidad, PostuladoOrigen } from './Postulados.tsx'
 
 /** Registro de ilustraciones SVG. La clave es el `recurso` de una ilustración de tipo «svg». */
@@ -77,4 +78,11 @@ export const ILUSTRACIONES_SVG: Record<string, ComponentType> = {
   'ori-copo-nieve': OriCopoNieve,
   'col-espectro': ColEspectro,
   'col-coanoflagelado': ColCoanoflagelado,
+  'tipos-pro-eu': EscenaProEuLado,
+  'tipos-animal-vegetal': EscenaAnimalVegetalLado,
+  'tipos-bacterias-formas': EscenaBacteriasFormas,
+  'tipos-eucariotas': EscenaEucariotas,
+  'tipos-especializadas': EscenaEspecializadas,
+  'tipos-virus-celula': EscenaVirusCelula,
+  'tipos-arbol': EscenaArbol,
 }
