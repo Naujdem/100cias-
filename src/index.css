@@ -30,3 +30,26 @@ body {
   font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   line-height: 1.5;
 }
+
+/* ---- Editor de documentos ---- */
+.hoja { max-width: 21cm; min-height: 29.7cm; }
+.hoja-contenido { line-height: 1.6; color: #1f2937; }
+.hoja-contenido > * + * { margin-top: 0.6em; }
+.hoja-contenido h1 { font-size: 1.8em; font-weight: 700; line-height: 1.2; }
+.hoja-contenido h2 { font-size: 1.4em; font-weight: 700; line-height: 1.25; }
+.hoja-contenido h3 { font-size: 1.15em; font-weight: 700; }
+.hoja-contenido ul { list-style: disc; padding-left: 1.5em; }
+.hoja-contenido ol { list-style: decimal; padding-left: 1.5em; }
+.hoja-contenido blockquote { border-left: 4px solid var(--acento); padding-left: 1em; font-style: italic; }
+.hoja-contenido hr { border: 0; border-top: 1px solid #9ca3af; margin: 1.2em 0; }
+.hoja-contenido img { max-width: 100%; height: auto; margin: 0.6em auto; display: block; border-radius: 4px; }
+.hoja-contenido img.ProseMirror-selectednode { outline: 3px solid var(--acento); }
+
+@media print {
+  @page { size: A4; margin: 2cm; }
+  body { background: #fff !important; }
+  .no-imprimir { display: none !important; }
+  .hoja { border: 0 !important; box-shadow: none !important; padding: 0 !important; min-height: 0; max-width: none; }
+  .hoja-contenido img { break-inside: avoid; }
+  .hoja-contenido h1, .hoja-contenido h2, .hoja-contenido h3 { break-after: avoid; }
+}

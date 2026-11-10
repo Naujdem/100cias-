@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import perfilesJson from './data/perfiles.json'
 import type { Perfil, Tema } from './data/schema.ts'
 import { alternar, normalizar } from './lib/seleccion.ts'
@@ -16,6 +16,7 @@ import { ContextoAtajos } from './lib/atajos.ts'
 const TEMAS = Object.values(import.meta.glob('./data/materias/**/*.json', { eager: true, import: 'default' }))
   .map((t) => t as unknown as Tema)
   .sort((a, b) => (a.orden ?? 99) - (b.orden ?? 99))
+const Editor = lazy(() => import('./components/Editor.tsx'))
 const PERFILES = perfilesJson as unknown as Perfil[]
 const CLAVE_TEMA = 'cien:tema-activo'
 const CLAVE_PERFIL = 'cien:perfil' // el último perfil elegido: vale para todos los subtemas
@@ -32,6 +33,7 @@ export default function App() {
   })
   const tema = TEMAS.find((t) => t.id === temaId) ?? TEMAS[0]
   const [salto, setSalto] = useState<{ id: string; n: number } | null>(null)
+  const [editando, setEditando] = useState(false)
   const ir = (r: Resultado) => {
     setTemaId(r.temaId)
     guardar(CLAVE_TEMA, r.temaId)
@@ -48,9 +50,24 @@ export default function App() {
   return (
     <ContextoAtajos.Provider value={atajos}>
     <div className="mx-auto max-w-4xl px-4 pb-16 pt-6">
-      <header>
-        <p className="text-sm font-semibold text-[var(--acento)]">Biología · Biología celular</p>
-        <h1 className="mt-1 text-2xl font-bold leading-tight">{tema.titulo}</h1>
+      {editando ? (
+        <Suspense fallback={<p>Cargando editor…</p>}>
+          <Editor onCerrar={() => setEditando(false)} />
+        </Suspense>
+      ) : (
+      <>
+      <header className="flex items-start justify-between gap-3">
+        <div>
+          <p className="text-sm font-semibold text-[var(--acento)]">Biología · Biología celular</p>
+          <h1 className="mt-1 text-2xl font-bold leading-tight">{tema.titulo}</h1>
+        </div>
+        <button
+          type="button"
+          onClick={() => setEditando(true)}
+          className="min-h-11 shrink-0 rounded-xl border border-[var(--linea)] bg-[var(--tarjeta)] px-4 text-sm font-semibold"
+        >
+          📝 Editor
+        </button>
       </header>
       <Buscador temas={TEMAS} onIr={ir} />
       {TEMAS.length > 1 && (
@@ -74,6 +91,8 @@ export default function App() {
         </nav>
       )}
       <TemaView key={tema.id} TEMA={tema} salto={salto} />
+      </>
+      )}
     </div>
     </ContextoAtajos.Provider>
   )
