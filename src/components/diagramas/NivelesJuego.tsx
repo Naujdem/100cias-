@@ -11,7 +11,7 @@ type NivelId = 'atomos' | 'moleculas' | 'macromoleculas' | 'organulos' | 'celula
 const ESCALERA: { id: NivelId; nombre: string; pista: string }[] = [
   { id: 'atomos', nombre: 'Átomo', pista: 'La partícula básica' },
   { id: 'moleculas', nombre: 'Molécula', pista: 'Pocos átomos unidos' },
-  { id: 'macromoleculas', nombre: 'Macromolécula', pista: 'Molécula gigante' },
+  { id: 'macromoleculas', nombre: 'Macro\u00admolécula', pista: 'Molécula gigante' },
   { id: 'organulos', nombre: 'Orgánulo', pista: 'Parte de una célula' },
   { id: 'celula', nombre: 'Célula', pista: 'Unidad de la vida' },
   { id: 'tejido', nombre: 'Tejido', pista: 'Células parecidas juntas' },

@@ -59,3 +59,8 @@ Cuando confirmes uno con una fuente, márcalo con `[x]`, escribe la fuente al la
 - [ ] **Hormonas esteroides**: atraviesan la membrana entre los lípidos.
 - [ ] **Ósmosis**: célula animal se hincha y puede reventar en agua pura; célula vegetal turgente por la pared; plasmólisis en agua muy salada.
 - [ ] **Modelo del mosaico fluido**: Singer y Nicolson, 1972.
+
+## Tamaños de «Acércate» (1.2)
+- Átomo de carbono ≈ 0,1 nm; glucosa ≈ 1 nm; hemoglobina ≈ 6 nm; mitocondria ≈ 1 µm; célula del músculo cardíaco ≈ 0,1 mm de largo; corazón ≈ 12 cm; persona 1,7 m.
+- Límites: ojo ≈ 0,1 mm; microscopio de luz ≈ 0,2 µm.
+

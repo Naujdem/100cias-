@@ -59,3 +59,14 @@ h1, h2, .titulo { font-family: var(--serif); }
   .hoja-contenido img { break-inside: avoid; }
   .hoja-contenido h1, .hoja-contenido h2, .hoja-contenido h3 { break-after: avoid; }
 }
+
+/* «Acércate» (niveles de organización): el dibujo entra como si la cámara se acercara o se alejara */
+@keyframes cien-acerca {
+  from { transform: scale(0.35); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+@keyframes cien-aleja {
+  from { transform: scale(2.2); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+

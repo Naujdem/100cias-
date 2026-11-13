@@ -183,3 +183,8 @@ Hooke usa la reconstrucción de Rita Greer (2004, Free Art License, Wikimedia Co
 - Teclas: 1–9 eligen el nivel, → o Enter/Espacio pasan a la siguiente.
 - Va como paso **Juega** solo en el nivel «Organismo» (cierre del subtema), para no repetir el mismo juego en los 10 niveles ni en «Para tocar y jugar». Texto en borrador.
 - Ideas pendientes del 1.2: zoom continuo con regla de tamaño real; «¿Qué pasa si falla un nivel?» (anemia falciforme, con el hilo de la sangre); un Explora distinto por nivel; separar «Más allá del organismo» en población, comunidad, ecosistema y biosfera; más seres de ejemplo (esponja, Volvox).
+
+## «Acércate» (13 nov)
+- Nueva actividad en `NivelesOrganizacion.tsx`, ahora la primera del diagrama `nivel-<id>` (antes abría «Niveles anidados», que se conserva): el dibujo del nivel entra con animación de acercar o alejar, se muestra el tamaño real del ejemplo de la persona, cuántas veces cabe en el nivel siguiente y con qué se puede ver (ojo, microscopio de luz o electrónico). Regla logarítmica tocable debajo. ← → mueven el deslizador.
+- Solo ejemplo de la persona (los dibujos por nivel son de ese hilo). Tamaños en `VERIFICAR.md`. Pendiente: versión de la planta.
+

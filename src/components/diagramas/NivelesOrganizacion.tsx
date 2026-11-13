@@ -2,6 +2,7 @@ import { useMemo, useRef, useState } from 'react'
 import VisorZoom from '../VisorZoom.tsx'
 import PantallaCompleta from '../PantallaCompleta.tsx'
 import { useFlechas } from '../../lib/flechasDiagrama.ts'
+import { NivelAtomo, NivelMoleculas, NivelMacromoleculas, NivelOrganulo, NivelCelula, NivelTejido, NivelOrgano, NivelSistema, NivelOrganismo, NivelMasAlla } from '../ilustraciones/Niveles.tsx'
 
 // Niveles de organización de la vida, de átomos a más allá del organismo, con un ejemplo seguido de punta a punta.
 
@@ -27,15 +28,15 @@ export const NIVELES: Nivel[] = [
   { id: 'mas-alla', nombre: 'Más allá del organismo', corto: 'Más allá', persona: 'Población, comunidad y ecosistema donde vive.', planta: 'Un bosque y el ecosistema que forma.', que: 'Organismos que viven juntos y se relacionan entre sí y con su entorno, hasta la biosfera.' },
 ]
 
-type Modo = 'zoom' | 'ordena' | 'seres' | 'emergente'
+type Modo = 'escala' | 'zoom' | 'ordena' | 'seres' | 'emergente'
 type Ejemplo = 'persona' | 'planta'
 
 export default function NivelesOrganizacion({ inicial = 4 }: { inicial?: number }) {
-  const [modo, setModo] = useState<Modo>('zoom')
+  const [modo, setModo] = useState<Modo>('escala')
   return (
     <div>
       <div role="group" aria-label="Actividad" className="mb-3 flex flex-wrap gap-2">
-        {([['zoom', 'Niveles anidados'], ['ordena', 'Ordénalos'], ['seres', '¿Qué niveles tiene?'], ['emergente', '¿Qué aparece?']] as [Modo, string][]).map(([id, texto]) => (
+        {([['escala', 'Acércate'], ['zoom', 'Niveles anidados'], ['ordena', 'Ordénalos'], ['seres', '¿Qué niveles tiene?'], ['emergente', '¿Qué aparece?']] as [Modo, string][]).map(([id, texto]) => (
           <button
             key={id}
             type="button"
@@ -47,13 +48,140 @@ export default function NivelesOrganizacion({ inicial = 4 }: { inicial?: number 
           </button>
         ))}
       </div>
-      {modo === 'zoom' ? <Anidados inicial={inicial} /> : modo === 'ordena' ? <Ordena /> : modo === 'seres' ? <Seres /> : <Emergente />}
+      {modo === 'escala' ? <Escala inicial={inicial} /> : modo === 'zoom' ? <Anidados inicial={inicial} /> : modo === 'ordena' ? <Ordena /> : modo === 'seres' ? <Seres /> : <Emergente />}
     </div>
   )
 }
 
 const N = NIVELES.length
 const PASO = 13
+
+/* ── Acércate: un nivel a la vez, con su tamaño real ──────────────────────── */
+
+type Ver = 'ojo' | 'luz' | 'electronico'
+const DIBUJOS = [NivelAtomo, NivelMoleculas, NivelMacromoleculas, NivelOrganulo, NivelCelula, NivelTejido, NivelOrgano, NivelSistema, NivelOrganismo, NivelMasAlla]
+/** Tamaños aproximados (en metros) del ejemplo de la persona, en el mismo orden que NIVELES. Por verificar. */
+const ESCALA: { m: number; mide: string; ejemplo: string; ver: Ver }[] = [
+  { m: 1e-10, mide: '0,1 nm', ejemplo: 'Un átomo de carbono', ver: 'electronico' },
+  { m: 1e-9, mide: '1 nm', ejemplo: 'Una molécula de glucosa', ver: 'electronico' },
+  { m: 6e-9, mide: '6 nm', ejemplo: 'Una proteína como la hemoglobina', ver: 'electronico' },
+  { m: 1e-6, mide: '1 µm', ejemplo: 'Una mitocondria', ver: 'luz' },
+  { m: 1e-4, mide: '0,1 mm', ejemplo: 'Una célula del músculo del corazón', ver: 'luz' },
+  { m: 1e-3, mide: '1 mm', ejemplo: 'Un trocito de músculo del corazón', ver: 'ojo' },
+  { m: 0.12, mide: '12 cm', ejemplo: 'El corazón', ver: 'ojo' },
+  { m: 1.7, mide: '1,7 m', ejemplo: 'El sistema circulatorio, que recorre todo el cuerpo', ver: 'ojo' },
+  { m: 1.7, mide: '1,7 m', ejemplo: 'Una persona', ver: 'ojo' },
+  { m: 1000, mide: '1 km o más', ejemplo: 'Un bosque', ver: 'ojo' },
+]
+const VER: Record<Ver, { texto: string; color: string }> = {
+  ojo: { texto: 'A simple vista', color: '#0f766e' },
+  luz: { texto: 'Con microscopio de luz', color: '#b5622a' },
+  electronico: { texto: 'Solo con microscopio electrónico', color: '#6b4fa3' },
+}
+/** límites aproximados de cada instrumento, como potencia de 10 en metros */
+const BANDAS: { ver: Ver; de: number; a: number; rotulo: string }[] = [
+  { ver: 'electronico', de: -10.4, a: -6.7, rotulo: 'Microscopio electrónico' },
+  { ver: 'luz', de: -6.7, a: -4, rotulo: 'Microscopio de luz' },
+  { ver: 'ojo', de: -4, a: 3.4, rotulo: 'A simple vista' },
+]
+const MARCAS: [number, string][] = [[-10, '0,1 nm'], [-9, '1 nm'], [-8, ''], [-7, ''], [-6, '1 µm'], [-5, ''], [-4, '0,1 mm'], [-3, '1 mm'], [-2, '1 cm'], [-1, ''], [0, '1 m'], [1, ''], [2, ''], [3, '1 km']]
+const xRegla = (exp: number) => 30 + ((exp + 10.4) / 13.8) * 740
+/** «unas 200 veces»: una sola cifra, para decirlo en voz alta */
+function veces(r: number): string {
+  const p = Math.pow(10, Math.floor(Math.log10(r)))
+  return (Math.round(r / p) * p).toLocaleString('es-CO')
+}
+
+function Escala({ inicial }: { inicial: number }) {
+  const [sel, setSel] = useState(inicial)
+  const [dir, setDir] = useState<'acerca' | 'aleja'>('acerca')
+  const ir = (i: number) => {
+    const j = Math.max(0, Math.min(N - 1, i))
+    if (j === sel) return
+    setDir(j < sel ? 'acerca' : 'aleja')
+    setSel(j)
+  }
+  const n = NIVELES[sel]
+  const e = ESCALA[sel]
+  const Dibujo = DIBUJOS[sel]
+  const sig = sel < N - 1 ? ESCALA[sel + 1] : null
+  const razon = sig ? sig.m / e.m : 0
+  return (
+    <PantallaCompleta conBoton>
+      <div className="grid gap-3 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)]">
+        <div className="aspect-[4/3] max-h-[var(--alto-visor,38dvh)] w-full overflow-hidden rounded-xl border border-[var(--linea)]">
+          <div key={sel} className="h-full w-full motion-reduce:!animate-none" style={{ animation: `${dir === 'acerca' ? 'cien-acerca' : 'cien-aleja'} 0.45s ease` }}>
+            <Dibujo />
+          </div>
+        </div>
+        <div aria-live="polite" className="rounded-xl bg-[var(--fondo)] p-3 text-sm">
+          <p className="text-xs font-bold uppercase tracking-widest text-[var(--acento)]">Nivel {sel + 1} de {N} · {n.nombre}</p>
+          <p className="mt-1 text-base font-semibold">{e.ejemplo}</p>
+          <p className="mt-1">
+            Mide cerca de <span className="text-2xl font-bold">{e.mide}</span>
+          </p>
+          <p className="mt-1 font-semibold" style={{ color: VER[e.ver].color }}>{VER[e.ver].texto}</p>
+          {sig && (
+            <p className="mt-2">
+              {razon < 1.5
+                ? `Mide lo mismo que el nivel siguiente (${NIVELES[sel + 1].nombre.toLowerCase()}): aquí no cambia el tamaño, cambia cuánto está incluido.`
+                : `Cabría unas ${veces(razon)} veces a lo largo del nivel siguiente (${sig.ejemplo.toLowerCase()}).`}
+            </p>
+          )}
+          <p className="mt-2 text-[var(--suave)]">{n.que}</p>
+          <div className="mt-3 flex gap-2">
+            <button type="button" disabled={sel === 0} onClick={() => ir(sel - 1)} className="min-h-10 flex-1 rounded-full border border-[var(--acento)] px-3 text-sm font-bold text-[var(--acento)] disabled:opacity-40">
+              🔍 Acercar
+            </button>
+            <button type="button" disabled={sel === N - 1} onClick={() => ir(sel + 1)} className="min-h-10 flex-1 rounded-full border border-[var(--acento)] px-3 text-sm font-bold text-[var(--acento)] disabled:opacity-40">
+              Alejar
+            </button>
+          </div>
+        </div>
+      </div>
+      <svg viewBox="0 0 800 96" role="img" aria-label={`Regla de tamaños: ${e.ejemplo.toLowerCase()} mide cerca de ${e.mide}`} className="mt-3 w-full">
+        {BANDAS.map((b) => (
+          <g key={b.ver}>
+            <rect x={xRegla(b.de)} y="70" width={xRegla(b.a) - xRegla(b.de)} height="18" rx="4" fill={VER[b.ver].color} opacity={e.ver === b.ver ? 0.9 : 0.25} />
+            <text x={(xRegla(b.de) + xRegla(b.a)) / 2} y="83" fontSize="11" fontWeight="700" textAnchor="middle" fill={e.ver === b.ver ? '#fff' : '#2b1d08'}>{b.rotulo}</text>
+          </g>
+        ))}
+        <line x1={xRegla(-10.4)} y1="44" x2={xRegla(3.4)} y2="44" stroke="#4a3416" strokeWidth="2" />
+        {MARCAS.map(([exp, rotulo]) => (
+          <g key={exp}>
+            <line x1={xRegla(exp)} y1="38" x2={xRegla(exp)} y2="50" stroke="#4a3416" strokeWidth="1.5" />
+            {rotulo && <text x={xRegla(exp)} y="63" fontSize="11" textAnchor="middle" fill="#4a3416">{rotulo}</text>}
+          </g>
+        ))}
+        {ESCALA.map((x, i) => {
+          const activo = i === sel
+          // sistema y organismo miden lo mismo: el segundo punto va un poco más arriba
+          const y = i > 0 && ESCALA[i - 1].m === x.m ? 26 : 44
+          return (
+            <g key={NIVELES[i].id} className="cursor-pointer" onClick={() => ir(i)}>
+              <circle cx={xRegla(Math.log10(x.m))} cy={y} r="14" fill="transparent" />
+              <circle cx={xRegla(Math.log10(x.m))} cy={y} r={activo ? 9 : 6} fill={activo ? VER[x.ver].color : '#fff'} stroke={VER[x.ver].color} strokeWidth="2.5" />
+              {activo && <text x={Math.max(60, Math.min(740, xRegla(Math.log10(x.m))))} y="13" fontSize="12.5" fontWeight="700" textAnchor="middle" fill="#2b1d08">{NIVELES[i].nombre}</text>}
+            </g>
+          )
+        })}
+      </svg>
+      <label htmlFor="nivel-escala" className="sr-only">Nivel</label>
+      <input
+        id="nivel-escala"
+        type="range"
+        min="0"
+        max={N - 1}
+        step="1"
+        value={sel}
+        onChange={(ev) => ir(Number(ev.target.value))}
+        onPointerUp={(ev) => ev.currentTarget.closest<HTMLElement>('[role=dialog]')?.focus()}
+        className="mt-1 h-8 w-full accent-[var(--acento)]"
+      />
+      <p className="mt-1 text-xs text-[var(--suave)]">En la regla cada raya es 10 veces mayor que la anterior. Tamaños aproximados; los dibujos son esquemas.</p>
+    </PantallaCompleta>
+  )
+}
 
 function Anidados({ inicial }: { inicial: number }) {
   const [sel, setSel] = useState(inicial)
