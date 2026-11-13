@@ -170,3 +170,9 @@ Hooke usa la reconstrucción de Rita Greer (2004, Free Art License, Wikimedia Co
 - «Para tocar y jugar» abre la ficha directamente en su diagrama o juego (`abrir.pestana` → `DetalleBloque inicial`).
 - **Identidad:** fondo color papel, títulos con Fraunces (paquete `@fontsource-variable/fraunces`, va dentro de la app, sin internet) y el mismo verde azulado. El modo oscuro conserva sus colores.
 - Pendiente: ficha a página completa como en el boceto (pregunta inicial, idea clave, dibujo grande, «Saber más» en tarjetas), color por materia, modo «Proyectar en clase».
+
+## Conceptos como página completa (13 nov)
+- El recuadro emergente con retrato y pestañas queda **solo para la línea de tiempo** (1.1). En los temas con `vistas` (1.2, 1.3, 2 y 3), cada bloque se abre como **página completa** (`DetalleBloque` con la prop `pagina`; la decide `App.tsx` y pasa por `LineaTiempo`).
+- Orden de la página: barra con volver, migas, posición y «Proyectar en clase» (las diapositivas) → título y pregunta inicial (`ficha.docente.abrir`; si no hay, el resumen) → pasos **Explora / Juega / Comprueba** («Juega» solo si el bloque tiene `juego`) → dibujo grande a la izquierda y, a la derecha, idea clave, «Para recordar» (cuaderno fácil) y analogía → **Saber más** en tarjetas que despliegan su contenido debajo (idea completa, ejemplos y límites, cuaderno, conexiones con otros temas, docente) → anterior / siguiente con sus títulos.
+- En la página, los visores usan más alto (`--alto-visor`, 42dvh). «Borrador» solo se ve en modo docente.
+- Pensado para PC. En celular se apila en una columna, pero no está afinado.

@@ -253,6 +253,12 @@ function TemaView({ TEMA, salto }: { TEMA: Tema; salto: { id: string; n: number;
           abrir={pedido}
           temaId={TEMA.id}
           diapositivas={TEMA.diapositivas}
+          pagina={
+            // las fichas emergentes son de la línea de tiempo; los demás temas abren cada concepto como página
+            TEMA.vistas
+              ? { migas: [MATERIAS.find((m) => m.id === TEMA.materia)?.nombre ?? TEMA.materia, UNIDADES[TEMA.materia]?.find((u) => u.id === TEMA.area)?.nombre ?? TEMA.area, TEMA.subtema] }
+              : undefined
+          }
         />
       </section>
 
