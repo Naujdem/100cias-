@@ -176,3 +176,10 @@ Hooke usa la reconstrucción de Rita Greer (2004, Free Art License, Wikimedia Co
 - Orden de la página: barra con volver, migas, posición y «Proyectar en clase» (las diapositivas) → título y pregunta inicial (`ficha.docente.abrir`; si no hay, el resumen) → pasos **Explora / Juega / Comprueba** («Juega» solo si el bloque tiene `juego`) → dibujo grande a la izquierda y, a la derecha, idea clave, «Para recordar» (cuaderno fácil) y analogía → **Saber más** en tarjetas que despliegan su contenido debajo (idea completa, ejemplos y límites, cuaderno, conexiones con otros temas, docente) → anterior / siguiente con sus títulos.
 - En la página, los visores usan más alto (`--alto-visor`, 42dvh). «Borrador» solo se ve en modo docente.
 - Pensado para PC. En celular se apila en una columna, pero no está afinado.
+
+## Minijuego de niveles (13 nov)
+- `components/diagramas/NivelesJuego.tsx`, clave `niveles-juego`: «¿En qué nivel está?». 12 tarjetas por ronda de un banco de 31 (siempre entran 3 tramposas: sangre = tejido, piel y fémur = órgano, O₂ = molécula, ameba y bacteria = célula y organismo, donde valen las dos respuestas). Puntos con racha, sin vidas; si se falla por un escalón dice «casi» y hacia dónde; repaso de fallos al final; mejor puntaje en `cien:niveles-mejor`.
+- Casilla «Incluir átomos, moléculas y macromoléculas» (`cien:niveles-todos`): apagada, el juego va de orgánulo a organismo (perfil de 6°).
+- Teclas: 1–9 eligen el nivel, → o Enter/Espacio pasan a la siguiente.
+- Va como paso **Juega** solo en el nivel «Organismo» (cierre del subtema), para no repetir el mismo juego en los 10 niveles ni en «Para tocar y jugar». Texto en borrador.
+- Ideas pendientes del 1.2: zoom continuo con regla de tamaño real; «¿Qué pasa si falla un nivel?» (anemia falciforme, con el hilo de la sangre); un Explora distinto por nivel; separar «Más allá del organismo» en población, comunidad, ecosistema y biosfera; más seres de ejemplo (esponja, Volvox).
