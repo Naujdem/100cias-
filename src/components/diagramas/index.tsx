@@ -6,6 +6,7 @@ import ExperimentoPasteur from './ExperimentoPasteur.tsx'
 import CuentaComoCelula from './CuentaComoCelula.tsx'
 import Endosimbiosis from './Endosimbiosis.tsx'
 import NivelesOrganizacion, { NIVELES } from './NivelesOrganizacion.tsx'
+import NivelesJuego from './NivelesJuego.tsx'
 import GotaLeeuwenhoek from './GotaLeeuwenhoek.tsx'
 import UniPluri from './UniPluri.tsx'
 import { ExploradorCelula, RutaProteinaDiagrama, EnergiaCelular } from './CelulaEucDiagramas.tsx'
@@ -18,6 +19,7 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'gota-leeuwenhoek': GotaLeeuwenhoek,
   // un diagrama por nivel, que abre el diagrama anidado ya posicionado en ese nivel
   ...Object.fromEntries(NIVELES.map((n, i) => [`nivel-${n.id}`, () => <NivelesOrganizacion inicial={i} />])),
+  'niveles-juego': NivelesJuego,
   // subtema 1.3: el diagrama abre ya posicionado en un paso, o en el juego de clasificar
   'uni-paso-0': () => <UniPluri paso={0} />,
   'uni-paso-1': () => <UniPluri paso={1} />,

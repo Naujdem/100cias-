@@ -1592,6 +1592,7 @@
       "etiqueta": "Nivel 9",
       "nivel": "basico",
       "diagrama": "nivel-organismo",
+      "juego": "niveles-juego",
       "ficha": {
         "idea": "Un organismo es un ser vivo completo, capaz de vivir por sí mismo. Puede ser unicelular, como una bacteria, o pluricelular, como una planta o una persona, con muchos sistemas que trabajan coordinados.",
         "contexto": [
@@ -1640,7 +1641,7 @@
         },
         "docente": {
           "abrir": "¿Una bacteria y un elefante son el mismo tipo de ser vivo?",
-          "actividad": "Completen la actividad «¿Qué aparece?» y pidan ejemplos de cada nivel para un organismo conocido.",
+          "actividad": "Completen la actividad «¿Qué aparece?» y cierren con el juego «¿En qué nivel está?» en el tablero: el grupo vota el nivel antes de responder. Detente en las tramposas (sangre, piel, fémur, ameba).",
           "errores": [
             "Creer que organismo y especie son lo mismo.",
             "Pensar que un organismo siempre tiene muchas células."
