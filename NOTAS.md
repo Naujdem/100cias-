@@ -1,4 +1,6 @@
 
 
-## «¿Y si falla?» (13 nov)
-- `components/diagramas/NivelesFalla.tsx`, quinta actividad del diagrama `nivel-<id>`: la anemia falciforme nivel por nivel (molécula → macromolécula → célula → tejido → órgano → organismo → población). En cada paso el estudiante predice qué pasa en el nivel siguiente (teclas 1–3; hasta acertar no avanza) y el dibujo se alterna entre «Sano» y «Con el cambio». ← → cambian de nivel. Continúa el hilo de la gota de sangre. Dibujos esquemáticos propios; todo en borrador y con datos en `VERIFICAR.md`.
+## «Más allá» y más seres (13 nov)
+- `components/diagramas/NivelesMasAlla.tsx`, actividad «Más allá» del diagrama `nivel-<id>` (es la que abre en el nivel 10): *Sube de nivel* (organismo → población → comunidad → ecosistema → biosfera con un mismo dibujo de monos aulladores en un bosque, que se va ampliando; deslizador) y *¿Cuál es?* (7 casos para clasificar, teclas 1–4). El bloque `mas-alla` del JSON sigue siendo uno solo: los cuatro escalones viven en la actividad.
+- *¿Qué niveles tiene?* ahora compara cinco seres: persona, planta de fríjol, medusa (hasta tejido), esponja (sin tejidos verdaderos) y bacteria.
+- Pendiente del 1.2: un Explora distinto por nivel; versión de la planta en «Acércate».

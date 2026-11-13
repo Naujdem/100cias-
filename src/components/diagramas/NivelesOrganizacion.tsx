@@ -3,6 +3,7 @@ import VisorZoom from '../VisorZoom.tsx'
 import PantallaCompleta from '../PantallaCompleta.tsx'
 import { useFlechas } from '../../lib/flechasDiagrama.ts'
 import NivelesFalla from './NivelesFalla.tsx'
+import NivelesMasAlla from './NivelesMasAlla.tsx'
 import { NivelAtomo, NivelMoleculas, NivelMacromoleculas, NivelOrganulo, NivelCelula, NivelTejido, NivelOrgano, NivelSistema, NivelOrganismo, NivelMasAlla } from '../ilustraciones/Niveles.tsx'
 
 // Niveles de organización de la vida, de átomos a más allá del organismo, con un ejemplo seguido de punta a punta.
@@ -29,15 +30,15 @@ export const NIVELES: Nivel[] = [
   { id: 'mas-alla', nombre: 'Más allá del organismo', corto: 'Más allá', persona: 'Población, comunidad y ecosistema donde vive.', planta: 'Un bosque y el ecosistema que forma.', que: 'Organismos que viven juntos y se relacionan entre sí y con su entorno, hasta la biosfera.' },
 ]
 
-type Modo = 'escala' | 'zoom' | 'ordena' | 'seres' | 'emergente' | 'falla'
+type Modo = 'escala' | 'zoom' | 'ordena' | 'seres' | 'emergente' | 'falla' | 'masalla'
 type Ejemplo = 'persona' | 'planta'
 
 export default function NivelesOrganizacion({ inicial = 4 }: { inicial?: number }) {
-  const [modo, setModo] = useState<Modo>('escala')
+  const [modo, setModo] = useState<Modo>(inicial === NIVELES.length - 1 ? 'masalla' : 'escala')
   return (
     <div>
       <div role="group" aria-label="Actividad" className="mb-3 flex flex-wrap gap-2">
-        {([['escala', 'Acércate'], ['zoom', 'Niveles anidados'], ['ordena', 'Ordénalos'], ['seres', '¿Qué niveles tiene?'], ['emergente', '¿Qué aparece?'], ['falla', '¿Y si falla?']] as [Modo, string][]).map(([id, texto]) => (
+        {([['escala', 'Acércate'], ['zoom', 'Niveles anidados'], ['ordena', 'Ordénalos'], ['seres', '¿Qué niveles tiene?'], ['emergente', '¿Qué aparece?'], ['falla', '¿Y si falla?'], ['masalla', 'Más allá']] as [Modo, string][]).map(([id, texto]) => (
           <button
             key={id}
             type="button"
@@ -49,7 +50,7 @@ export default function NivelesOrganizacion({ inicial = 4 }: { inicial?: number 
           </button>
         ))}
       </div>
-      {modo === 'escala' ? <Escala inicial={inicial} /> : modo === 'zoom' ? <Anidados inicial={inicial} /> : modo === 'ordena' ? <Ordena /> : modo === 'seres' ? <Seres /> : modo === 'falla' ? <NivelesFalla /> : <Emergente />}
+      {modo === 'escala' ? <Escala inicial={inicial} /> : modo === 'zoom' ? <Anidados inicial={inicial} /> : modo === 'ordena' ? <Ordena /> : modo === 'seres' ? <Seres /> : modo === 'falla' ? <NivelesFalla /> : modo === 'masalla' ? <NivelesMasAlla /> : <Emergente />}
     </div>
   )
 }
@@ -352,17 +353,19 @@ function Ordena() {
 // ---------------------------------------------------------------------------------------------
 // ¿Qué niveles tiene cada ser vivo? No todos pasan por todos los niveles.
 
-const SERES = ['Persona', 'Planta de fríjol', 'Bacteria']
+const SERES = ['Persona', 'Planta de fríjol', 'Medusa', 'Esponja', 'Bacteria']
 const FILAS = [
-  { id: 'celula', nombre: 'Célula', tiene: [true, true, true] },
-  { id: 'tejido', nombre: 'Tejido', tiene: [true, true, false] },
-  { id: 'organo', nombre: 'Órgano', tiene: [true, true, false] },
-  { id: 'sistema', nombre: 'Sistema de órganos', tiene: [true, true, false] },
-  { id: 'organismo', nombre: 'Organismo', tiene: [true, true, true] },
+  { id: 'celula', nombre: 'Célula', tiene: [true, true, true, true, true] },
+  { id: 'tejido', nombre: 'Tejido', tiene: [true, true, true, false, false] },
+  { id: 'organo', nombre: 'Órgano', tiene: [true, true, false, false, false] },
+  { id: 'sistema', nombre: 'Sistema de órganos', tiene: [true, true, false, false, false] },
+  { id: 'organismo', nombre: 'Organismo', tiene: [true, true, true, true, true] },
 ]
 const EXPLICA = [
   'Una persona tiene todos los niveles: células, tejidos, órganos, sistemas y el organismo completo.',
   'Una planta tiene tejidos (como el parénquima), órganos (raíz, tallo, hoja) y sistemas, como el de la raíz y el del vástago.',
+  'Una medusa tiene tejidos (una capa por fuera y otra por dentro), pero no órganos ni sistemas como los nuestros.',
+  'Una esponja tiene muchas células de varios tipos, pero no forman tejidos verdaderos: se queda en el nivel de célula.',
   'Una bacteria es una sola célula: no tiene tejidos, órganos ni sistemas. La célula ya es el organismo completo.',
 ]
 
@@ -392,7 +395,7 @@ function Seres() {
     <PantallaCompleta conBoton>
       <p className="text-sm">Marca con «Sí» los niveles que tiene cada ser vivo y pulsa «Comprobar». Con ← → te mueves entre casillas y con Espacio marcas.</p>
       <div ref={caja} className="mt-3 overflow-x-auto">
-        <table className="w-full min-w-[20rem] border-separate border-spacing-1 text-sm">
+        <table className="w-full min-w-[30rem] border-separate border-spacing-1 text-sm">
           <thead>
             <tr>
               <th scope="col" className="text-left font-semibold"><span className="sr-only">Nivel</span></th>
