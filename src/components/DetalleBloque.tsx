@@ -53,9 +53,11 @@ interface Props {
   temaId: string
   /** si existe, ofrece pasar a las diapositivas desde este bloque */
   onDiapositivas?: () => void
+  /** pestaña en la que se abre (si la ficha la tiene) */
+  inicial?: 'diagrama' | 'juego'
 }
 
-export default function DetalleBloque({ bloque: b, onCerrar, posicion, onAnterior, onSiguiente, unidad = 'Hito', temaId, onDiapositivas }: Props) {
+export default function DetalleBloque({ bloque: b, onCerrar, posicion, onAnterior, onSiguiente, unidad = 'Hito', temaId, onDiapositivas, inicial }: Props) {
   const ajustes = usarAjustes()
   const idTitulo = useId()
   const caja = useRef<HTMLDivElement>(null)
@@ -81,7 +83,7 @@ export default function DetalleBloque({ bloque: b, onCerrar, posicion, onAnterio
   // en el recorrido, las pestañas de abajo son solo las de «Saber más»
   const extras = recorrido ? todas.filter((p) => !pasos.some((x) => x.id === p.id)) : todas
   const pestanas = recorrido ? [...pasos, ...extras] : todas
-  const [activa, setActiva] = useState<Pestana>(recorrido ? 'diagrama' : 'historia')
+  const [activa, setActiva] = useState<Pestana>(inicial && pestanas.some((p) => p.id === inicial) ? inicial : recorrido ? 'diagrama' : 'historia')
   const enExtras = recorrido && extras.some((p) => p.id === activa)
   const [masAbierto, setMasAbierto] = useState(false)
   const pasoActual = pasos.findIndex((p) => p.id === activa)

@@ -1,13 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --fondo: #f6f7f4;
-  --tinta: #1c2a28;
-  --suave: #5b6b68;
-  --linea: #d9dfdb;
-  --tarjeta: #ffffff;
-  --acento: #0f766e;
-  --acento-suave: #ccfbf1;
+  /* papel de atlas: fondo crema, tinta oscura y el verde azulado de siempre */
+  --fondo: #f5f1e6;
+  --tinta: #1d2726;
+  --suave: #4d5957;
+  --linea: #d8d1bf;
+  --tarjeta: #fffdf8;
+  --acento: #0d5f58;
+  --acento-suave: #cfe7e1;
+  --serif: "Fraunces Variable", Georgia, "Times New Roman", serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -30,6 +32,10 @@ body {
   font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   line-height: 1.5;
 }
+
+/* Títulos con letra de atlas; el cuerpo sigue en letra sin serifa. */
+h1, h2, .titulo { font-family: var(--serif); }
+.hoja-contenido :is(h1, h2, h3) { font-family: inherit; }
 
 /* ---- Editor de documentos ---- */
 .hoja { max-width: 21cm; min-height: 29.7cm; }

@@ -32,7 +32,7 @@ interface Props {
   /** ofrece ver el subtema como diapositivas */
   diapositivas?: boolean
   /** pide abrir un bloque (por la búsqueda); `n` cambia en cada petición para poder repetir el mismo */
-  abrir?: { id: string; n: number } | null
+  abrir?: { id: string; n: number; pestana?: 'diagrama' | 'juego' } | null
 }
 
 export default function LineaTiempo({ bloques, vistas: VISTAS, claveVista: CLAVE_VISTA, unidad = 'Hito', abrir = null, temaId, diapositivas = false }: Props) {
@@ -52,11 +52,14 @@ export default function LineaTiempo({ bloques, vistas: VISTAS, claveVista: CLAVE
 
   // Abre el bloque que pide la búsqueda, una sola vez por petición, en cuanto esté entre los visibles.
   const atendido = useRef(0)
+  /** pestaña en la que debe abrirse una ficha pedida desde «Para tocar y jugar» */
+  const [pestana, setPestana] = useState<{ id: string; p: 'diagrama' | 'juego' } | null>(null)
   useEffect(() => {
     if (!abrir || abrir.n === atendido.current) return
     if (bloques.some((b) => b.id === abrir.id)) {
       atendido.current = abrir.n
       setAbierto(abrir.id)
+      setPestana(abrir.pestana ? { id: abrir.id, p: abrir.pestana } : null)
     }
   }, [abrir, bloques])
 
@@ -231,6 +234,7 @@ export default function LineaTiempo({ bloques, vistas: VISTAS, claveVista: CLAVE
           posicion={{ actual: indice + 1, total: ordenados.length }}
           unidad={unidad}
           temaId={temaId}
+          inicial={pestana?.id === seleccionado.id ? pestana.p : undefined}
           onDiapositivas={diapositivas ? () => { setPres(seleccionado.id); setAbierto(null) } : undefined}
           onAnterior={indice > 0 ? () => setAbierto(ordenados[indice - 1].id) : undefined}
           onSiguiente={indice < ordenados.length - 1 ? () => setAbierto(ordenados[indice + 1].id) : undefined}
