@@ -146,3 +146,17 @@ Hooke usa la reconstrucción de Rita Greer (2004, Free Art License, Wikimedia Co
 - Diagramas (`diagramas/CelulaEucDiagramas.tsx`): `explorador-celula` (+ «¿Quién lo hace?»), `ruta-proteina` (+ «¿En qué paso?»), `energia-celular` (cloroplasto / mitocondria / juntos), `membrana-transporte`.
 - Nuevo `Resguardo.tsx`: si un diagrama falla, se avisa en su lugar y la app sigue (antes, un error dejaba la pantalla en blanco).
 - A verificar: Singer y Nicolson 1972, Palade y De Duve (fechas y atribuciones), insulina como ejemplo, ADN/cromosomas, centriolos, peroxisomas, vacuola y reciclaje en plantas.
+
+## Tema 3 · mejoras paso a paso (13 nov)
+- **Paso 1, la membrana:** la pestaña Diagrama ahora tiene tres actividades (`diagramas/MembranaJuegos.tsx`): *Cómo cruzan* (la que había), *Juego: el portero* y *Ósmosis*. Ids: `membrana-transporte`, `membrana-portero`, `membrana-osmosis` (abren en esa actividad).
+- **El portero de la membrana** (primer minijuego): 10 visitantes en orden al azar, pistas de tamaño, carga y sentido, cuatro puertas (entre los lípidos, canal o transportadora, bomba con ATP, vesícula). 3 vidas, puntos con racha, contrarreloj opcional (12 s), repaso de fallos al final y mejor puntaje en `cien:portero-mejor`. Teclas: 1–4 eligen puerta, → o Enter/Espacio pasan al siguiente.
+- **Ósmosis:** célula animal o vegetal con deslizador de 5 niveles de sal (hipotónica → hipertónica): se hincha, se encoge o hace plasmólisis.
+- Ficha de la membrana: dos datos de contexto nuevos (pasivo/activo, ósmosis), dos láminas (compara pasivo/activo y el juego), preguntas `ce-me-5` y `ce-me-6`, notas del docente actualizadas. Todo en borrador.
+- Siguientes pasos del tema 3: separar citoesqueleto del citoplasma; fichas nuevas de ribosomas, peroxisomas y matriz extracelular/pared; diagramas propios para núcleo, cloroplastos y lisosomas (hoy comparten con otros pasos); más minijuegos (armar la célula, carrera de la proteína).
+
+## Ficha como recorrido (13 nov, prueba en la membrana)
+- Si un bloque tiene `juego` (id de `components/diagramas`) además de `diagrama`, la ficha deja las pestañas iguales y se muestra como recorrido: **1 Explora** (primera frase de la idea + el diagrama), **2 Juega** (el minijuego) y **3 Comprueba**. Lo demás (idea completa, ejemplos y límites, cuaderno, docente) queda bajo el botón «Saber más». La ficha abre en Explora y cada paso ofrece «Ahora: …» para seguir.
+- Teclado: ↑ ↓ cambian de paso; en Explora y Juega las flechas ← →, Enter y Espacio son del diagrama, igual que antes.
+- Los bloques sin `juego` se ven como siempre. Para pasar otra ficha al recorrido basta con crear su minijuego, registrarlo y poner su id en `juego`.
+- Membrana: `diagrama: membrana-explora` (Cómo cruzan + Ósmosis) y `juego: membrana-juego` (El portero).
+- Pendiente de la misma idea: inicio como mapa, estrellas por ficha, moldes de minijuegos, ocultar «Borrador» y atajos fuera del modo docente.

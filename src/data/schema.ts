@@ -140,6 +140,8 @@ export interface Bloque {
   ilustraciones?: Ilustracion[]
   /** id del diagrama interactivo que se muestra en la pestaña «Diagrama» (ver components/diagramas) */
   diagrama?: string
+  /** id del minijuego (también en components/diagramas). Si existe, la ficha se muestra como recorrido: Explora → Juega → Comprueba */
+  juego?: string
   /** las preguntas solo entran al quiz si el bloque está activo */
   preguntas: Pregunta[]
   /** false = borrador pendiente de verificación humana contra una fuente */
