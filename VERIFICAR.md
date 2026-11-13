@@ -50,3 +50,12 @@ Cuando confirmes uno con una fuente, márcalo con `[x]`, escribe la fuente al la
 - Revisar `ficha.docente` de los 24 bloques (preguntas de apertura, actividades, errores frecuentes, minutos).
 - Analogías de pluricelulares y division-trabajo: inventadas por Claude, no vienen de la presentación.
 - Pendiente: pasar el resto de la presentación «La célula» para completar analogías.
+
+## Tema 3 · La membrana (13 nov)
+
+- [ ] **Agua**: la mayor parte cruza por acuaporinas y un poco entre los lípidos.
+- [ ] **Sodio y potasio**: hay más Na⁺ afuera y más K⁺ adentro; la bomba de sodio y potasio gasta ATP.
+- [ ] **Glucosa**: entra por una proteína transportadora sin gastar energía (en algunos tejidos, como el intestino, entra por transporte activo).
+- [ ] **Hormonas esteroides**: atraviesan la membrana entre los lípidos.
+- [ ] **Ósmosis**: célula animal se hincha y puede reventar en agua pura; célula vegetal turgente por la pared; plasmólisis en agua muy salada.
+- [ ] **Modelo del mosaico fluido**: Singer y Nicolson, 1972.

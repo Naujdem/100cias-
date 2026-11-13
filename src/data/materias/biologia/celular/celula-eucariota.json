@@ -48,13 +48,22 @@
             "texto": "Las moléculas pequeñas sin carga, como el oxígeno, pasan entre los lípidos. Las grandes o con carga necesitan canales, transportadores o vesículas. A veces la célula gasta energía para mover sustancias contra su tendencia natural."
           },
           {
+            "titulo": "Con energía o sin energía",
+            "texto": "Si una sustancia va de donde hay más a donde hay menos, cruza sin que la célula gaste energía (transporte pasivo). Si va al revés, cuesta arriba, hace falta una bomba que gasta ATP (transporte activo)."
+          },
+          {
+            "titulo": "El agua también se mueve: ósmosis",
+            "texto": "El agua cruza la membrana hacia el lado donde hay más sustancias disueltas. Por eso una célula animal se hincha en agua pura y se encoge en agua muy salada; a la vegetal la protege su pared."
+          },
+          {
             "titulo": "En todas las células",
             "texto": "Las procariotas, las animales y las vegetales tienen membrana. Las vegetales, además, tienen una pared celular por fuera."
           }
         ],
         "evidencia": [
           "Al microscopio electrónico, la membrana se ve como dos líneas oscuras paralelas separadas por una zona clara.",
-          "Las células se hinchan o se encogen según la concentración de sales del agua que las rodea."
+          "Las células se hinchan o se encogen según la concentración de sales del agua que las rodea.",
+          "Una hoja de lechuga se pone firme en agua y se marchita con sal: el agua entra o sale de sus células."
         ],
         "limites": "El «mosaico fluido» es un modelo: la membrana real tiene más componentes (colesterol, carbohidratos) y zonas con organización distinta.",
         "cuaderno": {
@@ -64,22 +73,25 @@
           ],
           "media": [
             "Está hecha de dos capas de lípidos con proteínas.",
-            "Las proteínas forman canales, transportadores y receptores."
+            "Las proteínas forman canales, transportadores y receptores.",
+            "Transporte pasivo: a favor, sin gastar energía. Transporte activo: cuesta arriba, con bombas y ATP."
           ],
           "avanzada": [
             "Cruce: difusión simple, canales y transportadores, y endocitosis o exocitosis para partículas grandes.",
-            "Modelo del mosaico fluido (Singer y Nicolson, 1972)."
+            "Modelo del mosaico fluido (Singer y Nicolson, 1972).",
+            "Ósmosis: el agua pasa hacia donde hay más sustancias disueltas (solución hipotónica, isotónica o hipertónica)."
           ]
         },
         "docente": {
           "abrir": "¿Qué pasaría si una célula dejara entrar todo lo que toca?",
-          "actividad": "Con el diagrama «Cómo cruzan la membrana», que cada estudiante prediga por dónde pasa cada molécula antes de elegirla.",
+          "actividad": "Primero «Cómo cruzan» para predecir por dónde pasa cada molécula. Después, el juego «El portero» en el tablero: el grupo vota la puerta (1 a 4) antes de responder. Cierre con «Ósmosis» y la pregunta de la lechuga con sal.",
           "errores": [
             "Creer que la membrana es una pared rígida con huecos.",
             "Pensar que todo entra y sale por los mismos poros.",
-            "Confundir membrana con pared celular."
+            "Confundir membrana con pared celular.",
+            "Creer que todo transporte gasta energía, o que el agua va hacia donde hay menos sal."
           ],
-          "minutos": 15
+          "minutos": 25
         },
         "analogia": {
           "titulo": "Una aduana",
@@ -130,6 +142,37 @@
                 "texto": "partículas grandes"
               }
             ]
+          }
+        },
+        {
+          "titulo": "¿Gasta energía?",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "⛷️",
+              "titulo": "Pasivo",
+              "puntos": [
+                "De más a menos",
+                "Sin gastar energía",
+                "Lípidos, canales, transportadoras"
+              ]
+            },
+            "der": {
+              "icono": "🚴",
+              "titulo": "Activo",
+              "puntos": [
+                "De menos a más",
+                "Gasta ATP",
+                "Bombas"
+              ]
+            }
+          }
+        },
+        {
+          "titulo": "Juega: el portero de la membrana",
+          "visual": {
+            "tipo": "diagrama",
+            "id": "membrana-portero"
           }
         },
         {
@@ -214,6 +257,30 @@
           ],
           "correcta": 1,
           "explicacion": "Forman canales, transportadores y receptores."
+        },
+        {
+          "id": "ce-me-5",
+          "enunciado": "Un ion sale de la célula hacia donde ya hay muchos más iones iguales. ¿Qué necesita?",
+          "opciones": [
+            "Nada, pasa entre los lípidos",
+            "Un canal abierto, sin energía",
+            "Una bomba que gasta ATP",
+            "Una vesícula grande"
+          ],
+          "correcta": 2,
+          "explicacion": "Va cuesta arriba: eso es transporte activo y lo hace una bomba con ATP."
+        },
+        {
+          "id": "ce-me-6",
+          "enunciado": "¿Qué le pasa a una célula animal en agua muy salada?",
+          "opciones": [
+            "Se hincha hasta reventar",
+            "Pierde agua y se encoge",
+            "Se queda igual",
+            "Fabrica una pared"
+          ],
+          "correcta": 1,
+          "explicacion": "El agua sale hacia donde hay más sal y la célula se encoge."
         }
       ],
       "revisado": false
