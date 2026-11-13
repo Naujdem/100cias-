@@ -1,133 +1,191 @@
 import { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState } from 'react'
-import perfilesJson from './data/perfiles.json'
 import type { Perfil, Tema } from './data/schema.ts'
 import { alternar, normalizar } from './lib/seleccion.ts'
-import { guardar, leer } from './lib/almacen.ts'
+import { guardar } from './lib/almacen.ts'
+import { aplicarPerfil, CLAVE_TEMA, guardadoDe, PERFILES, perfilActual, TEMAS } from './lib/temas.ts'
+import type { Guardado } from './lib/temas.ts'
+import { enlace, irA, usarRuta } from './lib/ruta.ts'
+import { MATERIAS, UNIDADES } from './data/catalogo.ts'
 import SelectorContenido from './components/SelectorContenido.tsx'
 import LineaTiempo from './components/LineaTiempo.tsx'
-import Quiz from './components/Quiz.tsx'
 import { vistasDe } from './components/linea/vistas.ts'
 import Buscador from './components/Buscador.tsx'
 import Guia from './components/Guia.tsx'
+import { Inicio, Migas, VistaJugar, VistaMateria, VistaQuices, VistaUnidad } from './components/Biblioteca.tsx'
 import type { Resultado } from './lib/buscar.ts'
 import { ContextoAtajos } from './lib/atajos.ts'
 
-// Todos los subtemas del contenido, ordenados. Para agregar uno basta con crear su JSON en data/materias.
-const TEMAS = Object.values(import.meta.glob('./data/materias/**/*.json', { eager: true, import: 'default' }))
-  .map((t) => t as unknown as Tema)
-  .sort((a, b) => (a.orden ?? 99) - (b.orden ?? 99))
 const Editor = lazy(() => import('./components/Editor.tsx'))
-const PERFILES = perfilesJson as unknown as Perfil[]
-const CLAVE_TEMA = 'cien:tema-activo'
-const CLAVE_PERFIL = 'cien:perfil' // el último perfil elegido: vale para todos los subtemas
 
-interface Guardado {
-  perfil: string
-  activos: string[]
+/** Petición de abrir una ficha al llegar a su tema (búsqueda, atajo, «Seguir», «Para tocar y jugar»). */
+interface Salto {
+  tema: string
+  id: string
+  n: number
+  pestana?: 'diagrama' | 'juego'
 }
 
 export default function App() {
-  const [temaId, setTemaId] = useState(() => {
-    const g = leer<string>(CLAVE_TEMA, TEMAS[0].id)
-    return TEMAS.some((t) => t.id === g) ? g : TEMAS[0].id
-  })
-  const tema = TEMAS.find((t) => t.id === temaId) ?? TEMAS[0]
-  const [salto, setSalto] = useState<{ id: string; n: number } | null>(null)
+  const ruta = usarRuta()
+  const [salto, setSalto] = useState<Salto | null>(null)
   const [editando, setEditando] = useState(false)
-  const ir = (r: Resultado) => {
-    setTemaId(r.temaId)
-    guardar(CLAVE_TEMA, r.temaId)
-    setSalto({ id: r.bloqueId, n: Date.now() })
+  const [perfilId, setPerfilId] = useState(() => perfilActual().id)
+  const [version, setVersion] = useState(0) // cambia al elegir grado, para que el tema abierto lo tome
+
+  const tema = ruta.v === 'tema' ? TEMAS.find((t) => t.id === ruta.tema) : undefined
+  useEffect(() => {
+    if (tema) guardar(CLAVE_TEMA, tema.id)
+  }, [tema])
+  // una petición de abrir ficha solo vale para su tema: al salir de él, se olvida
+  useEffect(() => {
+    setSalto((s) => (s && (ruta.v !== 'tema' || ruta.tema !== s.tema) ? null : s))
+  }, [ruta])
+
+  const abrir = (temaId: string, bloqueId?: string, pestana?: Salto['pestana']) => {
+    setSalto(bloqueId ? { tema: temaId, id: bloqueId, n: Date.now(), pestana } : null)
+    irA(enlace.tema(temaId))
   }
   const atajos = {
     existe: (id: string) => TEMAS.some((t) => t.id === id),
-    ir: (id: string, bloqueId?: string) => {
-      setTemaId(id)
-      guardar(CLAVE_TEMA, id)
-      setSalto(bloqueId ? { id: bloqueId, n: Date.now() } : null)
-    },
+    ir: (id: string, bloqueId?: string) => abrir(id, bloqueId),
   }
-  return (
-    <ContextoAtajos.Provider value={atajos}>
-    <div className="mx-auto max-w-4xl px-4 pb-16 pt-6">
-      {editando ? (
+  const elegirGrado = (p: Perfil) => {
+    aplicarPerfil(p)
+    setPerfilId(p.id)
+    setVersion((v) => v + 1)
+  }
+
+  if (editando) {
+    return (
+      <div className="mx-auto max-w-4xl px-4 pb-16 pt-6">
         <Suspense fallback={<p>Cargando editor…</p>}>
           <Editor onCerrar={() => setEditando(false)} />
         </Suspense>
-      ) : (
-      <>
-      <header className="flex items-start justify-between gap-3">
-        <div>
-          <p className="text-sm font-semibold text-[var(--acento)]">Biología · Biología celular</p>
-          <h1 className="mt-1 text-2xl font-bold leading-tight">{tema.titulo}</h1>
+      </div>
+    )
+  }
+
+  return (
+    <ContextoAtajos.Provider value={atajos}>
+      <header className="border-b border-[var(--linea)] bg-[var(--tarjeta)]">
+        <div className="mx-auto flex max-w-5xl flex-wrap items-center gap-3 px-4 py-3">
+          <a href={enlace.inicio} className="mr-auto flex items-center gap-2 text-[var(--tinta)] no-underline sm:mr-0">
+            <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true">
+              <circle cx="17" cy="17" r="15" fill="var(--acento)" />
+              <circle cx="17" cy="17" r="6.5" fill="none" stroke="var(--fondo)" strokeWidth="2" />
+              <circle cx="22" cy="12" r="2.4" fill="var(--fondo)" />
+            </svg>
+            <span className="titulo text-xl font-semibold">100ciencias</span>
+          </a>
+          <Buscador temas={TEMAS} onIr={(r: Resultado) => abrir(r.temaId, r.bloqueId)} className="order-last min-w-0 flex-1 basis-full sm:order-none sm:basis-56" />
+          <label className="flex items-center">
+            <span className="sr-only">Grado</span>
+            <select
+              value={perfilId}
+              onChange={(e) => {
+                const p = PERFILES.find((x) => x.id === e.target.value)
+                if (p) elegirGrado(p)
+              }}
+              className="min-h-11 rounded-full border border-[var(--linea)] bg-[var(--tarjeta)] px-3 text-sm font-semibold text-[var(--tinta)]"
+            >
+              {PERFILES.map((p) => (
+                <option key={p.id} value={p.id}>
+                  Grado {p.nombre}
+                </option>
+              ))}
+            </select>
+          </label>
+          <Menu onEditor={() => setEditando(true)} />
         </div>
-        <button
-          type="button"
-          onClick={() => setEditando(true)}
-          className="min-h-11 shrink-0 rounded-xl border border-[var(--linea)] bg-[var(--tarjeta)] px-4 text-sm font-semibold"
-        >
-          📝 Editor
-        </button>
       </header>
-      <Buscador temas={TEMAS} onIr={ir} />
-      {TEMAS.length > 1 && (
-        <nav aria-label="Subtemas" className="mt-4">
-          <div className="flex flex-wrap gap-2">
-            {TEMAS.map((t) => (
-              <button
-                key={t.id}
-                type="button"
-                aria-pressed={t.id === tema.id}
-                onClick={() => {
-                  setTemaId(t.id)
-                  guardar(CLAVE_TEMA, t.id)
-                }}
-                className="min-h-11 rounded-xl border border-[var(--linea)] bg-[var(--tarjeta)] px-4 text-left text-sm font-semibold aria-pressed:border-[var(--acento)] aria-pressed:bg-[var(--acento-suave)]/40"
-              >
-                <span className="text-[var(--acento)]">{t.etiqueta}</span> {t.subtema}
-              </button>
-            ))}
-          </div>
-        </nav>
-      )}
-      <TemaView key={tema.id} TEMA={tema} salto={salto} />
-      </>
-      )}
-    </div>
+
+      <main className={`mx-auto px-4 pb-16 pt-6 ${ruta.v === 'tema' ? 'max-w-4xl' : 'max-w-5xl'}`}>
+        {ruta.v === 'inicio' && <Inicio key={version} onSeguir={abrir} />}
+        {ruta.v === 'materia' && <VistaMateria key={version} materia={ruta.materia} />}
+        {ruta.v === 'unidad' && <VistaUnidad key={version} materia={ruta.materia} unidad={ruta.unidad} />}
+        {ruta.v === 'jugar' && <VistaJugar key={version} onAbrir={abrir} />}
+        {ruta.v === 'quices' && <VistaQuices key={`${version}-${ruta.tema}`} temaId={ruta.tema} onIr={abrir} />}
+        {ruta.v === 'tema' &&
+          (tema ? (
+            <TemaView key={`${tema.id}-${version}`} TEMA={tema} salto={salto && salto.tema === tema.id ? salto : null} />
+          ) : (
+            <p>
+              Ese tema no existe. <a href={enlace.inicio}>Volver al inicio</a>
+            </p>
+          ))}
+      </main>
     </ContextoAtajos.Provider>
   )
 }
 
-function TemaView({ TEMA, salto }: { TEMA: Tema; salto: { id: string; n: number } | null }) {
+/** Menú de la cabecera: apartados que no hace falta tener siempre a la vista. */
+function Menu({ onEditor }: { onEditor: () => void }) {
+  const [abierto, setAbierto] = useState(false)
+  const caja = useRef<HTMLDivElement>(null)
+  useEffect(() => {
+    if (!abierto) return
+    const fuera = (e: MouseEvent) => {
+      if (!caja.current?.contains(e.target as Node)) setAbierto(false)
+    }
+    const tecla = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setAbierto(false)
+    }
+    document.addEventListener('mousedown', fuera)
+    document.addEventListener('keydown', tecla)
+    return () => {
+      document.removeEventListener('mousedown', fuera)
+      document.removeEventListener('keydown', tecla)
+    }
+  }, [abierto])
+  const item = 'flex min-h-11 w-full items-center rounded-xl px-3 text-left text-sm font-semibold text-[var(--tinta)] no-underline hover:bg-[var(--fondo)]'
+  return (
+    <div ref={caja} className="relative">
+      <button
+        type="button"
+        aria-label="Menú"
+        aria-expanded={abierto}
+        onClick={() => setAbierto((a) => !a)}
+        className="flex h-11 w-11 items-center justify-center rounded-full border border-[var(--linea)] bg-[var(--tarjeta)] aria-expanded:border-[var(--acento)]"
+      >
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
+          <path d="M4 7h10M18 7h2M4 17h4M12 17h8" />
+          <circle cx="16" cy="7" r="2" />
+          <circle cx="10" cy="17" r="2" />
+        </svg>
+      </button>
+      {abierto && (
+        <div className="absolute right-0 z-40 mt-2 w-60 rounded-2xl border border-[var(--linea)] bg-[var(--tarjeta)] p-2 shadow-xl">
+          <a href={enlace.jugar} onClick={() => setAbierto(false)} className={item}>
+            Para tocar y jugar
+          </a>
+          <a href={enlace.quices()} onClick={() => setAbierto(false)} className={item}>
+            Quices
+          </a>
+          <button
+            type="button"
+            onClick={() => {
+              setAbierto(false)
+              onEditor()
+            }}
+            className={item}
+          >
+            Editor de documentos
+          </button>
+        </div>
+      )}
+    </div>
+  )
+}
+
+function TemaView({ TEMA, salto }: { TEMA: Tema; salto: { id: string; n: number; pestana?: 'diagrama' | 'juego' } | null }) {
   const CLAVE = `cien:${TEMA.id}`
-  const inicial = useMemo<Guardado>(() => {
-    const g = leer<Guardado | null>(CLAVE, null)
-    if (g) return g
-    // sin guardado propio, el subtema hereda el último perfil elegido en cualquier subtema
-    const p = PERFILES.find((x) => x.id === leer<string>(CLAVE_PERFIL, PERFILES[0].id)) ?? PERFILES[0]
-    return { perfil: p.id, activos: p.bloques[TEMA.id] ?? TEMA.bloques.map((b) => b.id) }
-  }, [CLAVE, TEMA])
+  const inicial = useMemo<Guardado>(() => guardadoDe(TEMA), [TEMA])
 
   const [perfil, setPerfil] = useState(inicial.perfil)
   const [activos, setActivos] = useState(() => normalizar(TEMA.bloques, inicial.activos))
   const [aviso, setAviso] = useState('')
 
   const persistir = useCallback((p: string, a: Set<string>) => guardar(CLAVE, { perfil: p, activos: [...a] }), [CLAVE])
-
-  const elegirPerfil = (p: Perfil) => {
-    const a = normalizar(TEMA.bloques, p.bloques[TEMA.id] ?? TEMA.bloques.map((b) => b.id))
-    setPerfil(p.id)
-    setActivos(a)
-    setAviso('')
-    persistir(p.id, a)
-    // un solo perfil para todos los subtemas: se guarda también en los demás
-    guardar(CLAVE_PERFIL, p.id)
-    for (const t of TEMAS) {
-      if (t.id === TEMA.id) continue
-      const otros = normalizar(t.bloques, p.bloques[t.id] ?? t.bloques.map((b) => b.id))
-      guardar(`cien:${t.id}`, { perfil: p.id, activos: [...otros] })
-    }
-  }
 
   const alternarBloque = (id: string) => {
     const r = alternar(TEMA.bloques, activos, id)
@@ -164,41 +222,20 @@ function TemaView({ TEMA, salto }: { TEMA: Tema; salto: { id: string; n: number 
 
   return (
     <div>
-      <section aria-label="Perfil" className="mt-5">
-        <p className="mb-2 text-sm font-semibold">Perfil</p>
-        <div className="flex flex-wrap gap-2">
-          {PERFILES.map((p) => (
-            <button
-              key={p.id}
-              type="button"
-              aria-pressed={perfil === p.id}
-              onClick={() => elegirPerfil(p)}
-              className={`min-h-11 rounded-full border px-4 text-sm font-medium ${
-                perfil === p.id
-                  ? 'border-[var(--acento)] bg-[var(--acento)] text-[var(--fondo)]'
-                  : 'border-[var(--linea)] bg-[var(--tarjeta)]'
-              }`}
-            >
-              {p.nombre}
-            </button>
-          ))}
-          {perfil === 'personalizado' && (
-            <span className="inline-flex min-h-11 items-center rounded-full border border-dashed border-[var(--acento)] px-4 text-sm">
-              Personalizado
-            </span>
-          )}
-        </div>
-        <p className="mt-2 text-sm text-[var(--suave)]">
-          {(() => {
-            const p = PERFILES.find((x) => x.id === perfil)
-            return p ? (p.descripciones?.[TEMA.id] ?? p.descripcion) : 'Elegiste tu propia combinación de contenido.'
-          })()}
-        </p>
-        <p className="mt-1 text-xs text-[var(--suave)]">El perfil que elijas vale para todos los subtemas.</p>
-      </section>
+      <Migas
+        pasos={[
+          { texto: 'Inicio', a: enlace.inicio },
+          { texto: MATERIAS.find((m) => m.id === TEMA.materia)?.nombre ?? TEMA.materia, a: enlace.materia(TEMA.materia) },
+          { texto: UNIDADES[TEMA.materia]?.find((u) => u.id === TEMA.area)?.nombre ?? TEMA.area, a: enlace.unidad(TEMA.materia, TEMA.area) },
+        ]}
+      />
+      <h1 className="mt-1 text-3xl font-semibold leading-tight">
+        <span className="text-[var(--acento)]">{TEMA.etiqueta}</span> {TEMA.subtema}
+      </h1>
 
       <div className="mt-5">
         <SelectorContenido bloques={TEMA.bloques} activos={activos} onAlternar={alternarBloque} />
+        {perfil === 'personalizado' && <p className="mt-2 text-sm text-[var(--suave)]">Elegiste tu propia combinación de contenido para este tema. Si cambias de grado arriba, se reemplaza.</p>}
         <p aria-live="polite" className={aviso ? 'mt-2 text-sm text-[var(--suave)]' : 'sr-only'}>
           {aviso}
         </p>
@@ -219,11 +256,11 @@ function TemaView({ TEMA, salto }: { TEMA: Tema; salto: { id: string; n: number 
         />
       </section>
 
-      <section aria-label="Quiz" className="mt-8">
-        <h2 className="mb-1 text-lg font-bold">Mini-quiz</h2>
-        <p className="mb-3 text-sm text-[var(--suave)]">Solo pregunta lo que tienes activado arriba.</p>
-        <Quiz bloques={visibles} temaId={TEMA.id} onIr={(id) => setEmpezar({ id, n: Date.now() })} />
-      </section>
+      <p className="mt-8">
+        <a href={enlace.quices(TEMA.id)} className="inline-flex min-h-12 items-center rounded-full border-2 border-[var(--acento)] px-6 font-bold text-[var(--acento)] no-underline">
+          Hacer el quiz de este tema
+        </a>
+      </p>
     </div>
   )
 }

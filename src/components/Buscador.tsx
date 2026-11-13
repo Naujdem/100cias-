@@ -5,6 +5,8 @@ import { buscar, normalizarTexto, palabras, type Resultado } from '../lib/buscar
 interface Props {
   temas: Tema[]
   onIr: (r: Resultado) => void
+  /** margen u otras clases del contenedor (en la cabecera va sin margen) */
+  className?: string
 }
 
 /** Resalta las palabras buscadas dentro de un texto. */
@@ -31,7 +33,7 @@ function Resaltado({ texto, ps }: { texto: string; ps: string[] }) {
   return <>{partes}</>
 }
 
-export default function Buscador({ temas, onIr }: Props) {
+export default function Buscador({ temas, onIr, className = 'mt-4' }: Props) {
   const [q, setQ] = useState('')
   const [abierto, setAbierto] = useState(false)
   const [activo, setActivo] = useState(0)
@@ -94,7 +96,7 @@ export default function Buscador({ temas, onIr }: Props) {
   }
 
   return (
-    <div ref={caja} className="relative mt-4">
+    <div ref={caja} className={`relative ${className}`}>
       <label htmlFor="buscador" className="sr-only">
         Buscar en el contenido
       </label>

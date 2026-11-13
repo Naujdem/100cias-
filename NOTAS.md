@@ -160,3 +160,13 @@ Hooke usa la reconstrucción de Rita Greer (2004, Free Art License, Wikimedia Co
 - Los bloques sin `juego` se ven como siempre. Para pasar otra ficha al recorrido basta con crear su minijuego, registrarlo y poner su id en `juego`.
 - Membrana: `diagrama: membrana-explora` (Cómo cruzan + Ósmosis) y `juego: membrana-juego` (El portero).
 - Pendiente de la misma idea: inicio como mapa, estrellas por ficha, moldes de minijuegos, ocultar «Borrador» y atajos fuera del modo docente.
+
+## Biblioteca y navegación (13 nov)
+- La app ya no abre directo en un tema. Recorrido: **Inicio** (`#/`) → **materia** (`#/m/biologia`, sub-biblioteca de unidades) → **unidad** (`#/m/biologia/celular`, la ruta de temas con su avance) → **tema** (`#/t/<id>`). La dirección usa el «hash» (`lib/ruta.ts`), así funciona sin conexión y con el botón Atrás.
+- `data/catalogo.ts`: materias, unidades por materia y temas «en construcción». Una materia o unidad sin JSON se muestra como «Próximamente». Para estrenar una unidad basta con crear sus JSON con ese `materia` y `area`.
+- `lib/temas.ts`: `TEMAS`, `PERFILES`, `visiblesDe(tema)` y `aplicarPerfil` (antes en `App.tsx`). Pantallas en `components/Biblioteca.tsx`.
+- **Cabecera global:** logo (vuelve al inicio), buscador, **grado** (antes «Perfil», ahora un selector que vale para toda la app) y **menú** con «Para tocar y jugar» (`#/jugar`), «Quices» (`#/quices`, uno por tema) y «Editor de documentos».
+- **Tema:** migas para volver, sin botones de subtemas ni sección de perfil; el mini-quiz salió de la página y queda el botón «Hacer el quiz de este tema». «Personalizar contenido» sigue plegado.
+- «Para tocar y jugar» abre la ficha directamente en su diagrama o juego (`abrir.pestana` → `DetalleBloque inicial`).
+- **Identidad:** fondo color papel, títulos con Fraunces (paquete `@fontsource-variable/fraunces`, va dentro de la app, sin internet) y el mismo verde azulado. El modo oscuro conserva sus colores.
+- Pendiente: ficha a página completa como en el boceto (pregunta inicial, idea clave, dibujo grande, «Saber más» en tarjetas), color por materia, modo «Proyectar en clase».
