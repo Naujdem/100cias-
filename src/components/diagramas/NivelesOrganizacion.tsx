@@ -2,6 +2,7 @@ import { useMemo, useRef, useState } from 'react'
 import VisorZoom from '../VisorZoom.tsx'
 import PantallaCompleta from '../PantallaCompleta.tsx'
 import { useFlechas } from '../../lib/flechasDiagrama.ts'
+import NivelesFalla from './NivelesFalla.tsx'
 import { NivelAtomo, NivelMoleculas, NivelMacromoleculas, NivelOrganulo, NivelCelula, NivelTejido, NivelOrgano, NivelSistema, NivelOrganismo, NivelMasAlla } from '../ilustraciones/Niveles.tsx'
 
 // Niveles de organización de la vida, de átomos a más allá del organismo, con un ejemplo seguido de punta a punta.
@@ -28,7 +29,7 @@ export const NIVELES: Nivel[] = [
   { id: 'mas-alla', nombre: 'Más allá del organismo', corto: 'Más allá', persona: 'Población, comunidad y ecosistema donde vive.', planta: 'Un bosque y el ecosistema que forma.', que: 'Organismos que viven juntos y se relacionan entre sí y con su entorno, hasta la biosfera.' },
 ]
 
-type Modo = 'escala' | 'zoom' | 'ordena' | 'seres' | 'emergente'
+type Modo = 'escala' | 'zoom' | 'ordena' | 'seres' | 'emergente' | 'falla'
 type Ejemplo = 'persona' | 'planta'
 
 export default function NivelesOrganizacion({ inicial = 4 }: { inicial?: number }) {
@@ -36,7 +37,7 @@ export default function NivelesOrganizacion({ inicial = 4 }: { inicial?: number 
   return (
     <div>
       <div role="group" aria-label="Actividad" className="mb-3 flex flex-wrap gap-2">
-        {([['escala', 'Acércate'], ['zoom', 'Niveles anidados'], ['ordena', 'Ordénalos'], ['seres', '¿Qué niveles tiene?'], ['emergente', '¿Qué aparece?']] as [Modo, string][]).map(([id, texto]) => (
+        {([['escala', 'Acércate'], ['zoom', 'Niveles anidados'], ['ordena', 'Ordénalos'], ['seres', '¿Qué niveles tiene?'], ['emergente', '¿Qué aparece?'], ['falla', '¿Y si falla?']] as [Modo, string][]).map(([id, texto]) => (
           <button
             key={id}
             type="button"
@@ -48,7 +49,7 @@ export default function NivelesOrganizacion({ inicial = 4 }: { inicial?: number 
           </button>
         ))}
       </div>
-      {modo === 'escala' ? <Escala inicial={inicial} /> : modo === 'zoom' ? <Anidados inicial={inicial} /> : modo === 'ordena' ? <Ordena /> : modo === 'seres' ? <Seres /> : <Emergente />}
+      {modo === 'escala' ? <Escala inicial={inicial} /> : modo === 'zoom' ? <Anidados inicial={inicial} /> : modo === 'ordena' ? <Ordena /> : modo === 'seres' ? <Seres /> : modo === 'falla' ? <NivelesFalla /> : <Emergente />}
     </div>
   )
 }
