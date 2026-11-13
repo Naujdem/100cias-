@@ -33,9 +33,11 @@ interface Props {
   diapositivas?: boolean
   /** pide abrir un bloque (por la búsqueda); `n` cambia en cada petición para poder repetir el mismo */
   abrir?: { id: string; n: number; pestana?: 'diagrama' | 'juego' } | null
+  /** si existe, cada bloque se abre como página completa (con estas migas) en vez de recuadro */
+  pagina?: { migas: string[] }
 }
 
-export default function LineaTiempo({ bloques, vistas: VISTAS, claveVista: CLAVE_VISTA, unidad = 'Hito', abrir = null, temaId, diapositivas = false }: Props) {
+export default function LineaTiempo({ bloques, vistas: VISTAS, claveVista: CLAVE_VISTA, unidad = 'Hito', abrir = null, temaId, diapositivas = false, pagina }: Props) {
   const progreso = usarProgreso()
   const [abierto, setAbierto] = useState<string | null>(null)
   /** id del bloque con el que se abrió la presentación (null = cerrada) */
@@ -234,6 +236,9 @@ export default function LineaTiempo({ bloques, vistas: VISTAS, claveVista: CLAVE
           posicion={{ actual: indice + 1, total: ordenados.length }}
           unidad={unidad}
           temaId={temaId}
+          pagina={pagina}
+          tituloAnterior={indice > 0 ? ordenados[indice - 1].titulo : undefined}
+          tituloSiguiente={indice < ordenados.length - 1 ? ordenados[indice + 1].titulo : undefined}
           inicial={pestana?.id === seleccionado.id ? pestana.p : undefined}
           onDiapositivas={diapositivas ? () => { setPres(seleccionado.id); setAbierto(null) } : undefined}
           onAnterior={indice > 0 ? () => setAbierto(ordenados[indice - 1].id) : undefined}
