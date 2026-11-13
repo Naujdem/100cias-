@@ -14,7 +14,7 @@ import { enviarFlecha, moverDeslizador } from '../lib/flechasDiagrama.ts'
 import { marcarVisto } from '../lib/progreso.ts'
 import { usarAjustes } from '../lib/ajustes.ts'
 
-type Pestana = 'historia' | 'diagrama' | 'evidencia' | 'cuaderno' | 'comprueba' | 'docente'
+type Pestana = 'historia' | 'diagrama' | 'juego' | 'evidencia' | 'cuaderno' | 'comprueba' | 'docente'
 
 /** Línea sobre la naturaleza de la imagen y, plegado, su crédito y licencia. No muestra nada si el autor no tiene imagen. */
 function PieImagen({ autor }: { autor: Autor }) {
@@ -60,15 +60,34 @@ export default function DetalleBloque({ bloque: b, onCerrar, posicion, onAnterio
   const idTitulo = useId()
   const caja = useRef<HTMLDivElement>(null)
   const Diagrama = b.diagrama ? DIAGRAMAS[b.diagrama] : undefined
-  const pestanas: { id: Pestana; texto: string }[] = [
-    { id: 'historia', texto: b.etiqueta ? 'Idea' : 'Historia' },
+  const Juego = b.juego ? DIAGRAMAS[b.juego] : undefined
+  // Con minijuego, la ficha es un recorrido de tres momentos y el resto queda en «Saber más».
+  const recorrido = !!(Diagrama && Juego)
+  const pasos: { id: Pestana; texto: string }[] = recorrido
+    ? [
+        { id: 'diagrama', texto: 'Explora' },
+        { id: 'juego', texto: 'Juega' },
+        ...(b.preguntas.length ? [{ id: 'comprueba' as Pestana, texto: 'Comprueba' }] : []),
+      ]
+    : []
+  const todas: { id: Pestana; texto: string }[] = [
+    { id: 'historia', texto: recorrido ? 'La idea completa' : b.etiqueta ? 'Idea' : 'Historia' },
     ...(Diagrama ? [{ id: 'diagrama' as Pestana, texto: 'Diagrama' }] : []),
     { id: 'evidencia', texto: b.etiqueta ? 'Ejemplos y límites' : 'Evidencia y límites' },
     ...(b.ficha.cuaderno ? [{ id: 'cuaderno' as Pestana, texto: 'Para el cuaderno' }] : []),
     ...(b.preguntas.length ? [{ id: 'comprueba' as Pestana, texto: 'Comprueba' }] : []),
     ...(ajustes.docente && b.ficha.docente ? [{ id: 'docente' as Pestana, texto: 'Para el docente' }] : []),
   ]
-  const [activa, setActiva] = useState<Pestana>('historia')
+  // en el recorrido, las pestañas de abajo son solo las de «Saber más»
+  const extras = recorrido ? todas.filter((p) => !pasos.some((x) => x.id === p.id)) : todas
+  const pestanas = recorrido ? [...pasos, ...extras] : todas
+  const [activa, setActiva] = useState<Pestana>(recorrido ? 'diagrama' : 'historia')
+  const enExtras = recorrido && extras.some((p) => p.id === activa)
+  const [masAbierto, setMasAbierto] = useState(false)
+  const pasoActual = pasos.findIndex((p) => p.id === activa)
+  const pasoSiguiente = pasoActual >= 0 ? pasos[pasoActual + 1] : undefined
+  // primera frase de la idea, para acompañar al dibujo en «Explora»
+  const ideaCorta = b.ficha.idea.match(/^.*?[.!?](\s|$)/)?.[0].trim() ?? b.ficha.idea
   const activaRef = useRef(activa)
   activaRef.current = activa
   const [principal, ...otros] = b.autores ?? []
@@ -86,7 +105,7 @@ export default function DetalleBloque({ bloque: b, onCerrar, posicion, onAnterio
   // Teclado (pensado para el aula, sin mouse). Se escucha en todo el documento para que funcione
   // aunque el foco esté en el fondo del recuadro. Se ejecuta en la fase de captura.
   useEffect(() => {
-    const ids = pestanas.map((p) => p.id)
+    const ids = (recorrido ? pasos : pestanas).map((p) => p.id)
     const alTeclear = (e: globalThis.KeyboardEvent) => {
       if (e.ctrlKey || e.metaKey || e.altKey) return
       if (e.key === 'Escape') {
@@ -104,18 +123,19 @@ export default function DetalleBloque({ bloque: b, onCerrar, posicion, onAnterio
 
       // En Diagrama y Para el cuaderno, ← → son de la pestaña: cambian el control principal
       // (paso, días, aumento, caso, nivel). Los hitos se cambian con RePág/AvPág o con los botones.
-      const enControles = activaRef.current === 'diagrama' || activaRef.current === 'cuaderno'
+      const enDiagrama = activaRef.current === 'diagrama' || activaRef.current === 'juego'
+      const enControles = enDiagrama || activaRef.current === 'cuaderno'
       if (enControles && (e.key === 'ArrowRight' || e.key === 'ArrowLeft')) {
         const dir = e.key === 'ArrowRight' ? 1 : -1
         const panel = caja.current?.querySelector<HTMLElement>('[data-diagrama]')
-        if (enviarFlecha(dir) || (activaRef.current === 'diagrama' && panel && moverDeslizador(panel, dir))) {
+        if (enviarFlecha(dir) || (enDiagrama && panel && moverDeslizador(panel, dir))) {
           e.preventDefault()
           e.stopPropagation()
           return
         }
       }
       // Espacio o Enter pulsan el botón principal del diagrama (Dividir, Romper el cuello…) si el foco no está en un control
-      if (activaRef.current === 'diagrama' && (e.key === 'Enter' || e.key === ' ') && !(t && /^(BUTTON|A|SUMMARY)$/.test(t.tagName))) {
+      if (enDiagrama && (e.key === 'Enter' || e.key === ' ') && !(t && /^(BUTTON|A|SUMMARY)$/.test(t.tagName))) {
         const principalBtn = caja.current?.querySelector<HTMLButtonElement>('[data-principal]:not([disabled])')
         if (principalBtn) {
           e.preventDefault()
@@ -151,7 +171,7 @@ export default function DetalleBloque({ bloque: b, onCerrar, posicion, onAnterio
     document.addEventListener('keydown', alTeclear, true)
     return () => document.removeEventListener('keydown', alTeclear, true)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [onCerrar, onSiguiente, onAnterior, onDiapositivas, Diagrama])
+  }, [onCerrar, onSiguiente, onAnterior, onDiapositivas, Diagrama, Juego, ajustes.docente])
 
   const alTeclear = (e: KeyboardEvent<HTMLDivElement>) => {
     if (e.key !== 'Tab' || !caja.current) return
@@ -243,8 +263,48 @@ export default function DetalleBloque({ bloque: b, onCerrar, posicion, onAnterio
               {b.titulo}
             </h3>
 
-            <div role="tablist" aria-label="Secciones" className="mt-3 flex gap-1 overflow-x-auto border-b border-[var(--linea)]">
-              {pestanas.map((p) => (
+            {recorrido && (
+              <div className="mt-3 flex flex-wrap items-center gap-2">
+                <ol role="tablist" aria-label="Recorrido" className="flex min-w-0 flex-1 items-center gap-1">
+                  {pasos.map((p, n) => (
+                    <li key={p.id} className="flex min-w-0 flex-1 items-center gap-1">
+                      <button
+                        role="tab"
+                        type="button"
+                        aria-selected={activa === p.id}
+                        onClick={() => setActiva(p.id)}
+                        className={`flex min-h-12 w-full items-center justify-center gap-2 rounded-xl border-2 px-2 text-sm font-bold sm:text-base ${
+                          activa === p.id ? 'border-[var(--acento)] bg-[var(--acento)] text-white' : 'border-[var(--linea)] text-[var(--suave)] hover:border-[var(--acento)]'
+                        }`}
+                      >
+                        <span className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs ${activa === p.id ? 'bg-white text-[var(--acento)]' : 'bg-[var(--fondo)]'}`}>{n + 1}</span>
+                        <span className="truncate">{p.texto}</span>
+                      </button>
+                      {n < pasos.length - 1 && <span aria-hidden="true" className="text-[var(--suave)]">›</span>}
+                    </li>
+                  ))}
+                </ol>
+                <button
+                  type="button"
+                  aria-expanded={masAbierto || enExtras}
+                  onClick={() => {
+                    if (masAbierto || enExtras) {
+                      setMasAbierto(false)
+                      if (enExtras) setActiva('diagrama')
+                    } else {
+                      setMasAbierto(true)
+                      setActiva(extras[0].id)
+                    }
+                  }}
+                  className="min-h-12 rounded-xl border border-[var(--linea)] px-3 text-sm font-semibold text-[var(--suave)] aria-expanded:border-[var(--acento)] aria-expanded:text-[var(--acento)]"
+                >
+                  Saber más {masAbierto || enExtras ? '▴' : '▾'}
+                </button>
+              </div>
+            )}
+
+            <div role="tablist" aria-label="Secciones" hidden={recorrido && !(masAbierto || enExtras)} className="mt-3 flex gap-1 overflow-x-auto border-b border-[var(--linea)]">
+              {extras.map((p) => (
                 <button
                   key={p.id}
                   role="tab"
@@ -284,8 +344,23 @@ export default function DetalleBloque({ bloque: b, onCerrar, posicion, onAnterio
 
               {activa === 'diagrama' && Diagrama && (
                 <div data-diagrama>
+                  {recorrido && <p className="mb-3 text-base font-semibold">{ideaCorta}</p>}
                   <Resguardo titulo="No se pudo mostrar el diagrama."><Diagrama /></Resguardo>
                 </div>
+              )}
+
+              {activa === 'juego' && Juego && (
+                <div data-diagrama>
+                  <Resguardo titulo="No se pudo mostrar el juego."><Juego /></Resguardo>
+                </div>
+              )}
+
+              {pasoSiguiente && (
+                <p className="mt-4 text-right">
+                  <button type="button" onClick={() => setActiva(pasoSiguiente.id)} className="min-h-11 rounded-full border-2 border-[var(--acento)] px-5 text-sm font-bold text-[var(--acento)]">
+                    Ahora: {pasoSiguiente.texto} ›
+                  </button>
+                </p>
               )}
 
               {activa === 'cuaderno' && b.ficha.cuaderno && <Cuaderno cuaderno={b.ficha.cuaderno} titulo={b.titulo} />}
@@ -334,7 +409,7 @@ export default function DetalleBloque({ bloque: b, onCerrar, posicion, onAnterio
               </p>
             )}
             <p className="hidden md:block">
-              {activa === 'diagrama' || activa === 'cuaderno'
+              {activa === 'diagrama' || activa === 'juego' || activa === 'cuaderno'
                 ? `← → controles · RePág/AvPág ${plural(unidad)} · ↑ ↓ pestañas · F pantalla completa · Esc cerrar`
                 : `← → ${plural(unidad)} · ↑ ↓ pestañas · + − aumento · F pantalla completa · Esc cerrar`}
             </p>

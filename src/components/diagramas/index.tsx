@@ -9,7 +9,7 @@ import NivelesOrganizacion, { NIVELES } from './NivelesOrganizacion.tsx'
 import GotaLeeuwenhoek from './GotaLeeuwenhoek.tsx'
 import UniPluri from './UniPluri.tsx'
 import { ExploradorCelula, RutaProteinaDiagrama, EnergiaCelular } from './CelulaEucDiagramas.tsx'
-import MembranaActividades from './MembranaJuegos.tsx'
+import MembranaActividades, { PorteroMembrana } from './MembranaJuegos.tsx'
 import { ComparadorProEu, ComparadorAnimalVegetal, ExploradorBacterias, GaleriaEspecializadas } from './TiposCelulas.tsx'
 
 /** Registro de diagramas interactivos. La clave es el valor de `bloque.diagrama`. */
@@ -40,6 +40,8 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'ruta-proteina-pasos': () => <RutaProteinaDiagrama modo="ordena" />,
   'energia-celular': EnergiaCelular,
   'membrana-transporte': () => <MembranaActividades />,
+  'membrana-explora': () => <MembranaActividades sinJuego />,
+  'membrana-juego': PorteroMembrana,
   'membrana-portero': () => <MembranaActividades inicial="portero" />,
   'membrana-osmosis': () => <MembranaActividades inicial="osmosis" />,
   'cuenta-celula': CuentaComoCelula,

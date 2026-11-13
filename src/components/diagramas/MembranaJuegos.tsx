@@ -438,11 +438,11 @@ export function OsmosisCelula() {
 
 type Act = 'cruzan' | 'portero' | 'osmosis'
 
-export default function MembranaActividades({ inicial = 'cruzan' }: { inicial?: Act }) {
+export default function MembranaActividades({ inicial = 'cruzan', sinJuego = false }: { inicial?: Act; /** en el recorrido de la ficha, el juego va aparte */ sinJuego?: boolean }) {
   const [act, setAct] = useState<Act>(inicial)
   return (
     <div>
-      <Pestanas valor={act} opciones={[['cruzan', 'Cómo cruzan'], ['portero', 'Juego: el portero'], ['osmosis', 'Ósmosis']]} onCambio={setAct} etiqueta="Actividad" />
+      <Pestanas valor={act} opciones={sinJuego ? [['cruzan', 'Cómo cruzan'], ['osmosis', 'Ósmosis']] : [['cruzan', 'Cómo cruzan'], ['portero', 'Juego: el portero'], ['osmosis', 'Ósmosis']]} onCambio={setAct} etiqueta="Actividad" />
       {act === 'cruzan' ? <MembranaTransporte /> : act === 'portero' ? <PorteroMembrana /> : <OsmosisCelula />}
     </div>
   )

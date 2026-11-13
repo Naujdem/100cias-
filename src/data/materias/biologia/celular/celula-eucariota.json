@@ -209,7 +209,8 @@
           "recurso": "celula-membrana"
         }
       ],
-      "diagrama": "membrana-transporte",
+      "diagrama": "membrana-explora",
+      "juego": "membrana-juego",
       "preguntas": [
         {
           "id": "ce-me-1",
