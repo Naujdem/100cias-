@@ -115,7 +115,86 @@
           "explicacion": "Ese núcleo pudo formar una rana completa."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "diapositivas": [
+        {
+          "titulo": "Una célula, muchos oficios",
+          "visual": {
+            "tipo": "escena",
+            "id": "diferenciacion",
+            "fases": [
+              {
+                "id": "madre",
+                "nombre": "Una célula sin oficio",
+                "texto": "Una célula madre todavía no se ha especializado."
+              },
+              {
+                "id": "neurona",
+                "nombre": "Neurona",
+                "texto": "Se alarga y saca prolongaciones para llevar mensajes.",
+                "marcas": [
+                  {
+                    "x": 176,
+                    "y": 82,
+                    "texto": "El axón largo lleva el mensaje lejos: hasta un metro en el cuerpo humano."
+                  }
+                ]
+              },
+              {
+                "id": "musculo",
+                "nombre": "Célula muscular",
+                "texto": "Se vuelve una fibra larga que se puede contraer.",
+                "marcas": [
+                  {
+                    "x": 312,
+                    "y": 50,
+                    "texto": "Tiene varios núcleos y bandas que se acortan al contraerse."
+                  }
+                ]
+              },
+              {
+                "id": "globulo",
+                "nombre": "Glóbulo rojo",
+                "texto": "Un disco flexible lleno de hemoglobina para llevar oxígeno.",
+                "marcas": [
+                  {
+                    "x": 240,
+                    "y": 248,
+                    "texto": "Pierde el núcleo para tener más espacio para el oxígeno."
+                  }
+                ]
+              },
+              {
+                "id": "mismo-adn",
+                "nombre": "El mismo libro",
+                "texto": "Las tres tienen el mismo ADN. Lo que cambia es qué genes encienden.",
+                "nota": "El cuerpo humano tiene unos 200 tipos de células.",
+                "marcas": [
+                  {
+                    "x": 200,
+                    "y": 100,
+                    "texto": "Cada cuadrito es un gen; en amarillo, el que esa célula usa."
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "¿Por qué son distintas?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Una neurona y un glóbulo rojo de la misma persona…",
+            "opciones": [
+              "Tienen ADN distinto",
+              "Tienen el mismo ADN pero usan genes distintos",
+              "Vienen de cigotos distintos"
+            ],
+            "correcta": 1,
+            "explicacion": "Todas tus células vienen del mismo cigoto: tienen el mismo ADN; cada tipo lee solo algunas «páginas»."
+          }
+        }
+      ]
     },
     {
       "id": "celulas-madre",
@@ -210,7 +289,65 @@
           "explicacion": "Las llamó iPS."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "diapositivas": [
+        {
+          "titulo": "De dónde salen las células",
+          "visual": {
+            "tipo": "escena",
+            "id": "diferenciacion",
+            "fases": [
+              {
+                "id": "cigoto",
+                "nombre": "Cigoto",
+                "texto": "La primera célula: puede formar todo, incluso la placenta.",
+                "nota": "Totipotente: puede formar todo."
+              },
+              {
+                "id": "embrion",
+                "nombre": "Embrión temprano",
+                "texto": "Se divide muchas veces: células todavía iguales, que pueden formar cualquier tejido.",
+                "nota": "Pluripotentes: cualquier tejido del cuerpo."
+              },
+              {
+                "id": "madre",
+                "nombre": "Célula madre",
+                "texto": "Algunas células se guardan sin especializar, listas para formar otras.",
+                "nota": "Las del adulto son multipotentes: solo algunos tipos.",
+                "marcas": [
+                  {
+                    "x": 244,
+                    "y": 182,
+                    "texto": "En el adulto hay células madre en la médula ósea, la piel o el intestino."
+                  }
+                ]
+              },
+              {
+                "id": "neurona",
+                "nombre": "Se especializa",
+                "texto": "Al recibir señales, una célula madre puede volverse neurona…"
+              },
+              {
+                "id": "musculo",
+                "nombre": "…o músculo",
+                "texto": "…o célula muscular…"
+              },
+              {
+                "id": "globulo",
+                "nombre": "…o sangre",
+                "texto": "…o glóbulo rojo. Las de la médula ósea forman las células de la sangre.",
+                "marcas": [
+                  {
+                    "x": 240,
+                    "y": 248,
+                    "texto": "Por eso un trasplante de médula ósea ayuda en algunas leucemias."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
     },
     {
       "id": "tejidos-animales",
