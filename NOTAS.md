@@ -247,3 +247,4 @@ Hooke usa la reconstrucción de Rita Greer (2004, Free Art License, Wikimedia Co
 ## Tema 4.1 · diagramas (14 nov)
 - `components/diagramas/CicloCelular.tsx`: *ciclo-reloj* (el ciclo como reloj G1-S-G2-M, con barra de cantidad de ADN), *cromosoma-compacta* (hilo → cromatina → copia → cromosoma en X), *citocinesis* (animal con surco y vegetal con placa, 4 pasos) y *semaforos-ciclo* (7 casos: ¿la célula sigue o se detiene en el punto de control?).
 - Con esto los seis pasos del 4.1 tienen diagrama. Pendiente: minijuego (identificar fases en fotos de raíz de cebolla u ordenarlas).
+- Minijuego del 4.1 (14 nov): `FasesMitosis.tsx`, clave `fases-mitosis`, paso **Juega** de «Mitosis». *¿En qué fase está?* (10 células giradas y volteadas al azar, teclas 1–5, mejor marca en `cien:fases-mejor`) y *Ordénalas* (tocar las 5 fases en orden). Reutiliza el dibujo `CelulaDividiendo` del 1.1. Fotos reales de raíz de cebolla: pendiente si JuanMed consigue imágenes con licencia.

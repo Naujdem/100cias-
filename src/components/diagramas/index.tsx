@@ -10,6 +10,7 @@ import NivelesJuego from './NivelesJuego.tsx'
 import CelulaUrgencias from './CelulaUrgencias.tsx'
 import ArmaCelula from './ArmaCelula.tsx'
 import CarreraProteina from './CarreraProteina.tsx'
+import FasesMitosis from './FasesMitosis.tsx'
 import { CicloReloj, CromosomaCompacta, CitocinesisDiagrama, SemaforosCiclo } from './CicloCelular.tsx'
 import { NucleoDiagrama, CloroplastoDiagrama, LisosomaDiagrama } from './CelulaEucOrg.tsx'
 import { CitoesqueletoDiagrama, RibosomasDiagrama, PeroxisomaDiagrama, MatrizParedDiagrama } from './CelulaEucMas.tsx'
@@ -54,6 +55,7 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'arma-celula': ArmaCelula,
   'carrera-proteina': CarreraProteina,
   'ciclo-reloj': CicloReloj,
+  'fases-mitosis': FasesMitosis,
   'cromosoma-compacta': CromosomaCompacta,
   'citocinesis': CitocinesisDiagrama,
   'semaforos-ciclo': SemaforosCiclo,
