@@ -116,7 +116,69 @@
           "explicacion": "El sitio activo pierde su forma."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "diapositivas": [
+        {
+          "titulo": "Romper y construir",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "🔨",
+              "titulo": "Catabolismo",
+              "puntos": [
+                "Rompe moléculas grandes",
+                "Libera energía",
+                "Ej.: partir la glucosa"
+              ]
+            },
+            "der": {
+              "icono": "🧱",
+              "titulo": "Anabolismo",
+              "puntos": [
+                "Construye moléculas grandes",
+                "Gasta energía",
+                "Ej.: armar proteínas"
+              ]
+            }
+          }
+        },
+        {
+          "titulo": "La llave y la cerradura",
+          "visual": {
+            "tipo": "diagrama",
+            "id": "enzima-llave"
+          },
+          "puntos": [
+            "Cada enzima encaja solo con su molécula"
+          ]
+        },
+        {
+          "titulo": "Muy rápidas",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "⚡",
+            "valor": "× 1 000 000",
+            "texto": "más rápido puede ocurrir una reacción con su enzima"
+          },
+          "puntos": [
+            "Y la enzima no se gasta: trabaja una y otra vez"
+          ]
+        },
+        {
+          "titulo": "¿Lo tienes?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Con fiebre muy alta, algunas enzimas dejan de funcionar. ¿Por qué?",
+            "opciones": [
+              "Se gastan",
+              "El calor las deforma y ya no encajan",
+              "Se vuelven más rápidas"
+            ],
+            "correcta": 1,
+            "explicacion": "Cada enzima trabaja mejor a cierta temperatura y acidez; con mucho calor cambia de forma."
+          }
+        }
+      ]
     },
     {
       "id": "atp",
@@ -212,7 +274,93 @@
           "explicacion": "Casi todo trabajo celular gasta ATP."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "diapositivas": [
+        {
+          "titulo": "Pilas recargables",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🔋",
+                "titulo": "ATP",
+                "texto": "pila cargada: 3 fosfatos"
+              },
+              {
+                "icono": "🪫",
+                "titulo": "ADP",
+                "texto": "pila gastada: 2 fosfatos"
+              },
+              {
+                "icono": "🔌",
+                "titulo": "Recargar",
+                "texto": "con la energía de la glucosa"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Carga y descarga",
+          "visual": {
+            "tipo": "diagrama",
+            "id": "atp-pila"
+          }
+        },
+        {
+          "titulo": "¿Dónde se recarga?",
+          "visual": {
+            "tipo": "escena",
+            "id": "respiracion",
+            "fases": [
+              {
+                "id": "glucolisis",
+                "nombre": "Un poco en el citoplasma",
+                "texto": "La glucólisis recarga 2 ATP."
+              },
+              {
+                "id": "respiracion",
+                "nombre": "Mucho en la mitocondria",
+                "texto": "Con oxígeno se recargan unos 30 ATP más por cada glucosa."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "¿En qué se gasta?",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "💪",
+                "titulo": "Moverse",
+                "texto": "contraer músculos"
+              },
+              {
+                "icono": "🚪",
+                "titulo": "Bombear",
+                "texto": "sustancias por la membrana"
+              },
+              {
+                "icono": "🔗",
+                "titulo": "Fabricar",
+                "texto": "proteínas y otras moléculas"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Cuánto ATP",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "⚖️",
+            "valor": "≈ tu peso",
+            "texto": "de ATP recicla tu cuerpo cada día"
+          },
+          "puntos": [
+            "Por eso se recarga sin parar"
+          ]
+        }
+      ]
     },
     {
       "id": "respiracion-fermentacion",
@@ -504,7 +652,74 @@
           "explicacion": "Primero se envía la señal."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "diapositivas": [
+        {
+          "titulo": "Mensajes entre células",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "✉️",
+                "titulo": "Señal",
+                "texto": "una molécula mensajera"
+              },
+              {
+                "icono": "🔑",
+                "titulo": "Receptor",
+                "texto": "la cerradura donde encaja"
+              },
+              {
+                "icono": "⚙️",
+                "titulo": "Respuesta",
+                "texto": "lo que hace la célula"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Solo si tiene el receptor",
+          "visual": {
+            "tipo": "diagrama",
+            "id": "senales-celulares"
+          },
+          "puntos": [
+            "Las células sin el receptor no se enteran del mensaje"
+          ]
+        },
+        {
+          "titulo": "A todo el cuerpo",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "💉",
+                "titulo": "Insulina",
+                "texto": "avisa que hay glucosa en la sangre"
+              },
+              {
+                "icono": "😱",
+                "titulo": "Adrenalina",
+                "texto": "prepara el cuerpo para huir o actuar"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "¿Lo tienes?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "La insulina viaja por toda la sangre. ¿Por qué solo responden algunas células?",
+            "opciones": [
+              "Porque solo ellas tienen el receptor",
+              "Porque son las más cercanas",
+              "Porque son más grandes"
+            ],
+            "correcta": 0,
+            "explicacion": "La señal encaja solo en su receptor, como una llave en su cerradura."
+          }
+        }
+      ]
     },
     {
       "id": "uniones",
@@ -598,7 +813,83 @@
           "explicacion": "Atraviesan la pared celular."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "diapositivas": [
+        {
+          "titulo": "Células bien unidas",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🤐",
+                "titulo": "Estrechas",
+                "texto": "sellan como una cremallera"
+              },
+              {
+                "icono": "🔩",
+                "titulo": "De anclaje",
+                "texto": "remaches que resisten estirones"
+              },
+              {
+                "icono": "🚇",
+                "titulo": "Comunicantes",
+                "texto": "canales entre células"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Mira cada una",
+          "visual": {
+            "tipo": "diagrama",
+            "id": "uniones-celulares"
+          }
+        },
+        {
+          "titulo": "¿Dónde están?",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🍽️",
+                "titulo": "Intestino",
+                "texto": "estrechas: nada se cuela"
+              },
+              {
+                "icono": "🧑",
+                "titulo": "Piel",
+                "texto": "de anclaje: aguanta estirones"
+              },
+              {
+                "icono": "❤️",
+                "titulo": "Corazón",
+                "texto": "comunicantes: late todo junto"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "¿Y en las plantas?",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "🧑",
+              "titulo": "Animales",
+              "puntos": [
+                "Uniones estrechas, de anclaje y comunicantes"
+              ]
+            },
+            "der": {
+              "icono": "🌿",
+              "titulo": "Plantas",
+              "puntos": [
+                "La pared une las células",
+                "Plasmodesmos: canales que las comunican"
+              ]
+            }
+          }
+        }
+      ]
     },
     {
       "id": "muerte-celular",
