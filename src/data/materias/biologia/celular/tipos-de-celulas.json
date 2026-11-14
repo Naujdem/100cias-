@@ -855,6 +855,16 @@
           }
         },
         {
+          "titulo": "Lado a lado, parte por parte",
+          "visual": {
+            "tipo": "diagrama",
+            "id": "comparador-rotulado"
+          },
+          "puntos": [
+            "Toca cada nombre: ¿la tienen las dos o solo una?"
+          ]
+        },
+        {
           "titulo": "Dos células parecidas",
           "visual": {
             "tipo": "ilustracion",
