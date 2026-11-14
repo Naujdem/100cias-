@@ -243,3 +243,7 @@ Hooke usa la reconstrucción de Rita Greer (2004, Free Art License, Wikimedia Co
 - Perfiles: 6° (por qué, ciclo, mitosis), 9° (suma cromosomas y citocinesis), 11° (todo).
 - Se quitó «4 Procesos celulares» de los próximos en `catalogo.ts`.
 - Siguiente: que JuanMed revise el esqueleto; después, diagramas (ciclo como reloj, cromosoma que se compacta, citocinesis animal y vegetal, semáforos del ciclo) y un minijuego (ordenar fases o identificarlas en fotos de raíz de cebolla).
+
+## Tema 4.1 · diagramas (14 nov)
+- `components/diagramas/CicloCelular.tsx`: *ciclo-reloj* (el ciclo como reloj G1-S-G2-M, con barra de cantidad de ADN), *cromosoma-compacta* (hilo → cromatina → copia → cromosoma en X), *citocinesis* (animal con surco y vegetal con placa, 4 pasos) y *semaforos-ciclo* (7 casos: ¿la célula sigue o se detiene en el punto de control?).
+- Con esto los seis pasos del 4.1 tienen diagrama. Pendiente: minijuego (identificar fases en fotos de raíz de cebolla u ordenarlas).
