@@ -239,7 +239,7 @@ export function NivelOrgano() {
       {[
         ['#f8d9d4', '#b05a5a', 'Muscular: se contrae'],
         ['#e9f0e1', '#4f8a43', 'Conectivo: sostiene'],
-        ['#ead3f2', '#7a4a8a', 'Nervioso: da el ritmo'],
+        ['#ead3f2', '#7a4a8a', 'Nervioso: ajusta el ritmo'],
         ['#dce9f7', '#3b6fb6', 'Epitelial: reviste'],
       ].map(([fondo, borde, texto], i) => (
         <g key={texto}>
