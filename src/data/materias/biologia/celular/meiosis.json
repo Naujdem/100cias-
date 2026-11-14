@@ -924,6 +924,57 @@
               }
             ]
           }
+        },
+        {
+          "titulo": "¿Y los gemelos?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Si cada gameto es distinto, ¿cómo pueden existir gemelos idénticos?",
+            "opciones": [
+              "Vienen de un solo cigoto que se separó en dos",
+              "La meiosis de la madre falló",
+              "Vienen de dos óvulos iguales"
+            ],
+            "correcta": 0,
+            "explicacion": "Un solo óvulo y un solo espermatozoide forman un cigoto; al dividirse por mitosis, el embrión se separa en dos con el mismo ADN."
+          }
+        },
+        {
+          "titulo": "Gemelos y mellizos",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "👯",
+              "titulo": "Gemelos (monocigóticos)",
+              "puntos": [
+                "1 óvulo + 1 espermatozoide",
+                "Un cigoto que se separa en dos",
+                "Mismo ADN y mismo sexo"
+              ]
+            },
+            "der": {
+              "icono": "👫",
+              "titulo": "Mellizos (dicigóticos)",
+              "puntos": [
+                "2 óvulos + 2 espermatozoides",
+                "Dos cigotos distintos",
+                "Como dos hermanos cualquiera"
+              ]
+            }
+          }
+        },
+        {
+          "titulo": "Ni los gemelos son idénticos del todo",
+          "nivel": "avanzado",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🫆",
+            "valor": "Huellas distintas",
+            "texto": "Las huellas digitales de los gemelos no son iguales: se forman con el ambiente dentro del útero"
+          },
+          "puntos": [
+            "El ambiente también influye, no solo el ADN"
+          ]
         }
       ]
     },
