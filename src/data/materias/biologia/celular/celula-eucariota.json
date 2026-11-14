@@ -100,6 +100,26 @@
       },
       "diapositivas": [
         {
+          "titulo": "¿Dónde está? La membrana",
+          "visual": {
+            "tipo": "escena",
+            "id": "celula-animal",
+            "fases": [
+              {
+                "id": "celula",
+                "nombre": "La célula",
+                "texto": "¿Dónde está? Pulsa → para acercarte."
+              },
+              {
+                "id": "membrana",
+                "nombre": "Membrana",
+                "texto": "La frontera de la célula: decide qué entra y qué sale.",
+                "nota": "Como la aduana de un país."
+              }
+            ]
+          }
+        },
+        {
           "titulo": "Una frontera con control",
           "visual": {
             "tipo": "ilustracion",
@@ -346,6 +366,26 @@
         }
       },
       "diapositivas": [
+        {
+          "titulo": "¿Dónde está? Citoplasma",
+          "visual": {
+            "tipo": "escena",
+            "id": "celula-animal",
+            "fases": [
+              {
+                "id": "celula",
+                "nombre": "La célula",
+                "texto": "¿Dónde está? Pulsa → para acercarte."
+              },
+              {
+                "id": "citoplasma",
+                "nombre": "Citoplasma",
+                "texto": "El interior líquido donde flotan los orgánulos y ocurren muchas reacciones.",
+                "nota": "Lo sostiene el citoesqueleto, como andamios y rieles."
+              }
+            ]
+          }
+        },
         {
           "titulo": "Todo ocurre aquí",
           "visual": {
@@ -664,6 +704,26 @@
         }
       },
       "diapositivas": [
+        {
+          "titulo": "¿Dónde está? El núcleo",
+          "visual": {
+            "tipo": "escena",
+            "id": "celula-animal",
+            "fases": [
+              {
+                "id": "celula",
+                "nombre": "La célula",
+                "texto": "¿Dónde está? Pulsa → para acercarte."
+              },
+              {
+                "id": "nucleo",
+                "nombre": "Núcleo",
+                "texto": "Guarda el ADN: las instrucciones para fabricar todo lo que la célula necesita.",
+                "nota": "Como una biblioteca de recetas que no se prestan: se sacan copias."
+              }
+            ]
+          }
+        },
         {
           "titulo": "El centro de control",
           "visual": {
@@ -1016,6 +1076,40 @@
       },
       "diapositivas": [
         {
+          "titulo": "El viaje de una proteína",
+          "visual": {
+            "tipo": "escena",
+            "id": "celula-animal",
+            "fases": [
+              {
+                "id": "celula",
+                "nombre": "La célula",
+                "texto": "¿Dónde está? Pulsa → para acercarte."
+              },
+              {
+                "id": "nucleo",
+                "nombre": "1. Núcleo",
+                "texto": "La receta (ADN) se copia en un mensaje (ARN) que sale del núcleo."
+              },
+              {
+                "id": "ret",
+                "nombre": "2. Retículo y ribosomas",
+                "texto": "Los ribosomas leen el mensaje y arman la proteína; el retículo la revisa."
+              },
+              {
+                "id": "golgi",
+                "nombre": "3. Golgi",
+                "texto": "La proteína se termina y se empaca en una vesícula."
+              },
+              {
+                "id": "membrana",
+                "nombre": "4. Membrana",
+                "texto": "La vesícula se une a la membrana y la proteína sale de la célula."
+              }
+            ]
+          }
+        },
+        {
           "titulo": "De la receta a la proteína",
           "visual": {
             "tipo": "ilustracion",
@@ -1198,6 +1292,26 @@
       },
       "diapositivas": [
         {
+          "titulo": "¿Dónde está? Mitocondrias",
+          "visual": {
+            "tipo": "escena",
+            "id": "celula-animal",
+            "fases": [
+              {
+                "id": "celula",
+                "nombre": "La célula",
+                "texto": "¿Dónde está? Pulsa → para acercarte."
+              },
+              {
+                "id": "mito",
+                "nombre": "Mitocondria",
+                "texto": "Convierte la energía de la glucosa en ATP, la «pila» que usa la célula.",
+                "nota": "Como una central eléctrica."
+              }
+            ]
+          }
+        },
+        {
           "titulo": "La central de energía",
           "visual": {
             "tipo": "ilustracion",
@@ -1365,6 +1479,32 @@
         }
       },
       "diapositivas": [
+        {
+          "titulo": "¿Dónde está? Cloroplastos y vacuola",
+          "visual": {
+            "tipo": "escena",
+            "id": "celula-vegetal",
+            "fases": [
+              {
+                "id": "celula",
+                "nombre": "La célula vegetal",
+                "texto": "¿Dónde está? Pulsa → para acercarte."
+              },
+              {
+                "id": "cloro",
+                "nombre": "Cloroplasto",
+                "texto": "Captura la luz del sol y fabrica glucosa: es donde ocurre la fotosíntesis.",
+                "nota": "Como un panel solar que fabrica alimento."
+              },
+              {
+                "id": "vacuola",
+                "nombre": "Vacuola central",
+                "texto": "Una gran bolsa de agua que mantiene la célula firme y guarda sustancias.",
+                "nota": "Cuando se vacía, la planta se marchita."
+              }
+            ]
+          }
+        },
         {
           "titulo": "Una célula vegetal",
           "visual": {
@@ -1542,6 +1682,26 @@
         }
       },
       "diapositivas": [
+        {
+          "titulo": "¿Dónde está? Lisosomas",
+          "visual": {
+            "tipo": "escena",
+            "id": "celula-animal",
+            "fases": [
+              {
+                "id": "celula",
+                "nombre": "La célula",
+                "texto": "¿Dónde está? Pulsa → para acercarte."
+              },
+              {
+                "id": "liso",
+                "nombre": "Lisosoma",
+                "texto": "Una bolsa con enzimas que digiere lo que entra y recicla las piezas viejas.",
+                "nota": "Como el servicio de reciclaje."
+              }
+            ]
+          }
+        },
         {
           "titulo": "El reciclaje de la célula",
           "visual": {
@@ -2007,19 +2167,101 @@
       },
       "diapositivas": [
         {
-          "titulo": "La célula completa",
+          "titulo": "Recorrido por la célula animal",
           "visual": {
-            "tipo": "ilustracion",
-            "recurso": "celula-rotulada",
-            "pie": "Una célula animal con sus orgánulos"
+            "tipo": "escena",
+            "id": "celula-animal",
+            "fases": [
+              {
+                "id": "celula",
+                "nombre": "La célula",
+                "texto": "Una célula animal vista completa. Pulsa → para acercarte a cada orgánulo."
+              },
+              {
+                "id": "membrana",
+                "nombre": "Membrana",
+                "texto": "La frontera de la célula: decide qué entra y qué sale.",
+                "nota": "Como la aduana de un país."
+              },
+              {
+                "id": "citoplasma",
+                "nombre": "Citoplasma",
+                "texto": "El interior líquido donde flotan los orgánulos y ocurren muchas reacciones.",
+                "nota": "Lo sostiene el citoesqueleto, como andamios y rieles."
+              },
+              {
+                "id": "nucleo",
+                "nombre": "Núcleo",
+                "texto": "Guarda el ADN: las instrucciones para fabricar todo lo que la célula necesita.",
+                "nota": "Como una biblioteca de recetas que no se prestan: se sacan copias."
+              },
+              {
+                "id": "ret",
+                "nombre": "Retículo y ribosomas",
+                "texto": "Los ribosomas arman las proteínas y el retículo rugoso las revisa y las transporta.",
+                "nota": "Los puntitos pegados al retículo son ribosomas."
+              },
+              {
+                "id": "golgi",
+                "nombre": "Aparato de Golgi",
+                "texto": "Recibe las proteínas, las termina, las empaca en vesículas y las envía.",
+                "nota": "Como la oficina de correos de la célula."
+              },
+              {
+                "id": "mito",
+                "nombre": "Mitocondria",
+                "texto": "Convierte la energía de la glucosa en ATP, la «pila» que usa la célula.",
+                "nota": "Como una central eléctrica."
+              },
+              {
+                "id": "liso",
+                "nombre": "Lisosoma",
+                "texto": "Una bolsa con enzimas que digiere lo que entra y recicla las piezas viejas.",
+                "nota": "Como el servicio de reciclaje."
+              }
+            ]
           }
         },
         {
-          "titulo": "Cada orgánulo, un oficio",
+          "titulo": "Recorrido por la célula vegetal",
           "visual": {
-            "tipo": "ilustracion",
-            "recurso": "celula-resumen-organulos",
-            "pie": "Seis orgánulos en una palabra"
+            "tipo": "escena",
+            "id": "celula-vegetal",
+            "fases": [
+              {
+                "id": "celula",
+                "nombre": "La célula vegetal",
+                "texto": "Tiene casi todo lo de la animal, más tres cosas propias."
+              },
+              {
+                "id": "membrana",
+                "nombre": "Membrana y pared",
+                "texto": "Además de la membrana, la célula vegetal tiene una pared rígida de celulosa por fuera.",
+                "nota": "Por eso las plantas se sostienen sin huesos."
+              },
+              {
+                "id": "cloro",
+                "nombre": "Cloroplasto",
+                "texto": "Captura la luz del sol y fabrica glucosa: es donde ocurre la fotosíntesis.",
+                "nota": "Como un panel solar que fabrica alimento."
+              },
+              {
+                "id": "vacuola",
+                "nombre": "Vacuola central",
+                "texto": "Una gran bolsa de agua que mantiene la célula firme y guarda sustancias.",
+                "nota": "Cuando se vacía, la planta se marchita."
+              },
+              {
+                "id": "nucleo",
+                "nombre": "Núcleo",
+                "texto": "Como en la célula animal: guarda el ADN."
+              },
+              {
+                "id": "mito",
+                "nombre": "Mitocondria",
+                "texto": "Las plantas también tienen mitocondrias: hacen fotosíntesis y respiración."
+              }
+            ]
           }
         },
         {

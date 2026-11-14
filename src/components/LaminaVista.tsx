@@ -314,7 +314,7 @@ function EscenaVista({ v, fase, onFase }: { v: Extract<Visual, { tipo: 'escena' 
           <p className="mt-1 text-4xl font-extrabold">{f.nombre}</p>
           <p className="mt-3 text-xl sm:text-2xl">{f.texto}</p>
           {f.nota && <p className="mt-4 rounded-xl bg-[var(--acento-suave)]/40 px-4 py-2 text-base">{f.nota}</p>}
-          {fase < v.fases.length - 1 && <p className="mt-5 hidden text-sm text-[var(--suave)] md:block">→ siguiente fase · toca los «+» del dibujo</p>}
+          {fase < v.fases.length - 1 && <p className="mt-5 hidden text-sm text-[var(--suave)] md:block">→ siguiente fase{f.marcas?.length ? ' · toca los «+» del dibujo' : ''}</p>}
         </div>
       </div>
     </div>
