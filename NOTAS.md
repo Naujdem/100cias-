@@ -260,3 +260,11 @@ Hooke usa la reconstrucción de Rita Greer (2004, Free Art License, Wikimedia Co
 - Perfiles: 6° (diploide-haploide, por qué, comparación), 9° (suma meiosis I y II), 11° (todo).
 - Todo en borrador; datos por verificar en `fuentes` del JSON. Detalle menor: en la metafase II el cruce se ve a un lado del cromosoma y en la anafase II abajo (esquema).
 - Siguiente del tema 4: 4.3 muerte celular, metabolismo básico, comunicación y adhesión (falta decidir dónde va la síntesis de proteínas).
+
+## Tema 4 · Subtema 4.3 «Metabolismo, comunicación y muerte celular» (14 nov)
+- Decisión: la síntesis de proteínas (transcripción y traducción) va en el área de genética; el tema 3 ya tiene la ruta de la proteína. Con el 4.3 el tema 4 queda completo.
+- `metabolismo-celular.json` (id `metabolismo-celular`, orden 8, vista *Ruta*). Seis pasos: enzimas, ATP, respiración y fermentación, comunicación, uniones, muerte celular. Ficha, cuaderno, docente y 3 preguntas cada uno.
+- Diagramas (`diagramas/MetabolismoCelular.tsx`): `enzima-llave` (romper/unir, 3 formas, «fiebre muy alta» deforma la enzima), `atp-pila` (gastar en trabajos y recargar con glucosa), `respiracion-fermentacion` (con/sin O₂, músculo o levadura, barra de ATP), `senales-celulares` (contacto, cercana, hormona; solo responde la célula con receptor), `uniones-celulares` (estrechas, anclaje, comunicantes, con y sin uniones), `muerte-celular` (apoptosis vs necrosis en 4 pasos y los dedos del embrión).
+- Juego genérico nuevo `diagramas/ClasificaCasos.tsx` (casos al azar, teclas 1–4, repaso, mejor marca): `oxigeno-juego` («¿Respiración o fermentación?») y `muerte-juego` («¿Apoptosis o necrosis?»). Sirve para futuros juegos de clasificar.
+- Perfiles: 6° (enzimas, respiración, comunicación), 9° (suma ATP y muerte celular), 11° (todo).
+- Todo en borrador; datos por verificar en `fuentes` del JSON.

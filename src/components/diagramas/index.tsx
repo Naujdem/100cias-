@@ -12,6 +12,8 @@ import ArmaCelula from './ArmaCelula.tsx'
 import CarreraProteina from './CarreraProteina.tsx'
 import FasesMitosis from './FasesMitosis.tsx'
 import MeiosisJuego from './MeiosisJuego.tsx'
+import ClasificaCasos, { CASOS_OXIGENO, CASOS_MUERTE } from './ClasificaCasos.tsx'
+import { EnzimaLlave, AtpPila, RespiracionFermentacion, SenalesCelulares, UnionesCelulares, MuerteCelular } from './MetabolismoCelular.tsx'
 import { ParesHomologos, CuentaCromosomas, MeiosisPasos, VariedadGametos, ComparaMitosisMeiosis } from './Meiosis.tsx'
 import { CicloReloj, CromosomaCompacta, CitocinesisDiagrama, SemaforosCiclo } from './CicloCelular.tsx'
 import { NucleoDiagrama, CloroplastoDiagrama, LisosomaDiagrama } from './CelulaEucOrg.tsx'
@@ -70,6 +72,15 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'mitosis-meiosis': ComparaMitosisMeiosis,
   'meiosis-juego': () => <MeiosisJuego />,
   'meiosis-ordena': () => <MeiosisJuego inicial="ordena" />,
+  // subtema 4.3: metabolismo, comunicación y muerte celular
+  'enzima-llave': EnzimaLlave,
+  'atp-pila': AtpPila,
+  'respiracion-fermentacion': RespiracionFermentacion,
+  'senales-celulares': SenalesCelulares,
+  'uniones-celulares': UnionesCelulares,
+  'muerte-celular': MuerteCelular,
+  'oxigeno-juego': () => <ClasificaCasos titulo="¿Respiración o fermentación?" opciones={['Respiración (con O₂)', 'Fermentación (sin O₂)']} casos={CASOS_OXIGENO} clave="cien:oxigeno-mejor" pista="Pista: si trabaja la mitocondria y sale mucha energía, es respiración; si no hay oxígeno y salen ácido láctico o alcohol, es fermentación." />,
+  'muerte-juego': () => <ClasificaCasos titulo="¿Apoptosis o necrosis?" opciones={['Apoptosis', 'Necrosis']} casos={CASOS_MUERTE} clave="cien:muerte-mejor" pista="Pista: si es una orden ordenada (desarrollo, defensa), es apoptosis; si es por un daño (golpe, quemadura, falta de sangre), es necrosis." />,
   'citoesqueleto': CitoesqueletoDiagrama,
   'ribosomas': RibosomasDiagrama,
   'peroxisomas': PeroxisomaDiagrama,
