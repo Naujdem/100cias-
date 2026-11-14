@@ -288,8 +288,8 @@
     },
     {
       "id": "citoplasma",
-      "titulo": "Citoplasma y citoesqueleto",
-      "resumen": "El gel donde está todo y el andamio que da forma y movimiento.",
+      "titulo": "Citoplasma: el interior de la célula",
+      "resumen": "El gel donde flotan los orgánulos y ocurren muchas reacciones.",
       "anio": 2,
       "etiqueta": "Paso 2",
       "nivel": "basico",
@@ -297,49 +297,50 @@
         "membrana"
       ],
       "ficha": {
-        "idea": "El citoplasma es todo lo que hay dentro de la membrana, sin contar el núcleo: un gel (citosol) lleno de orgánulos. Dentro hay una red de filamentos, el citoesqueleto, que da forma a la célula, mantiene en su sitio a los orgánulos y permite el movimiento.",
+        "idea": "El citoplasma es todo lo que hay dentro de la membrana, sin contar el núcleo. Su parte líquida, el citosol, es agua con sales, azúcares y miles de proteínas, y en ella flotan los orgánulos. No es un espacio vacío: está lleno y en movimiento.",
         "contexto": [
           {
             "titulo": "El citosol",
-            "texto": "Es la parte líquida del citoplasma, formada sobre todo por agua con sales y moléculas disueltas. Allí ocurren muchas reacciones químicas."
+            "texto": "Es la parte líquida del citoplasma: sobre todo agua, con sales, azúcares, aminoácidos y muchas enzimas disueltas."
           },
           {
-            "titulo": "Tres tipos de filamentos",
-            "texto": "Microfilamentos (de actina), filamentos intermedios y microtúbulos. Juntos funcionan como andamio y como rieles."
+            "titulo": "Un lugar muy concurrido",
+            "texto": "Las proteínas ocupan una buena parte del citosol, así que se parece más a una gelatina espesa que a agua limpia."
           },
           {
-            "titulo": "Movimiento",
-            "texto": "Los filamentos ayudan a que la célula cambie de forma, se desplace (como una ameba), mueva vesículas y separe los cromosomas al dividirse."
+            "titulo": "Aquí empieza la energía",
+            "texto": "El primer paso para sacar energía de la glucosa (la glucólisis) ocurre en el citosol, antes de entrar a la mitocondria."
           },
           {
-            "titulo": "Centriolos",
-            "texto": "En las células animales hay dos centriolos formados por microtúbulos, que participan en la división celular."
+            "titulo": "Se mueve",
+            "texto": "En muchas células el citoplasma gira y arrastra a los orgánulos. En las hojas de algunas plantas acuáticas se ven los cloroplastos dando vueltas al microscopio."
           }
         ],
         "evidencia": [
-          "Con colorantes fluorescentes se ven los filamentos como una red dentro de la célula."
+          "Al microscopio de luz, en las hojas de la elodea se ven los cloroplastos moviéndose en círculo con el citoplasma."
         ],
-        "limites": "Se suele dibujar el citoplasma «vacío» entre orgánulos, pero está lleno de moléculas y filamentos; es un lugar muy concurrido.",
+        "limites": "Se suele dibujar el citoplasma «vacío» entre orgánulos, pero está lleno de moléculas. La red de filamentos que lo atraviesa, el citoesqueleto, tiene su propio paso.",
         "cuaderno": {
           "facil": [
-            "El citoplasma es el gel que llena la célula.",
-            "El citoesqueleto da forma y movimiento."
+            "El citoplasma es todo lo que hay dentro de la membrana, menos el núcleo.",
+            "Su parte líquida se llama citosol.",
+            "Los orgánulos flotan en el citoplasma."
           ],
           "media": [
-            "El citosol es la parte líquida.",
-            "Los filamentos funcionan como rieles para mover cargas."
+            "El citosol es agua con sales, azúcares y muchas proteínas.",
+            "Está tan lleno que se parece a una gelatina espesa.",
+            "En muchas células el citoplasma se mueve y arrastra a los orgánulos."
           ],
           "avanzada": [
-            "Hay tres tipos de filamentos: microfilamentos, intermedios y microtúbulos.",
-            "Los centriolos son típicos de las células animales."
+            "La glucólisis, el primer paso para sacar energía de la glucosa, ocurre en el citosol."
           ]
         },
         "docente": {
-          "abrir": "¿Qué mantiene la forma de una célula que no tiene pared?",
-          "actividad": "Con el explorador de la célula, ubiquen el citoplasma y discutan qué pasaría sin citoesqueleto.",
+          "abrir": "Si la célula fuera una bolsa, ¿qué habría dentro: agua sola o algo más?",
+          "actividad": "Con el explorador de la célula, ubiquen el citoplasma y comparen una bolsa con agua con una gelatina con frutas: ¿cuál se parece más?",
           "errores": [
             "Creer que el citoplasma es solo agua.",
-            "Pensar que el citoesqueleto es un hueso."
+            "Confundir citoplasma con citosol: el citosol es solo la parte líquida."
           ],
           "minutos": 10
         }
@@ -350,45 +351,34 @@
           "visual": {
             "tipo": "ilustracion",
             "recurso": "celula-citoplasma",
-            "pie": "Un gel con una red de filamentos"
+            "pie": "Un gel lleno de moléculas, donde flotan los orgánulos"
           }
         },
         {
-          "titulo": "Dos partes",
+          "titulo": "Dos palabras",
           "visual": {
             "tipo": "tarjetas",
             "items": [
+              {
+                "icono": "🫙",
+                "titulo": "Citoplasma",
+                "texto": "todo lo que hay dentro, menos el núcleo"
+              },
               {
                 "icono": "💧",
                 "titulo": "Citosol",
-                "texto": "el gel con agua y moléculas"
-              },
-              {
-                "icono": "🕸️",
-                "titulo": "Citoesqueleto",
-                "texto": "la red de filamentos"
+                "texto": "solo la parte líquida"
               }
             ]
           }
         },
         {
-          "titulo": "Para qué sirven los filamentos",
+          "titulo": "No es agua sola",
           "visual": {
-            "tipo": "tarjetas",
-            "items": [
-              {
-                "icono": "🧱",
-                "titulo": "Dan forma"
-              },
-              {
-                "icono": "🛤️",
-                "titulo": "Mueven cargas"
-              },
-              {
-                "icono": "🏃",
-                "titulo": "Permiten moverse"
-              }
-            ]
+            "tipo": "cifra",
+            "icono": "🍮",
+            "valor": "Gelatina espesa",
+            "texto": "Lleno de proteínas, azúcares y sales: un lugar muy concurrido."
           }
         }
       ],
@@ -416,17 +406,6 @@
           "explicacion": "Es el interior de la célula, sin el núcleo."
         },
         {
-          "id": "ce-ci-2",
-          "enunciado": "¿Qué hace el citoesqueleto?",
-          "opciones": [
-            "Da forma y permite el movimiento",
-            "Guarda el ADN",
-            "Hace la fotosíntesis"
-          ],
-          "correcta": 0,
-          "explicacion": "Es el andamio y los rieles de la célula."
-        },
-        {
           "id": "ce-ci-3",
           "enunciado": "El citosol es…",
           "opciones": [
@@ -436,6 +415,188 @@
           ],
           "correcta": 0,
           "explicacion": "Es el líquido donde flotan los orgánulos."
+        },
+        {
+          "id": "ce-ci-4",
+          "enunciado": "¿Dónde ocurre el primer paso para sacar energía de la glucosa?",
+          "opciones": [
+            "En el citosol",
+            "En el núcleo",
+            "En la pared celular"
+          ],
+          "correcta": 0,
+          "explicacion": "La glucólisis ocurre en el citosol; después la mitocondria termina el trabajo."
+        },
+        {
+          "id": "ce-ci-5",
+          "enunciado": "¿A qué se parece más el citosol?",
+          "opciones": [
+            "A una gelatina espesa llena de moléculas",
+            "A agua destilada",
+            "A un sólido rígido"
+          ],
+          "correcta": 0,
+          "explicacion": "Tiene tantas proteínas disueltas que es espeso, no agua limpia."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "citoesqueleto",
+      "titulo": "Citoesqueleto: andamio y rieles",
+      "resumen": "Filamentos que dan forma, mueven cargas y separan los cromosomas.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "intermedio",
+      "requiere": [
+        "citoplasma"
+      ],
+      "ficha": {
+        "idea": "El citoesqueleto es una red de filamentos de proteína que atraviesa el citoplasma. Da forma a la célula, mantiene los orgánulos en su sitio, sirve de riel para mover cargas y permite que la célula se mueva y se divida.",
+        "contexto": [
+          {
+            "titulo": "Tres tipos de filamentos",
+            "texto": "Microfilamentos (los más delgados, de actina), filamentos intermedios (resistentes, como cuerdas) y microtúbulos (tubos huecos, los más gruesos)."
+          },
+          {
+            "titulo": "Rieles con motores",
+            "texto": "Unas proteínas motoras «caminan» sobre los microtúbulos llevando vesículas a cuestas, por ejemplo del Golgi a la membrana."
+          },
+          {
+            "titulo": "Para moverse",
+            "texto": "Los microfilamentos permiten que una ameba estire sus «pies» y que las células del músculo se contraigan. Cilios y flagelos están hechos de microtúbulos."
+          },
+          {
+            "titulo": "Al dividirse",
+            "texto": "Los microtúbulos forman el huso que separa los cromosomas. En las células animales, los centriolos ayudan a organizarlo."
+          }
+        ],
+        "evidencia": [
+          "Con colorantes fluorescentes se ven los filamentos como una red brillante dentro de la célula.",
+          "El espermatozoide nada moviendo un flagelo hecho de microtúbulos."
+        ],
+        "limites": "Aunque se llama «esqueleto», no es duro ni fijo: sus filamentos se arman y se desarman todo el tiempo, según lo que necesite la célula.",
+        "cuaderno": {
+          "facil": [
+            "El citoesqueleto es una red de filamentos dentro de la célula.",
+            "Da forma a la célula y le permite moverse."
+          ],
+          "media": [
+            "Hay tres tipos: microfilamentos, filamentos intermedios y microtúbulos.",
+            "Los microtúbulos son rieles por donde viajan las vesículas.",
+            "Sin citoesqueleto, una célula animal pierde su forma."
+          ],
+          "avanzada": [
+            "Proteínas motoras caminan sobre los microtúbulos llevando carga.",
+            "Cilios y flagelos están hechos de microtúbulos.",
+            "El huso que separa los cromosomas también es de microtúbulos."
+          ]
+        },
+        "docente": {
+          "abrir": "Una célula animal no tiene pared. ¿Qué evita que se aplaste como una bolsa con agua?",
+          "actividad": "Con el diagrama, quiten el citoesqueleto y describan qué cambia. Luego muevan la vesícula por el microtúbulo y comparen con un tren sobre su riel.",
+          "errores": [
+            "Creer que el citoesqueleto es duro como un hueso.",
+            "Pensar que solo las células que se mueven tienen citoesqueleto."
+          ],
+          "minutos": 10
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Tres filamentos",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🧵",
+                "titulo": "Microfilamentos",
+                "texto": "delgados: cambiar de forma"
+              },
+              {
+                "icono": "🪢",
+                "titulo": "Intermedios",
+                "texto": "resistentes: aguantar tirones"
+              },
+              {
+                "icono": "🛤️",
+                "titulo": "Microtúbulos",
+                "texto": "gruesos: rieles para cargas"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "No es un hueso",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🔧",
+            "valor": "Se arma y se desarma",
+            "texto": "Sus filamentos cambian todo el tiempo según lo que necesita la célula."
+          }
+        },
+        {
+          "titulo": "Quítalo y mira",
+          "visual": {
+            "tipo": "diagrama",
+            "id": "citoesqueleto"
+          }
+        }
+      ],
+      "ilustraciones": [
+        {
+          "id": "celula-citoplasma-cq",
+          "titulo": "Citoplasma y citoesqueleto",
+          "pie": "Filamentos que sostienen la célula y llevan una vesícula. Esquema no a escala.",
+          "tipo": "svg",
+          "recurso": "celula-citoplasma"
+        }
+      ],
+      "diagrama": "citoesqueleto",
+      "preguntas": [
+        {
+          "id": "ce-cq-1",
+          "enunciado": "¿Qué hace el citoesqueleto?",
+          "opciones": [
+            "Da forma a la célula y permite el movimiento",
+            "Guarda el ADN",
+            "Hace la fotosíntesis"
+          ],
+          "correcta": 0,
+          "explicacion": "Es el andamio y los rieles de la célula."
+        },
+        {
+          "id": "ce-cq-2",
+          "enunciado": "¿Por dónde viajan las vesículas dentro de la célula?",
+          "opciones": [
+            "Por los microtúbulos, como por rieles",
+            "Por los poros del núcleo",
+            "Por la pared celular"
+          ],
+          "correcta": 0,
+          "explicacion": "Proteínas motoras las llevan a cuestas sobre los microtúbulos."
+        },
+        {
+          "id": "ce-cq-3",
+          "enunciado": "¿De qué está hecho el flagelo de un espermatozoide?",
+          "opciones": [
+            "De microtúbulos",
+            "De celulosa",
+            "De grasa"
+          ],
+          "correcta": 0,
+          "explicacion": "Cilios y flagelos son haces de microtúbulos."
+        },
+        {
+          "id": "ce-cq-4",
+          "enunciado": "¿Por qué se dice que el citoesqueleto no es como un hueso?",
+          "opciones": [
+            "Porque sus filamentos se arman y desarman todo el tiempo",
+            "Porque es de calcio",
+            "Porque solo existe en las plantas"
+          ],
+          "correcta": 0,
+          "explicacion": "Es una red dinámica, no una estructura fija."
         }
       ],
       "revisado": false
@@ -444,8 +605,8 @@
       "id": "nucleo",
       "titulo": "El núcleo: el centro de control",
       "resumen": "Guarda el ADN y dirige lo que hace la célula.",
-      "anio": 3,
-      "etiqueta": "Paso 3",
+      "anio": 4,
+      "etiqueta": "Paso 4",
       "nivel": "basico",
       "nucleo": true,
       "ficha": {
@@ -633,11 +794,169 @@
       "revisado": false
     },
     {
+      "id": "ribosomas",
+      "titulo": "Ribosomas: las fábricas de proteínas",
+      "resumen": "Pequeñas máquinas que arman proteínas siguiendo la receta del ADN.",
+      "anio": 5,
+      "etiqueta": "Paso 5",
+      "nivel": "basico",
+      "requiere": [
+        "nucleo"
+      ],
+      "ficha": {
+        "idea": "Los ribosomas son pequeñas máquinas que fabrican proteínas. Leen la copia de una receta que sale del núcleo (el ARN mensajero) y unen aminoácidos en el orden que indica. Unos flotan libres en el citosol y otros están pegados al retículo rugoso.",
+        "contexto": [
+          {
+            "titulo": "Dos piezas",
+            "texto": "Cada ribosoma tiene una subunidad grande y una pequeña, que se juntan cuando van a fabricar una proteína."
+          },
+          {
+            "titulo": "Libres o pegados",
+            "texto": "Son iguales. Los libres hacen proteínas que se quedan en el citosol; los del retículo hacen las que van a la membrana, a los lisosomas o hacia afuera de la célula."
+          },
+          {
+            "titulo": "Están en todas las células",
+            "texto": "Bacterias, plantas, hongos y animales tienen ribosomas. Por eso se los considera parte de lo mínimo que necesita una célula."
+          },
+          {
+            "titulo": "Muchísimos",
+            "texto": "Una célula que fabrica muchas proteínas, como las del páncreas, puede tener millones de ribosomas."
+          }
+        ],
+        "evidencia": [
+          "Al microscopio electrónico se ven como puntitos oscuros, sueltos o pegados al retículo (por eso se llama «rugoso»)."
+        ],
+        "limites": "El ribosoma no es un orgánulo con membrana como la mitocondria: es una máquina hecha de ARN y proteínas. Por eso algunos libros no lo cuentan como orgánulo.",
+        "cuaderno": {
+          "facil": [
+            "Los ribosomas fabrican proteínas.",
+            "Leen la receta que sale del núcleo."
+          ],
+          "media": [
+            "Unos flotan libres en el citosol y otros están pegados al retículo rugoso.",
+            "Los libres hacen proteínas para el citosol; los del retículo, para la membrana o para afuera.",
+            "Todas las células tienen ribosomas, incluso las bacterias."
+          ],
+          "avanzada": [
+            "Tienen una subunidad grande y una pequeña.",
+            "Están hechos de ARN y proteínas, sin membrana.",
+            "Leen el ARN mensajero y unen aminoácidos en orden."
+          ]
+        },
+        "docente": {
+          "abrir": "Si el ADN es el recetario, ¿quién cocina?",
+          "actividad": "Con el diagrama, decidan para cada proteína si la hace un ribosoma libre o uno del retículo, y justifiquen por el destino de la proteína.",
+          "errores": [
+            "Creer que el ribosoma tiene membrana como los demás orgánulos.",
+            "Pensar que los ribosomas libres y los del retículo son distintos."
+          ],
+          "minutos": 10
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Una máquina",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "⚙️",
+            "valor": "Fábrica de proteínas",
+            "texto": "Lee la receta del núcleo y une aminoácidos en orden."
+          }
+        },
+        {
+          "titulo": "¿Libre o pegado?",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "🫧",
+              "titulo": "Libre",
+              "puntos": [
+                "flota en el citosol",
+                "proteínas que se quedan dentro"
+              ]
+            },
+            "der": {
+              "icono": "🧱",
+              "titulo": "Del retículo",
+              "puntos": [
+                "pegado al retículo rugoso",
+                "proteínas para afuera o la membrana"
+              ]
+            }
+          }
+        },
+        {
+          "titulo": "Decide quién la fabrica",
+          "visual": {
+            "tipo": "diagrama",
+            "id": "ribosomas"
+          }
+        }
+      ],
+      "ilustraciones": [
+        {
+          "id": "celula-ruta-ri",
+          "titulo": "Ribosomas en la ruta de las proteínas",
+          "pie": "Del núcleo al ribosoma del retículo y al Golgi. Esquema no a escala.",
+          "tipo": "svg",
+          "recurso": "celula-ruta-proteina"
+        }
+      ],
+      "diagrama": "ribosomas",
+      "preguntas": [
+        {
+          "id": "ce-ri-1",
+          "enunciado": "¿Qué fabrican los ribosomas?",
+          "opciones": [
+            "Proteínas",
+            "Glucosa",
+            "ADN"
+          ],
+          "correcta": 0,
+          "explicacion": "Unen aminoácidos para formar proteínas."
+        },
+        {
+          "id": "ce-ri-2",
+          "enunciado": "La insulina sale de la célula. ¿Dónde se fabrica?",
+          "opciones": [
+            "En un ribosoma pegado al retículo",
+            "En un ribosoma libre",
+            "En la mitocondria"
+          ],
+          "correcta": 0,
+          "explicacion": "Las proteínas que van hacia afuera empiezan en el retículo rugoso."
+        },
+        {
+          "id": "ce-ri-3",
+          "enunciado": "¿Qué hace «rugoso» al retículo rugoso?",
+          "opciones": [
+            "Los ribosomas pegados a él",
+            "La pared celular",
+            "Los cloroplastos"
+          ],
+          "correcta": 0,
+          "explicacion": "Al microscopio, los ribosomas se ven como granitos sobre su superficie."
+        },
+        {
+          "id": "ce-ri-4",
+          "enunciado": "¿Cuál de estas células tiene ribosomas?",
+          "opciones": [
+            "Todas: bacterias, plantas y animales",
+            "Solo las animales",
+            "Solo las que tienen núcleo"
+          ],
+          "correcta": 0,
+          "explicacion": "Todas las células fabrican proteínas, así que todas tienen ribosomas."
+        }
+      ],
+      "revisado": false
+    },
+    {
       "id": "ruta-proteinas",
       "titulo": "La ruta de las proteínas",
       "resumen": "Ribosomas, retículo y Golgi: cómo se fabrica y se reparte.",
-      "anio": 4,
-      "etiqueta": "Paso 4",
+      "anio": 6,
+      "etiqueta": "Paso 6",
       "nivel": "intermedio",
       "requiere": [
         "nucleo"
@@ -818,8 +1137,8 @@
       "id": "mitocondrias",
       "titulo": "Mitocondrias: la central de energía",
       "resumen": "Liberan la energía de los alimentos en forma de ATP.",
-      "anio": 5,
-      "etiqueta": "Paso 5",
+      "anio": 7,
+      "etiqueta": "Paso 7",
       "nivel": "basico",
       "nucleo": true,
       "ficha": {
@@ -985,8 +1304,8 @@
       "id": "cloroplastos",
       "titulo": "Cloroplastos y vacuola: lo propio de las plantas",
       "resumen": "La fotosíntesis y la vacuola central, además de la pared.",
-      "anio": 6,
-      "etiqueta": "Paso 6",
+      "anio": 8,
+      "etiqueta": "Paso 8",
       "nivel": "basico",
       "requiere": [
         "mitocondrias"
@@ -1166,8 +1485,8 @@
       "id": "lisosomas",
       "titulo": "Lisosomas: digestión y reciclaje",
       "resumen": "Digieren lo que entra y reciclan lo que ya no sirve.",
-      "anio": 7,
-      "etiqueta": "Paso 7",
+      "anio": 9,
+      "etiqueta": "Paso 9",
       "nivel": "intermedio",
       "requiere": [
         "membrana"
@@ -1312,11 +1631,320 @@
       "revisado": false
     },
     {
+      "id": "peroxisomas",
+      "titulo": "Peroxisomas: desactivar lo peligroso",
+      "resumen": "Pequeñas bolsas que desarman el agua oxigenada y las grasas largas.",
+      "anio": 10,
+      "etiqueta": "Paso 10",
+      "nivel": "intermedio",
+      "requiere": [
+        "lisosomas"
+      ],
+      "ficha": {
+        "idea": "Los peroxisomas son pequeñas bolsas con membrana, llenas de enzimas. Desarman grasas largas y otras sustancias, y en ese trabajo producen agua oxigenada (H₂O₂), que es dañina. Su enzima catalasa la convierte de inmediato en agua y oxígeno.",
+        "contexto": [
+          {
+            "titulo": "La catalasa",
+            "texto": "Es una de las enzimas más rápidas que se conocen: 2 H₂O₂ → 2 H₂O + O₂."
+          },
+          {
+            "titulo": "Abundan en el hígado",
+            "texto": "Las células del hígado tienen muchos peroxisomas, porque allí se desarman sustancias tóxicas como parte del alcohol que se bebe."
+          },
+          {
+            "titulo": "Distintos a los lisosomas",
+            "texto": "Se ven parecidos, pero los lisosomas digieren con ácido y los peroxisomas trabajan con oxígeno y agua oxigenada."
+          },
+          {
+            "titulo": "En las plantas",
+            "texto": "En las semillas, los peroxisomas ayudan a convertir la grasa guardada en azúcar para que la plántula crezca."
+          }
+        ],
+        "evidencia": [
+          "El hígado crudo o una papa cortada hacen burbujas con agua oxigenada: es la catalasa liberando oxígeno."
+        ],
+        "limites": "El agua oxigenada no es «mala» siempre: en pequeñas cantidades la célula la usa para enviar señales. El problema es cuando se acumula.",
+        "cuaderno": {
+          "facil": [
+            "Los peroxisomas son bolsitas con enzimas.",
+            "Desarman el agua oxigenada, que es dañina."
+          ],
+          "media": [
+            "Su enzima catalasa convierte el agua oxigenada en agua y oxígeno.",
+            "Abundan en el hígado.",
+            "No son lo mismo que los lisosomas."
+          ],
+          "avanzada": [
+            "2 H₂O₂ → 2 H₂O + O₂.",
+            "También desarman grasas largas.",
+            "En las semillas ayudan a convertir grasa en azúcar."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué el agua oxigenada hace burbujas en una herida?",
+          "actividad": "Si hay laboratorio: pongan agua oxigenada sobre un trozo de papa o de hígado crudo y observen las burbujas. Luego usen el diagrama para explicar de dónde sale el oxígeno.",
+          "errores": [
+            "Confundir peroxisomas con lisosomas.",
+            "Creer que las burbujas son la herida «limpiándose» de microbios."
+          ],
+          "minutos": 15
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Un problema",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "⚠️",
+            "valor": "H₂O₂",
+            "texto": "Al trabajar, la célula produce agua oxigenada, que daña la membrana, las proteínas y el ADN."
+          }
+        },
+        {
+          "titulo": "La solución",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🫧",
+            "valor": "Catalasa",
+            "texto": "Convierte el agua oxigenada en agua y oxígeno."
+          }
+        },
+        {
+          "titulo": "¿Lo has visto?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Le echas agua oxigenada a una papa cortada y hace burbujas. ¿Qué gas sale?",
+            "opciones": [
+              "Oxígeno",
+              "Dióxido de carbono",
+              "Hidrógeno"
+            ],
+            "correcta": 0,
+            "explicacion": "La catalasa de la papa rompe el agua oxigenada y libera oxígeno."
+          }
+        },
+        {
+          "titulo": "Prueba sin catalasa",
+          "visual": {
+            "tipo": "diagrama",
+            "id": "peroxisomas"
+          }
+        }
+      ],
+      "diagrama": "peroxisomas",
+      "preguntas": [
+        {
+          "id": "ce-pe-1",
+          "enunciado": "¿Qué sustancia dañina desarman los peroxisomas?",
+          "opciones": [
+            "El agua oxigenada (H₂O₂)",
+            "La glucosa",
+            "El agua"
+          ],
+          "correcta": 0,
+          "explicacion": "La catalasa la convierte en agua y oxígeno."
+        },
+        {
+          "id": "ce-pe-2",
+          "enunciado": "¿En qué órgano abundan los peroxisomas?",
+          "opciones": [
+            "En el hígado",
+            "En el cabello",
+            "En las uñas"
+          ],
+          "correcta": 0,
+          "explicacion": "El hígado desarma muchas sustancias tóxicas."
+        },
+        {
+          "id": "ce-pe-3",
+          "enunciado": "¿En qué se diferencian de los lisosomas?",
+          "opciones": [
+            "Los lisosomas digieren con ácido; los peroxisomas trabajan con oxígeno y agua oxigenada",
+            "No hay ninguna diferencia",
+            "Los peroxisomas tienen ADN"
+          ],
+          "correcta": 0,
+          "explicacion": "Se parecen al microscopio, pero hacen trabajos distintos."
+        },
+        {
+          "id": "ce-pe-4",
+          "enunciado": "¿Por qué hace burbujas el hígado crudo con agua oxigenada?",
+          "opciones": [
+            "Su catalasa libera oxígeno",
+            "Se está cocinando",
+            "Tiene jabón"
+          ],
+          "correcta": 0,
+          "explicacion": "2 H₂O₂ → 2 H₂O + O₂: las burbujas son oxígeno."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "pared-matriz",
+      "titulo": "Pared celular y matriz extracelular",
+      "resumen": "Lo que rodea a la célula por fuera: una caja en las plantas, una red en los animales.",
+      "anio": 11,
+      "etiqueta": "Paso 11",
+      "nivel": "basico",
+      "requiere": [
+        "membrana"
+      ],
+      "ficha": {
+        "idea": "Por fuera de la membrana, las células vegetales tienen una pared rígida de celulosa que les da forma y las protege. Las células animales no tienen pared: las rodea la matriz extracelular, una red de proteínas como el colágeno que las mantiene unidas y da resistencia a los tejidos.",
+        "contexto": [
+          {
+            "titulo": "La caja de la planta",
+            "texto": "La pared está hecha sobre todo de celulosa, la macromolécula más abundante de la Tierra. La madera y el papel son paredes celulares."
+          },
+          {
+            "titulo": "Firme gracias al agua",
+            "texto": "Cuando la vacuola está llena, la célula empuja contra la pared y queda tiesa. Si falta agua, deja de empujar y la planta se marchita."
+          },
+          {
+            "titulo": "La red del animal",
+            "texto": "La matriz extracelular la fabrican las mismas células. Su proteína principal, el colágeno, es la más abundante del cuerpo humano."
+          },
+          {
+            "titulo": "Hueso y cartílago",
+            "texto": "En el hueso, la matriz tiene calcio y por eso es dura; en el cartílago de la oreja es flexible. Las células son pocas: casi todo es matriz."
+          }
+        ],
+        "evidencia": [
+          "Hooke vio en el corcho las paredes de células muertas: era lo único que quedaba.",
+          "Una lechuga en agua salada se marchita porque sus células pierden agua y dejan de empujar la pared."
+        ],
+        "limites": "La pared no reemplaza a la membrana: la célula vegetal tiene las dos. La pared deja pasar casi todo; quien decide qué entra es la membrana.",
+        "cuaderno": {
+          "facil": [
+            "Las células vegetales tienen pared celular; las animales no.",
+            "La pared es de celulosa y da forma y protección."
+          ],
+          "media": [
+            "Las células animales están rodeadas por la matriz extracelular.",
+            "El colágeno es la proteína principal de la matriz.",
+            "Con la vacuola llena, la célula empuja la pared y la planta queda firme."
+          ],
+          "avanzada": [
+            "La madera y el papel son paredes celulares.",
+            "En el hueso la matriz tiene calcio; en el cartílago es flexible.",
+            "La célula vegetal tiene pared y membrana: la que decide qué entra es la membrana."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué un árbol puede ser tan alto sin tener huesos?",
+          "actividad": "Con el diagrama, bajen el agua de la vacuola y relacionen con una mata marchita. Luego cambien a la célula animal y pregunten qué hace el papel de la pared.",
+          "errores": [
+            "Creer que la pared reemplaza a la membrana.",
+            "Pensar que las células animales están «sueltas», sin nada entre ellas."
+          ],
+          "minutos": 10
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Por fuera de la membrana",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "🌿",
+              "titulo": "Planta: pared",
+              "puntos": [
+                "caja rígida de celulosa",
+                "da forma y protege"
+              ]
+            },
+            "der": {
+              "icono": "🧍",
+              "titulo": "Animal: matriz",
+              "puntos": [
+                "red de colágeno",
+                "une las células"
+              ]
+            }
+          }
+        },
+        {
+          "titulo": "Lo has tocado",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🪵",
+            "valor": "Madera y papel",
+            "texto": "Son paredes celulares de plantas."
+          }
+        },
+        {
+          "titulo": "Llena la vacuola",
+          "visual": {
+            "tipo": "diagrama",
+            "id": "pared-matriz"
+          }
+        }
+      ],
+      "ilustraciones": [
+        {
+          "id": "tejido-vegetal-pm",
+          "titulo": "Células vegetales con su pared",
+          "pie": "Cada célula dentro de su pared de celulosa. Esquema no a escala.",
+          "tipo": "svg",
+          "recurso": "tejido-vegetal"
+        }
+      ],
+      "diagrama": "pared-matriz",
+      "preguntas": [
+        {
+          "id": "ce-mp-1",
+          "enunciado": "¿De qué está hecha la pared celular de las plantas?",
+          "opciones": [
+            "Sobre todo de celulosa",
+            "De colágeno",
+            "De calcio"
+          ],
+          "correcta": 0,
+          "explicacion": "La celulosa es la macromolécula más abundante de la Tierra."
+        },
+        {
+          "id": "ce-mp-2",
+          "enunciado": "¿Qué rodea a las células animales en lugar de una pared?",
+          "opciones": [
+            "La matriz extracelular",
+            "Una capa de celulosa",
+            "Nada en absoluto"
+          ],
+          "correcta": 0,
+          "explicacion": "Es una red de proteínas como el colágeno."
+        },
+        {
+          "id": "ce-mp-3",
+          "enunciado": "¿Por qué se marchita una planta sin agua?",
+          "opciones": [
+            "Sus células dejan de empujar contra la pared",
+            "Pierde la pared celular",
+            "Se le caen las mitocondrias"
+          ],
+          "correcta": 0,
+          "explicacion": "Con la vacuola vacía, la célula no empuja y la planta queda floja."
+        },
+        {
+          "id": "ce-mp-4",
+          "enunciado": "Una célula vegetal tiene pared. ¿Tiene también membrana?",
+          "opciones": [
+            "Sí: la membrana está por dentro de la pared",
+            "No: la pared la reemplaza",
+            "Solo de noche"
+          ],
+          "correcta": 0,
+          "explicacion": "Tiene las dos; la membrana es la que controla qué entra."
+        }
+      ],
+      "revisado": false
+    },
+    {
       "id": "celula-completa",
       "titulo": "La célula completa: todo trabaja junto",
       "resumen": "Cómo se coordinan los orgánulos en una sola historia.",
-      "anio": 8,
-      "etiqueta": "Paso 8",
+      "anio": 12,
+      "etiqueta": "Paso 12",
       "nivel": "avanzado",
       "requiere": [
         "membrana",

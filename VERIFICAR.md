@@ -81,3 +81,10 @@ Cuando confirmes uno con una fuente, márcalo con `[x]`, escribe la fuente al la
 
 ## Tamaños de «Acércate», ejemplo de la planta (1.2)
 - Rubisco ≈ 10 nm; cloroplasto ≈ 5 µm; célula del interior de la hoja ≈ 0,05 mm; grosor del tejido verde ≈ 0,2 mm; hoja de fríjol ≈ 8 cm; planta ≈ 50 cm.
+
+## Tema 3 · pasos nuevos
+- Glucólisis en el citosol; ciclosis visible en elodea.
+- Citoesqueleto: tres tipos de filamentos y sus funciones; centriolos en células animales.
+- Ribosomas: millones en células del páncreas; algunos libros no los cuentan como orgánulos.
+- Peroxisomas: catalasa entre las enzimas más rápidas; abundancia en el hígado y papel con el alcohol; conversión de grasa en azúcar en semillas.
+- Pared y matriz: celulosa como macromolécula más abundante; colágeno como proteína más abundante del cuerpo humano.
