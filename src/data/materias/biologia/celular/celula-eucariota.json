@@ -1083,6 +1083,7 @@
         }
       ],
       "diagrama": "ruta-proteina",
+      "juego": "carrera-proteina",
       "preguntas": [
         {
           "id": "ce-rp-1",

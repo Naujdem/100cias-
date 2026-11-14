@@ -9,6 +9,7 @@ import NivelesOrganizacion, { NIVELES } from './NivelesOrganizacion.tsx'
 import NivelesJuego from './NivelesJuego.tsx'
 import CelulaUrgencias from './CelulaUrgencias.tsx'
 import ArmaCelula from './ArmaCelula.tsx'
+import CarreraProteina from './CarreraProteina.tsx'
 import { NucleoDiagrama, CloroplastoDiagrama, LisosomaDiagrama } from './CelulaEucOrg.tsx'
 import { CitoesqueletoDiagrama, RibosomasDiagrama, PeroxisomaDiagrama, MatrizParedDiagrama } from './CelulaEucMas.tsx'
 import GotaLeeuwenhoek from './GotaLeeuwenhoek.tsx'
@@ -50,6 +51,7 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'membrana-juego': PorteroMembrana,
   'celula-urgencias': CelulaUrgencias,
   'arma-celula': ArmaCelula,
+  'carrera-proteina': CarreraProteina,
   'citoesqueleto': CitoesqueletoDiagrama,
   'ribosomas': RibosomasDiagrama,
   'peroxisomas': PeroxisomaDiagrama,
