@@ -30,19 +30,51 @@ interface Props {
   temaId: string
   unidad?: string
   onCerrar: () => void
-  /** abre la ficha completa de un bloque */
+  /** abre la ficha completa de un bloque (en la lección: «Para leer más») */
   onVerFicha: (id: string) => void
+  /** lección: muestra la ruta del tema a la izquierda (con estas migas) y el botón Proyectar */
+  migas?: string[]
+  /** empieza proyectando (pantalla completa, sin ruta) */
+  proyectar?: boolean
+  /** mientras hay otra ventana encima (p. ej. «Para leer más»), el teclado no actúa aquí */
+  pausada?: boolean
+  /** abre el bloque de inicio directamente en su diagrama o su juego */
+  inicioTipo?: 'diagrama' | 'juego'
+}
+
+/** nombre corto de cada momento de la lección, para la fila de arriba */
+function nombreMomento(it: Item): string {
+  const d = it.d
+  if (d.tipo === 'lamina') return d.lamina.titulo
+  return ({ portada: 'Inicio', idea: 'La idea', ilustracion: 'Mira de cerca', analogia: 'Analogía', contexto: 'Datos', ejemplos: 'Ejemplos', recuerda: 'Para recordar', docente: 'Docente', diagrama: 'Explora', juego: 'Juega', comprueba: 'Comprueba' } as Record<string, string>)[d.tipo] ?? ''
 }
 
 /**
  * Presentación a pantalla completa: las fichas del subtema contadas como diapositivas.
  * Teclado: ← → (o RePág/AvPág, Espacio) cambian de diapositiva; ↑ ↓ de {unidad}; Inicio/Fin; Esc sale.
  */
-export default function Presentacion({ bloques, inicio, temaId, unidad = 'Hito', onCerrar, onVerFicha }: Props) {
+export default function Presentacion({ bloques, inicio, temaId, unidad = 'Hito', onCerrar, onVerFicha, migas, proyectar = false, pausada = false, inicioTipo }: Props) {
   const ajustes = usarAjustes()
   const atajos = useAtajos()
   const items: Item[] = useMemo(() => construir(bloques, ajustes), [bloques, ajustes])
-  const [i, setI] = useState(() => Math.max(0, items.findIndex((x) => x.bloque.id === inicio)))
+  const [i, setI] = useState(() => {
+    const deTipo = inicioTipo ? items.findIndex((x) => x.bloque.id === inicio && x.d.tipo === inicioTipo) : -1
+    return deTipo >= 0 ? deTipo : Math.max(0, items.findIndex((x) => x.bloque.id === inicio))
+  })
+  const leccion = !!migas
+  const [proy, setProy] = useState(proyectar || !leccion)
+  const alternarProyectar = () => {
+    const nuevo = !proy
+    setProy(nuevo)
+    try {
+      if (nuevo && !document.fullscreenElement) void document.documentElement.requestFullscreen?.()
+      if (!nuevo && document.fullscreenElement) void document.exitFullscreen?.()
+    } catch {
+      /* sin pantalla completa */
+    }
+  }
+  const pausadaRef = useRef(pausada)
+  pausadaRef.current = pausada
   const caja = useRef<HTMLDivElement>(null)
   const iRef = useRef(i)
   iRef.current = i
@@ -60,15 +92,13 @@ export default function Presentacion({ bloques, inicio, temaId, unidad = 'Hito',
   }
   const avanzar = () => (pasoRef.current < pasosDe(items[iRef.current].d) ? setPaso((p) => p + 1) : ir(iRef.current + 1))
   const retroceder = () => (pasoRef.current > 0 ? setPaso((p) => p - 1) : ir(iRef.current - 1))
-  // ↑ ↓ saltan de bloque dentro de la misma sección (contenido o actividades)
+  // ↑ ↓ saltan al principio del bloque anterior o siguiente
   const irBloque = (dir: 1 | -1) => {
-    const sec = items[iRef.current].seccion
-    const ids = bloques.map((b) => b.id).filter((id) => items.some((x) => x.bloque.id === id && x.seccion === sec))
+    const ids = bloques.map((b) => b.id).filter((id) => items.some((x) => x.bloque.id === id))
     const k = ids.indexOf(items[iRef.current].bloque.id) + dir
     if (k < 0 || k >= ids.length) return
-    ir(items.findIndex((x) => x.bloque.id === ids[k] && x.seccion === sec))
+    ir(items.findIndex((x) => x.bloque.id === ids[k]))
   }
-  const primeraActividad = items.findIndex((x) => x.seccion === 'actividades')
 
   useEffect(() => {
     if (it) marcarVisto(temaId, it.bloque.id)
@@ -88,6 +118,7 @@ export default function Presentacion({ bloques, inicio, temaId, unidad = 'Hito',
   useEffect(() => {
     const alTeclear = (e: KeyboardEvent) => {
       if (e.ctrlKey || e.metaKey || e.altKey) return
+      if (pausadaRef.current) return
       if (e.key === 'Escape') {
         if (caja.current?.querySelector('[data-fs="true"]')) return
         e.preventDefault()
@@ -108,7 +139,7 @@ export default function Presentacion({ bloques, inicio, temaId, unidad = 'Hito',
           return
         }
       }
-      const enDiagrama = actual.d.tipo === 'diagrama' || (actual.d.tipo === 'lamina' && actual.d.lamina.visual?.tipo === 'diagrama') || !!caja.current?.querySelector('[data-diagrama]')
+      const enDiagrama = actual.d.tipo === 'diagrama' || actual.d.tipo === 'juego' || (actual.d.tipo === 'lamina' && actual.d.lamina.visual?.tipo === 'diagrama') || !!caja.current?.querySelector('[data-diagrama]')
 
       if (enDiagrama && (e.key === 'ArrowRight' || e.key === 'ArrowLeft')) {
         const dir = e.key === 'ArrowRight' ? 1 : -1
@@ -167,7 +198,7 @@ export default function Presentacion({ bloques, inicio, temaId, unidad = 'Hito',
   const b = it.bloque
   const idxBloque = bloques.findIndex((x) => x.id === b.id)
   const siguienteBloque = bloques[idxBloque + 1]
-  const enActividades = it.seccion === 'actividades'
+  const momentos = items.map((x, k) => ({ x, k })).filter(({ x }) => x.bloque.id === b.id)
 
   return (
     <div
@@ -180,44 +211,65 @@ export default function Presentacion({ bloques, inicio, temaId, unidad = 'Hito',
       className="fixed inset-0 z-50 flex flex-col bg-[var(--fondo)] outline-none"
     >
       <header className="flex items-center gap-3 border-b border-[var(--linea)] bg-[var(--tarjeta)] px-3 py-2">
-        <nav aria-label={`${unidad}s`} className="flex min-w-0 flex-1 gap-1 overflow-x-auto">
-          {bloques.map((x, k) => (
-            <button
-              key={x.id}
-              type="button"
-              aria-current={x.id === b.id ? 'step' : undefined}
-              aria-label={`${unidad} ${numero(x.etiqueta, k)}: ${x.titulo}`}
-              title={x.titulo}
-              onClick={() => ir(items.findIndex((y) => y.bloque.id === x.id && y.seccion === it.seccion))}
-              className={`flex h-9 min-w-9 shrink-0 items-center justify-center rounded-full border px-2 text-sm font-bold ${
-                x.id === b.id ? 'border-[var(--acento)] bg-[var(--acento)] text-[var(--fondo)]' : 'border-[var(--linea)] text-[var(--suave)]'
-              }`}
-            >
-              {numero(x.etiqueta, k)}
-              {x.id === b.id && <span className="ml-1.5 hidden max-w-[22rem] truncate font-semibold sm:inline">{x.titulo}</span>}
+        {proy ? (
+          <nav aria-label={`${unidad}s`} className="flex min-w-0 flex-1 gap-1 overflow-x-auto">
+            {bloques.map((x, k) => (
+              <button
+                key={x.id}
+                type="button"
+                aria-current={x.id === b.id ? 'step' : undefined}
+                aria-label={`${unidad} ${numero(x.etiqueta, k)}: ${x.titulo}`}
+                title={x.titulo}
+                onClick={() => ir(items.findIndex((y) => y.bloque.id === x.id))}
+                className={`flex h-9 min-w-9 shrink-0 items-center justify-center rounded-full border px-2 text-sm font-bold ${
+                  x.id === b.id ? 'border-[var(--acento)] bg-[var(--acento)] text-[var(--fondo)]' : 'border-[var(--linea)] text-[var(--suave)]'
+                }`}
+              >
+                {numero(x.etiqueta, k)}
+                {x.id === b.id && <span className="ml-1.5 hidden max-w-[22rem] truncate font-semibold sm:inline">{x.titulo}</span>}
+              </button>
+            ))}
+          </nav>
+        ) : (
+          <nav aria-label="Momentos de esta ficha" className="flex min-w-0 flex-1 gap-1 overflow-x-auto">
+            {momentos.map(({ x, k }) => {
+              const actividad = x.seccion === 'actividades'
+              return (
+                <button
+                  key={k}
+                  type="button"
+                  aria-current={k === i ? 'step' : undefined}
+                  onClick={() => ir(k)}
+                  className={`min-h-9 max-w-[13rem] shrink-0 truncate rounded-full border px-3 text-sm font-semibold ${actividad ? 'border-dashed' : ''} ${
+                    k === i ? 'border-[var(--acento)] bg-[var(--acento)] text-[var(--fondo)]' : k < i ? 'border-[var(--acento)] text-[var(--acento)]' : 'border-[var(--linea)] text-[var(--suave)]'
+                  }`}
+                >
+                  {nombreMomento(x)}
+                </button>
+              )
+            })}
+          </nav>
+        )}
+        {leccion && (
+          <>
+            <button type="button" onClick={() => onVerFicha(b.id)} title="El texto completo de la ficha" className="min-h-11 shrink-0 rounded-full border border-[var(--linea)] px-3 text-sm font-semibold">
+              <span aria-hidden="true">📖</span><span className="hidden lg:inline"> Para leer más</span>
             </button>
-          ))}
-        </nav>
-        {primeraActividad >= 0 && (
-          <button
-            type="button"
-            aria-pressed={enActividades}
-            onClick={() => ir(enActividades ? 0 : primeraActividad)}
-            title={enActividades ? 'Volver al contenido' : 'Ir a las actividades'}
-            className={`min-h-9 shrink-0 rounded-full border px-3 text-sm font-semibold ${
-              enActividades ? 'border-[var(--acento)] bg-[var(--acento)] text-[var(--fondo)]' : 'border-[var(--acento)] text-[var(--acento)]'
-            }`}
-          >
-            {enActividades ? '‹ Contenido' : 'Actividades ›'}
-          </button>
+            <button type="button" onClick={alternarProyectar} aria-pressed={proy} className="min-h-11 shrink-0 rounded-full border border-[var(--acento)] px-3 text-sm font-semibold text-[var(--acento)] aria-pressed:bg-[var(--acento)] aria-pressed:text-[var(--fondo)]">
+              {proy ? 'Dejar de proyectar' : '▶ Proyectar'}
+            </button>
+          </>
         )}
         <button
           type="button"
-          onClick={onCerrar}
-          aria-label="Salir de las diapositivas"
+          onClick={() => {
+            if (document.fullscreenElement) void document.exitFullscreen?.()
+            onCerrar()
+          }}
+          aria-label={leccion ? 'Volver al tema' : 'Salir de las diapositivas'}
           className="flex h-11 shrink-0 items-center gap-2 rounded-full border border-[var(--linea)] px-4 text-sm font-semibold"
         >
-          <span aria-hidden="true">×</span> Salir
+          <span aria-hidden="true">×</span> {leccion ? 'Tema' : 'Salir'}
         </button>
       </header>
       <div
@@ -231,6 +283,27 @@ export default function Presentacion({ bloques, inicio, temaId, unidad = 'Hito',
         <div className="h-full bg-[var(--acento)] transition-[width]" style={{ width: `${((i + 1) / items.length) * 100}%` }} />
       </div>
 
+      <div className="flex min-h-0 flex-1">
+      {leccion && !proy && (
+        <aside aria-label="Ruta del tema" className="hidden w-60 shrink-0 overflow-y-auto border-r border-[var(--linea)] bg-[var(--tarjeta)] p-3 md:block">
+          <p className="px-2 text-xs font-bold uppercase tracking-widest text-[var(--acento)]">{migas![migas!.length - 1]}</p>
+          <ol className="mt-2 space-y-1">
+            {bloques.map((x, k) => (
+              <li key={x.id}>
+                <button
+                  type="button"
+                  aria-current={x.id === b.id ? 'page' : undefined}
+                  onClick={() => ir(items.findIndex((y) => y.bloque.id === x.id))}
+                  className={`w-full rounded-lg px-2 py-2 text-left text-sm ${x.id === b.id ? 'bg-[var(--acento-suave)]/50 font-bold' : 'text-[var(--suave)] hover:bg-[var(--fondo)]'}`}
+                >
+                  <span className="font-bold">{numero(x.etiqueta, k)} · </span>
+                  {x.titulo}
+                </button>
+              </li>
+            ))}
+          </ol>
+        </aside>
+      )}
       <main
         className="min-h-0 flex-1 overflow-y-auto px-4 py-5 sm:px-8"
         onClick={(e) => {
@@ -243,7 +316,7 @@ export default function Presentacion({ bloques, inicio, temaId, unidad = 'Hito',
             it={it}
             onVerFicha={onVerFicha}
             siguienteBloque={siguienteBloque}
-            onSiguiente={() => (siguienteBloque ? irBloque(1) : primeraActividad >= 0 && ir(primeraActividad))}
+            onSiguiente={() => siguienteBloque && irBloque(1)}
             paso={paso}
             onPaso={setPaso}
             onAtajo={(tema, bloque) => {
@@ -253,6 +326,7 @@ export default function Presentacion({ bloques, inicio, temaId, unidad = 'Hito',
           />
         </div>
       </main>
+      </div>
 
       <footer className="flex items-center justify-between gap-2 border-t border-[var(--linea)] bg-[var(--tarjeta)] px-3 py-2 sm:px-5">
         <button
@@ -265,7 +339,7 @@ export default function Presentacion({ bloques, inicio, temaId, unidad = 'Hito',
         </button>
         <div className="min-w-0 text-center text-xs text-[var(--suave)]">
           <p aria-live="polite" className="font-semibold">
-            {enActividades ? 'Actividades · ' : ''}
+            {it.seccion === 'actividades' ? 'Actividad · ' : ''}
             {b.etiqueta ?? b.anio} · {it.n} de {it.de} · {i + 1} de {items.length} en total
           </p>
           <p className="hidden md:block">
@@ -472,9 +546,21 @@ function Lamina({
   if (d.tipo === 'diagrama' && Diagrama) {
     return (
       <div>
-        <Etiqueta>{`Actividad · ${b.etiqueta ?? b.anio} ${b.titulo}`}</Etiqueta>
+        <Etiqueta>{`Explora · ${b.titulo}`}</Etiqueta>
         <div data-diagrama className="mt-2 rounded-2xl border border-[var(--linea)] bg-[var(--tarjeta)] p-3 sm:p-4">
           <Resguardo titulo="No se pudo mostrar el diagrama."><Diagrama /></Resguardo>
+        </div>
+      </div>
+    )
+  }
+
+  if (d.tipo === 'juego' && b.juego && DIAGRAMAS[b.juego]) {
+    const Juego = DIAGRAMAS[b.juego]
+    return (
+      <div>
+        <Etiqueta>{`Juega · ${b.titulo}`}</Etiqueta>
+        <div data-diagrama className="mt-2 rounded-2xl border border-[var(--linea)] bg-[var(--tarjeta)] p-3 sm:p-4">
+          <Resguardo titulo="No se pudo mostrar el juego."><Juego /></Resguardo>
         </div>
       </div>
     )

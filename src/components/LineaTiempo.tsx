@@ -42,6 +42,9 @@ export default function LineaTiempo({ bloques, vistas: VISTAS, claveVista: CLAVE
   const [abierto, setAbierto] = useState<string | null>(null)
   /** id del bloque con el que se abrió la presentación (null = cerrada) */
   const [pres, setPres] = useState<string | null>(null)
+  /** temas en página completa: cada ficha se abre como lección; la ficha de texto queda como «Para leer más» */
+  const leccion = !!pagina
+  const [consulta, setConsulta] = useState<string | null>(null)
   const [vistaId, setVistaId] = useState(() => {
     const v = leer<string>(CLAVE_VISTA, VISTAS[0].id)
     return VISTAS.some((x) => x.id === v) ? v : VISTAS[0].id
@@ -113,7 +116,8 @@ export default function LineaTiempo({ bloques, vistas: VISTAS, claveVista: CLAVE
 
       if (diapositivas && e.key.toLowerCase() === 'd' && ordenados.length) {
         e.preventDefault()
-        setPres(ordenados[0].id)
+        if (leccion) setAbierto(ordenados[0].id)
+        else setPres(ordenados[0].id)
         return
       }
       if (e.key.toLowerCase() === 'f') {
@@ -176,11 +180,11 @@ export default function LineaTiempo({ bloques, vistas: VISTAS, claveVista: CLAVE
         {diapositivas && ordenados.length > 0 && (
           <button
             type="button"
-            onClick={() => setPres(ordenados[0].id)}
-            title="Ver este subtema como diapositivas (D)"
+            onClick={() => (leccion ? setAbierto(ordenados[0].id) : setPres(ordenados[0].id))}
+            title={leccion ? 'Empezar la lección (D)' : 'Ver este subtema como diapositivas (D)'}
             className="flex min-h-11 items-center gap-2 rounded-full bg-[var(--acento)] px-5 text-sm font-semibold text-[var(--fondo)]"
           >
-            <span aria-hidden="true">▶</span> Ver como diapositivas
+            <span aria-hidden="true">▶</span> {leccion ? 'Empezar la lección' : 'Ver como diapositivas'}
           </button>
         )}
         <div className="flex items-center gap-2">
@@ -228,7 +232,7 @@ export default function LineaTiempo({ bloques, vistas: VISTAS, claveVista: CLAVE
         estados={Object.fromEntries(ordenados.map((b) => [b.id, estadoDe(progreso, temaId, b)]))}
       />
 
-      {seleccionado && (
+      {seleccionado && !leccion && (
         <DetalleBloque
           key={seleccionado.id}
           bloque={seleccionado}
@@ -236,7 +240,6 @@ export default function LineaTiempo({ bloques, vistas: VISTAS, claveVista: CLAVE
           posicion={{ actual: indice + 1, total: ordenados.length }}
           unidad={unidad}
           temaId={temaId}
-          pagina={pagina}
           tituloAnterior={indice > 0 ? ordenados[indice - 1].titulo : undefined}
           tituloSiguiente={indice < ordenados.length - 1 ? ordenados[indice + 1].titulo : undefined}
           inicial={pestana?.id === seleccionado.id ? pestana.p : undefined}
@@ -246,25 +249,54 @@ export default function LineaTiempo({ bloques, vistas: VISTAS, claveVista: CLAVE
         />
       )}
 
-      {pres && (
-        <Suspense fallback={<div role="status" className="fixed inset-0 z-50 flex items-center justify-center bg-[var(--fondo)] text-sm">Cargando diapositivas…</div>}>
+      {(pres || (leccion && abierto)) && (
+        <Suspense fallback={<div role="status" className="fixed inset-0 z-50 flex items-center justify-center bg-[var(--fondo)] text-sm">Cargando…</div>}>
         <Presentacion
           bloques={ordenados}
-          inicio={pres}
+          inicio={(leccion && abierto) || pres!}
           temaId={temaId}
           unidad={unidad}
+          migas={pagina?.migas}
+          proyectar={!!pres}
+          pausada={!!consulta}
+          inicioTipo={pestana?.id === abierto ? pestana?.p : undefined}
           onCerrar={() => {
-            const id = pres
+            const id = abierto ?? pres
             setPres(null)
+            setAbierto(null)
             requestAnimationFrame(() => llevarA(nodo(id)))
           }}
           onVerFicha={(id) => {
+            if (leccion) return setConsulta(id)
             setPres(null)
             setAbierto(id)
           }}
         />
         </Suspense>
       )}
+
+      {leccion && consulta && (() => {
+        const k = ordenados.findIndex((x) => x.id === consulta)
+        const c = ordenados[k]
+        if (!c) return null
+        return (
+          <DetalleBloque
+            key={`consulta-${c.id}`}
+            bloque={c}
+            onCerrar={() => setConsulta(null)}
+            posicion={{ actual: k + 1, total: ordenados.length }}
+            unidad={unidad}
+            temaId={temaId}
+            pagina={pagina}
+            textoDiapositivas="← Volver a la lección"
+            tituloAnterior={k > 0 ? ordenados[k - 1].titulo : undefined}
+            tituloSiguiente={k < ordenados.length - 1 ? ordenados[k + 1].titulo : undefined}
+            onDiapositivas={() => setConsulta(null)}
+            onAnterior={k > 0 ? () => setConsulta(ordenados[k - 1].id) : undefined}
+            onSiguiente={k < ordenados.length - 1 ? () => setConsulta(ordenados[k + 1].id) : undefined}
+          />
+        )
+      })()}
     </div>
   )
 }
