@@ -12,7 +12,8 @@ import ArmaCelula from './ArmaCelula.tsx'
 import CarreraProteina from './CarreraProteina.tsx'
 import FasesMitosis from './FasesMitosis.tsx'
 import MeiosisJuego from './MeiosisJuego.tsx'
-import ClasificaCasos, { CASOS_OXIGENO, CASOS_MUERTE } from './ClasificaCasos.tsx'
+import ClasificaCasos, { CASOS_OXIGENO, CASOS_MUERTE, CASOS_TEJIDOS, CASOS_REPRODUCCION } from './ClasificaCasos.tsx'
+import { Diferenciacion, CelulasMadre, TejidosAnimales, TejidosVegetales, OrganoTejidos, ReproduccionTipos } from './Organismo.tsx'
 import { EnzimaLlave, AtpPila, RespiracionFermentacion, SenalesCelulares, UnionesCelulares, MuerteCelular } from './MetabolismoCelular.tsx'
 import { ParesHomologos, CuentaCromosomas, MeiosisPasos, VariedadGametos, ComparaMitosisMeiosis } from './Meiosis.tsx'
 import { CicloReloj, CromosomaCompacta, CitocinesisDiagrama, SemaforosCiclo } from './CicloCelular.tsx'
@@ -79,6 +80,15 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'senales-celulares': SenalesCelulares,
   'uniones-celulares': UnionesCelulares,
   'muerte-celular': MuerteCelular,
+  // tema 5: de la célula al organismo
+  'diferenciacion': Diferenciacion,
+  'celulas-madre': CelulasMadre,
+  'tejidos-animales': TejidosAnimales,
+  'tejidos-vegetales': TejidosVegetales,
+  'organo-tejidos': OrganoTejidos,
+  'reproduccion-tipos': ReproduccionTipos,
+  'tejidos-juego': () => <ClasificaCasos titulo="¿Qué tejido es?" opciones={['Epitelial', 'Conectivo', 'Muscular', 'Nervioso']} casos={CASOS_TEJIDOS} clave="cien:tejidos-mejor" pista="Pista: cubrir = epitelial; unir o sostener = conectivo; mover = muscular; informar = nervioso." />,
+  'reproduccion-juego': () => <ClasificaCasos titulo="¿Asexual o sexual?" opciones={['Asexual', 'Sexual']} casos={CASOS_REPRODUCCION} clave="cien:reproduccion-mejor" pista="Pista: si hay un solo progenitor y los hijos son copias, es asexual; si se unen gametos de dos progenitores, es sexual." />,
   'oxigeno-juego': () => <ClasificaCasos titulo="¿Respiración o fermentación?" opciones={['Respiración (con O₂)', 'Fermentación (sin O₂)']} casos={CASOS_OXIGENO} clave="cien:oxigeno-mejor" pista="Pista: si trabaja la mitocondria y sale mucha energía, es respiración; si no hay oxígeno y salen ácido láctico o alcohol, es fermentación." />,
   'muerte-juego': () => <ClasificaCasos titulo="¿Apoptosis o necrosis?" opciones={['Apoptosis', 'Necrosis']} casos={CASOS_MUERTE} clave="cien:muerte-mejor" pista="Pista: si es una orden ordenada (desarrollo, defensa), es apoptosis; si es por un daño (golpe, quemadura, falta de sangre), es necrosis." />,
   'citoesqueleto': CitoesqueletoDiagrama,

@@ -1,0 +1,605 @@
+{
+  "id": "de-la-celula-al-organismo",
+  "materia": "biologia",
+  "area": "celular",
+  "titulo": "De la célula al organismo",
+  "subtema": "De la célula al organismo",
+  "orden": 9,
+  "etiqueta": "5",
+  "vistas": [
+    "ruta"
+  ],
+  "tituloVista": "Ruta de la célula al organismo",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Explicar cómo células con el mismo ADN se especializan.",
+    "Reconocer los tejidos animales y vegetales y su función.",
+    "Relacionar tejidos, órganos y sistemas, y comparar la reproducción asexual y sexual."
+  ],
+  "fuentes": [
+    "Plan de área del colegio (solo guía)",
+    "BORRADOR: esqueleto redactado como punto de partida; verificar cada bloque antes de marcarlo como revisado. A verificar: ~200 tipos celulares y ~20.000 genes; Gurdon 1962; Yamanaka 2006 y Nobel 2012; banano Gros Michel y mal de Panamá; tinción del xilema del apio en horas."
+  ],
+  "bloques": [
+    {
+      "id": "diferenciacion",
+      "titulo": "Diferenciación celular",
+      "resumen": "Todas las células tienen el mismo ADN, pero cada una usa genes distintos.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "Todas tus células vienen del cigoto y tienen el mismo ADN. Sin embargo, una neurona y una célula de músculo son muy distintas. La diferencia está en qué genes encienden: cada tipo de célula lee solo algunas páginas del libro de instrucciones. A ese proceso de especializarse se le llama diferenciación.",
+        "contexto": [
+          {
+            "titulo": "Mismo libro",
+            "texto": "Una neurona y un glóbulo rojo tienen los mismos genes; cambian los que están encendidos."
+          },
+          {
+            "titulo": "Forma y función",
+            "texto": "La forma de cada célula se ajusta a su trabajo: la neurona es larga para comunicar, el glóbulo rojo es un disco flexible para pasar por vasos delgados."
+          },
+          {
+            "titulo": "Señales",
+            "texto": "Las señales de las células vecinas le indican a cada célula del embrión en qué convertirse."
+          },
+          {
+            "titulo": "Cuántos tipos",
+            "texto": "El cuerpo humano tiene unos 200 tipos de células."
+          }
+        ],
+        "evidencia": [
+          "En 1962 John Gurdon clonó ranas usando el núcleo de una célula del intestino: probó que una célula diferenciada conserva todo el ADN."
+        ],
+        "limites": "El dibujo muestra 8 genes como ejemplo; en realidad son unos 20.000, y muchos se encienden en casi todas las células.",
+        "cuaderno": {
+          "facil": [
+            "Todas las células tienen el mismo ADN.",
+            "Cada tipo de célula usa genes distintos.",
+            "Diferenciarse es especializarse."
+          ],
+          "media": [
+            "La forma de la célula va con su función.",
+            "Las señales de las vecinas guían la diferenciación."
+          ],
+          "avanzada": [
+            "Gurdon (1962): una célula diferenciada conserva todo el ADN.",
+            "Unos 200 tipos celulares en el cuerpo humano."
+          ]
+        },
+        "docente": {
+          "abrir": "Si todas tus células tienen el mismo ADN, ¿por qué una neurona no se parece a una célula de la piel?",
+          "actividad": "Comparen el libro como analogía: todos los estudiantes tienen el mismo libro, pero cada uno subraya solo su capítulo. Luego recorran el diagrama con los cinco tipos de célula.",
+          "errores": [
+            "Creer que cada tipo de célula tiene un ADN distinto.",
+            "Creer que las células pierden los genes que no usan."
+          ],
+          "minutos": 8
+        }
+      },
+      "diagrama": "diferenciacion",
+      "preguntas": [
+        {
+          "id": "co-diferenciacion-1",
+          "enunciado": "¿Por qué una neurona es distinta a una célula de músculo?",
+          "opciones": [
+            "Encienden genes distintos",
+            "Tienen ADN distinto",
+            "Una es animal y la otra vegetal"
+          ],
+          "correcta": 0,
+          "explicacion": "El ADN es el mismo."
+        },
+        {
+          "id": "co-diferenciacion-2",
+          "enunciado": "¿Qué es la diferenciación celular?",
+          "opciones": [
+            "El proceso por el que una célula se especializa",
+            "La división de una célula en dos",
+            "La muerte de una célula"
+          ],
+          "correcta": 0,
+          "explicacion": "Es especializarse para una función."
+        },
+        {
+          "id": "co-diferenciacion-3",
+          "enunciado": "¿Qué probó Gurdon al clonar una rana con el núcleo de una célula del intestino?",
+          "opciones": [
+            "Que la célula diferenciada conserva todo el ADN",
+            "Que las ranas no tienen ADN",
+            "Que el intestino hace meiosis"
+          ],
+          "correcta": 0,
+          "explicacion": "Ese núcleo pudo formar una rana completa."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "celulas-madre",
+      "titulo": "Células madre",
+      "resumen": "Células que todavía pueden convertirse en otros tipos.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "avanzado",
+      "requiere": [
+        "diferenciacion"
+      ],
+      "ficha": {
+        "idea": "Las células madre todavía no se han especializado y pueden dividirse para formar otros tipos de célula. Cuanto más temprano en el desarrollo, más tipos pueden formar: el cigoto puede formarlo todo; las células madre del adulto solo algunos.",
+        "contexto": [
+          {
+            "titulo": "Totipotentes",
+            "texto": "El cigoto y las primeras células del embrión forman todo, incluida la placenta."
+          },
+          {
+            "titulo": "Pluripotentes",
+            "texto": "Las del interior del embrión temprano forman cualquier tejido del cuerpo."
+          },
+          {
+            "titulo": "Multipotentes",
+            "texto": "Las del adulto, como las de la médula ósea, forman solo algunos tipos (las células de la sangre)."
+          },
+          {
+            "titulo": "Usos médicos",
+            "texto": "Los trasplantes de médula ósea tratan algunas leucemias. Se investigan terapias para otras enfermedades."
+          }
+        ],
+        "evidencia": [
+          "En 2006 Shinya Yamanaka logró convertir células de piel en células pluripotentes (iPS); recibió el Nobel en 2012 junto con Gurdon."
+        ],
+        "limites": "Muchas «terapias con células madre» que se ofrecen sin respaldo científico no han demostrado funcionar. Hay que buscar fuentes confiables.",
+        "cuaderno": {
+          "facil": [
+            "Las células madre pueden formar otros tipos de célula."
+          ],
+          "media": [
+            "Totipotentes: todo. Pluripotentes: cualquier tejido. Multipotentes: algunos.",
+            "La médula ósea forma las células de la sangre."
+          ],
+          "avanzada": [
+            "Yamanaka (2006): células iPS a partir de piel.",
+            "Cuidado con terapias sin respaldo científico."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué una lagartija puede regenerar la cola y nosotros no un dedo?",
+          "actividad": "Usen el diagrama para ver cuántos tipos alcanza cada célula. Luego, en grupos, busquen una noticia sobre células madre y decidan si la fuente es confiable.",
+          "errores": [
+            "Creer que todas las células madre pueden formar cualquier célula.",
+            "Creer que todas las terapias con células madre están probadas."
+          ],
+          "minutos": 12
+        }
+      },
+      "diagrama": "celulas-madre",
+      "preguntas": [
+        {
+          "id": "co-celulas-madre-1",
+          "enunciado": "¿Cuál célula puede formar todo, incluida la placenta?",
+          "opciones": [
+            "El cigoto",
+            "Una célula madre de la médula",
+            "Una neurona"
+          ],
+          "correcta": 0,
+          "explicacion": "El cigoto es totipotente."
+        },
+        {
+          "id": "co-celulas-madre-2",
+          "enunciado": "¿Qué forman las células madre de la médula ósea?",
+          "opciones": [
+            "Las células de la sangre",
+            "Neuronas",
+            "Placenta"
+          ],
+          "correcta": 0,
+          "explicacion": "Son multipotentes."
+        },
+        {
+          "id": "co-celulas-madre-3",
+          "enunciado": "¿Qué logró Yamanaka?",
+          "opciones": [
+            "Convertir células de piel en células pluripotentes",
+            "Clonar una oveja",
+            "Descubrir el ADN"
+          ],
+          "correcta": 0,
+          "explicacion": "Las llamó iPS."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "tejidos-animales",
+      "titulo": "Tejidos animales",
+      "resumen": "Epitelial, conectivo, muscular y nervioso.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "basico",
+      "nucleo": true,
+      "requiere": [
+        "diferenciacion"
+      ],
+      "ficha": {
+        "idea": "Un tejido es un grupo de células parecidas que trabajan juntas. Los animales tienen cuatro tipos: el epitelial cubre, el conectivo une y sostiene, el muscular mueve y el nervioso transmite información.",
+        "contexto": [
+          {
+            "titulo": "Epitelial",
+            "texto": "Cubre el cuerpo y el interior de los órganos; algunos forman glándulas, como las del sudor."
+          },
+          {
+            "titulo": "Conectivo",
+            "texto": "Muy variado: hueso, cartílago, grasa, tendones y sangre. Tiene mucha matriz entre las células."
+          },
+          {
+            "titulo": "Muscular",
+            "texto": "Esquelético (voluntario), liso (en el estómago o los vasos) y cardíaco (el corazón)."
+          },
+          {
+            "titulo": "Nervioso",
+            "texto": "Neuronas, que transmiten impulsos, y glía, que las sostiene y alimenta."
+          }
+        ],
+        "evidencia": [
+          "La histología, el estudio de los tejidos al microscopio, se desarrolló en el siglo XIX gracias a los colorantes que tiñen distinto cada tejido."
+        ],
+        "limites": "Los cuatro tipos son una clasificación básica; cada uno tiene muchas variedades.",
+        "cuaderno": {
+          "facil": [
+            "Tejido: células parecidas que trabajan juntas.",
+            "Cuatro tejidos animales: epitelial, conectivo, muscular y nervioso."
+          ],
+          "media": [
+            "Epitelial cubre; conectivo une; muscular mueve; nervioso informa.",
+            "La sangre y el hueso son tejido conectivo."
+          ],
+          "avanzada": [
+            "Músculo esquelético, liso y cardíaco.",
+            "Nervioso: neuronas y glía."
+          ]
+        },
+        "docente": {
+          "abrir": "Tócate la piel, el codo, el bíceps al doblar el brazo. ¿Son del mismo material?",
+          "actividad": "Recorran los cuatro tejidos en el diagrama y luego jueguen «¿Qué tejido es?». Si hay microscopio, observen la mucosa de la mejilla (epitelial).",
+          "errores": [
+            "Creer que la sangre no es un tejido.",
+            "Creer que todo músculo es voluntario."
+          ],
+          "minutos": 10
+        }
+      },
+      "diagrama": "tejidos-animales",
+      "juego": "tejidos-juego",
+      "preguntas": [
+        {
+          "id": "co-tejidos-animales-1",
+          "enunciado": "¿Qué tejido cubre el cuerpo y el interior de los órganos?",
+          "opciones": [
+            "Epitelial",
+            "Nervioso",
+            "Muscular"
+          ],
+          "correcta": 0,
+          "explicacion": "Sus células están muy pegadas."
+        },
+        {
+          "id": "co-tejidos-animales-2",
+          "enunciado": "¿A qué tipo de tejido pertenece la sangre?",
+          "opciones": [
+            "Conectivo",
+            "Epitelial",
+            "Nervioso"
+          ],
+          "correcta": 0,
+          "explicacion": "Su matriz es líquida: el plasma."
+        },
+        {
+          "id": "co-tejidos-animales-3",
+          "enunciado": "¿Qué tipo de músculo tiene el corazón?",
+          "opciones": [
+            "Cardíaco",
+            "Esquelético",
+            "Liso"
+          ],
+          "correcta": 0,
+          "explicacion": "Late sin que lo decidamos."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "tejidos-vegetales",
+      "titulo": "Tejidos vegetales",
+      "resumen": "Crecimiento, protección, conducción y relleno.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "basico",
+      "nucleo": true,
+      "requiere": [
+        "diferenciacion"
+      ],
+      "ficha": {
+        "idea": "Las plantas también tienen tejidos. Los meristemos se dividen y hacen crecer la planta; la epidermis la protege; el xilema y el floema conducen agua y azúcares; y el parénquima la rellena, hace fotosíntesis o guarda reservas.",
+        "contexto": [
+          {
+            "titulo": "Meristemos",
+            "texto": "En las puntas de raíz y tallo. Por ellos la planta crece toda la vida."
+          },
+          {
+            "titulo": "Epidermis",
+            "texto": "Cubre hojas y tallos jóvenes; tiene estomas para el intercambio de gases."
+          },
+          {
+            "titulo": "Xilema y floema",
+            "texto": "El xilema sube agua y sales desde la raíz; el floema reparte los azúcares de las hojas."
+          },
+          {
+            "titulo": "Parénquima y sostén",
+            "texto": "El parénquima hace fotosíntesis o guarda almidón; otros tejidos, como los de la madera, sostienen."
+          }
+        ],
+        "evidencia": [
+          "Si pones un tallo de apio en agua con colorante, en horas se tiñen los haces del xilema."
+        ],
+        "limites": "Hay más tejidos vegetales; aquí se agrupan en cuatro funciones para empezar.",
+        "cuaderno": {
+          "facil": [
+            "Las plantas también tienen tejidos.",
+            "Meristemos: crecen. Epidermis: protege."
+          ],
+          "media": [
+            "Xilema: agua hacia arriba. Floema: azúcares a toda la planta.",
+            "Parénquima: fotosíntesis y reserva."
+          ],
+          "avanzada": [
+            "Estomas en la epidermis.",
+            "La madera es xilema viejo."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por dónde sube el agua desde la raíz hasta la hoja más alta de un árbol?",
+          "actividad": "Pongan un tallo de apio o una flor blanca en agua con colorante y observen al día siguiente. Luego usen el diagrama para ubicar cada tejido.",
+          "errores": [
+            "Creer que las plantas no tienen tejidos.",
+            "Confundir xilema y floema."
+          ],
+          "minutos": 10
+        }
+      },
+      "diagrama": "tejidos-vegetales",
+      "preguntas": [
+        {
+          "id": "co-tejidos-vegetales-1",
+          "enunciado": "¿Qué tejido sube el agua desde la raíz?",
+          "opciones": [
+            "Xilema",
+            "Floema",
+            "Epidermis"
+          ],
+          "correcta": 0,
+          "explicacion": "El floema reparte azúcares."
+        },
+        {
+          "id": "co-tejidos-vegetales-2",
+          "enunciado": "¿Dónde están los meristemos?",
+          "opciones": [
+            "En las puntas de la raíz y del tallo",
+            "Solo en las hojas",
+            "En las flores"
+          ],
+          "correcta": 0,
+          "explicacion": "Allí la planta crece."
+        },
+        {
+          "id": "co-tejidos-vegetales-3",
+          "enunciado": "¿Qué tejido de la papa guarda almidón?",
+          "opciones": [
+            "Parénquima",
+            "Xilema",
+            "Meristemo"
+          ],
+          "correcta": 0,
+          "explicacion": "Es un tejido de reserva."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "organos-sistemas",
+      "titulo": "Órganos y sistemas",
+      "resumen": "Tejidos que forman órganos; órganos que forman sistemas.",
+      "anio": 5,
+      "etiqueta": "Paso 5",
+      "nivel": "basico",
+      "nucleo": true,
+      "requiere": [
+        "tejidos-animales"
+      ],
+      "ficha": {
+        "idea": "Un órgano está formado por varios tejidos que trabajan juntos. El estómago tiene tejido epitelial, conectivo, muscular y nervioso. Varios órganos que colaboran en una misma función forman un sistema, como el digestivo, y todos los sistemas juntos forman el organismo.",
+        "contexto": [
+          {
+            "titulo": "Órgano",
+            "texto": "Estómago, corazón, hoja, raíz: cada uno combina varios tejidos."
+          },
+          {
+            "titulo": "Sistema",
+            "texto": "Órganos con una función común: digestivo, respiratorio, circulatorio, nervioso, entre otros."
+          },
+          {
+            "titulo": "Trabajo en equipo",
+            "texto": "Para correr colaboran el sistema muscular, el respiratorio, el circulatorio y el nervioso."
+          },
+          {
+            "titulo": "En las plantas",
+            "texto": "Raíz, tallo y hoja son órganos; se agrupan en el sistema de raíces y el de tallos y hojas."
+          }
+        ],
+        "evidencia": [
+          "Un trasplante de órgano funciona porque el órgano llega con todos sus tejidos organizados."
+        ],
+        "limites": "Los límites entre sistemas son en parte convencionales: muchos órganos participan en más de uno.",
+        "cuaderno": {
+          "facil": [
+            "Varios tejidos forman un órgano.",
+            "Varios órganos forman un sistema."
+          ],
+          "media": [
+            "El estómago tiene los cuatro tejidos animales.",
+            "Los sistemas trabajan en equipo."
+          ],
+          "avanzada": [
+            "Muchos órganos participan en más de un sistema.",
+            "En las plantas: raíz, tallo y hoja."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Qué pasaría con el estómago si le faltara el músculo?",
+          "actividad": "Recorran el corte del estómago y quiten un tejido a la vez. Luego, en grupos, elijan una actividad (comer, correr, dormir) y escriban qué sistemas participan.",
+          "errores": [
+            "Creer que un órgano está hecho de un solo tejido.",
+            "Confundir órgano con sistema."
+          ],
+          "minutos": 10
+        }
+      },
+      "diagrama": "organo-tejidos",
+      "preguntas": [
+        {
+          "id": "co-organos-sistemas-1",
+          "enunciado": "¿Qué es un órgano?",
+          "opciones": [
+            "Varios tejidos que trabajan juntos",
+            "Un grupo de células iguales",
+            "Varios sistemas juntos"
+          ],
+          "correcta": 0,
+          "explicacion": "El estómago es un ejemplo."
+        },
+        {
+          "id": "co-organos-sistemas-2",
+          "enunciado": "El estómago, el intestino y el hígado forman...",
+          "opciones": [
+            "El sistema digestivo",
+            "Un tejido",
+            "Una célula"
+          ],
+          "correcta": 0,
+          "explicacion": "Colaboran en la digestión."
+        },
+        {
+          "id": "co-organos-sistemas-3",
+          "enunciado": "¿Qué tejido del estómago lo hace contraerse?",
+          "opciones": [
+            "Muscular",
+            "Epitelial",
+            "Conectivo"
+          ],
+          "correcta": 0,
+          "explicacion": "Mezcla y empuja la comida."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "reproduccion",
+      "titulo": "Reproducción asexual y sexual",
+      "resumen": "Copias rápidas o mezcla con variedad.",
+      "anio": 6,
+      "etiqueta": "Paso 6",
+      "nivel": "intermedio",
+      "requiere": [
+        "organos-sistemas"
+      ],
+      "ficha": {
+        "idea": "Los seres vivos se reproducen de dos maneras. En la reproducción asexual, un solo progenitor produce hijos idénticos a él, por mitosis. En la sexual, dos progenitores aportan gametos hechos por meiosis, y los hijos son distintos entre sí.",
+        "contexto": [
+          {
+            "titulo": "Asexual",
+            "texto": "Bipartición (bacterias), gemación (hidra, levadura), fragmentación (estrella de mar), esquejes y tubérculos (yuca, papa)."
+          },
+          {
+            "titulo": "Sexual",
+            "texto": "Unión de gametos: óvulo y espermatozoide en animales; en las plantas con flor, el polen lleva el gameto masculino."
+          },
+          {
+            "titulo": "Ventajas de la asexual",
+            "texto": "Es rápida, sencilla y no necesita pareja."
+          },
+          {
+            "titulo": "Ventajas de la sexual",
+            "texto": "Produce variedad: ante un cambio del ambiente o una enfermedad, es más probable que algunos sobrevivan."
+          }
+        ],
+        "evidencia": [
+          "Los bananos que se cultivan son clones; en el siglo XX una enfermedad (mal de Panamá) acabó con la variedad Gros Michel, y hoy amenaza a la Cavendish."
+        ],
+        "limites": "Muchos seres usan las dos formas, como las fresas, que tienen flores y también estolones.",
+        "cuaderno": {
+          "facil": [
+            "Asexual: un progenitor, hijos iguales.",
+            "Sexual: dos progenitores, hijos distintos."
+          ],
+          "media": [
+            "Asexual por mitosis; sexual con meiosis y fecundación.",
+            "Ejemplos asexuales: bipartición, gemación, esquejes."
+          ],
+          "avanzada": [
+            "La variedad ayuda a sobrevivir a los cambios.",
+            "El banano Gros Michel: un clon que una enfermedad casi acabó."
+          ]
+        },
+        "docente": {
+          "abrir": "Si siembras un esqueje de rosa, ¿la nueva planta será igual o distinta a la original?",
+          "actividad": "Usen el diagrama con la plaga en las dos pestañas y comparen. Luego jueguen «¿Asexual o sexual?» y discutan por qué los agricultores prefieren a veces los clones.",
+          "errores": [
+            "Creer que las plantas solo se reproducen asexualmente.",
+            "Creer que la reproducción asexual es «peor» en todo caso."
+          ],
+          "minutos": 10
+        }
+      },
+      "diagrama": "reproduccion-tipos",
+      "juego": "reproduccion-juego",
+      "preguntas": [
+        {
+          "id": "co-reproduccion-1",
+          "enunciado": "¿Cómo son los hijos de la reproducción asexual?",
+          "opciones": [
+            "Iguales al progenitor",
+            "Distintos entre sí",
+            "Mezcla de dos padres"
+          ],
+          "correcta": 0,
+          "explicacion": "Se forman por mitosis."
+        },
+        {
+          "id": "co-reproduccion-2",
+          "enunciado": "¿Qué ventaja tiene la reproducción sexual?",
+          "opciones": [
+            "Produce variedad",
+            "Es más rápida",
+            "No necesita gametos"
+          ],
+          "correcta": 0,
+          "explicacion": "La variedad ayuda ante cambios del ambiente."
+        },
+        {
+          "id": "co-reproduccion-3",
+          "enunciado": "Una hidra forma una yema que se suelta. Es reproducción...",
+          "opciones": [
+            "Asexual, por gemación",
+            "Sexual",
+            "Por fecundación"
+          ],
+          "correcta": 0,
+          "explicacion": "Hay un solo progenitor."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}
