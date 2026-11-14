@@ -310,7 +310,123 @@
           "explicacion": "Tienen uno de cada par, pero cada uno en forma de X."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "diapositivas": [
+        {
+          "titulo": "Meiosis I, fase a fase",
+          "visual": {
+            "tipo": "escena",
+            "id": "meiosis",
+            "fases": [
+              {
+                "id": "interfase",
+                "nombre": "Interfase",
+                "texto": "La célula copia su ADN. Tiene dos cromosomas de cada par: uno de la madre y uno del padre.",
+                "nota": "Igual que antes de una mitosis.",
+                "marcas": [
+                  {
+                    "x": 250,
+                    "y": 110,
+                    "texto": "Oscuro = vino de la madre. Claro = vino del padre. Es una célula diploide (2n)."
+                  }
+                ]
+              },
+              {
+                "id": "profase-i",
+                "nombre": "Profase I",
+                "texto": "Aparecen los cromosomas y cada uno busca a su homólogo: se juntan en parejas.",
+                "nota": "Esto no pasa en la mitosis.",
+                "marcas": [
+                  {
+                    "x": 150,
+                    "y": 108,
+                    "texto": "Una pareja de homólogos: mismo tamaño, mismos genes. Uno de la madre (oscuro) y otro del padre (claro)."
+                  }
+                ]
+              },
+              {
+                "id": "entrecruzamiento",
+                "nombre": "Entrecruzamiento",
+                "texto": "Dentro de cada pareja, los homólogos intercambian un trozo. Mira cómo un brazo cambia de color.",
+                "nota": "Es una de las razones por las que los hermanos no son iguales.",
+                "nivel": "intermedio",
+                "marcas": [
+                  {
+                    "x": 262,
+                    "y": 196,
+                    "texto": "Ahora hay cromátidas mezcladas: parte de la madre y parte del padre."
+                  }
+                ]
+              },
+              {
+                "id": "metafase-i",
+                "nombre": "Metafase I",
+                "texto": "Las parejas se alinean en el centro: un homólogo a cada lado.",
+                "nota": "Qué homólogo queda a cada lado es al azar.",
+                "marcas": [
+                  {
+                    "x": 200,
+                    "y": 60,
+                    "texto": "Van en parejas, no en fila de uno en uno como en la mitosis."
+                  },
+                  {
+                    "x": 96,
+                    "y": 150,
+                    "texto": "El huso jala a cada homólogo desde su lado."
+                  }
+                ]
+              },
+              {
+                "id": "anafase-i",
+                "nombre": "Anafase I",
+                "texto": "Se separan los homólogos completos. Cada uno sigue en forma de X.",
+                "nota": "Clave: en la anafase I se separan los pares.",
+                "marcas": [
+                  {
+                    "x": 130,
+                    "y": 62,
+                    "texto": "Viaja el cromosoma entero, con sus dos cromátidas: no se separan las copias."
+                  }
+                ]
+              },
+              {
+                "id": "telofase-i",
+                "nombre": "Telofase I",
+                "texto": "Se forman dos células, cada una con un cromosoma de cada par.",
+                "marcas": [
+                  {
+                    "x": 105,
+                    "y": 92,
+                    "texto": "Ya tiene la mitad de cromosomas: es haploide (n), aunque cada uno sigue duplicado."
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "¿Qué se separa?",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "👫",
+              "titulo": "Anafase I (meiosis)",
+              "puntos": [
+                "Se separan los homólogos",
+                "Cada uno sigue en X"
+              ]
+            },
+            "der": {
+              "icono": "✂️",
+              "titulo": "Anafase (mitosis)",
+              "puntos": [
+                "Se separan las cromátidas",
+                "Cada lado recibe una copia"
+              ]
+            }
+          }
+        }
+      ]
     },
     {
       "id": "meiosis-ii",
@@ -407,7 +523,98 @@
           "explicacion": "Por eso el número queda a la mitad."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "diapositivas": [
+        {
+          "titulo": "Meiosis II, fase a fase",
+          "visual": {
+            "tipo": "escena",
+            "id": "meiosis",
+            "fases": [
+              {
+                "id": "telofase-i",
+                "nombre": "Punto de partida",
+                "texto": "Empezamos con las dos células que dejó la meiosis I.",
+                "marcas": [
+                  {
+                    "x": 295,
+                    "y": 92,
+                    "texto": "Entre las dos divisiones no se copia el ADN otra vez."
+                  }
+                ]
+              },
+              {
+                "id": "metafase-ii",
+                "nombre": "Metafase II",
+                "texto": "En cada célula los cromosomas se alinean en el centro, como en una mitosis.",
+                "marcas": [
+                  {
+                    "x": 48,
+                    "y": 150,
+                    "texto": "Ahora van en fila de uno en uno, sujetos desde arriba y desde abajo."
+                  }
+                ]
+              },
+              {
+                "id": "anafase-ii",
+                "nombre": "Anafase II",
+                "texto": "Se separan las cromátidas hermanas hacia extremos opuestos.",
+                "nota": "Igual que en la anafase de la mitosis.",
+                "marcas": [
+                  {
+                    "x": 60,
+                    "y": 150,
+                    "texto": "Cada cromátida pasa a ser un cromosoma simple."
+                  }
+                ]
+              },
+              {
+                "id": "gametos",
+                "nombre": "Cuatro gametos",
+                "texto": "Resultan cuatro células haploides. Compara los colores: ninguna es igual a otra.",
+                "marcas": [
+                  {
+                    "x": 162,
+                    "y": 124,
+                    "texto": "Un cromosoma de cada par, con trozos de la madre y del padre."
+                  },
+                  {
+                    "x": 238,
+                    "y": 176,
+                    "texto": "En los hombres serán espermatozoides; en las mujeres, un óvulo y tres células pequeñas."
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Mitad y distintas",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🧬",
+            "valor": "46 → 23",
+            "texto": "Una célula humana con 46 cromosomas da cuatro gametos con 23 cada uno"
+          },
+          "puntos": [
+            "Al unirse óvulo y espermatozoide: 23 + 23 = 46"
+          ]
+        },
+        {
+          "titulo": "¿Lo tienes?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Qué produce una meiosis?",
+            "opciones": [
+              "Dos células iguales a la madre",
+              "Cuatro células con la mitad de cromosomas, distintas entre sí",
+              "Cuatro células iguales con 46 cromosomas"
+            ],
+            "correcta": 1,
+            "explicacion": "Dos divisiones seguidas, sin copiar el ADN entre ellas: cuatro células haploides y distintas."
+          }
+        }
+      ]
     },
     {
       "id": "variedad",

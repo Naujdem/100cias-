@@ -288,3 +288,4 @@ Hooke usa la reconstrucción de Rita Greer (2004, Free Art License, Wikimedia Co
 - Mitosis: las 7 láminas sueltas (interfase, 4 fases, prometafase, «película») se reemplazaron por una sola escena.
 - La barra superior de la presentación muestra el título del paso actual junto a su número.
 - Siguiente paso acordado: si gusta, pasar tema por tema a escenas y unir ficha + diapositivas en una sola cosa.
+- Meiosis (14 nov): escena `meiosis` (`EscenaMeiosis.tsx`, 8 cromátidas que viajan; oscuro = madre, claro = padre; el entrecruzamiento cambia el color de un brazo). Meiosis I: interfase → telofase I (entrecruzamiento desde 9°) + «¿Qué se separa?». Meiosis II: punto de partida → cuatro gametos + 46 → 23 + pregunta.
