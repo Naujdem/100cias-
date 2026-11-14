@@ -12,6 +12,7 @@ import ArmaCelula from './ArmaCelula.tsx'
 import CarreraProteina from './CarreraProteina.tsx'
 import { LisosomaJuego, CitoplasmaJuego, CitoesqueletoJuego, RibosomaJuego, PeroxisomaJuego, ParedMatrizJuego } from './JuegosDecide.tsx'
 import { MitocondriaJuego, NucleoJuego } from './JuegosPropios.tsx'
+import ComparadorRotulado from './ComparadorRotulado.tsx'
 import { DescubridoresJuego, UniPluriJuego, ProEuJuego, AnimalVegetalJuego, CicloJuego, DiploideJuego, MetabolismoJuego, TejidosVegetalesJuego, SistemasJuego } from './JuegosDecide2.tsx'
 import FasesMitosis from './FasesMitosis.tsx'
 import MeiosisJuego from './MeiosisJuego.tsx'
@@ -70,6 +71,7 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'pared-juego': ParedMatrizJuego,
   'mitocondria-juego': MitocondriaJuego,
   'nucleo-juego': NucleoJuego,
+  'comparador-rotulado': ComparadorRotulado,
   'descubridores-juego': DescubridoresJuego,
   'unipluri-juego': UniPluriJuego,
   'proeu-juego': ProEuJuego,
