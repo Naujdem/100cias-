@@ -1441,6 +1441,7 @@
         }
       ],
       "diagrama": "celula-quien-hace",
+      "juego": "celula-urgencias",
       "preguntas": [
         {
           "id": "ce-cc-1",

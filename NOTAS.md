@@ -205,3 +205,8 @@ Hooke usa la reconstrucción de Rita Greer (2004, Free Art License, Wikimedia Co
 ## «Acércate» con planta (13 nov, noche)
 - «Acércate» tiene selector de ejemplo (persona o planta). La planta reutiliza dibujos existentes (célula vegetal rotulada, tejido vegetal, órganos de la planta) y suma dos sencillos (cloroplasto y hoja) dentro de `NivelesOrganizacion.tsx`. Vástago y organismo comparten dibujo.
 - El dibujo del corazón (`ilustraciones/Niveles.tsx`) ahora dice «Nervioso: ajusta el ritmo», igual que «Quita un tejido».
+
+## Tema 3 · Urgencias en la célula (13 nov, noche)
+- Segundo minijuego del tema 3: `components/diagramas/CelulaUrgencias.tsx`, clave `celula-urgencias`, paso **Juega** del bloque «La célula completa». Llega una célula (animal o vegetal) con un problema y hay que tocar en el dibujo el orgánulo que falla, o elegirlo con las teclas 1–9. 8 casos por ronda de un banco de 11, 3 vidas, puntos con racha, repaso de fallos y mejor puntaje en `cien:urgencias-mejor`. Reutiliza los dibujos y los puntos tocables del explorador.
+- Tramposas: la planta también usa mitocondrias de noche; la pared (no la membrana) da la rigidez. Texto en borrador.
+- Sigue pendiente del tema 3: separar citoesqueleto del citoplasma; fichas de ribosomas, peroxisomas y matriz extracelular/pared; diagramas propios para núcleo, cloroplastos y lisosomas; minijuegos para los demás pasos.
