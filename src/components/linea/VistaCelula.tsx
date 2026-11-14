@@ -3,20 +3,21 @@ import type { PropsVista } from './tipos.ts'
 import { Lienzo } from '../ilustraciones/Dibujo.tsx'
 import { CelulaAnimalCompleta, CelulaVegetalCompleta, PUNTOS_ANIMAL, PUNTOS_VEGETAL } from '../ilustraciones/CelulaEuc.tsx'
 import InsigniaProgreso from '../InsigniaProgreso.tsx'
+import ComparadorRotulado from '../diagramas/ComparadorRotulado.tsx'
 
 // Vista «Célula»: una célula grande que se toca. Cada orgánulo abre su paso; los que el perfil
 // no tiene activos se ven apagados. Debajo, la lista de pasos como respaldo para teclado y lectores.
 
 export default function VistaCelula({ bloques, abierto, onSeleccionar, carril, estados }: PropsVista) {
-  const [tipo, setTipo] = useState<'animal' | 'vegetal'>('animal')
+  const [tipo, setTipo] = useState<'animal' | 'vegetal' | 'comparar'>('animal')
   const [hover, setHover] = useState<string | null>(null)
   const activos = new Set(bloques.map((b) => b.id))
   const puntos = tipo === 'animal' ? PUNTOS_ANIMAL : PUNTOS_VEGETAL
   const actual = puntos.find((p) => p.bloque === abierto)
   return (
-    <div ref={carril} aria-label="Célula eucariota que se toca" className="mx-auto max-w-2xl">
+    <div ref={carril} aria-label="Célula eucariota que se toca" className={`mx-auto ${tipo === 'comparar' ? 'max-w-5xl' : 'max-w-2xl'}`}>
       <div role="group" aria-label="Tipo de célula" className="mb-2 flex gap-2">
-        {([['animal', 'Célula animal'], ['vegetal', 'Célula vegetal']] as const).map(([id, texto]) => (
+        {([['animal', 'Célula animal'], ['vegetal', 'Célula vegetal'], ['comparar', 'Comparar las dos']] as const).map(([id, texto]) => (
           <button
             key={id}
             type="button"
@@ -28,6 +29,10 @@ export default function VistaCelula({ bloques, abierto, onSeleccionar, carril, e
           </button>
         ))}
       </div>
+      {tipo === 'comparar' ? (
+        <ComparadorRotulado />
+      ) : (
+      <>
       <div className="aspect-[4/3] overflow-hidden rounded-2xl border border-[var(--linea)]">
         <Lienzo etiqueta={`Célula ${tipo}: toca un orgánulo para abrir su paso`}>
           {tipo === 'animal' ? <CelulaAnimalCompleta resalta={hover ?? actual?.id} /> : <CelulaVegetalCompleta resalta={hover ?? actual?.id} />}
@@ -68,6 +73,8 @@ export default function VistaCelula({ bloques, abierto, onSeleccionar, carril, e
         </Lienzo>
       </div>
       <p className="mt-1 text-xs text-[var(--suave)]">Toca un orgánulo, o elige un paso de la lista. {hover ? `· ${puntos.find((p) => p.id === hover)?.nombre}` : ''}</p>
+      </>
+      )}
       <ol className="mt-3 grid gap-2 sm:grid-cols-2">
         {bloques.map((b, i) => (
           <li key={b.id}>
