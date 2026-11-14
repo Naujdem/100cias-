@@ -231,3 +231,8 @@ Hooke usa la reconstrucción de Rita Greer (2004, Free Art License, Wikimedia Co
 ## Tema 3 · La carrera de la proteína (13 nov, noche)
 - Cuarto minijuego del tema 3: `components/diagramas/CarreraProteina.tsx`, clave `carrera-proteina`, paso **Juega** de «La ruta de las proteínas». 4 proteínas por ronda de un banco de 6 (insulina, anticuerpo, enzima del lisosoma, canal de agua, actina, enzima de la glucólisis); cada una sale del núcleo y hay que elegir, parada por parada, adónde va (ribosoma libre, retículo, Golgi, membrana, afuera, lisosoma o citosol). Cronómetro; cada error suma 3 s; mejor tiempo en `cien:carrera-mejor`. Teclas 1–7 y →.
 - Minijuegos del tema 3: membrana, ruta de las proteínas, cloroplastos y célula completa.
+
+## Pendiente del tema 3 (en pausa por decisión de JuanMed, 13 nov)
+- Minijuegos para los pasos sin «Juega»: mitocondrias (primero: aún usa el diagrama compartido *energia-celular*), citoplasma, citoesqueleto, núcleo, ribosomas, lisosomas, peroxisomas y pared y matriz.
+- Revisar textos y datos de los pasos nuevos (`VERIFICAR.md`).
+- Se pasa al siguiente tema del área 1.
