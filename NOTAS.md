@@ -304,3 +304,9 @@ Hooke usa la reconstrucción de Rita Greer (2004, Free Art License, Wikimedia Co
 ## Láminas propias para las fichas que salían automáticas (14 nov)
 - División: por qué se dividen, cromosomas (escena `mitosis` con 2 fases: cromatina → cromosoma), control y cáncer (escena `ciclo` con los 3 semáforos), diploide/haploide y variedad (escena `meiosis` con fases elegidas), por qué meiosis, mitosis vs meiosis. Cada una usa además su diagrama interactivo.
 - Metabolismo y De la célula al organismo: enzimas, ATP (escena `respiracion` con 2 fases), comunicación, uniones, tejidos animales (escena `niveles` célula → tejido), tejidos vegetales, órganos y sistemas (escena `niveles` tejido → organismo), reproducción. Con esto ya no queda ninguna ficha con diapositivas automáticas.
+
+## Progresión sin repeticiones (14 nov)
+- Regla acordada con JuanMed: cada idea se explica a fondo en un solo lugar; en los demás, una mención corta con botón «Más sobre esto» (atajo).
+- A fondo: tejidos/órganos/sistemas → tema 9; orgánulos → tema 5; mismo ADN, distintos genes → tema 9 (Diferenciación); endosimbiosis → tema 1; ATP y respiración → tema 8.
+- Tema 2 (Niveles) queda como mapa general: se quitaron «Tres que debes conocer», «Un origen curioso», «Cuatro tejidos animales», «Tejidos de las plantas», «Órganos de las plantas», «Algunos sistemas del cuerpo» y «Y en las plantas», con atajos a los temas que los desarrollan. Mitocondrias, División del trabajo y Células especializadas dejan una línea + atajo.
+- Solo se tocaron las láminas (diapositivas); el texto de las fichas no cambió.

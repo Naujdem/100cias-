@@ -675,13 +675,15 @@
         {
           "titulo": "Mismo ADN, células distintas",
           "visual": {
-            "tipo": "ilustracion",
-            "recurso": "div-mismo-adn",
-            "pie": "Mismo ADN, distintos genes activos"
+            "tipo": "cifra",
+            "icono": "📖",
+            "valor": "Un solo manual",
+            "texto": "Todas las células del cuerpo tienen el mismo ADN; cada tipo usa solo una parte"
           },
           "atajo": {
-            "texto": "De la célula al organismo",
-            "tema": "de-la-celula-al-organismo"
+            "texto": "Diferenciación celular",
+            "tema": "de-la-celula-al-organismo",
+            "bloque": "diferenciacion"
           }
         },
         {

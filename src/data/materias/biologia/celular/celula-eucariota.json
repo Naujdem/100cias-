@@ -1330,6 +1330,11 @@
             "icono": "🔋",
             "valor": "Glucosa + O₂ → ATP",
             "texto": "También sale CO₂ y agua."
+          },
+          "atajo": {
+            "texto": "ATP y respiración, a fondo",
+            "tema": "metabolismo-celular",
+            "bloque": "respiracion-fermentacion"
           }
         },
         {
@@ -1349,12 +1354,13 @@
         {
           "titulo": "Un origen curioso",
           "visual": {
-            "tipo": "ilustracion",
-            "recurso": "endosimbiosis-mito",
-            "pie": "Bacterias que se quedaron dentro de otra célula"
+            "tipo": "cifra",
+            "icono": "🦠",
+            "valor": "Antes fue una bacteria",
+            "texto": "La mitocondria tiene su propio ADN, parecido al de las bacterias"
           },
           "atajo": {
-            "texto": "Teoría endosimbiótica (1.1)",
+            "texto": "Teoría endosimbiótica",
             "tema": "teoria-celular",
             "bloque": "endosimbiosis"
           }
