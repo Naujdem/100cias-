@@ -325,3 +325,97 @@ export function EscenaPorPedazos({ fase }: { fase: string }) {
     </svg>
   )
 }
+
+/* ── ovíparos, vivíparos y ovovivíparos, paso a paso ────────────────────── */
+function Huevo({ x, y, k = 1, corte = false, embrion = 0 }: { x: number; y: number; k?: number; corte?: boolean; embrion?: number }) {
+  return (
+    <g transform={`translate(${x} ${y}) scale(${k})`}>
+      <ellipse rx="22" ry="28" fill={corte ? '#fff8ec' : '#f2e2c8'} stroke="#a88a5a" strokeWidth="2.5" />
+      {corte && <circle cx="0" cy="6" r="12" fill="#ffd34d" stroke="#d9a23a" strokeWidth="1.5" />}
+      {corte && embrion > 0 && <path d="M -6 -4 q 8 -12 14 -2 q 2 8 -6 10 q -8 0 -8 -8 Z" fill="#e8a0a0" stroke="#a04a4a" strokeWidth="1.2" style={{ transition: 'transform 1s', transformOrigin: '0px -2px', transform: `scale(${embrion})` }} />}
+    </g>
+  )
+}
+
+export function EscenaDesarrollo({ fase }: { fase: string }) {
+  const o = paso(fase, 'ovi')
+  const v = paso(fase, 'viv')
+  const w = paso(fase, 'ovov')
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label={`Desarrollo de las crías: ${fase}`} className="h-full w-full">
+      <rect x="-1500" y="-1500" width="3400" height="3300" fill="#f6efe2" />
+
+      {/* ovíparo: gallina */}
+      <g style={ver(o > 0)}>
+        <rect x="0" y="236" width="400" height="70" fill="#d9c08a" />
+        <g style={{ transition: suave, opacity: o === 1 ? 1 : 0.25 }}>
+          <ellipse cx="110" cy="190" rx="56" ry="40" fill="#fff" stroke="#8a7a5a" strokeWidth="3" />
+          <circle cx="158" cy="146" r="20" fill="#fff" stroke="#8a7a5a" strokeWidth="3" />
+          <path d="M 150 126 q 6 -12 12 0 q 6 -12 10 2" fill="#e04848" />
+          <path d="M 176 146 l 14 4 l -14 4 Z" fill="#f2a03a" />
+          <circle cx="162" cy="142" r="2.5" fill="#2b2b2b" />
+          <path d="M 96 228 v 12 M 124 228 v 12" stroke="#f2a03a" strokeWidth="4" />
+        </g>
+        <g style={{ transition: suave, transform: o >= 2 ? 'translate(60px, -60px) scale(1)' : 'none' }}>
+          <g style={{ transition: 'opacity 0.6s', opacity: o === 3 ? 0 : 1 }}><Huevo x={220} y={210} k={o >= 2 ? 2.2 : 1} corte={o >= 2} embrion={o >= 2 ? 1 : 0} /></g>
+        </g>
+        {/* pollito que sale */}
+        <g style={{ transition: 'opacity 0.8s', opacity: o === 3 ? 1 : 0 }}>
+          <path d="M 250 214 l 10 -12 l 8 10 l 10 -12 l 8 12 l 10 -10 l 6 12" fill="none" stroke="#a88a5a" strokeWidth="2.5" />
+          <path d="M 252 214 q 24 34 52 0 Z" fill="#f2e2c8" stroke="#a88a5a" strokeWidth="2.5" />
+          <circle cx="280" cy="176" r="26" fill="#ffd84d" stroke="#d9a23a" strokeWidth="2" />
+          <circle cx="290" cy="168" r="3" fill="#2b2b2b" />
+          <path d="M 304 174 l 10 3 l -10 3 Z" fill="#f2a03a" />
+        </g>
+        <T x={200} y={36} t={['', 'la gallina pone el huevo', 'el embrión crece dentro, alimentado por la yema', 'el pollito rompe el cascarón'][o] ?? ''} c="#8a6a1a" s={13} />
+      </g>
+
+      {/* vivíparo: una perra con su cría dentro */}
+      <g style={ver(v > 0)}>
+        <g style={{ transition: 'opacity 0.7s', opacity: v === 3 ? 0.35 : 1 }}>
+          <ellipse cx="190" cy="160" rx="110" ry="54" fill="#c9a07a" stroke="#7a5a3a" strokeWidth="3" />
+          <circle cx="306" cy="118" r="30" fill="#c9a07a" stroke="#7a5a3a" strokeWidth="3" />
+          <path d="M 300 92 q 4 -20 16 -6 Z" fill="#a07a5a" stroke="#7a5a3a" strokeWidth="2" />
+          <circle cx="316" cy="112" r="3" fill="#2b2b2b" />
+          <path d="M 84 150 q -24 -20 -30 -40" fill="none" stroke="#7a5a3a" strokeWidth="6" strokeLinecap="round" />
+          {[110, 150, 230, 270].map((x) => <path key={x} d={`M ${x} 205 v 40`} stroke="#7a5a3a" strokeWidth="9" strokeLinecap="round" />)}
+          {/* útero en corte */}
+          <ellipse cx="180" cy="168" rx="46" ry="30" fill="#fbd6dc" stroke="#c4607a" strokeWidth="2.5" strokeDasharray="5 4" />
+          <g style={{ transition: 'opacity 0.6s', opacity: v <= 2 ? 1 : 0 }}>
+            <path d="M 166 160 q 14 -18 30 -4 q 8 14 -6 22 q -18 6 -24 -18 Z" fill="#e8a0a0" stroke="#a04a4a" strokeWidth="1.5" style={{ transition: 'transform 1s', transformOrigin: '180px 168px', transform: v >= 2 ? 'scale(1.25)' : 'scale(0.9)' }} />
+          </g>
+          <g style={{ transition: 'opacity 0.6s', opacity: v === 2 ? 1 : 0 }}>
+            <path d="M 196 172 q 14 10 22 -2" fill="none" stroke="#c43c3c" strokeWidth="3" />
+            <ellipse cx="220" cy="166" rx="7" ry="10" fill="#c43c3c" />
+          </g>
+        </g>
+        {/* cachorro que nace */}
+        <g style={{ transition: 'opacity 0.8s, transform 1s', opacity: v === 3 ? 1 : 0, transform: v === 3 ? 'none' : 'translateX(-40px)' }}>
+          <ellipse cx="140" cy="250" rx="34" ry="18" fill="#d8b08a" stroke="#7a5a3a" strokeWidth="2.5" />
+          <circle cx="176" cy="236" r="15" fill="#d8b08a" stroke="#7a5a3a" strokeWidth="2.5" />
+          <circle cx="181" cy="233" r="2.2" fill="#2b2b2b" />
+        </g>
+        <T x={200} y={36} t={['', 'el embrión crece dentro de la madre', 'se alimenta por la placenta y el cordón umbilical', 'nace la cría, ya formada'][v] ?? ''} c="#7a4a3a" s={13} />
+      </g>
+
+      {/* ovovivíparo: serpiente con huevos dentro */}
+      <g style={ver(w > 0)}>
+        <path d="M 40 210 C 90 150 140 250 190 190 C 240 130 290 230 340 170 Q 364 150 372 160" fill="none" stroke="#5aa06a" strokeWidth="40" strokeLinecap="round" style={{ transition: 'opacity 0.7s', opacity: w === 3 ? 0.35 : 1 }} />
+        <circle cx="372" cy="160" r="3" fill="#2b2b2b" style={{ transition: 'opacity 0.7s', opacity: w === 3 ? 0.35 : 1 }} />
+        <g style={{ transition: 'opacity 0.7s', opacity: w <= 2 ? 1 : 0 }}>
+          {[[150, 210], [190, 190], [230, 166]].map(([x, y], k) => <Huevo key={k} x={x} y={y} k={0.6} corte={w >= 2} embrion={w >= 2 ? 1 : 0} />)}
+        </g>
+        {/* crías vivas */}
+        <g style={{ transition: 'opacity 0.8s', opacity: w === 3 ? 1 : 0 }}>
+          {[[90, 266], [170, 272], [250, 264]].map(([x, y], k) => (
+            <g key={k}>
+              <path d={`M ${x - 30} ${y} q 15 -14 30 0 t 30 0`} fill="none" stroke="#7fc08a" strokeWidth="9" strokeLinecap="round" />
+              <circle cx={x + 30} cy={y} r="2" fill="#2b2b2b" />
+            </g>
+          ))}
+        </g>
+        <T x={200} y={36} t={['', 'los huevos se quedan dentro de la madre', 'el embrión se alimenta de la yema, no de la madre', 'las crías nacen vivas'][w] ?? ''} c="#3f7a4a" s={13} />
+      </g>
+    </svg>
+  )
+}
