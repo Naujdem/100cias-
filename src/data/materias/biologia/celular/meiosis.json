@@ -189,7 +189,8 @@
             "id": "pares-homologos"
           }
         }
-      ]
+      ],
+      "juego": "diploide-juego"
     },
     {
       "id": "por-que-meiosis",

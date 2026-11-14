@@ -548,7 +548,8 @@
             }
           }
         }
-      ]
+      ],
+      "juego": "unipluri-juego"
     },
     {
       "id": "division-trabajo",

@@ -1087,7 +1087,8 @@
             "explicacion": "Toda célula proviene de otra célula que ya existía."
           }
         }
-      ]
+      ],
+      "juego": "descubridores-juego"
     },
     {
       "id": "pasteur",

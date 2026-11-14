@@ -310,3 +310,6 @@ Hooke usa la reconstrucción de Rita Greer (2004, Free Art License, Wikimedia Co
 - A fondo: tejidos/órganos/sistemas → tema 9; orgánulos → tema 5; mismo ADN, distintos genes → tema 9 (Diferenciación); endosimbiosis → tema 1; ATP y respiración → tema 8.
 - Tema 2 (Niveles) queda como mapa general: se quitaron «Tres que debes conocer», «Un origen curioso», «Cuatro tejidos animales», «Tejidos de las plantas», «Órganos de las plantas», «Algunos sistemas del cuerpo» y «Y en las plantas», con atajos a los temas que los desarrollan. Mitocondrias, División del trabajo y Células especializadas dejan una línea + atajo.
 - Solo se tocaron las láminas (diapositivas); el texto de las fichas no cambió.
+
+## Minijuegos en los demás temas (14 nov)
+- `JuegosDecide2.tsx` (motor «decide rápido»): ¿Quién lo dijo? (Virchow, tema 1), ¿Una, varias o muchas? (Pluricelulares), ¿Con núcleo o sin núcleo? (Procariota o eucariota), ¿De quién es? (Animal y vegetal), ¿En qué etapa va? (Ciclo celular), ¿2n o n? (Diploides y haploides), ¿Romper o construir? (Enzimas), ¿Qué tejido de la planta? (Tejidos vegetales), ¿Qué sistema? (Órganos y sistemas).

@@ -12,6 +12,7 @@ import ArmaCelula from './ArmaCelula.tsx'
 import CarreraProteina from './CarreraProteina.tsx'
 import { LisosomaJuego, CitoplasmaJuego, CitoesqueletoJuego, RibosomaJuego, PeroxisomaJuego, ParedMatrizJuego } from './JuegosDecide.tsx'
 import { MitocondriaJuego, NucleoJuego } from './JuegosPropios.tsx'
+import { DescubridoresJuego, UniPluriJuego, ProEuJuego, AnimalVegetalJuego, CicloJuego, DiploideJuego, MetabolismoJuego, TejidosVegetalesJuego, SistemasJuego } from './JuegosDecide2.tsx'
 import FasesMitosis from './FasesMitosis.tsx'
 import MeiosisJuego from './MeiosisJuego.tsx'
 import ClasificaCasos, { CASOS_OXIGENO, CASOS_MUERTE, CASOS_TEJIDOS, CASOS_REPRODUCCION } from './ClasificaCasos.tsx'
@@ -69,6 +70,15 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'pared-juego': ParedMatrizJuego,
   'mitocondria-juego': MitocondriaJuego,
   'nucleo-juego': NucleoJuego,
+  'descubridores-juego': DescubridoresJuego,
+  'unipluri-juego': UniPluriJuego,
+  'proeu-juego': ProEuJuego,
+  'animal-vegetal-juego': AnimalVegetalJuego,
+  'ciclo-juego': CicloJuego,
+  'diploide-juego': DiploideJuego,
+  'metabolismo-juego': MetabolismoJuego,
+  'tejidos-vegetales-juego': TejidosVegetalesJuego,
+  'sistemas-juego': SistemasJuego,
   'ciclo-reloj': CicloReloj,
   'fases-mitosis': FasesMitosis,
   'cromosoma-compacta': CromosomaCompacta,

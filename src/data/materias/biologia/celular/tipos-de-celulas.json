@@ -345,7 +345,8 @@
           "explicacion": "Sin núcleo, el ADN queda en una zona del citoplasma llamada nucleoide."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "juego": "proeu-juego"
     },
     {
       "id": "bacterias-arqueas",
@@ -1013,7 +1014,8 @@
           "explicacion": "Las plantas hacen fotosíntesis y también respiran: tienen mitocondrias."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "juego": "animal-vegetal-juego"
     },
     {
       "id": "especializadas",
