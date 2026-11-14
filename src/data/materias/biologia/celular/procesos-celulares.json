@@ -113,7 +113,73 @@
           "explicacion": "Al crecer, el volumen aumenta más rápido que la superficie."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "diapositivas": [
+        {
+          "titulo": "Empezaste siendo una sola célula",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Cuántas células tenías cuando empezaste a existir?",
+            "opciones": [
+              "Una sola",
+              "Unas mil",
+              "Las mismas que ahora"
+            ],
+            "correcta": 0,
+            "explicacion": "Eras un cigoto: una sola célula. Todo lo demás salió de divisiones celulares."
+          }
+        },
+        {
+          "titulo": "De una a billones",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🧫",
+            "valor": "1 → 37 billones",
+            "texto": "Así de muchas células tiene, más o menos, el cuerpo de un adulto"
+          },
+          "puntos": [
+            "Casi todo ese crecimiento es división celular"
+          ]
+        },
+        {
+          "titulo": "¿Para qué se dividen?",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "📏",
+                "titulo": "Crecer",
+                "texto": "de cigoto a adulto"
+              },
+              {
+                "icono": "🩹",
+                "titulo": "Reparar",
+                "texto": "cerrar una herida"
+              },
+              {
+                "icono": "🔄",
+                "titulo": "Reponer",
+                "texto": "el intestino se renueva en días"
+              },
+              {
+                "icono": "🦠",
+                "titulo": "Reproducirse",
+                "texto": "una bacteria se parte en dos"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Una célula, dos hijas",
+          "visual": {
+            "tipo": "diagrama",
+            "id": "division-celular"
+          },
+          "puntos": [
+            "Las dos hijas tienen la misma información que la madre"
+          ]
+        }
+      ]
     },
     {
       "id": "ciclo-celular",
@@ -414,7 +480,87 @@
           "explicacion": "Son 23 pares."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "diapositivas": [
+        {
+          "titulo": "Del hilo a la X",
+          "visual": {
+            "tipo": "escena",
+            "id": "mitosis",
+            "fases": [
+              {
+                "id": "interfase",
+                "nombre": "Cromatina",
+                "texto": "En la interfase el ADN está suelto, enrollado en proteínas: no se ven cromosomas.",
+                "nota": "Si se estirara el ADN de una sola célula humana, mediría unos 2 metros.",
+                "marcas": [
+                  {
+                    "x": 246,
+                    "y": 110,
+                    "texto": "Ese ADN suelto se llama cromatina."
+                  }
+                ]
+              },
+              {
+                "id": "profase",
+                "nombre": "Cromosomas",
+                "texto": "Antes de dividirse, el ADN se enrolla muchísimo y aparecen los cromosomas.",
+                "nota": "Enrollado, se puede repartir sin enredos.",
+                "marcas": [
+                  {
+                    "x": 176,
+                    "y": 124,
+                    "texto": "Cada X son dos cromátidas hermanas, copias idénticas, unidas por el centrómero."
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Enróllalo tú",
+          "visual": {
+            "tipo": "diagrama",
+            "id": "cromosoma-compacta"
+          }
+        },
+        {
+          "titulo": "Las partes de un cromosoma",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "✖️",
+                "titulo": "Cromosoma duplicado",
+                "texto": "forma de X"
+              },
+              {
+                "icono": "➖",
+                "titulo": "Cromátidas hermanas",
+                "texto": "las dos copias idénticas"
+              },
+              {
+                "icono": "🔘",
+                "titulo": "Centrómero",
+                "texto": "el punto donde se unen"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "¿Cuántos tenemos?",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🧬",
+            "valor": "46",
+            "texto": "cromosomas en cada célula del cuerpo humano: 23 pares"
+          },
+          "puntos": [
+            "Perro: 78 · papa: 48",
+            "El número no mide qué tan «avanzado» es un ser vivo"
+          ]
+        }
+      ]
     },
     {
       "id": "mitosis",
@@ -1001,7 +1147,121 @@
           "explicacion": "Así evita pasar el daño a sus hijas."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "diapositivas": [
+        {
+          "titulo": "Semáforos en el ciclo",
+          "visual": {
+            "tipo": "escena",
+            "id": "ciclo",
+            "fases": [
+              {
+                "id": "g1",
+                "nombre": "Control al final de G1",
+                "texto": "¿Hay espacio, alimento y señales para dividirse? Si no, la célula espera o sale a G0.",
+                "marcas": [
+                  {
+                    "x": 110,
+                    "y": 40,
+                    "texto": "Es el control más importante: decide si la célula se divide o no."
+                  }
+                ]
+              },
+              {
+                "id": "g2",
+                "nombre": "Control al final de G2",
+                "texto": "¿Se copió bien todo el ADN? Si hay errores, se detiene a repararlos.",
+                "marcas": [
+                  {
+                    "x": 155,
+                    "y": 80,
+                    "texto": "Si el daño no tiene arreglo, la célula activa la apoptosis."
+                  }
+                ]
+              },
+              {
+                "id": "m",
+                "nombre": "Control en la metafase",
+                "texto": "¿Todos los cromosomas están enganchados al huso? Solo entonces se separan.",
+                "marcas": [
+                  {
+                    "x": 300,
+                    "y": 50,
+                    "texto": "Evita que una hija quede con cromosomas de más o de menos."
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Pruébalo",
+          "visual": {
+            "tipo": "diagrama",
+            "id": "semaforos-ciclo"
+          }
+        },
+        {
+          "titulo": "Cuando fallan los frenos",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "🟢",
+              "titulo": "Célula normal",
+              "puntos": [
+                "Respeta los semáforos",
+                "Se detiene si hay daño"
+              ]
+            },
+            "der": {
+              "icono": "🔴",
+              "titulo": "Célula cancerosa",
+              "puntos": [
+                "Ignora los frenos",
+                "Se divide sin control y forma un tumor"
+              ]
+            }
+          }
+        },
+        {
+          "titulo": "Cuidar el ADN",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🚬",
+                "titulo": "Humo del tabaco",
+                "texto": "daña el ADN de los pulmones"
+              },
+              {
+                "icono": "☀️",
+                "titulo": "Exceso de sol",
+                "texto": "daña el ADN de la piel"
+              },
+              {
+                "icono": "🧴",
+                "titulo": "Protegerse",
+                "texto": "bloqueador, no fumar, revisiones"
+              }
+            ]
+          },
+          "nota": "Un tumor maligno invade otros tejidos y puede extenderse por el cuerpo."
+        },
+        {
+          "titulo": "¿Lo tienes?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Qué pasa en el cáncer?",
+            "opciones": [
+              "Las células dejan de dividirse",
+              "Las células se dividen sin control",
+              "Las células se vuelven haploides"
+            ],
+            "correcta": 1,
+            "explicacion": "Las células pierden los frenos del ciclo y se dividen una y otra vez."
+          }
+        }
+      ]
     }
   ]
 }
