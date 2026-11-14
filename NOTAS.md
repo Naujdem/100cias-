@@ -321,3 +321,9 @@ Hooke usa la reconstrucción de Rita Greer (2004, Free Art License, Wikimedia Co
 - Comparador rotulado (14 nov): `diagramas/ComparadorRotulado.tsx` (`comparador-rotulado`): célula vegetal y animal lado a lado con 17 nombres al centro; al elegir uno (clic o ← →) se ilumina en las dos células con líneas; filtros Todas / Compartidas / Solo vegetal / Solo animal. Va como lámina «Lado a lado, parte por parte» en Célula animal y célula vegetal (tema 4).
 - El comparador rotulado también está en la página del tema 5 («Una célula por dentro»), como tercer botón «Comparar las dos» junto a «Célula animal» y «Célula vegetal».
 - Variedad (meiosis): cierra con gemelos vs mellizos (pregunta, comparación y, para 11°, «ni los gemelos son idénticos del todo»).
+
+## Faltantes del área 1 (14 nov)
+- Nueva ficha **Fotosíntesis** (Metabolismo, paso 4, todos los grados): escena `fotosintesis` (ingredientes → la luz rompe el agua → glucosa → «la pareja» con la respiración), juego «¿Fotosíntesis o respiración?» (`fotoresp-juego`), diagrama `cloroplasto-fotosintesis`.
+- Nueva ficha **¿De dónde salieron las primeras células?** (línea de tiempo de Teoría celular, 1953, desde 9°): Oparin y Haldane, Miller y Urey; escena `origen` (Tierra primitiva → sopa → aparato → aminoácidos → protocélulas → ancestro común). Autores sin retrato todavía (silueta).
+- **Síntesis de proteínas (transcripción y traducción): decidido ir a fondo en el área 2 (genética).** Cuando exista, la ruta de proteínas del tema 5 debe llevar «Más sobre esto» hacia allá.
+- Escenas en `components/escenas/EscenaOrigenFoto.tsx`.
