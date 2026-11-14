@@ -320,3 +320,4 @@ Hooke usa la reconstrucción de Rita Greer (2004, Free Art License, Wikimedia Co
 - En la página del tema, el botón dice «▶ Empezar la lección» (tecla D). La línea de tiempo de Teoría celular sigue con sus fichas emergentes y «Ver como diapositivas».
 - Comparador rotulado (14 nov): `diagramas/ComparadorRotulado.tsx` (`comparador-rotulado`): célula vegetal y animal lado a lado con 17 nombres al centro; al elegir uno (clic o ← →) se ilumina en las dos células con líneas; filtros Todas / Compartidas / Solo vegetal / Solo animal. Va como lámina «Lado a lado, parte por parte» en Célula animal y célula vegetal (tema 4).
 - El comparador rotulado también está en la página del tema 5 («Una célula por dentro»), como tercer botón «Comparar las dos» junto a «Célula animal» y «Célula vegetal».
+- Variedad (meiosis): cierra con gemelos vs mellizos (pregunta, comparación y, para 11°, «ni los gemelos son idénticos del todo»).
