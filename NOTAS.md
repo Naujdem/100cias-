@@ -222,3 +222,8 @@ Hooke usa la reconstrucción de Rita Greer (2004, Free Art License, Wikimedia Co
 - `components/diagramas/CelulaEucOrg.tsx`: *nucleo-receta* (4 pasos: ADN guardado → copia de ARN → sale por un poro → ribosoma), *cloroplasto-fotosintesis* (encender luz, agua y CO₂; sin uno de ellos no hay glucosa ni oxígeno) y *lisosoma-digiere* (digerir una bacteria por fagocitosis o reciclar una mitocondria vieja por autofagia, 4 pasos con deslizador).
 - Antes núcleo usaba el explorador, cloroplastos compartía *energia-celular* con mitocondrias y lisosomas usaba *celula-quien-hace*. El explorador y *energia-celular* siguen en uso en otros pasos.
 - Pendiente del tema 3: minijuegos para los pasos que aún no tienen (solo membrana y célula completa tienen «Juega»).
+
+## Tema 3 · Arma la célula (13 nov, noche)
+- PR #6 a #9 fusionados con permiso de JuanMed.
+- Tercer minijuego del tema 3: `components/diagramas/ArmaCelula.tsx`, clave `arma-celula`, paso **Juega** de «Cloroplastos y vacuola». Se elige célula animal o vegetal y se meten las piezas que le corresponden, de 12 (incluye dos que no son de ninguna: nucleoide y pared de bacteria). «Comprobar» dice qué sobra o falta y por qué; una estrella por cada célula completa (`cien:arma-celula`). Teclas: 1–9, 0, -, = alternan piezas; ← → cambian de célula.
+- Simplificaciones a revisar: lisosomas como «típicos de la animal»; centriolos ausentes en la mayoría de plantas con flores.
