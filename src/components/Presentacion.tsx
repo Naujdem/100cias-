@@ -99,7 +99,16 @@ export default function Presentacion({ bloques, inicio, temaId, unidad = 'Hito',
       if (t && /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName)) return
       if (t?.closest('[data-zoomed="true"]') && e.key.startsWith('Arrow')) return
       const actual = items[iRef.current]
-      const enDiagrama = actual.d.tipo === 'diagrama' || (actual.d.tipo === 'lamina' && actual.d.lamina.visual?.tipo === 'diagrama')
+      // «I» cambia entre la lámina y su interactivo
+      if ((e.key === 'i' || e.key === 'I') && !e.ctrlKey && !e.metaKey && !e.altKey) {
+        const b = caja.current?.querySelector<HTMLButtonElement>('[data-interactuar]')
+        if (b) {
+          e.preventDefault()
+          b.click()
+          return
+        }
+      }
+      const enDiagrama = actual.d.tipo === 'diagrama' || (actual.d.tipo === 'lamina' && actual.d.lamina.visual?.tipo === 'diagrama') || !!caja.current?.querySelector('[data-diagrama]')
 
       if (enDiagrama && (e.key === 'ArrowRight' || e.key === 'ArrowLeft')) {
         const dir = e.key === 'ArrowRight' ? 1 : -1
@@ -285,7 +294,34 @@ function Etiqueta({ children }: { children: string }) {
 /** Imagen del bloque, siempre en el mismo sitio: así el estudiante la reconoce y el texto cambia a su lado. */
 function Figura({ b, children }: { b: Bloque; children: ReactNode }) {
   const img = b.ilustraciones?.[0]
-  if (!img) return <div className="mx-auto w-full max-w-3xl">{children}</div>
+  const Diagrama = b.diagrama ? DIAGRAMAS[b.diagrama] : undefined
+  const [vivo, setVivo] = useState(false)
+  const boton = Diagrama && (
+    <button
+      type="button"
+      data-interactuar
+      aria-pressed={vivo}
+      onClick={() => setVivo(!vivo)}
+      className="min-h-10 rounded-full border border-[var(--acento)] bg-[var(--tarjeta)] px-4 text-sm font-bold text-[var(--acento)] shadow-sm aria-pressed:bg-[var(--acento)] aria-pressed:text-white"
+    >
+      {vivo ? '← Volver a la lámina (I)' : '✋ Interactuar (I)'}
+    </button>
+  )
+  // el interactivo ocupa todo el ancho: sus controles no caben en media pantalla
+  if (vivo && Diagrama) {
+    return (
+      <div>
+        <div className="mb-2 flex items-center justify-between gap-3">
+          <Etiqueta>{`Interactivo · ${b.titulo}`}</Etiqueta>
+          {boton}
+        </div>
+        <div data-diagrama className="rounded-2xl border border-[var(--linea)] bg-[var(--tarjeta)] p-3 sm:p-4">
+          <Resguardo titulo="No se pudo mostrar el diagrama."><Diagrama /></Resguardo>
+        </div>
+      </div>
+    )
+  }
+  if (!img) return <div className="mx-auto w-full max-w-3xl">{children}{boton && <div className="mt-4">{boton}</div>}</div>
   return (
     <div className="grid items-center gap-5 md:grid-cols-[1.05fr_1fr] md:gap-8">
       <div className="order-2 min-w-0 md:order-1">{children}</div>
@@ -294,6 +330,7 @@ function Figura({ b, children }: { b: Bloque; children: ReactNode }) {
           <Contenido i={img} />
         </div>
         <figcaption className="mt-2 hidden text-sm text-[var(--suave)] md:block">{img.pie}</figcaption>
+        {boton && <div className="mt-2 flex justify-center">{boton}</div>}
       </figure>
     </div>
   )
