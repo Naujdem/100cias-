@@ -19,20 +19,20 @@ interface Parte {
 
 const PARTES: Parte[] = [
   { id: 'pared', nombre: 'Pared celular', en: 'vegetal', texto: 'Capa rígida de celulosa por fuera de la membrana. Da forma y sostén.', veg: [[34, 200]] },
-  { id: 'membrana', nombre: 'Membrana celular', en: 'ambas', texto: 'La frontera de toda célula: controla qué entra y qué sale.', veg: [[58, 140]], ani: [[474, 200]] },
-  { id: 'citoplasma', nombre: 'Citoplasma', en: 'ambas', texto: 'El interior, entre la membrana y el núcleo, donde flotan los orgánulos.', veg: [[100, 300]], ani: [[700, 310]] },
+  { id: 'membrana', nombre: 'Membrana celular', en: 'ambas', texto: 'La frontera de toda célula: controla qué entra y qué sale.', veg: [[76, 140]], ani: [[474, 200]] },
+  { id: 'citoplasma', nombre: 'Citoplasma', en: 'ambas', texto: 'El interior, entre la membrana y el núcleo, donde flotan los orgánulos.', veg: [[112, 318]], ani: [[700, 310]] },
   { id: 'nucleo', nombre: 'Núcleo', en: 'ambas', texto: 'Guarda el ADN: las instrucciones de la célula.', veg: [[140, 118]], ani: [[600, 140]] },
   { id: 'nucleolo', nombre: 'Nucléolo', en: 'ambas', texto: 'Dentro del núcleo: ahí se arman las piezas de los ribosomas.', veg: [[131, 111]], ani: [[591, 133]] },
-  { id: 'ribosomas', nombre: 'Ribosomas', en: 'ambas', texto: 'Diminutos, fabrican proteínas. Libres o pegados al retículo rugoso.', veg: [[108, 196]], ani: [[650, 74]] },
+  { id: 'ribosomas', nombre: 'Ribosomas', en: 'ambas', texto: 'Diminutos, fabrican proteínas. Libres o pegados al retículo rugoso.', veg: [[160, 190]], ani: [[650, 74]] },
   { id: 'rer', nombre: 'Retículo rugoso', en: 'ambas', texto: 'Membranas con ribosomas: fabrica y transporta proteínas.', veg: [[214, 104]], ani: [[672, 118]] },
   { id: 'rel', nombre: 'Retículo liso', en: 'ambas', texto: 'Sin ribosomas: fabrica lípidos y ayuda a eliminar tóxicos.', veg: [[236, 166]], ani: [[704, 178]] },
-  { id: 'golgi', nombre: 'Aparato de Golgi', en: 'ambas', texto: 'Empaca las proteínas en vesículas y las envía.', veg: [[92, 286]], ani: [[612, 290]] },
-  { id: 'mito', nombre: 'Mitocondria', en: 'ambas', texto: 'Saca la energía de la glucosa (ATP). Las plantas también la tienen.', veg: [[94, 108], [126, 250]], ani: [[522, 140], [722, 244]] },
-  { id: 'perox', nombre: 'Peroxisoma', en: 'ambas', texto: 'Desactiva sustancias peligrosas, como el agua oxigenada.', veg: [[282, 150]], ani: [[662, 222]] },
+  { id: 'golgi', nombre: 'Aparato de Golgi', en: 'ambas', texto: 'Empaca las proteínas en vesículas y las envía.', veg: [[142, 282]], ani: [[612, 290]] },
+  { id: 'mito', nombre: 'Mitocondria', en: 'ambas', texto: 'Saca la energía de la glucosa (ATP). Las plantas también la tienen.', veg: [[116, 198], [126, 250]], ani: [[522, 140], [722, 244], [566, 300]] },
+  { id: 'perox', nombre: 'Peroxisoma', en: 'ambas', texto: 'Desactiva sustancias peligrosas, como el agua oxigenada.', veg: [[266, 140]], ani: [[662, 222]] },
   { id: 'vacuola', nombre: 'Vacuola', en: 'ambas', texto: 'En la vegetal es enorme y mantiene la célula firme; en la animal son pequeñas y pocas.', veg: [[222, 244]], ani: [[522, 262]] },
-  { id: 'citoesq', nombre: 'Microtúbulos', en: 'ambas', texto: 'Parte del citoesqueleto: rieles y andamio de la célula.', veg: [[246, 84]], ani: [[748, 206]] },
+  { id: 'citoesq', nombre: 'Microtúbulos', en: 'ambas', texto: 'Parte del citoesqueleto: rieles y andamio de la célula.', veg: [[164, 228]], ani: [[748, 206]] },
   { id: 'cloro', nombre: 'Cloroplasto', en: 'vegetal', texto: 'Captura la luz y hace la fotosíntesis.', veg: [[78, 168], [176, 322]] },
-  { id: 'amilo', nombre: 'Amiloplasto', en: 'vegetal', texto: 'Guarda almidón como reserva, por ejemplo en la papa.', veg: [[248, 316]] },
+  { id: 'amilo', nombre: 'Amiloplasto', en: 'vegetal', texto: 'Guarda almidón como reserva, por ejemplo en la papa.', veg: [[222, 316]] },
   { id: 'liso', nombre: 'Lisosoma', en: 'animal', texto: 'Digiere y recicla. En la vegetal, la vacuola cumple buena parte de ese trabajo.', ani: [[544, 210], [692, 300]] },
   { id: 'centriolos', nombre: 'Centríolos', en: 'animal', texto: 'Organizan el huso al dividirse. Las plantas con flor no los tienen.', ani: [[724, 140]] },
 ]
@@ -102,23 +102,23 @@ export default function ComparadorRotulado() {
 
           {/* ── vegetal ── */}
           <path d={HEX} fill="#5c9e48" stroke="#3f7a35" strokeWidth="3" {...g('pared')} />
-          <path d={HEX_IN} fill="#cfe7b8" stroke="#2f6b2a" strokeWidth="3" {...g('membrana')} />
-          <path d={HEX_IN} fill="#cfe7b8" stroke="none" transform="translate(180 200) scale(0.97) translate(-180 -200)" {...g('citoplasma')} />
+          <path d={HEX_IN} fill="#cfe7b8" stroke="#c0603a" strokeWidth="3.5" {...g('membrana')} />
+          <path d={HEX_IN} fill="#cfe7b8" stroke="none" transform="translate(180 200) scale(0.975) translate(-180 -200)" {...g('citoplasma')} />
           <g {...g('vacuola')}><path d="M 176 210 Q 184 170 240 176 Q 300 186 292 248 Q 282 300 226 296 Q 170 290 176 210 Z" fill="#bfe0f5" stroke="#3b6fb6" strokeWidth="3" /></g>
           <g {...g('nucleo')}><g transform="translate(140 118) scale(0.85)"><Nucleo /></g></g>
           <circle cx="131" cy="111" r="9" fill="#9a6fc6" {...g('nucleolo')} />
           <g {...g('rer')}><g transform="translate(214 104) rotate(-15) scale(0.75)"><RetRugoso /></g></g>
           <g {...g('rel')}><g transform="translate(236 166) scale(0.7)"><RetLiso /></g></g>
-          <g {...g('golgi')}><g transform="translate(92 286) scale(0.8)"><Golgi /></g></g>
-          <g {...g('mito')}><g transform="translate(94 108) scale(0.7)"><Mito a={20} /></g><g transform="translate(126 250) scale(0.7)"><Mito a={-30} /></g></g>
+          <g {...g('golgi')}><g transform="translate(142 282) scale(0.75)"><Golgi /></g></g>
+          <g {...g('mito')}><g transform="translate(116 198) scale(0.62)"><Mito a={20} /></g><g transform="translate(126 250) scale(0.7)"><Mito a={-30} /></g></g>
           <g {...g('cloro')}><g transform="translate(78 168) scale(0.6)"><Cloroplasto a={70} /></g><g transform="translate(176 322) scale(0.6)"><Cloroplasto a={0} /></g><g transform="translate(286 220) scale(0.5)"><Cloroplasto a={80} /></g></g>
           <g {...g('amilo')}>
-            <ellipse cx="248" cy="316" rx="14" ry="10" fill="#efe2f6" stroke="#8a5aa8" strokeWidth="2" />
-            <path d="M 240 316 a 8 6 0 0 1 16 0 M 244 316 a 4 3 0 0 1 8 0" fill="none" stroke="#8a5aa8" strokeWidth="1.5" />
+            <ellipse cx="222" cy="316" rx="14" ry="10" fill="#efe2f6" stroke="#8a5aa8" strokeWidth="2" />
+            <path d="M 214 316 a 8 6 0 0 1 16 0 M 218 316 a 4 3 0 0 1 8 0" fill="none" stroke="#8a5aa8" strokeWidth="1.5" />
           </g>
-          <g {...g('perox')}><Peroxisoma x={282} y={150} /></g>
-          <g {...g('citoesq')} stroke="#5aa05a" strokeWidth="2.5" strokeLinecap="round"><line x1="232" y1="78" x2="262" y2="92" /><line x1="236" y1="90" x2="258" y2="78" /></g>
-          <g {...g('ribosomas')} fill="#6b4a2a">{[[108, 196], [70, 220], [200, 140], [160, 190], [210, 300], [70, 120]].map(([x, y]) => <circle key={`${x}${y}`} cx={x} cy={y} r="2.6" />)}</g>
+          <g {...g('perox')}><Peroxisoma x={266} y={140} /></g>
+          <g {...g('citoesq')} stroke="#5aa05a" strokeWidth="2.5" strokeLinecap="round"><line x1="150" y1="222" x2="178" y2="234" /><line x1="154" y1="236" x2="174" y2="220" /></g>
+          <g {...g('ribosomas')} fill="#6b4a2a">{[[96, 236], [70, 220], [200, 140], [160, 190], [210, 300], [118, 96]].map(([x, y]) => <circle key={`${x}${y}`} cx={x} cy={y} r="2.6" />)}</g>
 
           {/* ── animal ── */}
           <circle cx="620" cy="200" r="150" fill="#d8ecfa" stroke="#3b6fb6" strokeWidth="4" {...g('membrana')} />
@@ -136,8 +136,8 @@ export default function ComparadorRotulado() {
             <rect x="712" y="134" width="20" height="8" rx="2" fill="#2f8a6a" />
             <rect x="726" y="130" width="8" height="20" rx="2" fill="#2f8a6a" />
           </g>
-          <g {...g('citoesq')} stroke="#5aa05a" strokeWidth="2.5" strokeLinecap="round"><line x1="740" y1="190" x2="756" y2="226" /><line x1="748" y1="186" x2="742" y2="226" /><line x1="500" y1="96" x2="520" y2="112" /></g>
-          <g {...g('ribosomas')} fill="#6b4a2a">{[[650, 74], [560, 200], [700, 140], [640, 250], [520, 180], [750, 280]].map(([x, y]) => <circle key={`${x}${y}`} cx={x} cy={y} r="2.6" />)}</g>
+          <g {...g('citoesq')} stroke="#5aa05a" strokeWidth="2.5" strokeLinecap="round"><line x1="740" y1="190" x2="756" y2="226" /><line x1="748" y1="186" x2="742" y2="226" /><line x1="522" y1="118" x2="538" y2="134" /></g>
+          <g {...g('ribosomas')} fill="#6b4a2a">{[[650, 74], [560, 200], [700, 140], [640, 250], [520, 180], [728, 270]].map(([x, y]) => <circle key={`${x}${y}`} cx={x} cy={y} r="2.6" />)}</g>
 
           {/* líneas desde el nombre elegido */}
           {(() => {
