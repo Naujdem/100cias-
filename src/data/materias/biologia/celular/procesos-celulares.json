@@ -419,7 +419,200 @@
           "explicacion": "Son parte del citoesqueleto."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "diapositivas": [
+        {
+          "titulo": "Repartir sin que nadie quede con menos",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Tienes 46 libros y debes dar los mismos 46 a dos personas. ¿Qué haces primero?",
+            "opciones": [
+              "Partir cada libro por la mitad",
+              "Dar 23 a cada una",
+              "Sacar una copia de cada libro"
+            ],
+            "correcta": 2,
+            "explicacion": "Así hace la célula: primero copia su ADN y luego reparte una copia completa a cada célula hija."
+          }
+        },
+        {
+          "titulo": "Antes de empezar, el ADN ya está copiado",
+          "visual": {
+            "tipo": "ilustracion",
+            "recurso": "celula-interfase",
+            "pie": "Interfase: el ADN está suelto dentro del núcleo"
+          },
+          "puntos": [
+            "En la interfase la célula copió su ADN",
+            "Todavía no se ven los cromosomas"
+          ],
+          "atajo": {
+            "texto": "El ciclo celular",
+            "tema": "procesos-celulares",
+            "bloque": "ciclo-celular"
+          }
+        },
+        {
+          "titulo": "La mitosis en cuatro fases",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🧶",
+                "titulo": "Profase",
+                "texto": "Aparecen los cromosomas"
+              },
+              {
+                "icono": "➖",
+                "titulo": "Metafase",
+                "texto": "Se alinean en el centro"
+              },
+              {
+                "icono": "↔️",
+                "titulo": "Anafase",
+                "texto": "Se separan"
+              },
+              {
+                "icono": "⚪⚪",
+                "titulo": "Telofase",
+                "texto": "Se forman dos núcleos"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "1. Profase: aparecen los cromosomas",
+          "visual": {
+            "tipo": "ilustracion",
+            "recurso": "celula-profase",
+            "pie": "El ADN se enrolla y el núcleo se deshace"
+          },
+          "puntos": [
+            "El ADN se enrolla y se vuelve visible",
+            "La envoltura del núcleo se deshace",
+            "Empieza a formarse el huso"
+          ]
+        },
+        {
+          "titulo": "2. Metafase: todos al centro",
+          "visual": {
+            "tipo": "ilustracion",
+            "recurso": "celula-metafase",
+            "pie": "Los cromosomas en fila, enganchados al huso"
+          },
+          "puntos": [
+            "Los cromosomas se alinean en el centro",
+            "El huso los sujeta desde los dos lados"
+          ],
+          "nota": "Truco: «meta» → en medio."
+        },
+        {
+          "titulo": "3. Anafase: se separan",
+          "visual": {
+            "tipo": "ilustracion",
+            "recurso": "celula-anafase",
+            "pie": "Cada cromátida viaja a un extremo"
+          },
+          "puntos": [
+            "Las cromátidas hermanas se separan",
+            "El huso las jala a extremos opuestos",
+            "Cada lado recibe una copia de cada cromosoma"
+          ],
+          "nota": "Truco: «ana» → aparte."
+        },
+        {
+          "titulo": "4. Telofase: dos núcleos nuevos",
+          "visual": {
+            "tipo": "ilustracion",
+            "recurso": "celula-telofase",
+            "pie": "Un núcleo en cada extremo; la célula se parte"
+          },
+          "puntos": [
+            "Se forma un núcleo nuevo en cada extremo",
+            "Los cromosomas se vuelven a soltar",
+            "La citocinesis termina de partir la célula"
+          ],
+          "atajo": {
+            "texto": "Citocinesis",
+            "tema": "procesos-celulares",
+            "bloque": "citocinesis"
+          }
+        },
+        {
+          "titulo": "¿Cromosoma o cromátida?",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "✖️",
+              "titulo": "Cromosoma duplicado",
+              "puntos": [
+                "Tiene forma de X",
+                "Son dos cromátidas unidas"
+              ]
+            },
+            "der": {
+              "icono": "➖",
+              "titulo": "Cromátida",
+              "puntos": [
+                "Es cada mitad de la X",
+                "En la anafase se separa y pasa a ser un cromosoma"
+              ]
+            }
+          }
+        },
+        {
+          "titulo": "¿Quién jala los cromosomas?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Qué estructura jala los cromosomas hacia los extremos?",
+            "opciones": [
+              "La membrana celular",
+              "El huso, hecho de microtúbulos",
+              "Los ribosomas"
+            ],
+            "correcta": 1,
+            "explicacion": "El huso está hecho de microtúbulos, que forman parte del citoesqueleto."
+          }
+        },
+        {
+          "titulo": "El resultado: dos copias iguales",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🧬",
+            "valor": "46 → 46 + 46",
+            "texto": "Una célula humana con 46 cromosomas da dos células hijas con 46 cada una"
+          },
+          "puntos": [
+            "Las hijas tienen la misma información que la madre"
+          ]
+        },
+        {
+          "titulo": "Una película, no cuatro fotos",
+          "visual": {
+            "tipo": "diagrama",
+            "id": "division-celular"
+          },
+          "puntos": [
+            "Las fases tienen nombre para estudiarlas",
+            "En la célula todo pasa de forma continua"
+          ]
+        },
+        {
+          "titulo": "¿Qué fase es?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "En el microscopio ves dos grupos de cromosomas viajando a extremos opuestos. ¿Qué fase es?",
+            "opciones": [
+              "Profase",
+              "Metafase",
+              "Anafase",
+              "Telofase"
+            ],
+            "correcta": 2,
+            "explicacion": "En la anafase las cromátidas hermanas se separan y viajan a los polos."
+          }
+        }
+      ]
     },
     {
       "id": "citocinesis",
