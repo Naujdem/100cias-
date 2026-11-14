@@ -41,12 +41,13 @@ export function EscenaUnicelulares({ fase }: { fase: string }) {
       {/* gemación: copia el ADN → sale una yema → un núcleo pasa → se separa */}
       <g style={ver(g > 0)}>
         <ellipse cx="170" cy="160" rx="62" ry="52" fill="#f6e3b8" stroke="#a8841e" strokeWidth="3" />
-        <g style={{ transition: suave, transformOrigin: '228px 116px', transform: g >= 4 ? 'translate(60px, -30px)' : g >= 3 ? 'scale(1)' : g >= 2 ? 'scale(0.5)' : 'scale(0.01)', opacity: g >= 2 ? 1 : 0 }}>
+        <g style={{ transition: suave, transformOrigin: '228px 116px', transform: g >= 4 ? 'translate(60px, -30px)' : g >= 3 ? 'scale(1)' : g >= 2 ? 'translate(-10px, 10px) scale(0.5)' : 'scale(0.01)', opacity: g >= 2 ? 1 : 0 }}>
           <ellipse cx="228" cy="116" rx="32" ry="28" fill="#f6e3b8" stroke="#a8841e" strokeWidth="3" />
         </g>
         <circle cx="160" cy="160" r="14" fill="#c9a8e8" />
-        <circle cx="160" cy="160" r="14" fill="#b08ad6"
-          style={{ transition: suave, opacity: g >= 1 ? 1 : 0, transform: g >= 4 ? 'translate(128px, -74px) scale(0.6)' : g >= 3 ? 'translate(68px, -44px) scale(0.6)' : 'translate(10px, 6px)' }} />
+        {/* la copia del núcleo: sin escalar (la escala en CSS se calcula desde la esquina del dibujo) */}
+        <circle cx="160" cy="160" r="10" fill="#b08ad6"
+          style={{ transition: suave, opacity: g >= 1 ? 1 : 0, transform: g >= 4 ? 'translate(128px, -74px)' : g >= 3 ? 'translate(68px, -44px)' : 'translate(12px, 8px)' }} />
         <T x={200} y={262} t={['', 'el núcleo se copia', 'sale una yema', 'un núcleo pasa a la yema, que crece', 'la yema se separa'][g] ?? ''} c="#8a6a1a" />
       </g>
 
