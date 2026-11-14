@@ -215,3 +215,27 @@ export function SistemasJuego() {
     />
   )
 }
+
+export function FotoRespJuego() {
+  return (
+    <JuegoDecide
+      titulo="¿Fotosíntesis o respiración?"
+      pregunta="¿De qué proceso se trata?"
+      instrucciones="Las dos son la cara y la sello de la energía de la vida. Decide cuál describe cada tarjeta."
+      clave="cien:fotoresp-mejor"
+      opciones={[o('foto', 'Fotosíntesis', '🌿'), o('resp', 'Respiración', '🔋')]}
+      cartas={[
+        c('☀️', 'Necesita luz', 'foto', 'La energía de la luz es la que arma la glucosa.'),
+        c('🍬', 'Fabrica glucosa', 'foto', 'Con CO₂ y agua se construye glucosa.'),
+        c('🔥', 'Gasta glucosa para hacer ATP', 'resp', 'La glucosa se rompe y su energía pasa al ATP.'),
+        c('🫁', 'Usa oxígeno', 'resp', 'El oxígeno se consume en la mitocondria.'),
+        c('🫧', 'Libera oxígeno', 'foto', 'El oxígeno sale del agua que se rompe con la luz.'),
+        c('🟢', 'Ocurre en el cloroplasto', 'foto', 'Solo en plantas, algas y algunas bacterias.'),
+        c('🔋', 'Ocurre en la mitocondria', 'resp', 'En casi todos los seres vivos con núcleo, plantas incluidas.'),
+        c('💨', 'Suelta CO₂', 'resp', 'Es lo que exhalamos.'),
+        c('🌙', 'La planta la hace también de noche', 'resp', 'Las plantas respiran siempre; la fotosíntesis, solo con luz.'),
+      ]}
+      cierre="La fotosíntesis fabrica glucosa y oxígeno con luz; la respiración los usa para hacer ATP y devuelve CO₂ y agua. Las plantas hacen las dos."
+    />
+  )
+}

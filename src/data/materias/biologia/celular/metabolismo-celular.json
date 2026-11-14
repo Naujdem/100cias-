@@ -562,11 +562,224 @@
       ]
     },
     {
+      "id": "fotosintesis",
+      "titulo": "Fotosíntesis: fabricar glucosa con luz",
+      "resumen": "Con luz, agua y CO₂, el cloroplasto fabrica glucosa y suelta oxígeno.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "basico",
+      "nucleo": true,
+      "requiere": [
+        "respiracion-fermentacion"
+      ],
+      "ficha": {
+        "idea": "En la fotosíntesis, el cloroplasto usa la energía de la luz para fabricar glucosa a partir de dióxido de carbono y agua, y suelta oxígeno. Es lo contrario de la respiración: una fabrica la glucosa y el oxígeno, la otra los usa.",
+        "contexto": [
+          {
+            "titulo": "La ecuación",
+            "texto": "CO₂ + agua + luz → glucosa + oxígeno."
+          },
+          {
+            "titulo": "Dos etapas",
+            "texto": "Primero la luz rompe el agua y suelta oxígeno; luego, con esa energía, el CO₂ se convierte en glucosa."
+          },
+          {
+            "titulo": "Quién la hace",
+            "texto": "Plantas, algas y algunas bacterias, como las cianobacterias."
+          },
+          {
+            "titulo": "Las plantas también respiran",
+            "texto": "De día y de noche usan su propia glucosa en las mitocondrias."
+          }
+        ],
+        "evidencia": [
+          "Una planta acuática bajo la luz suelta burbujas de oxígeno.",
+          "Las hojas tapadas sin luz no forman almidón."
+        ],
+        "limites": "No toda la planta hace fotosíntesis: solo las partes verdes, que tienen cloroplastos.",
+        "cuaderno": {
+          "facil": [
+            "La fotosíntesis fabrica glucosa con luz.",
+            "Usa CO₂ y agua; suelta oxígeno.",
+            "Ocurre en el cloroplasto."
+          ],
+          "media": [
+            "CO₂ + agua + luz → glucosa + oxígeno.",
+            "El oxígeno viene del agua.",
+            "Es lo contrario de la respiración."
+          ],
+          "avanzada": [
+            "Fase luminosa: la luz rompe el agua y da energía.",
+            "Fase oscura (ciclo de Calvin): el CO₂ se fija en glucosa.",
+            "Las plantas hacen fotosíntesis y respiración."
+          ]
+        },
+        "docente": {
+          "abrir": "¿De dónde sale la madera de un árbol enorme, si el suelo casi no baja?",
+          "actividad": "Pongan una rama de planta acuática bajo una lámpara en un vaso con agua y cuenten las burbujas con y sin luz. Luego recorran la escena y jueguen «¿Fotosíntesis o respiración?».",
+          "errores": [
+            "Creer que las plantas sacan su alimento del suelo.",
+            "Creer que las plantas no respiran.",
+            "Creer que el oxígeno sale del CO₂."
+          ],
+          "minutos": 12
+        }
+      },
+      "diagrama": "cloroplasto-fotosintesis",
+      "juego": "fotoresp-juego",
+      "revisado": false,
+      "preguntas": [
+        {
+          "id": "mt-fotosintesis-1",
+          "enunciado": "¿Qué fabrica la fotosíntesis?",
+          "opciones": [
+            "Glucosa y oxígeno",
+            "CO₂ y agua",
+            "ATP sin necesidad de luz"
+          ],
+          "correcta": 0,
+          "explicacion": "Con luz, CO₂ y agua forma glucosa y suelta oxígeno."
+        },
+        {
+          "id": "mt-fotosintesis-2",
+          "enunciado": "¿Dónde ocurre la fotosíntesis?",
+          "opciones": [
+            "En la mitocondria",
+            "En el cloroplasto",
+            "En el núcleo"
+          ],
+          "correcta": 1,
+          "explicacion": "El cloroplasto tiene la clorofila que captura la luz."
+        },
+        {
+          "id": "mt-fotosintesis-3",
+          "enunciado": "¿Las plantas respiran?",
+          "opciones": [
+            "No, solo hacen fotosíntesis",
+            "Sí, de día y de noche",
+            "Solo de noche"
+          ],
+          "correcta": 1,
+          "explicacion": "Tienen mitocondrias y respiran siempre; la fotosíntesis solo ocurre con luz."
+        }
+      ],
+      "diapositivas": [
+        {
+          "titulo": "¿De dónde sale la madera?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Un árbol pesa toneladas, pero el suelo a su alrededor casi no baja. ¿De dónde sale casi toda su masa?",
+            "opciones": [
+              "Del suelo",
+              "Del aire (CO₂) y del agua",
+              "Del sol"
+            ],
+            "correcta": 1,
+            "explicacion": "Con la fotosíntesis, la planta convierte el CO₂ del aire y el agua en glucosa, y con ella construye su madera."
+          }
+        },
+        {
+          "titulo": "Fabricar glucosa con luz",
+          "visual": {
+            "tipo": "escena",
+            "id": "fotosintesis",
+            "fases": [
+              {
+                "id": "ingredientes",
+                "nombre": "Los ingredientes",
+                "texto": "El cloroplasto necesita luz, agua (que sube desde la raíz) y CO₂ (que entra del aire por las hojas).",
+                "marcas": [
+                  {
+                    "x": 40,
+                    "y": 200,
+                    "texto": "El CO₂ entra por los estomas, unos poros diminutos de la hoja."
+                  }
+                ]
+              },
+              {
+                "id": "luz",
+                "nombre": "La luz rompe el agua",
+                "texto": "La clorofila captura la luz; con esa energía se rompe el agua y se suelta oxígeno.",
+                "nota": "Es la fase luminosa.",
+                "marcas": [
+                  {
+                    "x": 330,
+                    "y": 90,
+                    "texto": "El oxígeno que respiramos viene del agua, no del CO₂."
+                  }
+                ]
+              },
+              {
+                "id": "glucosa",
+                "nombre": "Se arma la glucosa",
+                "texto": "Con la energía de la luz, el CO₂ se convierte en glucosa.",
+                "nota": "CO₂ + agua + luz → glucosa + oxígeno",
+                "marcas": [
+                  {
+                    "x": 340,
+                    "y": 120,
+                    "texto": "Con la glucosa la planta hace almidón, celulosa y su propia energía."
+                  }
+                ]
+              },
+              {
+                "id": "pareja",
+                "nombre": "La pareja",
+                "texto": "La glucosa y el oxígeno van a la mitocondria (respiración), que devuelve CO₂ y agua.",
+                "nota": "Las plantas hacen las dos: fotosíntesis con luz y respiración siempre."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Respiración celular",
+            "tema": "metabolismo-celular",
+            "bloque": "respiracion-fermentacion"
+          }
+        },
+        {
+          "titulo": "Dos caras de la energía",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "🌿",
+              "titulo": "Fotosíntesis",
+              "puntos": [
+                "En el cloroplasto, con luz",
+                "Fabrica glucosa y O₂"
+              ]
+            },
+            "der": {
+              "icono": "🔋",
+              "titulo": "Respiración",
+              "puntos": [
+                "En la mitocondria, siempre",
+                "Usa glucosa y O₂ para hacer ATP"
+              ]
+            }
+          }
+        },
+        {
+          "titulo": "¿Lo tienes?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿De dónde viene el oxígeno que suelta la planta?",
+            "opciones": [
+              "Del CO₂",
+              "Del agua",
+              "De la glucosa"
+            ],
+            "correcta": 1,
+            "explicacion": "La luz rompe las moléculas de agua y de ahí sale el oxígeno."
+          }
+        }
+      ]
+    },
+    {
       "id": "comunicacion",
       "titulo": "Las células se comunican",
       "resumen": "Una señal, un receptor y una respuesta.",
-      "anio": 4,
-      "etiqueta": "Paso 4",
+      "anio": 5,
+      "etiqueta": "Paso 5",
       "nivel": "basico",
       "nucleo": true,
       "ficha": {
@@ -726,8 +939,8 @@
       "id": "uniones",
       "titulo": "Uniones entre células",
       "resumen": "Las células de un tejido se sellan, se sujetan y se conectan.",
-      "anio": 5,
-      "etiqueta": "Paso 5",
+      "anio": 6,
+      "etiqueta": "Paso 6",
       "nivel": "avanzado",
       "requiere": [
         "comunicacion"
@@ -896,8 +1109,8 @@
       "id": "muerte-celular",
       "titulo": "Muerte celular: apoptosis y necrosis",
       "resumen": "Morir por orden, limpio; o por daño, con inflamación.",
-      "anio": 6,
-      "etiqueta": "Paso 6",
+      "anio": 7,
+      "etiqueta": "Paso 7",
       "nivel": "intermedio",
       "requiere": [
         "comunicacion"

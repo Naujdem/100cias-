@@ -1556,6 +1556,249 @@
       ]
     },
     {
+      "id": "origen-celulas",
+      "titulo": "¿De dónde salieron las primeras células?",
+      "resumen": "Oparin, Haldane, Miller y Urey: moléculas de la vida a partir de materia sin vida, hace miles de millones de años.",
+      "anio": 1953,
+      "nivel": "intermedio",
+      "requiere": [
+        "pasteur"
+      ],
+      "autores": [
+        {
+          "nombre": "Aleksandr Oparin y J. B. S. Haldane",
+          "vida": "1894–1980 · 1892–1964",
+          "aporte": "Propusieron en los años 1920 que las moléculas de la vida se formaron en los océanos de la Tierra primitiva, una «sopa» sin oxígeno."
+        },
+        {
+          "nombre": "Stanley Miller y Harold Urey",
+          "vida": "1930–2007 · 1893–1981",
+          "aporte": "En 1953 recrearon en el laboratorio la atmósfera primitiva con chispas eléctricas y obtuvieron aminoácidos."
+        }
+      ],
+      "ficha": {
+        "quien": "Oparin, Haldane, Miller y Urey",
+        "cuando": "1924–1929 (hipótesis) y 1953 (experimento)",
+        "idea": "Pasteur mostró que hoy la vida no surge de materia sin vida. Pero las primeras células, hace unos 3800 millones de años, sí tuvieron que formarse de moléculas sin vida. Oparin y Haldane propusieron cómo, y Miller y Urey mostraron que las moléculas de la vida pueden formarse solas en condiciones como las de la Tierra primitiva.",
+        "contexto": [
+          {
+            "titulo": "La Tierra primitiva",
+            "texto": "Sin oxígeno libre, con volcanes, rayos y radiación ultravioleta: mucha energía para formar moléculas."
+          },
+          {
+            "titulo": "El experimento",
+            "texto": "Agua hirviendo, metano, amoníaco e hidrógeno, chispas eléctricas durante una semana: aparecieron aminoácidos."
+          },
+          {
+            "titulo": "Protocélulas",
+            "texto": "Las grasas forman burbujas solas en el agua; pudieron encerrar moléculas y ser el primer paso hacia una célula."
+          },
+          {
+            "titulo": "Un ancestro común",
+            "texto": "Todos los seres vivos comparten el mismo código genético: venimos de un ancestro común."
+          }
+        ],
+        "evidencia": [
+          "El experimento de Miller y Urey produjo aminoácidos a partir de gases y agua.",
+          "En meteoritos se han encontrado aminoácidos formados sin vida."
+        ],
+        "limites": "Cómo se pasó de moléculas a la primera célula todavía se investiga: hay varias hipótesis y ninguna está completa.",
+        "cuaderno": {
+          "facil": [
+            "Las primeras células se formaron hace muchísimo tiempo.",
+            "Antes se formaron sus moléculas.",
+            "Miller lo probó en el laboratorio."
+          ],
+          "media": [
+            "Oparin y Haldane: la «sopa» primitiva.",
+            "Miller y Urey, 1953: chispas + gases → aminoácidos.",
+            "Protocélulas: burbujas que encierran moléculas."
+          ],
+          "avanzada": [
+            "No contradice a Pasteur: hablan de condiciones distintas.",
+            "Todos venimos de un ancestro común.",
+            "El paso de moléculas a célula aún se investiga."
+          ]
+        },
+        "docente": {
+          "abrir": "Si Pasteur demostró que la vida solo viene de la vida, ¿de dónde salió la primera célula?",
+          "actividad": "Echen unas gotas de aceite en agua y agiten: se forman burbujitas cerradas, como las protocélulas. Luego recorran la escena del experimento de Miller.",
+          "errores": [
+            "Creer que contradice a Pasteur.",
+            "Creer que Miller creó vida: obtuvo moléculas, no células."
+          ],
+          "minutos": 12
+        }
+      },
+      "revisado": false,
+      "preguntas": [
+        {
+          "id": "tc-origen-1",
+          "enunciado": "¿Qué obtuvieron Miller y Urey en su experimento?",
+          "opciones": [
+            "Células vivas",
+            "Aminoácidos",
+            "Bacterias"
+          ],
+          "correcta": 1,
+          "explicacion": "Obtuvieron moléculas de la vida, no seres vivos."
+        },
+        {
+          "id": "tc-origen-2",
+          "enunciado": "¿Contradice esto lo que demostró Pasteur?",
+          "opciones": [
+            "Sí: la vida sale de materia sin vida todos los días",
+            "No: Pasteur habla de hoy; esto, de la Tierra primitiva",
+            "Sí: Miller creó células vivas"
+          ],
+          "correcta": 1,
+          "explicacion": "Las condiciones de la Tierra primitiva eran muy distintas de las de hoy."
+        },
+        {
+          "id": "tc-origen-3",
+          "enunciado": "¿Por qué se piensa que todos los seres vivos tienen un ancestro común?",
+          "opciones": [
+            "Porque todos usan el mismo código genético",
+            "Porque todos son del mismo tamaño",
+            "Porque todos hacen fotosíntesis"
+          ],
+          "correcta": 0,
+          "explicacion": "Compartir el mismo «idioma» del ADN indica un origen común."
+        }
+      ],
+      "diapositivas": [
+        {
+          "titulo": "Un problema después de Pasteur",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Si toda célula viene de otra célula, ¿de dónde salió la primera?",
+            "opciones": [
+              "Siempre hubo células",
+              "Se formó a partir de moléculas sin vida, hace muchísimo tiempo",
+              "Llegó lista del espacio"
+            ],
+            "correcta": 1,
+            "explicacion": "Es la hipótesis más aceptada: primero se formaron las moléculas de la vida y luego las primeras células."
+          }
+        },
+        {
+          "titulo": "Del caldo a la célula",
+          "visual": {
+            "tipo": "escena",
+            "id": "origen",
+            "fases": [
+              {
+                "id": "tierra",
+                "nombre": "La Tierra primitiva",
+                "texto": "Hace unos 4000 millones de años: volcanes, rayos, océanos y nada de oxígeno libre.",
+                "marcas": [
+                  {
+                    "x": 270,
+                    "y": 60,
+                    "texto": "Los rayos y los volcanes daban mucha energía para formar moléculas."
+                  }
+                ]
+              },
+              {
+                "id": "sopa",
+                "nombre": "La «sopa» primitiva",
+                "texto": "Oparin y Haldane propusieron que en el océano se fueron formando moléculas cada vez más complejas.",
+                "marcas": [
+                  {
+                    "x": 190,
+                    "y": 236,
+                    "texto": "Cada bolita es una molécula nueva formada con la energía del ambiente."
+                  }
+                ]
+              },
+              {
+                "id": "miller",
+                "nombre": "El experimento de Miller y Urey",
+                "texto": "En 1953 recrearon esa Tierra en el laboratorio: agua que hierve, gases y chispas eléctricas.",
+                "marcas": [
+                  {
+                    "x": 340,
+                    "y": 56,
+                    "texto": "Metano, amoníaco, hidrógeno y vapor de agua: la atmósfera que suponían."
+                  },
+                  {
+                    "x": 250,
+                    "y": 118,
+                    "texto": "Las chispas imitan los rayos."
+                  }
+                ]
+              },
+              {
+                "id": "aminoacidos",
+                "nombre": "¡Aparecen aminoácidos!",
+                "texto": "Después de una semana, en el agua había aminoácidos: las piezas de las proteínas.",
+                "nota": "Miller obtuvo moléculas, no células.",
+                "marcas": [
+                  {
+                    "x": 240,
+                    "y": 246,
+                    "texto": "Moléculas de la vida formadas sin ningún ser vivo."
+                  }
+                ]
+              },
+              {
+                "id": "protocelula",
+                "nombre": "Protocélulas",
+                "texto": "Las grasas forman burbujas solas en el agua; pudieron encerrar moléculas y aislarlas del exterior.",
+                "nota": "Cómo se dio el salto a la primera célula aún se investiga.",
+                "marcas": [
+                  {
+                    "x": 110,
+                    "y": 90,
+                    "texto": "Una membrana sencilla: el primer paso hacia una célula."
+                  }
+                ]
+              },
+              {
+                "id": "luca",
+                "nombre": "Un ancestro común",
+                "texto": "De esas primeras células vienen todas: bacterias, arqueas y eucariotas.",
+                "marcas": [
+                  {
+                    "x": 200,
+                    "y": 220,
+                    "texto": "Todos los seres vivos usamos el mismo código genético."
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "¿Pasteur estaba equivocado?",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "🧪",
+              "titulo": "Pasteur (1862)",
+              "puntos": [
+                "Hoy, la vida viene de la vida",
+                "En las condiciones actuales"
+              ]
+            },
+            "der": {
+              "icono": "🌋",
+              "titulo": "Origen de la vida",
+              "puntos": [
+                "Hace miles de millones de años",
+                "En condiciones muy distintas"
+              ]
+            }
+          },
+          "atajo": {
+            "texto": "Pasteur",
+            "tema": "teoria-celular",
+            "bloque": "pasteur"
+          }
+        }
+      ]
+    },
+    {
       "id": "endosimbiosis",
       "titulo": "Teoría endosimbiótica",
       "resumen": "Las mitocondrias y los cloroplastos habrían sido bacterias que pasaron a vivir dentro de otras células.",
