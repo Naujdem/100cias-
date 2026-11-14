@@ -589,7 +589,7 @@
           "nota": "Asexual: plantas iguales a la madre, y rápido."
         },
         {
-          "titulo": "Un esqueje, paso a paso",
+          "titulo": "Estacas (yuca, caña), paso a paso",
           "visual": {
             "tipo": "escena",
             "id": "esqueje",
@@ -614,6 +614,95 @@
                 "nombre": "Planta nueva",
                 "texto": "Crecen hojas: una planta igual a la madre.",
                 "nota": "Así se siembran la yuca y la caña."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Tubérculos (papa), paso a paso",
+          "visual": {
+            "tipo": "escena",
+            "id": "por-pedazos",
+            "fases": [
+              {
+                "id": "tub-1",
+                "nombre": "Papa con ojos",
+                "texto": "La papa es un tallo subterráneo. Sus «ojos» son yemas que pueden brotar."
+              },
+              {
+                "id": "tub-2",
+                "nombre": "Se siembra",
+                "texto": "Se entierra la papa (o un trozo con al menos un ojo)."
+              },
+              {
+                "id": "tub-3",
+                "nombre": "Brota",
+                "texto": "De los ojos salen raíces hacia abajo y un tallo hacia arriba."
+              },
+              {
+                "id": "tub-4",
+                "nombre": "Planta nueva",
+                "texto": "Crece la planta y, bajo tierra, forma papas nuevas, iguales a la madre.",
+                "nota": "Por eso en la finca se guardan papas «de semilla»."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Estolones (fresa), paso a paso",
+          "visual": {
+            "tipo": "escena",
+            "id": "por-pedazos",
+            "fases": [
+              {
+                "id": "esto-1",
+                "nombre": "Planta madre",
+                "texto": "Una planta de fresa con sus hojas y frutos."
+              },
+              {
+                "id": "esto-2",
+                "nombre": "Sale un estolón",
+                "texto": "Le crece un tallo largo y delgado que corre por el suelo."
+              },
+              {
+                "id": "esto-3",
+                "nombre": "Raíces en la punta",
+                "texto": "Donde el estolón toca la tierra, echa raíces y hojas."
+              },
+              {
+                "id": "esto-4",
+                "nombre": "Planta hija",
+                "texto": "Al cortar el estolón, la planta hija vive sola: es igual a la madre."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Bulbos (ajo, cebolla), paso a paso",
+          "visual": {
+            "tipo": "escena",
+            "id": "por-pedazos",
+            "fases": [
+              {
+                "id": "bul-1",
+                "nombre": "Un diente de ajo",
+                "texto": "Cada diente de una cabeza de ajo puede formar una planta."
+              },
+              {
+                "id": "bul-2",
+                "nombre": "Se siembra",
+                "texto": "Se entierra con la punta hacia arriba."
+              },
+              {
+                "id": "bul-3",
+                "nombre": "Raíces y hojas",
+                "texto": "Echa raíces hacia abajo y hojas largas hacia arriba."
+              },
+              {
+                "id": "bul-4",
+                "nombre": "Cabeza nueva",
+                "texto": "Bajo tierra se forma una cabeza nueva con muchos dientes.",
+                "nota": "La cebolla también es un bulbo: hojas gruesas que guardan reservas."
               }
             ]
           }
