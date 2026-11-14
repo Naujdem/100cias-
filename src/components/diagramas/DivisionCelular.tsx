@@ -27,7 +27,7 @@ export default function DivisionCelular() {
             type="button"
             aria-pressed={modo === id}
             onClick={() => setModo(id)}
-            className="min-h-10 rounded-full border border-[var(--acento)] px-3 text-sm font-semibold text-[var(--acento)] aria-pressed:bg-[var(--acento)] aria-pressed:text-white"
+            className="min-h-10 rounded-full border border-[var(--acento)] px-3 text-sm font-semibold text-[var(--acento)] aria-pressed:bg-[var(--acento)] aria-pressed:text-[var(--sobre-acento)]"
           >
             {texto}
           </button>
@@ -89,7 +89,7 @@ function Generaciones() {
           data-principal
           disabled={g >= 6}
           onClick={() => setG((v) => Math.min(6, v + 1))}
-          className="min-h-10 rounded-lg bg-[var(--acento)] px-4 text-sm font-semibold text-white disabled:opacity-40"
+          className="min-h-10 rounded-lg bg-[var(--acento)] px-4 text-sm font-semibold text-[var(--sobre-acento)] disabled:opacity-40"
         >
           Dividir
         </button>

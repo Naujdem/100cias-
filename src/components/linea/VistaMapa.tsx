@@ -14,16 +14,16 @@ interface Nodo {
 }
 
 const RAIZ: Nodo = { bloque: 'pro-eu', texto: 'Células', sub: 'la gran división: ¿con o sin núcleo?', color: 'bg-[var(--tarjeta)]' }
-const PRO: Nodo = { bloque: 'bacterias-arqueas', texto: 'Procariotas', sub: 'bacterias y arqueas · sin núcleo', color: 'bg-green-100' }
-const EU: Nodo = { bloque: 'eucariotas', texto: 'Eucariotas', sub: 'con núcleo', color: 'bg-red-100' }
+const PRO: Nodo = { bloque: 'bacterias-arqueas', texto: 'Procariotas', sub: 'bacterias y arqueas · sin núcleo', color: 'bg-green-100 dark:bg-green-950/70' }
+const EU: Nodo = { bloque: 'eucariotas', texto: 'Eucariotas', sub: 'con núcleo', color: 'bg-red-100 dark:bg-red-950/70' }
 const RAMAS: Nodo[] = [
-  { bloque: 'eucariotas', texto: 'Protistas', sub: 'algas, amebas…', color: 'bg-pink-100' },
-  { bloque: 'eucariotas', texto: 'Hongos', sub: 'levaduras, setas…', color: 'bg-amber-100' },
-  { bloque: 'animal-vegetal', texto: 'Plantas', sub: 'con pared y cloroplastos', color: 'bg-lime-100' },
-  { bloque: 'animal-vegetal', texto: 'Animales', sub: 'sin pared', color: 'bg-orange-100' },
+  { bloque: 'eucariotas', texto: 'Protistas', sub: 'algas, amebas…', color: 'bg-pink-100 dark:bg-pink-950/70' },
+  { bloque: 'eucariotas', texto: 'Hongos', sub: 'levaduras, setas…', color: 'bg-amber-100 dark:bg-amber-950/70' },
+  { bloque: 'animal-vegetal', texto: 'Plantas', sub: 'con pared y cloroplastos', color: 'bg-lime-100 dark:bg-lime-950/70' },
+  { bloque: 'animal-vegetal', texto: 'Animales', sub: 'sin pared', color: 'bg-orange-100 dark:bg-orange-950/70' },
 ]
 const ESPECIAL: Nodo = { bloque: 'especializadas', texto: 'Células especializadas', sub: 'dentro de un organismo: neuronas, glóbulos…', color: 'bg-[var(--acento-suave)]/40' }
-const VIRUS: Nodo = { bloque: 'virus', texto: 'Virus', sub: 'no son células', color: 'bg-white' }
+const VIRUS: Nodo = { bloque: 'virus', texto: 'Virus', sub: 'no son células', color: 'bg-white dark:bg-[var(--tarjeta)]' }
 
 export default function VistaMapa({ bloques, abierto, onSeleccionar, carril, estados }: PropsVista) {
   const por = new Map<string, Bloque>(bloques.map((b) => [b.id, b]))

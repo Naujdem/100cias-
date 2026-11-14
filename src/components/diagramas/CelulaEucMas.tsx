@@ -15,7 +15,7 @@ const Texto = ({ children }: { children: ReactNode }) => (
     {children}
   </div>
 )
-const BOTON = 'min-h-10 rounded-full bg-[var(--acento)] px-5 text-sm font-bold text-white'
+const BOTON = 'min-h-10 rounded-full bg-[var(--acento)] px-5 text-sm font-bold text-[var(--sobre-acento)]'
 
 /* ── Citoesqueleto ─────────────────────────────────────────────────────────── */
 
@@ -109,7 +109,7 @@ export function RibosomasDiagrama() {
     return true
   })
   const aciertos = resp.filter((x, k) => x === PROTEINAS[k].donde).length
-  const marca = (d: 'libre' | 'reticulo') => (r === null ? 'enabled:hover:border-[var(--acento)]' : d === p.donde ? 'border-green-700 bg-[var(--acento-suave)]/40' : d === r ? 'border-red-700' : 'opacity-60')
+  const marca = (d: 'libre' | 'reticulo') => (r === null ? 'enabled:hover:border-[var(--acento)]' : d === p.donde ? 'border-green-700 dark:border-green-400 bg-[var(--acento-suave)]/40' : d === r ? 'border-red-700 dark:border-red-400' : 'opacity-60')
   return (
     <PantallaCompleta conBoton>
       <p className="text-sm">Hay ribosomas sueltos en el citosol y ribosomas pegados al retículo rugoso. Son iguales: lo que cambia es para dónde va la proteína. Con ← → cambias de proteína.</p>

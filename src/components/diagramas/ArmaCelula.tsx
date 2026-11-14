@@ -136,7 +136,7 @@ export default function ArmaCelula() {
       <div className="flex flex-wrap items-center gap-2">
         <span className="text-sm font-semibold">Arma una célula:</span>
         {(['animal', 'vegetal'] as Tipo[]).map((t) => (
-          <button key={t} type="button" aria-pressed={tipo === t} onClick={() => cambiarTipo(t)} className="min-h-10 rounded-full border border-[var(--acento)] px-4 text-sm font-semibold text-[var(--acento)] aria-pressed:bg-[var(--acento)] aria-pressed:text-white">
+          <button key={t} type="button" aria-pressed={tipo === t} onClick={() => cambiarTipo(t)} className="min-h-10 rounded-full border border-[var(--acento)] px-4 text-sm font-semibold text-[var(--acento)] aria-pressed:bg-[var(--acento)] aria-pressed:text-[var(--sobre-acento)]">
             {t === 'animal' ? 'Animal' : 'Vegetal'} {logros[t] && '⭐'}
           </button>
         ))}
@@ -171,14 +171,14 @@ export default function ArmaCelula() {
               </ul>
             </>
           )}
-          <button type="button" data-principal onClick={comprobar} className="mt-3 min-h-10 rounded-full bg-[var(--acento)] px-5 text-sm font-bold text-white">
+          <button type="button" data-principal onClick={comprobar} className="mt-3 min-h-10 rounded-full bg-[var(--acento)] px-5 text-sm font-bold text-[var(--sobre-acento)]">
             Comprobar
           </button>
         </div>
       </div>
       <div role="group" aria-label="Piezas" className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-6">
         {PIEZAS.map((p, k) => {
-          const marca = revisado ? (bien(p) ? (dentro.has(p.id) ? 'border-green-700' : '') : 'border-red-700') : ''
+          const marca = revisado ? (bien(p) ? (dentro.has(p.id) ? 'border-green-700 dark:border-green-400' : '') : 'border-red-700 dark:border-red-400') : ''
           return (
             <button key={p.id} type="button" aria-pressed={dentro.has(p.id)} onClick={() => alternar(p.id)} className={`min-h-11 rounded-lg border-2 border-[var(--linea)] px-2 text-left text-sm font-semibold aria-pressed:bg-[var(--acento-suave)]/50 ${marca}`}>
               <span className="text-xs text-[var(--suave)]">{['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '='][k]} · </span>

@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* El modo oscuro lo decide la clase .oscuro en <html> (ver lib/apariencia.ts). */
+@custom-variant dark (&:where(.oscuro, .oscuro *));
+
 :root {
   /* papel de atlas: fondo crema, tinta oscura y el verde azulado de siempre */
   --fondo: #f5f1e6;
@@ -9,22 +12,24 @@
   --tarjeta: #fffdf8;
   --acento: #0d5f58;
   --acento-suave: #cfe7e1;
+  --sobre-acento: #ffffff;
   --serif: "Fraunces Variable", Georgia, "Times New Roman", serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --fondo: #0f1514;
-    --tinta: #e6efec;
-    --suave: #9fb0ac;
-    --linea: #2a3633;
-    --tarjeta: #172120;
-    --acento: #2dd4bf;
-    --acento-suave: #134e4a;
-  }
+/* modo oscuro */
+:root.oscuro {
+  --fondo: #0f1514;
+  --tinta: #e6efec;
+  --suave: #9fb0ac;
+  --linea: #2a3633;
+  --tarjeta: #172120;
+  --acento: #2dd4bf;
+  --acento-suave: #134e4a;
+  --sobre-acento: #0f1514;
 }
 
-html { color-scheme: light dark; }
+html { color-scheme: light; }
+html.oscuro { color-scheme: dark; }
 body {
   margin: 0;
   background: var(--fondo);

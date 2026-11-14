@@ -205,7 +205,7 @@ export default function NivelesJuego() {
         </ol>
         <p className="mt-3 text-sm">Cada acierto seguido suma más puntos. Teclas: 1 a {niveles.length} eligen el nivel y → pasa a la siguiente.</p>
         {casilla}
-        <button type="button" data-principal onClick={empezar} className="mt-3 min-h-11 rounded-full bg-[var(--acento)] px-6 font-bold text-white">
+        <button type="button" data-principal onClick={empezar} className="mt-3 min-h-11 rounded-full bg-[var(--acento)] px-6 font-bold text-[var(--sobre-acento)]">
           Empezar
         </button>
         {mejor > 0 && <p className="mt-2 text-sm text-[var(--suave)]">Tu mejor puntaje: {mejor}</p>}
@@ -239,7 +239,7 @@ export default function NivelesJuego() {
           <p className="mt-3 text-sm">Todas en su nivel, incluidas las tramposas. Juega otra vez: salen tarjetas distintas.</p>
         )}
         {casilla}
-        <button type="button" data-principal onClick={empezar} className="mt-2 min-h-11 rounded-full bg-[var(--acento)] px-6 font-bold text-white">
+        <button type="button" data-principal onClick={empezar} className="mt-2 min-h-11 rounded-full bg-[var(--acento)] px-6 font-bold text-[var(--sobre-acento)]">
           Jugar otra vez
         </button>
       </PantallaCompleta>
@@ -274,7 +274,7 @@ export default function NivelesJuego() {
                 {!acerto && `La respuesta era «${respuesta(t)}». `}
                 {t.explica}
               </p>
-              <button type="button" data-principal onClick={siguiente} className="mt-2 min-h-10 rounded-full bg-[var(--acento)] px-5 text-sm font-bold text-white">
+              <button type="button" data-principal onClick={siguiente} className="mt-2 min-h-10 rounded-full bg-[var(--acento)] px-5 text-sm font-bold text-[var(--sobre-acento)]">
                 {ultima ? 'Ver resultado' : 'Siguiente ›'}
               </button>
             </>
@@ -283,7 +283,7 @@ export default function NivelesJuego() {
       </div>
       <div role="group" aria-label="Niveles, del más pequeño al más grande" className="mt-3 grid grid-cols-3 gap-2 lg:[grid-template-columns:repeat(var(--n),minmax(0,1fr))]" style={{ ['--n' as string]: niveles.length }}>
         {niveles.map((n, k) => {
-          const marca = elegido === null ? 'enabled:hover:border-[var(--acento)]' : acierta(t, n.id) ? 'border-green-700 bg-[var(--acento-suave)]/40' : n.id === elegido ? 'border-red-700' : 'opacity-60'
+          const marca = elegido === null ? 'enabled:hover:border-[var(--acento)]' : acierta(t, n.id) ? 'border-green-700 dark:border-green-400 bg-[var(--acento-suave)]/40' : n.id === elegido ? 'border-red-700 dark:border-red-400' : 'opacity-60'
           return (
             <button key={n.id} type="button" disabled={elegido !== null} onClick={() => responder(n.id)} className={`min-h-14 rounded-lg border-2 border-[var(--linea)] px-2 py-1 text-left text-sm font-semibold ${marca}`}>
               {k + 1} · {n.nombre}

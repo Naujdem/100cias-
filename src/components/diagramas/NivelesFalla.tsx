@@ -304,12 +304,12 @@ export default function NivelesFalla() {
       <ol aria-label="Niveles" className="mt-3 flex flex-wrap items-center gap-1 text-sm font-semibold">
         {PASOS.map((x, i) => (
           <li key={x.nivel} className="flex items-center gap-1">
-            {i > 0 && <span aria-hidden="true" className={i <= paso ? 'text-red-700' : 'text-[var(--suave)]'}>→</span>}
+            {i > 0 && <span aria-hidden="true" className={i <= paso ? 'text-red-700 dark:text-red-300' : 'text-[var(--suave)]'}>→</span>}
             <button
               type="button"
               aria-current={i === paso ? 'step' : undefined}
               onClick={() => ir(i)}
-              className={`min-h-9 rounded-full border-2 px-3 ${i === paso ? 'border-red-700 bg-red-700 text-white' : i < paso ? 'border-red-700 text-red-800' : 'border-[var(--linea)] text-[var(--suave)]'}`}
+              className={`min-h-9 rounded-full border-2 px-3 ${i === paso ? 'border-red-700 dark:border-red-400 bg-red-700 dark:bg-red-500 text-white' : i < paso ? 'border-red-700 dark:border-red-400 text-red-800 dark:text-red-300' : 'border-[var(--linea)] text-[var(--suave)]'}`}
             >
               {x.nivel}
             </button>
@@ -339,14 +339,14 @@ export default function NivelesFalla() {
           <p aria-live="polite" className="mt-1 min-h-10 text-sm text-[var(--suave)]">{p.pie[cambio ? 1 : 0]}</p>
         </div>
         <div>
-          <p className="text-xs font-bold uppercase tracking-widest text-red-800">{p.nivel}</p>
+          <p className="text-xs font-bold uppercase tracking-widest text-red-800 dark:text-red-300">{p.nivel}</p>
           <p className="text-lg font-bold">{p.titulo}</p>
           {p.opciones ? (
             <>
               <p className="mt-2 text-sm font-semibold">{p.pregunta}</p>
               <div role="group" aria-label="Opciones" className="mt-2 flex flex-col gap-2">
                 {p.opciones.map((o, i) => {
-                  const marca = elegida === null ? '' : i === p.correcta && resuelto ? 'border-green-700 bg-[var(--acento-suave)]/40' : i === elegida ? 'border-red-700' : 'opacity-60'
+                  const marca = elegida === null ? '' : i === p.correcta && resuelto ? 'border-green-700 dark:border-green-400 bg-[var(--acento-suave)]/40' : i === elegida ? 'border-red-700 dark:border-red-400' : 'opacity-60'
                   return (
                     <button key={o} type="button" disabled={resuelto} onClick={() => responder(i)} className={`min-h-10 rounded-lg border-2 border-[var(--linea)] px-3 py-2 text-left text-sm enabled:hover:border-[var(--acento)] ${marca}`}>
                       {i + 1} · {o}
@@ -362,7 +362,7 @@ export default function NivelesFalla() {
                     <p>
                       <span className="font-semibold">¡Eso es!</span> {p.explica}
                     </p>
-                    <button type="button" data-principal onClick={() => ir(paso + 1)} className="mt-2 min-h-10 rounded-full bg-[var(--acento)] px-5 text-sm font-bold text-white">
+                    <button type="button" data-principal onClick={() => ir(paso + 1)} className="mt-2 min-h-10 rounded-full bg-[var(--acento)] px-5 text-sm font-bold text-[var(--sobre-acento)]">
                       Subir a: {PASOS[paso + 1].nivel.toLowerCase()} ›
                     </button>
                   </>

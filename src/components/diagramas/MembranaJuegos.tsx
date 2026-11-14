@@ -215,7 +215,7 @@ export function PorteroMembrana() {
           <input type="checkbox" checked={reloj} onChange={(e) => setReloj(e.target.checked)} className="h-5 w-5" />
           Contrarreloj ({TIEMPO} segundos por visitante)
         </label>
-        <button type="button" data-principal onClick={empezar} className="mt-3 min-h-11 rounded-full bg-[var(--acento)] px-6 font-bold text-white">
+        <button type="button" data-principal onClick={empezar} className="mt-3 min-h-11 rounded-full bg-[var(--acento)] px-6 font-bold text-[var(--sobre-acento)]">
           Empezar
         </button>
         {mejor > 0 && <p className="mt-2 text-sm text-[var(--suave)]">Tu mejor puntaje: {mejor}</p>}
@@ -253,7 +253,7 @@ export function PorteroMembrana() {
           <input type="checkbox" checked={reloj} onChange={(e) => setReloj(e.target.checked)} className="h-5 w-5" />
           Contrarreloj ({TIEMPO} segundos por visitante)
         </label>
-        <button type="button" data-principal onClick={empezar} className="mt-2 min-h-11 rounded-full bg-[var(--acento)] px-6 font-bold text-white">
+        <button type="button" data-principal onClick={empezar} className="mt-2 min-h-11 rounded-full bg-[var(--acento)] px-6 font-bold text-[var(--sobre-acento)]">
           Jugar otra vez
         </button>
       </PantallaCompleta>
@@ -276,7 +276,7 @@ export function PorteroMembrana() {
         <span>{puntos} puntos</span>
         {racha > 1 && <span>Racha ×{racha}</span>}
         <span aria-label={`${vidas} vidas`}>{'❤️'.repeat(Math.max(0, vidas))}{'🤍'.repeat(VIDAS - Math.max(0, vidas))}</span>
-        {reloj && <span className={seg <= 4 && elegida === null ? 'text-red-700' : ''}>⏱ {Math.max(0, seg)} s</span>}
+        {reloj && <span className={seg <= 4 && elegida === null ? 'text-red-700 dark:text-red-300' : ''}>⏱ {Math.max(0, seg)} s</span>}
       </div>
       <div className="mt-2 grid gap-3 lg:grid-cols-2">
       <div className="aspect-[4/3] max-h-[38dvh] w-full overflow-hidden rounded-xl border border-[var(--linea)]">
@@ -308,7 +308,7 @@ export function PorteroMembrana() {
               {!acerto && `La puerta era «${PUERTAS.find((p) => p.id === v.via)!.nombre}». `}
               {v.explica}
             </p>
-            <button type="button" data-principal onClick={siguiente} className="mt-2 min-h-10 rounded-full bg-[var(--acento)] px-5 text-sm font-bold text-white">
+            <button type="button" data-principal onClick={siguiente} className="mt-2 min-h-10 rounded-full bg-[var(--acento)] px-5 text-sm font-bold text-[var(--sobre-acento)]">
               {ultimo ? 'Ver resultado' : 'Siguiente ›'}
             </button>
           </>
@@ -318,7 +318,7 @@ export function PorteroMembrana() {
       </div>
       <div role="group" aria-label="Puertas" className="mt-2 grid grid-cols-2 gap-2 lg:grid-cols-4">
         {PUERTAS.map((p, n) => {
-          const marca = elegida === null ? 'enabled:hover:border-[var(--acento)]' : p.id === v.via ? 'border-green-700 bg-[var(--acento-suave)]/40' : p.id === elegida ? 'border-red-700' : 'opacity-60'
+          const marca = elegida === null ? 'enabled:hover:border-[var(--acento)]' : p.id === v.via ? 'border-green-700 dark:border-green-400 bg-[var(--acento-suave)]/40' : p.id === elegida ? 'border-red-700 dark:border-red-400' : 'opacity-60'
           return (
             <button key={p.id} type="button" disabled={elegida !== null} onClick={() => responder(p.id)} className={`min-h-12 rounded-lg border-2 border-[var(--linea)] px-2 py-1 text-left text-sm font-semibold ${marca}`}>
               {n + 1} · {p.nombre}

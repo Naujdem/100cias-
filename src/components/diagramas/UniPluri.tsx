@@ -40,7 +40,7 @@ export default function UniPluri({ paso = 0, modo = 'pasos' }: Props) {
             type="button"
             aria-pressed={m === id}
             onClick={() => setM(id)}
-            className="min-h-10 rounded-full border border-[var(--acento)] px-3 text-sm font-semibold text-[var(--acento)] aria-pressed:bg-[var(--acento)] aria-pressed:text-white"
+            className="min-h-10 rounded-full border border-[var(--acento)] px-3 text-sm font-semibold text-[var(--acento)] aria-pressed:bg-[var(--acento)] aria-pressed:text-[var(--sobre-acento)]"
           >
             {texto}
           </button>
@@ -140,7 +140,7 @@ function Clasifica() {
       <p className="mt-3 text-sm font-semibold">{it.nombre}: ¿qué es?</p>
       <div role="group" aria-label="Opciones" className="mt-2 flex flex-wrap gap-2">
         {OPCIONES.map(([id, texto]) => {
-          const marca = elegida === null ? '' : id === it.r ? 'border-green-700 bg-[var(--acento-suave)]/40' : id === elegida ? 'border-red-700' : 'opacity-60'
+          const marca = elegida === null ? '' : id === it.r ? 'border-green-700 dark:border-green-400 bg-[var(--acento-suave)]/40' : id === elegida ? 'border-red-700 dark:border-red-400' : 'opacity-60'
           return (
             <button
               key={id}

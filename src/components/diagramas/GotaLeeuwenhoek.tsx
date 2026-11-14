@@ -76,7 +76,7 @@ export default function GotaLeeuwenhoek() {
             type="button"
             aria-pressed={modo === id}
             onClick={() => setModo(id)}
-            className="min-h-10 rounded-full border border-[var(--acento)] px-3 text-sm font-semibold text-[var(--acento)] aria-pressed:bg-[var(--acento)] aria-pressed:text-white"
+            className="min-h-10 rounded-full border border-[var(--acento)] px-3 text-sm font-semibold text-[var(--acento)] aria-pressed:bg-[var(--acento)] aria-pressed:text-[var(--sobre-acento)]"
           >
             {texto}
           </button>

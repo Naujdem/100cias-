@@ -88,7 +88,7 @@ export default function CorchoHooke() {
             type="button"
             aria-pressed={modo === m.id}
             onClick={() => setModo(m.id)}
-            className="min-h-10 rounded-full border border-[var(--acento)] px-3 text-sm font-semibold text-[var(--acento)] aria-pressed:bg-[var(--acento)] aria-pressed:text-white"
+            className="min-h-10 rounded-full border border-[var(--acento)] px-3 text-sm font-semibold text-[var(--acento)] aria-pressed:bg-[var(--acento)] aria-pressed:text-[var(--sobre-acento)]"
           >
             {m.texto}
           </button>
@@ -239,7 +239,7 @@ function Contenido() {
           type="button"
           aria-pressed={comparar}
           onClick={() => setComparar((v) => !v)}
-          className="mt-2 rounded-xl border border-[var(--acento)] px-3 py-2 text-sm font-semibold text-[var(--acento)] aria-pressed:bg-[var(--acento)] aria-pressed:text-white"
+          className="mt-2 rounded-xl border border-[var(--acento)] px-3 py-2 text-sm font-semibold text-[var(--acento)] aria-pressed:bg-[var(--acento)] aria-pressed:text-[var(--sobre-acento)]"
         >
           {comparar ? 'Ocultar comparación' : 'Comparar con celdas de monasterio'} <span className="font-normal opacity-70">(C)</span>
         </button>

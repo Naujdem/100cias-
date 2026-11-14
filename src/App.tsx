@@ -5,6 +5,8 @@ import { guardar } from './lib/almacen.ts'
 import { aplicarPerfil, CLAVE_TEMA, guardadoDe, PERFILES, perfilActual, TEMAS } from './lib/temas.ts'
 import type { Guardado } from './lib/temas.ts'
 import { enlace, irA, usarRuta } from './lib/ruta.ts'
+import { cambiarApariencia, usarApariencia } from './lib/apariencia.ts'
+import type { Apariencia } from './lib/apariencia.ts'
 import { MATERIAS, UNIDADES } from './data/catalogo.ts'
 import SelectorContenido from './components/SelectorContenido.tsx'
 import LineaTiempo from './components/LineaTiempo.tsx'
@@ -121,6 +123,7 @@ export default function App() {
 /** Menú de la cabecera: apartados que no hace falta tener siempre a la vista. */
 function Menu({ onEditor }: { onEditor: () => void }) {
   const [abierto, setAbierto] = useState(false)
+  const apariencia = usarApariencia()
   const caja = useRef<HTMLDivElement>(null)
   useEffect(() => {
     if (!abierto) return
@@ -171,6 +174,27 @@ function Menu({ onEditor }: { onEditor: () => void }) {
           >
             Editor de documentos
           </button>
+          <div role="group" aria-label="Apariencia" className="mt-2 border-t border-[var(--linea)] px-1 pt-3 pb-1">
+            <p className="mb-2 px-2 text-xs font-semibold text-[var(--suave)]">Apariencia</p>
+            <div className="grid grid-cols-3 gap-1 rounded-xl bg-[var(--fondo)] p-1">
+              {([
+                ['claro', 'Claro'],
+                ['oscuro', 'Oscuro'],
+                ['sistema', 'Auto'],
+              ] as [Apariencia, string][]).map(([v, t]) => (
+                <button
+                  key={v}
+                  type="button"
+                  aria-pressed={apariencia === v}
+                  title={v === 'sistema' ? 'Igual que el dispositivo' : undefined}
+                  onClick={() => cambiarApariencia(v)}
+                  className="min-h-9 rounded-lg text-xs font-semibold text-[var(--suave)] aria-pressed:bg-[var(--acento)] aria-pressed:text-[var(--sobre-acento)]"
+                >
+                  {t}
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
       )}
     </div>
