@@ -1,0 +1,604 @@
+{
+  "id": "metabolismo-celular",
+  "materia": "biologia",
+  "area": "celular",
+  "titulo": "Procesos celulares",
+  "subtema": "Metabolismo, comunicación y muerte celular",
+  "orden": 8,
+  "etiqueta": "4.3",
+  "vistas": [
+    "ruta"
+  ],
+  "tituloVista": "Ruta de la vida de la célula",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Explicar qué es el metabolismo y cómo actúan las enzimas.",
+    "Comparar la respiración celular y la fermentación.",
+    "Describir cómo se comunican y se unen las células, y por qué mueren."
+  ],
+  "fuentes": [
+    "Plan de área del colegio (solo guía)",
+    "BORRADOR: esqueleto redactado como punto de partida; verificar cada bloque antes de marcarlo como revisado. A verificar: 30–36 ATP de la respiración; ATP descubierto en 1929 y Lipmann 1941; reciclaje diario de ATP ≈ peso corporal; miles de millones de células por apoptosis al día; Nobel 2002 (Brenner, Horvitz, Sulston); ácido láctico y dolor muscular tardío como mito."
+  ],
+  "bloques": [
+    {
+      "id": "enzimas",
+      "titulo": "Metabolismo y enzimas",
+      "resumen": "Romper y construir moléculas, con enzimas que aceleran cada paso.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "El metabolismo es el conjunto de reacciones químicas de la célula. Unas rompen moléculas grandes y liberan energía (catabolismo); otras construyen moléculas grandes y gastan energía (anabolismo). Casi todas las acelera una enzima, una proteína que encaja con su molécula como una llave en su cerradura.",
+        "contexto": [
+          {
+            "titulo": "Catabolismo",
+            "texto": "Romper: por ejemplo, partir la glucosa para sacar energía o digerir el almidón."
+          },
+          {
+            "titulo": "Anabolismo",
+            "texto": "Construir: por ejemplo, unir aminoácidos para formar proteínas o glucosas para formar almidón."
+          },
+          {
+            "titulo": "Enzimas",
+            "texto": "Aceleran las reacciones miles o millones de veces y no se gastan: trabajan una y otra vez."
+          },
+          {
+            "titulo": "Temperatura y pH",
+            "texto": "Cada enzima trabaja mejor a cierta temperatura y acidez. Con mucho calor se deforma y deja de funcionar."
+          }
+        ],
+        "evidencia": [
+          "La saliva tiene amilasa, una enzima que rompe el almidón: si mantienes un pedazo de pan en la boca un rato, empieza a saber dulce."
+        ],
+        "limites": "La llave y la cerradura es un modelo: en realidad la enzima también cambia un poco de forma cuando recibe la molécula.",
+        "cuaderno": {
+          "facil": [
+            "Metabolismo: todas las reacciones químicas de la célula.",
+            "Catabolismo rompe; anabolismo construye.",
+            "Las enzimas aceleran las reacciones."
+          ],
+          "media": [
+            "Cada enzima encaja solo con su sustrato (llave y cerradura).",
+            "Las enzimas no se gastan.",
+            "El calor excesivo deforma las enzimas."
+          ],
+          "avanzada": [
+            "El catabolismo libera energía y el anabolismo la gasta.",
+            "Modelo de encaje inducido."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué el pan sabe dulce si lo masticas mucho tiempo?",
+          "actividad": "Prueben el pan en la boca un minuto y comenten. Luego usen el diagrama: elijan formas, prueben con y sin «fiebre» y anoten qué pasa.",
+          "errores": [
+            "Creer que las enzimas se gastan en la reacción.",
+            "Creer que una enzima sirve para cualquier molécula."
+          ],
+          "minutos": 8
+        }
+      },
+      "diagrama": "enzima-llave",
+      "preguntas": [
+        {
+          "id": "mt-enzimas-1",
+          "enunciado": "¿Qué es el catabolismo?",
+          "opciones": [
+            "Romper moléculas grandes y liberar energía",
+            "Construir moléculas grandes",
+            "Dividir la célula"
+          ],
+          "correcta": 0,
+          "explicacion": "El anabolismo es el que construye."
+        },
+        {
+          "id": "mt-enzimas-2",
+          "enunciado": "¿Qué hace una enzima?",
+          "opciones": [
+            "Acelera una reacción química sin gastarse",
+            "Da energía a la célula",
+            "Guarda el ADN"
+          ],
+          "correcta": 0,
+          "explicacion": "Puede trabajar una y otra vez."
+        },
+        {
+          "id": "mt-enzimas-3",
+          "enunciado": "¿Por qué una fiebre muy alta es peligrosa para las células?",
+          "opciones": [
+            "Las enzimas se deforman y dejan de funcionar",
+            "Las células se dividen más rápido",
+            "Se acaba el ADN"
+          ],
+          "correcta": 0,
+          "explicacion": "El sitio activo pierde su forma."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "atp",
+      "titulo": "ATP: la batería de la célula",
+      "resumen": "La energía se guarda y se gasta en pequeñas «pilas» de ATP.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "intermedio",
+      "requiere": [
+        "enzimas"
+      ],
+      "ficha": {
+        "idea": "La célula no usa la glucosa directamente para trabajar. Primero pasa su energía a moléculas de ATP, que funcionan como pilas recargables. Al soltar un fosfato, el ATP libera energía y queda como ADP; con la energía de la glucosa se vuelve a cargar.",
+        "contexto": [
+          {
+            "titulo": "ATP",
+            "texto": "Adenosín trifosfato: tiene tres fosfatos. El enlace del último guarda la energía que se usa."
+          },
+          {
+            "titulo": "Gastar",
+            "texto": "Contraer músculos, bombear sustancias por la membrana o fabricar proteínas cuesta ATP."
+          },
+          {
+            "titulo": "Recargar",
+            "texto": "La respiración celular, sobre todo en la mitocondria, usa la energía de la glucosa para volver a formar ATP."
+          },
+          {
+            "titulo": "Cuánto",
+            "texto": "Una persona recicla cada día una cantidad de ATP parecida a su propio peso."
+          }
+        ],
+        "evidencia": [
+          "El ATP fue descubierto en 1929 y Fritz Lipmann propuso en 1941 que era la «moneda» de energía de la célula."
+        ],
+        "limites": "La comparación con una pila ayuda, pero el ATP no se guarda por mucho tiempo: se gasta y se recarga en segundos.",
+        "cuaderno": {
+          "facil": [
+            "El ATP es la energía lista para usar.",
+            "Al gastarse queda ADP."
+          ],
+          "media": [
+            "ATP → ADP + P libera energía.",
+            "La glucosa da la energía para recargar el ATP."
+          ],
+          "avanzada": [
+            "Lipmann: el ATP como moneda de energía (1941).",
+            "Reciclamos al día casi nuestro peso en ATP."
+          ]
+        },
+        "docente": {
+          "abrir": "Si comes, ¿la energía del arroz va directo a tus músculos?",
+          "actividad": "Usen el diagrama: gasten ATP en distintos trabajos hasta que no alcance y recarguen. Discutan por qué no sirve guardar toda la energía como ATP.",
+          "errores": [
+            "Creer que la glucosa se usa directamente en el músculo.",
+            "Creer que el ATP se fabrica una sola vez."
+          ],
+          "minutos": 8
+        }
+      },
+      "diagrama": "atp-pila",
+      "preguntas": [
+        {
+          "id": "mt-atp-1",
+          "enunciado": "¿Qué pasa cuando el ATP suelta un fosfato?",
+          "opciones": [
+            "Libera energía y queda ADP",
+            "Gana energía",
+            "Se convierte en glucosa"
+          ],
+          "correcta": 0,
+          "explicacion": "Es la pila que se descarga."
+        },
+        {
+          "id": "mt-atp-2",
+          "enunciado": "¿De dónde sale la energía para recargar el ATP?",
+          "opciones": [
+            "De la glucosa, en la respiración celular",
+            "Del ADN",
+            "De la membrana"
+          ],
+          "correcta": 0,
+          "explicacion": "Sobre todo en la mitocondria."
+        },
+        {
+          "id": "mt-atp-3",
+          "enunciado": "¿Cuál de estos trabajos gasta ATP?",
+          "opciones": [
+            "Contraer un músculo",
+            "Ninguno; el ATP solo se guarda",
+            "Solo la fotosíntesis"
+          ],
+          "correcta": 0,
+          "explicacion": "Casi todo trabajo celular gasta ATP."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "respiracion-fermentacion",
+      "titulo": "Respiración y fermentación",
+      "resumen": "Con oxígeno, mucha energía; sin oxígeno, poca y con ácido láctico o alcohol.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "basico",
+      "nucleo": true,
+      "requiere": [
+        "enzimas"
+      ],
+      "ficha": {
+        "idea": "Las células sacan energía de la glucosa. Con oxígeno hacen respiración celular: la glucosa se rompe del todo en la mitocondria y se obtienen unos 30 ATP, más CO₂ y agua. Sin oxígeno hacen fermentación: solo 2 ATP, y sale ácido láctico (músculo) o alcohol y CO₂ (levadura).",
+        "contexto": [
+          {
+            "titulo": "Glucólisis",
+            "texto": "El primer paso, en el citoplasma: la glucosa se parte en dos y da 2 ATP. Ocurre con o sin oxígeno."
+          },
+          {
+            "titulo": "Respiración",
+            "texto": "Con oxígeno, la mitocondria termina el trabajo: glucosa + oxígeno → CO₂ + agua + mucho ATP."
+          },
+          {
+            "titulo": "Fermentación láctica",
+            "texto": "En el músculo sin oxígeno suficiente, o en las bacterias del yogur."
+          },
+          {
+            "titulo": "Fermentación alcohólica",
+            "texto": "La levadura hace crecer el pan y produce el alcohol de la chicha o el vino."
+          }
+        ],
+        "evidencia": [
+          "Pasteur demostró en el siglo XIX que la fermentación la hacen seres vivos, como la levadura, y no una simple reacción química."
+        ],
+        "limites": "La cifra de ATP de la respiración es aproximada: los libros dan entre 30 y 36. Y la idea de que el ácido láctico causa el dolor de días después del ejercicio hoy se considera un mito.",
+        "cuaderno": {
+          "facil": [
+            "Respiración: con oxígeno, mucha energía.",
+            "Fermentación: sin oxígeno, poca energía.",
+            "Se usa glucosa en las dos."
+          ],
+          "media": [
+            "Glucólisis en el citoplasma: 2 ATP.",
+            "Respiración en la mitocondria: unos 30 ATP, CO₂ y agua.",
+            "Fermentación: ácido láctico o alcohol + CO₂."
+          ],
+          "avanzada": [
+            "Pasteur mostró que la fermentación es obra de seres vivos.",
+            "El ATP de la respiración: entre 30 y 36 según la fuente."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué jadeas después de correr? ¿Y por qué crece la masa del pan?",
+          "actividad": "Pongan levadura con agua tibia y azúcar en una botella con un globo en la boca: el globo se infla con CO₂. Luego usen el diagrama y jueguen «¿Respiración o fermentación?».",
+          "errores": [
+            "Creer que las plantas no respiran.",
+            "Creer que la fermentación da más energía."
+          ],
+          "minutos": 12
+        }
+      },
+      "diagrama": "respiracion-fermentacion",
+      "juego": "oxigeno-juego",
+      "preguntas": [
+        {
+          "id": "mt-respiracion-fermentacion-1",
+          "enunciado": "¿Cuánto ATP da la respiración por cada glucosa, más o menos?",
+          "opciones": [
+            "Unos 30",
+            "2",
+            "Ninguno"
+          ],
+          "correcta": 0,
+          "explicacion": "La fermentación solo da 2."
+        },
+        {
+          "id": "mt-respiracion-fermentacion-2",
+          "enunciado": "¿Qué produce la levadura al fermentar?",
+          "opciones": [
+            "Alcohol y CO₂",
+            "Ácido láctico",
+            "Oxígeno"
+          ],
+          "correcta": 0,
+          "explicacion": "El CO₂ hace crecer el pan."
+        },
+        {
+          "id": "mt-respiracion-fermentacion-3",
+          "enunciado": "¿Dónde ocurre la mayor parte de la respiración celular?",
+          "opciones": [
+            "En la mitocondria",
+            "En el núcleo",
+            "En la pared celular"
+          ],
+          "correcta": 0,
+          "explicacion": "La glucólisis ocurre antes, en el citoplasma."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "comunicacion",
+      "titulo": "Las células se comunican",
+      "resumen": "Una señal, un receptor y una respuesta.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "Las células de un organismo se mandan mensajes químicos. Una célula envía una señal; solo las células que tienen el receptor que encaja con ella la reciben, y entonces responden: crecen, se dividen, fabrican algo o hasta mueren.",
+        "contexto": [
+          {
+            "titulo": "Señal",
+            "texto": "Una molécula mensajera: una hormona, un neurotransmisor o una molécula de la membrana."
+          },
+          {
+            "titulo": "Receptor",
+            "texto": "Una proteína, casi siempre en la membrana, que encaja con la señal como llave y cerradura."
+          },
+          {
+            "titulo": "Respuesta",
+            "texto": "Lo que hace la célula al recibir la señal. La misma señal puede causar respuestas distintas en células distintas."
+          },
+          {
+            "titulo": "A distancia",
+            "texto": "Las hormonas, como la insulina o la adrenalina, viajan por la sangre a todo el cuerpo."
+          }
+        ],
+        "evidencia": [
+          "La diabetes tipo 1 se da cuando el páncreas no fabrica insulina: la señal no llega y las células no toman glucosa de la sangre."
+        ],
+        "limites": "Es una simplificación: dentro de la célula, la señal pasa por una cadena de moléculas antes de que haya respuesta.",
+        "cuaderno": {
+          "facil": [
+            "Las células se mandan mensajes químicos.",
+            "Señal → receptor → respuesta."
+          ],
+          "media": [
+            "Solo responden las células con el receptor.",
+            "Tres tipos: por contacto, a células cercanas y a distancia (hormonas)."
+          ],
+          "avanzada": [
+            "La insulina es una hormona que avisa a las células que tomen glucosa.",
+            "Dentro de la célula la señal pasa por una cadena de moléculas."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Cómo «sabe» tu corazón que debe latir más rápido cuando te asustas?",
+          "actividad": "Jueguen el «teléfono hormonal»: unos estudiantes tienen tarjetas de receptor y solo ellos pueden responder a ciertas señales. Luego recorran el diagrama.",
+          "errores": [
+            "Creer que todas las células responden a todas las hormonas.",
+            "Creer que las señales son eléctricas en todos los casos."
+          ],
+          "minutos": 10
+        }
+      },
+      "diagrama": "senales-celulares",
+      "preguntas": [
+        {
+          "id": "mt-comunicacion-1",
+          "enunciado": "¿Por qué una hormona solo actúa en algunas células?",
+          "opciones": [
+            "Porque solo esas tienen el receptor que encaja",
+            "Porque no llega a las demás",
+            "Porque las demás están muertas"
+          ],
+          "correcta": 0,
+          "explicacion": "La hormona viaja a todo el cuerpo por la sangre."
+        },
+        {
+          "id": "mt-comunicacion-2",
+          "enunciado": "¿Cómo viaja una hormona a células lejanas?",
+          "opciones": [
+            "Por la sangre",
+            "Por el aire",
+            "Por el ADN"
+          ],
+          "correcta": 0,
+          "explicacion": "Así llega la insulina desde el páncreas."
+        },
+        {
+          "id": "mt-comunicacion-3",
+          "enunciado": "El orden de la comunicación celular es...",
+          "opciones": [
+            "Señal, receptor, respuesta",
+            "Respuesta, señal, receptor",
+            "Receptor, respuesta, señal"
+          ],
+          "correcta": 0,
+          "explicacion": "Primero se envía la señal."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "uniones",
+      "titulo": "Uniones entre células",
+      "resumen": "Las células de un tejido se sellan, se sujetan y se conectan.",
+      "anio": 5,
+      "etiqueta": "Paso 5",
+      "nivel": "avanzado",
+      "requiere": [
+        "comunicacion"
+      ],
+      "ficha": {
+        "idea": "En un tejido, las células no están sueltas: se unen con estructuras especiales. Las uniones estrechas sellan el paso entre células, las de anclaje las sujetan para que el tejido resista estirones y las comunicantes forman canales para pasar señales de una célula a otra.",
+        "contexto": [
+          {
+            "titulo": "Estrechas",
+            "texto": "Sellan como una cremallera. En el intestino impiden que el contenido se cuele entre las células."
+          },
+          {
+            "titulo": "De anclaje (desmosomas)",
+            "texto": "Remaches unidos al citoesqueleto. Mantienen unida la piel y el músculo del corazón."
+          },
+          {
+            "titulo": "Comunicantes",
+            "texto": "Canales entre citoplasmas. En el corazón permiten que la señal pase y todas las células se contraigan juntas."
+          },
+          {
+            "titulo": "En las plantas",
+            "texto": "La pared celular une las células, y unos canales llamados plasmodesmos las comunican."
+          }
+        ],
+        "evidencia": [
+          "Algunas enfermedades en las que fallan las uniones de anclaje hacen que la piel forme ampollas con un roce mínimo."
+        ],
+        "limites": "Hay más tipos de uniones y de moléculas de adhesión; aquí se muestran las tres más comunes en animales.",
+        "cuaderno": {
+          "facil": [
+            "Las células de un tejido están unidas."
+          ],
+          "media": [
+            "Estrechas: sellan. De anclaje: sujetan. Comunicantes: conectan."
+          ],
+          "avanzada": [
+            "Desmosomas unidos al citoesqueleto.",
+            "En plantas: plasmodesmos."
+          ]
+        },
+        "docente": {
+          "abrir": "Si te estiras la piel, ¿por qué no se separan las células?",
+          "actividad": "Representen un tejido tomándose de las manos (anclaje), hombro con hombro (estrecha) y pasándose un mensaje en susurro (comunicante). Luego usen el diagrama.",
+          "errores": [
+            "Creer que las células de un tejido están sueltas.",
+            "Confundir uniones comunicantes con poros de la membrana."
+          ],
+          "minutos": 10
+        }
+      },
+      "diagrama": "uniones-celulares",
+      "preguntas": [
+        {
+          "id": "mt-uniones-1",
+          "enunciado": "¿Qué unión impide que el contenido del intestino se cuele entre las células?",
+          "opciones": [
+            "Las uniones estrechas",
+            "Las comunicantes",
+            "Los plasmodesmos"
+          ],
+          "correcta": 0,
+          "explicacion": "Sellan como una cremallera."
+        },
+        {
+          "id": "mt-uniones-2",
+          "enunciado": "¿Para qué sirven las uniones comunicantes del corazón?",
+          "opciones": [
+            "Para que la señal pase y las células se contraigan juntas",
+            "Para sellar el corazón",
+            "Para guardar ATP"
+          ],
+          "correcta": 0,
+          "explicacion": "Son canales entre células vecinas."
+        },
+        {
+          "id": "mt-uniones-3",
+          "enunciado": "¿Qué comunica a las células vegetales entre sí?",
+          "opciones": [
+            "Los plasmodesmos",
+            "Los desmosomas",
+            "Las uniones estrechas"
+          ],
+          "correcta": 0,
+          "explicacion": "Atraviesan la pared celular."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "muerte-celular",
+      "titulo": "Muerte celular: apoptosis y necrosis",
+      "resumen": "Morir por orden, limpio; o por daño, con inflamación.",
+      "anio": 6,
+      "etiqueta": "Paso 6",
+      "nivel": "intermedio",
+      "requiere": [
+        "comunicacion"
+      ],
+      "ficha": {
+        "idea": "Las células también mueren, y no siempre es malo. En la apoptosis, la célula recibe una orden y se desarma de forma ordenada: se encoge, se parte y un macrófago la limpia sin causar daño. En la necrosis, un daño la mata de golpe: se hincha, revienta y el tejido se inflama.",
+        "contexto": [
+          {
+            "titulo": "Apoptosis en el desarrollo",
+            "texto": "Separa los dedos del embrión y hace desaparecer la cola del renacuajo."
+          },
+          {
+            "titulo": "Apoptosis como defensa",
+            "texto": "Elimina células con el ADN dañado o infectadas por virus. Cuando falla, puede aparecer un cáncer."
+          },
+          {
+            "titulo": "Necrosis",
+            "texto": "Causada por golpes, quemaduras, venenos o falta de sangre, como en un infarto."
+          },
+          {
+            "titulo": "Cuántas",
+            "texto": "En un adulto mueren por apoptosis miles de millones de células cada día, y se reemplazan por mitosis."
+          }
+        ],
+        "evidencia": [
+          "Sydney Brenner, Robert Horvitz y John Sulston recibieron el Nobel en 2002 por descubrir los genes que controlan la muerte celular programada en un gusano."
+        ],
+        "limites": "Además de estas dos, se conocen otras formas de muerte celular; aquí se presentan las dos más estudiadas.",
+        "cuaderno": {
+          "facil": [
+            "Apoptosis: muerte ordenada, por orden.",
+            "Necrosis: muerte por daño."
+          ],
+          "media": [
+            "Apoptosis: la célula se encoge y se parte; sin inflamación.",
+            "Necrosis: la célula se hincha y revienta; con inflamación.",
+            "La apoptosis forma los dedos del embrión."
+          ],
+          "avanzada": [
+            "La apoptosis elimina células dañadas: si falla, puede haber cáncer.",
+            "Nobel 2002: Brenner, Horvitz y Sulston."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Crees que es bueno o malo que nuestras células mueran? ¿Por qué?",
+          "actividad": "Usen el diagrama para comparar paso a paso, revisen los dedos del embrión y luego jueguen «¿Apoptosis o necrosis?».",
+          "errores": [
+            "Creer que toda muerte celular es una enfermedad.",
+            "Creer que el cuerpo no reemplaza las células que mueren."
+          ],
+          "minutos": 10
+        }
+      },
+      "diagrama": "muerte-celular",
+      "juego": "muerte-juego",
+      "preguntas": [
+        {
+          "id": "mt-muerte-celular-1",
+          "enunciado": "¿Qué separa los dedos del embrión?",
+          "opciones": [
+            "La apoptosis",
+            "La necrosis",
+            "La meiosis"
+          ],
+          "correcta": 0,
+          "explicacion": "Las células entre los dedos mueren por orden."
+        },
+        {
+          "id": "mt-muerte-celular-2",
+          "enunciado": "¿Cuál causa inflamación?",
+          "opciones": [
+            "La necrosis",
+            "La apoptosis",
+            "Las dos por igual"
+          ],
+          "correcta": 0,
+          "explicacion": "El contenido de la célula se derrama."
+        },
+        {
+          "id": "mt-muerte-celular-3",
+          "enunciado": "¿Por qué una falla en la apoptosis puede llevar al cáncer?",
+          "opciones": [
+            "Las células dañadas no se eliminan y siguen dividiéndose",
+            "Las células mueren demasiado",
+            "Se detiene la mitosis"
+          ],
+          "correcta": 0,
+          "explicacion": "La apoptosis es una defensa del cuerpo."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}
