@@ -994,7 +994,82 @@
           }
         },
         {
-          "titulo": "Huevo o vientre",
+          "titulo": "Ovíparos (gallina), paso a paso",
+          "visual": {
+            "tipo": "escena",
+            "id": "desarrollo",
+            "fases": [
+              {
+                "id": "ovi-1",
+                "nombre": "Pone el huevo",
+                "texto": "La gallina pone el huevo fuera de su cuerpo."
+              },
+              {
+                "id": "ovi-2",
+                "nombre": "Crece en el huevo",
+                "texto": "El embrión se desarrolla dentro del huevo y se alimenta de la yema.",
+                "nota": "La gallina lo empolla para darle calor."
+              },
+              {
+                "id": "ovi-3",
+                "nombre": "Sale del cascarón",
+                "texto": "El pollito rompe el cascarón y sale."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Vivíparos (perra), paso a paso",
+          "visual": {
+            "tipo": "escena",
+            "id": "desarrollo",
+            "fases": [
+              {
+                "id": "viv-1",
+                "nombre": "Crece dentro de la madre",
+                "texto": "El embrión se desarrolla dentro del útero de la madre."
+              },
+              {
+                "id": "viv-2",
+                "nombre": "Placenta y cordón",
+                "texto": "La madre lo alimenta por la placenta y el cordón umbilical."
+              },
+              {
+                "id": "viv-3",
+                "nombre": "Nace la cría",
+                "texto": "La cría nace ya formada.",
+                "nota": "Así nacemos los mamíferos, también los humanos."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Ovovivíparos (serpiente), paso a paso",
+          "visual": {
+            "tipo": "escena",
+            "id": "desarrollo",
+            "fases": [
+              {
+                "id": "ovov-1",
+                "nombre": "Huevos dentro",
+                "texto": "La madre forma huevos, pero no los pone: se quedan dentro de su cuerpo."
+              },
+              {
+                "id": "ovov-2",
+                "nombre": "Se alimenta de la yema",
+                "texto": "Cada embrión crece en su huevo y se alimenta de la yema, no de la madre.",
+                "nota": "Esta es la diferencia con los vivíparos."
+              },
+              {
+                "id": "ovov-3",
+                "nombre": "Nacen vivas",
+                "texto": "Las crías salen del huevo dentro de la madre y nacen vivas."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Huevo o vientre: resumen",
           "visual": {
             "tipo": "tarjetas",
             "items": [
