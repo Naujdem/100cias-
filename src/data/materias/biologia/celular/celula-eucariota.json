@@ -479,7 +479,8 @@
           "explicacion": "Tiene tantas proteínas disueltas que es espeso, no agua limpia."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "juego": "citoplasma-juego"
     },
     {
       "id": "citoesqueleto",
@@ -639,7 +640,8 @@
           "explicacion": "Es una red dinámica, no una estructura fija."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "juego": "citoesqueleto-juego"
     },
     {
       "id": "nucleo",
@@ -851,7 +853,8 @@
           "explicacion": "El glóbulo rojo maduro lo pierde."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "juego": "nucleo-juego"
     },
     {
       "id": "ribosomas",
@@ -1009,7 +1012,8 @@
           "explicacion": "Todas las células fabrican proteínas, así que todas tienen ribosomas."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "juego": "ribosoma-juego"
     },
     {
       "id": "ruta-proteinas",
@@ -1413,7 +1417,8 @@
           "explicacion": "Su ADN circular recuerda al de las bacterias."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "juego": "mitocondria-juego"
     },
     {
       "id": "cloroplastos",
@@ -1790,7 +1795,8 @@
           "explicacion": "La célula recicla sus propios componentes."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "juego": "lisosoma-juego"
     },
     {
       "id": "peroxisomas",
@@ -1940,7 +1946,8 @@
           "explicacion": "2 H₂O₂ → 2 H₂O + O₂: las burbujas son oxígeno."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "juego": "peroxisoma-juego"
     },
     {
       "id": "pared-matriz",
@@ -2099,7 +2106,8 @@
           "explicacion": "Tiene las dos; la membrana es la que controla qué entra."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "juego": "pared-juego"
     },
     {
       "id": "celula-completa",

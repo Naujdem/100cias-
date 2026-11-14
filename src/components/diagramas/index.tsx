@@ -10,6 +10,8 @@ import NivelesJuego from './NivelesJuego.tsx'
 import CelulaUrgencias from './CelulaUrgencias.tsx'
 import ArmaCelula from './ArmaCelula.tsx'
 import CarreraProteina from './CarreraProteina.tsx'
+import { LisosomaJuego, CitoplasmaJuego, CitoesqueletoJuego, RibosomaJuego, PeroxisomaJuego, ParedMatrizJuego } from './JuegosDecide.tsx'
+import { MitocondriaJuego, NucleoJuego } from './JuegosPropios.tsx'
 import FasesMitosis from './FasesMitosis.tsx'
 import MeiosisJuego from './MeiosisJuego.tsx'
 import ClasificaCasos, { CASOS_OXIGENO, CASOS_MUERTE, CASOS_TEJIDOS, CASOS_REPRODUCCION } from './ClasificaCasos.tsx'
@@ -59,6 +61,14 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'celula-urgencias': CelulaUrgencias,
   'arma-celula': ArmaCelula,
   'carrera-proteina': CarreraProteina,
+  'lisosoma-juego': LisosomaJuego,
+  'citoplasma-juego': CitoplasmaJuego,
+  'citoesqueleto-juego': CitoesqueletoJuego,
+  'ribosoma-juego': RibosomaJuego,
+  'peroxisoma-juego': PeroxisomaJuego,
+  'pared-juego': ParedMatrizJuego,
+  'mitocondria-juego': MitocondriaJuego,
+  'nucleo-juego': NucleoJuego,
   'ciclo-reloj': CicloReloj,
   'fases-mitosis': FasesMitosis,
   'cromosoma-compacta': CromosomaCompacta,
