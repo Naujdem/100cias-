@@ -696,7 +696,128 @@
           "explicacion": "La apoptosis es una defensa del cuerpo."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "diapositivas": [
+        {
+          "titulo": "Dos formas de morir",
+          "visual": {
+            "tipo": "escena",
+            "id": "muerte-celular",
+            "fases": [
+              {
+                "id": "sana",
+                "nombre": "Una célula sana",
+                "texto": "Las células también mueren, y no siempre es malo."
+              },
+              {
+                "id": "senal",
+                "nombre": "Apoptosis: la orden",
+                "texto": "La célula recibe una señal: ya no se necesita o tiene el ADN dañado.",
+                "nota": "Apoptosis = muerte programada, ordenada.",
+                "marcas": [
+                  {
+                    "x": 300,
+                    "y": 120,
+                    "texto": "La orden puede venir de afuera o de la propia célula."
+                  }
+                ]
+              },
+              {
+                "id": "encoge",
+                "nombre": "Se encoge",
+                "texto": "La célula se encoge y su núcleo se rompe en trocitos."
+              },
+              {
+                "id": "fragmentos",
+                "nombre": "Se parte en pedazos",
+                "texto": "Se divide en pequeñas bolsas cerradas: nada se riega afuera.",
+                "marcas": [
+                  {
+                    "x": 250,
+                    "y": 100,
+                    "texto": "Cada bolsa conserva su membrana: no causa daño a las vecinas."
+                  }
+                ]
+              },
+              {
+                "id": "macrofago",
+                "nombre": "La limpieza",
+                "texto": "Un macrófago se come los pedazos. Todo queda limpio, sin inflamación.",
+                "marcas": [
+                  {
+                    "x": 140,
+                    "y": 90,
+                    "texto": "El macrófago es un glóbulo blanco que «come» restos."
+                  }
+                ]
+              },
+              {
+                "id": "necrosis-dano",
+                "nombre": "Necrosis: el daño",
+                "texto": "Otra cosa es un daño: un golpe, una quemadura o falta de sangre. La célula se hincha.",
+                "nota": "Necrosis = muerte por accidente, desordenada."
+              },
+              {
+                "id": "necrosis-revienta",
+                "nombre": "Revienta",
+                "texto": "La membrana se rompe, el contenido se riega y el tejido se inflama.",
+                "marcas": [
+                  {
+                    "x": 330,
+                    "y": 40,
+                    "texto": "Por eso una herida se pone roja, caliente e hinchada."
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Ordenada o por accidente",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "🧹",
+              "titulo": "Apoptosis",
+              "puntos": [
+                "La célula se encoge y se parte",
+                "Sin inflamación"
+              ]
+            },
+            "der": {
+              "icono": "💥",
+              "titulo": "Necrosis",
+              "puntos": [
+                "La célula se hincha y revienta",
+                "Inflama el tejido"
+              ]
+            }
+          }
+        },
+        {
+          "titulo": "Útil desde antes de nacer",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "✋",
+                "titulo": "Dedos",
+                "texto": "la apoptosis separa los dedos del embrión"
+              },
+              {
+                "icono": "🐸",
+                "titulo": "Renacuajo",
+                "texto": "hace desaparecer la cola"
+              },
+              {
+                "icono": "🛡️",
+                "titulo": "Defensa",
+                "texto": "elimina células dañadas o infectadas"
+              }
+            ]
+          }
+        }
+      ]
     }
   ]
 }
