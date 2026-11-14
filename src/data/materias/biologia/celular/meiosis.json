@@ -1,0 +1,607 @@
+{
+  "id": "meiosis",
+  "materia": "biologia",
+  "area": "celular",
+  "titulo": "Procesos celulares",
+  "subtema": "Meiosis y reproducción sexual",
+  "orden": 7,
+  "etiqueta": "4.2",
+  "vistas": [
+    "ruta"
+  ],
+  "tituloVista": "Ruta de la meiosis",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Diferenciar células diploides y haploides.",
+    "Describir las fases de la meiosis y explicar por qué reduce los cromosomas a la mitad.",
+    "Comparar la mitosis y la meiosis y explicar de dónde viene la variedad entre hermanos."
+  ],
+  "fuentes": [
+    "Plan de área del colegio (solo guía)",
+    "BORRADOR: esqueleto redactado como punto de partida; verificar cada bloque antes de marcarlo como revisado. A verificar: 78 cromosomas del perro y 48 de la papa; Weismann y su predicción; profase I detenida en los óvulos hasta la ovulación; más de 70 billones de combinaciones por pareja; un óvulo y tres cuerpos polares; trigo con más de dos juegos de cromosomas."
+  ],
+  "bloques": [
+    {
+      "id": "diploide-haploide",
+      "titulo": "Diploides y haploides",
+      "resumen": "Cromosomas en pares: 2n en el cuerpo, n en los gametos.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "Las células del cuerpo tienen sus cromosomas en pares: uno de cada par vino de la madre y el otro del padre. Por eso se llaman diploides (2n). Los gametos, óvulos y espermatozoides, llevan solo uno de cada par: son haploides (n).",
+        "contexto": [
+          {
+            "titulo": "Cromosomas homólogos",
+            "texto": "Los dos cromosomas de un par tienen el mismo tamaño y los mismos genes en el mismo orden, aunque las versiones pueden ser distintas (por ejemplo, ojos claros u oscuros)."
+          },
+          {
+            "titulo": "En las personas",
+            "texto": "2n = 46 cromosomas, es decir, 23 pares. Un gameto humano tiene n = 23."
+          },
+          {
+            "titulo": "El par 23",
+            "texto": "Los cromosomas sexuales: XX en las mujeres y XY en los hombres. X e Y no son iguales en tamaño, pero se comportan como pareja."
+          },
+          {
+            "titulo": "Otros seres",
+            "texto": "Cada especie tiene su número: el perro tiene 78 cromosomas y la papa 48. El número no indica qué tan complejo es un ser."
+          }
+        ],
+        "evidencia": [
+          "Un cariotipo es una foto de los cromosomas de una célula ordenados por pares y por tamaño."
+        ],
+        "limites": "Diploide y haploide hablan de cuántos juegos de cromosomas hay, no de cuántos cromosomas en total. Algunas plantas, como el trigo, tienen más de dos juegos.",
+        "cuaderno": {
+          "facil": [
+            "Las células del cuerpo tienen cromosomas en pares (2n).",
+            "Los gametos tienen uno de cada par (n).",
+            "Personas: 46 cromosomas, 23 pares."
+          ],
+          "media": [
+            "Homólogos: un par, uno de la madre y uno del padre.",
+            "Tienen los mismos genes, pero pueden traer versiones distintas.",
+            "El par 23 son los cromosomas sexuales: XX o XY."
+          ],
+          "avanzada": [
+            "Un cariotipo ordena los cromosomas por pares.",
+            "2n y n se refieren al número de juegos de cromosomas."
+          ]
+        },
+        "docente": {
+          "abrir": "Tienes la mitad de tus cromosomas de tu mamá y la mitad de tu papá. ¿Cómo crees que pasó eso?",
+          "actividad": "Recorran el diagrama de los pares. Luego, con medias de dos colores (madre y padre), formen pares de distintos tamaños y armen una «célula» 2n y un «gameto» n.",
+          "errores": [
+            "Creer que los dos cromosomas de un par son idénticos.",
+            "Creer que más cromosomas significa un ser más complejo."
+          ],
+          "minutos": 8
+        }
+      },
+      "diagrama": "pares-homologos",
+      "preguntas": [
+        {
+          "id": "me-diploide-haploide-1",
+          "enunciado": "¿Cuántos cromosomas tiene un óvulo humano?",
+          "opciones": [
+            "23",
+            "46",
+            "92"
+          ],
+          "correcta": 0,
+          "explicacion": "Los gametos son haploides: uno de cada par."
+        },
+        {
+          "id": "me-diploide-haploide-2",
+          "enunciado": "¿Qué son los cromosomas homólogos?",
+          "opciones": [
+            "Los dos cromosomas de un par, uno de la madre y otro del padre",
+            "Las dos copias de un cromosoma duplicado",
+            "Cromosomas de dos especies distintas"
+          ],
+          "correcta": 0,
+          "explicacion": "Las copias unidas son cromátidas hermanas, no homólogos."
+        },
+        {
+          "id": "me-diploide-haploide-3",
+          "enunciado": "Una célula de la piel humana es...",
+          "opciones": [
+            "Diploide (2n = 46)",
+            "Haploide (n = 23)",
+            "Haploide (n = 46)"
+          ],
+          "correcta": 0,
+          "explicacion": "Las células del cuerpo tienen los cromosomas en pares."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "por-que-meiosis",
+      "titulo": "¿Por qué hace falta la meiosis?",
+      "resumen": "Si los gametos tuvieran todos los cromosomas, cada generación tendría el doble.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "nucleo": true,
+      "requiere": [
+        "diploide-haploide"
+      ],
+      "ficha": {
+        "idea": "En la fecundación se unen un óvulo y un espermatozoide. Si cada uno tuviera 46 cromosomas, el hijo tendría 92, y el nieto 184. La meiosis evita eso: reparte los cromosomas a la mitad, de modo que al unirse dos gametos se recupera el número de la especie.",
+        "contexto": [
+          {
+            "titulo": "Fecundación",
+            "texto": "Un óvulo (n = 23) y un espermatozoide (n = 23) se unen y forman el cigoto (2n = 46), la primera célula del nuevo ser."
+          },
+          {
+            "titulo": "Del cigoto al cuerpo",
+            "texto": "Desde el cigoto, todas las demás células se forman por mitosis, así que todas tienen 46 cromosomas."
+          },
+          {
+            "titulo": "Reproducción sexual",
+            "texto": "Juntar la mitad de cada progenitor hace que los hijos se parezcan a los dos, sin ser copia de ninguno."
+          },
+          {
+            "titulo": "Asexual vs sexual",
+            "texto": "Una bacteria o una papa que retoña se reproducen sin meiosis: los hijos son copias. Con meiosis y fecundación, cada hijo es una mezcla nueva."
+          }
+        ],
+        "evidencia": [
+          "El biólogo August Weismann predijo a finales del siglo XIX que los gametos debían tener la mitad del material hereditario, antes de que se describiera bien la meiosis."
+        ],
+        "limites": "Es un experimento mental: nunca ha existido una especie que duplique sus cromosomas en cada generación.",
+        "cuaderno": {
+          "facil": [
+            "La meiosis forma gametos con la mitad de cromosomas.",
+            "Óvulo (23) + espermatozoide (23) = cigoto (46).",
+            "Así se mantiene el número de la especie."
+          ],
+          "media": [
+            "Del cigoto en adelante, las células se forman por mitosis.",
+            "La reproducción sexual mezcla la información de dos progenitores."
+          ],
+          "avanzada": [
+            "Weismann predijo la reducción a la mitad antes de que se conociera bien la meiosis."
+          ]
+        },
+        "docente": {
+          "abrir": "Si mamá aporta 46 cromosomas y papá aporta 46, ¿cuántos tendría el bebé? ¿Y su hijo?",
+          "actividad": "Usen el diagrama con «Gametos hechos por mitosis» y lleven en el tablero la cuenta por generaciones; luego cambien a meiosis y comparen.",
+          "errores": [
+            "Creer que el cigoto tiene 23 cromosomas.",
+            "Creer que la meiosis ocurre en todas las células del cuerpo."
+          ],
+          "minutos": 8
+        }
+      },
+      "diagrama": "cuenta-cromosomas",
+      "preguntas": [
+        {
+          "id": "me-por-que-meiosis-1",
+          "enunciado": "¿Qué pasaría si los gametos se formaran por mitosis?",
+          "opciones": [
+            "El número de cromosomas se duplicaría en cada generación",
+            "Los hijos serían iguales a los padres",
+            "No habría fecundación"
+          ],
+          "correcta": 0,
+          "explicacion": "Cada gameto tendría 46 y el hijo 92."
+        },
+        {
+          "id": "me-por-que-meiosis-2",
+          "enunciado": "¿Cuántos cromosomas tiene el cigoto humano?",
+          "opciones": [
+            "46",
+            "23",
+            "92"
+          ],
+          "correcta": 0,
+          "explicacion": "Une los 23 del óvulo y los 23 del espermatozoide."
+        },
+        {
+          "id": "me-por-que-meiosis-3",
+          "enunciado": "Después del cigoto, ¿cómo se forman las células del cuerpo?",
+          "opciones": [
+            "Por mitosis",
+            "Por meiosis",
+            "Por fecundación"
+          ],
+          "correcta": 0,
+          "explicacion": "Todas reciben copias de los 46 cromosomas."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "meiosis-i",
+      "titulo": "Meiosis I: se separan los pares",
+      "resumen": "Los homólogos se aparean, pueden entrecruzarse y luego se separan.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "intermedio",
+      "requiere": [
+        "por-que-meiosis"
+      ],
+      "ficha": {
+        "idea": "La meiosis son dos divisiones seguidas. En la primera, cada cromosoma se junta con su homólogo; los pares se alinean en el centro y luego se separan: un homólogo a cada célula. Al final quedan dos células haploides, aunque cada cromosoma sigue duplicado.",
+        "contexto": [
+          {
+            "titulo": "Profase I",
+            "texto": "Los homólogos se aparean y pueden intercambiar trozos: es el entrecruzamiento."
+          },
+          {
+            "titulo": "Metafase I",
+            "texto": "Los pares se alinean en el centro, un homólogo a cada lado."
+          },
+          {
+            "titulo": "Anafase I",
+            "texto": "Se separan los homólogos, no las cromátidas: cada uno sigue en forma de X."
+          },
+          {
+            "titulo": "Telofase I",
+            "texto": "Se forman dos células con un cromosoma de cada par."
+          }
+        ],
+        "evidencia": [
+          "Al microscopio, en la profase I se ven los quiasmas: puntos donde los homólogos se cruzan e intercambian trozos."
+        ],
+        "limites": "La profase I puede durar muchísimo: en los óvulos humanos empieza antes de nacer y se detiene por años, hasta la ovulación.",
+        "cuaderno": {
+          "facil": [
+            "La meiosis tiene dos divisiones: meiosis I y meiosis II.",
+            "En la meiosis I se separan los pares de homólogos."
+          ],
+          "media": [
+            "Profase I: se aparean los homólogos.",
+            "Metafase I: los pares en el centro. Anafase I: se separan los homólogos.",
+            "Telofase I: dos células haploides."
+          ],
+          "avanzada": [
+            "Entrecruzamiento: los homólogos intercambian trozos (quiasmas).",
+            "Tras la meiosis I la célula es haploide, aunque los cromosomas siguen duplicados."
+          ]
+        },
+        "docente": {
+          "abrir": "En la mitosis se separan las copias de cada cromosoma. ¿Qué crees que se separa primero en la meiosis?",
+          "actividad": "Recorran la meiosis I en el diagrama y comparen cada paso con la mitosis del 4.1. Con plastilina de dos colores, armen pares y representen el entrecruzamiento.",
+          "errores": [
+            "Creer que en la anafase I se separan las cromátidas.",
+            "Confundir homólogos con cromátidas hermanas."
+          ],
+          "minutos": 12
+        }
+      },
+      "diagrama": "meiosis-pasos",
+      "preguntas": [
+        {
+          "id": "me-meiosis-i-1",
+          "enunciado": "¿Qué se separa en la anafase I?",
+          "opciones": [
+            "Los cromosomas homólogos",
+            "Las cromátidas hermanas",
+            "Los núcleos"
+          ],
+          "correcta": 0,
+          "explicacion": "Las cromátidas se separan en la anafase II."
+        },
+        {
+          "id": "me-meiosis-i-2",
+          "enunciado": "¿En qué fase ocurre el entrecruzamiento?",
+          "opciones": [
+            "Profase I",
+            "Metafase II",
+            "Telofase I"
+          ],
+          "correcta": 0,
+          "explicacion": "Ocurre cuando los homólogos están apareados."
+        },
+        {
+          "id": "me-meiosis-i-3",
+          "enunciado": "Al terminar la meiosis I, las células son...",
+          "opciones": [
+            "Haploides, con cromosomas todavía duplicados",
+            "Diploides",
+            "Haploides, con cromosomas sencillos"
+          ],
+          "correcta": 0,
+          "explicacion": "Tienen uno de cada par, pero cada uno en forma de X."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "meiosis-ii",
+      "titulo": "Meiosis II: se separan las copias",
+      "resumen": "Parecida a una mitosis: se separan las cromátidas y resultan cuatro células.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "intermedio",
+      "requiere": [
+        "meiosis-i"
+      ],
+      "ficha": {
+        "idea": "La segunda división se parece a una mitosis, pero sin copiar otra vez el ADN. En cada una de las dos células, los cromosomas se alinean y se separan sus cromátidas hermanas. Resultado: cuatro células haploides, distintas entre sí.",
+        "contexto": [
+          {
+            "titulo": "Sin fase S",
+            "texto": "Entre la meiosis I y la II no se copia el ADN. Por eso el número de cromosomas queda a la mitad."
+          },
+          {
+            "titulo": "Metafase II",
+            "texto": "En cada célula los cromosomas se alinean en el centro, como en una mitosis."
+          },
+          {
+            "titulo": "Anafase II",
+            "texto": "Se separan las cromátidas hermanas hacia extremos opuestos."
+          },
+          {
+            "titulo": "En las personas",
+            "texto": "En los hombres resultan cuatro espermatozoides; en las mujeres, un óvulo grande y tres células pequeñas que se pierden."
+          }
+        ],
+        "evidencia": [
+          "Si un par no se separa bien (no disyunción), un gameto queda con un cromosoma de más. Así se origina, por ejemplo, el síndrome de Down: tres copias del cromosoma 21."
+        ],
+        "limites": "El dibujo muestra cuatro células iguales de tamaño; en la formación del óvulo el reparto del citoplasma es muy desigual.",
+        "cuaderno": {
+          "facil": [
+            "En la meiosis II se separan las cromátidas.",
+            "Resultan cuatro células haploides."
+          ],
+          "media": [
+            "No se copia el ADN entre la meiosis I y la II.",
+            "Metafase II y anafase II se parecen a la mitosis.",
+            "Hombres: 4 espermatozoides. Mujeres: 1 óvulo."
+          ],
+          "avanzada": [
+            "No disyunción: un par no se separa y un gameto queda con un cromosoma de más (síndrome de Down, trisomía 21)."
+          ]
+        },
+        "docente": {
+          "abrir": "Ya tenemos dos células con un cromosoma de cada par, pero cada uno está duplicado. ¿Qué falta?",
+          "actividad": "Terminen el recorrido del diagrama y jueguen «Ordena la meiosis». Después, en parejas, expliquen en voz alta las 8 etapas sin mirar.",
+          "errores": [
+            "Creer que antes de la meiosis II se copia el ADN.",
+            "Creer que las cuatro células son iguales."
+          ],
+          "minutos": 10
+        }
+      },
+      "diagrama": "meiosis-ii",
+      "juego": "meiosis-ordena",
+      "preguntas": [
+        {
+          "id": "me-meiosis-ii-1",
+          "enunciado": "¿Qué se separa en la anafase II?",
+          "opciones": [
+            "Las cromátidas hermanas",
+            "Los homólogos",
+            "Los pares de cromosomas"
+          ],
+          "correcta": 0,
+          "explicacion": "Igual que en la anafase de la mitosis."
+        },
+        {
+          "id": "me-meiosis-ii-2",
+          "enunciado": "¿Cuántas células resultan al final de la meiosis?",
+          "opciones": [
+            "Cuatro",
+            "Dos",
+            "Ocho"
+          ],
+          "correcta": 0,
+          "explicacion": "Dos divisiones seguidas: 1 → 2 → 4."
+        },
+        {
+          "id": "me-meiosis-ii-3",
+          "enunciado": "¿Se copia el ADN entre la meiosis I y la II?",
+          "opciones": [
+            "No",
+            "Sí",
+            "Solo en las plantas"
+          ],
+          "correcta": 0,
+          "explicacion": "Por eso el número queda a la mitad."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "variedad",
+      "titulo": "¿Por qué los hermanos no son iguales?",
+      "resumen": "El azar en la metafase I y el entrecruzamiento hacen cada gameto distinto.",
+      "anio": 5,
+      "etiqueta": "Paso 5",
+      "nivel": "avanzado",
+      "requiere": [
+        "meiosis-i"
+      ],
+      "ficha": {
+        "idea": "Dos hermanos tienen los mismos padres, pero no son iguales. La meiosis crea variedad de dos maneras: cada par se alinea al azar en la metafase I, y el entrecruzamiento mezcla trozos de los homólogos. Además, en la fecundación se une un gameto cualquiera con otro.",
+        "contexto": [
+          {
+            "titulo": "Reparto independiente",
+            "texto": "Cada par se orienta sin importar los demás. Con 23 pares hay 2²³: más de 8 millones de combinaciones posibles por persona."
+          },
+          {
+            "titulo": "Entrecruzamiento",
+            "texto": "Mezcla trozos de los cromosomas de la madre y del padre dentro de un mismo cromosoma, y multiplica todavía más la variedad."
+          },
+          {
+            "titulo": "Fecundación al azar",
+            "texto": "Cualquiera de los óvulos puede unirse a cualquiera de los espermatozoides: más de 70 billones de combinaciones para una sola pareja."
+          },
+          {
+            "titulo": "Para qué sirve",
+            "texto": "La variedad ayuda a que, si el ambiente cambia, algunos individuos sobrevivan. Es la materia prima de la evolución."
+          }
+        ],
+        "evidencia": [
+          "Gregor Mendel observó en arvejas que las características se heredan de forma independiente; la meiosis explica por qué."
+        ],
+        "limites": "Los gemelos idénticos son la excepción: vienen de un mismo cigoto que se separó en dos, por mitosis.",
+        "cuaderno": {
+          "facil": [
+            "Los hermanos no son iguales porque cada gameto es distinto."
+          ],
+          "media": [
+            "Cada par se alinea al azar: 2²³ combinaciones.",
+            "El entrecruzamiento mezcla trozos de los homólogos."
+          ],
+          "avanzada": [
+            "La fecundación al azar suma todavía más combinaciones.",
+            "La variedad es la base de la evolución.",
+            "Los gemelos idénticos vienen de un mismo cigoto."
+          ]
+        },
+        "docente": {
+          "abrir": "Si tienes hermanos, ¿en qué se parecen y en qué no? ¿De dónde sale la diferencia si los padres son los mismos?",
+          "actividad": "Con el diagrama, volteen los pares hasta encontrar las 4 combinaciones. Luego, con monedas (cara = madre, sello = padre), lancen una por par y formen «gametos».",
+          "errores": [
+            "Creer que los cromosomas de la madre van todos juntos al mismo gameto.",
+            "Creer que los hermanos deberían ser iguales."
+          ],
+          "minutos": 12
+        }
+      },
+      "diagrama": "variedad-gametos",
+      "preguntas": [
+        {
+          "id": "me-variedad-1",
+          "enunciado": "Con 23 pares, ¿cuántas combinaciones de pares puede formar una persona?",
+          "opciones": [
+            "Más de 8 millones (2²³)",
+            "23",
+            "46"
+          ],
+          "correcta": 0,
+          "explicacion": "Cada par tiene dos maneras de alinearse."
+        },
+        {
+          "id": "me-variedad-2",
+          "enunciado": "¿Qué hace el entrecruzamiento?",
+          "opciones": [
+            "Mezcla trozos de los cromosomas de la madre y del padre",
+            "Duplica el ADN",
+            "Separa las cromátidas"
+          ],
+          "correcta": 0,
+          "explicacion": "Ocurre en la profase I."
+        },
+        {
+          "id": "me-variedad-3",
+          "enunciado": "¿Por qué los gemelos idénticos sí son iguales?",
+          "opciones": [
+            "Vienen de un mismo cigoto que se separó en dos",
+            "Vienen de dos óvulos distintos",
+            "No pasaron por la fecundación"
+          ],
+          "correcta": 0,
+          "explicacion": "Sus células se formaron por mitosis a partir del mismo cigoto."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "mitosis-meiosis",
+      "titulo": "Mitosis y meiosis: compáralas",
+      "resumen": "Una hace copias para crecer; la otra, gametos distintos con la mitad.",
+      "anio": 6,
+      "etiqueta": "Paso 6",
+      "nivel": "basico",
+      "nucleo": true,
+      "requiere": [
+        "por-que-meiosis"
+      ],
+      "ficha": {
+        "idea": "La mitosis y la meiosis son dos formas de dividir el núcleo con fines distintos. La mitosis hace dos copias exactas para crecer y reparar. La meiosis hace cuatro células con la mitad de cromosomas, todas distintas, para la reproducción sexual.",
+        "contexto": [
+          {
+            "titulo": "Mitosis",
+            "texto": "Una división, dos células iguales a la madre (2n → 2n). Ocurre en casi todo el cuerpo."
+          },
+          {
+            "titulo": "Meiosis",
+            "texto": "Dos divisiones, cuatro células distintas con la mitad (2n → n). Solo en ovarios y testículos, o en la flor de las plantas."
+          },
+          {
+            "titulo": "En común",
+            "texto": "Las dos empiezan con el ADN copiado, usan el huso y tienen fases con los mismos nombres."
+          },
+          {
+            "titulo": "La clave",
+            "texto": "Si el resultado son células para crecer o reparar, es mitosis. Si son gametos, es meiosis."
+          }
+        ],
+        "evidencia": [
+          "En la punta de la raíz de cebolla se ve la mitosis; en las anteras de una flor, la meiosis."
+        ],
+        "limites": "En plantas y hongos la meiosis forma esporas, no gametos directamente; aquí nos centramos en los animales.",
+        "cuaderno": {
+          "facil": [
+            "Mitosis: dos células iguales, para crecer y reparar.",
+            "Meiosis: cuatro células distintas, para formar gametos."
+          ],
+          "media": [
+            "Mitosis: 2n → 2n. Meiosis: 2n → n.",
+            "Mitosis: una división. Meiosis: dos."
+          ],
+          "avanzada": [
+            "Solo en la meiosis se aparean y entrecruzan los homólogos.",
+            "En plantas y hongos la meiosis forma esporas."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Qué división crees que ocurre cuando se te cierra una herida? ¿Y cuando se forman los óvulos?",
+          "actividad": "Completen en el cuaderno la tabla «Lado a lado» del diagrama sin mirar, compárenla y luego jueguen «¿Mitosis o meiosis?».",
+          "errores": [
+            "Creer que la meiosis también sirve para crecer.",
+            "Creer que la mitosis produce gametos en los animales."
+          ],
+          "minutos": 10
+        }
+      },
+      "diagrama": "mitosis-meiosis",
+      "juego": "meiosis-juego",
+      "preguntas": [
+        {
+          "id": "me-mitosis-meiosis-1",
+          "enunciado": "¿Cuál produce células iguales a la célula madre?",
+          "opciones": [
+            "La mitosis",
+            "La meiosis",
+            "Las dos"
+          ],
+          "correcta": 0,
+          "explicacion": "La meiosis produce células distintas con la mitad."
+        },
+        {
+          "id": "me-mitosis-meiosis-2",
+          "enunciado": "Se forman los espermatozoides. ¿Qué división es?",
+          "opciones": [
+            "Meiosis",
+            "Mitosis",
+            "Ninguna"
+          ],
+          "correcta": 0,
+          "explicacion": "Los gametos se forman por meiosis."
+        },
+        {
+          "id": "me-mitosis-meiosis-3",
+          "enunciado": "¿Qué tienen en común la mitosis y la meiosis?",
+          "opciones": [
+            "Las dos empiezan con el ADN ya copiado",
+            "Las dos producen cuatro células",
+            "Las dos reducen los cromosomas a la mitad"
+          ],
+          "correcta": 0,
+          "explicacion": "Las dos parten de una célula que copió su ADN en la fase S."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}

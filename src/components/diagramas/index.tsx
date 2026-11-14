@@ -11,6 +11,8 @@ import CelulaUrgencias from './CelulaUrgencias.tsx'
 import ArmaCelula from './ArmaCelula.tsx'
 import CarreraProteina from './CarreraProteina.tsx'
 import FasesMitosis from './FasesMitosis.tsx'
+import MeiosisJuego from './MeiosisJuego.tsx'
+import { ParesHomologos, CuentaCromosomas, MeiosisPasos, VariedadGametos, ComparaMitosisMeiosis } from './Meiosis.tsx'
 import { CicloReloj, CromosomaCompacta, CitocinesisDiagrama, SemaforosCiclo } from './CicloCelular.tsx'
 import { NucleoDiagrama, CloroplastoDiagrama, LisosomaDiagrama } from './CelulaEucOrg.tsx'
 import { CitoesqueletoDiagrama, RibosomasDiagrama, PeroxisomaDiagrama, MatrizParedDiagrama } from './CelulaEucMas.tsx'
@@ -59,6 +61,15 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'cromosoma-compacta': CromosomaCompacta,
   'citocinesis': CitocinesisDiagrama,
   'semaforos-ciclo': SemaforosCiclo,
+  // subtema 4.2: meiosis
+  'pares-homologos': ParesHomologos,
+  'cuenta-cromosomas': CuentaCromosomas,
+  'meiosis-pasos': () => <MeiosisPasos />,
+  'meiosis-ii': () => <MeiosisPasos inicial={4} />,
+  'variedad-gametos': VariedadGametos,
+  'mitosis-meiosis': ComparaMitosisMeiosis,
+  'meiosis-juego': () => <MeiosisJuego />,
+  'meiosis-ordena': () => <MeiosisJuego inicial="ordena" />,
   'citoesqueleto': CitoesqueletoDiagrama,
   'ribosomas': RibosomasDiagrama,
   'peroxisomas': PeroxisomaDiagrama,

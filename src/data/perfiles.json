@@ -40,6 +40,11 @@
         "por-que-dividirse",
         "ciclo-celular",
         "mitosis"
+      ],
+      "meiosis": [
+        "diploide-haploide",
+        "por-que-meiosis",
+        "mitosis-meiosis"
       ]
     },
     "nivelDibujo": "basico",
@@ -49,7 +54,8 @@
       "unicelulares-pluricelulares": "Tres pasos: unicelulares, pluricelulares y la división del trabajo.",
       "tipos-de-celulas": "Tres pasos: procariota o eucariota, animal o vegetal, y los virus.",
       "celula-eucariota": "Cinco pasos: membrana, citoplasma, núcleo, mitocondrias y cloroplastos.",
-      "procesos-celulares": "Tres pasos: por qué se dividen, el ciclo y la mitosis."
+      "procesos-celulares": "Tres pasos: por qué se dividen, el ciclo y la mitosis.",
+      "meiosis": "Tres pasos: diploides y haploides, por qué hace falta la meiosis y la comparación con la mitosis."
     }
   },
   {
@@ -108,6 +114,13 @@
         "cromosomas",
         "mitosis",
         "citocinesis"
+      ],
+      "meiosis": [
+        "diploide-haploide",
+        "por-que-meiosis",
+        "meiosis-i",
+        "meiosis-ii",
+        "mitosis-meiosis"
       ]
     },
     "nivelDibujo": "intermedio",
@@ -117,7 +130,8 @@
       "unicelulares-pluricelulares": "Cinco pasos: suma las colonias y las ventajas y costos de ser pluricelular.",
       "tipos-de-celulas": "Seis pasos: suma bacterias y arqueas, los grupos eucariotas y las células especializadas.",
       "celula-eucariota": "Diez pasos: suma citoesqueleto, ribosomas, la ruta de las proteínas, lisosomas y pared y matriz.",
-      "procesos-celulares": "Cinco pasos: suma cromosomas y citocinesis."
+      "procesos-celulares": "Cinco pasos: suma cromosomas y citocinesis.",
+      "meiosis": "Cinco pasos: suma la meiosis I y la meiosis II."
     }
   },
   {
@@ -184,6 +198,14 @@
         "mitosis",
         "citocinesis",
         "control-cancer"
+      ],
+      "meiosis": [
+        "diploide-haploide",
+        "por-que-meiosis",
+        "meiosis-i",
+        "meiosis-ii",
+        "variedad",
+        "mitosis-meiosis"
       ]
     },
     "nivelDibujo": "avanzado",
@@ -193,7 +215,8 @@
       "unicelulares-pluricelulares": "Seis pasos: suma el origen de la pluricelularidad.",
       "tipos-de-celulas": "Todo el contenido: los seis pasos, con el detalle de los cuadernos avanzados.",
       "celula-eucariota": "Todo el contenido: doce pasos, con peroxisomas y la célula completa.",
-      "procesos-celulares": "Todo el contenido: seis pasos, con control del ciclo y cáncer."
+      "procesos-celulares": "Todo el contenido: seis pasos, con control del ciclo y cáncer.",
+      "meiosis": "Todo el contenido: seis pasos, con la variedad entre hermanos."
     }
   }
 ]
