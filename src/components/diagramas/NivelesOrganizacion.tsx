@@ -1,3 +1,4 @@
+import type { ComponentType } from 'react'
 import { useMemo, useRef, useState } from 'react'
 import VisorZoom from '../VisorZoom.tsx'
 import PantallaCompleta from '../PantallaCompleta.tsx'
@@ -5,6 +6,10 @@ import { useFlechas } from '../../lib/flechasDiagrama.ts'
 import NivelesFalla from './NivelesFalla.tsx'
 import NivelesMasAlla from './NivelesMasAlla.tsx'
 import { MINIS } from './NivelesMini.tsx'
+import TejidoVegetal from '../ilustraciones/TejidoVegetal.tsx'
+import { NivPlantaOrganos } from '../ilustraciones/Escenas12.tsx'
+import { EscenaVegetalRotulada, Cloroplasto } from '../ilustraciones/CelulaEuc.tsx'
+import { Lienzo, T } from '../ilustraciones/Dibujo.tsx'
 import { NivelAtomo, NivelMoleculas, NivelMacromoleculas, NivelOrganulo, NivelCelula, NivelTejido, NivelOrgano, NivelSistema, NivelOrganismo, NivelMasAlla } from '../ilustraciones/Niveles.tsx'
 
 // Niveles de organización de la vida, de átomos a más allá del organismo, con un ejemplo seguido de punta a punta.
@@ -64,20 +69,59 @@ const PASO = 13
 /* ── Acércate: un nivel a la vez, con su tamaño real ──────────────────────── */
 
 type Ver = 'ojo' | 'luz' | 'electronico'
-const DIBUJOS = [NivelAtomo, NivelMoleculas, NivelMacromoleculas, NivelOrganulo, NivelCelula, NivelTejido, NivelOrgano, NivelSistema, NivelOrganismo, NivelMasAlla]
-/** Tamaños aproximados (en metros) del ejemplo de la persona, en el mismo orden que NIVELES. Por verificar. */
-const ESCALA: { m: number; mide: string; ejemplo: string; ver: Ver }[] = [
-  { m: 1e-10, mide: '0,1 nm', ejemplo: 'Un átomo de carbono', ver: 'electronico' },
-  { m: 1e-9, mide: '1 nm', ejemplo: 'Una molécula de glucosa', ver: 'electronico' },
-  { m: 6e-9, mide: '6 nm', ejemplo: 'Una proteína como la hemoglobina', ver: 'electronico' },
-  { m: 1e-6, mide: '1 µm', ejemplo: 'Una mitocondria', ver: 'luz' },
-  { m: 1e-4, mide: '0,1 mm', ejemplo: 'Una célula del músculo del corazón', ver: 'luz' },
-  { m: 1e-3, mide: '1 mm', ejemplo: 'Un trocito de músculo del corazón', ver: 'ojo' },
-  { m: 0.12, mide: '12 cm', ejemplo: 'El corazón', ver: 'ojo' },
-  { m: 1.7, mide: '1,7 m', ejemplo: 'El sistema circulatorio, que recorre todo el cuerpo', ver: 'ojo' },
-  { m: 1.7, mide: '1,7 m', ejemplo: 'Una persona', ver: 'ojo' },
-  { m: 1000, mide: '1 km o más', ejemplo: 'Un bosque', ver: 'ojo' },
-]
+function DibujoCloroplasto() {
+  return (
+    <Lienzo etiqueta="Un cloroplasto">
+      <g transform="translate(200 140)">
+        <Cloroplasto k={4.6} />
+      </g>
+      <T x={200} y={262} s={14} b>Cloroplasto</T>
+      <T x={200} y={280} s={11}>(esquema: aquí ocurre la fotosíntesis)</T>
+    </Lienzo>
+  )
+}
+function DibujoHoja() {
+  return (
+    <Lienzo etiqueta="Una hoja">
+      <path d="M 70 210 C 110 90, 250 50, 340 70 C 330 170, 230 250, 70 210 Z" fill="#8fcf7f" stroke="#3f7d37" strokeWidth="4" strokeLinejoin="round" />
+      <path d="M 40 226 L 70 210 C 150 170, 250 110, 340 70" fill="none" stroke="#3f7d37" strokeWidth="4" strokeLinecap="round" />
+      <path d="M 120 186 q 10 -40 40 -62 M 180 152 q 12 -34 44 -52 M 240 118 q 14 -24 44 -34 M 130 182 q 40 20 80 14 M 190 148 q 40 22 76 8 M 250 114 q 30 16 56 2" fill="none" stroke="#3f7d37" strokeWidth="2.2" strokeLinecap="round" />
+      <T x={200} y={278} s={14} b>Hoja</T>
+    </Lienzo>
+  )
+}
+
+const DIBUJOS: Record<Ejemplo, ComponentType[]> = {
+  persona: [NivelAtomo, NivelMoleculas, NivelMacromoleculas, NivelOrganulo, NivelCelula, NivelTejido, NivelOrgano, NivelSistema, NivelOrganismo, NivelMasAlla],
+  planta: [NivelAtomo, NivelMoleculas, NivelMacromoleculas, DibujoCloroplasto, EscenaVegetalRotulada, TejidoVegetal, DibujoHoja, NivPlantaOrganos, NivPlantaOrganos, NivelMasAlla],
+}
+/** Tamaños aproximados (en metros), en el mismo orden que NIVELES. Por verificar. */
+const ESCALA: Record<Ejemplo, { m: number; mide: string; ejemplo: string; ver: Ver }[]> = {
+  persona: [
+    { m: 1e-10, mide: '0,1 nm', ejemplo: 'Un átomo de carbono', ver: 'electronico' },
+    { m: 1e-9, mide: '1 nm', ejemplo: 'Una molécula de glucosa', ver: 'electronico' },
+    { m: 6e-9, mide: '6 nm', ejemplo: 'Una proteína como la hemoglobina', ver: 'electronico' },
+    { m: 1e-6, mide: '1 µm', ejemplo: 'Una mitocondria', ver: 'luz' },
+    { m: 1e-4, mide: '0,1 mm', ejemplo: 'Una célula del músculo del corazón', ver: 'luz' },
+    { m: 1e-3, mide: '1 mm', ejemplo: 'Un trocito de músculo del corazón', ver: 'ojo' },
+    { m: 0.12, mide: '12 cm', ejemplo: 'El corazón', ver: 'ojo' },
+    { m: 1.7, mide: '1,7 m', ejemplo: 'El sistema circulatorio, que recorre todo el cuerpo', ver: 'ojo' },
+    { m: 1.7, mide: '1,7 m', ejemplo: 'Una persona', ver: 'ojo' },
+    { m: 1000, mide: '1 km o más', ejemplo: 'Un bosque', ver: 'ojo' },
+  ],
+  planta: [
+    { m: 1e-10, mide: '0,1 nm', ejemplo: 'Un átomo de carbono', ver: 'electronico' },
+    { m: 1e-9, mide: '1 nm', ejemplo: 'Una molécula de glucosa', ver: 'electronico' },
+    { m: 1e-8, mide: '10 nm', ejemplo: 'Una proteína como la rubisco', ver: 'electronico' },
+    { m: 5e-6, mide: '5 µm', ejemplo: 'Un cloroplasto', ver: 'luz' },
+    { m: 5e-5, mide: '0,05 mm', ejemplo: 'Una célula del interior de la hoja', ver: 'luz' },
+    { m: 2e-4, mide: '0,2 mm', ejemplo: 'El tejido verde de la hoja, visto de canto', ver: 'ojo' },
+    { m: 0.08, mide: '8 cm', ejemplo: 'Una hoja', ver: 'ojo' },
+    { m: 0.4, mide: '40 cm', ejemplo: 'El vástago: el tallo con sus hojas', ver: 'ojo' },
+    { m: 0.5, mide: '50 cm', ejemplo: 'Una planta de fríjol', ver: 'ojo' },
+    { m: 1000, mide: '1 km o más', ejemplo: 'Un bosque', ver: 'ojo' },
+  ],
+}
 const VER: Record<Ver, { texto: string; color: string }> = {
   ojo: { texto: 'A simple vista', color: '#0f766e' },
   luz: { texto: 'Con microscopio de luz', color: '#b5622a' },
@@ -100,6 +144,8 @@ function veces(r: number): string {
 function Escala({ inicial }: { inicial: number }) {
   const [sel, setSel] = useState(inicial)
   const [dir, setDir] = useState<'acerca' | 'aleja'>('acerca')
+  const [ejemplo, setEjemplo] = useState<Ejemplo>('persona')
+  const escala = ESCALA[ejemplo]
   const ir = (i: number) => {
     const j = Math.max(0, Math.min(N - 1, i))
     if (j === sel) return
@@ -107,15 +153,23 @@ function Escala({ inicial }: { inicial: number }) {
     setSel(j)
   }
   const n = NIVELES[sel]
-  const e = ESCALA[sel]
-  const Dibujo = DIBUJOS[sel]
-  const sig = sel < N - 1 ? ESCALA[sel + 1] : null
+  const e = escala[sel]
+  const Dibujo = DIBUJOS[ejemplo][sel]
+  const sig = sel < N - 1 ? escala[sel + 1] : null
   const razon = sig ? sig.m / e.m : 0
   return (
     <PantallaCompleta conBoton>
+      <div className="mb-2 flex flex-wrap items-center gap-2">
+        <span className="text-sm font-semibold">Ejemplo:</span>
+        {([['persona', 'Una persona'], ['planta', 'Una planta']] as [Ejemplo, string][]).map(([id, t]) => (
+          <button key={id} type="button" aria-pressed={ejemplo === id} onClick={() => setEjemplo(id)} className="min-h-10 rounded-lg border border-[var(--linea)] px-3 text-sm font-semibold aria-pressed:border-[var(--acento)] aria-pressed:bg-[var(--acento-suave)]/40">
+            {t}
+          </button>
+        ))}
+      </div>
       <div className="grid gap-3 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)]">
         <div className="aspect-[4/3] max-h-[var(--alto-visor,38dvh)] w-full overflow-hidden rounded-xl border border-[var(--linea)]">
-          <div key={sel} className="h-full w-full motion-reduce:!animate-none" style={{ animation: `${dir === 'acerca' ? 'cien-acerca' : 'cien-aleja'} 0.45s ease` }}>
+          <div key={`${ejemplo}-${sel}`} className="h-full w-full motion-reduce:!animate-none" style={{ animation: `${dir === 'acerca' ? 'cien-acerca' : 'cien-aleja'} 0.45s ease` }}>
             <Dibujo />
           </div>
         </div>
@@ -129,7 +183,7 @@ function Escala({ inicial }: { inicial: number }) {
           {sig && (
             <p className="mt-2">
               {razon < 1.5
-                ? `Mide lo mismo que el nivel siguiente (${NIVELES[sel + 1].nombre.toLowerCase()}): aquí no cambia el tamaño, cambia cuánto está incluido.`
+                ? `Mide casi lo mismo que el nivel siguiente (${NIVELES[sel + 1].nombre.toLowerCase()}): aquí no cambia el tamaño, cambia cuánto está incluido.`
                 : `Cabría unas ${veces(razon)} veces a lo largo del nivel siguiente (${sig.ejemplo.toLowerCase()}).`}
             </p>
           )}
@@ -158,10 +212,10 @@ function Escala({ inicial }: { inicial: number }) {
             {rotulo && <text x={xRegla(exp)} y="63" fontSize="11" textAnchor="middle" fill="#4a3416">{rotulo}</text>}
           </g>
         ))}
-        {ESCALA.map((x, i) => {
+        {escala.map((x, i) => {
           const activo = i === sel
           // sistema y organismo miden lo mismo: el segundo punto va un poco más arriba
-          const y = i > 0 && ESCALA[i - 1].m === x.m ? 26 : 44
+          const y = i > 0 && Math.abs(Math.log10(escala[i - 1].m / x.m)) < 0.2 ? 26 : 44
           return (
             <g key={NIVELES[i].id} className="cursor-pointer" onClick={() => ir(i)}>
               <circle cx={xRegla(Math.log10(x.m))} cy={y} r="14" fill="transparent" />

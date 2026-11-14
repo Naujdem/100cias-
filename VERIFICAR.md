@@ -78,3 +78,6 @@ Cuando confirmes uno con una fuente, márcalo con `[x]`, escribe la fuente al la
 - Masa del cuerpo: oxígeno 65 %, carbono 18 %, hidrógeno 10 %, nitrógeno 3 %, resto 4 %.
 - Tejidos del corazón y qué pasa sin cada uno (el nervioso ajusta el ritmo; no lo origina).
 - Recorrido de la gota: corazón derecho → pulmones → corazón izquierdo → arterias → capilares → venas.
+
+## Tamaños de «Acércate», ejemplo de la planta (1.2)
+- Rubisco ≈ 10 nm; cloroplasto ≈ 5 µm; célula del interior de la hoja ≈ 0,05 mm; grosor del tejido verde ≈ 0,2 mm; hoja de fríjol ≈ 8 cm; planta ≈ 50 cm.

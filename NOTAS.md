@@ -201,3 +201,7 @@ Hooke usa la reconstrucción de Rita Greer (2004, Free Art License, Wikimedia Co
 - Átomos: *De qué estás hecho* (100 cuadritos de masa). Moléculas: *Arma la molécula* (agua, O₂, CO₂, metano con + y −). Macromoléculas: *El collar de piezas* (deslizador de 1 a 60). Orgánulos: reutiliza *¿Quién hace qué?* del tema 3. Célula: reutiliza *¿Cuenta como célula?* del 1.1. Tejido: *Tirar juntas* (células que se contraen y barra de fuerza). Órgano: *Quita un tejido* (el corazón deja de funcionar). Sistema: *Sigue la gota* (6 paradas). Organismo: *Apaga un sistema*. Nivel 10: «Más allá».
 - Todas con ← → (deslizador o `useFlechas`) y pantalla completa. Texto en borrador.
 - Pendiente del 1.2: versión de la planta en «Acércate»; revisar si sobra «Niveles anidados» (ya hay 8 pestañas).
+
+## «Acércate» con planta (13 nov, noche)
+- «Acércate» tiene selector de ejemplo (persona o planta). La planta reutiliza dibujos existentes (célula vegetal rotulada, tejido vegetal, órganos de la planta) y suma dos sencillos (cloroplasto y hoja) dentro de `NivelesOrganizacion.tsx`. Vástago y organismo comparten dibujo.
+- El dibujo del corazón (`ilustraciones/Niveles.tsx`) ahora dice «Nervioso: ajusta el ritmo», igual que «Quita un tejido».
