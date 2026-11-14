@@ -383,7 +383,8 @@
             "explicacion": "En la etapa S (síntesis) se copia todo el ADN; G1 y G2 son de crecimiento y preparación."
           }
         }
-      ]
+      ],
+      "juego": "ciclo-juego"
     },
     {
       "id": "cromosomas",

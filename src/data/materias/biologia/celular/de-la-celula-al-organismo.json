@@ -686,7 +686,8 @@
             "explicacion": "Los meristemos de las puntas de raíz y tallo se dividen sin parar."
           }
         }
-      ]
+      ],
+      "juego": "tejidos-vegetales-juego"
     },
     {
       "id": "organos-sistemas",
@@ -873,7 +874,8 @@
             ]
           }
         }
-      ]
+      ],
+      "juego": "sistemas-juego"
     },
     {
       "id": "reproduccion",

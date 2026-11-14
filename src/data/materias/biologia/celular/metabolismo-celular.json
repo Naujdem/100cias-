@@ -178,7 +178,8 @@
             "explicacion": "Cada enzima trabaja mejor a cierta temperatura y acidez; con mucho calor cambia de forma."
           }
         }
-      ]
+      ],
+      "juego": "metabolismo-juego"
     },
     {
       "id": "atp",
