@@ -170,3 +170,35 @@ export const CASOS_MUERTE: Caso[] = [
   { texto: 'Una célula infectada por un virus se elimina a sí misma.', r: 0, por: 'Así evita que el virus se multiplique.' },
   { texto: 'Una mordedura de serpiente destruye el tejido.', r: 1, por: 'El veneno mata las células por daño.' },
 ]
+
+/* ── Bancos de casos del tema 5 ────────────────────────────────────────────── */
+
+export const CASOS_TEJIDOS: Caso[] = [
+  { texto: 'Cubre el interior del intestino.', r: 0, por: 'Recubrir superficies es trabajo del epitelial.' },
+  { texto: 'Forma los huesos.', r: 1, por: 'El hueso es un tejido conectivo con matriz dura.' },
+  { texto: 'Hace latir el corazón.', r: 2, por: 'Es músculo cardíaco.' },
+  { texto: 'Lleva la orden del cerebro a la mano.', r: 3, por: 'Las neuronas transmiten impulsos.' },
+  { texto: 'La sangre que corre por las venas.', r: 1, por: 'La sangre es un conectivo con matriz líquida (plasma).' },
+  { texto: 'La capa externa de la piel.', r: 0, por: 'La epidermis es un epitelio.' },
+  { texto: 'Mueve la comida por el intestino.', r: 2, por: 'Es músculo liso.' },
+  { texto: 'Guarda grasa bajo la piel.', r: 1, por: 'El tejido adiposo es conectivo.' },
+  { texto: 'Te hace sentir el calor de una olla.', r: 3, por: 'Los receptores nerviosos captan el calor.' },
+  { texto: 'Une el músculo con el hueso (tendón).', r: 1, por: 'Los tendones son conectivo con muchas fibras.' },
+  { texto: 'Te permite levantar la mano cuando quieres.', r: 2, por: 'Es músculo esquelético, voluntario.' },
+  { texto: 'Recubre por dentro los vasos sanguíneos.', r: 0, por: 'Es un epitelio muy delgado.' },
+]
+
+export const CASOS_REPRODUCCION: Caso[] = [
+  { texto: 'Una bacteria se parte en dos.', r: 0, por: 'Bipartición: un solo progenitor.' },
+  { texto: 'Una papa olvidada en la cocina echa brotes.', r: 0, por: 'El tubérculo produce una planta igual.' },
+  { texto: 'Una abeja lleva polen de una flor a otra.', r: 1, por: 'Así se unen los gametos de dos plantas.' },
+  { texto: 'Siembras un esqueje de yuca o de rosa.', r: 0, por: 'El pedazo de tallo da una planta igual.' },
+  { texto: 'Nace un ternero de una vaca y un toro.', r: 1, por: 'Dos progenitores y fecundación.' },
+  { texto: 'A una hidra le crece una yema que se suelta.', r: 0, por: 'Gemación: el hijo es una copia.' },
+  { texto: 'Una gallina pone un huevo fecundado.', r: 1, por: 'Hubo unión de óvulo y espermatozoide.' },
+  { texto: 'Una estrella de mar regenera un animal completo a partir de un brazo.', r: 0, por: 'Fragmentación: un solo progenitor.' },
+  { texto: 'Los hijos son copias exactas del progenitor.', r: 0, por: 'La reproducción asexual produce clones.' },
+  { texto: 'Los hijos son distintos entre sí y de sus padres.', r: 1, por: 'La meiosis y la fecundación crean variedad.' },
+  { texto: 'Una semilla de mango germina.', r: 1, por: 'La semilla viene de una flor fecundada.' },
+  { texto: 'Una levadura forma una yema que se separa.', r: 0, por: 'La levadura también se reproduce por gemación.' },
+]

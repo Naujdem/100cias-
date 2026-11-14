@@ -268,3 +268,10 @@ Hooke usa la reconstrucción de Rita Greer (2004, Free Art License, Wikimedia Co
 - Juego genérico nuevo `diagramas/ClasificaCasos.tsx` (casos al azar, teclas 1–4, repaso, mejor marca): `oxigeno-juego` («¿Respiración o fermentación?») y `muerte-juego` («¿Apoptosis o necrosis?»). Sirve para futuros juegos de clasificar.
 - Perfiles: 6° (enzimas, respiración, comunicación), 9° (suma ATP y muerte celular), 11° (todo).
 - Todo en borrador; datos por verificar en `fuentes` del JSON.
+
+## Tema 5 · «De la célula al organismo» (14 nov)
+- `de-la-celula-al-organismo.json` (id esperado por el atajo del 1.3, que ahora se activa; orden 9, etiqueta «5», vista *Ruta*). Seis pasos: diferenciación, células madre, tejidos animales, tejidos vegetales, órganos y sistemas, reproducción asexual y sexual. Se quitó el 5 de los próximos en `catalogo.ts`.
+- Diagramas (`diagramas/Organismo.tsx`): `diferenciacion` (5 tipos de célula con su dibujo y 8 genes ON/off, mismo ADN), `celulas-madre` (cigoto → embrión → médula → célula diferenciada; cuántos tipos alcanza), `tejidos-animales` (4 tejidos; contraer músculo y enviar impulso), `tejidos-vegetales` (planta con meristemos, protección, xilema/floema y parénquima resaltados), `organo-tejidos` (corte del estómago: tocar cada tejido y «quitarlo»), `reproduccion-tipos` (población de clones vs variada y una plaga). `CelulaTipo` exporta los dibujos de neurona, músculo, glóbulo rojo, piel y hueso para reutilizar.
+- Juegos con `ClasificaCasos`: `tejidos-juego` («¿Qué tejido es?», 4 opciones) y `reproduccion-juego` («¿Asexual o sexual?»).
+- Perfiles: 6° (diferenciación, tejidos animales y vegetales, órganos), 9° (suma reproducción), 11° (todo).
+- Todo en borrador; datos por verificar en `fuentes` del JSON. Pendiente del área 1: tema 6 (técnicas de estudio).

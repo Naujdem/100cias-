@@ -50,6 +50,12 @@
         "enzimas",
         "respiracion-fermentacion",
         "comunicacion"
+      ],
+      "de-la-celula-al-organismo": [
+        "diferenciacion",
+        "tejidos-animales",
+        "tejidos-vegetales",
+        "organos-sistemas"
       ]
     },
     "nivelDibujo": "basico",
@@ -61,7 +67,8 @@
       "celula-eucariota": "Cinco pasos: membrana, citoplasma, núcleo, mitocondrias y cloroplastos.",
       "procesos-celulares": "Tres pasos: por qué se dividen, el ciclo y la mitosis.",
       "meiosis": "Tres pasos: diploides y haploides, por qué hace falta la meiosis y la comparación con la mitosis.",
-      "metabolismo-celular": "Tres pasos: enzimas, respiración y fermentación, y cómo se comunican las células."
+      "metabolismo-celular": "Tres pasos: enzimas, respiración y fermentación, y cómo se comunican las células.",
+      "de-la-celula-al-organismo": "Cuatro pasos: diferenciación, tejidos animales y vegetales, y órganos."
     }
   },
   {
@@ -134,6 +141,13 @@
         "respiracion-fermentacion",
         "comunicacion",
         "muerte-celular"
+      ],
+      "de-la-celula-al-organismo": [
+        "diferenciacion",
+        "tejidos-animales",
+        "tejidos-vegetales",
+        "organos-sistemas",
+        "reproduccion"
       ]
     },
     "nivelDibujo": "intermedio",
@@ -145,7 +159,8 @@
       "celula-eucariota": "Diez pasos: suma citoesqueleto, ribosomas, la ruta de las proteínas, lisosomas y pared y matriz.",
       "procesos-celulares": "Cinco pasos: suma cromosomas y citocinesis.",
       "meiosis": "Cinco pasos: suma la meiosis I y la meiosis II.",
-      "metabolismo-celular": "Cinco pasos: suma el ATP y la muerte celular."
+      "metabolismo-celular": "Cinco pasos: suma el ATP y la muerte celular.",
+      "de-la-celula-al-organismo": "Cinco pasos: suma la reproducción asexual y sexual."
     }
   },
   {
@@ -228,6 +243,14 @@
         "comunicacion",
         "uniones",
         "muerte-celular"
+      ],
+      "de-la-celula-al-organismo": [
+        "diferenciacion",
+        "celulas-madre",
+        "tejidos-animales",
+        "tejidos-vegetales",
+        "organos-sistemas",
+        "reproduccion"
       ]
     },
     "nivelDibujo": "avanzado",
@@ -239,7 +262,8 @@
       "celula-eucariota": "Todo el contenido: doce pasos, con peroxisomas y la célula completa.",
       "procesos-celulares": "Todo el contenido: seis pasos, con control del ciclo y cáncer.",
       "meiosis": "Todo el contenido: seis pasos, con la variedad entre hermanos.",
-      "metabolismo-celular": "Todo el contenido: seis pasos, con las uniones entre células."
+      "metabolismo-celular": "Todo el contenido: seis pasos, con las uniones entre células.",
+      "de-la-celula-al-organismo": "Todo el contenido: seis pasos, con las células madre."
     }
   }
 ]
