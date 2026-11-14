@@ -833,17 +833,9 @@
             "«Orgánulo» significa órgano pequeño",
             "Cada uno hace una tarea",
             "Solo funcionan dentro de su célula"
-          ]
-        },
-        {
-          "titulo": "Tres que debes conocer",
-          "visual": {
-            "tipo": "ilustracion",
-            "recurso": "niv-organulos-tres",
-            "pie": "Tres orgánulos clave"
-          },
+          ],
           "atajo": {
-            "texto": "Célula eucariota",
+            "texto": "Los orgánulos, uno por uno",
             "tema": "celula-eucariota",
             "bloque": "celula-completa"
           }
@@ -859,24 +851,6 @@
             "texto": "Tipos de células",
             "tema": "tipos-de-celulas",
             "bloque": "pro-eu"
-          }
-        },
-        {
-          "titulo": "Un origen curioso",
-          "visual": {
-            "tipo": "ilustracion",
-            "recurso": "endosimbiosis-mito",
-            "pie": "Una célula engulló bacterias que se quedaron adentro."
-          },
-          "puntos": [
-            "Mitocondrias y cloroplastos fueron bacterias",
-            "Una célula las engulló",
-            "Y se quedaron a vivir adentro"
-          ],
-          "atajo": {
-            "texto": "Teoría endosimbiótica",
-            "tema": "teoria-celular",
-            "bloque": "endosimbiosis"
           }
         },
         {
@@ -1277,50 +1251,9 @@
             "No son idénticas, solo parecidas"
           ],
           "atajo": {
-            "texto": "Schwann: los animales también",
-            "tema": "teoria-celular",
-            "bloque": "schwann"
-          }
-        },
-        {
-          "titulo": "Cuatro tejidos animales",
-          "visual": {
-            "tipo": "tarjetas",
-            "items": [
-              {
-                "icono": "🛡️",
-                "titulo": "Epitelial",
-                "texto": "Cubre y reviste"
-              },
-              {
-                "icono": "🔗",
-                "titulo": "Conectivo",
-                "texto": "Une y sostiene"
-              },
-              {
-                "icono": "💪",
-                "titulo": "Muscular",
-                "texto": "Se contrae"
-              },
-              {
-                "icono": "⚡",
-                "titulo": "Nervioso",
-                "texto": "Transmite señales"
-              }
-            ]
-          }
-        },
-        {
-          "titulo": "Tejidos de las plantas",
-          "visual": {
-            "tipo": "ilustracion",
-            "recurso": "niv-tejidos-plantas",
-            "pie": "Cuatro tejidos de las plantas"
-          },
-          "atajo": {
-            "texto": "Tipos de células",
-            "tema": "tipos-de-celulas",
-            "bloque": "animal-vegetal"
+            "texto": "Los tejidos, a fondo",
+            "tema": "de-la-celula-al-organismo",
+            "bloque": "tejidos-animales"
           }
         },
         {
@@ -1491,7 +1424,12 @@
             "Varios tejidos distintos",
             "Cooperan",
             "Hacen algo que ninguno haría solo"
-          ]
+          ],
+          "atajo": {
+            "texto": "Órganos y sistemas, a fondo",
+            "tema": "de-la-celula-al-organismo",
+            "bloque": "organos-sistemas"
+          }
         },
         {
           "titulo": "Tejido y órgano",
@@ -1521,14 +1459,6 @@
             "tipo": "ilustracion",
             "recurso": "niv-corazon",
             "pie": "Un órgano, varios tejidos"
-          }
-        },
-        {
-          "titulo": "Órganos de las plantas",
-          "visual": {
-            "tipo": "ilustracion",
-            "recurso": "niv-planta-organos",
-            "pie": "Los órganos de una planta"
           }
         },
         {
@@ -1704,32 +1634,12 @@
             "Un grupo de órganos",
             "Una función más amplia",
             "Circulatorio: corazón, vasos y sangre"
-          ]
-        },
-        {
-          "titulo": "Algunos sistemas del cuerpo",
-          "visual": {
-            "tipo": "tarjetas",
-            "items": [
-              {
-                "icono": "🫀",
-                "titulo": "Circulatorio"
-              },
-              {
-                "icono": "🫁",
-                "titulo": "Respiratorio"
-              },
-              {
-                "icono": "🍽️",
-                "titulo": "Digestivo"
-              },
-              {
-                "icono": "🧠",
-                "titulo": "Nervioso"
-              }
-            ]
-          },
-          "nota": "También: excretor, muscular, óseo, endocrino, inmunitario y reproductor."
+          ],
+          "atajo": {
+            "texto": "Órganos y sistemas, a fondo",
+            "tema": "de-la-celula-al-organismo",
+            "bloque": "organos-sistemas"
+          }
         },
         {
           "titulo": "Trabajan en cadena",
@@ -1737,26 +1647,6 @@
             "tipo": "ilustracion",
             "recurso": "niv-sistema-cadena",
             "pie": "Un sistema entrega al siguiente"
-          }
-        },
-        {
-          "titulo": "Y en las plantas",
-          "visual": {
-            "tipo": "compara",
-            "izq": {
-              "icono": "🌱",
-              "titulo": "Sistema de la raíz",
-              "puntos": [
-                "Absorbe agua"
-              ]
-            },
-            "der": {
-              "icono": "🌿",
-              "titulo": "Sistema del vástago",
-              "puntos": [
-                "Tallo y hojas"
-              ]
-            }
           }
         },
         {
@@ -1947,6 +1837,10 @@
             "tipo": "ilustracion",
             "recurso": "niv-uno-muchas",
             "pie": "Unicelular o pluricelular"
+          },
+          "atajo": {
+            "texto": "Unicelulares y pluricelulares",
+            "tema": "unicelulares-pluricelulares"
           }
         },
         {
