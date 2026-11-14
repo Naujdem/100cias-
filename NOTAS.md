@@ -227,3 +227,7 @@ Hooke usa la reconstrucción de Rita Greer (2004, Free Art License, Wikimedia Co
 - PR #6 a #9 fusionados con permiso de JuanMed.
 - Tercer minijuego del tema 3: `components/diagramas/ArmaCelula.tsx`, clave `arma-celula`, paso **Juega** de «Cloroplastos y vacuola». Se elige célula animal o vegetal y se meten las piezas que le corresponden, de 12 (incluye dos que no son de ninguna: nucleoide y pared de bacteria). «Comprobar» dice qué sobra o falta y por qué; una estrella por cada célula completa (`cien:arma-celula`). Teclas: 1–9, 0, -, = alternan piezas; ← → cambian de célula.
 - Simplificaciones a revisar: lisosomas como «típicos de la animal»; centriolos ausentes en la mayoría de plantas con flores.
+
+## Tema 3 · La carrera de la proteína (13 nov, noche)
+- Cuarto minijuego del tema 3: `components/diagramas/CarreraProteina.tsx`, clave `carrera-proteina`, paso **Juega** de «La ruta de las proteínas». 4 proteínas por ronda de un banco de 6 (insulina, anticuerpo, enzima del lisosoma, canal de agua, actina, enzima de la glucólisis); cada una sale del núcleo y hay que elegir, parada por parada, adónde va (ribosoma libre, retículo, Golgi, membrana, afuera, lisosoma o citosol). Cronómetro; cada error suma 3 s; mejor tiempo en `cien:carrera-mejor`. Teclas 1–7 y →.
+- Minijuegos del tema 3: membrana, ruta de las proteínas, cloroplastos y célula completa.
