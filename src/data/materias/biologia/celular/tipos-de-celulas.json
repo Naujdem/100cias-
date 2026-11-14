@@ -88,6 +88,70 @@
       },
       "diapositivas": [
         {
+          "titulo": "De procariota a eucariota",
+          "visual": {
+            "tipo": "escena",
+            "id": "pro-eu",
+            "fases": [
+              {
+                "id": "procariota",
+                "nombre": "Procariota",
+                "texto": "Una bacteria: pequeña, sin núcleo. Su ADN es un anillo suelto en el citoplasma.",
+                "nota": "«Pro» = antes; «carion» = núcleo: antes del núcleo.",
+                "marcas": [
+                  {
+                    "x": 200,
+                    "y": 112,
+                    "texto": "El ADN suelto forma una zona llamada nucleoide."
+                  },
+                  {
+                    "x": 300,
+                    "y": 138,
+                    "texto": "Muchas bacterias tienen flagelo para moverse."
+                  }
+                ]
+              },
+              {
+                "id": "tamano",
+                "nombre": "Mucho más grande",
+                "texto": "Una célula eucariota suele ser unas 10 veces más grande (en el dibujo no está a escala).",
+                "marcas": [
+                  {
+                    "x": 80,
+                    "y": 60,
+                    "texto": "Lo que sí comparten las dos: membrana, citoplasma, ribosomas y ADN."
+                  }
+                ]
+              },
+              {
+                "id": "nucleo",
+                "nombre": "Aparece el núcleo",
+                "texto": "El ADN queda encerrado en un núcleo con su propia envoltura.",
+                "nota": "«Eu» = verdadero: con núcleo verdadero.",
+                "marcas": [
+                  {
+                    "x": 222,
+                    "y": 110,
+                    "texto": "La envoltura nuclear separa el ADN del resto de la célula."
+                  }
+                ]
+              },
+              {
+                "id": "organulos",
+                "nombre": "Orgánulos con membrana",
+                "texto": "Aparecen mitocondrias, retículo, Golgi y lisosomas: cada uno con su trabajo.",
+                "marcas": [
+                  {
+                    "x": 96,
+                    "y": 70,
+                    "texto": "La mitocondria pudo venir de una bacteria que una célula se tragó: la endosimbiosis."
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
           "titulo": "Dos modos de guardar el ADN",
           "visual": {
             "tipo": "ilustracion",
@@ -730,6 +794,65 @@
         }
       },
       "diapositivas": [
+        {
+          "titulo": "De animal a vegetal",
+          "visual": {
+            "tipo": "escena",
+            "id": "animal-vegetal",
+            "fases": [
+              {
+                "id": "animal",
+                "nombre": "Célula animal",
+                "texto": "Forma redondeada y flexible: solo membrana. Núcleo, mitocondrias, Golgi, retículo y lisosomas.",
+                "marcas": [
+                  {
+                    "x": 290,
+                    "y": 72,
+                    "texto": "Los lisosomas son mucho más comunes en la célula animal."
+                  }
+                ]
+              },
+              {
+                "id": "pared",
+                "nombre": "+ Pared celular",
+                "texto": "Por fuera de la membrana aparece una pared rígida de celulosa: la célula se vuelve rectangular.",
+                "marcas": [
+                  {
+                    "x": 36,
+                    "y": 90,
+                    "texto": "La pared sostiene y protege: por eso las plantas se mantienen erguidas."
+                  }
+                ]
+              },
+              {
+                "id": "cloroplastos",
+                "nombre": "+ Cloroplastos",
+                "texto": "Aparecen los cloroplastos, verdes, donde se hace la fotosíntesis.",
+                "nota": "Solo en las partes verdes de la planta, como las hojas.",
+                "marcas": [
+                  {
+                    "x": 236,
+                    "y": 190,
+                    "texto": "Capturan la luz del sol y fabrican glucosa."
+                  }
+                ]
+              },
+              {
+                "id": "vacuola",
+                "nombre": "+ Vacuola central",
+                "texto": "Una gran vacuola con agua ocupa casi toda la célula y empuja el núcleo a un lado.",
+                "nota": "Tres cosas propias de la vegetal: pared, cloroplastos y vacuola grande.",
+                "marcas": [
+                  {
+                    "x": 282,
+                    "y": 150,
+                    "texto": "Llena de agua mantiene la célula firme; si se vacía, la planta se marchita."
+                  }
+                ]
+              }
+            ]
+          }
+        },
         {
           "titulo": "Dos células parecidas",
           "visual": {
