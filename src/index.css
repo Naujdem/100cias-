@@ -70,3 +70,9 @@ h1, h2, .titulo { font-family: var(--serif); }
   to { transform: scale(1); opacity: 1; }
 }
 
+/* latido del corazón en «Quita un tejido» (niveles de organización) */
+@keyframes cien-late {
+  0%, 100% { transform: scale(1); }
+  20% { transform: scale(1.08); }
+  40% { transform: scale(0.98); }
+}

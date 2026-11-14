@@ -4,6 +4,7 @@ import PantallaCompleta from '../PantallaCompleta.tsx'
 import { useFlechas } from '../../lib/flechasDiagrama.ts'
 import NivelesFalla from './NivelesFalla.tsx'
 import NivelesMasAlla from './NivelesMasAlla.tsx'
+import { MINIS } from './NivelesMini.tsx'
 import { NivelAtomo, NivelMoleculas, NivelMacromoleculas, NivelOrganulo, NivelCelula, NivelTejido, NivelOrgano, NivelSistema, NivelOrganismo, NivelMasAlla } from '../ilustraciones/Niveles.tsx'
 
 // Niveles de organización de la vida, de átomos a más allá del organismo, con un ejemplo seguido de punta a punta.
@@ -30,15 +31,17 @@ export const NIVELES: Nivel[] = [
   { id: 'mas-alla', nombre: 'Más allá del organismo', corto: 'Más allá', persona: 'Población, comunidad y ecosistema donde vive.', planta: 'Un bosque y el ecosistema que forma.', que: 'Organismos que viven juntos y se relacionan entre sí y con su entorno, hasta la biosfera.' },
 ]
 
-type Modo = 'escala' | 'zoom' | 'ordena' | 'seres' | 'emergente' | 'falla' | 'masalla'
+type Modo = 'mini' | 'escala' | 'zoom' | 'ordena' | 'seres' | 'emergente' | 'falla' | 'masalla'
 type Ejemplo = 'persona' | 'planta'
 
 export default function NivelesOrganizacion({ inicial = 4 }: { inicial?: number }) {
-  const [modo, setModo] = useState<Modo>(inicial === NIVELES.length - 1 ? 'masalla' : 'escala')
+  const [modo, setModo] = useState<Modo>(MINIS[inicial] ? 'mini' : 'masalla')
+  const mini = MINIS[inicial]
+  const Mini = mini?.C
   return (
     <div>
       <div role="group" aria-label="Actividad" className="mb-3 flex flex-wrap gap-2">
-        {([['escala', 'Acércate'], ['zoom', 'Niveles anidados'], ['ordena', 'Ordénalos'], ['seres', '¿Qué niveles tiene?'], ['emergente', '¿Qué aparece?'], ['falla', '¿Y si falla?'], ['masalla', 'Más allá']] as [Modo, string][]).map(([id, texto]) => (
+        {([...(mini ? [['mini', mini.titulo]] : []), ['escala', 'Acércate'], ['zoom', 'Niveles anidados'], ['ordena', 'Ordénalos'], ['seres', '¿Qué niveles tiene?'], ['emergente', '¿Qué aparece?'], ['falla', '¿Y si falla?'], ['masalla', 'Más allá']] as [Modo, string][]).map(([id, texto]) => (
           <button
             key={id}
             type="button"
@@ -50,7 +53,7 @@ export default function NivelesOrganizacion({ inicial = 4 }: { inicial?: number 
           </button>
         ))}
       </div>
-      {modo === 'escala' ? <Escala inicial={inicial} /> : modo === 'zoom' ? <Anidados inicial={inicial} /> : modo === 'ordena' ? <Ordena /> : modo === 'seres' ? <Seres /> : modo === 'falla' ? <NivelesFalla /> : modo === 'masalla' ? <NivelesMasAlla /> : <Emergente />}
+      {modo === 'mini' && Mini ? <Mini /> : modo === 'escala' ? <Escala inicial={inicial} /> : modo === 'zoom' ? <Anidados inicial={inicial} /> : modo === 'ordena' ? <Ordena /> : modo === 'seres' ? <Seres /> : modo === 'falla' ? <NivelesFalla /> : modo === 'masalla' ? <NivelesMasAlla /> : <Emergente />}
     </div>
   )
 }
