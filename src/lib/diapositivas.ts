@@ -16,6 +16,7 @@ export type Diapositiva =
   | { tipo: 'contexto'; datos: { titulo: string; texto: string }[] }
   | { tipo: 'ejemplos' }
   | { tipo: 'diagrama' }
+  | { tipo: 'juego' }
   | { tipo: 'comprueba' }
   | { tipo: 'recuerda' }
   | { tipo: 'docente' }
@@ -62,13 +63,16 @@ export function construir(bloques: Bloque[], ajustes: Pick<Ajustes, 'analogias' 
     if (ajustes.docente && f.docente) ds.push({ tipo: 'docente' })
     return ds.map((d, k): Item => ({ bloque: b, d, seccion: 'contenido', n: k + 1, de: ds.length }))
   })
-  const actividades = bloques.flatMap((b) => {
+  // Lección: después del contenido de cada bloque van sus actividades (Explora, Juega, Comprueba).
+  const actividadesDe = (b: Bloque): Item[] => {
     const ds: Diapositiva[] = []
-    if (b.diagrama) ds.push({ tipo: 'diagrama' })
+    const yaEnLamina = (b.diapositivas ?? []).some((l) => l.visual?.tipo === 'diagrama' && l.visual.id === b.diagrama)
+    if (b.diagrama && !yaEnLamina) ds.push({ tipo: 'diagrama' })
+    if (b.juego) ds.push({ tipo: 'juego' })
     if (b.preguntas.length) ds.push({ tipo: 'comprueba' })
     return ds.map((d, k): Item => ({ bloque: b, d, seccion: 'actividades', n: k + 1, de: ds.length }))
-  })
-  return [...contenido, ...actividades]
+  }
+  return bloques.flatMap((b) => [...contenido.filter((x) => x.bloque.id === b.id), ...actividadesDe(b)])
 }
 
 /** Cuántas cosas se revelan con → en una diapositiva: las del visual (tarjetas o lados) y luego los puntos. */

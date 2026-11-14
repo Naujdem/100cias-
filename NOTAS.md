@@ -313,3 +313,8 @@ Hooke usa la reconstrucción de Rita Greer (2004, Free Art License, Wikimedia Co
 
 ## Minijuegos en los demás temas (14 nov)
 - `JuegosDecide2.tsx` (motor «decide rápido»): ¿Quién lo dijo? (Virchow, tema 1), ¿Una, varias o muchas? (Pluricelulares), ¿Con núcleo o sin núcleo? (Procariota o eucariota), ¿De quién es? (Animal y vegetal), ¿En qué etapa va? (Ciclo celular), ¿2n o n? (Diploides y haploides), ¿Romper o construir? (Enzimas), ¿Qué tejido de la planta? (Tejidos vegetales), ¿Qué sistema? (Órganos y sistemas).
+
+## Lección unificada (14 nov)
+- En los temas de página completa (todos menos la línea de tiempo de Teoría celular), abrir una ficha abre la **lección** (`Presentacion` con `migas`): ruta del tema a la izquierda, fila de «momentos» de la ficha arriba (láminas, Explora, Juega, Comprueba; las actividades con borde punteado), «📖 Para leer más» (abre la ficha de texto `DetalleBloque` encima, con «← Volver a la lección»; mientras tanto la lección no recibe teclado) y «▶ Proyectar» (pantalla completa, sin ruta, números de fichas arriba).
+- `construir` ahora pone las actividades de cada ficha justo después de su contenido (antes iban todas al final); nuevo tipo de diapositiva `juego`; si una lámina ya muestra el diagrama de la ficha, no se repite como «Explora».
+- En la página del tema, el botón dice «▶ Empezar la lección» (tecla D). La línea de tiempo de Teoría celular sigue con sus fichas emergentes y «Ver como diapositivas».

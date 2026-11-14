@@ -58,11 +58,13 @@ interface Props {
   inicial?: 'diagrama' | 'juego'
   /** página completa (temas que no son línea de tiempo), con las migas que se muestran arriba */
   pagina?: { migas: string[] }
+  /** texto del botón que lleva a las diapositivas (por defecto «Proyectar en clase») */
+  textoDiapositivas?: string
   tituloAnterior?: string
   tituloSiguiente?: string
 }
 
-export default function DetalleBloque({ bloque: b, onCerrar, posicion, onAnterior, onSiguiente, unidad = 'Hito', temaId, onDiapositivas, inicial, pagina, tituloAnterior, tituloSiguiente }: Props) {
+export default function DetalleBloque({ bloque: b, onCerrar, posicion, onAnterior, onSiguiente, unidad = 'Hito', temaId, onDiapositivas, inicial, pagina, tituloAnterior, tituloSiguiente, textoDiapositivas = 'Proyectar en clase' }: Props) {
   const ajustes = usarAjustes()
   const atajos = useAtajos()
   /** tarjeta de «Saber más» abierta en la página */
@@ -237,7 +239,7 @@ export default function DetalleBloque({ bloque: b, onCerrar, posicion, onAnterio
             )}
             {onDiapositivas && (
               <button type="button" onClick={onDiapositivas} title="Ver como diapositivas (D)" className="min-h-11 rounded-full border border-[var(--linea)] px-4 text-sm font-semibold">
-                Proyectar en clase
+                {textoDiapositivas}
               </button>
             )}
           </div>
