@@ -145,6 +145,67 @@
       ],
       "diapositivas": [
         {
+          "titulo": "De lo más pequeño a lo más grande",
+          "visual": {
+            "tipo": "escena",
+            "id": "niveles",
+            "fases": [
+              {
+                "id": "atomos",
+                "nombre": "Átomo",
+                "texto": "Los ladrillos de toda la materia, vivos o no."
+              },
+              {
+                "id": "moleculas",
+                "nombre": "Molécula",
+                "texto": "Átomos unidos entre sí: agua, glucosa, oxígeno."
+              },
+              {
+                "id": "macromoleculas",
+                "nombre": "Macromolécula",
+                "texto": "Moléculas enormes: proteínas, ácidos nucleicos, carbohidratos y lípidos."
+              },
+              {
+                "id": "organulos",
+                "nombre": "Orgánulo",
+                "texto": "Estructuras dentro de la célula, cada una con su trabajo."
+              },
+              {
+                "id": "celula",
+                "nombre": "Célula",
+                "texto": "La unidad básica de la vida: el primer nivel que está vivo.",
+                "nota": "Aquí aparece la vida: es el primer nivel que está vivo."
+              },
+              {
+                "id": "tejido",
+                "nombre": "Tejido",
+                "texto": "Células parecidas que trabajan juntas."
+              },
+              {
+                "id": "organo",
+                "nombre": "Órgano",
+                "texto": "Varios tejidos que trabajan juntos."
+              },
+              {
+                "id": "sistema",
+                "nombre": "Sistema",
+                "texto": "Varios órganos que cooperan para una función mayor."
+              },
+              {
+                "id": "organismo",
+                "nombre": "Organismo",
+                "texto": "Un ser vivo completo."
+              },
+              {
+                "id": "mas-alla",
+                "nombre": "Más allá",
+                "texto": "Poblaciones, comunidades, ecosistemas y biosfera.",
+                "nota": "Población → comunidad → ecosistema → biosfera."
+              }
+            ]
+          }
+        },
+        {
           "titulo": "Todo está hecho de átomos",
           "visual": {
             "tipo": "ilustracion",
@@ -315,6 +376,25 @@
         }
       ],
       "diapositivas": [
+        {
+          "titulo": "Un nivel más: molécula",
+          "visual": {
+            "tipo": "escena",
+            "id": "niveles",
+            "fases": [
+              {
+                "id": "atomos",
+                "nombre": "Átomo",
+                "texto": "Partimos de: los ladrillos de toda la materia, vivos o no. Pulsa → para alejarte."
+              },
+              {
+                "id": "moleculas",
+                "nombre": "Molécula",
+                "texto": "Átomos unidos entre sí: agua, glucosa, oxígeno. El círculo marca dónde quedó el nivel anterior."
+              }
+            ]
+          }
+        },
         {
           "titulo": "Átomos unidos forman una molécula",
           "visual": {
@@ -511,6 +591,25 @@
       ],
       "diapositivas": [
         {
+          "titulo": "Un nivel más: macromolécula",
+          "visual": {
+            "tipo": "escena",
+            "id": "niveles",
+            "fases": [
+              {
+                "id": "moleculas",
+                "nombre": "Molécula",
+                "texto": "Partimos de: átomos unidos entre sí: agua, glucosa, oxígeno. Pulsa → para alejarte."
+              },
+              {
+                "id": "macromoleculas",
+                "nombre": "Macromolécula",
+                "texto": "Moléculas enormes: proteínas, ácidos nucleicos, carbohidratos y lípidos. El círculo marca dónde quedó el nivel anterior."
+              }
+            ]
+          }
+        },
+        {
           "titulo": "Moléculas gigantes hechas de piezas",
           "visual": {
             "tipo": "ilustracion",
@@ -705,6 +804,25 @@
         }
       ],
       "diapositivas": [
+        {
+          "titulo": "Un nivel más: orgánulo",
+          "visual": {
+            "tipo": "escena",
+            "id": "niveles",
+            "fases": [
+              {
+                "id": "macromoleculas",
+                "nombre": "Macromolécula",
+                "texto": "Partimos de: moléculas enormes: proteínas, ácidos nucleicos, carbohidratos y lípidos. Pulsa → para alejarte."
+              },
+              {
+                "id": "organulos",
+                "nombre": "Orgánulo",
+                "texto": "Estructuras dentro de la célula, cada una con su trabajo. El círculo marca dónde quedó el nivel anterior."
+              }
+            ]
+          }
+        },
         {
           "titulo": "Los órganos de la célula",
           "visual": {
@@ -903,6 +1021,26 @@
         }
       ],
       "diapositivas": [
+        {
+          "titulo": "Un nivel más: célula",
+          "visual": {
+            "tipo": "escena",
+            "id": "niveles",
+            "fases": [
+              {
+                "id": "organulos",
+                "nombre": "Orgánulo",
+                "texto": "Partimos de: estructuras dentro de la célula, cada una con su trabajo. Pulsa → para alejarte."
+              },
+              {
+                "id": "celula",
+                "nombre": "Célula",
+                "texto": "La unidad básica de la vida: el primer nivel que está vivo. El círculo marca dónde quedó el nivel anterior.",
+                "nota": "Aquí aparece la vida: es el primer nivel que está vivo."
+              }
+            ]
+          }
+        },
         {
           "titulo": "Aquí aparece la vida",
           "visual": {
@@ -1109,6 +1247,25 @@
       ],
       "diapositivas": [
         {
+          "titulo": "Un nivel más: tejido",
+          "visual": {
+            "tipo": "escena",
+            "id": "niveles",
+            "fases": [
+              {
+                "id": "celula",
+                "nombre": "Célula",
+                "texto": "Partimos de: la unidad básica de la vida: el primer nivel que está vivo. Pulsa → para alejarte."
+              },
+              {
+                "id": "tejido",
+                "nombre": "Tejido",
+                "texto": "Células parecidas que trabajan juntas. El círculo marca dónde quedó el nivel anterior."
+              }
+            ]
+          }
+        },
+        {
           "titulo": "Células parecidas, un mismo trabajo",
           "visual": {
             "tipo": "ilustracion",
@@ -1306,6 +1463,25 @@
       ],
       "diapositivas": [
         {
+          "titulo": "Un nivel más: órgano",
+          "visual": {
+            "tipo": "escena",
+            "id": "niveles",
+            "fases": [
+              {
+                "id": "tejido",
+                "nombre": "Tejido",
+                "texto": "Partimos de: células parecidas que trabajan juntas. Pulsa → para alejarte."
+              },
+              {
+                "id": "organo",
+                "nombre": "Órgano",
+                "texto": "Varios tejidos que trabajan juntos. El círculo marca dónde quedó el nivel anterior."
+              }
+            ]
+          }
+        },
+        {
           "titulo": "Varios tejidos, una función",
           "visual": {
             "tipo": "ilustracion",
@@ -1499,6 +1675,25 @@
         }
       ],
       "diapositivas": [
+        {
+          "titulo": "Un nivel más: sistema",
+          "visual": {
+            "tipo": "escena",
+            "id": "niveles",
+            "fases": [
+              {
+                "id": "organo",
+                "nombre": "Órgano",
+                "texto": "Partimos de: varios tejidos que trabajan juntos. Pulsa → para alejarte."
+              },
+              {
+                "id": "sistema",
+                "nombre": "Sistema",
+                "texto": "Varios órganos que cooperan para una función mayor. El círculo marca dónde quedó el nivel anterior."
+              }
+            ]
+          }
+        },
         {
           "titulo": "Órganos en equipo",
           "visual": {
@@ -1712,6 +1907,25 @@
       ],
       "diapositivas": [
         {
+          "titulo": "Un nivel más: organismo",
+          "visual": {
+            "tipo": "escena",
+            "id": "niveles",
+            "fases": [
+              {
+                "id": "sistema",
+                "nombre": "Sistema",
+                "texto": "Partimos de: varios órganos que cooperan para una función mayor. Pulsa → para alejarte."
+              },
+              {
+                "id": "organismo",
+                "nombre": "Organismo",
+                "texto": "Un ser vivo completo. El círculo marca dónde quedó el nivel anterior."
+              }
+            ]
+          }
+        },
+        {
           "titulo": "Un ser vivo completo",
           "visual": {
             "tipo": "ilustracion",
@@ -1909,6 +2123,26 @@
         }
       ],
       "diapositivas": [
+        {
+          "titulo": "Un nivel más: más allá",
+          "visual": {
+            "tipo": "escena",
+            "id": "niveles",
+            "fases": [
+              {
+                "id": "organismo",
+                "nombre": "Organismo",
+                "texto": "Partimos de: un ser vivo completo. Pulsa → para alejarte."
+              },
+              {
+                "id": "mas-alla",
+                "nombre": "Más allá",
+                "texto": "Poblaciones, comunidades, ecosistemas y biosfera. El círculo marca dónde quedó el nivel anterior.",
+                "nota": "Población → comunidad → ecosistema → biosfera."
+              }
+            ]
+          }
+        },
         {
           "titulo": "Los seres vivos no viven solos",
           "visual": {
