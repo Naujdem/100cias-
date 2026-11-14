@@ -1,5 +1,6 @@
 // Escenas que se transforman: el mismo contorno cambia de forma (animal → vegetal, procariota → eucariota)
-// y las piezas propias de cada tipo aparecen o desaparecen. El contorno anima su `d` (8 curvas en ambos casos).
+// y las piezas propias de cada tipo aparecen o desaparecen. El contorno anima su `d` (8 curvas en ambos casos);
+// también va como atributo para que Safari, que no anima `d` por CSS, al menos lo dibuje.
 import type { CSSProperties } from 'react'
 import { Nucleo, Mito, Golgi, RetRugoso, Lisosoma, Cloroplasto, Ribosomas } from '../ilustraciones/CelulaEuc.tsx'
 
@@ -52,8 +53,8 @@ export function EscenaAnimalVegetal({ fase }: { fase: string }) {
     <svg viewBox="0 0 400 300" role="img" aria-label={`De célula animal a vegetal: ${fase}`} className="h-full w-full">
       <rect x="-1500" y="-1500" width="3400" height="3300" fill={conPared ? '#eef5e6' : '#f3e7ef'} style={{ transition: 'fill 0.8s' }} />
       {/* pared (por fuera) y membrana */}
-      <path fill="none" stroke="#6fa05a" style={{ ...D(conPared ? rect(30, 38, 340, 224, 22) : blob(200, 150, 160, 108)), strokeWidth: conPared ? 13 : 0, opacity: conPared ? 1 : 0 }} />
-      <path stroke="#b05a5a" strokeWidth="4" style={{ ...D(conPared ? rect(40, 48, 320, 204, 16) : blob(200, 150, 160, 108)), fill: conPared ? '#e3f1d6' : '#f8d9d4' }} />
+      <path fill="none" stroke="#6fa05a" d={conPared ? rect(30, 38, 340, 224, 22) : blob(200, 150, 160, 108)} style={{ ...D(conPared ? rect(30, 38, 340, 224, 22) : blob(200, 150, 160, 108)), strokeWidth: conPared ? 13 : 0, opacity: conPared ? 1 : 0 }} />
+      <path stroke="#b05a5a" strokeWidth="4" d={conPared ? rect(40, 48, 320, 204, 16) : blob(200, 150, 160, 108)} style={{ ...D(conPared ? rect(40, 48, 320, 204, 16) : blob(200, 150, 160, 108)), fill: conPared ? '#e3f1d6' : '#f8d9d4' }} />
       {/* vacuola central: crece y empuja al núcleo */}
       <path d="M 210 72 Q 344 66 344 150 Q 346 232 270 238 Q 206 242 202 170 Q 196 100 210 72 Z" fill="#cfe6f6" stroke="#3b6fb6" strokeWidth="3.5"
         style={{ transition: suave, transformOrigin: '272px 150px', transform: i >= 3 ? 'none' : 'scale(0.15)', opacity: i >= 3 ? 1 : 0 }} />
@@ -88,8 +89,8 @@ export function EscenaProEu({ fase }: { fase: string }) {
     <svg viewBox="0 0 400 300" role="img" aria-label={`De procariota a eucariota: ${fase}`} className="h-full w-full">
       <rect x="-1500" y="-1500" width="3400" height="3300" fill="#f3efe6" />
       {/* pared y cápsula de la bacteria */}
-      <path fill="none" stroke="#6fa05a" strokeWidth="5" style={{ ...D(grande ? blob(200, 150, 168, 116) : rect(144, 122, 112, 56, 28)), opacity: grande ? 0 : 1 }} />
-      <path stroke="#b05a5a" strokeWidth={grande ? 4 : 3} style={{ ...D(forma), fill: grande ? '#f8d9d4' : '#e9d7f0' }} />
+      <path fill="none" stroke="#6fa05a" strokeWidth="5" d={grande ? blob(200, 150, 168, 116) : rect(144, 122, 112, 56, 28)} style={{ ...D(grande ? blob(200, 150, 168, 116) : rect(144, 122, 112, 56, 28)), opacity: grande ? 0 : 1 }} />
+      <path stroke="#b05a5a" strokeWidth={grande ? 4 : 3} d={forma} style={{ ...D(forma), fill: grande ? '#f8d9d4' : '#e9d7f0' }} />
       {/* flagelo */}
       <path d="M 256 150 q 16 -12 28 0 t 28 0 t 28 0" fill="none" stroke="#6b5a8a" strokeWidth="3" strokeLinecap="round" style={ver(!grande)} />
       {/* ADN: anillo suelto (nucleoide) que luego queda dentro del núcleo */}

@@ -23,7 +23,7 @@ export default function EscenaCitocinesis({ fase }: { fase: string }) {
 
       {/* ── animal ── */}
       <g style={{ transition: suave, opacity: vegetal ? 0 : 1 }}>
-        <path fill="#f8d9d4" stroke="#b05a5a" strokeWidth="4" style={{ d: contorno(w), transition: 'd 1.1s ease, opacity 0.6s', opacity: f === 'separadas' ? 0 : 1 } as CSSProperties} />
+        <path d={contorno(w).slice(6, -2)} fill="#f8d9d4" stroke="#b05a5a" strokeWidth="4" style={{ d: contorno(w), transition: 'd 1.1s ease, opacity 0.6s', opacity: f === 'separadas' ? 0 : 1 } as CSSProperties} />
         {/* las dos hijas ya separadas */}
         {[[128, -1], [272, 1]].map(([cx, s]) => (
           <circle key={cx} cx={cx} cy="150" r="78" fill="#f8d9d4" stroke="#b05a5a" strokeWidth="4"
