@@ -8,6 +8,7 @@ import Endosimbiosis from './Endosimbiosis.tsx'
 import NivelesOrganizacion, { NIVELES } from './NivelesOrganizacion.tsx'
 import NivelesJuego from './NivelesJuego.tsx'
 import CelulaUrgencias from './CelulaUrgencias.tsx'
+import { NucleoDiagrama, CloroplastoDiagrama, LisosomaDiagrama } from './CelulaEucOrg.tsx'
 import { CitoesqueletoDiagrama, RibosomasDiagrama, PeroxisomaDiagrama, MatrizParedDiagrama } from './CelulaEucMas.tsx'
 import GotaLeeuwenhoek from './GotaLeeuwenhoek.tsx'
 import UniPluri from './UniPluri.tsx'
@@ -51,6 +52,9 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'ribosomas': RibosomasDiagrama,
   'peroxisomas': PeroxisomaDiagrama,
   'pared-matriz': MatrizParedDiagrama,
+  'nucleo-receta': NucleoDiagrama,
+  'cloroplasto-fotosintesis': CloroplastoDiagrama,
+  'lisosoma-digiere': LisosomaDiagrama,
   'membrana-portero': () => <MembranaActividades inicial="portero" />,
   'membrana-osmosis': () => <MembranaActividades inicial="osmosis" />,
   'cuenta-celula': CuentaComoCelula,

@@ -217,3 +217,8 @@ Hooke usa la reconstrucción de Rita Greer (2004, Free Art License, Wikimedia Co
 - Cada paso nuevo tiene ficha completa (idea, 4 datos de contexto, evidencia, límites, cuaderno, docente), 3–4 láminas y 4 preguntas (`ce-cq-*`, `ce-ri-*`, `ce-pe-*`, `ce-mp-*`), con diagrama propio en `components/diagramas/CelulaEucMas.tsx`: *citoesqueleto* (tres filamentos, quitar el citoesqueleto, vesícula sobre el riel), *ribosomas* (¿libre o del retículo? 5 proteínas), *peroxisomas* (catalasa y agua oxigenada, quitar la catalasa), *pared-matriz* (agua en la vacuola contra la pared; matriz con colágeno).
 - Perfiles: 6° sin cambios (5 pasos); 9° suma citoesqueleto, ribosomas y pared y matriz (10); 11° todo (12).
 - Todo en borrador. Sigue pendiente: diagramas propios para núcleo, cloroplastos y lisosomas; minijuegos para los demás pasos.
+
+## Tema 3 · diagramas propios de núcleo, cloroplastos y lisosomas (13 nov, noche)
+- `components/diagramas/CelulaEucOrg.tsx`: *nucleo-receta* (4 pasos: ADN guardado → copia de ARN → sale por un poro → ribosoma), *cloroplasto-fotosintesis* (encender luz, agua y CO₂; sin uno de ellos no hay glucosa ni oxígeno) y *lisosoma-digiere* (digerir una bacteria por fagocitosis o reciclar una mitocondria vieja por autofagia, 4 pasos con deslizador).
+- Antes núcleo usaba el explorador, cloroplastos compartía *energia-celular* con mitocondrias y lisosomas usaba *celula-quien-hace*. El explorador y *energia-celular* siguen en uso en otros pasos.
+- Pendiente del tema 3: minijuegos para los pasos que aún no tienen (solo membrana y célula completa tienen «Juega»).
