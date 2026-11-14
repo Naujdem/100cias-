@@ -1,0 +1,547 @@
+{
+  "id": "tecnicas-estudio",
+  "materia": "biologia",
+  "area": "celular",
+  "titulo": "Técnicas de estudio",
+  "subtema": "Técnicas de estudio de la célula",
+  "orden": 10,
+  "etiqueta": "6",
+  "vistas": [
+    "ruta"
+  ],
+  "tituloVista": "Ruta de las técnicas de estudio",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Reconocer las partes del microscopio óptico y usarlo correctamente.",
+    "Calcular el aumento total de un microscopio.",
+    "Comparar el microscopio óptico y el electrónico y saber qué permite ver cada uno."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con el manual del microscopio del laboratorio (aumentos de ocular y objetivos). A verificar: límite de resolución del óptico (~0,2 µm) y aumentos del electrónico (~1 000 000×)."
+  ],
+  "bloques": [
+    {
+      "id": "microscopio-optico",
+      "titulo": "El microscopio óptico",
+      "resumen": "Sus partes y cómo enfocar una muestra sin romperla.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "requiere": [],
+      "ficha": {
+        "idea": "El microscopio óptico usa luz y lentes para ver cosas demasiado pequeñas para el ojo. Sus partes se agrupan en tres sistemas: el mecánico (lo que sostiene y mueve), el óptico (los lentes) y el de iluminación (la luz).",
+        "contexto": [
+          {
+            "titulo": "Sistema óptico",
+            "texto": "El ocular, por donde miras, y los objetivos, cerca de la muestra."
+          },
+          {
+            "titulo": "Sistema de iluminación",
+            "texto": "La lámpara o el espejo, el condensador y el diafragma, que regula la luz."
+          },
+          {
+            "titulo": "Sistema mecánico",
+            "texto": "Base, brazo, tubo, revólver, platina, pinzas y los tornillos para enfocar."
+          },
+          {
+            "titulo": "Cómo enfocar",
+            "texto": "Empieza con el objetivo menor y el macrométrico; termina con el micrométrico. Con 40× solo se usa el micrométrico."
+          }
+        ],
+        "evidencia": [
+          "Hooke y Leeuwenhoek descubrieron las células gracias a los primeros microscopios."
+        ],
+        "limites": "El microscopio óptico no deja ver estructuras menores de unas 0,2 milésimas de milímetro, como los ribosomas.",
+        "cuaderno": {
+          "facil": [
+            "El microscopio óptico usa luz y lentes.",
+            "Ocular + objetivo = lo que aumenta.",
+            "Se enfoca con los tornillos."
+          ],
+          "media": [
+            "Tres sistemas: mecánico, óptico e iluminación.",
+            "Macrométrico: grueso; micrométrico: fino.",
+            "Empezar siempre con el objetivo menor."
+          ],
+          "avanzada": [
+            "Con 40× solo el micrométrico: se puede romper la lámina.",
+            "El diafragma regula el contraste.",
+            "Se lleva con dos manos: brazo y base."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Cómo hizo Hooke para ver las «celdas» del corcho?",
+          "actividad": "Antes del laboratorio, practiquen con el simulador de enfoque. Luego preparen una lámina con piel de cebolla y enfóquenla siguiendo los mismos pasos.",
+          "errores": [
+            "Usar el macrométrico con el objetivo de 40×.",
+            "Empezar a enfocar con el objetivo mayor.",
+            "Cargar el microscopio por el tubo."
+          ],
+          "minutos": 15
+        }
+      },
+      "diagrama": "enfoca-muestra",
+      "juego": "partes-microscopio-juego",
+      "revisado": false,
+      "preguntas": [
+        {
+          "id": "te-micro-1",
+          "enunciado": "¿Con qué tornillo se hace el enfoque final, más fino?",
+          "opciones": [
+            "Macrométrico",
+            "Micrométrico",
+            "Revólver"
+          ],
+          "correcta": 1,
+          "explicacion": "El micrométrico mueve muy poco: sirve para el ajuste fino."
+        },
+        {
+          "id": "te-micro-2",
+          "enunciado": "¿Por qué no se usa el macrométrico con el objetivo de 40×?",
+          "opciones": [
+            "Porque no aumenta",
+            "Porque el objetivo puede chocar con la lámina",
+            "Porque se apaga la luz"
+          ],
+          "correcta": 1,
+          "explicacion": "Con 40× el objetivo queda muy cerca de la lámina."
+        },
+        {
+          "id": "te-micro-3",
+          "enunciado": "¿A qué sistema pertenece el diafragma?",
+          "opciones": [
+            "Mecánico",
+            "Óptico",
+            "Iluminación"
+          ],
+          "correcta": 2,
+          "explicacion": "Regula la cantidad de luz que llega a la muestra."
+        }
+      ],
+      "diapositivas": [
+        {
+          "titulo": "¿Cómo vio Hooke las células?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Una célula de cebolla mide una décima de milímetro. ¿Por qué no la vemos a simple vista?",
+            "opciones": [
+              "Porque es transparente y muy pequeña",
+              "Porque no existe hasta que la miramos",
+              "Porque está dentro de otra célula"
+            ],
+            "correcta": 0,
+            "explicacion": "Es más pequeña de lo que el ojo distingue: hace falta un microscopio."
+          }
+        },
+        {
+          "titulo": "Las partes del microscopio",
+          "visual": {
+            "tipo": "escena",
+            "id": "microscopio",
+            "fases": [
+              {
+                "id": "completo",
+                "nombre": "El microscopio óptico",
+                "texto": "Usa luz y lentes para ver lo que el ojo no alcanza."
+              },
+              {
+                "id": "ocular",
+                "nombre": "Ocular y tubo",
+                "texto": "El ocular es el lente por donde miras; suele aumentar 10×. Va en la punta del tubo."
+              },
+              {
+                "id": "objetivos",
+                "nombre": "Revólver y objetivos",
+                "texto": "Los objetivos son los lentes cerca de la muestra (4×, 10×, 40×). El revólver gira para cambiarlos."
+              },
+              {
+                "id": "platina",
+                "nombre": "Platina y pinzas",
+                "texto": "La lámina con la muestra se pone en la platina y la sujetan las pinzas."
+              },
+              {
+                "id": "luz",
+                "nombre": "Lámpara y diafragma",
+                "texto": "La luz atraviesa la muestra desde abajo; el diafragma regula cuánta pasa."
+              },
+              {
+                "id": "tornillos",
+                "nombre": "Tornillos",
+                "texto": "El macrométrico (grande) mueve mucho; el micrométrico (pequeño) hace el ajuste fino.",
+                "nota": "Con 40× solo se usa el micrométrico."
+              },
+              {
+                "id": "mecanica",
+                "nombre": "Sistema mecánico",
+                "texto": "Todo lo que sostiene y mueve: base, brazo, tubo, revólver, platina, pinzas y tornillos."
+              },
+              {
+                "id": "optica",
+                "nombre": "Sistema óptico",
+                "texto": "Los lentes: ocular y objetivos."
+              },
+              {
+                "id": "iluminacion",
+                "nombre": "Sistema de iluminación",
+                "texto": "La lámpara o el espejo, el condensador y el diafragma."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Enfoca tú",
+          "visual": {
+            "tipo": "diagrama",
+            "id": "enfoca-muestra"
+          },
+          "puntos": [
+            "Empieza con 4× y el macrométrico"
+          ]
+        },
+        {
+          "titulo": "Cuidar el microscopio",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🤲",
+                "titulo": "Con dos manos",
+                "texto": "una en el brazo y otra en la base"
+              },
+              {
+                "icono": "🔍",
+                "titulo": "Del menor al mayor",
+                "texto": "siempre empieza con 4×"
+              },
+              {
+                "icono": "⚠️",
+                "titulo": "Con 40×",
+                "texto": "solo el micrométrico"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "aumento",
+      "titulo": "¿Cuánto aumenta?",
+      "resumen": "Aumento total = ocular × objetivo.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "nucleo": true,
+      "requiere": [
+        "microscopio-optico"
+      ],
+      "ficha": {
+        "idea": "El aumento total de un microscopio óptico se calcula multiplicando el aumento del ocular por el del objetivo que se esté usando. Con un ocular de 10×, los objetivos de 4×, 10× y 40× dan 40, 100 y 400 aumentos.",
+        "contexto": [
+          {
+            "titulo": "La cuenta",
+            "texto": "Ocular 10× × objetivo 40× = 400×: la muestra se ve 400 veces más grande."
+          },
+          {
+            "titulo": "Más aumento, menos campo",
+            "texto": "Al aumentar se ve más grande, pero se ve una parte más pequeña de la muestra."
+          },
+          {
+            "titulo": "Aceite de inmersión",
+            "texto": "El objetivo de 100× necesita una gota de aceite entre la lámina y el lente."
+          }
+        ],
+        "limites": "Aumentar más no siempre sirve: pasado cierto punto la imagen se ve más grande pero borrosa.",
+        "cuaderno": {
+          "facil": [
+            "Aumento total = ocular × objetivo.",
+            "10 × 40 = 400 aumentos."
+          ],
+          "media": [
+            "Con más aumento se ve una zona más pequeña.",
+            "El de 100× necesita aceite."
+          ],
+          "avanzada": [
+            "La resolución, no el aumento, limita lo que se distingue."
+          ]
+        },
+        "docente": {
+          "abrir": "Si veo una célula 400 veces más grande, ¿qué lentes estoy usando?",
+          "actividad": "Recorran la escena de aumentos y luego jueguen «¿Cuánto aumenta?». En el laboratorio, lean los números grabados en el ocular y los objetivos.",
+          "errores": [
+            "Sumar en vez de multiplicar.",
+            "Creer que más aumento siempre muestra más detalle."
+          ],
+          "minutos": 10
+        }
+      },
+      "juego": "aumento-juego",
+      "revisado": false,
+      "preguntas": [
+        {
+          "id": "te-aum-1",
+          "enunciado": "Ocular 10× y objetivo 40×: ¿aumento total?",
+          "opciones": [
+            "50×",
+            "400×",
+            "4000×"
+          ],
+          "correcta": 1,
+          "explicacion": "Se multiplican: 10 × 40 = 400."
+        },
+        {
+          "id": "te-aum-2",
+          "enunciado": "Al pasar de 10× a 40×, ¿qué pasa con el campo que ves?",
+          "opciones": [
+            "Se ve una zona más pequeña de la muestra",
+            "Se ve toda la lámina",
+            "No cambia"
+          ],
+          "correcta": 0,
+          "explicacion": "Más aumento, menos campo."
+        },
+        {
+          "id": "te-aum-3",
+          "enunciado": "¿Qué objetivo necesita aceite de inmersión?",
+          "opciones": [
+            "4×",
+            "40×",
+            "100×"
+          ],
+          "correcta": 2,
+          "explicacion": "El de 100× trabaja con una gota de aceite."
+        }
+      ],
+      "diapositivas": [
+        {
+          "titulo": "Acércate a la cebolla",
+          "visual": {
+            "tipo": "escena",
+            "id": "aumento",
+            "fases": [
+              {
+                "id": "ojo",
+                "nombre": "A simple vista",
+                "texto": "Una capa delgada y transparente: no se distinguen células."
+              },
+              {
+                "id": "x40",
+                "nombre": "40×",
+                "texto": "Ocular 10× × objetivo 4×: aparecen muchas celdas pequeñas."
+              },
+              {
+                "id": "x100",
+                "nombre": "100×",
+                "texto": "10 × 10: las células se ven como ladrillos, con su núcleo."
+              },
+              {
+                "id": "x400",
+                "nombre": "400×",
+                "texto": "10 × 40: pocas células, pero grandes y con detalle.",
+                "nota": "Más aumento, menos campo: se ve una zona más pequeña."
+              },
+              {
+                "id": "x1000",
+                "nombre": "1000×",
+                "texto": "10 × 100: el máximo del óptico. Necesita aceite de inmersión.",
+                "nivel": "intermedio"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "La cuenta",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "✖️",
+            "valor": "10 × 40 = 400",
+            "texto": "aumento del ocular × aumento del objetivo = aumento total"
+          }
+        },
+        {
+          "titulo": "¿Lo tienes?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Ocular 10× y objetivo 10×. ¿Cuántas veces más grande se ve?",
+            "opciones": [
+              "20 veces",
+              "100 veces",
+              "1000 veces"
+            ],
+            "correcta": 1,
+            "explicacion": "Se multiplica: 10 × 10 = 100."
+          }
+        }
+      ]
+    },
+    {
+      "id": "optico-electronico",
+      "titulo": "Óptico y electrónico",
+      "resumen": "Luz o electrones: qué deja ver cada microscopio.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "intermedio",
+      "nucleo": true,
+      "requiere": [
+        "aumento"
+      ],
+      "ficha": {
+        "idea": "El microscopio óptico usa luz: aumenta hasta unas 1000 veces y permite ver células vivas y en color. El electrónico usa electrones: aumenta hasta un millón de veces y deja ver ribosomas, membranas y virus, pero con muestras muertas y en blanco y negro.",
+        "contexto": [
+          {
+            "titulo": "El límite de la luz",
+            "texto": "Con luz no se distinguen dos puntos más cercanos que unas 0,2 milésimas de milímetro."
+          },
+          {
+            "titulo": "De transmisión",
+            "texto": "Los electrones atraviesan cortes muy finos: se ve el interior de la célula."
+          },
+          {
+            "titulo": "De barrido",
+            "texto": "Los electrones rebotan en la superficie: imágenes en relieve, como en 3D."
+          },
+          {
+            "titulo": "Fraccionamiento celular",
+            "texto": "Romper células y centrifugarlas para separar sus orgánulos y estudiarlos por partes."
+          }
+        ],
+        "limites": "El electrónico no sirve para ver seres vivos en movimiento: la muestra se prepara en vacío.",
+        "cuaderno": {
+          "facil": [
+            "Óptico: luz, hasta 1000×.",
+            "Electrónico: electrones, hasta un millón de veces."
+          ],
+          "media": [
+            "Óptico: muestras vivas y en color.",
+            "Electrónico: ribosomas, membranas y virus."
+          ],
+          "avanzada": [
+            "Transmisión: interior; barrido: superficie.",
+            "Fraccionamiento: centrifugar para separar orgánulos."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué en el libro hay fotos de ribosomas si en el laboratorio no los vemos?",
+          "actividad": "Recorran la escena con la misma célula vista con los dos microscopios y jueguen «¿Óptico o electrónico?».",
+          "errores": [
+            "Creer que con más aumento el óptico verá ribosomas.",
+            "Creer que los colores de las fotos electrónicas son reales."
+          ],
+          "minutos": 10
+        }
+      },
+      "juego": "optico-electronico-juego",
+      "revisado": false,
+      "preguntas": [
+        {
+          "id": "te-oe-1",
+          "enunciado": "¿Con cuál se pueden ver ribosomas?",
+          "opciones": [
+            "Óptico",
+            "Electrónico",
+            "Lupa"
+          ],
+          "correcta": 1,
+          "explicacion": "Son demasiado pequeños para la luz."
+        },
+        {
+          "id": "te-oe-2",
+          "enunciado": "¿Con cuál se ven células vivas moviéndose?",
+          "opciones": [
+            "Óptico",
+            "Electrónico de transmisión",
+            "Electrónico de barrido"
+          ],
+          "correcta": 0,
+          "explicacion": "El electrónico trabaja con muestras en vacío."
+        },
+        {
+          "id": "te-oe-3",
+          "enunciado": "¿Qué usa el microscopio electrónico en lugar de luz?",
+          "opciones": [
+            "Sonido",
+            "Electrones",
+            "Calor"
+          ],
+          "correcta": 1,
+          "explicacion": "Un haz de electrones."
+        }
+      ],
+      "diapositivas": [
+        {
+          "titulo": "La misma célula, dos microscopios",
+          "visual": {
+            "tipo": "escena",
+            "id": "optico-electronico",
+            "fases": [
+              {
+                "id": "optico",
+                "nombre": "Con el óptico",
+                "texto": "Se ven la pared, el núcleo, los cloroplastos y la vacuola, en color."
+              },
+              {
+                "id": "limite",
+                "nombre": "El límite de la luz",
+                "texto": "Si se aumenta más, la imagen crece pero se ve borrosa: la luz no alcanza a distinguir lo más pequeño."
+              },
+              {
+                "id": "electronico",
+                "nombre": "Con el electrónico",
+                "texto": "Con electrones se distinguen el retículo, los ribosomas y las membranas, en blanco y negro.",
+                "nota": "Los colores de muchas fotos electrónicas se agregan después."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Luz o electrones",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "💡",
+              "titulo": "Óptico",
+              "puntos": [
+                "Hasta ~1000×",
+                "Muestras vivas, en color"
+              ]
+            },
+            "der": {
+              "icono": "⚡",
+              "titulo": "Electrónico",
+              "puntos": [
+                "Hasta ~1 000 000×",
+                "Ribosomas, membranas, virus"
+              ]
+            }
+          }
+        },
+        {
+          "titulo": "Separar para estudiar",
+          "nivel": "avanzado",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🔨",
+                "titulo": "Romper",
+                "texto": "se rompen las células"
+              },
+              {
+                "icono": "🌀",
+                "titulo": "Centrifugar",
+                "texto": "girar muy rápido: lo pesado baja"
+              },
+              {
+                "icono": "🧪",
+                "titulo": "Separar",
+                "texto": "núcleos, mitocondrias, ribosomas…"
+              }
+            ]
+          },
+          "nota": "Es el fraccionamiento celular: así se descubrió qué hace cada orgánulo."
+        }
+      ]
+    }
+  ]
+}
