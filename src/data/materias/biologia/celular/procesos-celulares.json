@@ -1,0 +1,613 @@
+{
+  "id": "procesos-celulares",
+  "materia": "biologia",
+  "area": "celular",
+  "titulo": "Procesos celulares",
+  "subtema": "Ciclo celular y mitosis",
+  "orden": 6,
+  "etiqueta": "4.1",
+  "vistas": [
+    "ruta"
+  ],
+  "tituloVista": "Ruta del ciclo celular",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Explicar para qué se dividen las células.",
+    "Describir las etapas del ciclo celular y las fases de la mitosis.",
+    "Explicar qué pasa cuando el ciclo pierde su control."
+  ],
+  "fuentes": [
+    "Plan de área del colegio (solo guía)",
+    "BORRADOR: esqueleto redactado como punto de partida; verificar cada bloque antes de marcarlo como revisado. A verificar: 90 % del ciclo en interfase; renovación del intestino en pocos días; 78 cromosomas del perro y 48 de la papa; puntos de control en G1, G2 y metafase."
+  ],
+  "bloques": [
+    {
+      "id": "por-que-dividirse",
+      "titulo": "¿Por qué se dividen las células?",
+      "resumen": "Para crecer, reparar heridas y reproducirse.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "Las células se dividen para que un organismo crezca, para reponer las que se gastan o se dañan y, en los seres de una sola célula, para reproducirse. Al dividirse, una célula forma dos células hijas con la misma información.",
+        "contexto": [
+          {
+            "titulo": "Crecer",
+            "texto": "Pasaste de ser una sola célula (el cigoto) a tener billones. Casi todo ese crecimiento es división celular."
+          },
+          {
+            "titulo": "Reparar",
+            "texto": "Cuando te cortas, las células de la piel del borde se dividen y cierran la herida."
+          },
+          {
+            "titulo": "Reponer",
+            "texto": "Algunas células viven poco. Las del revestimiento del intestino se renuevan en pocos días."
+          },
+          {
+            "titulo": "Reproducirse",
+            "texto": "Una bacteria o una ameba se divide en dos y así nacen dos organismos nuevos."
+          }
+        ],
+        "evidencia": [
+          "Una herida en la piel se cierra en días: son células nuevas, no las viejas estiradas."
+        ],
+        "limites": "Una célula no puede crecer sin límite: si se hace muy grande, su membrana ya no alcanza a dejar entrar lo que necesita. Dividirse resuelve ese problema.",
+        "cuaderno": {
+          "facil": [
+            "Las células se dividen para crecer, reparar y reproducirse.",
+            "De una célula salen dos células hijas."
+          ],
+          "media": [
+            "Todo ser pluricelular empezó como una sola célula.",
+            "En los unicelulares, dividirse es reproducirse."
+          ],
+          "avanzada": [
+            "Una célula muy grande no alcanza a alimentarse por su membrana: por eso se divide."
+          ]
+        },
+        "docente": {
+          "abrir": "Si todos empezamos como una sola célula, ¿de dónde salieron las demás?",
+          "actividad": "Pidan ejemplos de su vida donde haya células dividiéndose: una herida que sana, el pelo o las uñas que crecen.",
+          "errores": [
+            "Creer que crecer es que las células se agranden.",
+            "Pensar que las células viejas se «arreglan» en lugar de ser reemplazadas."
+          ],
+          "minutos": 10
+        }
+      },
+      "diagrama": "division-celular",
+      "preguntas": [
+        {
+          "id": "pc-pq-1",
+          "enunciado": "¿Para qué se dividen las células?",
+          "opciones": [
+            "Para crecer, reparar y reproducirse",
+            "Para cambiar de color",
+            "Para perder su ADN"
+          ],
+          "correcta": 0,
+          "explicacion": "Son las tres razones principales."
+        },
+        {
+          "id": "pc-pq-2",
+          "enunciado": "Cuando una herida sana, ¿qué pasó?",
+          "opciones": [
+            "Se dividieron células del borde y la cerraron",
+            "Las células viejas se estiraron",
+            "Llegaron células de otra persona"
+          ],
+          "correcta": 0,
+          "explicacion": "Son células nuevas, hijas de las del borde."
+        },
+        {
+          "id": "pc-pq-3",
+          "enunciado": "¿Por qué una célula no crece sin límite?",
+          "opciones": [
+            "Su membrana no alcanzaría a dejar entrar lo que necesita",
+            "Porque se aburre",
+            "Porque pierde el núcleo"
+          ],
+          "correcta": 0,
+          "explicacion": "Al crecer, el volumen aumenta más rápido que la superficie."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "ciclo-celular",
+      "titulo": "El ciclo celular",
+      "resumen": "La vida de una célula: crecer, copiar el ADN y dividirse.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "nucleo": true,
+      "requiere": [
+        "por-que-dividirse"
+      ],
+      "ficha": {
+        "idea": "El ciclo celular es la vida de una célula desde que nace hasta que se divide. Tiene dos grandes etapas: la interfase, en la que crece y copia su ADN, y la fase de división (fase M), en la que reparte todo en dos.",
+        "contexto": [
+          {
+            "titulo": "Interfase: casi todo el tiempo",
+            "texto": "Una célula pasa cerca del 90 % del ciclo en interfase. Por eso al microscopio casi todas parecen «quietas»."
+          },
+          {
+            "titulo": "Tres momentos de la interfase",
+            "texto": "G1: crece y trabaja. S: copia todo su ADN. G2: se prepara para dividirse."
+          },
+          {
+            "titulo": "Fase M",
+            "texto": "Primero se divide el núcleo (mitosis) y después el citoplasma (citocinesis)."
+          },
+          {
+            "titulo": "Células que no se dividen",
+            "texto": "Muchas neuronas salen del ciclo y se quedan en una etapa de reposo llamada G0."
+          }
+        ],
+        "evidencia": [
+          "En un corte de punta de raíz de cebolla, la mayoría de las células están en interfase y solo unas pocas en división."
+        ],
+        "limites": "Interfase no es descanso: es la etapa de más trabajo, porque la célula crece, fabrica proteínas y copia su ADN.",
+        "cuaderno": {
+          "facil": [
+            "El ciclo celular es la vida de una célula hasta que se divide.",
+            "Tiene dos etapas: interfase y división."
+          ],
+          "media": [
+            "En la interfase la célula crece y copia su ADN.",
+            "La interfase tiene tres momentos: G1, S y G2.",
+            "La división tiene dos partes: mitosis y citocinesis."
+          ],
+          "avanzada": [
+            "Una célula pasa cerca del 90 % del ciclo en interfase.",
+            "Algunas células, como muchas neuronas, salen del ciclo (G0)."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Una célula se está dividiendo todo el tiempo?",
+          "actividad": "Dibujen el ciclo como un reloj y marquen dónde pasa más tiempo la célula. Comparen con su propio día: ¿cuánto tiempo «trabajan» y cuánto «se dividen»?",
+          "errores": [
+            "Creer que la interfase es una etapa de descanso.",
+            "Confundir mitosis con todo el ciclo celular."
+          ],
+          "minutos": 10
+        }
+      },
+      "preguntas": [
+        {
+          "id": "pc-ci-1",
+          "enunciado": "¿En qué etapa copia la célula su ADN?",
+          "opciones": [
+            "En la interfase (fase S)",
+            "En la citocinesis",
+            "En la anafase"
+          ],
+          "correcta": 0,
+          "explicacion": "El ADN se copia antes de dividirse, en la fase S."
+        },
+        {
+          "id": "pc-ci-2",
+          "enunciado": "¿En qué etapa pasa la célula la mayor parte del tiempo?",
+          "opciones": [
+            "Interfase",
+            "Mitosis",
+            "Citocinesis"
+          ],
+          "correcta": 0,
+          "explicacion": "Cerca del 90 % del ciclo."
+        },
+        {
+          "id": "pc-ci-3",
+          "enunciado": "¿Qué se divide primero en la fase M?",
+          "opciones": [
+            "El núcleo (mitosis)",
+            "La membrana externa",
+            "Las mitocondrias, una por una"
+          ],
+          "correcta": 0,
+          "explicacion": "Primero mitosis, después citocinesis."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "cromosomas",
+      "titulo": "Cromosomas: el ADN empacado",
+      "resumen": "Antes de dividirse, el ADN se enrolla en cromosomas visibles.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "intermedio",
+      "requiere": [
+        "ciclo-celular"
+      ],
+      "ficha": {
+        "idea": "El ADN de una célula es un hilo larguísimo. Para repartirlo sin enredos, antes de dividirse se enrolla y se compacta en cromosomas. Como ya se copió, cada cromosoma tiene dos copias idénticas, las cromátidas hermanas, unidas por el centrómero.",
+        "contexto": [
+          {
+            "titulo": "Cromatina",
+            "texto": "Durante la interfase el ADN está suelto y enrollado en proteínas: se llama cromatina y no se ven cromosomas."
+          },
+          {
+            "titulo": "Forma de X",
+            "texto": "Un cromosoma duplicado tiene dos cromátidas hermanas unidas por el centrómero: por eso se dibuja como una X."
+          },
+          {
+            "titulo": "Cuántos",
+            "texto": "Las células del cuerpo humano tienen 46 cromosomas (23 pares). Otras especies tienen otros números."
+          },
+          {
+            "titulo": "El número no dice cuán complejo es",
+            "texto": "Un perro tiene 78 cromosomas y una planta de papa 48: el número no mide qué tan «avanzado» es un ser vivo."
+          }
+        ],
+        "evidencia": [
+          "Con un microscopio de luz y un colorante se pueden ver los cromosomas en células de raíz de cebolla en división."
+        ],
+        "limites": "La forma de X solo aparece cuando el cromosoma está duplicado y compactado, justo antes de dividirse. El resto del tiempo el ADN no se ve así.",
+        "cuaderno": {
+          "facil": [
+            "Los cromosomas son ADN muy enrollado.",
+            "Se forman antes de que la célula se divida."
+          ],
+          "media": [
+            "Un cromosoma duplicado tiene dos cromátidas hermanas.",
+            "Las cromátidas se unen por el centrómero.",
+            "Las células humanas tienen 46 cromosomas."
+          ],
+          "avanzada": [
+            "En interfase el ADN está como cromatina, sin formar cromosomas visibles.",
+            "El número de cromosomas no indica la complejidad de una especie."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Cómo meterías un hilo de dos metros en una caja diminuta sin que se enrede?",
+          "actividad": "Con lana o cuerda, enrollen un hilo largo hasta que quepa en la mano. Luego dupliquen y unan dos en el centro para formar la X.",
+          "errores": [
+            "Creer que los cromosomas tienen siempre forma de X.",
+            "Pensar que más cromosomas significa un ser vivo más complejo."
+          ],
+          "minutos": 10
+        }
+      },
+      "preguntas": [
+        {
+          "id": "pc-cr-1",
+          "enunciado": "¿Qué es un cromosoma?",
+          "opciones": [
+            "ADN muy enrollado y compacto",
+            "Un orgánulo con membrana",
+            "Una proteína del citoesqueleto"
+          ],
+          "correcta": 0,
+          "explicacion": "Es la forma empacada del ADN."
+        },
+        {
+          "id": "pc-cr-2",
+          "enunciado": "¿Qué une a las dos cromátidas hermanas?",
+          "opciones": [
+            "El centrómero",
+            "La membrana",
+            "El ribosoma"
+          ],
+          "correcta": 0,
+          "explicacion": "Por eso el cromosoma duplicado parece una X."
+        },
+        {
+          "id": "pc-cr-3",
+          "enunciado": "¿Cuántos cromosomas tienen las células del cuerpo humano?",
+          "opciones": [
+            "46",
+            "23",
+            "100"
+          ],
+          "correcta": 0,
+          "explicacion": "Son 23 pares."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "mitosis",
+      "titulo": "Mitosis paso a paso",
+      "resumen": "Profase, metafase, anafase y telofase: el reparto del ADN.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "basico",
+      "nucleo": true,
+      "requiere": [
+        "ciclo-celular"
+      ],
+      "ficha": {
+        "idea": "La mitosis es la división del núcleo. En cuatro fases, la célula reparte sus cromosomas duplicados de manera que cada célula hija recibe una copia exacta. Por eso las dos células hijas tienen la misma información que la madre.",
+        "contexto": [
+          {
+            "titulo": "Profase",
+            "texto": "El ADN se compacta en cromosomas visibles y el núcleo se deshace."
+          },
+          {
+            "titulo": "Metafase",
+            "texto": "Los cromosomas se alinean en el centro, enganchados a las fibras del huso."
+          },
+          {
+            "titulo": "Anafase",
+            "texto": "Las cromátidas hermanas se separan y viajan a extremos opuestos."
+          },
+          {
+            "titulo": "Telofase",
+            "texto": "Se forma un núcleo nuevo en cada extremo y los cromosomas se vuelven a soltar."
+          }
+        ],
+        "evidencia": [
+          "El huso que jala los cromosomas está hecho de microtúbulos del citoesqueleto."
+        ],
+        "limites": "Las fases tienen nombre para poder estudiarlas, pero la mitosis es un proceso continuo, como una película, no cuatro fotos separadas.",
+        "cuaderno": {
+          "facil": [
+            "La mitosis es la división del núcleo.",
+            "Las células hijas tienen la misma información que la madre.",
+            "Fases: profase, metafase, anafase y telofase."
+          ],
+          "media": [
+            "Profase: aparecen los cromosomas y se deshace el núcleo.",
+            "Metafase: los cromosomas se alinean en el centro.",
+            "Anafase: las cromátidas se separan. Telofase: se forman dos núcleos."
+          ],
+          "avanzada": [
+            "El huso está hecho de microtúbulos.",
+            "Es un proceso continuo: las fases son cortes para estudiarlo."
+          ]
+        },
+        "docente": {
+          "abrir": "Si tuvieras que repartir 46 libros entre dos personas para que cada una reciba los mismos, ¿cómo lo harías?",
+          "actividad": "Con el diagrama de división, recorran las fases. Luego, con plastilina de dos colores, armen cromosomas duplicados y represéntenlos en cada fase.",
+          "errores": [
+            "Creer que en la mitosis los cromosomas se reparten al azar.",
+            "Confundir cromosoma con cromátida."
+          ],
+          "minutos": 10
+        }
+      },
+      "diagrama": "division-celular",
+      "preguntas": [
+        {
+          "id": "pc-mi-1",
+          "enunciado": "¿En qué fase se alinean los cromosomas en el centro?",
+          "opciones": [
+            "Metafase",
+            "Profase",
+            "Telofase"
+          ],
+          "correcta": 0,
+          "explicacion": "«Meta» suele recordarse como «en medio»."
+        },
+        {
+          "id": "pc-mi-2",
+          "enunciado": "¿Qué pasa en la anafase?",
+          "opciones": [
+            "Las cromátidas hermanas se separan hacia los extremos",
+            "El ADN se copia",
+            "Se forma la pared celular"
+          ],
+          "correcta": 0,
+          "explicacion": "Cada extremo recibe una copia de cada cromosoma."
+        },
+        {
+          "id": "pc-mi-3",
+          "enunciado": "¿Cómo son las dos células hijas de una mitosis?",
+          "opciones": [
+            "Tienen la misma información genética que la madre",
+            "Tienen la mitad del ADN",
+            "Son de especies distintas"
+          ],
+          "correcta": 0,
+          "explicacion": "La mitosis produce copias."
+        },
+        {
+          "id": "pc-mi-4",
+          "enunciado": "¿De qué está hecho el huso que jala los cromosomas?",
+          "opciones": [
+            "De microtúbulos",
+            "De celulosa",
+            "De grasa"
+          ],
+          "correcta": 0,
+          "explicacion": "Son parte del citoesqueleto."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "citocinesis",
+      "titulo": "Citocinesis: partir en dos",
+      "resumen": "Animal: se estrangula. Vegetal: construye una pared en medio.",
+      "anio": 5,
+      "etiqueta": "Paso 5",
+      "nivel": "intermedio",
+      "requiere": [
+        "mitosis"
+      ],
+      "ficha": {
+        "idea": "Después de la mitosis, la citocinesis divide el citoplasma y forma dos células. En la célula animal, un anillo de microfilamentos estrangula la célula por la mitad. En la vegetal, que tiene pared rígida, se construye una placa nueva en el centro que se convierte en pared.",
+        "contexto": [
+          {
+            "titulo": "Animal: surco",
+            "texto": "Aparece un surco alrededor de la célula que se va cerrando, como una bolsa que se aprieta con un cordón."
+          },
+          {
+            "titulo": "Vegetal: placa",
+            "texto": "Vesículas del Golgi se juntan en el centro y forman la placa celular, que crece hasta las paredes laterales."
+          },
+          {
+            "titulo": "Reparto de orgánulos",
+            "texto": "Las mitocondrias y los demás orgánulos se reparten entre las dos hijas, más o menos por igual."
+          },
+          {
+            "titulo": "Cuando no ocurre",
+            "texto": "Si hay mitosis sin citocinesis, queda una célula con varios núcleos, como en algunas fibras del músculo."
+          }
+        ],
+        "evidencia": [
+          "Al microscopio, en raíz de cebolla se ve la placa celular como una línea en medio de la célula que se divide."
+        ],
+        "limites": "Mitosis y citocinesis suelen ocurrir seguidas, pero son dos procesos distintos: uno reparte el núcleo y el otro el citoplasma.",
+        "cuaderno": {
+          "facil": [
+            "La citocinesis divide el citoplasma.",
+            "Al terminar hay dos células."
+          ],
+          "media": [
+            "En la célula animal se forma un surco que estrangula la célula.",
+            "En la vegetal se forma una placa celular en el centro."
+          ],
+          "avanzada": [
+            "La placa celular se forma con vesículas del Golgi.",
+            "Si no hay citocinesis, queda una célula con varios núcleos."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué una célula vegetal no puede dividirse «apretándose» como una animal?",
+          "actividad": "Comparen en dos columnas la división animal y vegetal y relacionen la diferencia con la pared celular.",
+          "errores": [
+            "Usar mitosis y citocinesis como sinónimos.",
+            "Creer que la célula vegetal se parte igual que la animal."
+          ],
+          "minutos": 10
+        }
+      },
+      "preguntas": [
+        {
+          "id": "pc-cc-1",
+          "enunciado": "¿Qué se divide en la citocinesis?",
+          "opciones": [
+            "El citoplasma",
+            "Solo el núcleo",
+            "El ADN"
+          ],
+          "correcta": 0,
+          "explicacion": "El núcleo se dividió antes, en la mitosis."
+        },
+        {
+          "id": "pc-cc-2",
+          "enunciado": "¿Cómo se divide una célula vegetal?",
+          "opciones": [
+            "Forma una placa celular en el centro",
+            "Se estrangula con un surco",
+            "No se divide nunca"
+          ],
+          "correcta": 0,
+          "explicacion": "Su pared rígida no le permite estrangularse."
+        },
+        {
+          "id": "pc-cc-3",
+          "enunciado": "¿Qué queda si hay mitosis pero no citocinesis?",
+          "opciones": [
+            "Una célula con varios núcleos",
+            "Dos células sin núcleo",
+            "Una bacteria"
+          ],
+          "correcta": 0,
+          "explicacion": "Así son algunas fibras del músculo."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "control-cancer",
+      "titulo": "Control del ciclo y cáncer",
+      "resumen": "Frenos que revisan el ciclo, y qué pasa cuando fallan.",
+      "anio": 6,
+      "etiqueta": "Paso 6",
+      "nivel": "avanzado",
+      "requiere": [
+        "mitosis"
+      ],
+      "ficha": {
+        "idea": "El ciclo celular tiene puntos de control: momentos en los que la célula revisa si su ADN está bien copiado y si es el momento de dividirse. Si algo falla, el ciclo se detiene. El cáncer aparece cuando las células pierden esos frenos y se dividen sin control.",
+        "contexto": [
+          {
+            "titulo": "Puntos de control",
+            "texto": "Hay revisiones al final de G1, al final de G2 y en la metafase. Funcionan como semáforos."
+          },
+          {
+            "titulo": "Si el daño no tiene arreglo",
+            "texto": "La célula puede activar su propia muerte programada (apoptosis) en vez de dividirse con errores."
+          },
+          {
+            "titulo": "Tumores",
+            "texto": "Las células que se dividen sin control forman una masa. Si invade otros tejidos y se extiende, es un tumor maligno."
+          },
+          {
+            "titulo": "Factores de riesgo",
+            "texto": "El humo del tabaco y el exceso de sol dañan el ADN y aumentan el riesgo de que fallen los frenos."
+          }
+        ],
+        "evidencia": [
+          "Muchos medicamentos contra el cáncer actúan frenando la división celular, por eso afectan también al pelo y a otras células que se dividen rápido."
+        ],
+        "limites": "No todo tumor es cáncer: algunos son benignos y no invaden otros tejidos. Y el cáncer no es una sola enfermedad, sino muchas.",
+        "cuaderno": {
+          "facil": [
+            "El ciclo celular tiene frenos que lo controlan.",
+            "El cáncer es división celular sin control."
+          ],
+          "media": [
+            "Los puntos de control revisan que el ADN esté bien.",
+            "Si el daño no se arregla, la célula puede morir a propósito (apoptosis)."
+          ],
+          "avanzada": [
+            "Hay puntos de control en G1, en G2 y en la metafase.",
+            "El tabaco y el exceso de sol dañan el ADN.",
+            "No todo tumor es maligno."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Qué pasaría en un cruce de calles sin semáforos?",
+          "actividad": "Relacionen los puntos de control con semáforos y discutan medidas para cuidar el ADN: protector solar, no fumar.",
+          "errores": [
+            "Creer que el cáncer es contagioso.",
+            "Pensar que todo tumor es cáncer."
+          ],
+          "minutos": 15
+        }
+      },
+      "preguntas": [
+        {
+          "id": "pc-cn-1",
+          "enunciado": "¿Qué hacen los puntos de control del ciclo?",
+          "opciones": [
+            "Revisan que todo esté bien antes de seguir",
+            "Copian el ADN",
+            "Fabrican la pared celular"
+          ],
+          "correcta": 0,
+          "explicacion": "Funcionan como semáforos."
+        },
+        {
+          "id": "pc-cn-2",
+          "enunciado": "¿Qué es el cáncer?",
+          "opciones": [
+            "Células que se dividen sin control",
+            "Una infección por bacterias",
+            "Falta de células"
+          ],
+          "correcta": 0,
+          "explicacion": "Las células pierden sus frenos."
+        },
+        {
+          "id": "pc-cn-3",
+          "enunciado": "¿Qué puede hacer una célula con su ADN muy dañado?",
+          "opciones": [
+            "Activar su muerte programada (apoptosis)",
+            "Dividirse más rápido",
+            "Convertirse en otra especie"
+          ],
+          "correcta": 0,
+          "explicacion": "Así evita pasar el daño a sus hijas."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}
