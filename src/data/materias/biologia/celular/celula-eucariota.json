@@ -650,7 +650,7 @@
         },
         "docente": {
           "abrir": "Si la célula es una ciudad, ¿dónde se guardan los planos?",
-          "actividad": "Con el explorador, pidan que señalen el núcleo en la célula animal y la vegetal, y comparen su posición.",
+          "actividad": "Con el explorador, pidan que señalen el núcleo en la célula animal y la vegetal, y comparen su posición. Usen el diagrama propio del paso para seguir el proceso de principio a fin.",
           "errores": [
             "Pensar que el núcleo es «el cerebro» que piensa.",
             "Creer que el núcleo es una bolsa sin aberturas.",
@@ -742,7 +742,7 @@
           "recurso": "celula-nucleo"
         }
       ],
-      "diagrama": "explorador-celula",
+      "diagrama": "nucleo-receta",
       "preguntas": [
         {
           "id": "ce-nu-1",
@@ -1350,7 +1350,7 @@
         },
         "docente": {
           "abrir": "¿De dónde saca su alimento una planta?",
-          "actividad": "Con «Cloroplasto y mitocondria» en «Los dos juntos», sigan el recorrido del oxígeno y la glucosa.",
+          "actividad": "Con «Cloroplasto y mitocondria» en «Los dos juntos», sigan el recorrido del oxígeno y la glucosa. Usen el diagrama propio del paso para seguir el proceso de principio a fin.",
           "errores": [
             "Creer que las plantas no respiran.",
             "Pensar que todas las células vegetales son verdes.",
@@ -1432,7 +1432,7 @@
           "recurso": "celula-vegetal-rotulada"
         }
       ],
-      "diagrama": "energia-celular",
+      "diagrama": "cloroplasto-fotosintesis",
       "preguntas": [
         {
           "id": "ce-cl-1",
@@ -1531,7 +1531,7 @@
         },
         "docente": {
           "abrir": "¿Qué hace una ciudad con su basura?",
-          "actividad": "Con «¿Quién lo hace?», que respondan qué orgánulo digiere y recicla, y por qué conviene que sus enzimas estén encerradas.",
+          "actividad": "Con «¿Quién lo hace?», que respondan qué orgánulo digiere y recicla, y por qué conviene que sus enzimas estén encerradas. Usen el diagrama propio del paso para seguir el proceso de principio a fin.",
           "errores": [
             "Creer que los lisosomas «matan» a la célula.",
             "Pensar que el lisosoma fabrica proteínas."
@@ -1592,7 +1592,7 @@
           "recurso": "celula-lisosoma"
         }
       ],
-      "diagrama": "celula-quien-hace",
+      "diagrama": "lisosoma-digiere",
       "preguntas": [
         {
           "id": "ce-li-1",
