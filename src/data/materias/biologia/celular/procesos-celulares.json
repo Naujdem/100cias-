@@ -211,7 +211,113 @@
           "explicacion": "Primero mitosis, después citocinesis."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "diapositivas": [
+        {
+          "titulo": "El reloj de la célula",
+          "visual": {
+            "tipo": "escena",
+            "id": "ciclo",
+            "fases": [
+              {
+                "id": "g1",
+                "nombre": "G1: crecer",
+                "texto": "La célula recién nacida crece, fabrica proteínas y hace su trabajo de siempre.",
+                "marcas": [
+                  {
+                    "x": 110,
+                    "y": 40,
+                    "texto": "Es la etapa más larga en la mayoría de las células."
+                  }
+                ]
+              },
+              {
+                "id": "g0",
+                "nombre": "G0: reposo",
+                "texto": "Algunas células salen del ciclo y dejan de dividirse, como muchas neuronas.",
+                "nivel": "intermedio",
+                "marcas": [
+                  {
+                    "x": 352,
+                    "y": 60,
+                    "texto": "G0 es una salida: la célula sigue viva y trabajando, pero no se divide."
+                  }
+                ]
+              },
+              {
+                "id": "s",
+                "nombre": "S: copiar el ADN",
+                "texto": "La célula copia todo su ADN. Al terminar, tiene dos copias de cada cromosoma.",
+                "nota": "«S» de síntesis: se fabrica ADN nuevo.",
+                "marcas": [
+                  {
+                    "x": 40,
+                    "y": 60,
+                    "texto": "La línea más clara es la copia nueva del ADN."
+                  }
+                ]
+              },
+              {
+                "id": "g2",
+                "nombre": "G2: prepararse",
+                "texto": "Sigue creciendo, duplica sus orgánulos y revisa que la copia del ADN esté bien.",
+                "marcas": [
+                  {
+                    "x": 155,
+                    "y": 80,
+                    "texto": "Aparecen mitocondrias nuevas: cada hija necesitará las suyas."
+                  }
+                ]
+              },
+              {
+                "id": "m",
+                "nombre": "M: dividirse",
+                "texto": "Primero la mitosis reparte el núcleo y luego la citocinesis parte el citoplasma: dos células hijas.",
+                "nota": "Y cada hija empieza su propio ciclo en G1.",
+                "marcas": [
+                  {
+                    "x": 300,
+                    "y": 50,
+                    "texto": "La fase M es la parte más corta del ciclo."
+                  }
+                ]
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Mitosis paso a paso",
+            "tema": "procesos-celulares",
+            "bloque": "mitosis"
+          }
+        },
+        {
+          "titulo": "Casi siempre en interfase",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "⏱️",
+            "valor": "≈ 90 %",
+            "texto": "del ciclo la célula está en interfase (G1 + S + G2)"
+          },
+          "puntos": [
+            "Por eso al microscopio casi todas parecen «quietas»"
+          ]
+        },
+        {
+          "titulo": "¿En qué etapa?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿En qué etapa del ciclo la célula copia su ADN?",
+            "opciones": [
+              "G1",
+              "S",
+              "G2",
+              "M"
+            ],
+            "correcta": 1,
+            "explicacion": "En la etapa S (síntesis) se copia todo el ADN; G1 y G2 son de crecimiento y preparación."
+          }
+        }
+      ]
     },
     {
       "id": "cromosomas",
@@ -706,7 +812,99 @@
           "explicacion": "Así son algunas fibras del músculo."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "diapositivas": [
+        {
+          "titulo": "Partir en dos",
+          "visual": {
+            "tipo": "escena",
+            "id": "citocinesis",
+            "fases": [
+              {
+                "id": "inicio",
+                "nombre": "Al final de la mitosis",
+                "texto": "Ya hay dos núcleos, pero todavía es una sola célula.",
+                "marcas": [
+                  {
+                    "x": 200,
+                    "y": 72,
+                    "texto": "Falta repartir el citoplasma y los orgánulos."
+                  }
+                ]
+              },
+              {
+                "id": "surco",
+                "nombre": "Animal: el surco",
+                "texto": "Un anillo de microfilamentos se aprieta en el centro, como el cordón de una bolsa.",
+                "marcas": [
+                  {
+                    "x": 222,
+                    "y": 140,
+                    "texto": "El anillo contráctil es parte del citoesqueleto."
+                  }
+                ]
+              },
+              {
+                "id": "separadas",
+                "nombre": "Animal: dos células",
+                "texto": "El anillo se cierra del todo y quedan dos células hijas."
+              },
+              {
+                "id": "vegetal-inicio",
+                "nombre": "Vegetal: no se puede apretar",
+                "texto": "La célula vegetal tiene pared rígida: no puede estrangularse.",
+                "marcas": [
+                  {
+                    "x": 44,
+                    "y": 90,
+                    "texto": "La pared de celulosa no se dobla como una membrana."
+                  }
+                ]
+              },
+              {
+                "id": "vegetal-placa",
+                "nombre": "Vegetal: la placa",
+                "texto": "Vesículas del Golgi viajan al centro y se juntan en una placa.",
+                "marcas": [
+                  {
+                    "x": 222,
+                    "y": 90,
+                    "texto": "Cada bolita es una vesícula con material para la pared."
+                  }
+                ]
+              },
+              {
+                "id": "vegetal-pared",
+                "nombre": "Vegetal: pared nueva",
+                "texto": "La placa crece hasta tocar los lados y se convierte en una pared nueva.",
+                "nota": "Las dos hijas quedan pegadas, una al lado de la otra."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Dos formas de partir",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "🎒",
+              "titulo": "Animal",
+              "puntos": [
+                "Un anillo estrangula la célula",
+                "De afuera hacia adentro"
+              ]
+            },
+            "der": {
+              "icono": "🧱",
+              "titulo": "Vegetal",
+              "puntos": [
+                "Se construye una placa",
+                "De adentro hacia afuera"
+              ]
+            }
+          }
+        }
+      ]
     },
     {
       "id": "control-cancer",
