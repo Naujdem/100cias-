@@ -19,7 +19,7 @@
   ],
   "fuentes": [
     "Plan de área del colegio (solo guía)",
-    "BORRADOR: esqueleto redactado como punto de partida; verificar cada bloque antes de marcarlo como revisado. A verificar: 90 % del ciclo en interfase; renovación del intestino en pocos días; 78 cromosomas del perro y 48 de la papa; puntos de control en G1, G2 y metafase."
+    "BORRADOR: esqueleto redactado como punto de partida; verificar cada bloque antes de marcarlo como revisado. A verificar: 90 % del ciclo en interfase; renovación del intestino en pocos días; 78 cromosomas del perro y 48 de la papa; puntos de control en G1, G2 y metafase; ADN de una célula humana estirado ≈ 2 m; proporciones del ciclo (G1 40 %, S 35 %, G2 15 %, M 10 %)."
   ],
   "bloques": [
     {
@@ -175,6 +175,7 @@
           "minutos": 10
         }
       },
+      "diagrama": "ciclo-reloj",
       "preguntas": [
         {
           "id": "pc-ci-1",
@@ -271,6 +272,7 @@
           "minutos": 10
         }
       },
+      "diagrama": "cromosoma-compacta",
       "preguntas": [
         {
           "id": "pc-cr-1",
@@ -476,6 +478,7 @@
           "minutos": 10
         }
       },
+      "diagrama": "citocinesis",
       "preguntas": [
         {
           "id": "pc-cc-1",
@@ -572,6 +575,7 @@
           "minutos": 15
         }
       },
+      "diagrama": "semaforos-ciclo",
       "preguntas": [
         {
           "id": "pc-cn-1",
