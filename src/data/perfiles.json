@@ -35,6 +35,11 @@
         "nucleo",
         "mitocondrias",
         "cloroplastos"
+      ],
+      "procesos-celulares": [
+        "por-que-dividirse",
+        "ciclo-celular",
+        "mitosis"
       ]
     },
     "nivelDibujo": "basico",
@@ -43,7 +48,8 @@
       "niveles-organizacion": "Seis niveles: de los orgánulos al organismo.",
       "unicelulares-pluricelulares": "Tres pasos: unicelulares, pluricelulares y la división del trabajo.",
       "tipos-de-celulas": "Tres pasos: procariota o eucariota, animal o vegetal, y los virus.",
-      "celula-eucariota": "Cinco pasos: membrana, citoplasma, núcleo, mitocondrias y cloroplastos."
+      "celula-eucariota": "Cinco pasos: membrana, citoplasma, núcleo, mitocondrias y cloroplastos.",
+      "procesos-celulares": "Tres pasos: por qué se dividen, el ciclo y la mitosis."
     }
   },
   {
@@ -95,6 +101,13 @@
         "cloroplastos",
         "lisosomas",
         "pared-matriz"
+      ],
+      "procesos-celulares": [
+        "por-que-dividirse",
+        "ciclo-celular",
+        "cromosomas",
+        "mitosis",
+        "citocinesis"
       ]
     },
     "nivelDibujo": "intermedio",
@@ -103,7 +116,8 @@
       "niveles-organizacion": "Ocho niveles: suma las moléculas y las macromoléculas.",
       "unicelulares-pluricelulares": "Cinco pasos: suma las colonias y las ventajas y costos de ser pluricelular.",
       "tipos-de-celulas": "Seis pasos: suma bacterias y arqueas, los grupos eucariotas y las células especializadas.",
-      "celula-eucariota": "Diez pasos: suma citoesqueleto, ribosomas, la ruta de las proteínas, lisosomas y pared y matriz."
+      "celula-eucariota": "Diez pasos: suma citoesqueleto, ribosomas, la ruta de las proteínas, lisosomas y pared y matriz.",
+      "procesos-celulares": "Cinco pasos: suma cromosomas y citocinesis."
     }
   },
   {
@@ -162,6 +176,14 @@
         "peroxisomas",
         "pared-matriz",
         "celula-completa"
+      ],
+      "procesos-celulares": [
+        "por-que-dividirse",
+        "ciclo-celular",
+        "cromosomas",
+        "mitosis",
+        "citocinesis",
+        "control-cancer"
       ]
     },
     "nivelDibujo": "avanzado",
@@ -170,7 +192,8 @@
       "niveles-organizacion": "Diez niveles: de los átomos a más allá del organismo.",
       "unicelulares-pluricelulares": "Seis pasos: suma el origen de la pluricelularidad.",
       "tipos-de-celulas": "Todo el contenido: los seis pasos, con el detalle de los cuadernos avanzados.",
-      "celula-eucariota": "Todo el contenido: doce pasos, con peroxisomas y la célula completa."
+      "celula-eucariota": "Todo el contenido: doce pasos, con peroxisomas y la célula completa.",
+      "procesos-celulares": "Todo el contenido: seis pasos, con control del ciclo y cáncer."
     }
   }
 ]

@@ -236,3 +236,10 @@ Hooke usa la reconstrucción de Rita Greer (2004, Free Art License, Wikimedia Co
 - Minijuegos para los pasos sin «Juega»: mitocondrias (primero: aún usa el diagrama compartido *energia-celular*), citoplasma, citoesqueleto, núcleo, ribosomas, lisosomas, peroxisomas y pared y matriz.
 - Revisar textos y datos de los pasos nuevos (`VERIFICAR.md`).
 - Se pasa al siguiente tema del área 1.
+
+## Tema 4 · Subtema 4.1 «Ciclo celular y mitosis» (14 nov, esqueleto)
+- `procesos-celulares.json` (id `procesos-celulares`, así los atajos de 1.3 se activan solos), vista *Ruta*. Seis pasos: por qué se dividen, ciclo celular, cromosomas, mitosis, citocinesis, control del ciclo y cáncer. Cada uno con ficha (idea, 4 datos, evidencia, límites), cuaderno, docente y 3–4 preguntas; las láminas se arman solas desde la ficha.
+- Diagramas: «por qué se dividen» y «mitosis» reutilizan *division-celular* del 1.1; los demás aún sin diagrama.
+- Perfiles: 6° (por qué, ciclo, mitosis), 9° (suma cromosomas y citocinesis), 11° (todo).
+- Se quitó «4 Procesos celulares» de los próximos en `catalogo.ts`.
+- Siguiente: que JuanMed revise el esqueleto; después, diagramas (ciclo como reloj, cromosoma que se compacta, citocinesis animal y vegetal, semáforos del ciclo) y un minijuego (ordenar fases o identificarlas en fotos de raíz de cebolla).
