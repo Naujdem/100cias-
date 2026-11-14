@@ -251,3 +251,12 @@ Hooke usa la reconstrucción de Rita Greer (2004, Free Art License, Wikimedia Co
 
 ## Diapositivas: botón «Interactuar» (14 nov)
 - En `Presentacion.tsx`, la imagen fija de cada lámina (`Figura`) tiene un botón «✋ Interactuar (I)» si el paso tiene diagrama: cambia la imagen por el interactivo a todo el ancho, en la misma diapositiva; «Volver a la lámina» o la tecla I la regresa. Con el interactivo abierto, ← → mueven el diagrama (no cambian de diapositiva). Vale para todos los temas sin tocar los JSON. La sección «Actividades» del final se conserva.
+
+## Tema 4 · Subtema 4.2 «Meiosis y reproducción sexual» (14 nov)
+- `meiosis.json` (id `meiosis`, orden 7, vista *Ruta*). Seis pasos: diploides y haploides, por qué hace falta la meiosis, meiosis I, meiosis II, por qué los hermanos no son iguales, mitosis vs meiosis. Cada uno con ficha, cuaderno, docente y 3 preguntas.
+- Dibujo nuevo `ilustraciones/CelulaMeiosis.tsx`: 8 etapas, 2 pares (azul largo, naranja corto; oscuro = madre, claro = padre), con opción de entrecruzamiento y de voltear pares en la metafase I.
+- Diagramas (`diagramas/Meiosis.tsx`): `pares-homologos`, `cuenta-cromosomas` (¿y si los gametos se hicieran por mitosis?), `meiosis-pasos` / `meiosis-ii` (deslizador de 8 pasos), `variedad-gametos` (voltear pares + entrecruzamiento → 4 gametos), `mitosis-meiosis` (tabla y resultado final).
+- Minijuego `MeiosisJuego.tsx`: *¿Mitosis o meiosis?* (10 casos de un banco de 14, teclas 1–3, repaso de fallos, mejor marca en `cien:meiosis-mejor`) en el paso de comparación, y *Ordena la meiosis* (8 dibujos) en meiosis II.
+- Perfiles: 6° (diploide-haploide, por qué, comparación), 9° (suma meiosis I y II), 11° (todo).
+- Todo en borrador; datos por verificar en `fuentes` del JSON. Detalle menor: en la metafase II el cruce se ve a un lado del cromosoma y en la anafase II abajo (esquema).
+- Siguiente del tema 4: 4.3 muerte celular, metabolismo básico, comunicación y adhesión (falta decidir dónde va la síntesis de proteínas).
