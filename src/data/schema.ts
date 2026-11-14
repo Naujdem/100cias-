@@ -103,6 +103,23 @@ export type Visual =
   | { tipo: 'pregunta'; enunciado: string; opciones: string[]; correcta: number; explicacion: string }
   /** un diagrama interactivo ya registrado (components/diagramas) */
   | { tipo: 'diagrama'; id: string }
+  /**
+   * escena viva (components/escenas): el mismo dibujo se transforma fase a fase con → o tocando el nombre.
+   * Cada fase puede tener «+» (`marcas`, en coordenadas del dibujo 400×300) que abren un recuadro ahí mismo.
+   */
+  | { tipo: 'escena'; id: string; fases: FaseEscena[] }
+
+export interface FaseEscena {
+  /** id que entiende el dibujo (p. ej. «metafase») */
+  id: string
+  nombre: string
+  texto: string
+  /** truco o dato corto que acompaña la fase */
+  nota?: string
+  marcas?: { x: number; y: number; texto: string }[]
+  /** solo aparece si el grado elegido llega a este nivel */
+  nivel?: Nivel
+}
 
 /**
  * Una lámina de la presentación: una sola idea, poco texto y algo visual.

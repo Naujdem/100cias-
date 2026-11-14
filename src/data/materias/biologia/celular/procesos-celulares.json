@@ -436,117 +436,111 @@
           }
         },
         {
-          "titulo": "Antes de empezar, el ADN ya está copiado",
+          "titulo": "La mitosis, fase a fase",
           "visual": {
-            "tipo": "ilustracion",
-            "recurso": "celula-interfase",
-            "pie": "Interfase: el ADN está suelto dentro del núcleo"
-          },
-          "puntos": [
-            "En la interfase la célula copió su ADN",
-            "Todavía no se ven los cromosomas"
-          ],
-          "atajo": {
-            "texto": "El ciclo celular",
-            "tema": "procesos-celulares",
-            "bloque": "ciclo-celular"
-          }
-        },
-        {
-          "titulo": "La mitosis en cuatro fases",
-          "visual": {
-            "tipo": "tarjetas",
-            "items": [
+            "tipo": "escena",
+            "id": "mitosis",
+            "fases": [
               {
-                "icono": "🧶",
-                "titulo": "Profase",
-                "texto": "Aparecen los cromosomas"
+                "id": "interfase",
+                "nombre": "Interfase",
+                "texto": "Antes de dividirse, la célula copia su ADN. Todavía está suelto: no se ven cromosomas.",
+                "nota": "La interfase no es parte de la mitosis: es la preparación.",
+                "marcas": [
+                  {
+                    "x": 246,
+                    "y": 110,
+                    "texto": "El ADN está suelto como hilos dentro del núcleo. En esta etapa se copia."
+                  }
+                ]
               },
               {
-                "icono": "➖",
-                "titulo": "Metafase",
-                "texto": "Se alinean en el centro"
+                "id": "profase",
+                "nombre": "Profase",
+                "texto": "El ADN se enrolla y aparecen los cromosomas con forma de X. El núcleo empieza a deshacerse.",
+                "marcas": [
+                  {
+                    "x": 176,
+                    "y": 124,
+                    "texto": "Cada X es un cromosoma duplicado: dos cromátidas hermanas unidas por el centro."
+                  },
+                  {
+                    "x": 262,
+                    "y": 104,
+                    "texto": "La envoltura del núcleo se está deshaciendo."
+                  }
+                ]
               },
               {
-                "icono": "↔️",
-                "titulo": "Anafase",
-                "texto": "Se separan"
+                "id": "prometafase",
+                "nombre": "Prometafase",
+                "nivel": "avanzado",
+                "texto": "El núcleo termina de romperse y las fibras del huso se enganchan a cada cromosoma.",
+                "nota": "Muchos libros la cuentan como una quinta fase; otros la incluyen en la profase.",
+                "marcas": [
+                  {
+                    "x": 92,
+                    "y": 150,
+                    "texto": "Desde cada polo salen fibras de microtúbulos: el huso."
+                  },
+                  {
+                    "x": 220,
+                    "y": 116,
+                    "texto": "El huso se engancha en el cinetocoro, el punto negro del centro de la X."
+                  }
+                ]
               },
               {
-                "icono": "⚪⚪",
-                "titulo": "Telofase",
-                "texto": "Se forman dos núcleos"
+                "id": "metafase",
+                "nombre": "Metafase",
+                "texto": "Los cromosomas se alinean en el centro de la célula, sujetos por el huso desde los dos lados.",
+                "nota": "Truco: «meta» → en medio.",
+                "marcas": [
+                  {
+                    "x": 226,
+                    "y": 150,
+                    "texto": "Todos en fila en el centro (el ecuador de la célula)."
+                  },
+                  {
+                    "x": 92,
+                    "y": 150,
+                    "texto": "El huso, hecho de microtúbulos del citoesqueleto, sujeta cada cromosoma."
+                  }
+                ]
+              },
+              {
+                "id": "anafase",
+                "nombre": "Anafase",
+                "texto": "Las cromátidas hermanas se separan y el huso las jala hacia extremos opuestos.",
+                "nota": "Truco: «ana» → aparte.",
+                "marcas": [
+                  {
+                    "x": 200,
+                    "y": 62,
+                    "texto": "Cada lado recibe una copia de cada cromosoma: azul largo, azul corto… nada se pierde."
+                  }
+                ]
+              },
+              {
+                "id": "telofase",
+                "nombre": "Telofase",
+                "texto": "Se forma un núcleo nuevo en cada extremo y la célula se parte en dos.",
+                "nota": "Las fases tienen nombre para estudiarlas, pero en la célula todo pasa de forma continua.",
+                "marcas": [
+                  {
+                    "x": 200,
+                    "y": 150,
+                    "texto": "Aquí la membrana se estrangula y parte el citoplasma: es la citocinesis."
+                  },
+                  {
+                    "x": 112,
+                    "y": 102,
+                    "texto": "Un núcleo nuevo con la misma información que la célula madre."
+                  }
+                ]
               }
             ]
-          }
-        },
-        {
-          "titulo": "1. Profase: aparecen los cromosomas",
-          "visual": {
-            "tipo": "ilustracion",
-            "recurso": "celula-profase",
-            "pie": "El ADN se enrolla y el núcleo se deshace"
           },
-          "puntos": [
-            "El ADN se enrolla y se vuelve visible",
-            "La envoltura del núcleo se deshace",
-            "Empieza a formarse el huso"
-          ]
-        },
-        {
-          "titulo": "Prometafase: el huso se engancha",
-          "nivel": "avanzado",
-          "visual": {
-            "tipo": "ilustracion",
-            "recurso": "celula-prometafase",
-            "pie": "Restos de la envoltura nuclear y fibras del huso buscando los cromosomas"
-          },
-          "puntos": [
-            "La envoltura del núcleo termina de romperse",
-            "El huso se engancha a cada cromosoma en el cinetocoro",
-            "Los cromosomas empiezan a moverse hacia el centro"
-          ],
-          "nota": "Muchos libros la cuentan como una quinta fase; otros la incluyen en la profase."
-        },
-        {
-          "titulo": "2. Metafase: todos al centro",
-          "visual": {
-            "tipo": "ilustracion",
-            "recurso": "celula-metafase",
-            "pie": "Los cromosomas en fila, enganchados al huso"
-          },
-          "puntos": [
-            "Los cromosomas se alinean en el centro",
-            "El huso los sujeta desde los dos lados"
-          ],
-          "nota": "Truco: «meta» → en medio."
-        },
-        {
-          "titulo": "3. Anafase: se separan",
-          "visual": {
-            "tipo": "ilustracion",
-            "recurso": "celula-anafase",
-            "pie": "Cada cromátida viaja a un extremo"
-          },
-          "puntos": [
-            "Las cromátidas hermanas se separan",
-            "El huso las jala a extremos opuestos",
-            "Cada lado recibe una copia de cada cromosoma"
-          ],
-          "nota": "Truco: «ana» → aparte."
-        },
-        {
-          "titulo": "4. Telofase: dos núcleos nuevos",
-          "visual": {
-            "tipo": "ilustracion",
-            "recurso": "celula-telofase",
-            "pie": "Un núcleo en cada extremo; la célula se parte"
-          },
-          "puntos": [
-            "Se forma un núcleo nuevo en cada extremo",
-            "Los cromosomas se vuelven a soltar",
-            "La citocinesis termina de partir la célula"
-          ],
           "atajo": {
             "texto": "Citocinesis",
             "tema": "procesos-celulares",
@@ -599,17 +593,6 @@
           },
           "puntos": [
             "Las hijas tienen la misma información que la madre"
-          ]
-        },
-        {
-          "titulo": "Una película, no cuatro fotos",
-          "visual": {
-            "tipo": "diagrama",
-            "id": "division-celular"
-          },
-          "puntos": [
-            "Las fases tienen nombre para estudiarlas",
-            "En la célula todo pasa de forma continua"
           ]
         },
         {

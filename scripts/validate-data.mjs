@@ -50,9 +50,10 @@ for (const f of archivos(join(raiz, 'materias'))) {
       for (const p of l.puntos ?? []) if (p.length > 60) err(`${c}: punto largo (${p.length} car.): ${p}`)
       const v = l.visual
       if (!v) err(`${c}: sin visual`)
-      else if (!['ilustracion', 'cifra', 'tarjetas', 'compara', 'pregunta', 'diagrama'].includes(v.tipo)) err(`${c}: visual desconocido ${v.tipo}`)
+      else if (!['ilustracion', 'cifra', 'tarjetas', 'compara', 'pregunta', 'diagrama', 'escena'].includes(v.tipo)) err(`${c}: visual desconocido ${v.tipo}`)
       else if (v.tipo === 'ilustracion' && !ilustraciones.has(v.recurso)) err(`${c}: ilustración «${v.recurso}» no registrada`)
       else if (v.tipo === 'pregunta' && !(v.correcta >= 0 && v.correcta < v.opciones.length)) err(`${c}: pregunta con correcta fuera de rango`)
+      else if (v.tipo === 'escena' && !(v.fases?.length >= 2 && v.fases.every((f) => f.id && f.nombre && f.texto))) err(`${c}: escena con fases incompletas`)
       else if (v.tipo === 'tarjetas' && (v.items.length < 2 || v.items.length > 6)) err(`${c}: tarjetas debe tener entre 2 y 6`)
       if (l.atajo && !l.atajo.tema) err(`${c}: atajo sin tema`)
     }

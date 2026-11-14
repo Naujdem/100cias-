@@ -4,18 +4,28 @@ import type { Lamina, Visual } from '../data/schema.ts'
 import { ILUSTRACIONES_SVG } from './ilustraciones/index.ts'
 import { DIAGRAMAS } from './diagramas/index.tsx'
 import { useAtajos } from '../lib/atajos.ts'
+import { ESCENAS } from './escenas/index.ts'
 
 // Una lámina de la presentación: una idea, poco texto, siempre algo para mirar o hacer.
 // `paso` es cuántas cosas ya se revelaron con → (primero las del visual, luego los puntos).
 
-const pasosVisual = (v?: Visual) => (v?.tipo === 'tarjetas' ? v.items.length : v?.tipo === 'compara' ? 2 : 0)
+const pasosVisual = (v?: Visual) => (v?.tipo === 'tarjetas' ? v.items.length : v?.tipo === 'compara' ? 2 : v?.tipo === 'escena' ? v.fases.length - 1 : 0)
 
 /** Aparece con una pequeña animación cuando le toca; mientras tanto ocupa su sitio para que nada salte. */
 const aparece = (visible: boolean) =>
   `transition duration-500 ease-out ${visible ? 'translate-y-0 scale-100 opacity-100' : 'pointer-events-none translate-y-3 scale-95 opacity-0'}`
 
-export default function LaminaVista({ lamina: l, paso, onAtajo }: { lamina: Lamina; paso: number; onAtajo: (tema: string, bloque?: string) => void }) {
+export default function LaminaVista({ lamina: l, paso, onAtajo, onPaso }: { lamina: Lamina; paso: number; onAtajo: (tema: string, bloque?: string) => void; onPaso?: (n: number) => void }) {
   const v = l.visual
+  if (v?.tipo === 'escena') {
+    return (
+      <div>
+        <h2 className="text-3xl font-extrabold leading-tight sm:text-4xl">{l.titulo}</h2>
+        <div className="mt-4"><EscenaVista v={v} fase={Math.min(paso, v.fases.length - 1)} onFase={onPaso} /></div>
+        {l.atajo && <Atajo atajo={l.atajo} onIr={onAtajo} />}
+      </div>
+    )
+  }
   const nv = pasosVisual(v)
   const visibleVisual = Math.min(paso, nv)
   const puntosVisibles = Math.max(0, paso - nv)
@@ -247,6 +257,65 @@ function PreguntaRapida({ v }: { v: Extract<Visual, { tipo: 'pregunta' }> }) {
             {v.explicacion}
           </p>
         )}
+      </div>
+    </div>
+  )
+}
+
+/** Escena viva: el dibujo se queda y cambia de fase; los «+» abren un recuadro dentro de la misma lámina. */
+function EscenaVista({ v, fase, onFase }: { v: Extract<Visual, { tipo: 'escena' }>; fase: number; onFase?: (n: number) => void }) {
+  const Dibujo = ESCENAS[v.id]
+  const f = v.fases[fase]
+  const [abierta, setAbierta] = useState<number | null>(null)
+  useEffect(() => setAbierta(null), [fase])
+  if (!Dibujo || !f) return null
+  const marca = abierta !== null ? f.marcas?.[abierta] : undefined
+  return (
+    <div data-escena>
+      <nav aria-label="Fases" className="mb-4 flex flex-wrap gap-2">
+        {v.fases.map((x, k) => (
+          <button
+            key={x.id}
+            type="button"
+            aria-current={k === fase ? 'step' : undefined}
+            onClick={() => onFase?.(k)}
+            className={`min-h-10 rounded-full border px-4 text-sm font-bold transition-colors ${
+              k === fase ? 'border-[var(--acento)] bg-[var(--acento)] text-[var(--fondo)]' : k < fase ? 'border-[var(--acento)] text-[var(--acento)]' : 'border-[var(--linea)] text-[var(--suave)]'
+            }`}
+          >
+            {x.nombre}
+          </button>
+        ))}
+      </nav>
+      <div className="grid items-center gap-5 md:grid-cols-[1.25fr_1fr] md:gap-8">
+        <div className="relative mx-auto aspect-[4/3] max-h-[58dvh] w-full overflow-hidden rounded-2xl shadow">
+          <Dibujo fase={f.id} />
+          {f.marcas?.map((m, k) => (
+            <button
+              key={`${f.id}-${k}`}
+              type="button"
+              aria-label={`Ver detalle ${k + 1}`}
+              aria-expanded={abierta === k}
+              onClick={() => setAbierta(abierta === k ? null : k)}
+              style={{ left: `${(m.x / 400) * 100}%`, top: `${(m.y / 300) * 100}%` }}
+              className="absolute flex h-9 w-9 -translate-x-1/2 -translate-y-1/2 animate-[aparecer_0.5s_ease-out] items-center justify-center rounded-full bg-[var(--acento)] text-2xl font-bold leading-none text-white shadow ring-4 ring-white/70"
+            >
+              {abierta === k ? '×' : '+'}
+            </button>
+          ))}
+          {marca && (
+            <div role="note" className="absolute inset-x-3 bottom-3 rounded-xl border border-[var(--linea)] bg-[var(--tarjeta)] p-3 text-base shadow-lg sm:text-lg">
+              {marca.texto}
+            </div>
+          )}
+        </div>
+        <div key={f.id} className="min-w-0 animate-[aparecer_0.5s_ease-out]">
+          <p className="text-sm font-bold uppercase tracking-wide text-[var(--acento)]">Fase {fase + 1} de {v.fases.length}</p>
+          <p className="mt-1 text-4xl font-extrabold">{f.nombre}</p>
+          <p className="mt-3 text-xl sm:text-2xl">{f.texto}</p>
+          {f.nota && <p className="mt-4 rounded-xl bg-[var(--acento-suave)]/40 px-4 py-2 text-base">{f.nota}</p>}
+          {fase < v.fases.length - 1 && <p className="mt-5 hidden text-sm text-[var(--suave)] md:block">→ siguiente fase · toca los «+» del dibujo</p>}
+        </div>
       </div>
     </div>
   )

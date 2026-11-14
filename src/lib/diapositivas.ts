@@ -41,7 +41,10 @@ export function construir(bloques: Bloque[], ajustes: Pick<Ajustes, 'analogias' 
       // láminas escritas a propósito: portada, láminas, para recordar y notas del docente
       // las láminas con `nivel` solo salen si el grado elegido llega a ese nivel
       const tope = ORDEN[perfilActual().nivelDibujo]
-      const laminas = b.diapositivas.filter((l) => !l.nivel || ORDEN[l.nivel] <= tope)
+      const alcanza = (n?: Lamina['nivel']) => !n || ORDEN[n] <= tope
+      const laminas = b.diapositivas
+        .filter((l) => alcanza(l.nivel))
+        .map((l) => (l.visual?.tipo === 'escena' ? { ...l, visual: { ...l.visual, fases: l.visual.fases.filter((f) => alcanza(f.nivel)) } } : l))
       const dl: Diapositiva[] = [{ tipo: 'portada' }, ...laminas.map((lamina): Diapositiva => ({ tipo: 'lamina', lamina }))]
       if (f.cuaderno) dl.push({ tipo: 'recuerda' })
       if (ajustes.docente && f.docente) dl.push({ tipo: 'docente' })
@@ -72,6 +75,6 @@ export function construir(bloques: Bloque[], ajustes: Pick<Ajustes, 'analogias' 
 export function pasosDe(d: Diapositiva): number {
   if (d.tipo !== 'lamina') return 0
   const v = d.lamina.visual
-  const enVisual = v?.tipo === 'tarjetas' ? v.items.length : v?.tipo === 'compara' ? 2 : 0
+  const enVisual = v?.tipo === 'tarjetas' ? v.items.length : v?.tipo === 'compara' ? 2 : v?.tipo === 'escena' ? v.fases.length - 1 : 0
   return enVisual + (d.lamina.puntos?.length ?? 0)
 }
