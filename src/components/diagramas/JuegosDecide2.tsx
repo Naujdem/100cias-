@@ -239,3 +239,75 @@ export function FotoRespJuego() {
     />
   )
 }
+
+export function PartesMicroscopioJuego() {
+  return (
+    <JuegoDecide
+      titulo="¿Mecánica, óptica o iluminación?"
+      pregunta="¿A qué sistema del microscopio pertenece esta parte?"
+      instrucciones="Las partes del microscopio óptico se agrupan en tres sistemas. Clasifica cada una."
+      clave="cien:partesmicro-mejor"
+      opciones={[o('mec', 'Mecánica', '🔩'), o('opt', 'Óptica', '🔍'), o('ilu', 'Iluminación', '💡')]}
+      cartas={[
+        c('👁️', 'Ocular', 'opt', 'Es el lente por donde miras; casi siempre aumenta 10×.'),
+        c('🔭', 'Objetivos', 'opt', 'Lentes cerca de la muestra: 4×, 10×, 40× (y 100× con aceite).'),
+        c('🔄', 'Revólver', 'mec', 'Gira para cambiar de objetivo.'),
+        c('🟦', 'Platina', 'mec', 'La plataforma donde se pone la lámina.'),
+        c('📎', 'Pinzas', 'mec', 'Sujetan la lámina sobre la platina.'),
+        c('⚙️', 'Tornillo macrométrico', 'mec', 'Movimiento grueso para enfocar.'),
+        c('🪛', 'Tornillo micrométrico', 'mec', 'Movimiento fino para el enfoque final.'),
+        c('💡', 'Lámpara o espejo', 'ilu', 'Da la luz que atraviesa la muestra.'),
+        c('🔘', 'Diafragma', 'ilu', 'Regula cuánta luz llega a la muestra.'),
+        c('🔦', 'Condensador', 'ilu', 'Concentra la luz sobre la muestra.'),
+        c('🦾', 'Brazo', 'mec', 'Sostiene el tubo y por ahí se agarra el microscopio.'),
+      ]}
+      cierre="Óptica: ocular y objetivos. Iluminación: lámpara o espejo, condensador y diafragma. Mecánica: todo lo que sostiene y mueve."
+    />
+  )
+}
+
+export function AumentoJuego() {
+  return (
+    <JuegoDecide
+      titulo="¿Cuánto aumenta?"
+      pregunta="¿Cuál es el aumento total?"
+      instrucciones="El aumento total es el aumento del ocular por el del objetivo. Calcula rápido."
+      clave="cien:aumento-mejor"
+      opciones={[o('40', '40×', '🔹'), o('100', '100×', '🔷'), o('400', '400×', '🔶'), o('1000', '1000×', '🟠')]}
+      cartas={[
+        c('🔍', 'Ocular 10× y objetivo 4×', '40', '10 × 4 = 40 veces.'),
+        c('🔍', 'Ocular 10× y objetivo 10×', '100', '10 × 10 = 100 veces.'),
+        c('🔍', 'Ocular 10× y objetivo 40×', '400', '10 × 40 = 400 veces.'),
+        c('💧', 'Ocular 10× y objetivo 100× con aceite', '1000', '10 × 100 = 1000 veces: necesita aceite de inmersión.'),
+        c('🔍', 'Ocular 5× y objetivo 20×', '100', '5 × 20 = 100 veces.'),
+        c('🔍', 'Ocular 20× y objetivo 20×', '400', '20 × 20 = 400 veces.'),
+        c('🔍', 'Ocular 10× y el objetivo más pequeño', '40', 'El más pequeño suele ser 4×: 40 veces.'),
+        c('🔍', 'Ocular 25× y objetivo 40×', '1000', '25 × 40 = 1000 veces.'),
+      ]}
+      cierre="Aumento total = ocular × objetivo. Con el ocular de 10×: 40×, 100×, 400× y 1000×."
+    />
+  )
+}
+
+export function OpticoElectronicoJuego() {
+  return (
+    <JuegoDecide
+      titulo="¿Óptico o electrónico?"
+      pregunta="¿Con qué microscopio se puede ver o hacer esto?"
+      instrucciones="Los dos sirven, pero no para lo mismo. Decide."
+      clave="cien:optelec-mejor"
+      opciones={[o('opt', 'Óptico', '💡'), o('ele', 'Electrónico', '⚡')]}
+      cartas={[
+        c('🧅', 'Ver las células de la piel de cebolla', 'opt', 'Las células y su núcleo se ven bien con luz.'),
+        c('⚫', 'Ver ribosomas', 'ele', 'Son demasiado pequeños para la luz.'),
+        c('🦠', 'Ver bacterias vivas moviéndose', 'opt', 'El electrónico necesita muestras muertas y en vacío.'),
+        c('🧬', 'Ver la forma de un virus', 'ele', 'Los virus son mucho más pequeños que el límite de la luz.'),
+        c('🌈', 'Ver la muestra en colores naturales', 'opt', 'El electrónico da imágenes en blanco y negro (los colores se agregan después).'),
+        c('🏫', 'Usarlo en el laboratorio del colegio', 'opt', 'El electrónico es enorme y muy costoso.'),
+        c('🧱', 'Ver las membranas del retículo', 'ele', 'Las membranas internas solo se distinguen con electrones.'),
+        c('🟢', 'Ver los cloroplastos de una hoja de elodea', 'opt', 'Se ven como granitos verdes con el óptico.'),
+      ]}
+      cierre="Óptico: luz, colores, muestras vivas, hasta unas 1000 veces. Electrónico: electrones, en vacío, hasta un millón de veces: ribosomas, membranas y virus."
+    />
+  )
+}
