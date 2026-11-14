@@ -275,3 +275,6 @@ Hooke usa la reconstrucción de Rita Greer (2004, Free Art License, Wikimedia Co
 - Juegos con `ClasificaCasos`: `tejidos-juego` («¿Qué tejido es?», 4 opciones) y `reproduccion-juego` («¿Asexual o sexual?»).
 - Perfiles: 6° (diferenciación, tejidos animales y vegetales, órganos), 9° (suma reproducción), 11° (todo).
 - Todo en borrador; datos por verificar en `fuentes` del JSON. Pendiente del área 1: tema 6 (técnicas de estudio).
+
+## Recarga tras publicar (14 nov)
+- Si una pestaña con la versión vieja pide un archivo que ya no existe (p. ej. las diapositivas, que se cargan aparte), la app se recarga sola una vez (`vite:preloadError` en `main.tsx`). El botón «Intentar de nuevo» del aviso general ahora recarga la página.
