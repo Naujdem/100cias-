@@ -312,7 +312,105 @@
           "explicacion": "La glucólisis ocurre antes, en el citoplasma."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "diapositivas": [
+        {
+          "titulo": "De la glucosa al ATP",
+          "visual": {
+            "tipo": "escena",
+            "id": "respiracion",
+            "fases": [
+              {
+                "id": "glucosa",
+                "nombre": "Glucosa",
+                "texto": "La célula recibe glucosa, un azúcar con energía guardada.",
+                "marcas": [
+                  {
+                    "x": 90,
+                    "y": 206,
+                    "texto": "La glucosa viene de los alimentos (o de la fotosíntesis, en las plantas)."
+                  }
+                ]
+              },
+              {
+                "id": "glucolisis",
+                "nombre": "Glucólisis",
+                "texto": "En el citoplasma la glucosa se parte en dos mitades (piruvato) y se ganan 2 ATP.",
+                "nota": "«Glucólisis» = romper la glucosa.",
+                "marcas": [
+                  {
+                    "x": 146,
+                    "y": 98,
+                    "texto": "Este paso ocurre con o sin oxígeno."
+                  }
+                ]
+              },
+              {
+                "id": "respiracion",
+                "nombre": "Con oxígeno: respiración",
+                "texto": "Las mitades entran a la mitocondria, se rompen del todo y salen unos 30 ATP más, CO₂ y agua.",
+                "nota": "Glucosa + oxígeno → CO₂ + agua + mucho ATP.",
+                "marcas": [
+                  {
+                    "x": 236,
+                    "y": 120,
+                    "texto": "Por eso respiramos: el oxígeno se usa aquí y el CO₂ se expulsa."
+                  }
+                ]
+              },
+              {
+                "id": "fermentacion",
+                "nombre": "Sin oxígeno: fermentación",
+                "texto": "Si falta oxígeno, las mitades se quedan en el citoplasma como ácido láctico: solo 2 ATP.",
+                "nota": "Mucha menos energía con la misma glucosa.",
+                "marcas": [
+                  {
+                    "x": 150,
+                    "y": 222,
+                    "texto": "Pasa en el músculo cuando haces mucho ejercicio. La levadura, en cambio, produce alcohol y CO₂."
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "¿Con o sin oxígeno?",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "🫁",
+              "titulo": "Respiración",
+              "puntos": [
+                "Con oxígeno, en la mitocondria",
+                "≈ 32 ATP por glucosa"
+              ]
+            },
+            "der": {
+              "icono": "🍞",
+              "titulo": "Fermentación",
+              "puntos": [
+                "Sin oxígeno, en el citoplasma",
+                "2 ATP; ácido láctico o alcohol"
+              ]
+            }
+          }
+        },
+        {
+          "titulo": "¿Lo tienes?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "La levadura hace crecer el pan. ¿Qué proceso usa?",
+            "opciones": [
+              "Respiración celular",
+              "Fermentación alcohólica",
+              "Fotosíntesis"
+            ],
+            "correcta": 1,
+            "explicacion": "Sin oxígeno, la levadura fermenta: produce alcohol y CO₂, y el CO₂ forma las burbujas de la masa."
+          }
+        }
+      ]
     },
     {
       "id": "comunicacion",

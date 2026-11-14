@@ -1695,6 +1695,77 @@
       ],
       "diapositivas": [
         {
+          "titulo": "Una bacteria que se quedó a vivir",
+          "visual": {
+            "tipo": "escena",
+            "id": "endosimbiosis",
+            "fases": [
+              {
+                "id": "hospedera",
+                "nombre": "Una célula grande",
+                "texto": "Hace mucho tiempo, una célula grande con núcleo vivía junto a bacterias pequeñas.",
+                "marcas": [
+                  {
+                    "x": 345,
+                    "y": 104,
+                    "texto": "Una bacteria que usaba oxígeno para sacar mucha energía."
+                  }
+                ]
+              },
+              {
+                "id": "atrapa",
+                "nombre": "La atrapa",
+                "texto": "La célula rodea a la bacteria con su membrana y la mete en su interior.",
+                "marcas": [
+                  {
+                    "x": 300,
+                    "y": 140,
+                    "texto": "La membrana forma un bolsillo, como cuando una célula «come»."
+                  }
+                ]
+              },
+              {
+                "id": "dentro",
+                "nombre": "No la digiere",
+                "texto": "La bacteria sigue viva adentro: recibe alimento y le da energía a la célula. Las dos ganan.",
+                "nota": "Por eso la mitocondria tiene doble membrana.",
+                "marcas": [
+                  {
+                    "x": 196,
+                    "y": 40,
+                    "texto": "A esto se le llama simbiosis: vivir juntos con beneficio mutuo."
+                  }
+                ]
+              },
+              {
+                "id": "mitocondria",
+                "nombre": "Se vuelve mitocondria",
+                "texto": "Con el tiempo deja de ser independiente: es una mitocondria y se multiplica dentro de la célula.",
+                "marcas": [
+                  {
+                    "x": 90,
+                    "y": 60,
+                    "texto": "Las mitocondrias tienen su propio ADN, parecido al de las bacterias."
+                  }
+                ]
+              },
+              {
+                "id": "cloroplasto",
+                "nombre": "Y el cloroplasto",
+                "texto": "Más tarde, algunas células atraparon una cianobacteria que hacía fotosíntesis: así nació el cloroplasto.",
+                "nota": "Así aparecieron las algas y las plantas.",
+                "marcas": [
+                  {
+                    "x": 290,
+                    "y": 196,
+                    "texto": "El ADN de los cloroplastos se parece al de las cianobacterias."
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
           "titulo": "Una célula engulle a otra",
           "visual": {
             "tipo": "ilustracion",
