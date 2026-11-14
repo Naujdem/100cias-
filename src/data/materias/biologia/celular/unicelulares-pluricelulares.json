@@ -201,6 +201,20 @@
             "valor": "Muchos orgánulos",
             "texto": "Una ameba o un paramecio tienen orgánulos y comportamientos complejos."
           }
+        },
+        {
+          "titulo": "¿Y cómo se reproducen?",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "✂️",
+            "valor": "Dividiéndose",
+            "texto": "En un ser de una sola célula, dividirse es reproducirse"
+          },
+          "atajo": {
+            "texto": "Reproducción en los unicelulares",
+            "tema": "reproduccion-seres-vivos",
+            "bloque": "repro-unicelulares"
+          }
         }
       ]
     },

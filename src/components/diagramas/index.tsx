@@ -14,7 +14,7 @@ import { LisosomaJuego, CitoplasmaJuego, CitoesqueletoJuego, RibosomaJuego, Pero
 import { MitocondriaJuego, NucleoJuego } from './JuegosPropios.tsx'
 import ComparadorRotulado from './ComparadorRotulado.tsx'
 import EnfocaMuestra from './EnfocaMuestra.tsx'
-import { PartesMicroscopioJuego, AumentoJuego, OpticoElectronicoJuego, FotoRespJuego, DescubridoresJuego, UniPluriJuego, ProEuJuego, AnimalVegetalJuego, CicloJuego, DiploideJuego, MetabolismoJuego, TejidosVegetalesJuego, SistemasJuego } from './JuegosDecide2.tsx'
+import { ReproUnicelularesJuego, ReproPlantasJuego, ReproAnimalesJuego, PartesMicroscopioJuego, AumentoJuego, OpticoElectronicoJuego, FotoRespJuego, DescubridoresJuego, UniPluriJuego, ProEuJuego, AnimalVegetalJuego, CicloJuego, DiploideJuego, MetabolismoJuego, TejidosVegetalesJuego, SistemasJuego } from './JuegosDecide2.tsx'
 import FasesMitosis from './FasesMitosis.tsx'
 import MeiosisJuego from './MeiosisJuego.tsx'
 import ClasificaCasos, { CASOS_OXIGENO, CASOS_MUERTE, CASOS_TEJIDOS, CASOS_REPRODUCCION } from './ClasificaCasos.tsx'
@@ -84,6 +84,9 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'sistemas-juego': SistemasJuego,
   'fotoresp-juego': FotoRespJuego,
   'enfoca-muestra': EnfocaMuestra,
+  'repro-unicelulares-juego': ReproUnicelularesJuego,
+  'repro-plantas-juego': ReproPlantasJuego,
+  'repro-animales-juego': ReproAnimalesJuego,
   'partes-microscopio-juego': PartesMicroscopioJuego,
   'aumento-juego': AumentoJuego,
   'optico-electronico-juego': OpticoElectronicoJuego,

@@ -1,0 +1,764 @@
+{
+  "id": "reproduccion-seres-vivos",
+  "materia": "biologia",
+  "area": "celular",
+  "titulo": "Reproducción de los seres vivos",
+  "subtema": "Reproducción de los seres vivos",
+  "orden": 9.5,
+  "etiqueta": "5b",
+  "vistas": [
+    "ruta"
+  ],
+  "tituloVista": "Ruta de la reproducción",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Diferenciar la reproducción asexual y la sexual.",
+    "Describir cómo se reproducen los unicelulares, las plantas y los animales.",
+    "Relacionar la reproducción con la mitosis y la meiosis."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar ejemplos locales (yuca, caña, papa) y clasificación de guppy y boa como ovovivíparos según el texto de clase."
+  ],
+  "bloques": [
+    {
+      "id": "asexual-sexual",
+      "titulo": "Asexual y sexual: dos estrategias",
+      "resumen": "Copias rápidas o mezcla con variedad.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "requiere": [],
+      "ficha": {
+        "idea": "Los seres vivos se reproducen de dos maneras. En la reproducción asexual, un solo progenitor produce hijos idénticos a él, por mitosis. En la sexual, dos progenitores aportan gametos hechos por meiosis, y los hijos son distintos entre sí.",
+        "contexto": [
+          {
+            "titulo": "Asexual",
+            "texto": "Bipartición (bacterias), gemación (hidra, levadura), fragmentación (estrella de mar), esquejes y tubérculos (yuca, papa)."
+          },
+          {
+            "titulo": "Sexual",
+            "texto": "Unión de gametos: óvulo y espermatozoide en animales; en las plantas con flor, el polen lleva el gameto masculino."
+          },
+          {
+            "titulo": "Ventajas de la asexual",
+            "texto": "Es rápida, sencilla y no necesita pareja."
+          },
+          {
+            "titulo": "Ventajas de la sexual",
+            "texto": "Produce variedad: ante un cambio del ambiente o una enfermedad, es más probable que algunos sobrevivan."
+          }
+        ],
+        "evidencia": [
+          "Los bananos que se cultivan son clones; en el siglo XX una enfermedad (mal de Panamá) acabó con la variedad Gros Michel, y hoy amenaza a la Cavendish."
+        ],
+        "limites": "Muchos seres usan las dos formas, como las fresas, que tienen flores y también estolones.",
+        "cuaderno": {
+          "facil": [
+            "Asexual: un progenitor, hijos iguales.",
+            "Sexual: dos progenitores, hijos distintos."
+          ],
+          "media": [
+            "Asexual por mitosis; sexual con meiosis y fecundación.",
+            "Ejemplos asexuales: bipartición, gemación, esquejes."
+          ],
+          "avanzada": [
+            "La variedad ayuda a sobrevivir a los cambios.",
+            "El banano Gros Michel: un clon que una enfermedad casi acabó."
+          ]
+        },
+        "docente": {
+          "abrir": "Si siembras un esqueje de rosa, ¿la nueva planta será igual o distinta a la original?",
+          "actividad": "Usen el diagrama con la plaga en las dos pestañas y comparen. Luego jueguen «¿Asexual o sexual?» y discutan por qué los agricultores prefieren a veces los clones.",
+          "errores": [
+            "Creer que las plantas solo se reproducen asexualmente.",
+            "Creer que la reproducción asexual es «peor» en todo caso."
+          ],
+          "minutos": 10
+        }
+      },
+      "diagrama": "reproduccion-tipos",
+      "juego": "reproduccion-juego",
+      "preguntas": [
+        {
+          "id": "co-asexual-sexual-1",
+          "enunciado": "¿Cómo son los hijos de la reproducción asexual?",
+          "opciones": [
+            "Iguales al progenitor",
+            "Distintos entre sí",
+            "Mezcla de dos padres"
+          ],
+          "correcta": 0,
+          "explicacion": "Se forman por mitosis."
+        },
+        {
+          "id": "co-asexual-sexual-2",
+          "enunciado": "¿Qué ventaja tiene la reproducción sexual?",
+          "opciones": [
+            "Produce variedad",
+            "Es más rápida",
+            "No necesita gametos"
+          ],
+          "correcta": 0,
+          "explicacion": "La variedad ayuda ante cambios del ambiente."
+        },
+        {
+          "id": "co-asexual-sexual-3",
+          "enunciado": "Una hidra forma una yema que se suelta. Es reproducción...",
+          "opciones": [
+            "Asexual, por gemación",
+            "Sexual",
+            "Por fecundación"
+          ],
+          "correcta": 0,
+          "explicacion": "Hay un solo progenitor."
+        }
+      ],
+      "revisado": false,
+      "diapositivas": [
+        {
+          "titulo": "¿Por qué no todos los hijos son iguales?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Siembras un trozo de yuca y una semilla de mango. ¿Cuál dará una planta idéntica a la madre?",
+            "opciones": [
+              "El trozo de yuca",
+              "La semilla de mango",
+              "Las dos"
+            ],
+            "correcta": 0,
+            "explicacion": "El trozo de yuca se reproduce por mitosis: es una copia. La semilla viene de la unión de dos gametos: es una mezcla nueva."
+          }
+        },
+        {
+          "titulo": "Dos maneras de reproducirse",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "🧫",
+              "titulo": "Asexual",
+              "puntos": [
+                "Un solo progenitor",
+                "Por mitosis",
+                "Hijos idénticos"
+              ]
+            },
+            "der": {
+              "icono": "👪",
+              "titulo": "Sexual",
+              "puntos": [
+                "Dos progenitores",
+                "Gametos por meiosis",
+                "Hijos distintos"
+              ]
+            }
+          }
+        },
+        {
+          "titulo": "Formas de reproducción asexual",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🦠",
+                "titulo": "Bipartición",
+                "texto": "bacterias"
+              },
+              {
+                "icono": "🫧",
+                "titulo": "Gemación",
+                "texto": "hidra, levadura"
+              },
+              {
+                "icono": "⭐",
+                "titulo": "Fragmentación",
+                "texto": "estrella de mar"
+              },
+              {
+                "icono": "🥔",
+                "titulo": "Tubérculos",
+                "texto": "papa, yuca"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Compáralas",
+          "visual": {
+            "tipo": "diagrama",
+            "id": "reproduccion-tipos"
+          }
+        },
+        {
+          "titulo": "¿Cuál conviene?",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "⚡",
+              "titulo": "Ventaja asexual",
+              "puntos": [
+                "Rápida y sencilla",
+                "No necesita pareja"
+              ]
+            },
+            "der": {
+              "icono": "🌦️",
+              "titulo": "Ventaja sexual",
+              "puntos": [
+                "Variedad",
+                "Si el ambiente cambia, algunos sobreviven"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "repro-unicelulares",
+      "titulo": "Reproducción en los unicelulares",
+      "resumen": "Bipartición, gemación y esporulación: dividirse es reproducirse.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "nucleo": true,
+      "requiere": [
+        "asexual-sexual"
+      ],
+      "ficha": {
+        "idea": "En un ser de una sola célula, dividirse es reproducirse: de una célula salen organismos nuevos. Casi siempre es asexual: por bipartición (en dos iguales), por gemación (una yema que crece y se separa) o por esporulación (muchas células a la vez).",
+        "contexto": [
+          {
+            "titulo": "Bipartición",
+            "texto": "Bacterias, amebas y paramecios se parten en dos hijas iguales."
+          },
+          {
+            "titulo": "Gemación",
+            "texto": "A la levadura le sale una yema que crece y se separa."
+          },
+          {
+            "titulo": "Esporulación",
+            "texto": "El núcleo se divide muchas veces y salen muchas células a la vez, como en el parásito de la malaria."
+          },
+          {
+            "titulo": "Conjugación",
+            "texto": "Dos bacterias o dos paramecios se unen e intercambian ADN: no aumentan en número, pero sí ganan variedad."
+          }
+        ],
+        "evidencia": [
+          "Una bacteria puede dividirse cada 20 minutos si tiene alimento."
+        ],
+        "limites": "La conjugación no es reproducción: no aparecen individuos nuevos, solo se mezcla el ADN.",
+        "cuaderno": {
+          "facil": [
+            "Unicelulares: dividirse = reproducirse.",
+            "Bipartición: 1 → 2 iguales.",
+            "Gemación: una yema."
+          ],
+          "media": [
+            "Esporulación: 1 → muchas a la vez.",
+            "Es reproducción asexual: hijas iguales."
+          ],
+          "avanzada": [
+            "Conjugación: intercambio de ADN, no reproducción.",
+            "Así las bacterias se pasan, por ejemplo, la resistencia a antibióticos."
+          ]
+        },
+        "docente": {
+          "abrir": "Si una bacteria se divide cada 20 minutos, ¿cuántas habrá en 3 horas?",
+          "actividad": "Calculen en el tablero 1, 2, 4, 8… durante 9 divisiones (512). Luego recorran la escena y jueguen «¿Cómo se reproduce?».",
+          "errores": [
+            "Creer que la conjugación es reproducción.",
+            "Creer que los unicelulares no se reproducen, solo «crecen»."
+          ],
+          "minutos": 10
+        }
+      },
+      "juego": "repro-unicelulares-juego",
+      "revisado": false,
+      "preguntas": [
+        {
+          "id": "rp-uni-1",
+          "enunciado": "¿Qué es la bipartición?",
+          "opciones": [
+            "Una célula se parte en dos iguales",
+            "Le sale una yema",
+            "Libera muchas esporas"
+          ],
+          "correcta": 0,
+          "explicacion": "Dos hijas iguales."
+        },
+        {
+          "id": "rp-uni-2",
+          "enunciado": "¿Cómo se reproduce la levadura?",
+          "opciones": [
+            "Por gemación",
+            "Por semillas",
+            "Por fecundación interna"
+          ],
+          "correcta": 0,
+          "explicacion": "Le sale una yema que se separa."
+        },
+        {
+          "id": "rp-uni-3",
+          "enunciado": "En la conjugación…",
+          "opciones": [
+            "aumenta el número de bacterias",
+            "se intercambia ADN sin crear individuos nuevos",
+            "nacen esporas"
+          ],
+          "correcta": 1,
+          "explicacion": "No es reproducción: es intercambio de ADN."
+        }
+      ],
+      "diapositivas": [
+        {
+          "titulo": "Dividirse es reproducirse",
+          "visual": {
+            "tipo": "escena",
+            "id": "repro-unicelulares",
+            "fases": [
+              {
+                "id": "biparticion",
+                "nombre": "Bipartición",
+                "texto": "La célula copia su ADN, se alarga y se parte en dos hijas iguales.",
+                "marcas": [
+                  {
+                    "x": 200,
+                    "y": 90,
+                    "texto": "Bacterias, amebas y paramecios."
+                  }
+                ]
+              },
+              {
+                "id": "gemacion",
+                "nombre": "Gemación",
+                "texto": "A la levadura le sale una yema que crece y se separa.",
+                "marcas": [
+                  {
+                    "x": 256,
+                    "y": 70,
+                    "texto": "La hija empieza más pequeña que la madre."
+                  }
+                ]
+              },
+              {
+                "id": "esporulacion",
+                "nombre": "Esporulación",
+                "texto": "El núcleo se divide muchas veces y luego salen muchas células a la vez.",
+                "marcas": [
+                  {
+                    "x": 200,
+                    "y": 40,
+                    "texto": "Así se reproduce el parásito de la malaria."
+                  }
+                ]
+              },
+              {
+                "id": "conjugacion",
+                "nombre": "Conjugación",
+                "texto": "Dos células se unen por un puente e intercambian ADN. No es reproducción: siguen siendo dos.",
+                "nivel": "intermedio",
+                "marcas": [
+                  {
+                    "x": 200,
+                    "y": 120,
+                    "texto": "Así se pasan, por ejemplo, la resistencia a los antibióticos."
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Muy rápido",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "⏱️",
+            "valor": "Cada 20 min",
+            "texto": "puede dividirse una bacteria si tiene alimento: en 3 horas, de 1 salen 512"
+          }
+        },
+        {
+          "titulo": "¿Lo tienes?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Por qué las hijas de una bacteria son iguales a la madre?",
+            "opciones": [
+              "Porque es reproducción asexual: copian su ADN",
+              "Porque comen lo mismo",
+              "Porque viven en el mismo lugar"
+            ],
+            "correcta": 0,
+            "explicacion": "Copia su ADN y lo reparte: hijas idénticas."
+          }
+        }
+      ]
+    },
+    {
+      "id": "repro-plantas",
+      "titulo": "Reproducción en las plantas",
+      "resumen": "Por pedazos (asexual) o por semillas (sexual, con flor).",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "basico",
+      "nucleo": true,
+      "requiere": [
+        "asexual-sexual"
+      ],
+      "ficha": {
+        "idea": "Las plantas se reproducen de dos maneras. Asexual: un pedazo de la planta (tallo, estolón, tubérculo, bulbo) forma una planta igual a la madre. Sexual: en la flor, el polen llega al estigma, fecunda el óvulo y se forma una semilla dentro del fruto.",
+        "contexto": [
+          {
+            "titulo": "Partes de la flor",
+            "texto": "Estambres con anteras (hacen el polen) y pistilo con estigma, estilo y ovario (con los óvulos)."
+          },
+          {
+            "titulo": "Polinización",
+            "texto": "El polen viaja de una flor a otra con el viento, el agua o animales como abejas, colibríes y murciélagos."
+          },
+          {
+            "titulo": "Fecundación",
+            "texto": "El polen forma un tubo hasta el óvulo; al unirse los gametos, el óvulo se vuelve semilla y el ovario, fruto."
+          },
+          {
+            "titulo": "En el campo",
+            "texto": "Yuca y caña por estacas, papa por tubérculos, fresa por estolones: siembras rápidas y plantas iguales."
+          }
+        ],
+        "limites": "Las plantas sin flor, como los helechos y los musgos, se reproducen por esporas.",
+        "cuaderno": {
+          "facil": [
+            "Asexual: un pedazo de planta.",
+            "Sexual: flor, polen y semilla."
+          ],
+          "media": [
+            "Polinización: el polen llega al estigma.",
+            "Óvulo → semilla; ovario → fruto."
+          ],
+          "avanzada": [
+            "Tubo polínico hasta el óvulo.",
+            "Alternancia de generaciones en musgos y helechos."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué en la finca se siembra la yuca con estacas y no con semillas?",
+          "actividad": "Lleven una flor grande (cayena o lirio) y busquen estambres, estigma y ovario. Luego recorran la escena y jueguen «¿Semilla o pedazo?».",
+          "errores": [
+            "Creer que el fruto es parte del tallo.",
+            "Creer que todas las plantas tienen flores."
+          ],
+          "minutos": 15
+        }
+      },
+      "juego": "repro-plantas-juego",
+      "revisado": false,
+      "preguntas": [
+        {
+          "id": "rp-pla-1",
+          "enunciado": "¿Qué parte de la flor se convierte en fruto?",
+          "opciones": [
+            "El pétalo",
+            "El ovario",
+            "La antera"
+          ],
+          "correcta": 1,
+          "explicacion": "Tras la fecundación, el ovario crece y se vuelve fruto."
+        },
+        {
+          "id": "rp-pla-2",
+          "enunciado": "Sembrar papa con «ojos» es reproducción…",
+          "opciones": [
+            "sexual",
+            "asexual",
+            "por esporas"
+          ],
+          "correcta": 1,
+          "explicacion": "El tubérculo es un pedazo de tallo."
+        },
+        {
+          "id": "rp-pla-3",
+          "enunciado": "¿Qué es la polinización?",
+          "opciones": [
+            "La caída de los pétalos",
+            "El viaje del polen al estigma",
+            "La germinación de la semilla"
+          ],
+          "correcta": 1,
+          "explicacion": "El polen llega al estigma de otra flor (o de la misma)."
+        }
+      ],
+      "diapositivas": [
+        {
+          "titulo": "Por pedazos",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🌿",
+                "titulo": "Estacas",
+                "texto": "yuca, caña"
+              },
+              {
+                "icono": "🥔",
+                "titulo": "Tubérculos",
+                "texto": "papa"
+              },
+              {
+                "icono": "🍓",
+                "titulo": "Estolones",
+                "texto": "fresa"
+              },
+              {
+                "icono": "🧅",
+                "titulo": "Bulbos",
+                "texto": "cebolla, ajo"
+              }
+            ]
+          },
+          "nota": "Asexual: plantas iguales a la madre, y rápido."
+        },
+        {
+          "titulo": "De la flor a la semilla",
+          "visual": {
+            "tipo": "escena",
+            "id": "flor",
+            "fases": [
+              {
+                "id": "flor",
+                "nombre": "La flor",
+                "texto": "Los estambres hacen el polen en las anteras; el pistilo tiene el estigma arriba y el ovario abajo, con los óvulos."
+              },
+              {
+                "id": "polinizacion",
+                "nombre": "Polinización",
+                "texto": "Una abeja (o el viento, un colibrí o un murciélago) lleva polen al estigma.",
+                "marcas": [
+                  {
+                    "x": 268,
+                    "y": 86,
+                    "texto": "Muchas flores tienen colores y néctar para atraer a quien las poliniza."
+                  }
+                ]
+              },
+              {
+                "id": "tubo",
+                "nombre": "El tubo polínico",
+                "texto": "El grano de polen forma un tubo que baja por el estilo hasta el óvulo."
+              },
+              {
+                "id": "fecundacion",
+                "nombre": "Fecundación",
+                "texto": "El gameto masculino se une al óvulo: es la reproducción sexual.",
+                "marcas": [
+                  {
+                    "x": 230,
+                    "y": 196,
+                    "texto": "Así se juntan los genes de dos plantas."
+                  }
+                ]
+              },
+              {
+                "id": "semilla",
+                "nombre": "Fruto y semilla",
+                "texto": "Los pétalos caen, el ovario crece y se vuelve fruto, y los óvulos se vuelven semillas.",
+                "nota": "Por eso el mango tiene pepa: es su semilla."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Sin flores",
+          "nivel": "avanzado",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🌿",
+                "titulo": "Helechos",
+                "texto": "esporas bajo las hojas"
+              },
+              {
+                "icono": "🟢",
+                "titulo": "Musgos",
+                "texto": "esporas en cápsulas"
+              }
+            ]
+          },
+          "nota": "Alternan una generación que hace esporas y otra que hace gametos."
+        }
+      ]
+    },
+    {
+      "id": "repro-animales",
+      "titulo": "Reproducción en los animales",
+      "resumen": "Algunos se reproducen por gemación o fragmentación; la mayoría, con fecundación interna o externa.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "basico",
+      "nucleo": true,
+      "requiere": [
+        "asexual-sexual"
+      ],
+      "ficha": {
+        "idea": "Algunos animales sencillos se reproducen de forma asexual, como la hidra (gemación) o la estrella de mar (fragmentación). La mayoría lo hace de forma sexual: la fecundación puede ser externa, en el agua, o interna, dentro del cuerpo de la hembra. Según dónde se desarrolla el embrión, los animales son ovíparos, vivíparos u ovovivíparos.",
+        "contexto": [
+          {
+            "titulo": "Asexual",
+            "texto": "Hidra: gemación. Estrella de mar y planarias: fragmentación y regeneración."
+          },
+          {
+            "titulo": "Fecundación externa",
+            "texto": "Peces y anfibios sueltan óvulos y espermatozoides en el agua."
+          },
+          {
+            "titulo": "Fecundación interna",
+            "texto": "Aves, reptiles y mamíferos: los gametos se unen dentro de la hembra."
+          },
+          {
+            "titulo": "Partenogénesis",
+            "texto": "En algunos animales, como ciertos lagartos o las abejas, un óvulo sin fecundar puede formar un individuo."
+          }
+        ],
+        "limites": "Que un animal tenga fecundación interna no significa que sea vivíparo: las aves la tienen y ponen huevos.",
+        "cuaderno": {
+          "facil": [
+            "Asexual: hidra y estrella de mar.",
+            "Sexual: fecundación externa o interna."
+          ],
+          "media": [
+            "Ovíparo: huevo afuera.",
+            "Vivíparo: dentro de la madre.",
+            "Ovovivíparo: huevo que se queda dentro."
+          ],
+          "avanzada": [
+            "Partenogénesis: óvulo sin fecundar.",
+            "Fecundación interna no implica viviparidad."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué una rana pone cientos de huevos y una vaca tiene un solo ternero?",
+          "actividad": "Recorran la escena, comparen la fecundación externa e interna y jueguen «¿Huevo o vientre?». Discutan la pregunta de apertura.",
+          "errores": [
+            "Creer que todos los peces son ovíparos.",
+            "Creer que fecundación interna = vivíparo."
+          ],
+          "minutos": 12
+        }
+      },
+      "juego": "repro-animales-juego",
+      "revisado": false,
+      "preguntas": [
+        {
+          "id": "rp-ani-1",
+          "enunciado": "¿Cómo se reproduce asexualmente la hidra?",
+          "opciones": [
+            "Por gemación",
+            "Por esporas",
+            "Por semillas"
+          ],
+          "correcta": 0,
+          "explicacion": "Le sale una yema que crece y se separa."
+        },
+        {
+          "id": "rp-ani-2",
+          "enunciado": "¿Dónde ocurre la fecundación externa?",
+          "opciones": [
+            "Dentro de la hembra",
+            "En el agua",
+            "En el nido"
+          ],
+          "correcta": 1,
+          "explicacion": "Peces y ranas sueltan sus gametos en el agua."
+        },
+        {
+          "id": "rp-ani-3",
+          "enunciado": "La gallina tiene fecundación interna y pone huevos: es…",
+          "opciones": [
+            "vivípara",
+            "ovípara",
+            "ovovivípara"
+          ],
+          "correcta": 1,
+          "explicacion": "El embrión crece en un huevo fuera de su cuerpo."
+        }
+      ],
+      "diapositivas": [
+        {
+          "titulo": "De muchas maneras",
+          "visual": {
+            "tipo": "escena",
+            "id": "repro-animales",
+            "fases": [
+              {
+                "id": "hidra",
+                "nombre": "Gemación",
+                "texto": "A la hidra le sale una yema que crece y se separa: una hidra nueva, igual."
+              },
+              {
+                "id": "estrella",
+                "nombre": "Fragmentación",
+                "texto": "Un brazo de estrella de mar, con parte del centro, puede formar una estrella completa.",
+                "nota": "Es asexual: copias de la madre."
+              },
+              {
+                "id": "externa",
+                "nombre": "Fecundación externa",
+                "texto": "Peces y ranas sueltan óvulos y espermatozoides en el agua; muchos huevos se pierden.",
+                "marcas": [
+                  {
+                    "x": 130,
+                    "y": 150,
+                    "texto": "Por eso ponen cientos o miles de huevos."
+                  }
+                ]
+              },
+              {
+                "id": "interna",
+                "nombre": "Fecundación interna",
+                "texto": "En aves, reptiles y mamíferos, los gametos se unen dentro del cuerpo de la hembra.",
+                "nota": "Se ponen menos huevos o crías, pero sobreviven más."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Huevo o vientre",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🥚",
+                "titulo": "Ovíparos",
+                "texto": "huevo fuera: aves, tortugas"
+              },
+              {
+                "icono": "🤰",
+                "titulo": "Vivíparos",
+                "texto": "dentro de la madre: mamíferos"
+              },
+              {
+                "icono": "🐍",
+                "titulo": "Ovovivíparos",
+                "texto": "huevo dentro: boas, guppys"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "¿Lo tienes?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Por qué una rana pone cientos de huevos y una vaca tiene un solo ternero?",
+            "opciones": [
+              "La rana tiene fecundación externa: muchos huevos se pierden",
+              "La vaca come más",
+              "Las ranas viven menos"
+            ],
+            "correcta": 0,
+            "explicacion": "Con fecundación externa y sin cuidado, pocos sobreviven: se compensa con cantidad."
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -61,6 +61,12 @@
       "tecnicas-estudio": [
         "microscopio-optico",
         "aumento"
+      ],
+      "reproduccion-seres-vivos": [
+        "asexual-sexual",
+        "repro-unicelulares",
+        "repro-plantas",
+        "repro-animales"
       ]
     },
     "nivelDibujo": "basico",
@@ -74,7 +80,8 @@
       "meiosis": "Tres pasos: diploides y haploides, por qué hace falta la meiosis y la comparación con la mitosis.",
       "metabolismo-celular": "Tres pasos: enzimas, respiración y fermentación, y cómo se comunican las células.",
       "de-la-celula-al-organismo": "Cuatro pasos: diferenciación, tejidos animales y vegetales, y órganos.",
-      "tecnicas-estudio": "Microscopio óptico y aumentos."
+      "tecnicas-estudio": "Microscopio óptico y aumentos.",
+      "reproduccion-seres-vivos": "Asexual y sexual, en unicelulares, plantas y animales."
     }
   },
   {
@@ -154,13 +161,18 @@
         "diferenciacion",
         "tejidos-animales",
         "tejidos-vegetales",
-        "organos-sistemas",
-        "reproduccion"
+        "organos-sistemas"
       ],
       "tecnicas-estudio": [
         "microscopio-optico",
         "aumento",
         "optico-electronico"
+      ],
+      "reproduccion-seres-vivos": [
+        "asexual-sexual",
+        "repro-unicelulares",
+        "repro-plantas",
+        "repro-animales"
       ]
     },
     "nivelDibujo": "intermedio",
@@ -174,7 +186,8 @@
       "meiosis": "Cinco pasos: suma la meiosis I y la meiosis II.",
       "metabolismo-celular": "Cinco pasos: suma el ATP y la muerte celular.",
       "de-la-celula-al-organismo": "Cinco pasos: suma la reproducción asexual y sexual.",
-      "tecnicas-estudio": "Microscopio óptico, aumentos y comparación con el electrónico."
+      "tecnicas-estudio": "Microscopio óptico, aumentos y comparación con el electrónico.",
+      "reproduccion-seres-vivos": "Asexual y sexual, en unicelulares, plantas y animales."
     }
   },
   {
@@ -265,13 +278,18 @@
         "celulas-madre",
         "tejidos-animales",
         "tejidos-vegetales",
-        "organos-sistemas",
-        "reproduccion"
+        "organos-sistemas"
       ],
       "tecnicas-estudio": [
         "microscopio-optico",
         "aumento",
         "optico-electronico"
+      ],
+      "reproduccion-seres-vivos": [
+        "asexual-sexual",
+        "repro-unicelulares",
+        "repro-plantas",
+        "repro-animales"
       ]
     },
     "nivelDibujo": "avanzado",
@@ -285,7 +303,8 @@
       "meiosis": "Todo el contenido: seis pasos, con la variedad entre hermanos.",
       "metabolismo-celular": "Todo el contenido: seis pasos, con las uniones entre células.",
       "de-la-celula-al-organismo": "Todo el contenido: seis pasos, con las células madre.",
-      "tecnicas-estudio": "Microscopio óptico, aumentos y comparación con el electrónico."
+      "tecnicas-estudio": "Microscopio óptico, aumentos y comparación con el electrónico.",
+      "reproduccion-seres-vivos": "Asexual y sexual, en unicelulares, plantas y animales."
     }
   }
 ]
