@@ -115,6 +115,8 @@ export interface Lamina {
   visual?: Visual
   /** línea pequeña al pie */
   nota?: string
+  /** si se indica, la lámina solo aparece cuando el grado elegido llega a ese nivel (p. ej. «avanzado» = 11°) */
+  nivel?: Nivel
   /** acceso directo a otro tema o ficha (si ese tema aún no existe, se muestra como «próximamente») */
   atajo?: { texto: string; tema: string; bloque?: string }
 }

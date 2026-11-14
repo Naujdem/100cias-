@@ -1,5 +1,8 @@
 import type { Bloque, Ilustracion, Lamina } from '../data/schema.ts'
 import type { Ajustes } from './ajustes.ts'
+import { perfilActual } from './temas.ts'
+
+const ORDEN = { basico: 0, intermedio: 1, avanzado: 2 } as const
 
 // Las diapositivas no se escriben aparte: se arman a partir de la ficha de cada bloque,
 // así no se pierde nada de lo que ya está y un cambio en la ficha se ve en las dos formas.
@@ -36,7 +39,10 @@ export function construir(bloques: Bloque[], ajustes: Pick<Ajustes, 'analogias' 
     const f = b.ficha
     if (b.diapositivas?.length) {
       // láminas escritas a propósito: portada, láminas, para recordar y notas del docente
-      const dl: Diapositiva[] = [{ tipo: 'portada' }, ...b.diapositivas.map((lamina): Diapositiva => ({ tipo: 'lamina', lamina }))]
+      // las láminas con `nivel` solo salen si el grado elegido llega a ese nivel
+      const tope = ORDEN[perfilActual().nivelDibujo]
+      const laminas = b.diapositivas.filter((l) => !l.nivel || ORDEN[l.nivel] <= tope)
+      const dl: Diapositiva[] = [{ tipo: 'portada' }, ...laminas.map((lamina): Diapositiva => ({ tipo: 'lamina', lamina }))]
       if (f.cuaderno) dl.push({ tipo: 'recuerda' })
       if (ajustes.docente && f.docente) dl.push({ tipo: 'docente' })
       return dl.map((d, k): Item => ({ bloque: b, d, seccion: 'contenido', n: k + 1, de: dl.length }))

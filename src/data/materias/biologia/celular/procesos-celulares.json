@@ -494,6 +494,21 @@
           ]
         },
         {
+          "titulo": "Prometafase: el huso se engancha",
+          "nivel": "avanzado",
+          "visual": {
+            "tipo": "ilustracion",
+            "recurso": "celula-prometafase",
+            "pie": "Restos de la envoltura nuclear y fibras del huso buscando los cromosomas"
+          },
+          "puntos": [
+            "La envoltura del núcleo termina de romperse",
+            "El huso se engancha a cada cromosoma en el cinetocoro",
+            "Los cromosomas empiezan a moverse hacia el centro"
+          ],
+          "nota": "Muchos libros la cuentan como una quinta fase; otros la incluyen en la profase."
+        },
+        {
           "titulo": "2. Metafase: todos al centro",
           "visual": {
             "tipo": "ilustracion",

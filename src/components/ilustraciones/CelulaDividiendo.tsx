@@ -33,6 +33,40 @@ function Hebras({ cx, cy, r }: { cx: number; cy: number; r: number }) {
   )
 }
 
+/** Prometafase (solo para grado avanzado): el núcleo termina de romperse y el huso se engancha a los cromosomas. */
+export function Prometafase() {
+  const polos = [104, 296]
+  const cromos: [number, number, number, string, number][] = [
+    [176, 122, 40, AZUL, 34], [226, 170, -30, AZUL, 34], [218, 116, 75, NARANJA, 22], [182, 180, 105, NARANJA, 22],
+  ]
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label="División celular: prometafase" className="h-full w-full">
+      <rect x="-1500" y="-1500" width="3400" height="3300" fill="#f3e7ef" />
+      <circle cx="200" cy="150" r="108" fill="#f8d9d4" stroke="#b05a5a" strokeWidth="4" />
+      {/* restos de la envoltura del núcleo */}
+      <g fill="none" stroke="#7a4a8a" strokeWidth="2.5" strokeLinecap="round">
+        <path d="M150 112 a62 62 0 0 1 22 -20" />
+        <path d="M246 104 a62 62 0 0 1 14 22" />
+        <path d="M254 196 a62 62 0 0 1 -20 16" />
+        <path d="M146 182 a62 62 0 0 1 -6 -22" />
+      </g>
+      {/* fibras del huso que salen de los polos y buscan los cromosomas */}
+      <g stroke="#8b7a96" strokeWidth="1.2" opacity="0.8">
+        {cromos.map(([x, y], k) => (
+          <g key={k}>
+            <line x1={polos[0]} y1="150" x2={x} y2={y} />
+            <line x1={polos[1]} y1="150" x2={x} y2={y} />
+          </g>
+        ))}
+      </g>
+      {polos.map((x) => <circle key={x} cx={x} cy="150" r="5" fill="#8b7a96" />)}
+      {cromos.map(([x, y, g, c, l], k) => <Cromosoma key={k} x={x} y={y} giro={g} largo={l} color={c} />)}
+      {/* cinetocoros: donde se engancha el huso */}
+      {cromos.map(([x, y], k) => <circle key={k} cx={x} cy={y} r="3.5" fill="#2b2b2b" />)}
+    </svg>
+  )
+}
+
 export default function CelulaDividiendo({ etapa }: { etapa: 0 | 1 | 2 | 3 | 4 }) {
   return (
     <svg viewBox="0 0 400 300" role="img" aria-label={`División celular: ${ETAPAS[etapa]}`} className="h-full w-full">

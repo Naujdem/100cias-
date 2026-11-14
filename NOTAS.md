@@ -278,3 +278,4 @@ Hooke usa la reconstrucción de Rita Greer (2004, Free Art License, Wikimedia Co
 
 ## Mitosis: láminas propias (14 nov)
 - El bloque `mitosis` (4.1) tiene 12 láminas: pregunta inicial de los 46 libros, interfase, las 4 fases en tarjetas, una lámina por fase con su dibujo (`celula-interfase|profase|metafase|anafase|telofase`, del mismo `CelulaDividiendo`), cromosoma vs cromátida, el huso, 46 → 46 + 46, el diagrama de división y una pregunta final.
+- Prometafase (lámina 6) con `"nivel": "avanzado"`: solo sale con Grado 11°. Cualquier lámina puede llevar `nivel` (básico/intermedio/avanzado) y se filtra según el `nivelDibujo` del grado elegido (`lib/diapositivas.ts`). Dibujo: `celula-prometafase` (`Prometafase` en `CelulaDividiendo.tsx`).
