@@ -851,7 +851,7 @@
             "fases": [
               {
                 "id": "entrecruzamiento",
-                "nombre": "1. Entrecruzamiento",
+                "nombre": "Entrecruzamiento",
                 "texto": "Los homólogos intercambian trozos: los cromosomas quedan mezclados.",
                 "marcas": [
                   {
@@ -863,7 +863,7 @@
               },
               {
                 "id": "metafase-i",
-                "nombre": "2. Reparto al azar",
+                "nombre": "Reparto al azar",
                 "texto": "Cada pareja se alinea sin importar las demás: qué homólogo va a cada lado es al azar.",
                 "marcas": [
                   {
@@ -875,7 +875,7 @@
               },
               {
                 "id": "gametos",
-                "nombre": "3. Fecundación al azar",
+                "nombre": "Fecundación al azar",
                 "texto": "Cualquier óvulo puede unirse con cualquier espermatozoide.",
                 "marcas": [
                   {

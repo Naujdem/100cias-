@@ -1092,22 +1092,22 @@
               },
               {
                 "id": "nucleo",
-                "nombre": "1. Núcleo",
+                "nombre": "Núcleo",
                 "texto": "La receta (ADN) se copia en un mensaje (ARN) que sale del núcleo."
               },
               {
                 "id": "ret",
-                "nombre": "2. Retículo y ribosomas",
+                "nombre": "Retículo y ribosomas",
                 "texto": "Los ribosomas leen el mensaje y arman la proteína; el retículo la revisa."
               },
               {
                 "id": "golgi",
-                "nombre": "3. Golgi",
+                "nombre": "Golgi",
                 "texto": "La proteína se termina y se empaca en una vesícula."
               },
               {
                 "id": "membrana",
-                "nombre": "4. Membrana",
+                "nombre": "Membrana",
                 "texto": "La vesícula se une a la membrana y la proteína sale de la célula."
               }
             ]

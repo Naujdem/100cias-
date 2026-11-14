@@ -312,62 +312,133 @@
       ],
       "diapositivas": [
         {
-          "titulo": "Dividirse es reproducirse",
+          "titulo": "Bipartición, paso a paso",
           "visual": {
             "tipo": "escena",
             "id": "repro-unicelulares",
             "fases": [
               {
-                "id": "biparticion",
-                "nombre": "Bipartición",
-                "texto": "La célula copia su ADN, se alarga y se parte en dos hijas iguales.",
+                "id": "bip-1",
+                "nombre": "Copia su ADN",
+                "texto": "La bacteria hace una copia de su único cromosoma."
+              },
+              {
+                "id": "bip-2",
+                "nombre": "Crece",
+                "texto": "La célula se alarga y cada copia del ADN va hacia un extremo."
+              },
+              {
+                "id": "bip-3",
+                "nombre": "Tabique",
+                "texto": "En el medio se forma una pared (un tabique) que la va dividiendo."
+              },
+              {
+                "id": "bip-4",
+                "nombre": "Dos hijas",
+                "texto": "Quedan dos bacterias iguales a la madre.",
+                "nota": "Es reproducción asexual: hijas idénticas.",
                 "marcas": [
                   {
                     "x": 200,
-                    "y": 90,
-                    "texto": "Bacterias, amebas y paramecios."
-                  }
-                ]
-              },
-              {
-                "id": "gemacion",
-                "nombre": "Gemación",
-                "texto": "A la levadura le sale una yema que crece y se separa.",
-                "marcas": [
-                  {
-                    "x": 256,
-                    "y": 70,
-                    "texto": "La hija empieza más pequeña que la madre."
-                  }
-                ]
-              },
-              {
-                "id": "esporulacion",
-                "nombre": "Esporulación",
-                "texto": "El núcleo se divide muchas veces y luego salen muchas células a la vez.",
-                "marcas": [
-                  {
-                    "x": 200,
-                    "y": 40,
-                    "texto": "Así se reproduce el parásito de la malaria."
-                  }
-                ]
-              },
-              {
-                "id": "conjugacion",
-                "nombre": "Conjugación",
-                "texto": "Dos células se unen por un puente e intercambian ADN. No es reproducción: siguen siendo dos.",
-                "nivel": "intermedio",
-                "marcas": [
-                  {
-                    "x": 200,
-                    "y": 120,
-                    "texto": "Así se pasan, por ejemplo, la resistencia a los antibióticos."
+                    "y": 96,
+                    "texto": "Bacterias, amebas y paramecios se reproducen así."
                   }
                 ]
               }
             ]
           }
+        },
+        {
+          "titulo": "Gemación, paso a paso",
+          "visual": {
+            "tipo": "escena",
+            "id": "repro-unicelulares",
+            "fases": [
+              {
+                "id": "gem-1",
+                "nombre": "Copia su núcleo",
+                "texto": "La levadura copia su ADN: ahora tiene dos núcleos."
+              },
+              {
+                "id": "gem-2",
+                "nombre": "Sale una yema",
+                "texto": "En un lado de la célula crece una pequeña protuberancia."
+              },
+              {
+                "id": "gem-3",
+                "nombre": "La yema crece",
+                "texto": "Uno de los núcleos pasa a la yema, que sigue creciendo."
+              },
+              {
+                "id": "gem-4",
+                "nombre": "Se separa",
+                "texto": "La yema se suelta: es una levadura nueva, más pequeña.",
+                "nota": "A diferencia de la bipartición, la hija nace más pequeña."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Esporulación, paso a paso",
+          "visual": {
+            "tipo": "escena",
+            "id": "repro-unicelulares",
+            "fases": [
+              {
+                "id": "esp-1",
+                "nombre": "Muchos núcleos",
+                "texto": "El núcleo se divide muchas veces sin que la célula se parta."
+              },
+              {
+                "id": "esp-2",
+                "nombre": "Muchas células dentro",
+                "texto": "Cada núcleo se rodea de un poco de citoplasma y membrana."
+              },
+              {
+                "id": "esp-3",
+                "nombre": "Salen todas",
+                "texto": "La célula madre se rompe y libera muchas células a la vez.",
+                "marcas": [
+                  {
+                    "x": 200,
+                    "y": 24,
+                    "texto": "Así se multiplica el parásito de la malaria dentro de la sangre."
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Conjugación: no es reproducción",
+          "visual": {
+            "tipo": "escena",
+            "id": "repro-unicelulares",
+            "fases": [
+              {
+                "id": "con-1",
+                "nombre": "Se acercan",
+                "texto": "Dos bacterias se acercan."
+              },
+              {
+                "id": "con-2",
+                "nombre": "Un puente",
+                "texto": "Una forma un tubo, un puente, hacia la otra."
+              },
+              {
+                "id": "con-3",
+                "nombre": "Pasa ADN",
+                "texto": "Por el puente pasa una copia de un pedacito de ADN (un plásmido)."
+              },
+              {
+                "id": "con-4",
+                "nombre": "Se separan",
+                "texto": "Ahora las dos tienen ese ADN. Pero siguen siendo dos: no nació ninguna.",
+                "nota": "Así se pasan, por ejemplo, la resistencia a los antibióticos."
+              }
+            ]
+          },
+          "nivel": "intermedio"
         },
         {
           "titulo": "Muy rápido",
@@ -518,7 +589,37 @@
           "nota": "Asexual: plantas iguales a la madre, y rápido."
         },
         {
-          "titulo": "De la flor a la semilla",
+          "titulo": "Un esqueje, paso a paso",
+          "visual": {
+            "tipo": "escena",
+            "id": "esqueje",
+            "fases": [
+              {
+                "id": "esq-1",
+                "nombre": "Cortar",
+                "texto": "Se corta un trozo de tallo sano, con hojas o yemas."
+              },
+              {
+                "id": "esq-2",
+                "nombre": "Sembrar",
+                "texto": "Se entierra en tierra húmeda."
+              },
+              {
+                "id": "esq-3",
+                "nombre": "Raíces",
+                "texto": "Del tallo enterrado salen raíces nuevas."
+              },
+              {
+                "id": "esq-4",
+                "nombre": "Planta nueva",
+                "texto": "Crecen hojas: una planta igual a la madre.",
+                "nota": "Así se siembran la yuca y la caña."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "De la flor a la semilla, paso a paso",
           "visual": {
             "tipo": "escena",
             "id": "flor",
@@ -529,6 +630,11 @@
                 "texto": "Los estambres hacen el polen en las anteras; el pistilo tiene el estigma arriba y el ovario abajo, con los óvulos."
               },
               {
+                "id": "polen",
+                "nombre": "El polen",
+                "texto": "Las anteras se abren y sueltan granos de polen."
+              },
+              {
                 "id": "polinizacion",
                 "nombre": "Polinización",
                 "texto": "Una abeja (o el viento, un colibrí o un murciélago) lleva polen al estigma.",
@@ -536,32 +642,37 @@
                   {
                     "x": 268,
                     "y": 86,
-                    "texto": "Muchas flores tienen colores y néctar para atraer a quien las poliniza."
+                    "texto": "Colores y néctar atraen a quien poliniza."
                   }
                 ]
               },
               {
                 "id": "tubo",
-                "nombre": "El tubo polínico",
+                "nombre": "Tubo polínico",
                 "texto": "El grano de polen forma un tubo que baja por el estilo hasta el óvulo."
               },
               {
                 "id": "fecundacion",
                 "nombre": "Fecundación",
-                "texto": "El gameto masculino se une al óvulo: es la reproducción sexual.",
+                "texto": "El gameto masculino se une al del óvulo: es la reproducción sexual.",
                 "marcas": [
                   {
                     "x": 230,
                     "y": 196,
-                    "texto": "Así se juntan los genes de dos plantas."
+                    "texto": "Se juntan los genes de dos plantas."
                   }
                 ]
               },
               {
                 "id": "semilla",
                 "nombre": "Fruto y semilla",
-                "texto": "Los pétalos caen, el ovario crece y se vuelve fruto, y los óvulos se vuelven semillas.",
+                "texto": "Los pétalos caen, el ovario se vuelve fruto y los óvulos, semillas.",
                 "nota": "Por eso el mango tiene pepa: es su semilla."
+              },
+              {
+                "id": "germinacion",
+                "nombre": "Germinación",
+                "texto": "La semilla cae a la tierra, echa raíz y tallo: empieza una planta nueva."
               }
             ]
           }
@@ -684,39 +795,111 @@
       ],
       "diapositivas": [
         {
-          "titulo": "De muchas maneras",
+          "titulo": "Gemación de la hidra",
           "visual": {
             "tipo": "escena",
             "id": "repro-animales",
             "fases": [
               {
-                "id": "hidra",
-                "nombre": "Gemación",
-                "texto": "A la hidra le sale una yema que crece y se separa: una hidra nueva, igual."
+                "id": "hidra-1",
+                "nombre": "Hidra adulta",
+                "texto": "Un animal pequeño de agua dulce, pariente de las medusas."
               },
               {
-                "id": "estrella",
-                "nombre": "Fragmentación",
-                "texto": "Un brazo de estrella de mar, con parte del centro, puede formar una estrella completa.",
-                "nota": "Es asexual: copias de la madre."
+                "id": "hidra-2",
+                "nombre": "Sale una yema",
+                "texto": "En un costado empieza a crecer un brote."
               },
               {
-                "id": "externa",
-                "nombre": "Fecundación externa",
-                "texto": "Peces y ranas sueltan óvulos y espermatozoides en el agua; muchos huevos se pierden.",
+                "id": "hidra-3",
+                "nombre": "La yema crece",
+                "texto": "El brote se alarga y le salen tentáculos."
+              },
+              {
+                "id": "hidra-4",
+                "nombre": "Se separa",
+                "texto": "Se suelta y vive sola: es una copia de la madre."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Fragmentación de la estrella de mar",
+          "visual": {
+            "tipo": "escena",
+            "id": "repro-animales",
+            "fases": [
+              {
+                "id": "est-1",
+                "nombre": "Una estrella",
+                "texto": "Una estrella de mar completa, con cinco brazos."
+              },
+              {
+                "id": "est-2",
+                "nombre": "Pierde un brazo",
+                "texto": "Un brazo se separa con parte del centro del cuerpo."
+              },
+              {
+                "id": "est-3",
+                "nombre": "Regenera",
+                "texto": "El brazo regenera lo que le falta, y la estrella vuelve a formar su brazo."
+              },
+              {
+                "id": "est-4",
+                "nombre": "Dos estrellas",
+                "texto": "Ahora hay dos estrellas: reproducción asexual.",
+                "nota": "Sin parte del centro, un brazo solo no forma una estrella."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Fecundación externa",
+          "visual": {
+            "tipo": "escena",
+            "id": "repro-animales",
+            "fases": [
+              {
+                "id": "ext-1",
+                "nombre": "Óvulos al agua",
+                "texto": "La hembra suelta muchos óvulos en el agua."
+              },
+              {
+                "id": "ext-2",
+                "nombre": "Espermatozoides",
+                "texto": "El macho suelta espermatozoides cerca."
+              },
+              {
+                "id": "ext-3",
+                "nombre": "Se unen",
+                "texto": "Se unen en el agua: los huevos quedan fecundados.",
                 "marcas": [
                   {
                     "x": 130,
                     "y": 150,
-                    "texto": "Por eso ponen cientos o miles de huevos."
+                    "texto": "Muchos se pierden: por eso ponen cientos o miles."
                   }
                 ]
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Fecundación interna",
+          "visual": {
+            "tipo": "escena",
+            "id": "repro-animales",
+            "fases": [
+              {
+                "id": "int-1",
+                "nombre": "Dentro de la hembra",
+                "texto": "Los espermatozoides entran al cuerpo de la hembra."
               },
               {
-                "id": "interna",
-                "nombre": "Fecundación interna",
-                "texto": "En aves, reptiles y mamíferos, los gametos se unen dentro del cuerpo de la hembra.",
-                "nota": "Se ponen menos huevos o crías, pero sobreviven más."
+                "id": "int-2",
+                "nombre": "Se forma el cigoto",
+                "texto": "El espermatozoide y el óvulo se unen dentro: se forma el cigoto.",
+                "nota": "Se forman menos huevos o crías, pero sobreviven más."
               }
             ]
           }

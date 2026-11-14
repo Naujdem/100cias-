@@ -267,9 +267,52 @@ function EscenaVista({ v, fase, onFase }: { v: Extract<Visual, { tipo: 'escena' 
   const Dibujo = ESCENAS[v.id]
   const f = v.fases[fase]
   const [abierta, setAbierta] = useState<number | null>(null)
+  /** «Paso a paso»: todas las fases a la vez, en miniatura y numeradas, como la figura de un libro */
+  const [tira, setTira] = useState(false)
   useEffect(() => setAbierta(null), [fase])
   if (!Dibujo || !f) return null
   const marca = abierta !== null ? f.marcas?.[abierta] : undefined
+  const botonTira = (
+    <button
+      type="button"
+      aria-pressed={tira}
+      onClick={() => setTira(!tira)}
+      title="Ver todas las fases a la vez"
+      className="min-h-10 rounded-full border border-dashed border-[var(--acento)] px-4 text-sm font-bold text-[var(--acento)] aria-pressed:bg-[var(--acento)] aria-pressed:text-[var(--fondo)]"
+    >
+      {tira ? '▶ Animación' : '▦ Paso a paso'}
+    </button>
+  )
+  if (tira) {
+    const cols = v.fases.length <= 3 ? 'sm:grid-cols-3' : v.fases.length === 4 ? 'sm:grid-cols-2 lg:grid-cols-4' : 'sm:grid-cols-3 lg:grid-cols-5'
+    return (
+      <div data-escena>
+        <div className="mb-3 flex justify-end">{botonTira}</div>
+        <ol className={`grid grid-cols-2 gap-3 ${cols}`}>
+          {v.fases.map((x, k) => (
+            <li key={x.id}>
+              <button
+                type="button"
+                onClick={() => {
+                  onFase?.(k)
+                  setTira(false)
+                }}
+                className={`w-full rounded-xl border-2 p-1.5 text-left ${k === fase ? 'border-[var(--acento)]' : 'border-[var(--linea)] hover:border-[var(--acento)]'}`}
+              >
+                <div className="pointer-events-none aspect-[4/3] w-full overflow-hidden rounded-lg">
+                  <Dibujo fase={x.id} />
+                </div>
+                <p className="mt-1 text-sm font-bold leading-snug">
+                  <span className="text-[var(--acento)]">{k + 1}.</span> {x.nombre}
+                </p>
+                <p className="text-xs leading-snug text-[var(--suave)]">{x.texto}</p>
+              </button>
+            </li>
+          ))}
+        </ol>
+      </div>
+    )
+  }
   return (
     <div data-escena>
       <nav aria-label="Fases" className="mb-4 flex flex-wrap gap-2">
@@ -286,6 +329,7 @@ function EscenaVista({ v, fase, onFase }: { v: Extract<Visual, { tipo: 'escena' 
             {x.nombre}
           </button>
         ))}
+        <span className="ml-auto">{botonTira}</span>
       </nav>
       <div className="grid items-center gap-5 md:grid-cols-[1.25fr_1fr] md:gap-8">
         <div className="relative mx-auto aspect-[4/3] max-h-[58dvh] w-full overflow-hidden rounded-2xl shadow">
