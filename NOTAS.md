@@ -276,6 +276,8 @@ Hooke usa la reconstrucción de Rita Greer (2004, Free Art License, Wikimedia Co
 - Perfiles: 6° (diferenciación, tejidos animales y vegetales, órganos), 9° (suma reproducción), 11° (todo).
 - Todo en borrador; datos por verificar en `fuentes` del JSON. Pendiente del área 1: tema 6 (técnicas de estudio).
 
+## Recarga tras publicar (14 nov)
+- Si una pestaña con la versión vieja pide un archivo que ya no existe (p. ej. las diapositivas, que se cargan aparte), la app se recarga sola una vez (`vite:preloadError` en `main.tsx`). El botón «Intentar de nuevo» del aviso general ahora recarga la página.
 ## Mitosis: láminas propias (14 nov)
 - El bloque `mitosis` (4.1) tiene 12 láminas: pregunta inicial de los 46 libros, interfase, las 4 fases en tarjetas, una lámina por fase con su dibujo (`celula-interfase|profase|metafase|anafase|telofase`, del mismo `CelulaDividiendo`), cromosoma vs cromátida, el huso, 46 → 46 + 46, el diagrama de división y una pregunta final.
 - Prometafase (lámina 6) con `"nivel": "avanzado"`: solo sale con Grado 11°. Cualquier lámina puede llevar `nivel` (básico/intermedio/avanzado) y se filtra según el `nivelDibujo` del grado elegido (`lib/diapositivas.ts`). Dibujo: `celula-prometafase` (`Prometafase` en `CelulaDividiendo.tsx`).
