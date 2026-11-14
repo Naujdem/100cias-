@@ -251,3 +251,77 @@ export function EscenaAnimales({ fase }: { fase: string }) {
     </svg>
   )
 }
+
+/* ── plantas: tubérculo, estolón y bulbo, paso a paso ───────────────────── */
+const TIERRA = '#8a6a4a'
+const RAIZ = '#f3ead8'
+const VERDE = '#4f8a3a'
+const Hoja = ({ x, y, a = 0, k = 1 }: { x: number; y: number; a?: number; k?: number }) => (
+  <path d="M 0 0 q 16 -12 30 -2 q -14 12 -30 2 Z" transform={`translate(${x} ${y}) rotate(${a}) scale(${k})`} fill="#7fbf5a" stroke={VERDE} strokeWidth="2" />
+)
+
+export function EscenaPorPedazos({ fase }: { fase: string }) {
+  const tu = paso(fase, 'tub')
+  const es = paso(fase, 'esto')
+  const bu = paso(fase, 'bul')
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label={`Reproducción asexual de plantas: ${fase}`} className="h-full w-full">
+      <rect x="-1500" y="-1500" width="3400" height="3300" fill="#eef6e4" />
+      <rect x="0" y="196" width="400" height="110" fill={TIERRA} />
+
+      {/* tubérculo: papa con ojos → se siembra → brota → planta con papas nuevas */}
+      <g style={ver(tu > 0)}>
+        <g style={{ transition: suave, transform: tu >= 2 ? 'translate(0, 70px)' : 'none' }}>
+          <ellipse cx="200" cy="160" rx="40" ry="28" fill="#d8b48a" stroke="#8a6a3a" strokeWidth="3" />
+          {[[184, 150], [214, 156], [198, 172]].map(([x, y], k) => <circle key={k} cx={x} cy={y} r="3" fill="#6b4a2a" />)}
+          <g style={{ transition: 'opacity 0.8s', opacity: tu >= 3 ? 1 : 0 }}>
+            <path d="M 186 182 q -10 20 -18 34 M 210 184 q 6 18 2 34" fill="none" stroke={RAIZ} strokeWidth="3" strokeLinecap="round" />
+            <path d="M 200 134 V 100" stroke={VERDE} strokeWidth="5" style={{ transition: 'transform 1s', transformOrigin: '200px 134px', transform: tu >= 4 ? 'scaleY(2.6)' : 'scaleY(1)' }} />
+          </g>
+        </g>
+        <g style={{ transition: 'opacity 0.8s', opacity: tu >= 4 ? 1 : 0 }}>
+          {[[200, 128], [-20, 136], [200, 158], [-20, 164], [-90, 120]].map(([a, y], k) => <Hoja key={k} x={200} y={y} a={a} k={1.1} />)}
+          <path d="M 200 230 q -50 6 -80 30 M 200 230 q 50 6 84 26" fill="none" stroke="#c9b08a" strokeWidth="3" />
+          {[[116, 262], [288, 258], [150, 280]].map(([x, y], k) => <ellipse key={k} cx={x} cy={y} rx="16" ry="11" fill="#d8b48a" stroke="#8a6a3a" strokeWidth="2.5" />)}
+        </g>
+        <T x={200} y={36} t={['', 'una papa con «ojos» (yemas)', 'se siembra en la tierra', 'de los ojos brotan raíces y tallo', 'planta nueva… y papas nuevas abajo'][tu] ?? ''} c="#6b4a2a" s={12} />
+      </g>
+
+      {/* estolón: planta madre → sale un estolón → echa raíces → planta hija */}
+      <g style={ver(es > 0)}>
+        <g>
+          {[200, -20, 240, -60].map((a, k) => <Hoja key={k} x={110} y={190} a={a} k={1.4} />)}
+          <path d="M 110 196 q -6 14 -2 26 M 110 196 q 8 14 4 28" fill="none" stroke={RAIZ} strokeWidth="3" />
+          <path d="M 96 170 q -8 10 0 18 q 10 -4 6 -16 Z" fill="#e04848" stroke="#9a2020" strokeWidth="1.5" />
+        </g>
+        <path d="M 116 192 Q 200 176 286 192" fill="none" stroke={VERDE} strokeWidth="4" strokeDasharray="180"
+          style={{ transition: 'stroke-dashoffset 1.4s ease', strokeDashoffset: es >= 2 ? 0 : 180 }} />
+        <line x1="200" y1="174" x2="208" y2="196" stroke="#c43c3c" strokeWidth="3" strokeDasharray="4 3" style={{ transition: 'opacity 0.5s', opacity: es >= 4 ? 1 : 0 }} />
+        <g style={{ transition: 'opacity 0.8s, transform 1s', transformOrigin: '288px 194px', opacity: es >= 3 ? 1 : 0, transform: es >= 4 ? 'scale(1.3)' : 'scale(0.6)' }}>
+          {[[200], [-20], [240], [-60]].map(([a], k) => <Hoja key={k} x={288} y={192} a={a} />)}
+          <path d="M 288 196 q -6 14 -2 24 M 288 196 q 8 12 4 26" fill="none" stroke={RAIZ} strokeWidth="3" />
+        </g>
+        <T x={200} y={50} t={['', 'una planta de fresa', 'sale un estolón: un tallo que corre por el suelo', 'en la punta echa raíces y hojas', 'se corta el estolón: una planta hija'][es] ?? ''} c={VERDE} s={12} />
+      </g>
+
+      {/* bulbo: un diente de ajo → se siembra → raíces y hojas → cabeza nueva */}
+      <g style={ver(bu > 0)}>
+        <g style={{ transition: suave, transform: bu >= 2 ? 'translate(0, 70px)' : 'none', opacity: bu >= 4 ? 0 : 1 }}>
+          <path d="M 200 140 C 214 150 220 170 210 186 Q 200 192 190 186 C 180 170 186 150 200 140 Z" fill="#f4ecdc" stroke="#a8946a" strokeWidth="2.5" />
+          <g style={{ transition: 'opacity 0.8s', opacity: bu >= 3 ? 1 : 0 }}>
+            <path d="M 194 190 q -8 18 -14 26 M 200 192 v 26 M 206 190 q 8 18 14 26" fill="none" stroke={RAIZ} strokeWidth="3" strokeLinecap="round" />
+          </g>
+        </g>
+        <g style={{ transition: 'opacity 0.8s, transform 1s', transformOrigin: '200px 210px', opacity: bu >= 3 ? 1 : 0, transform: bu >= 4 ? 'scaleY(1.25)' : 'scaleY(1)' }}>
+          <path d="M 200 210 C 196 160 184 120 176 90 M 200 210 C 202 160 210 120 222 86 M 200 210 C 200 160 200 110 200 74" fill="none" stroke={VERDE} strokeWidth="5" strokeLinecap="round" />
+        </g>
+        <g style={{ transition: 'opacity 0.8s', opacity: bu >= 4 ? 1 : 0 }}>
+          <path d="M 200 206 C 236 210 244 250 222 262 Q 200 270 178 262 C 156 250 164 210 200 206 Z" fill="#f4ecdc" stroke="#a8946a" strokeWidth="2.5" />
+          <path d="M 200 210 V 264 M 186 214 Q 176 240 186 262 M 214 214 Q 224 240 214 262" fill="none" stroke="#c9b48a" strokeWidth="2" />
+          <path d="M 190 264 q -6 14 -12 22 M 200 266 v 22 M 210 264 q 6 14 12 22" fill="none" stroke={RAIZ} strokeWidth="3" />
+        </g>
+        <T x={200} y={36} t={['', 'un diente de ajo', 'se siembra con la punta hacia arriba', 'echa raíces abajo y hojas arriba', 'bajo tierra se forma una cabeza nueva'][bu] ?? ''} c="#6b5a3a" s={12} />
+      </g>
+    </svg>
+  )
+}
