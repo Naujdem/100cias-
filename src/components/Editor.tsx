@@ -129,7 +129,7 @@ export default function Editor({ onCerrar }: { onCerrar: () => void }) {
           aria-label="Nombre del archivo"
           className="min-h-11 flex-1 rounded-xl border border-[var(--linea)] bg-[var(--tarjeta)] px-3 text-sm"
         />
-        <button type="button" onClick={descargarPdf} className="min-h-11 rounded-xl bg-[var(--acento)] px-4 text-sm font-semibold text-white">
+        <button type="button" onClick={descargarPdf} className="min-h-11 rounded-xl bg-[var(--acento)] px-4 text-sm font-semibold text-[var(--sobre-acento)]">
           Descargar PDF
         </button>
       </div>

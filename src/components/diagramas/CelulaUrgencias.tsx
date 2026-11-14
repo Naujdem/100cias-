@@ -143,7 +143,7 @@ export default function CelulaUrgencias() {
           Van a llegar {RONDA} células con un problema. Lee qué les pasa y toca en el dibujo el orgánulo que está fallando. Algunas son animales y otras vegetales.
         </p>
         <p className="mt-3 text-sm">Tienes {VIDAS} vidas y cada acierto seguido suma más puntos. También puedes responder con las teclas 1 a 9 y pasar al siguiente caso con →.</p>
-        <button type="button" data-principal onClick={empezar} className="mt-3 min-h-11 rounded-full bg-[var(--acento)] px-6 font-bold text-white">
+        <button type="button" data-principal onClick={empezar} className="mt-3 min-h-11 rounded-full bg-[var(--acento)] px-6 font-bold text-[var(--sobre-acento)]">
           Empezar
         </button>
         {mejor > 0 && <p className="mt-2 text-sm text-[var(--suave)]">Tu mejor puntaje: {mejor}</p>}
@@ -177,7 +177,7 @@ export default function CelulaUrgencias() {
         ) : (
           <p className="mt-3 text-sm">Todos los casos resueltos. Juega otra vez: salen casos distintos.</p>
         )}
-        <button type="button" data-principal onClick={empezar} className="mt-3 min-h-11 rounded-full bg-[var(--acento)] px-6 font-bold text-white">
+        <button type="button" data-principal onClick={empezar} className="mt-3 min-h-11 rounded-full bg-[var(--acento)] px-6 font-bold text-[var(--sobre-acento)]">
           Jugar otra vez
         </button>
       </PantallaCompleta>
@@ -220,7 +220,7 @@ export default function CelulaUrgencias() {
           </Lienzo>
         </div>
         <div>
-          <p className="text-xs font-bold uppercase tracking-widest text-red-800">Urgencia · célula {c.tipo}</p>
+          <p className="text-xs font-bold uppercase tracking-widest text-red-800 dark:text-red-300">Urgencia · célula {c.tipo}</p>
           <p className="mt-1 text-lg font-bold">{c.sintoma}</p>
           <div aria-live="polite" className="mt-2 min-h-[5rem] rounded-xl bg-[var(--fondo)] p-3 text-sm">
             {elegido === null ? (
@@ -230,7 +230,7 @@ export default function CelulaUrgencias() {
                 <p>
                   <span className="font-semibold">{acerto ? '¡Diagnóstico correcto!' : `Era: ${nombreDe(c)}.`}</span> {c.explica}
                 </p>
-                <button type="button" data-principal onClick={siguiente} className="mt-2 min-h-10 rounded-full bg-[var(--acento)] px-5 text-sm font-bold text-white">
+                <button type="button" data-principal onClick={siguiente} className="mt-2 min-h-10 rounded-full bg-[var(--acento)] px-5 text-sm font-bold text-[var(--sobre-acento)]">
                   {ultimo ? 'Ver resultado' : 'Siguiente caso ›'}
                 </button>
               </>
@@ -241,7 +241,7 @@ export default function CelulaUrgencias() {
       <div role="group" aria-label="Orgánulos" className="mt-2 grid grid-cols-2 gap-2 lg:grid-cols-4">
         {opciones.map((p, n) => {
           const k = llave(p.id)
-          const marca = elegido === null ? 'enabled:hover:border-[var(--acento)]' : k === c.falla ? 'border-green-700 bg-[var(--acento-suave)]/40' : k === elegido ? 'border-red-700' : 'opacity-60'
+          const marca = elegido === null ? 'enabled:hover:border-[var(--acento)]' : k === c.falla ? 'border-green-700 dark:border-green-400 bg-[var(--acento-suave)]/40' : k === elegido ? 'border-red-700 dark:border-red-400' : 'opacity-60'
           return (
             <button key={p.id} type="button" disabled={elegido !== null} onClick={() => responder(p.id)} className={`min-h-10 rounded-lg border-2 border-[var(--linea)] px-2 py-1 text-left text-sm font-semibold ${marca}`}>
               {n + 1} · {p.nombre}

@@ -508,7 +508,7 @@ export default function DetalleBloque({ bloque: b, onCerrar, posicion, onAnterio
                         aria-selected={activa === p.id}
                         onClick={() => setActiva(p.id)}
                         className={`flex min-h-12 w-full items-center justify-center gap-2 rounded-xl border-2 px-2 text-sm font-bold sm:text-base ${
-                          activa === p.id ? 'border-[var(--acento)] bg-[var(--acento)] text-white' : 'border-[var(--linea)] text-[var(--suave)] hover:border-[var(--acento)]'
+                          activa === p.id ? 'border-[var(--acento)] bg-[var(--acento)] text-[var(--sobre-acento)]' : 'border-[var(--linea)] text-[var(--suave)] hover:border-[var(--acento)]'
                         }`}
                       >
                         <span className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs ${activa === p.id ? 'bg-white text-[var(--acento)]' : 'bg-[var(--fondo)]'}`}>{n + 1}</span>

@@ -19,7 +19,7 @@ export function Pestanas<T extends string>({ valor, opciones, onCambio, etiqueta
           type="button"
           aria-pressed={valor === id}
           onClick={() => onCambio(id)}
-          className="min-h-10 rounded-full border border-[var(--acento)] px-3 text-sm font-semibold text-[var(--acento)] aria-pressed:bg-[var(--acento)] aria-pressed:text-white"
+          className="min-h-10 rounded-full border border-[var(--acento)] px-3 text-sm font-semibold text-[var(--acento)] aria-pressed:bg-[var(--acento)] aria-pressed:text-[var(--sobre-acento)]"
         >
           {texto}
         </button>
@@ -67,7 +67,7 @@ export function Clasifica({ intro, pregunta, items, opciones, pista = 'Piensa en
       <p className="mt-2 text-sm">{pregunta}</p>
       <div role="group" aria-label="Opciones" className="mt-2 flex flex-wrap gap-2">
         {opciones.map(([id, texto]) => {
-          const marca = elegida === null ? '' : id === it.r ? 'border-green-700 bg-[var(--acento-suave)]/40' : id === elegida ? 'border-red-700' : 'opacity-60'
+          const marca = elegida === null ? '' : id === it.r ? 'border-green-700 dark:border-green-400 bg-[var(--acento-suave)]/40' : id === elegida ? 'border-red-700 dark:border-red-400' : 'opacity-60'
           return (
             <button
               key={id}
@@ -146,7 +146,7 @@ function ExploraProEu() {
             type="button"
             aria-pressed={capas[c.id]}
             onClick={() => alternar(c.id)}
-            className="min-h-10 rounded-full border border-[var(--acento)] px-3 text-sm font-semibold text-[var(--acento)] aria-pressed:bg-[var(--acento)] aria-pressed:text-white"
+            className="min-h-10 rounded-full border border-[var(--acento)] px-3 text-sm font-semibold text-[var(--acento)] aria-pressed:bg-[var(--acento)] aria-pressed:text-[var(--sobre-acento)]"
           >
             {c.nombre}
           </button>
@@ -252,7 +252,7 @@ function ExploraAV() {
             type="button"
             aria-pressed={capas[c.id]}
             onClick={() => alternar(c.id)}
-            className="min-h-10 rounded-full border border-[var(--acento)] px-3 text-sm font-semibold text-[var(--acento)] aria-pressed:bg-[var(--acento)] aria-pressed:text-white"
+            className="min-h-10 rounded-full border border-[var(--acento)] px-3 text-sm font-semibold text-[var(--acento)] aria-pressed:bg-[var(--acento)] aria-pressed:text-[var(--sobre-acento)]"
           >
             {c.nombre}
           </button>
@@ -360,7 +360,7 @@ export function ExploradorBacterias({ modo = 'formas' }: { modo?: 'formas' | 'do
                 type="button"
                 aria-pressed={f === x.id}
                 onClick={() => setF(x.id)}
-                className="min-h-10 rounded-full border border-[var(--acento)] px-3 text-sm font-semibold text-[var(--acento)] aria-pressed:bg-[var(--acento)] aria-pressed:text-white"
+                className="min-h-10 rounded-full border border-[var(--acento)] px-3 text-sm font-semibold text-[var(--acento)] aria-pressed:bg-[var(--acento)] aria-pressed:text-[var(--sobre-acento)]"
               >
                 {x.nombre}
               </button>
@@ -459,7 +459,7 @@ export function GaleriaEspecializadas() {
         <p className="mt-2 font-semibold">Mira su forma: ¿para qué le sirve?</p>
         <div role="group" aria-label="Opciones" className="mt-1 flex flex-wrap gap-2">
           {e.opciones.map((o, k) => {
-            const marca = elegida === null ? '' : k === e.correcta ? 'border-green-700 bg-[var(--acento-suave)]/40' : k === elegida ? 'border-red-700' : 'opacity-60'
+            const marca = elegida === null ? '' : k === e.correcta ? 'border-green-700 dark:border-green-400 bg-[var(--acento-suave)]/40' : k === elegida ? 'border-red-700 dark:border-red-400' : 'opacity-60'
             return (
               <button
                 key={o}

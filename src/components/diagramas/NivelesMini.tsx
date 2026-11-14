@@ -131,7 +131,7 @@ function MiniMoleculas() {
                 <span className="font-semibold">¡Eso es!</span> {r.dato}
               </p>
               {reto < RETOS.length - 1 && (
-                <button type="button" data-principal onClick={() => ir(reto + 1)} className="mt-2 min-h-10 rounded-full bg-[var(--acento)] px-5 text-sm font-bold text-white">
+                <button type="button" data-principal onClick={() => ir(reto + 1)} className="mt-2 min-h-10 rounded-full bg-[var(--acento)] px-5 text-sm font-bold text-[var(--sobre-acento)]">
                   Siguiente reto ›
                 </button>
               )}
@@ -208,7 +208,7 @@ function MiniTejido() {
           <p className="mt-2">
             {n === 1 ? 'Una célula sola se acorta, pero casi no mueve nada.' : n < 10 ? 'Unas pocas ya tiran un poco más.' : 'Muchas células parecidas, unidas y a la vez: esa fuerza es del tejido, no de ninguna célula sola.'}
           </p>
-          <button type="button" data-principal aria-pressed={tira} onClick={() => setTira(!tira)} className="mt-2 min-h-10 rounded-full bg-[var(--acento)] px-5 text-sm font-bold text-white">
+          <button type="button" data-principal aria-pressed={tira} onClick={() => setTira(!tira)} className="mt-2 min-h-10 rounded-full bg-[var(--acento)] px-5 text-sm font-bold text-[var(--sobre-acento)]">
             {tira ? 'Relajar' : 'Contraer'}
           </button>
         </Texto>
@@ -357,7 +357,7 @@ function MiniOrganismo() {
               type="button"
               aria-pressed={apagado}
               onClick={() => setOff(apagado ? null : i)}
-              className={`min-h-24 rounded-xl border-2 p-2 text-center text-sm font-semibold transition ${apagado ? 'border-red-700 bg-[var(--fondo)] opacity-60 grayscale' : off !== null ? 'border-amber-600' : 'border-[var(--linea)] hover:border-[var(--acento)]'}`}
+              className={`min-h-24 rounded-xl border-2 p-2 text-center text-sm font-semibold transition ${apagado ? 'border-red-700 dark:border-red-400 bg-[var(--fondo)] opacity-60 grayscale' : off !== null ? 'border-amber-600' : 'border-[var(--linea)] hover:border-[var(--acento)]'}`}
             >
               <span aria-hidden="true" className="block text-3xl">{s.icono}</span>
               {s.nombre}

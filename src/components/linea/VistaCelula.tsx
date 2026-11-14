@@ -22,7 +22,7 @@ export default function VistaCelula({ bloques, abierto, onSeleccionar, carril, e
             type="button"
             aria-pressed={tipo === id}
             onClick={() => setTipo(id)}
-            className="min-h-10 rounded-full border border-[var(--acento)] px-3 text-sm font-semibold text-[var(--acento)] aria-pressed:bg-[var(--acento)] aria-pressed:text-white"
+            className="min-h-10 rounded-full border border-[var(--acento)] px-3 text-sm font-semibold text-[var(--acento)] aria-pressed:bg-[var(--acento)] aria-pressed:text-[var(--sobre-acento)]"
           >
             {texto}
           </button>

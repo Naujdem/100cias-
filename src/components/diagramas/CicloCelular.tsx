@@ -223,7 +223,7 @@ export function SemaforosCiclo() {
           <p className="mt-1 text-base font-bold">{c.situacion}</p>
           <div className="mt-2 flex gap-2">
             {([true, false] as const).map((v) => (
-              <button key={String(v)} type="button" disabled={r !== null} onClick={() => setResp((x) => x.map((y, k) => (k === i ? v : y)))} className={`min-h-10 flex-1 rounded-lg border-2 px-3 font-semibold ${r === null ? 'border-[var(--linea)] hover:border-[var(--acento)]' : v === c.pasa ? 'border-green-700 bg-[var(--acento-suave)]/40' : v === r ? 'border-red-700' : 'opacity-60'}`}>
+              <button key={String(v)} type="button" disabled={r !== null} onClick={() => setResp((x) => x.map((y, k) => (k === i ? v : y)))} className={`min-h-10 flex-1 rounded-lg border-2 px-3 font-semibold ${r === null ? 'border-[var(--linea)] hover:border-[var(--acento)]' : v === c.pasa ? 'border-green-700 dark:border-green-400 bg-[var(--acento-suave)]/40' : v === r ? 'border-red-700 dark:border-red-400' : 'opacity-60'}`}>
                 {v ? '🟢 Sigue' : '🔴 Se detiene'}
               </button>
             ))}
@@ -234,7 +234,7 @@ export function SemaforosCiclo() {
                 <span className="font-semibold">{r === c.pasa ? '¡Bien!' : 'No.'}</span> {c.explica}
               </p>
               {i < CASOS.length - 1 && (
-                <button type="button" data-principal onClick={() => setI(i + 1)} className="mt-2 min-h-10 rounded-full bg-[var(--acento)] px-5 text-sm font-bold text-white">
+                <button type="button" data-principal onClick={() => setI(i + 1)} className="mt-2 min-h-10 rounded-full bg-[var(--acento)] px-5 text-sm font-bold text-[var(--sobre-acento)]">
                   Siguiente caso ›
                 </button>
               )}

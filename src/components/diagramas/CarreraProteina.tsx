@@ -178,7 +178,7 @@ export default function CarreraProteina() {
           Van a salir {RONDA} proteínas del núcleo, cada una con un destino distinto. Llévalas parada por parada lo más rápido que puedas. Cada parada equivocada suma {CASTIGO} segundos.
         </p>
         <p className="mt-3 text-sm">Teclas: 1 a {OPCIONES.length} eligen la siguiente parada y → pasa a la siguiente proteína.</p>
-        <button type="button" data-principal onClick={empezar} className="mt-3 min-h-11 rounded-full bg-[var(--acento)] px-6 font-bold text-white">
+        <button type="button" data-principal onClick={empezar} className="mt-3 min-h-11 rounded-full bg-[var(--acento)] px-6 font-bold text-[var(--sobre-acento)]">
           ¡Arranca!
         </button>
         {mejor !== null && <p className="mt-2 text-sm text-[var(--suave)]">Tu mejor tiempo: {mejor} s</p>}
@@ -195,7 +195,7 @@ export default function CarreraProteina() {
           {mejor !== null && total <= mejor ? ' · ¡es tu mejor tiempo!' : mejor !== null ? ` · tu mejor tiempo: ${mejor} s` : ''}
         </p>
         <p className="mt-3 text-sm">Regla para recordar: si la proteína se queda en el citosol, la hace un ribosoma libre. Si va a la membrana, al lisosoma o hacia afuera, pasa por el retículo y el Golgi.</p>
-        <button type="button" data-principal onClick={empezar} className="mt-3 min-h-11 rounded-full bg-[var(--acento)] px-6 font-bold text-white">
+        <button type="button" data-principal onClick={empezar} className="mt-3 min-h-11 rounded-full bg-[var(--acento)] px-6 font-bold text-[var(--sobre-acento)]">
           Correr otra vez
         </button>
       </PantallaCompleta>
@@ -208,7 +208,7 @@ export default function CarreraProteina() {
       <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm font-semibold">
         <span>Proteína {i + 1} de {cola.length}</span>
         <span>⏱ {total} s</span>
-        {errores > 0 && <span className="text-red-800">{errores} {errores === 1 ? 'error' : 'errores'}</span>}
+        {errores > 0 && <span className="text-red-800 dark:text-red-300">{errores} {errores === 1 ? 'error' : 'errores'}</span>}
       </div>
       <div className="mt-2 grid gap-3 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)]">
         <div className="aspect-[4/3] max-h-[var(--alto-visor,38dvh)] w-full overflow-hidden rounded-xl border border-[var(--linea)]">
@@ -218,9 +218,9 @@ export default function CarreraProteina() {
           <p className="text-lg font-bold">{p.nombre}</p>
           <p className="mt-1">{p.pista}</p>
           <p className="mt-2 font-semibold">{llego ? '¡Llegó a su destino!' : `Está en: ${PARADAS[hecho[hecho.length - 1]].nombre}. ¿Adónde va ahora?`}</p>
-          {nota && <p className={`mt-1 ${error ? 'text-red-800' : ''}`}>{nota}</p>}
+          {nota && <p className={`mt-1 ${error ? 'text-red-800 dark:text-red-300' : ''}`}>{nota}</p>}
           {llego && (
-            <button type="button" data-principal onClick={pasar} className="mt-2 min-h-10 rounded-full bg-[var(--acento)] px-5 text-sm font-bold text-white">
+            <button type="button" data-principal onClick={pasar} className="mt-2 min-h-10 rounded-full bg-[var(--acento)] px-5 text-sm font-bold text-[var(--sobre-acento)]">
               {i >= cola.length - 1 ? 'Ver tiempo' : 'Siguiente proteína ›'}
             </button>
           )}
@@ -228,7 +228,7 @@ export default function CarreraProteina() {
       </div>
       <div role="group" aria-label="Siguiente parada" className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-4 lg:grid-cols-7">
         {OPCIONES.map((o, k) => (
-          <button key={o} type="button" disabled={llego} onClick={() => elegir(o)} className={`min-h-12 rounded-lg border-2 px-2 text-left text-sm font-semibold disabled:opacity-50 ${error === o ? 'border-red-700' : hecho.includes(o) ? 'border-green-700 bg-[var(--acento-suave)]/40' : 'border-[var(--linea)] enabled:hover:border-[var(--acento)]'}`}>
+          <button key={o} type="button" disabled={llego} onClick={() => elegir(o)} className={`min-h-12 rounded-lg border-2 px-2 text-left text-sm font-semibold disabled:opacity-50 ${error === o ? 'border-red-700 dark:border-red-400' : hecho.includes(o) ? 'border-green-700 dark:border-green-400 bg-[var(--acento-suave)]/40' : 'border-[var(--linea)] enabled:hover:border-[var(--acento)]'}`}>
             <span className="text-xs text-[var(--suave)]">{k + 1} · </span>
             {PARADAS[o].nombre}
           </button>

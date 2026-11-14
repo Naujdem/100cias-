@@ -52,7 +52,7 @@ export default function NivelesOrganizacion({ inicial = 4 }: { inicial?: number 
             type="button"
             aria-pressed={modo === id}
             onClick={() => setModo(id)}
-            className="min-h-10 rounded-full border border-[var(--acento)] px-3 text-sm font-semibold text-[var(--acento)] aria-pressed:bg-[var(--acento)] aria-pressed:text-white"
+            className="min-h-10 rounded-full border border-[var(--acento)] px-3 text-sm font-semibold text-[var(--acento)] aria-pressed:bg-[var(--acento)] aria-pressed:text-[var(--sobre-acento)]"
           >
             {texto}
           </button>
@@ -480,7 +480,7 @@ function Seres() {
                           setRevisado(false)
                         }}
                         className={`min-h-10 w-full rounded-lg border-2 px-2 text-sm font-semibold transition aria-pressed:bg-[var(--acento-suave)]/50 ${
-                          revisado ? (ok ? 'border-green-700' : 'border-red-700') : 'border-[var(--linea)] hover:border-[var(--acento)]'
+                          revisado ? (ok ? 'border-green-700 dark:border-green-400' : 'border-red-700 dark:border-red-400') : 'border-[var(--linea)] hover:border-[var(--acento)]'
                         }`}
                       >
                         {marcada ? 'Sí' : '—'}
@@ -495,7 +495,7 @@ function Seres() {
         </table>
       </div>
       <div className="mt-3 flex flex-wrap gap-2">
-        <button type="button" data-principal onClick={() => setRevisado(true)} className="min-h-10 rounded-lg bg-[var(--acento)] px-4 text-sm font-semibold text-white">
+        <button type="button" data-principal onClick={() => setRevisado(true)} className="min-h-10 rounded-lg bg-[var(--acento)] px-4 text-sm font-semibold text-[var(--sobre-acento)]">
           Comprobar
         </button>
         <button type="button" onClick={reiniciar} className="min-h-10 rounded-lg border border-[var(--linea)] px-4 text-sm font-semibold">
@@ -573,7 +573,7 @@ function Emergente() {
       </p>
       <div role="group" aria-label="Opciones" className="mt-2 flex flex-col gap-2">
         {p.opciones.map((o, i) => {
-          const marca = elegida === null ? '' : i === p.correcta ? 'border-green-700 bg-[var(--acento-suave)]/40' : i === elegida ? 'border-red-700' : 'opacity-60'
+          const marca = elegida === null ? '' : i === p.correcta ? 'border-green-700 dark:border-green-400 bg-[var(--acento-suave)]/40' : i === elegida ? 'border-red-700 dark:border-red-400' : 'opacity-60'
           return (
             <button
               key={o}

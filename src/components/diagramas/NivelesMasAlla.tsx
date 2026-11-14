@@ -187,7 +187,7 @@ function Cual() {
       <p className="mt-2 rounded-2xl border-2 border-[var(--acento)] bg-[var(--fondo)] p-4 text-center text-lg font-bold">{c.texto}</p>
       <div role="group" aria-label="Opciones" className="mt-3 grid grid-cols-2 gap-2 lg:grid-cols-4">
         {NOMBRES.map((n, k) => {
-          const marca = elegida === null ? 'enabled:hover:border-[var(--acento)]' : k === c.es ? 'border-green-700 bg-[var(--acento-suave)]/40' : k === elegida ? 'border-red-700' : 'opacity-60'
+          const marca = elegida === null ? 'enabled:hover:border-[var(--acento)]' : k === c.es ? 'border-green-700 dark:border-green-400 bg-[var(--acento-suave)]/40' : k === elegida ? 'border-red-700 dark:border-red-400' : 'opacity-60'
           return (
             <button key={n} type="button" disabled={elegida !== null} onClick={() => responder(k)} className={`min-h-12 rounded-lg border-2 border-[var(--linea)] px-3 text-left text-sm font-semibold ${marca}`}>
               {k + 1} · {n}
@@ -204,7 +204,7 @@ function Cual() {
               <span className="font-semibold">{elegida === c.es ? '¡Correcto!' : `Era «${NOMBRES[c.es]}».`}</span> {c.explica}
             </p>
             {i < CASOS.length - 1 ? (
-              <button type="button" data-principal onClick={() => setI(i + 1)} className="mt-2 min-h-10 rounded-full bg-[var(--acento)] px-5 text-sm font-bold text-white">
+              <button type="button" data-principal onClick={() => setI(i + 1)} className="mt-2 min-h-10 rounded-full bg-[var(--acento)] px-5 text-sm font-bold text-[var(--sobre-acento)]">
                 Siguiente ›
               </button>
             ) : (

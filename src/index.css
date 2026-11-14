@@ -9,6 +9,7 @@
   --tarjeta: #fffdf8;
   --acento: #0d5f58;
   --acento-suave: #cfe7e1;
+  --sobre-acento: #ffffff;
   --serif: "Fraunces Variable", Georgia, "Times New Roman", serif;
 }
 
@@ -21,6 +22,7 @@
     --tarjeta: #172120;
     --acento: #2dd4bf;
     --acento-suave: #134e4a;
+    --sobre-acento: #0f1514;
   }
 }
 

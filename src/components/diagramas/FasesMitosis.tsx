@@ -105,7 +105,7 @@ function Reconoce() {
           {aciertos} de {cola.length} fases reconocidas{aciertos >= mejor && aciertos > 0 ? ' · ¡tu mejor marca!' : ` · tu mejor marca: ${mejor}`}
         </p>
         <p className="mt-1 text-sm">Al microscopio las células salen giradas y en cualquier posición, como aquí: fíjate en los cromosomas, no en hacia dónde apunta la célula.</p>
-        <button type="button" data-principal onClick={otraVez} className="mt-3 min-h-11 rounded-full bg-[var(--acento)] px-6 font-bold text-white">
+        <button type="button" data-principal onClick={otraVez} className="mt-3 min-h-11 rounded-full bg-[var(--acento)] px-6 font-bold text-[var(--sobre-acento)]">
           Jugar otra vez
         </button>
       </div>
@@ -126,7 +126,7 @@ function Reconoce() {
               <p>
                 <span className="font-semibold">{elegida === c.etapa ? '¡Correcto!' : `Era ${FASES[c.etapa].nombre.toLowerCase()}.`}</span> {FASES[c.etapa].pista}
               </p>
-              <button type="button" data-principal onClick={siguiente} className="mt-2 min-h-10 rounded-full bg-[var(--acento)] px-5 text-sm font-bold text-white">
+              <button type="button" data-principal onClick={siguiente} className="mt-2 min-h-10 rounded-full bg-[var(--acento)] px-5 text-sm font-bold text-[var(--sobre-acento)]">
                 {i >= cola.length - 1 ? 'Ver resultado' : 'Siguiente ›'}
               </button>
             </>
@@ -135,7 +135,7 @@ function Reconoce() {
       </div>
       <div role="group" aria-label="Fases" className="mt-3 grid grid-cols-2 gap-2 lg:grid-cols-5">
         {FASES.map((f, n) => (
-          <button key={f.nombre} type="button" disabled={elegida !== null} onClick={() => responder(n)} className={`min-h-11 rounded-lg border-2 px-2 text-left text-sm font-semibold ${elegida === null ? 'border-[var(--linea)] hover:border-[var(--acento)]' : n === c.etapa ? 'border-green-700 bg-[var(--acento-suave)]/40' : n === elegida ? 'border-red-700' : 'border-[var(--linea)] opacity-60'}`}>
+          <button key={f.nombre} type="button" disabled={elegida !== null} onClick={() => responder(n)} className={`min-h-11 rounded-lg border-2 px-2 text-left text-sm font-semibold ${elegida === null ? 'border-[var(--linea)] hover:border-[var(--acento)]' : n === c.etapa ? 'border-green-700 dark:border-green-400 bg-[var(--acento-suave)]/40' : n === elegida ? 'border-red-700 dark:border-red-400' : 'border-[var(--linea)] opacity-60'}`}>
             {n + 1} · {f.nombre}
           </button>
         ))}
@@ -173,7 +173,7 @@ function Ordena() {
         {orden.map((e) => {
           const pos = hechas.indexOf(e)
           return (
-            <button key={e} type="button" onClick={() => tocar(e)} aria-label={pos >= 0 ? `${pos + 1}: ${FASES[e].nombre}` : 'Célula sin ordenar'} className={`relative aspect-[4/3] overflow-hidden rounded-xl border-4 ${pos >= 0 ? 'border-green-700' : error === e ? 'border-red-700' : 'border-[var(--linea)] hover:border-[var(--acento)]'}`}>
+            <button key={e} type="button" onClick={() => tocar(e)} aria-label={pos >= 0 ? `${pos + 1}: ${FASES[e].nombre}` : 'Célula sin ordenar'} className={`relative aspect-[4/3] overflow-hidden rounded-xl border-4 ${pos >= 0 ? 'border-green-700 dark:border-green-400' : error === e ? 'border-red-700 dark:border-red-400' : 'border-[var(--linea)] hover:border-[var(--acento)]'}`}>
               <Dibujo etapa={e} />
               {pos >= 0 && <span className="absolute left-1 top-1 rounded-full bg-green-700 px-2 text-sm font-bold text-white">{pos + 1} · {FASES[e].nombre}</span>}
             </button>
@@ -184,7 +184,7 @@ function Ordena() {
         {listo ? (
           <>
             <p className="font-semibold">{fallos === 0 ? '¡Perfecto, sin errores!' : `¡Ordenadas! Con ${fallos} ${fallos === 1 ? 'error' : 'errores'}.`}</p>
-            <button type="button" data-principal onClick={otraVez} className="mt-2 min-h-10 rounded-full bg-[var(--acento)] px-5 text-sm font-bold text-white">
+            <button type="button" data-principal onClick={otraVez} className="mt-2 min-h-10 rounded-full bg-[var(--acento)] px-5 text-sm font-bold text-[var(--sobre-acento)]">
               Otra vez
             </button>
           </>

@@ -62,7 +62,7 @@ export default function Cuaderno({ cuaderno, titulo }: { cuaderno: DatosCuaderno
             type="button"
             aria-pressed={nivel === n.id}
             onClick={() => elegir(n.id)}
-            className="min-h-10 rounded-full border border-[var(--acento)] px-3 text-sm font-semibold text-[var(--acento)] aria-pressed:bg-[var(--acento)] aria-pressed:text-white"
+            className="min-h-10 rounded-full border border-[var(--acento)] px-3 text-sm font-semibold text-[var(--acento)] aria-pressed:bg-[var(--acento)] aria-pressed:text-[var(--sobre-acento)]"
           >
             {n.texto}
           </button>

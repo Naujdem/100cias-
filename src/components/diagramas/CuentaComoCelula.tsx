@@ -70,7 +70,7 @@ export default function CuentaComoCelula() {
           <>
             <p className="mt-1 text-sm">¿Cuenta como una célula?</p>
             <div className="mt-2 flex gap-2">
-              <button type="button" onClick={() => setApuestas({ ...apuestas, [sel]: true })} className="min-h-10 rounded-lg bg-[var(--acento)] px-4 text-sm font-semibold text-white">
+              <button type="button" onClick={() => setApuestas({ ...apuestas, [sel]: true })} className="min-h-10 rounded-lg bg-[var(--acento)] px-4 text-sm font-semibold text-[var(--sobre-acento)]">
                 Sí
               </button>
               <button type="button" onClick={() => setApuestas({ ...apuestas, [sel]: false })} className="min-h-10 rounded-lg border border-[var(--acento)] px-4 text-sm font-semibold text-[var(--acento)]">
