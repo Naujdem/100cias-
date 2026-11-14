@@ -9,6 +9,7 @@ import { EscenaAnimalVegetal, EscenaProEu } from './EscenaTransforma.tsx'
 import { EscenaEndosimbiosis, EscenaRespiracion } from './EscenaEnergia.tsx'
 import { EscenaMuerteCelular, EscenaDiferenciacion } from './EscenaVidaCelula.tsx'
 import { EscenaFotosintesis, EscenaOrigen } from './EscenaOrigenFoto.tsx'
+import { EscenaUnicelulares, EscenaFlor, EscenaAnimales } from './EscenasReproduccion.tsx'
 import { EscenaMicroscopio, EscenaAumento, EscenaOpticoElectronico } from './EscenasMicroscopio.tsx'
 
 /** Escenas vivas: un dibujo que se transforma según la fase (`fase` = id de la fase en el JSON). */
@@ -27,6 +28,9 @@ export const ESCENAS: Record<string, ComponentType<{ fase: string }>> = {
   fotosintesis: EscenaFotosintesis,
   origen: EscenaOrigen,
   microscopio: EscenaMicroscopio,
+  'repro-unicelulares': EscenaUnicelulares,
+  flor: EscenaFlor,
+  'repro-animales': EscenaAnimales,
   aumento: EscenaAumento,
   'optico-electronico': EscenaOpticoElectronico,
   'celula-animal': EscenaZoomCelula,

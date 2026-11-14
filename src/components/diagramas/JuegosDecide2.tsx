@@ -311,3 +311,74 @@ export function OpticoElectronicoJuego() {
     />
   )
 }
+
+export function ReproUnicelularesJuego() {
+  return (
+    <JuegoDecide
+      titulo="¿Cómo se reproduce?"
+      pregunta="¿Qué tipo de reproducción es?"
+      instrucciones="Los unicelulares se reproducen sobre todo de forma asexual. Decide cuál."
+      clave="cien:repuni-mejor"
+      opciones={[o('bip', 'Bipartición', '✂️'), o('gem', 'Gemación', '🫧'), o('esp', 'Esporulación', '💥')]}
+      cartas={[
+        c('🦠', 'Una bacteria se parte en dos iguales', 'bip', 'Bipartición: dos hijas del mismo tamaño.'),
+        c('🍞', 'A la levadura le sale una yema que se separa', 'gem', 'Gemación: la hija empieza más pequeña.'),
+        c('💧', 'Una ameba se estira y se divide por la mitad', 'bip', 'Bipartición.'),
+        c('🦟', 'El parásito de la malaria forma muchas células a la vez', 'esp', 'Esporulación: el núcleo se divide muchas veces y luego salen muchas hijas.'),
+        c('🥿', 'Un paramecio se divide en dos', 'bip', 'Bipartición (transversal).'),
+        c('🟢', 'Una euglena se parte a lo largo', 'bip', 'Bipartición (longitudinal).'),
+        c('🫧', 'Queda una célula grande con una pequeña pegada', 'gem', 'Así se ve la gemación.'),
+        c('🎆', 'Una célula se rompe y libera muchas esporas', 'esp', 'Esporulación.'),
+      ]}
+      cierre="Bipartición: 1 → 2 iguales. Gemación: una yema que crece y se separa. Esporulación: 1 → muchas a la vez."
+    />
+  )
+}
+
+export function ReproPlantasJuego() {
+  return (
+    <JuegoDecide
+      titulo="¿Semilla o pedazo?"
+      pregunta="¿Reproducción sexual o asexual?"
+      instrucciones="Si viene de una semilla (flor, polinización), es sexual. Si viene de un pedazo de la planta, es asexual."
+      clave="cien:repplantas-mejor"
+      opciones={[o('sex', 'Sexual (semilla)', '🌸'), o('asex', 'Asexual (un pedazo)', '✂️')]}
+      cartas={[
+        c('🫘', 'Sembrar frijol', 'sex', 'La semilla viene de la flor fecundada.'),
+        c('🌹', 'Un esqueje de rosa que echa raíces', 'asex', 'Un pedazo de tallo forma una planta igual.'),
+        c('🥔', 'Sembrar un pedazo de papa con «ojos»', 'asex', 'El tubérculo es un tallo subterráneo.'),
+        c('🍓', 'La fresa que lanza estolones', 'asex', 'Tallos que corren por el suelo y echan raíces.'),
+        c('🌿', 'Sembrar yuca por estacas', 'asex', 'Un trozo de tallo: plantas iguales a la madre.'),
+        c('🐝', 'Una abeja lleva polen de flor en flor', 'sex', 'La polinización es el inicio de la reproducción sexual.'),
+        c('🧅', 'Una cebolla que retoña', 'asex', 'El bulbo forma una planta nueva.'),
+        c('🥭', 'Un árbol de mango que nació de una pepa', 'sex', 'La pepa es la semilla.'),
+        c('🎋', 'Sembrar caña con trozos de tallo', 'asex', 'Como la yuca: por estacas.'),
+      ]}
+      cierre="Semilla = reproducción sexual (flor, polen, fecundación): hijos distintos. Pedazo de planta = asexual: hijos iguales a la madre."
+    />
+  )
+}
+
+export function ReproAnimalesJuego() {
+  return (
+    <JuegoDecide
+      titulo="¿Huevo o vientre?"
+      pregunta="¿Cómo se desarrollan sus crías?"
+      instrucciones="Ovíparos: el embrión crece en un huevo fuera del cuerpo. Vivíparos: dentro de la madre. Ovovivíparos: en un huevo que se queda dentro de la madre."
+      clave="cien:repanimales-mejor"
+      opciones={[o('ovi', 'Ovíparo', '🥚'), o('viv', 'Vivíparo', '🤰'), o('ovov', 'Ovovivíparo', '🥚🤰')]}
+      cartas={[
+        c('🐔', 'Gallina', 'ovi', 'Pone huevos y los empolla fuera de su cuerpo.'),
+        c('🐕', 'Perro', 'viv', 'Las crías crecen dentro de la madre.'),
+        c('🐢', 'Tortuga', 'ovi', 'Entierra sus huevos en la arena.'),
+        c('🐋', 'Ballena', 'viv', 'Es un mamífero: la cría nace viva.'),
+        c('🐍', 'Boa', 'ovov', 'Los huevos se quedan dentro y las crías nacen vivas.'),
+        c('🐟', 'Guppy', 'ovov', 'Pez de acuario: las crías salen del huevo dentro de la madre.'),
+        c('🐸', 'Rana', 'ovi', 'Pone huevos en el agua.'),
+        c('🦇', 'Murciélago', 'viv', 'Es un mamífero.'),
+        c('🦆', 'Ornitorrinco', 'ovi', 'Un mamífero raro que pone huevos.'),
+      ]}
+      cierre="Ovíparo: huevo afuera. Vivíparo: crece dentro de la madre. Ovovivíparo: huevo que se queda dentro hasta que nace la cría."
+    />
+  )
+}

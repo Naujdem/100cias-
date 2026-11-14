@@ -328,3 +328,8 @@ Hooke usa la reconstrucción de Rita Greer (2004, Free Art License, Wikimedia Co
 - **Síntesis de proteínas (transcripción y traducción): decidido ir a fondo en el área 2 (genética).** Cuando exista, la ruta de proteínas del tema 5 debe llevar «Más sobre esto» hacia allá.
 - Escenas en `components/escenas/EscenaOrigenFoto.tsx`.
 - Nuevo tema **Técnicas de estudio** (orden 10, etiqueta 6; `tecnicas-estudio.json`): El microscopio óptico (escena `microscopio` con zoom a partes y a los tres sistemas; simulador `enfoca-muestra` que bloquea el macrométrico con 40×; juego «¿Mecánica, óptica o iluminación?»), ¿Cuánto aumenta? (escena `aumento` de simple vista a 1000×; juego `aumento-juego`), Óptico y electrónico (desde 9°; escena `optico-electronico`; juego; fraccionamiento solo como lámina para 11°). Escenas en `EscenasMicroscopio.tsx`. Con esto la ruta del área 1 está completa (síntesis de proteínas va al área 2).
+
+## Reproducción de los seres vivos (14 nov)
+- Nuevo tema `reproduccion-seres-vivos` (orden 9.5, etiqueta 5b), todos los grados: Asexual y sexual (la antigua ficha `reproduccion` del tema 9, movida aquí como `asexual-sexual`), Reproducción en los unicelulares (escena `repro-unicelulares`; conjugación desde 9°; juego «¿Cómo se reproduce?»), en las plantas (estacas, tubérculos, estolones, bulbos; escena `flor` de la flor a la semilla; helechos y musgos para 11°; juego «¿Semilla o pedazo?»), en los animales (escena `repro-animales`: hidra, estrella, fecundación externa e interna; juego «¿Huevo o vientre?»).
+- La reproducción humana queda fuera a propósito (va con los sistemas del cuerpo humano).
+- Unicelulares (tema 3) remite aquí con «Más sobre esto».
