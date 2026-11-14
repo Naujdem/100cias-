@@ -194,6 +194,7 @@ export default function Presentacion({ bloques, inicio, temaId, unidad = 'Hito',
               }`}
             >
               {numero(x.etiqueta, k)}
+              {x.id === b.id && <span className="ml-1.5 hidden max-w-[22rem] truncate font-semibold sm:inline">{x.titulo}</span>}
             </button>
           ))}
         </nav>
@@ -233,7 +234,7 @@ export default function Presentacion({ bloques, inicio, temaId, unidad = 'Hito',
       <main
         className="min-h-0 flex-1 overflow-y-auto px-4 py-5 sm:px-8"
         onClick={(e) => {
-          if ((e.target as HTMLElement).closest('button, a, input, select, textarea, summary, [data-diagrama]')) return
+          if ((e.target as HTMLElement).closest('button, a, input, select, textarea, summary, [data-diagrama], [data-escena]')) return
           if (paso < pasosDe(it.d)) setPaso((p) => p + 1)
         }}
       >
@@ -244,6 +245,7 @@ export default function Presentacion({ bloques, inicio, temaId, unidad = 'Hito',
             siguienteBloque={siguienteBloque}
             onSiguiente={() => (siguienteBloque ? irBloque(1) : primeraActividad >= 0 && ir(primeraActividad))}
             paso={paso}
+            onPaso={setPaso}
             onAtajo={(tema, bloque) => {
               onCerrar()
               atajos?.ir(tema, bloque)
@@ -348,6 +350,7 @@ function Lamina({
   onSiguiente,
   paso,
   onAtajo,
+  onPaso,
 }: {
   it: Item
   onVerFicha: (id: string) => void
@@ -355,9 +358,10 @@ function Lamina({
   onSiguiente: () => void
   paso: number
   onAtajo: (tema: string, bloque?: string) => void
+  onPaso: (n: number) => void
 }) {
   const { bloque: b, d } = it
-  if (d.tipo === 'lamina') return <LaminaVista lamina={d.lamina} paso={paso} onAtajo={onAtajo} />
+  if (d.tipo === 'lamina') return <LaminaVista lamina={d.lamina} paso={paso} onAtajo={onAtajo} onPaso={onPaso} />
   const Diagrama = b.diagrama ? DIAGRAMAS[b.diagrama] : undefined
 
   if (d.tipo === 'portada') {

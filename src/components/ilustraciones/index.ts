@@ -3,7 +3,7 @@ import CorchoLamina from './CorchoLamina.tsx'
 import MicroscopioLeeuwenhoek from './MicroscopioLeeuwenhoek.tsx'
 import TejidoVegetal from './TejidoVegetal.tsx'
 import TejidoAnimal from './TejidoAnimal.tsx'
-import CelulaDividiendo from './CelulaDividiendo.tsx'
+import CelulaDividiendo, { Prometafase } from './CelulaDividiendo.tsx'
 import Matraz from './Matraz.tsx'
 import FrascosRedi from './FrascosRedi.tsx'
 import EscenaEndosimbiosis from './EscenaEndosimbiosis.tsx'
@@ -26,7 +26,12 @@ export const ILUSTRACIONES_SVG: Record<string, ComponentType> = {
   'endosimbiosis-mito': () => EscenaEndosimbiosis({ paso: 4 }),
   'matraz-cisne': () => Matraz({ tipo: 'cisne' }),
   'frascos-redi': () => FrascosRedi({ dia: 5 }),
+  'celula-interfase': () => CelulaDividiendo({ etapa: 0 }),
+  'celula-profase': () => CelulaDividiendo({ etapa: 1 }),
+  'celula-prometafase': Prometafase,
+  'celula-metafase': () => CelulaDividiendo({ etapa: 2 }),
   'celula-anafase': () => CelulaDividiendo({ etapa: 3 }),
+  'celula-telofase': () => CelulaDividiendo({ etapa: 4 }),
   'tejido-vegetal': TejidoVegetal,
   'tejido-animal': TejidoAnimal,
   'postulado-seres': PostuladoSeres,

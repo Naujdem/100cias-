@@ -419,7 +419,198 @@
           "explicacion": "Son parte del citoesqueleto."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "diapositivas": [
+        {
+          "titulo": "Repartir sin que nadie quede con menos",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Tienes 46 libros y debes dar los mismos 46 a dos personas. ¿Qué haces primero?",
+            "opciones": [
+              "Partir cada libro por la mitad",
+              "Dar 23 a cada una",
+              "Sacar una copia de cada libro"
+            ],
+            "correcta": 2,
+            "explicacion": "Así hace la célula: primero copia su ADN y luego reparte una copia completa a cada célula hija."
+          }
+        },
+        {
+          "titulo": "La mitosis, fase a fase",
+          "visual": {
+            "tipo": "escena",
+            "id": "mitosis",
+            "fases": [
+              {
+                "id": "interfase",
+                "nombre": "Interfase",
+                "texto": "Antes de dividirse, la célula copia su ADN. Todavía está suelto: no se ven cromosomas.",
+                "nota": "La interfase no es parte de la mitosis: es la preparación.",
+                "marcas": [
+                  {
+                    "x": 246,
+                    "y": 110,
+                    "texto": "El ADN está suelto como hilos dentro del núcleo. En esta etapa se copia."
+                  }
+                ]
+              },
+              {
+                "id": "profase",
+                "nombre": "Profase",
+                "texto": "El ADN se enrolla y aparecen los cromosomas con forma de X. El núcleo empieza a deshacerse.",
+                "marcas": [
+                  {
+                    "x": 176,
+                    "y": 124,
+                    "texto": "Cada X es un cromosoma duplicado: dos cromátidas hermanas unidas por el centro."
+                  },
+                  {
+                    "x": 262,
+                    "y": 104,
+                    "texto": "La envoltura del núcleo se está deshaciendo."
+                  }
+                ]
+              },
+              {
+                "id": "prometafase",
+                "nombre": "Prometafase",
+                "nivel": "avanzado",
+                "texto": "El núcleo termina de romperse y las fibras del huso se enganchan a cada cromosoma.",
+                "nota": "Muchos libros la cuentan como una quinta fase; otros la incluyen en la profase.",
+                "marcas": [
+                  {
+                    "x": 92,
+                    "y": 150,
+                    "texto": "Desde cada polo salen fibras de microtúbulos: el huso."
+                  },
+                  {
+                    "x": 220,
+                    "y": 116,
+                    "texto": "El huso se engancha en el cinetocoro, el punto negro del centro de la X."
+                  }
+                ]
+              },
+              {
+                "id": "metafase",
+                "nombre": "Metafase",
+                "texto": "Los cromosomas se alinean en el centro de la célula, sujetos por el huso desde los dos lados.",
+                "nota": "Truco: «meta» → en medio.",
+                "marcas": [
+                  {
+                    "x": 226,
+                    "y": 150,
+                    "texto": "Todos en fila en el centro (el ecuador de la célula)."
+                  },
+                  {
+                    "x": 92,
+                    "y": 150,
+                    "texto": "El huso, hecho de microtúbulos del citoesqueleto, sujeta cada cromosoma."
+                  }
+                ]
+              },
+              {
+                "id": "anafase",
+                "nombre": "Anafase",
+                "texto": "Las cromátidas hermanas se separan y el huso las jala hacia extremos opuestos.",
+                "nota": "Truco: «ana» → aparte.",
+                "marcas": [
+                  {
+                    "x": 200,
+                    "y": 62,
+                    "texto": "Cada lado recibe una copia de cada cromosoma: azul largo, azul corto… nada se pierde."
+                  }
+                ]
+              },
+              {
+                "id": "telofase",
+                "nombre": "Telofase",
+                "texto": "Se forma un núcleo nuevo en cada extremo y la célula se parte en dos.",
+                "nota": "Las fases tienen nombre para estudiarlas, pero en la célula todo pasa de forma continua.",
+                "marcas": [
+                  {
+                    "x": 200,
+                    "y": 150,
+                    "texto": "Aquí la membrana se estrangula y parte el citoplasma: es la citocinesis."
+                  },
+                  {
+                    "x": 112,
+                    "y": 102,
+                    "texto": "Un núcleo nuevo con la misma información que la célula madre."
+                  }
+                ]
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Citocinesis",
+            "tema": "procesos-celulares",
+            "bloque": "citocinesis"
+          }
+        },
+        {
+          "titulo": "¿Cromosoma o cromátida?",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "✖️",
+              "titulo": "Cromosoma duplicado",
+              "puntos": [
+                "Tiene forma de X",
+                "Son dos cromátidas unidas"
+              ]
+            },
+            "der": {
+              "icono": "➖",
+              "titulo": "Cromátida",
+              "puntos": [
+                "Es cada mitad de la X",
+                "En la anafase se separa y pasa a ser un cromosoma"
+              ]
+            }
+          }
+        },
+        {
+          "titulo": "¿Quién jala los cromosomas?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Qué estructura jala los cromosomas hacia los extremos?",
+            "opciones": [
+              "La membrana celular",
+              "El huso, hecho de microtúbulos",
+              "Los ribosomas"
+            ],
+            "correcta": 1,
+            "explicacion": "El huso está hecho de microtúbulos, que forman parte del citoesqueleto."
+          }
+        },
+        {
+          "titulo": "El resultado: dos copias iguales",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🧬",
+            "valor": "46 → 46 + 46",
+            "texto": "Una célula humana con 46 cromosomas da dos células hijas con 46 cada una"
+          },
+          "puntos": [
+            "Las hijas tienen la misma información que la madre"
+          ]
+        },
+        {
+          "titulo": "¿Qué fase es?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "En el microscopio ves dos grupos de cromosomas viajando a extremos opuestos. ¿Qué fase es?",
+            "opciones": [
+              "Profase",
+              "Metafase",
+              "Anafase",
+              "Telofase"
+            ],
+            "correcta": 2,
+            "explicacion": "En la anafase las cromátidas hermanas se separan y viajan a los polos."
+          }
+        }
+      ]
     },
     {
       "id": "citocinesis",
