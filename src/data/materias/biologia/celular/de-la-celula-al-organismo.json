@@ -445,7 +445,78 @@
           "explicacion": "Late sin que lo decidamos."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "diapositivas": [
+        {
+          "titulo": "De célula a tejido",
+          "visual": {
+            "tipo": "escena",
+            "id": "niveles",
+            "fases": [
+              {
+                "id": "celula",
+                "nombre": "Una célula",
+                "texto": "Una célula sola hace todo su trabajo por sí misma."
+              },
+              {
+                "id": "tejido",
+                "nombre": "Un tejido",
+                "texto": "Muchas células parecidas, juntas, hacen un mismo trabajo.",
+                "nota": "Aquí, tejido muscular: todas sus células se contraen."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Cuatro tejidos animales",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🛡️",
+                "titulo": "Epitelial",
+                "texto": "cubre"
+              },
+              {
+                "icono": "🦴",
+                "titulo": "Conectivo",
+                "texto": "une y sostiene"
+              },
+              {
+                "icono": "💪",
+                "titulo": "Muscular",
+                "texto": "mueve"
+              },
+              {
+                "icono": "⚡",
+                "titulo": "Nervioso",
+                "texto": "transmite información"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Explóralos",
+          "visual": {
+            "tipo": "diagrama",
+            "id": "tejidos-animales"
+          }
+        },
+        {
+          "titulo": "¿Lo tienes?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "La sangre, el hueso y la grasa, ¿qué tipo de tejido son?",
+            "opciones": [
+              "Epitelial",
+              "Conectivo",
+              "Nervioso"
+            ],
+            "correcta": 1,
+            "explicacion": "El conectivo es muy variado y tiene mucha matriz entre sus células."
+          }
+        }
+      ]
     },
     {
       "id": "tejidos-vegetales",
@@ -542,7 +613,80 @@
           "explicacion": "Es un tejido de reserva."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "diapositivas": [
+        {
+          "titulo": "Tejidos de las plantas",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🌱",
+                "titulo": "Meristemos",
+                "texto": "se dividen: la planta crece"
+              },
+              {
+                "icono": "🛡️",
+                "titulo": "Epidermis",
+                "texto": "protege; tiene estomas"
+              },
+              {
+                "icono": "🚰",
+                "titulo": "Xilema y floema",
+                "texto": "conducen agua y azúcares"
+              },
+              {
+                "icono": "🍃",
+                "titulo": "Parénquima",
+                "texto": "fotosíntesis y reservas"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Explóralos",
+          "visual": {
+            "tipo": "diagrama",
+            "id": "tejidos-vegetales"
+          }
+        },
+        {
+          "titulo": "Dos tuberías",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "⬆️",
+              "titulo": "Xilema",
+              "puntos": [
+                "Sube agua y sales",
+                "Desde la raíz"
+              ]
+            },
+            "der": {
+              "icono": "🔀",
+              "titulo": "Floema",
+              "puntos": [
+                "Reparte azúcares",
+                "Desde las hojas"
+              ]
+            }
+          }
+        },
+        {
+          "titulo": "¿Lo tienes?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Por qué una planta puede crecer toda su vida?",
+            "opciones": [
+              "Por sus meristemos",
+              "Por su epidermis",
+              "Por su xilema"
+            ],
+            "correcta": 0,
+            "explicacion": "Los meristemos de las puntas de raíz y tallo se dividen sin parar."
+          }
+        }
+      ]
     },
     {
       "id": "organos-sistemas",
@@ -639,7 +783,97 @@
           "explicacion": "Mezcla y empuja la comida."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "diapositivas": [
+        {
+          "titulo": "Del tejido al organismo",
+          "visual": {
+            "tipo": "escena",
+            "id": "niveles",
+            "fases": [
+              {
+                "id": "tejido",
+                "nombre": "Tejido",
+                "texto": "Células parecidas con un mismo trabajo."
+              },
+              {
+                "id": "organo",
+                "nombre": "Órgano",
+                "texto": "Varios tejidos juntos: el corazón tiene tejido muscular, conectivo, nervioso y epitelial."
+              },
+              {
+                "id": "sistema",
+                "nombre": "Sistema",
+                "texto": "Varios órganos con una función común: corazón, vasos y sangre forman el circulatorio."
+              },
+              {
+                "id": "organismo",
+                "nombre": "Organismo",
+                "texto": "Todos los sistemas juntos: un ser vivo completo."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Mira los tejidos de un órgano",
+          "visual": {
+            "tipo": "diagrama",
+            "id": "organo-tejidos"
+          }
+        },
+        {
+          "titulo": "Trabajo en equipo",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "💪",
+                "titulo": "Muscular",
+                "texto": "mueve las piernas"
+              },
+              {
+                "icono": "🫁",
+                "titulo": "Respiratorio",
+                "texto": "trae oxígeno"
+              },
+              {
+                "icono": "❤️",
+                "titulo": "Circulatorio",
+                "texto": "lo reparte"
+              },
+              {
+                "icono": "🧠",
+                "titulo": "Nervioso",
+                "texto": "coordina todo"
+              }
+            ]
+          },
+          "nota": "Así colaboran los sistemas cuando corres."
+        },
+        {
+          "titulo": "¿Y las plantas?",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🌿",
+                "titulo": "Raíz",
+                "texto": "absorbe agua"
+              },
+              {
+                "icono": "🌾",
+                "titulo": "Tallo",
+                "texto": "sostiene y conduce"
+              },
+              {
+                "icono": "🍃",
+                "titulo": "Hoja",
+                "texto": "hace fotosíntesis"
+              }
+            ]
+          }
+        }
+      ]
     },
     {
       "id": "reproduccion",
@@ -736,7 +970,90 @@
           "explicacion": "Hay un solo progenitor."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "diapositivas": [
+        {
+          "titulo": "Dos maneras de reproducirse",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "🧫",
+              "titulo": "Asexual",
+              "puntos": [
+                "Un solo progenitor",
+                "Por mitosis",
+                "Hijos idénticos"
+              ]
+            },
+            "der": {
+              "icono": "👪",
+              "titulo": "Sexual",
+              "puntos": [
+                "Dos progenitores",
+                "Gametos por meiosis",
+                "Hijos distintos"
+              ]
+            }
+          }
+        },
+        {
+          "titulo": "Formas de reproducción asexual",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🦠",
+                "titulo": "Bipartición",
+                "texto": "bacterias"
+              },
+              {
+                "icono": "🫧",
+                "titulo": "Gemación",
+                "texto": "hidra, levadura"
+              },
+              {
+                "icono": "⭐",
+                "titulo": "Fragmentación",
+                "texto": "estrella de mar"
+              },
+              {
+                "icono": "🥔",
+                "titulo": "Tubérculos",
+                "texto": "papa, yuca"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Compáralas",
+          "visual": {
+            "tipo": "diagrama",
+            "id": "reproduccion-tipos"
+          }
+        },
+        {
+          "titulo": "¿Cuál conviene?",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "⚡",
+              "titulo": "Ventaja asexual",
+              "puntos": [
+                "Rápida y sencilla",
+                "No necesita pareja"
+              ]
+            },
+            "der": {
+              "icono": "🌦️",
+              "titulo": "Ventaja sexual",
+              "puntos": [
+                "Variedad",
+                "Si el ambiente cambia, algunos sobreviven"
+              ]
+            }
+          }
+        }
+      ]
     }
   ]
 }

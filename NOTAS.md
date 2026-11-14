@@ -303,3 +303,4 @@ Hooke usa la reconstrucción de Rita Greer (2004, Free Art License, Wikimedia Co
 
 ## Láminas propias para las fichas que salían automáticas (14 nov)
 - División: por qué se dividen, cromosomas (escena `mitosis` con 2 fases: cromatina → cromosoma), control y cáncer (escena `ciclo` con los 3 semáforos), diploide/haploide y variedad (escena `meiosis` con fases elegidas), por qué meiosis, mitosis vs meiosis. Cada una usa además su diagrama interactivo.
+- Metabolismo y De la célula al organismo: enzimas, ATP (escena `respiracion` con 2 fases), comunicación, uniones, tejidos animales (escena `niveles` célula → tejido), tejidos vegetales, órganos y sistemas (escena `niveles` tejido → organismo), reproducción. Con esto ya no queda ninguna ficha con diapositivas automáticas.
