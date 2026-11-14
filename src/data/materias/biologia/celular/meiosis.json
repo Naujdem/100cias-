@@ -116,7 +116,80 @@
           "explicacion": "Las células del cuerpo tienen los cromosomas en pares."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "diapositivas": [
+        {
+          "titulo": "Dos juegos o uno",
+          "visual": {
+            "tipo": "escena",
+            "id": "meiosis",
+            "fases": [
+              {
+                "id": "profase-i",
+                "nombre": "Diploide (2n)",
+                "texto": "Las células del cuerpo tienen sus cromosomas en pares: uno de la madre (oscuro) y otro del padre (claro).",
+                "marcas": [
+                  {
+                    "x": 150,
+                    "y": 108,
+                    "texto": "Los dos de un par son homólogos: mismo tamaño y mismos genes, en versiones que pueden ser distintas."
+                  }
+                ]
+              },
+              {
+                "id": "gametos",
+                "nombre": "Haploide (n)",
+                "texto": "Los gametos (óvulos y espermatozoides) llevan solo uno de cada par.",
+                "marcas": [
+                  {
+                    "x": 162,
+                    "y": 124,
+                    "texto": "Cada gameto tiene un cromosoma largo y uno corto: uno de cada par."
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "En las personas",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🧬",
+            "valor": "2n = 46 · n = 23",
+            "texto": "Células del cuerpo: 23 pares. Gametos: 23 sueltos"
+          },
+          "puntos": [
+            "Diploide = dos juegos · haploide = un juego"
+          ]
+        },
+        {
+          "titulo": "El par 23",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "♀️",
+                "titulo": "XX",
+                "texto": "mujeres"
+              },
+              {
+                "icono": "♂️",
+                "titulo": "XY",
+                "texto": "hombres"
+              }
+            ]
+          },
+          "nota": "X e Y son de tamaño distinto, pero se comportan como pareja."
+        },
+        {
+          "titulo": "Encuentra las parejas",
+          "visual": {
+            "tipo": "diagrama",
+            "id": "pares-homologos"
+          }
+        }
+      ]
     },
     {
       "id": "por-que-meiosis",
@@ -213,7 +286,64 @@
           "explicacion": "Todas reciben copias de los 46 cromosomas."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "diapositivas": [
+        {
+          "titulo": "Un problema de números",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Si óvulo y espermatozoide tuvieran 46 cromosomas cada uno, ¿cuántos tendría el hijo?",
+            "opciones": [
+              "46",
+              "92",
+              "23"
+            ],
+            "correcta": 1,
+            "explicacion": "46 + 46 = 92, y el nieto tendría 184. La meiosis evita que el número se duplique en cada generación."
+          }
+        },
+        {
+          "titulo": "La solución: mitad y mitad",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "👶",
+            "valor": "23 + 23 = 46",
+            "texto": "Óvulo (n) + espermatozoide (n) = cigoto (2n)"
+          },
+          "puntos": [
+            "Después, todo es mitosis: todas las células con 46"
+          ]
+        },
+        {
+          "titulo": "Haz la cuenta",
+          "visual": {
+            "tipo": "diagrama",
+            "id": "cuenta-cromosomas"
+          }
+        },
+        {
+          "titulo": "Con o sin meiosis",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "🥔",
+              "titulo": "Reproducción asexual",
+              "puntos": [
+                "Sin meiosis",
+                "Los hijos son copias"
+              ]
+            },
+            "der": {
+              "icono": "👪",
+              "titulo": "Reproducción sexual",
+              "puntos": [
+                "Meiosis + fecundación",
+                "Cada hijo es una mezcla nueva"
+              ]
+            }
+          }
+        }
+      ]
     },
     {
       "id": "meiosis-i",
@@ -710,7 +840,91 @@
           "explicacion": "Sus células se formaron por mitosis a partir del mismo cigoto."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "diapositivas": [
+        {
+          "titulo": "Tres fuentes de variedad",
+          "visual": {
+            "tipo": "escena",
+            "id": "meiosis",
+            "fases": [
+              {
+                "id": "entrecruzamiento",
+                "nombre": "1. Entrecruzamiento",
+                "texto": "Los homólogos intercambian trozos: los cromosomas quedan mezclados.",
+                "marcas": [
+                  {
+                    "x": 262,
+                    "y": 196,
+                    "texto": "Un mismo cromosoma termina con partes de la madre y del padre."
+                  }
+                ]
+              },
+              {
+                "id": "metafase-i",
+                "nombre": "2. Reparto al azar",
+                "texto": "Cada pareja se alinea sin importar las demás: qué homólogo va a cada lado es al azar.",
+                "marcas": [
+                  {
+                    "x": 200,
+                    "y": 60,
+                    "texto": "Con solo 2 pares ya hay 4 combinaciones posibles; con 23 pares, más de 8 millones."
+                  }
+                ]
+              },
+              {
+                "id": "gametos",
+                "nombre": "3. Fecundación al azar",
+                "texto": "Cualquier óvulo puede unirse con cualquier espermatozoide.",
+                "marcas": [
+                  {
+                    "x": 162,
+                    "y": 124,
+                    "texto": "Compara los colores: ningún gameto es igual a otro."
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Por persona",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🎲",
+            "valor": "2²³ ≈ 8 millones",
+            "texto": "de combinaciones posibles, solo por el reparto al azar"
+          },
+          "puntos": [
+            "Y una pareja: más de 70 billones de hijos posibles"
+          ]
+        },
+        {
+          "titulo": "Arma gametos",
+          "visual": {
+            "tipo": "diagrama",
+            "id": "variedad-gametos"
+          }
+        },
+        {
+          "titulo": "¿Para qué sirve?",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🌦️",
+                "titulo": "Si el ambiente cambia",
+                "texto": "algunos individuos sobreviven"
+              },
+              {
+                "icono": "🦎",
+                "titulo": "Evolución",
+                "texto": "la variedad es su materia prima"
+              }
+            ]
+          }
+        }
+      ]
     },
     {
       "id": "mitosis-meiosis",
@@ -808,7 +1022,76 @@
           "explicacion": "Las dos parten de una célula que copió su ADN en la fase S."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "diapositivas": [
+        {
+          "titulo": "Dos divisiones, dos fines",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "🧫",
+              "titulo": "Mitosis",
+              "puntos": [
+                "1 división → 2 células",
+                "Iguales a la madre (2n → 2n)",
+                "Para crecer y reparar"
+              ]
+            },
+            "der": {
+              "icono": "🥚",
+              "titulo": "Meiosis",
+              "puntos": [
+                "2 divisiones → 4 células",
+                "Distintas, con la mitad (2n → n)",
+                "Para formar gametos"
+              ]
+            }
+          }
+        },
+        {
+          "titulo": "En común",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "📋",
+                "titulo": "ADN copiado",
+                "texto": "antes de empezar"
+              },
+              {
+                "icono": "🧵",
+                "titulo": "Huso",
+                "texto": "jala los cromosomas"
+              },
+              {
+                "icono": "🏷️",
+                "titulo": "Mismas fases",
+                "texto": "profase, metafase, anafase, telofase"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Compáralas paso a paso",
+          "visual": {
+            "tipo": "diagrama",
+            "id": "mitosis-meiosis"
+          }
+        },
+        {
+          "titulo": "La clave",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Una célula de la piel se divide para cerrar una herida. ¿Mitosis o meiosis?",
+            "opciones": [
+              "Mitosis",
+              "Meiosis"
+            ],
+            "correcta": 0,
+            "explicacion": "Si el resultado son células para crecer o reparar, es mitosis. Si son gametos, es meiosis."
+          }
+        }
+      ]
     }
   ]
 }

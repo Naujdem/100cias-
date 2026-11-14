@@ -300,3 +300,6 @@ Hooke usa la reconstrucción de Rita Greer (2004, Free Art License, Wikimedia Co
 - Motor reutilizable `diagramas/JuegoDecide.tsx` («decide rápido»: tarjetas, 2–4 opciones, tiempo, 3 vidas, racha, récord; teclas 1–4 y →). Juegos solo de datos en `JuegosDecide.tsx`: lisosoma (`lisosoma-juego`), citoplasma («¿Dónde ocurre?»), citoesqueleto («Rieles y andamios»), ribosomas («¿Libre o pegado?»), peroxisomas («¿Peroxisoma o lisosoma?»), pared/matriz.
 - Juegos propios en `JuegosPropios.tsx`: `mitocondria-juego` («¡Que no se acabe la energía!»: glucosa + oxígeno → ATP; sin oxígeno, ácido láctico y calambre; teclas G/O) y `nucleo-juego` («Copia la receta»: ADN → ARN base por base; teclas A/U/G/C).
 - Con esto todas las fichas del tema 3 tienen «Juega».
+
+## Láminas propias para las fichas que salían automáticas (14 nov)
+- División: por qué se dividen, cromosomas (escena `mitosis` con 2 fases: cromatina → cromosoma), control y cáncer (escena `ciclo` con los 3 semáforos), diploide/haploide y variedad (escena `meiosis` con fases elegidas), por qué meiosis, mitosis vs meiosis. Cada una usa además su diagrama interactivo.
