@@ -16,6 +16,7 @@ import ComparadorRotulado from './ComparadorRotulado.tsx'
 import EnfocaMuestra from './EnfocaMuestra.tsx'
 import { ReproUnicelularesJuego, ReproPlantasJuego, ReproAnimalesJuego, PartesMicroscopioJuego, AumentoJuego, OpticoElectronicoJuego, FotoRespJuego, DescubridoresJuego, UniPluriJuego, ProEuJuego, AnimalVegetalJuego, CicloJuego, DiploideJuego, MetabolismoJuego, TejidosVegetalesJuego, SistemasJuego } from './JuegosDecide2.tsx'
 import { AtpJuego, CelulasMadreJuego, CitocinesisJuego, ColoniasJuego, ControlCicloJuego, CromatinaJuego, CuantosCromosomasJuego, DiferenciacionJuego, EndosimbiosisJuego, EspecializadasJuego, EucariotasJuego, HookeLeeuJuego, MeiosisIoIIJuego, OficioJuego, OrigenCelulasJuego, OrigenPluriJuego, ParaQueDividirseJuego, PasteurJuego, SchleidenSchwannJuego, SenalJuego, TeoriaModernaJuego, UnicelularesJuego, UnionesJuego, VariedadJuego, VentajasJuego, VirusJuego } from './JuegosDecide3.tsx'
+import { AveryJuego, GriffithJuego, HersheyChaseJuego, MiescherJuego } from './JuegosHistoriaGenetica.tsx'
 import FasesMitosis from './FasesMitosis.tsx'
 import MeiosisJuego from './MeiosisJuego.tsx'
 import ClasificaCasos, { CASOS_OXIGENO, CASOS_MUERTE, CASOS_TEJIDOS, CASOS_REPRODUCCION } from './ClasificaCasos.tsx'
@@ -125,6 +126,10 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'especializadas-juego': EspecializadasJuego,
   'eucariotas-juego': EucariotasJuego,
   'hooke-leeu-juego': HookeLeeuJuego,
+  'griffith-juego': GriffithJuego,
+  'avery-juego': AveryJuego,
+  'hershey-juego': HersheyChaseJuego,
+  'miescher-juego': MiescherJuego,
   'meiosis-i-ii-juego': MeiosisIoIIJuego,
   'oficio-juego': OficioJuego,
   'origen-celulas-juego': OrigenCelulasJuego,
