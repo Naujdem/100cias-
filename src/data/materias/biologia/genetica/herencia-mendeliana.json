@@ -987,52 +987,15 @@
         {
           "titulo": "Dos caracteres a la vez",
           "visual": {
-            "tipo": "compara",
-            "izq": {
-              "icono": "🟡",
-              "titulo": "Padre 1: AABB",
-              "puntos": [
-                "amarilla y lisa"
-              ]
-            },
-            "der": {
-              "icono": "🟢",
-              "titulo": "Padre 2: aabb",
-              "puntos": [
-                "verde y rugosa"
-              ]
-            }
+            "tipo": "diagrama",
+            "id": "dos-caracteres"
           }
         },
         {
           "titulo": "Cuatro gametos",
-          "puntos": [
-            "AaBb forma AB, Ab, aB y ab"
-          ],
           "visual": {
-            "tipo": "tarjetas",
-            "items": [
-              {
-                "icono": "🟡",
-                "titulo": "AB",
-                "texto": "amarilla · lisa"
-              },
-              {
-                "icono": "🟡",
-                "titulo": "Ab",
-                "texto": "amarilla · rugosa"
-              },
-              {
-                "icono": "🟢",
-                "titulo": "aB",
-                "texto": "verde · lisa"
-              },
-              {
-                "icono": "🟢",
-                "titulo": "ab",
-                "texto": "verde · rugosa"
-              }
-            ]
+            "tipo": "diagrama",
+            "id": "cuatro-gametos"
           }
         },
         {
