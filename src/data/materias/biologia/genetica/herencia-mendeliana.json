@@ -178,43 +178,9 @@
         {
           "titulo": "Siete caracteres",
           "visual": {
-            "tipo": "tarjetas",
-            "items": [
-              {
-                "icono": "🟡",
-                "titulo": "Color de la semilla",
-                "texto": "amarilla / verde"
-              },
-              {
-                "icono": "⚪",
-                "titulo": "Forma de la semilla",
-                "texto": "lisa / rugosa"
-              },
-              {
-                "icono": "🟣",
-                "titulo": "Color de la flor",
-                "texto": "púrpura / blanca"
-              },
-              {
-                "icono": "🫛",
-                "titulo": "Forma de la vaina",
-                "texto": "inflada / estrangulada"
-              },
-              {
-                "icono": "🟩",
-                "titulo": "Color de la vaina",
-                "texto": "verde / amarilla"
-              },
-              {
-                "icono": "🌸",
-                "titulo": "Posición de las flores",
-                "texto": "a lo largo del tallo / en la punta"
-              }
-            ]
-          },
-          "puntos": [
-            "También altura del tallo: alto / enano"
-          ]
+            "tipo": "diagrama",
+            "id": "siete-caracteres"
+          }
         },
         {
           "titulo": "Así cruzaba",
