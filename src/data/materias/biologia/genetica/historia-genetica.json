@@ -219,7 +219,74 @@
           "explicacion": "Todas las células con núcleo tienen ADN, pero los glóbulos blancos del pus eran abundantes y tenían un núcleo grande."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "diapositivas": [
+        {
+          "titulo": "Del pus a la nucleína",
+          "visual": {
+            "tipo": "escena",
+            "id": "miescher",
+            "fases": [
+              {
+                "id": "vendajes",
+                "nombre": "Los vendajes",
+                "texto": "Miescher recogía vendajes con pus de un hospital cercano a Tubinga."
+              },
+              {
+                "id": "globulos",
+                "nombre": "Glóbulos blancos",
+                "texto": "El pus está lleno de glóbulos blancos, células con un núcleo grande: ideales para estudiar el núcleo."
+              },
+              {
+                "id": "lavar",
+                "nombre": "Lavar",
+                "texto": "Lavó las células con agua con sal y les quitó las grasas."
+              },
+              {
+                "id": "pepsina",
+                "nombre": "La pepsina",
+                "texto": "Con pepsina, una enzima del estómago, deshizo las proteínas. Quedaron los núcleos."
+              },
+              {
+                "id": "nucleina",
+                "nombre": "La nucleína",
+                "texto": "Del núcleo sacó una sustancia blanca, rica en fósforo, que no era proteína. La llamó nucleína: era ADN.",
+                "nota": "Nadie sabía todavía para qué servía."
+              },
+              {
+                "id": "salmon",
+                "nombre": "El salmón",
+                "texto": "Más tarde, en Basilea, usó esperma de salmón, que es casi todo núcleo, para obtener mucha más nucleína.",
+                "nivel": "intermedio"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Un laboratorio en un castillo",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🏰",
+                "titulo": "Tubinga",
+                "texto": "El laboratorio de Hoppe-Seyler estaba en la antigua cocina de un castillo."
+              },
+              {
+                "icono": "🧪",
+                "titulo": "1869",
+                "texto": "Primer aislamiento del ADN de la historia."
+              },
+              {
+                "icono": "🏷️",
+                "titulo": "«Ácido nucleico»",
+                "texto": "Así la llamó Richard Altmann en 1889."
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "miescher-juego"
     },
     {
       "id": "redescubrimiento",
@@ -481,7 +548,90 @@
           "explicacion": "La cápsula impide que las defensas la eliminen. La cepa R no la tiene."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "diapositivas": [
+        {
+          "titulo": "Los cuatro ratones de Griffith",
+          "visual": {
+            "tipo": "escena",
+            "id": "griffith",
+            "fases": [
+              {
+                "id": "cepas",
+                "nombre": "Dos cepas",
+                "texto": "El neumococo causa neumonía. La cepa S tiene una cápsula que la protege y es mortal; la cepa R no tiene cápsula y es inofensiva.",
+                "nota": "S de lisa (smooth) y R de rugosa (rough): así se ven sus colonias."
+              },
+              {
+                "id": "s-vivas",
+                "nombre": "Ratón 1: S vivas",
+                "texto": "Se inyectan bacterias S vivas. El ratón muere de neumonía."
+              },
+              {
+                "id": "r-vivas",
+                "nombre": "Ratón 2: R vivas",
+                "texto": "Se inyectan bacterias R vivas. Las defensas del ratón las eliminan y vive."
+              },
+              {
+                "id": "s-muertas",
+                "nombre": "Ratón 3: S muertas",
+                "texto": "Se calientan bacterias S hasta matarlas y se inyectan. El ratón vive: muertas no enferman."
+              },
+              {
+                "id": "mezcla",
+                "nombre": "Ratón 4: S muertas + R vivas",
+                "texto": "Ninguna de las dos debería enfermarlo… pero el ratón muere.",
+                "nota": "Antes de avanzar: ¿por qué crees que murió?"
+              },
+              {
+                "id": "sangre",
+                "nombre": "La transformación",
+                "texto": "En su sangre había bacterias S vivas. Algo de las S muertas transformó a las R en S. Griffith lo llamó principio transformante.",
+                "nota": "Qué molécula era, lo descubrió Avery en 1944."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "El principio transformante pasó de las S muertas a las R vivas. ¿Qué crees que era?",
+            "opciones": [
+              "Algo que lleva instrucciones, como los genes",
+              "La cápsula, que se pegó por fuera",
+              "El calor que se usó para matarlas",
+              "Una enfermedad del ratón"
+            ],
+            "correcta": 0,
+            "explicacion": "Las R no solo cambiaron: sus hijas también nacían S. Recibieron instrucciones nuevas, es decir, material hereditario."
+          }
+        },
+        {
+          "titulo": "Frederick Griffith",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🩺",
+                "titulo": "Buscaba una vacuna",
+                "texto": "Quería proteger contra la neumonía, no estudiar la herencia."
+              },
+              {
+                "icono": "❓",
+                "titulo": "No supo la respuesta",
+                "texto": "Nunca descubrió qué molécula transformaba a las bacterias."
+              },
+              {
+                "icono": "💣",
+                "titulo": "Murió en 1941",
+                "texto": "Durante un bombardeo sobre Londres, en la Segunda Guerra Mundial."
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "griffith-juego"
     },
     {
       "id": "avery",
@@ -561,7 +711,91 @@
           "explicacion": "Se pensaba que solo las proteínas, con 20 aminoácidos distintos, eran lo bastante variadas para llevar la herencia."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "diapositivas": [
+        {
+          "titulo": "¿Qué molécula transforma?",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🧪",
+                "titulo": "El extracto",
+                "texto": "Bacterias S muertas, deshechas: tienen proteínas, ARN y ADN."
+              },
+              {
+                "icono": "✂️",
+                "titulo": "Las enzimas",
+                "texto": "Cada una corta un solo tipo de molécula."
+              },
+              {
+                "icono": "🔍",
+                "titulo": "La idea",
+                "texto": "Quitar una a la vez y ver cuál hace falta."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Tres tubos, tres enzimas",
+          "visual": {
+            "tipo": "escena",
+            "id": "avery",
+            "fases": [
+              {
+                "id": "extracto",
+                "nombre": "El extracto",
+                "texto": "El extracto de bacterias S muertas se reparte en tres tubos. Cada uno tiene proteínas, ARN y ADN."
+              },
+              {
+                "id": "proteasa",
+                "nombre": "Sin proteínas",
+                "texto": "La proteasa destruye las proteínas. Se agregan bacterias R vivas: aparecen bacterias S. Hubo transformación."
+              },
+              {
+                "id": "rnasa",
+                "nombre": "Sin ARN",
+                "texto": "La RNasa destruye el ARN. También aparecen bacterias S: hubo transformación."
+              },
+              {
+                "id": "dnasa",
+                "nombre": "Sin ADN",
+                "texto": "La DNasa destruye el ADN. Solo crecen bacterias R: no hubo transformación."
+              },
+              {
+                "id": "conclusion",
+                "nombre": "El factor es el ADN",
+                "texto": "Solo sin ADN se pierde la transformación: el principio transformante de Griffith es el ADN.",
+                "nota": "Muchos dudaron: creían que el ADN era demasiado simple para guardar información."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "¿Por qué les costó convencer?",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🧱",
+                "titulo": "El ADN parecía aburrido",
+                "texto": "Se creía que repetía siempre lo mismo."
+              },
+              {
+                "icono": "🔠",
+                "titulo": "Las proteínas, más variadas",
+                "texto": "Tienen 20 piezas distintas; el ADN, solo 4."
+              },
+              {
+                "icono": "🏅",
+                "titulo": "Avery, sin Nobel",
+                "texto": "Fue propuesto varias veces y nunca lo recibió."
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "avery-juego"
     },
     {
       "id": "chargaff",
@@ -715,7 +949,74 @@
           "explicacion": "El ADN marcado con fósforo había entrado en las bacterias, que se van al fondo al centrifugar."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "diapositivas": [
+        {
+          "titulo": "El ADN entra, la proteína se queda",
+          "visual": {
+            "tipo": "escena",
+            "id": "hershey-chase",
+            "fases": [
+              {
+                "id": "fago",
+                "nombre": "El bacteriófago",
+                "texto": "Un virus que infecta bacterias. Por fuera es solo proteína; por dentro lleva ADN.",
+                "nota": "Parece un módulo lunar: cabeza, cola y patas."
+              },
+              {
+                "id": "marcas",
+                "nombre": "Dos marcas",
+                "texto": "Unos fagos se crían con azufre radiactivo, que solo va a la proteína. Otros, con fósforo radiactivo, que solo va al ADN."
+              },
+              {
+                "id": "infeccion",
+                "nombre": "La infección",
+                "texto": "Los fagos se pegan a las bacterias e inyectan lo que llevan adentro."
+              },
+              {
+                "id": "licuadora",
+                "nombre": "La licuadora",
+                "texto": "Se agita todo en una licuadora para despegar las cubiertas de las bacterias."
+              },
+              {
+                "id": "centrifuga",
+                "nombre": "La centrífuga",
+                "texto": "Las bacterias, más pesadas, van al fondo; las cubiertas quedan en el líquido. El azufre quedó en el líquido y el fósforo, en las bacterias."
+              },
+              {
+                "id": "conclusion",
+                "nombre": "Lo que entra es el ADN",
+                "texto": "La proteína se quedó afuera. El ADN entró y con él la bacteria fabricó virus nuevos: el ADN lleva la información genética.",
+                "nota": "Hershey recibió el Nobel en 1969; Martha Chase, no."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "¿Por qué azufre y fósforo?",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🟡",
+                "titulo": "Azufre",
+                "texto": "Está en las proteínas, no en el ADN."
+              },
+              {
+                "icono": "🔴",
+                "titulo": "Fósforo",
+                "texto": "Está en el ADN; las proteínas casi no tienen."
+              },
+              {
+                "icono": "📟",
+                "titulo": "Un contador",
+                "texto": "Mide la radiactividad y dice dónde quedó cada marca."
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "hershey-juego"
     },
     {
       "id": "franklin",
@@ -777,38 +1078,38 @@
         {
           "titulo": "Fotografiar una molécula",
           "visual": {
-            "tipo": "tarjetas",
-            "items": [
+            "tipo": "escena",
+            "id": "foto51",
+            "fases": [
               {
-                "icono": "☢️",
-                "titulo": "Rayos X",
-                "texto": "Atraviesan una fibra de ADN y se desvían en los átomos."
+                "id": "fibra",
+                "nombre": "El montaje",
+                "texto": "Franklin estiraba fibras de ADN muy finas y les apuntaba un haz de rayos X. Detrás ponía una placa fotográfica."
               },
               {
-                "icono": "🎞️",
-                "titulo": "Placa fotográfica",
-                "texto": "Los rayos desviados dejan un dibujo de manchas."
+                "id": "rayos",
+                "nombre": "Los rayos se desvían",
+                "texto": "Al chocar con los átomos del ADN, los rayos se desvían. Por dónde caen en la placa depende de cómo están ordenados los átomos.",
+                "nota": "Se llama difracción de rayos X."
               },
               {
-                "icono": "✖️",
-                "titulo": "Una X",
-                "texto": "Esa X es la huella de una hélice."
+                "id": "foto",
+                "nombre": "La Foto 51",
+                "texto": "En mayo de 1952, Franklin y su estudiante Raymond Gosling obtuvieron esta imagen. Necesitó unas 60 horas de exposición."
+              },
+              {
+                "id": "lectura",
+                "nombre": "Leer la foto",
+                "texto": "La X dice que es una hélice. La separación de las manchas da la distancia entre vueltas, y las manchas de arriba y abajo, las bases apiladas."
+              },
+              {
+                "id": "helice",
+                "nombre": "Una hélice doble",
+                "texto": "Con la foto y sus medidas, Franklin concluyó que el ADN es una hélice con los fosfatos por fuera.",
+                "nota": "Estuvo muy cerca del modelo completo."
               }
             ]
           }
-        },
-        {
-          "titulo": "La Foto 51",
-          "visual": {
-            "tipo": "cifra",
-            "icono": "📷",
-            "valor": "Mayo de 1952",
-            "texto": "Rosalind Franklin y su estudiante Raymond Gosling, King's College de Londres"
-          },
-          "puntos": [
-            "La X muestra que el ADN es una hélice",
-            "Las medidas dieron su ancho y sus vueltas"
-          ]
         },
         {
           "titulo": "¿Cómo llegó la foto a Watson y Crick?",
@@ -861,7 +1162,8 @@
           "explicacion": "Hizo pasar rayos X por fibras de ADN y estudió cómo se desviaban."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "juego": "foto51-juego"
     },
     {
       "id": "watson-crick",
@@ -926,53 +1228,49 @@
       },
       "diapositivas": [
         {
-          "titulo": "Las piezas del rompecabezas",
-          "visual": {
-            "tipo": "tarjetas",
-            "items": [
-              {
-                "icono": "📷",
-                "titulo": "Franklin",
-                "texto": "Es una hélice, con los fosfatos por fuera."
-              },
-              {
-                "icono": "⚖️",
-                "titulo": "Chargaff",
-                "texto": "A = T y G = C."
-              },
-              {
-                "icono": "🧩",
-                "titulo": "Watson y Crick",
-                "texto": "Armaron modelos hasta que todo encajó."
-              }
-            ]
-          }
-        },
-        {
-          "titulo": "Una escalera de caracol",
-          "visual": {
-            "tipo": "tarjetas",
-            "items": [
-              {
-                "icono": "🪜",
-                "titulo": "Pasamanos",
-                "texto": "Azúcar y fosfato, uno tras otro."
-              },
-              {
-                "icono": "🔗",
-                "titulo": "Peldaños",
-                "texto": "Pares de bases: A con T, G con C."
-              },
-              {
-                "icono": "🌀",
-                "titulo": "Dos cadenas",
-                "texto": "Enrolladas una alrededor de la otra."
-              }
-            ]
-          },
+          "titulo": "De las piezas a la doble hélice",
           "atajo": {
             "texto": "Más sobre esto: ADN, genes y cromosomas",
             "tema": "adn-genes-cromosomas"
+          },
+          "visual": {
+            "tipo": "escena",
+            "id": "doble-helice",
+            "fases": [
+              {
+                "id": "piezas",
+                "nombre": "Las piezas",
+                "texto": "Watson y Crick juntaron datos de otros: la hélice de Franklin, las reglas de Chargaff y la forma correcta de las bases, que les indicó Jerry Donohue."
+              },
+              {
+                "id": "triple",
+                "nombre": "Un primer error",
+                "texto": "En 1951 propusieron tres cadenas con los fosfatos por dentro. Franklin les mostró que no encajaba con sus datos.",
+                "nivel": "intermedio"
+              },
+              {
+                "id": "bases",
+                "nombre": "Los pares de bases",
+                "texto": "A se une con T y G con C. Los dos pares miden lo mismo, así que los peldaños quedan parejos.",
+                "nota": "Por eso hay tanta A como T y tanta G como C."
+              },
+              {
+                "id": "escalera",
+                "nombre": "Una escalera",
+                "texto": "Los pasamanos son azúcar y fosfato; los peldaños, los pares de bases."
+              },
+              {
+                "id": "helice",
+                "nombre": "La doble hélice",
+                "texto": "La escalera se enrolla: dos cadenas en hélice, como una escalera de caracol. Así lo publicaron en abril de 1953."
+              },
+              {
+                "id": "copia",
+                "nombre": "Cómo se copia",
+                "texto": "Si las cadenas se separan, cada una sirve de molde para hacer la otra. Su artículo lo insinuaba en una sola frase.",
+                "nota": "La copia paso a paso está en el tema 3."
+              }
+            ]
           }
         }
       ],
@@ -1002,7 +1300,8 @@
           "explicacion": "No hicieron experimentos propios: armaron modelos que encajaran con los datos de Franklin, Wilkins y Chargaff."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "juego": "piezas-helice-juego"
     },
     {
       "id": "meselson-stahl",
