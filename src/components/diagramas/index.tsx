@@ -29,6 +29,8 @@ import GotaLeeuwenhoek from './GotaLeeuwenhoek.tsx'
 import UniPluri from './UniPluri.tsx'
 import { ExploradorCelula, RutaProteinaDiagrama, EnergiaCelular } from './CelulaEucDiagramas.tsx'
 import MembranaActividades, { PorteroMembrana } from './MembranaJuegos.tsx'
+import Punnett from './Punnett.tsx'
+import { MetodoMendelJuego, DominanteJuego, GenotipoJuego, ProporcionJuego, PuroHibridoJuego, GametosJuego, ProbabilidadJuego } from './JuegosMendel.tsx'
 import { ComparadorProEu, ComparadorAnimalVegetal, ExploradorBacterias, GaleriaEspecializadas } from './TiposCelulas.tsx'
 
 /** Registro de diagramas interactivos. La clave es el valor de `bloque.diagrama`. */
@@ -91,6 +93,17 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'partes-microscopio-juego': PartesMicroscopioJuego,
   'aumento-juego': AumentoJuego,
   'optico-electronico-juego': OpticoElectronicoJuego,
+  // área 2 · herencia mendeliana
+  punnett: () => <Punnett modo="mono" />,
+  'punnett-prueba': () => <Punnett modo="prueba" />,
+  'punnett-dihibrido': () => <Punnett modo="di" />,
+  'metodo-mendel-juego': MetodoMendelJuego,
+  'dominante-juego': DominanteJuego,
+  'genotipo-juego': GenotipoJuego,
+  'proporcion-juego': ProporcionJuego,
+  'puro-hibrido-juego': PuroHibridoJuego,
+  'gametos-juego': GametosJuego,
+  'probabilidad-juego': ProbabilidadJuego,
   // revisión del área 1: juegos para las fichas que no tenían «Juega»
   'atp-juego': AtpJuego,
   'celulas-madre-juego': CelulasMadreJuego,

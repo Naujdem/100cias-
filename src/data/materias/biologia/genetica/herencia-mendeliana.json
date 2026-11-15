@@ -1,0 +1,1265 @@
+{
+  "id": "herencia-mendeliana",
+  "materia": "biologia",
+  "area": "genetica",
+  "titulo": "Herencia mendeliana",
+  "subtema": "Las leyes de Mendel y el cuadro de Punnett",
+  "orden": 25,
+  "etiqueta": "5",
+  "vistas": [
+    "ruta"
+  ],
+  "tituloVista": "Ruta de la herencia mendeliana",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Explicar el método de Mendel y sus tres leyes.",
+    "Usar los conceptos de gen, alelo, genotipo y fenotipo.",
+    "Resolver cruces con el cuadro de Punnett y calcular probabilidades."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con un texto de genética de bachillerato. A verificar: cifras de Mendel (6022 : 2001; 315 : 108 : 101 : 32; ≈ 28 000 plantas), años 1856–1863 y 1866, y la lista de los siete caracteres con su forma dominante."
+  ],
+  "bloques": [
+    {
+      "id": "jardin-mendel",
+      "titulo": "El jardín de Mendel",
+      "resumen": "Por qué arvejas y cómo trabajó Mendel.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "quien": "Gregor Mendel",
+        "cuando": "1856–1863",
+        "idea": "Gregor Mendel, un monje de Brno, cruzó plantas de arveja durante ocho años. Escogió caracteres con dos formas fáciles de distinguir, empezó con líneas puras, hizo los cruces a mano y contó miles de semillas. Con esos números descubrió que los caracteres se heredan como «factores» que no se mezclan.",
+        "contexto": [
+          {
+            "titulo": "Por qué arvejas",
+            "texto": "Crecen rápido, dan muchas semillas, tienen caracteres con dos formas claras y se pueden autofecundar o cruzar a mano."
+          },
+          {
+            "titulo": "Siete caracteres",
+            "texto": "Color y forma de la semilla, color de la flor, forma y color de la vaina, posición de las flores y altura del tallo."
+          },
+          {
+            "titulo": "Líneas puras",
+            "texto": "Plantas que, al autofecundarse por varias generaciones, siempre daban hijos iguales a ellas."
+          }
+        ],
+        "limites": "En 1866 nadie sabía qué eran los genes ni dónde estaban: Mendel habló de «factores». La vida de Mendel y por qué su trabajo se ignoró hasta 1900 van en la historia de la genética.",
+        "cuaderno": {
+          "facil": [
+            "Mendel cruzó arvejas y contó sus semillas.",
+            "Línea pura: siempre da hijos iguales."
+          ],
+          "media": [
+            "Estudió 7 caracteres con dos formas cada uno.",
+            "Generaciones: P (padres), F1 (hijos), F2 (nietos)."
+          ],
+          "avanzada": [
+            "Usó números grandes porque la herencia funciona como una probabilidad."
+          ]
+        },
+        "docente": {
+          "abrir": "Si cruzas una planta de semillas amarillas con una de semillas verdes, ¿de qué color crees que salen los hijos?",
+          "actividad": "Recorran la escena hasta la F1 y voten antes de avanzar. Cierren con el juego del método.",
+          "errores": [
+            "Creer que los caracteres se mezclan (amarillo + verde = amarillo verdoso).",
+            "Pensar que Mendel conocía los genes o el ADN."
+          ],
+          "minutos": 10
+        }
+      },
+      "juego": "metodo-mendel-juego",
+      "revisado": false,
+      "preguntas": [
+        {
+          "id": "hm-ja-1",
+          "enunciado": "¿Por qué Mendel empezó con líneas puras?",
+          "opciones": [
+            "Porque siempre daban hijos iguales a ellas",
+            "Porque eran las plantas más grandes del jardín",
+            "Porque eran las únicas que tenían flores"
+          ],
+          "correcta": 0,
+          "explicacion": "Así sabía con certeza qué caracteres llevaba cada padre."
+        },
+        {
+          "id": "hm-ja-2",
+          "enunciado": "¿Para qué quitaba Mendel los estambres de las flores?",
+          "opciones": [
+            "Para que la planta creciera más rápido",
+            "Para que la flor no se polinizara a sí misma",
+            "Para que las semillas salieran más grandes"
+          ],
+          "correcta": 1,
+          "explicacion": "Así controlaba qué polen llegaba a cada flor."
+        },
+        {
+          "id": "hm-ja-3",
+          "enunciado": "¿Cómo se llama la primera generación de hijos de un cruce?",
+          "opciones": [
+            "F2",
+            "F1",
+            "P"
+          ],
+          "correcta": 1,
+          "explicacion": "P son los padres, F1 los hijos y F2 los nietos."
+        }
+      ],
+      "diapositivas": [
+        {
+          "titulo": "¿De qué color salen?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Cruzas una planta de semillas amarillas con una de semillas verdes. ¿Cómo crees que salen los hijos?",
+            "opciones": [
+              "Todas amarillas",
+              "Amarillo verdoso, una mezcla",
+              "Mitad amarillas y mitad verdes"
+            ],
+            "correcta": 0,
+            "explicacion": "Eso descubrió Mendel. Lo vas a ver en el experimento."
+          }
+        },
+        {
+          "titulo": "Un monje que contaba semillas",
+          "puntos": [
+            "Gregor Mendel, monje en Brno",
+            "Ocho años cruzando arvejas",
+            "Contó casi 30 000 plantas"
+          ],
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🫛",
+            "valor": "≈ 30 000",
+            "texto": "plantas de arveja estudiadas entre 1856 y 1863"
+          }
+        },
+        {
+          "titulo": "¿Por qué arvejas?",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "⏱️",
+                "titulo": "Crecen rápido",
+                "texto": "varias generaciones en pocos años"
+              },
+              {
+                "icono": "🫛",
+                "titulo": "Muchas semillas",
+                "texto": "muchos datos para contar"
+              },
+              {
+                "icono": "🎨",
+                "titulo": "Dos formas claras",
+                "texto": "amarilla o verde, sin puntos medios"
+              },
+              {
+                "icono": "🖌️",
+                "titulo": "Cruce a mano",
+                "texto": "él decide qué polen llega a cada flor"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Siete caracteres",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🟡",
+                "titulo": "Color de la semilla",
+                "texto": "amarilla / verde"
+              },
+              {
+                "icono": "⚪",
+                "titulo": "Forma de la semilla",
+                "texto": "lisa / rugosa"
+              },
+              {
+                "icono": "🟣",
+                "titulo": "Color de la flor",
+                "texto": "púrpura / blanca"
+              },
+              {
+                "icono": "🫛",
+                "titulo": "Forma de la vaina",
+                "texto": "inflada / estrangulada"
+              },
+              {
+                "icono": "🟩",
+                "titulo": "Color de la vaina",
+                "texto": "verde / amarilla"
+              },
+              {
+                "icono": "🌸",
+                "titulo": "Posición de las flores",
+                "texto": "a lo largo del tallo / en la punta"
+              }
+            ]
+          },
+          "puntos": [
+            "También altura del tallo: alto / enano"
+          ]
+        },
+        {
+          "titulo": "Así cruzaba",
+          "visual": {
+            "tipo": "escena",
+            "id": "mendel",
+            "fases": [
+              {
+                "id": "p",
+                "nombre": "Generación P",
+                "texto": "Mendel cruza dos líneas puras: una de semillas amarillas y otra de semillas verdes."
+              },
+              {
+                "id": "polinizar",
+                "nombre": "Cruce a mano",
+                "texto": "Quita los estambres de una flor para que no se polinice sola y le lleva el polen de la otra con un pincel."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "P, F1 y F2",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "👫",
+                "titulo": "P",
+                "texto": "los padres: dos líneas puras"
+              },
+              {
+                "icono": "👶",
+                "titulo": "F1",
+                "texto": "primera generación de hijos"
+              },
+              {
+                "icono": "🧒",
+                "titulo": "F2",
+                "texto": "los hijos de la F1"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "primera-ley",
+      "titulo": "Primera ley: uniformidad",
+      "resumen": "En la F1 todos salen iguales: aparece el dominante.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "nucleo": true,
+      "requiere": [
+        "jardin-mendel"
+      ],
+      "ficha": {
+        "idea": "Al cruzar dos líneas puras que difieren en un carácter, todos los hijos de la F1 son iguales entre sí y muestran solo una de las dos formas. A esa forma Mendel la llamó dominante; a la que no se ve, recesiva. Es la primera ley o ley de la uniformidad.",
+        "contexto": [
+          {
+            "titulo": "El verde no se perdió",
+            "texto": "La F1 se ve amarilla, pero guarda escondido el factor del verde: reaparecerá en la F2."
+          },
+          {
+            "titulo": "Dominante no es «mejor»",
+            "texto": "Dominante solo quiere decir que se ve cuando está presente. No es más fuerte, ni más común, ni más sano."
+          }
+        ],
+        "limites": "No todos los caracteres funcionan así: en la dominancia incompleta la F1 sale intermedia (se ve en herencia no mendeliana).",
+        "cuaderno": {
+          "facil": [
+            "En la F1 todos los hijos salen iguales.",
+            "Dominante: la forma que se ve en la F1."
+          ],
+          "media": [
+            "Recesivo: la forma que se esconde en la F1.",
+            "Amarilla, lisa y flor púrpura son dominantes."
+          ],
+          "avanzada": [
+            "Dominante no significa más frecuente en la población."
+          ]
+        },
+        "docente": {
+          "abrir": "Si el verde no aparece en la F1, ¿se perdió para siempre?",
+          "actividad": "Escena hasta la F1; luego el juego «¿Dominante o recesivo?».",
+          "errores": [
+            "Creer que dominante significa más común o mejor.",
+            "Pensar que el carácter recesivo desapareció."
+          ],
+          "minutos": 8
+        }
+      },
+      "juego": "dominante-juego",
+      "revisado": false,
+      "preguntas": [
+        {
+          "id": "hm-pl-1",
+          "enunciado": "Amarilla pura × verde pura: ¿cómo es la F1?",
+          "opciones": [
+            "Toda verde",
+            "Mitad amarilla y mitad verde",
+            "Toda amarilla"
+          ],
+          "correcta": 2,
+          "explicacion": "Todos iguales, con la forma dominante."
+        },
+        {
+          "id": "hm-pl-2",
+          "enunciado": "¿Qué es un carácter recesivo?",
+          "opciones": [
+            "El que no se ve en la F1 pero sigue ahí",
+            "El que solo tienen las plantas enfermas",
+            "El que desaparece para siempre"
+          ],
+          "correcta": 0,
+          "explicacion": "Se esconde en la F1 y reaparece en la F2."
+        },
+        {
+          "id": "hm-pl-3",
+          "enunciado": "¿Qué significa que la flor púrpura sea dominante?",
+          "opciones": [
+            "Que es más fuerte y sana que la blanca",
+            "Que es la más común en el mundo",
+            "Que se ve cuando está presente"
+          ],
+          "correcta": 2,
+          "explicacion": "Dominante solo describe qué se ve en el heterocigoto."
+        }
+      ],
+      "diapositivas": [
+        {
+          "titulo": "Cruce de líneas puras",
+          "visual": {
+            "tipo": "escena",
+            "id": "mendel",
+            "fases": [
+              {
+                "id": "p",
+                "nombre": "Generación P",
+                "texto": "Mendel cruza dos líneas puras: una de semillas amarillas y otra de semillas verdes."
+              },
+              {
+                "id": "f1",
+                "nombre": "F1",
+                "texto": "Todas las semillas de la primera generación salen amarillas. El verde parece haber desaparecido."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Primera ley",
+          "puntos": [
+            "La F1 sale toda igual",
+            "Muestra solo una de las dos formas"
+          ],
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🟡",
+            "valor": "100 %",
+            "texto": "de la F1 sale amarilla"
+          }
+        },
+        {
+          "titulo": "Dominante y recesivo",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "💪",
+              "titulo": "Dominante",
+              "puntos": [
+                "Se ve en la F1",
+                "amarilla, lisa, flor púrpura"
+              ]
+            },
+            "der": {
+              "icono": "🙈",
+              "titulo": "Recesivo",
+              "puntos": [
+                "Se esconde en la F1",
+                "verde, rugosa, flor blanca"
+              ]
+            }
+          }
+        },
+        {
+          "titulo": "¿Lo tienes?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Tallo alto puro × tallo enano puro: toda la F1 sale alta. ¿Qué forma es dominante?",
+            "opciones": [
+              "Tallo enano",
+              "Tallo alto",
+              "Ninguna de las dos"
+            ],
+            "correcta": 1,
+            "explicacion": "La que aparece en la F1 es la dominante."
+          }
+        }
+      ]
+    },
+    {
+      "id": "genes-alelos",
+      "titulo": "Genes y alelos",
+      "resumen": "Gen, alelo, homocigoto, heterocigoto, genotipo y fenotipo.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "basico",
+      "nucleo": true,
+      "requiere": [
+        "primera-ley"
+      ],
+      "ficha": {
+        "idea": "Hoy a los «factores» de Mendel los llamamos genes. Cada gen puede tener formas distintas, los alelos, y cada individuo lleva dos alelos de cada gen: uno de la madre y otro del padre. Si los dos son iguales es homocigoto (AA o aa); si son distintos, heterocigoto (Aa). El genotipo son los alelos que tiene; el fenotipo, lo que se ve.",
+        "contexto": [
+          {
+            "titulo": "Letras",
+            "texto": "Se usa la mayúscula para el alelo dominante (A) y la minúscula para el recesivo (a)."
+          },
+          {
+            "titulo": "Dos genotipos, un fenotipo",
+            "texto": "AA y Aa se ven iguales (amarillas): el fenotipo no siempre dice el genotipo."
+          },
+          {
+            "titulo": "¿Por qué dos?",
+            "texto": "Porque los cromosomas vienen en pares: uno de cada padre."
+          }
+        ],
+        "limites": "El fenotipo también depende del ambiente: una planta con genes de tallo alto puede quedar baja si le falta agua.",
+        "cuaderno": {
+          "facil": [
+            "Gen: la instrucción para un carácter.",
+            "Alelo: cada forma de un gen (A o a)."
+          ],
+          "media": [
+            "Homocigoto: AA o aa. Heterocigoto: Aa.",
+            "Genotipo: las letras. Fenotipo: lo que se ve."
+          ],
+          "avanzada": [
+            "AA y Aa tienen el mismo fenotipo pero distinto genotipo."
+          ]
+        },
+        "docente": {
+          "abrir": "Dos semillas amarillas, ¿tienen que tener los mismos alelos?",
+          "actividad": "Láminas y juego «¿Qué genotipo es?». Pidan ejemplos de genotipo y fenotipo en la clase.",
+          "errores": [
+            "Confundir gen con alelo.",
+            "Creer que el fenotipo amarillo siempre es AA."
+          ],
+          "minutos": 10
+        }
+      },
+      "juego": "genotipo-juego",
+      "revisado": false,
+      "preguntas": [
+        {
+          "id": "hm-ga-1",
+          "enunciado": "¿Qué es un alelo?",
+          "opciones": [
+            "Un cromosoma completo con sus genes",
+            "Cada una de las formas de un gen",
+            "Una célula sexual, como el óvulo"
+          ],
+          "correcta": 1,
+          "explicacion": "A y a son dos alelos del gen del color."
+        },
+        {
+          "id": "hm-ga-2",
+          "enunciado": "¿Cuál es heterocigoto?",
+          "opciones": [
+            "AA",
+            "aa",
+            "Aa"
+          ],
+          "correcta": 2,
+          "explicacion": "Hetero = distintos."
+        },
+        {
+          "id": "hm-ga-3",
+          "enunciado": "Una semilla amarilla puede ser…",
+          "opciones": [
+            "AA o Aa",
+            "solo aa",
+            "solo AA"
+          ],
+          "correcta": 0,
+          "explicacion": "Con un solo A ya se ve amarilla."
+        }
+      ],
+      "diapositivas": [
+        {
+          "titulo": "Factores con nombre nuevo",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🧬",
+                "titulo": "Gen",
+                "texto": "la instrucción para un carácter"
+              },
+              {
+                "icono": "🔤",
+                "titulo": "Alelo",
+                "texto": "cada forma del gen: A o a"
+              },
+              {
+                "icono": "👫",
+                "titulo": "Dos alelos",
+                "texto": "uno de la madre y otro del padre"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Iguales o distintos",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "🟰",
+              "titulo": "Homocigoto",
+              "puntos": [
+                "Dos alelos iguales",
+                "AA o aa"
+              ]
+            },
+            "der": {
+              "icono": "🔀",
+              "titulo": "Heterocigoto",
+              "puntos": [
+                "Dos alelos distintos",
+                "Aa"
+              ]
+            }
+          }
+        },
+        {
+          "titulo": "Lo que tiene y lo que se ve",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "🔤",
+              "titulo": "Genotipo",
+              "puntos": [
+                "Los alelos que tiene",
+                "AA, Aa o aa"
+              ]
+            },
+            "der": {
+              "icono": "👀",
+              "titulo": "Fenotipo",
+              "puntos": [
+                "Lo que se ve",
+                "amarilla o verde"
+              ]
+            }
+          }
+        },
+        {
+          "titulo": "¿Por qué hay dos?",
+          "puntos": [
+            "Los cromosomas vienen en pares"
+          ],
+          "atajo": {
+            "texto": "Más sobre esto: cromosomas homólogos",
+            "tema": "meiosis",
+            "bloque": "diploide-haploide"
+          },
+          "visual": {
+            "tipo": "cifra",
+            "icono": "👫",
+            "valor": "1 + 1",
+            "texto": "un alelo de la madre y uno del padre"
+          }
+        },
+        {
+          "titulo": "¿Lo tienes?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Una semilla es verde. ¿Cuál es su genotipo?",
+            "opciones": [
+              "Aa",
+              "aa",
+              "No se puede saber"
+            ],
+            "correcta": 1,
+            "explicacion": "El recesivo solo se ve cuando está doble: aa."
+          }
+        }
+      ]
+    },
+    {
+      "id": "segunda-ley",
+      "titulo": "Segunda ley: segregación",
+      "resumen": "El recesivo vuelve en la F2: 3 a 1.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "basico",
+      "nucleo": true,
+      "requiere": [
+        "genes-alelos"
+      ],
+      "ficha": {
+        "idea": "Al autofecundar la F1, el carácter recesivo reaparece en la F2 en una proporción de 3 dominantes por 1 recesivo. Mendel lo explicó así: los dos alelos de cada individuo se separan al formar los gametos, y cada gameto lleva solo uno. Es la segunda ley o ley de la segregación. El cuadro de Punnett muestra todas las combinaciones posibles.",
+        "contexto": [
+          {
+            "titulo": "Los números de Mendel",
+            "texto": "6022 semillas amarillas y 2001 verdes: 3,01 a 1."
+          },
+          {
+            "titulo": "El cuadro de Punnett",
+            "texto": "Se ponen los gametos de un padre arriba y los del otro a un lado; cada casilla es un hijo posible."
+          },
+          {
+            "titulo": "Por qué se separan",
+            "texto": "Los alelos están en cromosomas homólogos, y la meiosis separa los homólogos."
+          }
+        ],
+        "limites": "El 3 : 1 es una probabilidad: en 4 hijos puede no salir ningún verde. Se cumple mejor con muchos hijos.",
+        "cuaderno": {
+          "facil": [
+            "En la F2 vuelve el recesivo: 3 a 1.",
+            "Cada gameto lleva un solo alelo."
+          ],
+          "media": [
+            "Aa × Aa → 1 AA : 2 Aa : 1 aa.",
+            "Fenotipos: 3 amarillas : 1 verde."
+          ],
+          "avanzada": [
+            "La segregación de alelos ocurre en la meiosis (anafase I)."
+          ]
+        },
+        "docente": {
+          "abrir": "Si la F1 es toda amarilla, ¿de dónde sale el verde de la F2?",
+          "actividad": "Escena completa; luego armen cruces en el cuadro de Punnett y jueguen «¿Qué proporción sale?».",
+          "errores": [
+            "Leer el 3 : 1 como «de 4 hijos, exactamente 3 amarillos».",
+            "Poner los dos alelos del padre en un mismo gameto."
+          ],
+          "minutos": 15
+        }
+      },
+      "diagrama": "punnett",
+      "juego": "proporcion-juego",
+      "revisado": false,
+      "preguntas": [
+        {
+          "id": "hm-sl-1",
+          "enunciado": "Aa × Aa: ¿qué proporción de fenotipos se espera?",
+          "opciones": [
+            "1 amarilla : 1 verde",
+            "Todas amarillas",
+            "3 amarillas : 1 verde"
+          ],
+          "correcta": 2,
+          "explicacion": "1 AA : 2 Aa : 1 aa."
+        },
+        {
+          "id": "hm-sl-2",
+          "enunciado": "¿Cuántos alelos de cada gen lleva un gameto?",
+          "opciones": [
+            "Cuatro",
+            "Dos",
+            "Uno"
+          ],
+          "correcta": 2,
+          "explicacion": "Los dos alelos se separan al formar los gametos."
+        },
+        {
+          "id": "hm-sl-3",
+          "enunciado": "¿Qué gametos forma una planta Aa?",
+          "opciones": [
+            "Todos Aa",
+            "Todos A",
+            "Mitad A y mitad a"
+          ],
+          "correcta": 2,
+          "explicacion": "Cada gameto lleva uno de los dos alelos."
+        }
+      ],
+      "diapositivas": [
+        {
+          "titulo": "¿Y si la F1 se poliniza sola?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "La F1 es toda amarilla (Aa). Si se autofecunda, ¿cómo sale la F2?",
+            "opciones": [
+              "Toda verde",
+              "Toda amarilla otra vez",
+              "Vuelven a salir verdes"
+            ],
+            "correcta": 2,
+            "explicacion": "El verde vuelve, y en una proporción fija."
+          }
+        },
+        {
+          "titulo": "De P a F2",
+          "visual": {
+            "tipo": "escena",
+            "id": "mendel",
+            "fases": [
+              {
+                "id": "p",
+                "nombre": "Generación P",
+                "texto": "Mendel cruza dos líneas puras: una de semillas amarillas y otra de semillas verdes."
+              },
+              {
+                "id": "f1",
+                "nombre": "F1",
+                "texto": "Todas las semillas de la primera generación salen amarillas. El verde parece haber desaparecido."
+              },
+              {
+                "id": "autofecundar",
+                "nombre": "Autofecundación",
+                "texto": "Deja que cada planta de la F1 se polinice a sí misma."
+              },
+              {
+                "id": "f2",
+                "nombre": "F2",
+                "texto": "¡El verde vuelve! De cada 4 semillas, unas 3 son amarillas y 1 es verde.",
+                "nota": "Mendel contó 6022 amarillas y 2001 verdes: 3,01 a 1."
+              },
+              {
+                "id": "alelos",
+                "nombre": "Con alelos",
+                "texto": "Cada planta tiene dos alelos: A (amarilla) domina sobre a (verde). La F1 es Aa; en la F2 salen 1 AA : 2 Aa : 1 aa.",
+                "nivel": "intermedio"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Segunda ley",
+          "puntos": [
+            "Los dos alelos se separan en los gametos",
+            "Cada gameto lleva uno solo"
+          ],
+          "atajo": {
+            "texto": "Más sobre esto: la meiosis separa los homólogos",
+            "tema": "meiosis",
+            "bloque": "meiosis-i"
+          },
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "🧬",
+              "titulo": "Planta Aa",
+              "puntos": [
+                "dos alelos"
+              ]
+            },
+            "der": {
+              "icono": "🌼",
+              "titulo": "Sus gametos",
+              "puntos": [
+                "mitad con A",
+                "mitad con a"
+              ]
+            }
+          }
+        },
+        {
+          "titulo": "El cuadro de Punnett",
+          "visual": {
+            "tipo": "diagrama",
+            "id": "punnett"
+          }
+        },
+        {
+          "titulo": "Probabilidad, no destino",
+          "puntos": [
+            "3 : 1 se cumple con muchos hijos",
+            "En 4 hijos puede salir cualquier cosa"
+          ],
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🎲",
+            "valor": "3 : 1",
+            "texto": "6022 amarillas : 2001 verdes = 3,01 : 1"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cruce-prueba",
+      "titulo": "El cruce de prueba",
+      "resumen": "Cómo saber si un dominante es puro o híbrido.",
+      "anio": 5,
+      "etiqueta": "Paso 5",
+      "nivel": "intermedio",
+      "requiere": [
+        "segunda-ley"
+      ],
+      "ficha": {
+        "idea": "Una semilla amarilla puede ser AA o Aa: se ven iguales. Para saberlo se cruza con una verde (aa), que solo da gametos a. Si todos los hijos salen amarillos, era AA; si aparecen verdes (en proporción 1 : 1), era Aa. Esto es el cruce de prueba.",
+        "contexto": [
+          {
+            "titulo": "Por qué con el recesivo",
+            "texto": "El aa no esconde nada: solo aporta a, así que el fenotipo de los hijos delata lo que aportó el otro padre."
+          },
+          {
+            "titulo": "En la vida real",
+            "texto": "Criadores de plantas y animales lo usan para saber si un ejemplar es de línea pura."
+          }
+        ],
+        "limites": "Con pocos hijos se puede equivocar: un Aa podría dar, por azar, solo hijos amarillos.",
+        "cuaderno": {
+          "facil": [
+            "Se cruza con el recesivo (aa)."
+          ],
+          "media": [
+            "Todos dominantes → era AA.",
+            "Mitad y mitad → era Aa."
+          ],
+          "avanzada": [
+            "Más hijos, conclusión más segura."
+          ]
+        },
+        "docente": {
+          "abrir": "Tienes dos semillas amarillas iguales. ¿Cómo sabrías cuál esconde un alelo verde?",
+          "actividad": "Prueben las dos hipótesis en el cuadro de Punnett y luego jueguen «¿Pura o híbrida?».",
+          "errores": [
+            "Cruzar con otra amarilla en vez de con una verde.",
+            "Concluir AA con muy pocos hijos."
+          ],
+          "minutos": 10
+        }
+      },
+      "diagrama": "punnett-prueba",
+      "juego": "puro-hibrido-juego",
+      "revisado": false,
+      "preguntas": [
+        {
+          "id": "hm-cp-1",
+          "enunciado": "¿Con qué planta se hace el cruce de prueba?",
+          "opciones": [
+            "Con una homocigota dominante (AA)",
+            "Con otra planta heterocigota (Aa)",
+            "Con una homocigota recesiva (aa)"
+          ],
+          "correcta": 2,
+          "explicacion": "El aa solo aporta a y no esconde nada."
+        },
+        {
+          "id": "hm-cp-2",
+          "enunciado": "En un cruce de prueba salen 50 amarillas y 48 verdes. ¿La amarilla era…?",
+          "opciones": [
+            "AA",
+            "aa",
+            "Aa"
+          ],
+          "correcta": 2,
+          "explicacion": "1 : 1 delata al heterocigoto."
+        },
+        {
+          "id": "hm-cp-3",
+          "enunciado": "Si la amarilla misteriosa es AA, los hijos del cruce de prueba son…",
+          "opciones": [
+            "Todos Aa, amarillos",
+            "Todos aa, verdes",
+            "Mitad Aa y mitad aa"
+          ],
+          "correcta": 0,
+          "explicacion": "Cada hijo recibe A de ella y a de la verde."
+        }
+      ],
+      "diapositivas": [
+        {
+          "titulo": "Dos amarillas, ¿iguales?",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "🟡",
+              "titulo": "AA",
+              "puntos": [
+                "amarilla",
+                "pura"
+              ]
+            },
+            "der": {
+              "icono": "🟡",
+              "titulo": "Aa",
+              "puntos": [
+                "amarilla",
+                "esconde un a"
+              ]
+            }
+          }
+        },
+        {
+          "titulo": "Crúzala con una verde",
+          "visual": {
+            "tipo": "diagrama",
+            "id": "punnett-prueba"
+          }
+        },
+        {
+          "titulo": "Lee el resultado",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "🏆",
+              "titulo": "Todas amarillas",
+              "puntos": [
+                "era AA"
+              ]
+            },
+            "der": {
+              "icono": "⚖️",
+              "titulo": "Mitad y mitad",
+              "puntos": [
+                "era Aa"
+              ]
+            }
+          }
+        },
+        {
+          "titulo": "¿Lo tienes?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Cruzas un conejo negro con uno blanco (recesivo) y sale un gazapo blanco. ¿El negro era…?",
+            "opciones": [
+              "Homocigoto dominante",
+              "No se puede saber",
+              "Heterocigoto"
+            ],
+            "correcta": 2,
+            "explicacion": "El blanco necesita dos alelos recesivos: uno vino del negro."
+          }
+        }
+      ]
+    },
+    {
+      "id": "tercera-ley",
+      "titulo": "Tercera ley: transmisión independiente",
+      "resumen": "Dos caracteres a la vez: 9 : 3 : 3 : 1.",
+      "anio": 6,
+      "etiqueta": "Paso 6",
+      "nivel": "avanzado",
+      "requiere": [
+        "segunda-ley"
+      ],
+      "ficha": {
+        "idea": "Mendel cruzó plantas que diferían en dos caracteres: semillas amarillas y lisas (AABB) con verdes y rugosas (aabb). La F1 salió toda amarilla y lisa (AaBb). En la F2 aparecieron cuatro combinaciones en proporción 9 : 3 : 3 : 1, incluidas dos nuevas (amarilla rugosa y verde lisa). Concluyó que los alelos de genes distintos se reparten en los gametos de forma independiente: tercera ley.",
+        "contexto": [
+          {
+            "titulo": "Cuatro gametos",
+            "texto": "Una planta AaBb forma cuatro tipos de gametos por igual: AB, Ab, aB y ab."
+          },
+          {
+            "titulo": "Sus números",
+            "texto": "315 amarillas lisas, 108 verdes lisas, 101 amarillas rugosas y 32 verdes rugosas: casi 9 : 3 : 3 : 1."
+          },
+          {
+            "titulo": "Combinaciones nuevas",
+            "texto": "Amarilla rugosa y verde lisa no estaban en los padres: la herencia también crea mezclas nuevas."
+          }
+        ],
+        "limites": "Solo se cumple para genes en cromosomas distintos (o muy lejanos). Genes muy cercanos en un mismo cromosoma tienden a heredarse juntos (ligamiento).",
+        "cuaderno": {
+          "facil": [
+            "Dos caracteres se heredan por separado."
+          ],
+          "media": [
+            "AaBb da 4 gametos: AB, Ab, aB, ab.",
+            "F2: 9 : 3 : 3 : 1."
+          ],
+          "avanzada": [
+            "Excepción: genes ligados en un mismo cromosoma."
+          ]
+        },
+        "docente": {
+          "abrir": "Si los padres eran amarilla-lisa y verde-rugosa, ¿puede salir una amarilla-rugosa?",
+          "actividad": "Cuadro de 4 × 4 con AaBb × AaBb; cuenten las cuatro clases. Juego «¿Cuántos gametos distintos?».",
+          "errores": [
+            "Formar gametos con dos alelos del mismo gen (Aa).",
+            "Esperar exactamente 9, 3, 3 y 1 hijos."
+          ],
+          "minutos": 15
+        }
+      },
+      "diagrama": "punnett-dihibrido",
+      "juego": "gametos-juego",
+      "revisado": false,
+      "preguntas": [
+        {
+          "id": "hm-tl-1",
+          "enunciado": "¿Qué gametos forma una planta AaBb?",
+          "opciones": [
+            "Aa y Bb",
+            "Solo AB y ab",
+            "AB, Ab, aB y ab"
+          ],
+          "correcta": 2,
+          "explicacion": "Un alelo de cada gen, combinados al azar."
+        },
+        {
+          "id": "hm-tl-2",
+          "enunciado": "AaBb × AaBb: ¿proporción de fenotipos en la F2?",
+          "opciones": [
+            "9 : 3 : 3 : 1",
+            "1 : 2 : 1",
+            "3 : 1"
+          ],
+          "correcta": 0,
+          "explicacion": "Cuatro clases de fenotipo."
+        },
+        {
+          "id": "hm-tl-3",
+          "enunciado": "¿Cuándo NO se cumple la tercera ley?",
+          "opciones": [
+            "Cuando las plantas se cruzan a mano",
+            "Cuando los genes están en cromosomas distintos",
+            "Cuando los genes están muy juntos en el mismo cromosoma"
+          ],
+          "correcta": 2,
+          "explicacion": "Los genes ligados tienden a heredarse juntos."
+        }
+      ],
+      "diapositivas": [
+        {
+          "titulo": "Dos caracteres a la vez",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "🟡",
+              "titulo": "Padre 1: AABB",
+              "puntos": [
+                "amarilla y lisa"
+              ]
+            },
+            "der": {
+              "icono": "🟢",
+              "titulo": "Padre 2: aabb",
+              "puntos": [
+                "verde y rugosa"
+              ]
+            }
+          }
+        },
+        {
+          "titulo": "Cuatro gametos",
+          "puntos": [
+            "AaBb forma AB, Ab, aB y ab"
+          ],
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🟡",
+                "titulo": "AB",
+                "texto": "amarilla · lisa"
+              },
+              {
+                "icono": "🟡",
+                "titulo": "Ab",
+                "texto": "amarilla · rugosa"
+              },
+              {
+                "icono": "🟢",
+                "titulo": "aB",
+                "texto": "verde · lisa"
+              },
+              {
+                "icono": "🟢",
+                "titulo": "ab",
+                "texto": "verde · rugosa"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "El cuadro de 16",
+          "visual": {
+            "tipo": "diagrama",
+            "id": "punnett-dihibrido"
+          }
+        },
+        {
+          "titulo": "Tercera ley",
+          "puntos": [
+            "Cada gen se reparte por su cuenta",
+            "Aparecen combinaciones nuevas"
+          ],
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🔢",
+            "valor": "9 : 3 : 3 : 1",
+            "texto": "315 : 108 : 101 : 32 en las semillas de Mendel"
+          }
+        },
+        {
+          "titulo": "¿Lo tienes?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "En la F2 aparecen semillas amarillas y rugosas. ¿Estaban en los padres P?",
+            "opciones": [
+              "Sí: era uno de los padres",
+              "Solo si hubo una mutación",
+              "No: es una combinación nueva"
+            ],
+            "correcta": 2,
+            "explicacion": "Los padres eran amarilla-lisa y verde-rugosa."
+          }
+        }
+      ]
+    },
+    {
+      "id": "probabilidad",
+      "titulo": "Probabilidad en los cruces",
+      "resumen": "Calcular sin dibujar el cuadro.",
+      "anio": 7,
+      "etiqueta": "Paso 7",
+      "nivel": "avanzado",
+      "requiere": [
+        "tercera-ley"
+      ],
+      "ficha": {
+        "idea": "Cada casilla del cuadro de Punnett es una probabilidad. Que un hijo de Aa × Aa sea aa tiene probabilidad 1/4. Para dos genes independientes se multiplican las probabilidades: que un hijo de AaBb × AaBb sea aabb es 1/4 × 1/4 = 1/16. Cada hijo es un caso nuevo: lo que salió antes no cambia la probabilidad del siguiente.",
+        "contexto": [
+          {
+            "titulo": "Regla del producto",
+            "texto": "Para que pasen dos cosas independientes a la vez, se multiplican sus probabilidades."
+          },
+          {
+            "titulo": "Como monedas",
+            "texto": "Un Aa da un gameto A o a como una moneda da cara o sello: 1/2 cada uno."
+          },
+          {
+            "titulo": "Sin memoria",
+            "texto": "Si una pareja Aa × Aa ya tuvo tres hijos AA o Aa, el cuarto sigue teniendo 1/4 de ser aa."
+          }
+        ],
+        "limites": "Las probabilidades dicen qué esperar en promedio con muchos hijos, no qué pasará en una familia concreta.",
+        "cuaderno": {
+          "facil": [
+            "Una casilla de cuatro = 1/4."
+          ],
+          "media": [
+            "Aa × Aa → aa: 1/4; dominante: 3/4."
+          ],
+          "avanzada": [
+            "Genes independientes: se multiplican (1/4 × 1/4 = 1/16)."
+          ]
+        },
+        "docente": {
+          "abrir": "Si lanzas dos monedas, ¿qué tan probable es que salgan dos caras?",
+          "actividad": "Lancen monedas en parejas como si fueran gametos y comparen con el cuadro. Juego «¿Qué probabilidad?».",
+          "errores": [
+            "Sumar en vez de multiplicar para dos genes.",
+            "Creer que, tras tres hijos dominantes, «ya le toca» al recesivo."
+          ],
+          "minutos": 15
+        }
+      },
+      "juego": "probabilidad-juego",
+      "revisado": false,
+      "preguntas": [
+        {
+          "id": "hm-pr-1",
+          "enunciado": "Aa × Aa: ¿probabilidad de que un hijo sea aa?",
+          "opciones": [
+            "3/4",
+            "1/2",
+            "1/4"
+          ],
+          "correcta": 2,
+          "explicacion": "Una casilla de cuatro."
+        },
+        {
+          "id": "hm-pr-2",
+          "enunciado": "AaBb × AaBb: ¿probabilidad de un hijo aabb?",
+          "opciones": [
+            "1/4",
+            "1/16",
+            "1/8"
+          ],
+          "correcta": 1,
+          "explicacion": "1/4 × 1/4."
+        },
+        {
+          "id": "hm-pr-3",
+          "enunciado": "Una pareja Aa × Aa tuvo tres hijos con el fenotipo dominante. ¿Probabilidad de que el cuarto sea aa?",
+          "opciones": [
+            "1/4, igual que siempre",
+            "1, porque ya le toca",
+            "0, porque la familia es dominante"
+          ],
+          "correcta": 0,
+          "explicacion": "Cada hijo es un caso independiente."
+        }
+      ],
+      "diapositivas": [
+        {
+          "titulo": "Dos monedas",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Lanzas dos monedas. ¿Qué probabilidad hay de que salgan dos caras?",
+            "opciones": [
+              "3/4",
+              "1/4",
+              "1/2"
+            ],
+            "correcta": 1,
+            "explicacion": "1/2 × 1/2 = 1/4. Con los gametos pasa lo mismo."
+          }
+        },
+        {
+          "titulo": "Cada casilla, un cuarto",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🟡",
+                "titulo": "AA",
+                "texto": "1/4"
+              },
+              {
+                "icono": "🟡",
+                "titulo": "Aa",
+                "texto": "1/4 + 1/4 = 1/2"
+              },
+              {
+                "icono": "🟢",
+                "titulo": "aa",
+                "texto": "1/4"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Regla del producto",
+          "puntos": [
+            "Dos genes independientes: se multiplica"
+          ],
+          "visual": {
+            "tipo": "cifra",
+            "icono": "✖️",
+            "valor": "1/4 × 1/4 = 1/16",
+            "texto": "probabilidad de un hijo aabb en AaBb × AaBb"
+          }
+        },
+        {
+          "titulo": "El azar no tiene memoria",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Tres hijos amarillos seguidos de Aa × Aa. ¿El cuarto?",
+            "opciones": [
+              "Seguro amarillo: la racha sigue",
+              "Seguro verde: ya le toca",
+              "1/4 de ser verde, como siempre"
+            ],
+            "correcta": 2,
+            "explicacion": "Cada hijo es un sorteo nuevo."
+          }
+        }
+      ]
+    }
+  ]
+}

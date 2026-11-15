@@ -344,3 +344,11 @@ Hooke usa la reconstrucción de Rita Greer (2004, Free Art License, Wikimedia Co
 - Quitada la tarjeta fantasma de «Técnicas de estudio» en `catalogo.ts` (PROXIMOS).
 - 28 juegos nuevos «decide rápido» en `JuegosDecide3.tsx` para las fichas que no tenían «Juega» (temas 1, 2b, 3, 6, 7, 8 y 9); Bacterias y arqueas usa `bacterias-donde-viven`. Niveles de organización queda como excepción (ver NORMA-LECCIONES.md).
 - Pendiente: retratos de Oparin, Haldane, Miller y Urey (siguen con silueta; JuanMed enviará imágenes con licencia). La revisión docente de las 74 fichas la hará JuanMed.
+
+## Área 2 · Tema 5 «Herencia mendeliana» (14 nov)
+- `data/materias/biologia/genetica/herencia-mendeliana.json` (orden 25, etiqueta 5): El jardín de Mendel, Primera ley, Genes y alelos, Segunda ley (6° llega hasta aquí), Cruce de prueba (desde 9°), Tercera ley y Probabilidad (11°).
+- Escena `mendel` (`escenas/EscenaMendel.tsx`): P → cruce a mano → F1 → autofecundación → F2 (3 : 1) → con alelos (desde 9°). Semilla de arveja reutilizable en `ilustraciones/Semilla.tsx`.
+- Cuadro de Punnett interactivo (`diagramas/Punnett.tsx`): `punnett` (un carácter), `punnett-prueba` (planta amarilla misteriosa × aa), `punnett-dihibrido` (4 × 4). 7 juegos en `JuegosMendel.tsx`.
+- Los otros 7 temas del área 2 aparecen como «En construcción» (PROXIMOS en `catalogo.ts`).
+- El validador ya no compara las opciones en minúsculas (AA, Aa y aa son distintas).
+- La vida de Mendel y por qué se ignoró hasta 1900 van en el tema 1 (Historia de la genética). Chi cuadrado: no incluido (posible extra para 11°).

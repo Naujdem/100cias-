@@ -88,7 +88,8 @@ for (const f of archivos(join(raiz, 'materias'))) {
       pids.add(p.id)
       if (!Number.isInteger(p.correcta) || p.correcta < 0 || p.correcta >= p.opciones.length)
         err(`${pc}: índice de respuesta correcta fuera de rango`)
-      if (new Set(p.opciones.map((o) => o.trim().toLowerCase())).size !== p.opciones.length)
+      // sin pasar a minúsculas: en genética «AA», «Aa» y «aa» son opciones distintas
+      if (new Set(p.opciones.map((o) => o.trim())).size !== p.opciones.length)
         err(`${pc}: opciones duplicadas`)
       if (p.opciones.length < 3) err(`${pc}: menos de 3 opciones`)
       if (!p.explicacion) err(`${pc}: falta explicación`)
