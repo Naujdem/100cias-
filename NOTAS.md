@@ -352,3 +352,6 @@ Hooke usa la reconstrucción de Rita Greer (2004, Free Art License, Wikimedia Co
 - Los otros 7 temas del área 2 aparecen como «En construcción» (PROXIMOS en `catalogo.ts`).
 - El validador ya no compara las opciones en minúsculas (AA, Aa y aa son distintas).
 - La vida de Mendel y por qué se ignoró hasta 1900 van en el tema 1 (Historia de la genética). Chi cuadrado: no incluido (posible extra para 11°).
+
+## Área 2 · Genética y biotecnología (14 nov)
+- Área 1 cerrada. Plan del área 2 aprobado: ver **PLAN-AREA-2.md** (8 temas). Se empezó por el tema 5, herencia mendeliana.
