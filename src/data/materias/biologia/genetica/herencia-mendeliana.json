@@ -518,23 +518,8 @@
         {
           "titulo": "Lo que tiene y lo que se ve",
           "visual": {
-            "tipo": "compara",
-            "izq": {
-              "icono": "🔤",
-              "titulo": "Genotipo",
-              "puntos": [
-                "Los alelos que tiene",
-                "AA, Aa o aa"
-              ]
-            },
-            "der": {
-              "icono": "👀",
-              "titulo": "Fenotipo",
-              "puntos": [
-                "Lo que se ve",
-                "amarilla o verde"
-              ]
-            }
+            "tipo": "diagrama",
+            "id": "genotipo-fenotipo"
           }
         },
         {
