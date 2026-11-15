@@ -14,10 +14,10 @@ export function Semilla({ x, y, r = 14, amarilla = true, rugosa = false }: { x: 
       </g>
     )
   // rugosa: contorno ondulado y arrugas
-  const n = 9
+  const n = 13
   const puntos = Array.from({ length: n * 2 }, (_, i) => {
     const a = (i / (n * 2)) * Math.PI * 2
-    const rr = i % 2 ? r * 0.82 : r
+    const rr = i % 2 ? r * 0.9 : r
     return `${(x + rr * Math.cos(a)).toFixed(1)},${(y + rr * Math.sin(a)).toFixed(1)}`
   }).join(' ')
   return (
