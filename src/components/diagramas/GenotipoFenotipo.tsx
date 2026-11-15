@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Semilla, AMARILLA, VERDE } from '../ilustraciones/Semilla.tsx'
 
-// Genotipo y fenotipo: tres semillas por fuera (fenotipo) y, al «mirar por dentro», su par de cromosomas
+// Genotipo y fenotipo: arriba tres semillas por fuera (fenotipo); abajo, al «mirar por dentro», su par de cromosomas
 // con los alelos (genotipo). Muestra que AA y Aa se ven iguales.
 
 const CASOS = [
@@ -39,28 +39,28 @@ export default function GenotipoFenotipo() {
       <svg viewBox="0 0 640 330" role="img" aria-label="Tres semillas: por fuera dos amarillas y una verde; por dentro AA, Aa y aa" className="mx-auto w-full max-w-3xl">
         <style>{`.gf-t { transition: opacity .5s ease, transform .5s ease }`}</style>
         {/* rótulos de las filas */}
-        <rect x="0" y="10" width="640" height="140" rx="16" fill="#efe9f6" />
-        <rect x="0" y="176" width="640" height="146" rx="16" fill="#f4eedf" />
-        <text x="14" y="34" fontSize="15" fontWeight="900" fill="#5a4a7a">GENOTIPO</text>
-        <text x="14" y="52" fontSize="12" fill="#5a4a7a">lo que tiene</text>
-        <text x="14" y="200" fontSize="15" fontWeight="900" fill="#7a5a2a">FENOTIPO</text>
-        <text x="14" y="218" fontSize="12" fill="#7a5a2a">lo que se ve</text>
+        <rect x="0" y="186" width="640" height="140" rx="16" fill="#efe9f6" />
+        <rect x="0" y="10" width="640" height="146" rx="16" fill="#f4eedf" />
+        <text x="14" y="210" fontSize="15" fontWeight="900" fill="#5a4a7a">GENOTIPO</text>
+        <text x="14" y="228" fontSize="12" fill="#5a4a7a">lo que tiene</text>
+        <text x="14" y="34" fontSize="15" fontWeight="900" fill="#7a5a2a">FENOTIPO</text>
+        <text x="14" y="52" fontSize="12" fill="#7a5a2a">lo que se ve</text>
         {CASOS.map((c, k) => {
           const cx = 210 + k * 170
           return (
             <g key={c.g}>
               {/* por dentro */}
-              <g className="gf-t" opacity={dentro ? 1 : 0} style={{ transform: dentro ? 'none' : 'translateY(10px)' }}>
-                <Cromosoma x={cx - 18} y={78} alelo={c.alelos[0]} />
-                <Cromosoma x={cx + 18} y={78} alelo={c.alelos[1]} />
-                <text x={cx} y={142} textAnchor="middle" fontSize="16" fontWeight="900" fill="#2a2a2a">{c.g}</text>
+              <g className="gf-t" opacity={dentro ? 1 : 0} style={{ transform: dentro ? 'none' : 'translateY(-10px)' }}>
+                <Cromosoma x={cx - 18} y={250} alelo={c.alelos[0]} />
+                <Cromosoma x={cx + 18} y={250} alelo={c.alelos[1]} />
+                <text x={cx} y={316} textAnchor="middle" fontSize="16" fontWeight="900" fill="#2a2a2a">{c.g}</text>
               </g>
-              <text x={cx} y={88} textAnchor="middle" fontSize="44" fontWeight="900" fill="#b3a6c9" className="gf-t" opacity={dentro ? 0 : 1}>?</text>
+              <text x={cx} y={266} textAnchor="middle" fontSize="44" fontWeight="900" fill="#b3a6c9" className="gf-t" opacity={dentro ? 0 : 1}>?</text>
               {/* flecha */}
-              <path d={`M ${cx} 150 V 168`} stroke="#8a7a6a" strokeWidth={3} markerEnd="url(#gf-punta)" />
+              <path d={`M ${cx} 182 V 164`} stroke="#8a7a6a" strokeWidth={3} markerEnd="url(#gf-punta)" />
               {/* por fuera */}
-              <Semilla x={cx} y={246} r={38} amarilla={c.g !== 'aa'} />
-              <text x={cx} y={310} textAnchor="middle" fontSize="16" fontWeight="800" fill="#2a2a2a">{c.g === 'aa' ? 'verde' : 'amarilla'}</text>
+              <Semilla x={cx} y={78} r={38} amarilla={c.g !== 'aa'} />
+              <text x={cx} y={142} textAnchor="middle" fontSize="16" fontWeight="800" fill="#2a2a2a">{c.g === 'aa' ? 'verde' : 'amarilla'}</text>
             </g>
           )
         })}
