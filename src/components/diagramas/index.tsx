@@ -31,6 +31,7 @@ import { ExploradorCelula, RutaProteinaDiagrama, EnergiaCelular } from './Celula
 import MembranaActividades, { PorteroMembrana } from './MembranaJuegos.tsx'
 import Punnett from './Punnett.tsx'
 import SieteCaracteres from './SieteCaracteres.tsx'
+import GenotipoFenotipo from './GenotipoFenotipo.tsx'
 import { MetodoMendelJuego, DominanteJuego, GenotipoJuego, ProporcionJuego, PuroHibridoJuego, GametosJuego, ProbabilidadJuego } from './JuegosMendel.tsx'
 import { ComparadorProEu, ComparadorAnimalVegetal, ExploradorBacterias, GaleriaEspecializadas } from './TiposCelulas.tsx'
 
@@ -97,6 +98,7 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   // área 2 · herencia mendeliana
   punnett: () => <Punnett modo="mono" />,
   'siete-caracteres': SieteCaracteres,
+  'genotipo-fenotipo': GenotipoFenotipo,
   'punnett-prueba': () => <Punnett modo="prueba" />,
   'punnett-dihibrido': () => <Punnett modo="di" />,
   'metodo-mendel-juego': MetodoMendelJuego,
