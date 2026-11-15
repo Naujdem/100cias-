@@ -199,6 +199,11 @@
                 "texto": "Quita los estambres de una flor para que no se polinice sola y le lleva el polen de la otra con un pincel."
               }
             ]
+          },
+          "atajo": {
+            "texto": "Más sobre esto: la flor y la reproducción en las plantas",
+            "tema": "reproduccion-seres-vivos",
+            "bloque": "repro-plantas"
           }
         },
         {
