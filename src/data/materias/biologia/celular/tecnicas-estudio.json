@@ -101,9 +101,9 @@
           "id": "te-micro-2",
           "enunciado": "¿Por qué no se usa el macrométrico con el objetivo de 40×?",
           "opciones": [
-            "Porque no aumenta",
+            "Porque con ese objetivo ya no aumenta más",
             "Porque el objetivo puede chocar con la lámina",
-            "Porque se apaga la luz"
+            "Porque al moverlo se apaga la luz del microscopio"
           ],
           "correcta": 1,
           "explicacion": "Con 40× el objetivo queda muy cerca de la lámina."
@@ -295,8 +295,8 @@
           "enunciado": "Al pasar de 10× a 40×, ¿qué pasa con el campo que ves?",
           "opciones": [
             "Se ve una zona más pequeña de la muestra",
-            "Se ve toda la lámina",
-            "No cambia"
+            "Se ve una zona más grande de la muestra",
+            "El campo no cambia, solo se ve más nítido"
           ],
           "correcta": 0,
           "explicacion": "Más aumento, menos campo."

@@ -236,10 +236,10 @@
           "id": "ce-me-1",
           "enunciado": "¿De qué está hecha principalmente la membrana?",
           "opciones": [
-            "De celulosa",
+            "De celulosa, como la pared de las plantas",
             "De dos capas de lípidos con proteínas",
-            "De ADN y ARN",
-            "De agua pura"
+            "De ADN y ARN enrollados en capas",
+            "De agua con sales minerales disueltas"
           ],
           "correcta": 1,
           "explicacion": "Es una bicapa lipídica con proteínas."
@@ -248,10 +248,10 @@
           "id": "ce-me-2",
           "enunciado": "¿Qué significa que la membrana sea selectiva?",
           "opciones": [
-            "Que deja pasar todo",
-            "Que no deja pasar nada",
+            "Que deja pasar todo lo que la toca",
+            "Que no deja pasar nada, ni el agua",
             "Que deja pasar unas sustancias y frena otras",
-            "Que solo cambia de color"
+            "Que solo se abre cuando la célula se divide"
           ],
           "correcta": 2,
           "explicacion": "Controla qué entra y sale."
@@ -271,10 +271,10 @@
           "id": "ce-me-4",
           "enunciado": "¿Para qué sirven las proteínas de la membrana?",
           "opciones": [
-            "Solo para dar color",
+            "Dar color y forma a la célula",
             "Canales, transporte y señales",
-            "Guardar el ADN",
-            "Hacer fotosíntesis"
+            "Guardar el ADN fuera del núcleo",
+            "Hacer la fotosíntesis en la superficie"
           ],
           "correcta": 1,
           "explicacion": "Forman canales, transportadores y receptores."
@@ -438,9 +438,9 @@
           "enunciado": "¿Qué es el citoplasma?",
           "opciones": [
             "El gel que llena la célula, fuera del núcleo",
-            "Solo el núcleo",
-            "La membrana",
-            "Un tejido"
+            "El líquido que hay dentro del núcleo",
+            "La capa que envuelve y protege la célula",
+            "El conjunto de células iguales de un tejido"
           ],
           "correcta": 0,
           "explicacion": "Es el interior de la célula, sin el núcleo."
@@ -450,8 +450,8 @@
           "enunciado": "El citosol es…",
           "opciones": [
             "La parte líquida del citoplasma",
-            "Un orgánulo",
-            "Una proteína"
+            "Un orgánulo con doble membrana",
+            "La proteína que da forma a la célula"
           ],
           "correcta": 0,
           "explicacion": "Es el líquido donde flotan los orgánulos."
@@ -472,8 +472,8 @@
           "enunciado": "¿A qué se parece más el citosol?",
           "opciones": [
             "A una gelatina espesa llena de moléculas",
-            "A agua destilada",
-            "A un sólido rígido"
+            "A agua destilada, sin nada disuelto",
+            "A un sólido rígido, como el hueso"
           ],
           "correcta": 0,
           "explicacion": "Tiene tantas proteínas disueltas que es espeso, no agua limpia."
@@ -600,8 +600,8 @@
           "enunciado": "¿Qué hace el citoesqueleto?",
           "opciones": [
             "Da forma a la célula y permite el movimiento",
-            "Guarda el ADN",
-            "Hace la fotosíntesis"
+            "Guarda el ADN y lo copia antes de dividirse",
+            "Capta la luz y fabrica glucosa"
           ],
           "correcta": 0,
           "explicacion": "Es el andamio y los rieles de la célula."
@@ -611,8 +611,8 @@
           "enunciado": "¿Por dónde viajan las vesículas dentro de la célula?",
           "opciones": [
             "Por los microtúbulos, como por rieles",
-            "Por los poros del núcleo",
-            "Por la pared celular"
+            "Por los poros de la envoltura nuclear",
+            "Por la pared celular, de célula en célula"
           ],
           "correcta": 0,
           "explicacion": "Proteínas motoras las llevan a cuestas sobre los microtúbulos."
@@ -633,8 +633,8 @@
           "enunciado": "¿Por qué se dice que el citoesqueleto no es como un hueso?",
           "opciones": [
             "Porque sus filamentos se arman y desarman todo el tiempo",
-            "Porque es de calcio",
-            "Porque solo existe en las plantas"
+            "Porque está hecho de calcio y fósforo, como el hueso",
+            "Porque solo existe en las células de las plantas"
           ],
           "correcta": 0,
           "explicacion": "Es una red dinámica, no una estructura fija."
@@ -823,8 +823,8 @@
           "enunciado": "¿Para qué sirven los poros de la envoltura?",
           "opciones": [
             "Dejar pasar mensajes y moléculas",
-            "Hacer fotosíntesis",
-            "Fabricar lípidos"
+            "Captar la luz para la fotosíntesis",
+            "Fabricar los lípidos de la membrana"
           ],
           "correcta": 0,
           "explicacion": "Comunican el núcleo con el citoplasma."
@@ -983,8 +983,8 @@
           "enunciado": "La insulina sale de la célula. ¿Dónde se fabrica?",
           "opciones": [
             "En un ribosoma pegado al retículo",
-            "En un ribosoma libre",
-            "En la mitocondria"
+            "En un ribosoma libre en el citosol",
+            "En la mitocondria, junto con el ATP"
           ],
           "correcta": 0,
           "explicacion": "Las proteínas que van hacia afuera empiezan en el retículo rugoso."
@@ -994,8 +994,8 @@
           "enunciado": "¿Qué hace «rugoso» al retículo rugoso?",
           "opciones": [
             "Los ribosomas pegados a él",
-            "La pared celular",
-            "Los cloroplastos"
+            "Los pliegues de la pared celular",
+            "Los cloroplastos que lo rodean"
           ],
           "correcta": 0,
           "explicacion": "Al microscopio, los ribosomas se ven como granitos sobre su superficie."
@@ -1200,8 +1200,8 @@
           "enunciado": "¿Qué hace el aparato de Golgi?",
           "opciones": [
             "Modifica, empaca y reparte",
-            "Guarda el ADN",
-            "Produce energía"
+            "Guarda y copia el ADN",
+            "Produce la energía (ATP)"
           ],
           "correcta": 0,
           "explicacion": "Es el centro de empaque y envío."
@@ -1614,8 +1614,8 @@
           "enunciado": "¿Qué hace la vacuola central?",
           "opciones": [
             "Guarda agua y mantiene la firmeza",
-            "Produce energía",
-            "Arma ribosomas"
+            "Produce energía a partir de glucosa",
+            "Arma los ribosomas de la célula"
           ],
           "correcta": 0,
           "explicacion": "Llena de agua, mantiene firme a la célula."
@@ -1794,8 +1794,8 @@
           "enunciado": "¿Qué es la autofagia?",
           "opciones": [
             "Reciclar los propios orgánulos viejos",
-            "Comer otras células",
-            "Producir energía"
+            "Comerse a otras células completas",
+            "Dividirse para producir más lisosomas"
           ],
           "correcta": 0,
           "explicacion": "La célula recicla sus propios componentes."
@@ -1933,9 +1933,9 @@
           "id": "ce-pe-3",
           "enunciado": "¿En qué se diferencian de los lisosomas?",
           "opciones": [
-            "Los lisosomas digieren con ácido; los peroxisomas trabajan con oxígeno y agua oxigenada",
-            "No hay ninguna diferencia",
-            "Los peroxisomas tienen ADN"
+            "Los lisosomas digieren con ácido; los peroxisomas trabajan con oxígeno",
+            "No hay diferencia: son dos nombres para el mismo orgánulo",
+            "Los peroxisomas tienen ADN propio; los lisosomas no lo tienen"
           ],
           "correcta": 0,
           "explicacion": "Se parecen al microscopio, pero hacen trabajos distintos."
@@ -1945,8 +1945,8 @@
           "enunciado": "¿Por qué hace burbujas el hígado crudo con agua oxigenada?",
           "opciones": [
             "Su catalasa libera oxígeno",
-            "Se está cocinando",
-            "Tiene jabón"
+            "Se está cocinando por el calor",
+            "Tiene jabón que hace espuma"
           ],
           "correcta": 0,
           "explicacion": "2 H₂O₂ → 2 H₂O + O₂: las burbujas son oxígeno."
@@ -2094,8 +2094,8 @@
           "enunciado": "¿Por qué se marchita una planta sin agua?",
           "opciones": [
             "Sus células dejan de empujar contra la pared",
-            "Pierde la pared celular",
-            "Se le caen las mitocondrias"
+            "Sus células pierden la pared celular",
+            "Se le detienen las mitocondrias"
           ],
           "correcta": 0,
           "explicacion": "Con la vacuola vacía, la célula no empuja y la planta queda floja."
@@ -2105,8 +2105,8 @@
           "enunciado": "Una célula vegetal tiene pared. ¿Tiene también membrana?",
           "opciones": [
             "Sí: la membrana está por dentro de la pared",
-            "No: la pared la reemplaza",
-            "Solo de noche"
+            "No: la pared cumple el trabajo de la membrana",
+            "Sí, pero solo mientras hace fotosíntesis"
           ],
           "correcta": 0,
           "explicacion": "Tiene las dos; la membrana es la que controla qué entra."
@@ -2367,8 +2367,8 @@
           "enunciado": "¿Qué se suma en una célula vegetal frente a una animal?",
           "opciones": [
             "Pared, cloroplastos y vacuola central",
-            "Núcleo y mitocondrias",
-            "Membrana y ribosomas"
+            "Núcleo, mitocondrias y ribosomas",
+            "Membrana, citoplasma y centriolos"
           ],
           "correcta": 0,
           "explicacion": "Pared, cloroplastos y vacuola central."

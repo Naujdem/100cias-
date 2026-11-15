@@ -281,8 +281,8 @@
           "enunciado": "¿Qué es la bipartición?",
           "opciones": [
             "Una célula se parte en dos iguales",
-            "Le sale una yema",
-            "Libera muchas esporas"
+            "Le sale una yema que se desprende",
+            "Libera muchas esporas a la vez"
           ],
           "correcta": 0,
           "explicacion": "Dos hijas iguales."
@@ -302,9 +302,9 @@
           "id": "rp-uni-3",
           "enunciado": "En la conjugación…",
           "opciones": [
-            "aumenta el número de bacterias",
+            "aumenta el número de bacterias de la colonia",
             "se intercambia ADN sin crear individuos nuevos",
-            "nacen esporas"
+            "se forman esporas resistentes para sobrevivir"
           ],
           "correcta": 1,
           "explicacion": "No es reproducción: es intercambio de ADN."

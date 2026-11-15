@@ -87,8 +87,8 @@
           "enunciado": "¿Qué es el catabolismo?",
           "opciones": [
             "Romper moléculas grandes y liberar energía",
-            "Construir moléculas grandes",
-            "Dividir la célula"
+            "Construir moléculas grandes usando energía",
+            "Dividir la célula en dos células hijas"
           ],
           "correcta": 0,
           "explicacion": "El anabolismo es el que construye."
@@ -98,8 +98,8 @@
           "enunciado": "¿Qué hace una enzima?",
           "opciones": [
             "Acelera una reacción química sin gastarse",
-            "Da energía a la célula",
-            "Guarda el ADN"
+            "Le da energía a la célula al romperse",
+            "Guarda la información del ADN"
           ],
           "correcta": 0,
           "explicacion": "Puede trabajar una y otra vez."
@@ -240,6 +240,7 @@
         }
       },
       "diagrama": "atp-pila",
+      "juego": "atp-juego",
       "preguntas": [
         {
           "id": "mt-atp-1",
@@ -257,8 +258,8 @@
           "enunciado": "¿De dónde sale la energía para recargar el ATP?",
           "opciones": [
             "De la glucosa, en la respiración celular",
-            "Del ADN",
-            "De la membrana"
+            "Del ADN, al copiarse en el núcleo",
+            "De la membrana, al dejar pasar el agua"
           ],
           "correcta": 0,
           "explicacion": "Sobre todo en la mitocondria."
@@ -831,14 +832,15 @@
         }
       },
       "diagrama": "senales-celulares",
+      "juego": "senal-juego",
       "preguntas": [
         {
           "id": "mt-comunicacion-1",
           "enunciado": "¿Por qué una hormona solo actúa en algunas células?",
           "opciones": [
             "Porque solo esas tienen el receptor que encaja",
-            "Porque no llega a las demás",
-            "Porque las demás están muertas"
+            "Porque la sangre no la lleva a las demás células",
+            "Porque las demás células la destruyen al llegar"
           ],
           "correcta": 0,
           "explicacion": "La hormona viaja a todo el cuerpo por la sangre."
@@ -992,6 +994,7 @@
         }
       },
       "diagrama": "uniones-celulares",
+      "juego": "uniones-juego",
       "preguntas": [
         {
           "id": "mt-uniones-1",
@@ -1009,8 +1012,8 @@
           "enunciado": "¿Para qué sirven las uniones comunicantes del corazón?",
           "opciones": [
             "Para que la señal pase y las células se contraigan juntas",
-            "Para sellar el corazón",
-            "Para guardar ATP"
+            "Para sellar el corazón y que la sangre no se escape",
+            "Para guardar ATP de reserva entre las células"
           ],
           "correcta": 0,
           "explicacion": "Son canales entre células vecinas."
@@ -1194,8 +1197,8 @@
           "enunciado": "¿Por qué una falla en la apoptosis puede llevar al cáncer?",
           "opciones": [
             "Las células dañadas no se eliminan y siguen dividiéndose",
-            "Las células mueren demasiado",
-            "Se detiene la mitosis"
+            "Las células sanas mueren antes de tiempo y no se reponen",
+            "La mitosis se detiene y los tejidos no se renuevan"
           ],
           "correcta": 0,
           "explicacion": "La apoptosis es una defensa del cuerpo."

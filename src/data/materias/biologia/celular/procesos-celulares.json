@@ -78,14 +78,15 @@
         }
       },
       "diagrama": "division-celular",
+      "juego": "dividirse-juego",
       "preguntas": [
         {
           "id": "pc-pq-1",
           "enunciado": "¿Para qué se dividen las células?",
           "opciones": [
             "Para crecer, reparar y reproducirse",
-            "Para cambiar de color",
-            "Para perder su ADN"
+            "Para cambiar de forma y de color",
+            "Para deshacerse del ADN que sobra"
           ],
           "correcta": 0,
           "explicacion": "Son las tres razones principales."
@@ -106,8 +107,8 @@
           "enunciado": "¿Por qué una célula no crece sin límite?",
           "opciones": [
             "Su membrana no alcanzaría a dejar entrar lo que necesita",
-            "Porque se aburre",
-            "Porque pierde el núcleo"
+            "Su núcleo dejaría de funcionar al llegar a cierta edad",
+            "La pared celular le impide crecer en todas las células"
           ],
           "correcta": 0,
           "explicacion": "Al crecer, el volumen aumenta más rápido que la superficie."
@@ -446,6 +447,7 @@
         }
       },
       "diagrama": "cromosoma-compacta",
+      "juego": "cromatina-juego",
       "preguntas": [
         {
           "id": "pc-cr-1",
@@ -643,8 +645,8 @@
           "enunciado": "¿Qué pasa en la anafase?",
           "opciones": [
             "Las cromátidas hermanas se separan hacia los extremos",
-            "El ADN se copia",
-            "Se forma la pared celular"
+            "El ADN se copia para tener dos juegos de cromosomas",
+            "Se forma la membrana que divide a las dos células"
           ],
           "correcta": 0,
           "explicacion": "Cada extremo recibe una copia de cada cromosoma."
@@ -654,8 +656,8 @@
           "enunciado": "¿Cómo son las dos células hijas de una mitosis?",
           "opciones": [
             "Tienen la misma información genética que la madre",
-            "Tienen la mitad del ADN",
-            "Son de especies distintas"
+            "Tienen cada una la mitad del ADN de la madre",
+            "Tienen mezclado el ADN de la madre y del padre"
           ],
           "correcta": 0,
           "explicacion": "La mitosis produce copias."
@@ -924,6 +926,7 @@
         }
       },
       "diagrama": "citocinesis",
+      "juego": "citocinesis-juego",
       "preguntas": [
         {
           "id": "pc-cc-1",
@@ -1113,14 +1116,15 @@
         }
       },
       "diagrama": "semaforos-ciclo",
+      "juego": "control-ciclo-juego",
       "preguntas": [
         {
           "id": "pc-cn-1",
           "enunciado": "¿Qué hacen los puntos de control del ciclo?",
           "opciones": [
             "Revisan que todo esté bien antes de seguir",
-            "Copian el ADN",
-            "Fabrican la pared celular"
+            "Copian el ADN para la siguiente división",
+            "Reparten los orgánulos entre las hijas"
           ],
           "correcta": 0,
           "explicacion": "Funcionan como semáforos."

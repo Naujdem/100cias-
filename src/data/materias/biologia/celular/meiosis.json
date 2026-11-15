@@ -98,8 +98,8 @@
           "enunciado": "¿Qué son los cromosomas homólogos?",
           "opciones": [
             "Los dos cromosomas de un par, uno de la madre y otro del padre",
-            "Las dos copias de un cromosoma duplicado",
-            "Cromosomas de dos especies distintas"
+            "Las dos cromátidas de un cromosoma que ya se duplicó",
+            "Cromosomas de dos especies distintas que se parecen"
           ],
           "correcta": 0,
           "explicacion": "Las copias unidas son cromátidas hermanas, no homólogos."
@@ -252,14 +252,15 @@
         }
       },
       "diagrama": "cuenta-cromosomas",
+      "juego": "cuantos-cromosomas-juego",
       "preguntas": [
         {
           "id": "me-por-que-meiosis-1",
           "enunciado": "¿Qué pasaría si los gametos se formaran por mitosis?",
           "opciones": [
             "El número de cromosomas se duplicaría en cada generación",
-            "Los hijos serían iguales a los padres",
-            "No habría fecundación"
+            "Los hijos serían copias exactas de uno de los padres",
+            "No podría ocurrir la fecundación entre los gametos"
           ],
           "correcta": 0,
           "explicacion": "Cada gameto tendría 46 y el hijo 92."
@@ -406,6 +407,7 @@
         }
       },
       "diagrama": "meiosis-pasos",
+      "juego": "meiosis-i-ii-juego",
       "preguntas": [
         {
           "id": "me-meiosis-i-1",
@@ -806,6 +808,7 @@
         }
       },
       "diagrama": "variedad-gametos",
+      "juego": "variedad-juego",
       "preguntas": [
         {
           "id": "me-variedad-1",
@@ -823,8 +826,8 @@
           "enunciado": "¿Qué hace el entrecruzamiento?",
           "opciones": [
             "Mezcla trozos de los cromosomas de la madre y del padre",
-            "Duplica el ADN",
-            "Separa las cromátidas"
+            "Duplica el ADN antes de que empiece la meiosis",
+            "Separa las cromátidas hermanas hacia los polos"
           ],
           "correcta": 0,
           "explicacion": "Ocurre en la profase I."
@@ -834,8 +837,8 @@
           "enunciado": "¿Por qué los gemelos idénticos sí son iguales?",
           "opciones": [
             "Vienen de un mismo cigoto que se separó en dos",
-            "Vienen de dos óvulos distintos",
-            "No pasaron por la fecundación"
+            "Vienen de dos óvulos fecundados al mismo tiempo",
+            "Se formaron sin que hubiera fecundación"
           ],
           "correcta": 0,
           "explicacion": "Sus células se formaron por mitosis a partir del mismo cigoto."

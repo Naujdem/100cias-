@@ -56,3 +56,6 @@ iguales, y cuando uno pida otra forma, se hace y se anota aquí abajo, en «Exce
 
 - **Teoría celular (línea de tiempo)**: se queda con su línea de tiempo y fichas emergentes estilo Genially, con
   retrato y pestañas, porque así funciona bien para una historia de descubrimientos.
+- **Niveles de organización (mapa general)**: sus fichas de nivel son paradas cortas del mapa y no llevan juego
+  propio; el juego «¿En qué nivel está?» (`niveles-juego`) va una sola vez, en la ficha Organismo, y repasa todos
+  los niveles.
