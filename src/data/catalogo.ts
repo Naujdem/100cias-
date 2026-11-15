@@ -31,4 +31,13 @@ export const UNIDADES: Record<string, Unidad[]> = {
 /** Temas anunciados que aún no tienen contenido, por unidad. */
 export const PROXIMOS: Record<string, { etiqueta: string; nombre: string }[]> = {
   celular: [],
+  genetica: [
+    { etiqueta: '1', nombre: 'Historia de la genética' },
+    { etiqueta: '2', nombre: 'ADN, genes y cromosomas' },
+    { etiqueta: '3', nombre: 'Replicación del ADN' },
+    { etiqueta: '4', nombre: 'Expresión génica' },
+    { etiqueta: '6', nombre: 'Herencia no mendeliana' },
+    { etiqueta: '7', nombre: 'Mutaciones y variación' },
+    { etiqueta: '8', nombre: 'Biotecnología' },
+  ],
 }

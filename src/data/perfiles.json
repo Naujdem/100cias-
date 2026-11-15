@@ -67,6 +67,12 @@
         "repro-unicelulares",
         "repro-plantas",
         "repro-animales"
+      ],
+      "herencia-mendeliana": [
+        "jardin-mendel",
+        "primera-ley",
+        "genes-alelos",
+        "segunda-ley"
       ]
     },
     "nivelDibujo": "basico",
@@ -81,7 +87,8 @@
       "metabolismo-celular": "Tres pasos: enzimas, respiración y fermentación, y cómo se comunican las células.",
       "de-la-celula-al-organismo": "Cuatro pasos: diferenciación, tejidos animales y vegetales, y órganos.",
       "tecnicas-estudio": "Microscopio óptico y aumentos.",
-      "reproduccion-seres-vivos": "Asexual y sexual, en unicelulares, plantas y animales."
+      "reproduccion-seres-vivos": "Asexual y sexual, en unicelulares, plantas y animales.",
+      "herencia-mendeliana": "Método de Mendel, dominante y recesivo, alelos y cuadro de Punnett de un carácter."
     }
   },
   {
@@ -173,6 +180,13 @@
         "repro-unicelulares",
         "repro-plantas",
         "repro-animales"
+      ],
+      "herencia-mendeliana": [
+        "jardin-mendel",
+        "primera-ley",
+        "genes-alelos",
+        "segunda-ley",
+        "cruce-prueba"
       ]
     },
     "nivelDibujo": "intermedio",
@@ -187,7 +201,8 @@
       "metabolismo-celular": "Cinco pasos: suma el ATP y la muerte celular.",
       "de-la-celula-al-organismo": "Cinco pasos: suma la reproducción asexual y sexual.",
       "tecnicas-estudio": "Microscopio óptico, aumentos y comparación con el electrónico.",
-      "reproduccion-seres-vivos": "Asexual y sexual, en unicelulares, plantas y animales."
+      "reproduccion-seres-vivos": "Asexual y sexual, en unicelulares, plantas y animales.",
+      "herencia-mendeliana": "Leyes de uniformidad y segregación, cuadro de Punnett y cruce de prueba."
     }
   },
   {
@@ -290,6 +305,15 @@
         "repro-unicelulares",
         "repro-plantas",
         "repro-animales"
+      ],
+      "herencia-mendeliana": [
+        "jardin-mendel",
+        "primera-ley",
+        "genes-alelos",
+        "segunda-ley",
+        "cruce-prueba",
+        "tercera-ley",
+        "probabilidad"
       ]
     },
     "nivelDibujo": "avanzado",
@@ -304,7 +328,8 @@
       "metabolismo-celular": "Todo el contenido: seis pasos, con las uniones entre células.",
       "de-la-celula-al-organismo": "Todo el contenido: seis pasos, con las células madre.",
       "tecnicas-estudio": "Microscopio óptico, aumentos y comparación con el electrónico.",
-      "reproduccion-seres-vivos": "Asexual y sexual, en unicelulares, plantas y animales."
+      "reproduccion-seres-vivos": "Asexual y sexual, en unicelulares, plantas y animales.",
+      "herencia-mendeliana": "Las tres leyes de Mendel, cruces de dos caracteres y probabilidad."
     }
   }
 ]
