@@ -136,7 +136,8 @@
           "explicacion": "Fue una mezcla de poca difusión, matemáticas inesperadas para los botánicos y que dejó de investigar al hacerse abad."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "juego": "mendel-vida-juego"
     },
     {
       "id": "miescher",
@@ -365,7 +366,40 @@
           "explicacion": "Johannsen la propuso en 1909. Mendel hablaba de «factores»."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "diapositivas": [
+        {
+          "titulo": "El redescubrimiento",
+          "visual": {
+            "tipo": "escena",
+            "id": "redescubrimiento",
+            "fases": [
+              {
+                "id": "olvido",
+                "nombre": "Un artículo olvidado",
+                "texto": "El artículo de Mendel de 1866 casi no se leyó durante 34 años."
+              },
+              {
+                "id": "tres",
+                "nombre": "Tres a la vez",
+                "texto": "En 1900, De Vries, Correns y Tschermak repitieron cruces parecidos, obtuvieron las mismas proporciones y encontraron el artículo de Mendel."
+              },
+              {
+                "id": "nombres",
+                "nombre": "Palabras nuevas",
+                "texto": "Bateson propuso «genética» en 1905; Johannsen, «gen», «genotipo» y «fenotipo» en 1909."
+              },
+              {
+                "id": "cromosomas",
+                "nombre": "Los cromosomas",
+                "texto": "Sutton y Boveri notaron que los cromosomas se separan en la meiosis igual que los factores de Mendel.",
+                "nota": "Morgan lo comprobó en 1910."
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "redescubrimiento-juego"
     },
     {
       "id": "morgan",
@@ -417,24 +451,36 @@
       },
       "diapositivas": [
         {
-          "titulo": "Un macho de ojos blancos",
+          "titulo": "El cuarto de las moscas",
           "visual": {
-            "tipo": "tarjetas",
-            "items": [
+            "tipo": "escena",
+            "id": "morgan",
+            "fases": [
               {
-                "icono": "🪰",
-                "titulo": "Mosca de la fruta",
-                "texto": "Se cría en un frasco y tiene hijos cada dos semanas."
+                "id": "moscas",
+                "nombre": "Moscas de la fruta",
+                "texto": "Morgan criaba miles de moscas en frascos: tienen hijos cada dos semanas y solo cuatro pares de cromosomas."
               },
               {
-                "icono": "👁️",
-                "titulo": "Ojos blancos",
-                "texto": "Morgan encontró un macho raro entre miles de ojos rojos."
+                "id": "ojos-blancos",
+                "nombre": "Un mutante",
+                "texto": "En 1910 apareció un macho con ojos blancos entre miles de ojos rojos."
               },
               {
-                "icono": "🧬",
-                "titulo": "Cromosoma X",
-                "texto": "El carácter seguía al cromosoma X: el gen estaba ahí."
+                "id": "cruce",
+                "nombre": "El cruce",
+                "texto": "Lo cruzó con una hembra de ojos rojos: todos los hijos tuvieron ojos rojos."
+              },
+              {
+                "id": "f2",
+                "nombre": "Los nietos",
+                "texto": "En los nietos volvió el blanco, en proporción 3 : 1… pero solo en machos."
+              },
+              {
+                "id": "cromosoma-x",
+                "nombre": "El cromosoma X",
+                "texto": "El gen del color de ojos está en el cromosoma X. El macho tiene un solo X, así que con un alelo blanco ya tiene ojos blancos.",
+                "nota": "Lo ligado al sexo se explica a fondo en el tema 6."
               }
             ]
           },
@@ -470,7 +516,8 @@
           "explicacion": "Una generación cada dos semanas y solo cuatro pares de cromosomas: ideal para seguir caracteres."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "juego": "morgan-juego"
     },
     {
       "id": "griffith",
@@ -867,7 +914,40 @@
           "explicacion": "A + T = 60 %, así que G + C = 40 %. Como G = C, cada una es 20 %."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "diapositivas": [
+        {
+          "titulo": "Contar las bases",
+          "visual": {
+            "tipo": "escena",
+            "id": "chargaff",
+            "fases": [
+              {
+                "id": "medir",
+                "nombre": "Medir las bases",
+                "texto": "Chargaff midió cuánto hay de cada base en el ADN. En el humano: cerca de 30 % de A y de T, y 20 % de G y de C."
+              },
+              {
+                "id": "iguales",
+                "nombre": "Siempre iguales",
+                "texto": "La cantidad de A es igual a la de T, y la de G igual a la de C."
+              },
+              {
+                "id": "especies",
+                "nombre": "Cambia entre especies",
+                "texto": "En otras especies las proporciones son distintas, pero A = T y G = C se cumple siempre.",
+                "nota": "Así se supo que el ADN no es una repetición aburrida."
+              },
+              {
+                "id": "explicacion",
+                "nombre": "¿Por qué?",
+                "texto": "En la doble hélice cada A tiene una T enfrente y cada G una C. Chargaff lo midió, pero no supo explicarlo."
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "chargaff-juego"
     },
     {
       "id": "hershey-chase",
@@ -1338,24 +1418,35 @@
       },
       "diapositivas": [
         {
-          "titulo": "Una cadena vieja, una nueva",
+          "titulo": "Pesado y liviano",
           "visual": {
-            "tipo": "tarjetas",
-            "items": [
+            "tipo": "escena",
+            "id": "meselson",
+            "fases": [
               {
-                "icono": "⚖️",
-                "titulo": "Nitrógeno pesado",
-                "texto": "Marca las cadenas viejas."
+                "id": "pesado",
+                "nombre": "ADN pesado",
+                "texto": "Criaron bacterias con nitrógeno pesado: todo su ADN quedó pesado y en la centrífuga baja más."
               },
               {
-                "icono": "🪶",
-                "titulo": "Nitrógeno liviano",
-                "texto": "Marca las cadenas nuevas."
+                "id": "cambio",
+                "nombre": "El cambio",
+                "texto": "Luego las pasaron a nitrógeno liviano y las dejaron dividirse."
               },
               {
-                "icono": "🧬",
-                "titulo": "Peso intermedio",
-                "texto": "Cada copia tiene una vieja y una nueva."
+                "id": "gen1",
+                "nombre": "Primera generación",
+                "texto": "Apareció una sola banda, en el medio: cada ADN tenía una cadena pesada y una liviana."
+              },
+              {
+                "id": "gen2",
+                "nombre": "Segunda generación",
+                "texto": "Aparecieron dos bandas: intermedia y liviana."
+              },
+              {
+                "id": "conclusion",
+                "nombre": "Semiconservativa",
+                "texto": "Cada copia conserva una cadena vieja y fabrica una nueva, como sugería la doble hélice."
               }
             ]
           },
@@ -1379,7 +1470,8 @@
           "explicacion": "El ADN de las hijas tenía un peso intermedio: mitad cadena pesada (vieja) y mitad liviana (nueva)."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "juego": "meselson-juego"
     },
     {
       "id": "codigo-genetico",
@@ -1418,17 +1510,33 @@
       },
       "diapositivas": [
         {
-          "titulo": "La primera palabra",
+          "titulo": "Descifrar el código",
           "visual": {
-            "tipo": "cifra",
-            "icono": "🔤",
-            "valor": "UUU",
-            "texto": "significa fenilalanina (1961)"
+            "tipo": "escena",
+            "id": "codigo",
+            "fases": [
+              {
+                "id": "tres-letras",
+                "nombre": "Palabras de tres letras",
+                "texto": "El ARN se lee de a tres bases: cada grupo es un codón."
+              },
+              {
+                "id": "experimento",
+                "nombre": "El experimento",
+                "texto": "Nirenberg y Matthaei fabricaron un ARN hecho solo de U y lo pusieron en un extracto de células."
+              },
+              {
+                "id": "codon",
+                "nombre": "La primera palabra",
+                "texto": "Se formó una proteína hecha solo de fenilalanina: UUU = fenilalanina."
+              },
+              {
+                "id": "tabla",
+                "nombre": "Los 64 codones",
+                "texto": "Hacia 1966 se conocían los 64: 61 indican aminoácidos y 3 dicen «parar»."
+              }
+            ]
           },
-          "puntos": [
-            "El código se lee de a tres letras",
-            "En 1966 ya se conocían los 64 codones"
-          ],
           "atajo": {
             "texto": "Más sobre esto: Expresión génica",
             "tema": "expresion-genica"
@@ -1449,7 +1557,8 @@
           "explicacion": "Un ARN hecho solo de U produjo una proteína hecha solo de fenilalanina."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "juego": "codigo-juego"
     },
     {
       "id": "genoma-humano",
@@ -1519,7 +1628,45 @@
           "explicacion": "Unos 20 000 genes. Los 3000 millones son pares de bases y 46 es el número de cromosomas."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "diapositivas": [
+        {
+          "titulo": "Leer todo el ADN humano",
+          "visual": {
+            "tipo": "escena",
+            "id": "genoma",
+            "fases": [
+              {
+                "id": "libro",
+                "nombre": "3000 millones de letras",
+                "texto": "El genoma humano tiene unos 3000 millones de pares de bases."
+              },
+              {
+                "id": "leer",
+                "nombre": "Leer a pedazos",
+                "texto": "El ADN se corta en pedazos, se leen y una computadora los arma por las partes que se repiten."
+              },
+              {
+                "id": "carrera",
+                "nombre": "Una carrera",
+                "texto": "Un consorcio público de seis países, desde 1990, y la empresa Celera, desde 1998. En 2000 anunciaron juntos un borrador; en 2003, casi completo."
+              },
+              {
+                "id": "genes",
+                "nombre": "Pocos genes",
+                "texto": "Se esperaban unos 100 000 genes y resultaron unos 20 000."
+              },
+              {
+                "id": "completo",
+                "nombre": "Completo de verdad",
+                "texto": "En 2022 se leyeron las partes que faltaban. Hoy un genoma se lee en horas o días.",
+                "nivel": "intermedio"
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "genoma-juego"
     },
     {
       "id": "crispr",
@@ -1563,24 +1710,31 @@
       },
       "diapositivas": [
         {
-          "titulo": "De defensa bacteriana a herramienta",
+          "titulo": "De defensa a herramienta",
           "visual": {
-            "tipo": "tarjetas",
-            "items": [
+            "tipo": "escena",
+            "id": "crispr",
+            "fases": [
               {
-                "icono": "🦠",
-                "titulo": "Las bacterias",
-                "texto": "Guardan pedazos del ADN de los virus que las atacan."
+                "id": "virus",
+                "nombre": "El ataque",
+                "texto": "Un virus inyecta su ADN en una bacteria."
               },
               {
-                "icono": "✂️",
-                "titulo": "Cas9",
-                "texto": "Una proteína que corta el ADN que reconoce."
+                "id": "memoria",
+                "nombre": "La memoria",
+                "texto": "Si la bacteria sobrevive, guarda un pedazo del ADN del virus en su archivo CRISPR."
               },
               {
-                "icono": "🎯",
-                "titulo": "La guía",
-                "texto": "Se programa para cortar donde se quiera."
+                "id": "ataque",
+                "nombre": "La defensa",
+                "texto": "Si el virus vuelve, la proteína Cas9, guiada por ese recuerdo, reconoce su ADN y lo corta."
+              },
+              {
+                "id": "herramienta",
+                "nombre": "La herramienta",
+                "texto": "En 2012, Doudna y Charpentier mostraron que se puede cambiar la guía para cortar cualquier gen.",
+                "nota": "Nobel de Química 2020."
               }
             ]
           },
@@ -1604,7 +1758,8 @@
           "explicacion": "Las bacterias lo usan para reconocer y cortar el ADN de los virus que ya las atacaron."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "juego": "crispr-juego"
     }
   ]
 }

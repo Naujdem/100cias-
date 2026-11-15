@@ -567,3 +567,459 @@ export function EscenaDobleHelice({ fase }: { fase: string }) {
     </svg>
   )
 }
+
+/* ── utilidades para las escenas cortas ───────────────────────────────── */
+
+const MOR = '#8a5aa8'
+function Flecha({ d, id }: { d: string; id: string }) {
+  return <path d={d} fill="none" stroke="#888" strokeWidth="2.5" markerEnd={`url(#${id})`} />
+}
+function Punta({ id }: { id: string }) {
+  return (
+    <defs>
+      <marker id={id} viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#888" /></marker>
+    </defs>
+  )
+}
+function Persona({ x, y, c, nombre, sub }: { x: number; y: number; c: string; nombre: string; sub?: string }) {
+  return (
+    <g>
+      <circle cx={x} cy={y} r="14" fill={c} opacity="0.85" />
+      <path d={`M ${x - 22} ${y + 44} q 22 -40 44 0 z`} fill={c} opacity="0.85" />
+      <Texto x={x} y={y + 62} t={nombre} c={c} s={12} />
+      {sub && <Texto x={x} y={y + 76} t={sub} s={10} peso={600} />}
+    </g>
+  )
+}
+
+/* ── 1900: el redescubrimiento ────────────────────────────────────────── */
+
+const REDES = ['olvido', 'tres', 'nombres', 'cromosomas']
+
+export function EscenaRedescubrimiento({ fase }: { fase: string }) {
+  const i = Math.max(0, REDES.indexOf(fase))
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label={`El redescubrimiento de Mendel: ${fase}`} className="h-full w-full">
+      {fondo('#f4f1ea')}
+      <Punta id="re-fl" />
+      {/* el artículo de Mendel */}
+      <g style={{ transition: suave, transform: i >= 1 ? 'translate(0, -40px) scale(0.8)' : 'none', transformOrigin: '200px 120px', opacity: i <= 1 ? 1 : 0 }}>
+        <rect x="150" y="60" width="100" height="130" rx="4" fill="#fffaf0" stroke="#b9a27a" strokeWidth="2.5" />
+        <Texto x={200} y={86} t="Experimentos" s={11} />
+        <Texto x={200} y={100} t="sobre híbridos" s={11} />
+        <Texto x={200} y={114} t="de plantas" s={11} />
+        <path d="M 165 130 h 70 M 165 142 h 70 M 165 154 h 50 M 165 166 h 64" stroke="#d8ccb4" strokeWidth="2" />
+        <Texto x={200} y={182} t="G. Mendel, 1866" s={9} peso={600} />
+        <g style={{ transition: 'opacity 0.6s', opacity: i === 0 ? 1 : 0 }}>
+          <circle cx="160" cy="70" r="5" fill="#cbbfa8" opacity="0.6" /><circle cx="236" cy="174" r="4" fill="#cbbfa8" opacity="0.6" /><circle cx="226" cy="76" r="3" fill="#cbbfa8" opacity="0.6" />
+        </g>
+      </g>
+      <g style={ver(i === 0)}>
+        <Texto x={200} y={226} t="34 años casi sin lectores" s={14} />
+        <Texto x={200} y={246} t="1866 → 1900" c="#b07a00" s={13} />
+      </g>
+      <g style={ver(i === 1, 'none', 'translate(0, 20px)')}>
+        <Persona x={70} y={180} c={AZUL} nombre="De Vries" sub="Países Bajos" />
+        <Persona x={200} y={196} c={VERDE} nombre="Correns" sub="Alemania" />
+        <Persona x={330} y={180} c={NARANJA} nombre="Tschermak" sub="Austria" />
+        <Flecha d="M 92 170 L 148 130" id="re-fl" /><Flecha d="M 308 170 L 252 130" id="re-fl" />
+      </g>
+      <g style={ver(i === 2)}>
+        {[
+          { y: 70, p: 'genética', q: 'Bateson, 1905' },
+          { y: 130, p: 'gen', q: 'Johannsen, 1909' },
+          { y: 190, p: 'genotipo y fenotipo', q: 'Johannsen, 1909' },
+        ].map((w) => (
+          <g key={w.p}>
+            <rect x="90" y={w.y - 24} width="220" height="44" rx="22" fill="#fff" stroke={MOR} strokeWidth="2.5" />
+            <Texto x={200} y={w.y - 2} t={`«${w.p}»`} c={MOR} s={15} />
+            <Texto x={200} y={w.y + 13} t={w.q} s={10} peso={600} />
+          </g>
+        ))}
+        <Texto x={200} y={256} t="Nacen las palabras de una ciencia nueva" s={12} />
+      </g>
+      <g style={ver(i === 3)}>
+        <Texto x={200} y={34} t="Sutton y Boveri (1902–1903)" s={13} />
+        {[{ x: 110, l: 'A', c: AZUL }, { x: 290, l: 'a', c: NARANJA }].map((cr, k) => (
+          <g key={cr.l} style={{ transition: suave }}>
+            <rect x={cr.x - 9} y={70} width="18" height="110" rx="9" fill={cr.c} />
+            <rect x={cr.x - 12} y={110} width="24" height="12" rx="3" fill="#fff" stroke={cr.c} strokeWidth="2" />
+            <Texto x={cr.x} y={120} t={cr.l} c={cr.c} s={11} />
+            <Texto x={cr.x} y={200} t={k === 0 ? 'cromosoma del padre' : 'cromosoma de la madre'} s={10} peso={600} />
+          </g>
+        ))}
+        <Flecha d="M 170 125 h -40" id="re-fl" /><Flecha d="M 230 125 h 40" id="re-fl" />
+        <Texto x={200} y={242} t="En la meiosis los cromosomas se separan" s={12} />
+        <Texto x={200} y={260} t="igual que los factores de Mendel" s={12} />
+      </g>
+    </svg>
+  )
+}
+
+/* ── Morgan: la mosca de ojos blancos ─────────────────────────────────── */
+
+const MORGAN = ['moscas', 'ojos-blancos', 'cruce', 'f2', 'cromosoma-x']
+
+function Mosca({ x, y, blanca = false, macho = true, k = 1 }: { x: number; y: number; blanca?: boolean; macho?: boolean; k?: number }) {
+  return (
+    <g transform={`translate(${x} ${y}) scale(${k})`}>
+      <ellipse cx="-10" cy="-8" rx="10" ry="5" fill="#dfe8f3" opacity="0.8" transform="rotate(-25 -10 -8)" />
+      <ellipse cx="10" cy="-8" rx="10" ry="5" fill="#dfe8f3" opacity="0.8" transform="rotate(25 10 -8)" />
+      <ellipse cx="0" cy="4" rx="6" ry="10" fill="#c99a5a" />
+      {macho ? <path d="M -5 10 q 5 6 10 0" fill="#4a3a2a" /> : <path d="M -5 7 h 10 M -5 10 h 10" stroke="#4a3a2a" strokeWidth="1.5" />}
+      <circle cx="0" cy="-8" r="5" fill="#c99a5a" />
+      <circle cx="-4" cy="-9" r="3" fill={blanca ? '#fff' : '#c43c3c'} stroke="#7a2a2a" strokeWidth="0.8" />
+      <circle cx="4" cy="-9" r="3" fill={blanca ? '#fff' : '#c43c3c'} stroke="#7a2a2a" strokeWidth="0.8" />
+    </g>
+  )
+}
+
+export function EscenaMorgan({ fase }: { fase: string }) {
+  const i = Math.max(0, MORGAN.indexOf(fase))
+  const f2: { b: boolean; m: boolean }[] = [{ b: false, m: false }, { b: false, m: false }, { b: false, m: true }, { b: true, m: true }]
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label={`Experimento de Morgan: ${fase}`} className="h-full w-full">
+      {fondo('#f3f2ee')}
+      <Punta id="mo-fl" />
+      {/* frasco */}
+      <g style={ver(i <= 1)}>
+        <path d="M 150 60 h 100 v 20 q 20 10 20 40 v 110 q 0 20 -20 20 h -100 q -20 0 -20 -20 v -110 q 0 -30 20 -40 z" fill="#eef4f8" stroke="#9aa4ae" strokeWidth="3" />
+        <rect x="134" y="210" width="132" height="34" rx="10" fill="#f0c97a" />
+        {[[170, 120], [220, 110], [190, 160], [240, 170], [165, 190]].map(([x, y], k) => <Mosca key={k} x={x} y={y} macho={k % 2 === 0} />)}
+        <g style={{ transition: 'opacity 0.8s', opacity: i === 1 ? 1 : 0 }}>
+          <circle cx="215" cy="140" r="22" fill="none" stroke={ROJO} strokeWidth="3" strokeDasharray="5 4" />
+          <Mosca x={215} y={142} blanca k={1.2} />
+          <Texto x={330} y={140} t="¡un macho de" c={ROJO} s={12} />
+          <Texto x={330} y={156} t="ojos blancos!" c={ROJO} s={12} />
+        </g>
+        <g style={{ transition: 'opacity 0.8s', opacity: i === 0 ? 1 : 0 }}>
+          <Texto x={340} y={130} t="ojos rojos," s={12} />
+          <Texto x={340} y={146} t="una generación" s={12} />
+          <Texto x={340} y={162} t="cada 2 semanas" s={12} />
+        </g>
+      </g>
+      {/* cruce y F1 */}
+      <g style={ver(i === 2)}>
+        <Mosca x={130} y={70} blanca k={1.6} /><Texto x={130} y={110} t="♂ ojos blancos" s={11} />
+        <Texto x={200} y={74} t="×" s={20} />
+        <Mosca x={270} y={70} macho={false} k={1.6} /><Texto x={270} y={110} t="♀ ojos rojos" s={11} />
+        <Flecha d="M 200 120 v 30" id="mo-fl" />
+        {[120, 170, 230, 280].map((x, k) => <Mosca key={x} x={x} y={190} macho={k % 2 === 0} k={1.3} />)}
+        <Texto x={200} y={240} t="Hijos (F1): todos con ojos rojos" s={13} />
+      </g>
+      {/* F2 */}
+      <g style={ver(i === 3)}>
+        <Texto x={200} y={44} t="Nietos (F2): 3 rojos : 1 blanco" s={13} />
+        {f2.map((m, k) => (
+          <g key={k}>
+            <Mosca x={80 + k * 80} y={130} blanca={m.b} macho={m.m} k={1.5} />
+            <Texto x={80 + k * 80} y={176} t={m.m ? '♂' : '♀'} c={m.b ? ROJO : TINTA} s={16} />
+          </g>
+        ))}
+        <circle cx="320" cy="132" r="30" fill="none" stroke={ROJO} strokeWidth="3" strokeDasharray="5 4" />
+        <Texto x={200} y={230} t="¡Todas las moscas de ojos blancos eran machos!" c={ROJO} s={12} />
+      </g>
+      {/* el cromosoma X */}
+      <g style={ver(i === 4)}>
+        {[{ x: 110, t: 'hembra: XX', y: false }, { x: 290, t: 'macho: XY', y: true }].map((s) => (
+          <g key={s.t}>
+            <rect x={s.x - 30} y={70} width="16" height="110" rx="8" fill={MOR} />
+            <rect x={s.x - 33} y={100} width="22" height="10" rx="3" fill="#fff" />
+            {s.y
+              ? <rect x={s.x + 14} y={70} width="16" height="50" rx="8" fill="#9aa4ae" />
+              : <><rect x={s.x + 14} y={70} width="16" height="110" rx="8" fill={MOR} /><rect x={s.x + 11} y={100} width="22" height="10" rx="3" fill="#fff" /></>}
+            <Texto x={s.x} y={208} t={s.t} c={MOR} s={13} />
+          </g>
+        ))}
+        <Texto x={200} y={108} t="← gen del color →" s={10} peso={600} />
+        <Texto x={200} y={246} t="El gen está en el cromosoma X; el macho tiene uno solo." s={11} />
+        <Texto x={200} y={264} t="Los genes están en los cromosomas." c={MOR} s={13} />
+      </g>
+    </svg>
+  )
+}
+
+/* ── Chargaff: contar las bases ───────────────────────────────────────── */
+
+const CHARGAFF = ['medir', 'iguales', 'especies', 'explicacion']
+
+function Barras({ x, datos, titulo, iguales }: { x: number; datos: number[]; titulo: string; iguales: boolean }) {
+  const letras: Base[] = ['A', 'T', 'G', 'C']
+  return (
+    <g>
+      <line x1={x - 6} y1={220} x2={x + 150} y2={220} stroke="#888" strokeWidth="2" />
+      {datos.map((v, k) => (
+        <g key={k}>
+          <rect x={x + k * 38} y={220 - v * 4.4} width="28" height={v * 4.4} rx="4" fill={BASES[letras[k]]} style={{ transition: suave }} />
+          <Texto x={x + k * 38 + 14} y={236} t={letras[k]} c={BASES[letras[k]]} s={13} />
+          <Texto x={x + k * 38 + 14} y={214 - v * 4.4} t={`${v} %`} s={10} />
+        </g>
+      ))}
+      <g style={{ transition: 'opacity 0.7s', opacity: iguales ? 1 : 0 }}>
+        <path d={`M ${x + 2} ${200 - datos[0] * 4.4} h 62`} stroke={TINTA} strokeWidth="2" strokeDasharray="4 3" />
+        <path d={`M ${x + 78} ${200 - datos[2] * 4.4} h 62`} stroke={TINTA} strokeWidth="2" strokeDasharray="4 3" />
+        <Texto x={x + 33} y={256} t="A = T" s={12} /><Texto x={x + 109} y={256} t="G = C" s={12} />
+      </g>
+      <Texto x={x + 72} y={30} t={titulo} s={13} />
+    </g>
+  )
+}
+
+export function EscenaChargaff({ fase }: { fase: string }) {
+  const i = Math.max(0, CHARGAFF.indexOf(fase))
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label={`Las reglas de Chargaff: ${fase}`} className="h-full w-full">
+      {fondo('#f4f2ec')}
+      <g style={{ transition: suave, opacity: i <= 2 ? 1 : 0, transform: i >= 2 ? 'translate(-110px, 0)' : 'none' }}>
+        <Barras x={130} datos={[30, 30, 20, 20]} titulo="ADN humano" iguales={i >= 1} />
+      </g>
+      <g style={ver(i === 2, 'none', 'translate(60px, 0)')}>
+        <Barras x={230} datos={[18, 18, 32, 32]} titulo="otra especie (bacteria)" iguales />
+      </g>
+      <g style={ver(i === 2)}><Texto x={200} y={284} t="Las proporciones cambian de especie a especie" c="#b07a00" s={12} /></g>
+      <g style={ver(i === 3)}>
+        <Texto x={200} y={40} t="La explicación llegó en 1953:" s={13} />
+        {(['A', 'T', 'G', 'C', 'A', 'G'] as Base[]).map((b, k) => <Par key={k} x={200} y={78 + k * 28} izq={b} ancho={110} />)}
+        <Texto x={200} y={264} t="Cada A tiene una T enfrente, y cada G una C" s={12} />
+        <Texto x={200} y={282} t="Chargaff lo midió, pero no supo por qué" c="#b07a00" s={11} />
+      </g>
+    </svg>
+  )
+}
+
+/* ── Meselson y Stahl: pesado y liviano ───────────────────────────────── */
+
+const MESELSON = ['pesado', 'cambio', 'gen1', 'gen2', 'conclusion']
+const PESADO = '#2f4f8a'
+const LIVIANO = '#a9c6ec'
+
+function AdnBarras({ x, y, a, b }: { x: number; y: number; a: string; b: string }) {
+  return (
+    <g>
+      <rect x={x - 12} y={y} width="9" height="70" rx="4" fill={a} />
+      <rect x={x + 3} y={y} width="9" height="70" rx="4" fill={b} />
+      {[12, 26, 40, 54].map((d) => <line key={d} x1={x - 3} x2={x + 3} y1={y + d} y2={y + d} stroke="#888" strokeWidth="2" />)}
+    </g>
+  )
+}
+
+function Tubo({ x, bandas }: { x: number; bandas: number[] }) {
+  return (
+    <g>
+      <path d={`M ${x - 16} 150 v 90 a 16 16 0 0 0 32 0 v -90`} fill="#fff" stroke="#9aa4ae" strokeWidth="2.5" />
+      <path d={`M ${x - 16} 166 h 32 M ${x - 16} 208 h 32 M ${x - 16} 230 h 32`} stroke="#eef2f6" strokeWidth="1" />
+      {bandas.map((y) => <rect key={y} x={x - 14} y={y} width="28" height="6" rx="3" fill={y > 222 ? PESADO : y > 200 ? '#6f8fc4' : LIVIANO} />)}
+    </g>
+  )
+}
+
+export function EscenaMeselson({ fase }: { fase: string }) {
+  const i = Math.max(0, MESELSON.indexOf(fase))
+  const LIV = 180, HIB = 208, PES = 232
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label={`Experimento de Meselson y Stahl: ${fase}`} className="h-full w-full">
+      {fondo('#f3f2ee')}
+      <g style={ver(i <= 1)}>
+        <Texto x={110} y={30} t="Nitrógeno pesado" c={PESADO} s={12} />
+        <AdnBarras x={110} y={50} a={PESADO} b={PESADO} />
+        <Tubo x={110} bandas={[PES]} />
+        <g style={{ transition: 'opacity 0.7s', opacity: i === 1 ? 1 : 0 }}>
+          <Texto x={280} y={70} t="Se pasan a nitrógeno" s={12} />
+          <Texto x={280} y={86} t="liviano y se dejan" s={12} />
+          <Texto x={280} y={102} t="dividir" s={12} />
+          <Texto x={280} y={150} t="En la centrífuga, el ADN" s={11} peso={600} />
+          <Texto x={280} y={164} t="pesado baja más" s={11} peso={600} />
+        </g>
+      </g>
+      <g style={ver(i >= 2)}>
+        <Texto x={110} y={30} t="1.ª generación" s={12} />
+        <AdnBarras x={88} y={50} a={PESADO} b={LIVIANO} /><AdnBarras x={132} y={50} a={LIVIANO} b={PESADO} />
+        <Tubo x={110} bandas={[HIB]} />
+        <Texto x={110} y={278} t="una banda intermedia" s={10} peso={600} />
+      </g>
+      <g style={ver(i >= 3)}>
+        <Texto x={290} y={30} t="2.ª generación" s={12} />
+        <AdnBarras x={248} y={50} a={PESADO} b={LIVIANO} /><AdnBarras x={276} y={50} a={LIVIANO} b={LIVIANO} />
+        <AdnBarras x={304} y={50} a={LIVIANO} b={LIVIANO} /><AdnBarras x={332} y={50} a={LIVIANO} b={PESADO} />
+        <Tubo x={290} bandas={[LIV, HIB]} />
+        <Texto x={290} y={278} t="intermedia + liviana" s={10} peso={600} />
+      </g>
+      <g style={ver(i === 4)}>
+        <rect x="70" y="122" width="260" height="28" rx="14" fill={AZUL} />
+        <Texto x={200} y={141} t="Cada copia: una cadena vieja y una nueva" c="#fff" s={12} />
+      </g>
+    </svg>
+  )
+}
+
+/* ── El código genético ───────────────────────────────────────────────── */
+
+const CODIGO = ['tres-letras', 'experimento', 'codon', 'tabla']
+
+export function EscenaCodigo({ fase }: { fase: string }) {
+  const i = Math.max(0, CODIGO.indexOf(fase))
+  const letras = 'AUGGCUUUCGGA'.split('')
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label={`El código genético: ${fase}`} className="h-full w-full">
+      {fondo('#f3f2ee')}
+      <Punta id="co-fl" />
+      <g style={ver(i === 0)}>
+        <Texto x={200} y={60} t="El ARN se lee de a tres letras" s={13} />
+        {letras.map((l, k) => (
+          <g key={k}>
+            <rect x={56 + k * 24 + Math.floor(k / 3) * 6} y={110} width="20" height="28" rx="4" fill={Math.floor(k / 3) % 2 ? '#e7d6f0' : '#d6e6f7'} />
+            <Texto x={66 + k * 24 + Math.floor(k / 3) * 6} y={129} t={l} s={13} />
+          </g>
+        ))}
+        {[0, 1, 2, 3].map((g) => <Texto key={g} x={90 + g * 78} y={164} t="codón" c={MOR} s={11} />)}
+        <Texto x={200} y={220} t="Crick y Brenner, 1961" s={11} peso={600} />
+      </g>
+      <g style={ver(i === 1 || i === 2)}>
+        <Texto x={200} y={36} t="Nirenberg y Matthaei: un ARN hecho solo de U" s={12} />
+        {Array.from({ length: 12 }, (_, k) => (
+          <g key={k}>
+            <rect x={56 + k * 24 + Math.floor(k / 3) * 6} y={60} width="20" height="26" rx="4" fill="#d6e6f7" />
+            <Texto x={66 + k * 24 + Math.floor(k / 3) * 6} y={78} t="U" s={12} />
+          </g>
+        ))}
+        <Flecha d="M 200 98 v 34" id="co-fl" />
+        {[0, 1, 2, 3].map((k) => (
+          <g key={k}>
+            <circle cx={110 + k * 60} cy={170} r="20" fill="#f2c27a" stroke="#b5761f" strokeWidth="2" />
+            <Texto x={110 + k * 60} y={174} t="Phe" s={11} />
+            {k < 3 && <line x1={130 + k * 60} x2={150 + k * 60} y1={170} y2={170} stroke="#b5761f" strokeWidth="3" />}
+          </g>
+        ))}
+        <Texto x={200} y={216} t="Salió una proteína hecha solo de fenilalanina (Phe)" s={11} />
+      </g>
+      <g style={ver(i === 2, 'none', 'scale(0.8)')}>
+        <rect x="110" y="236" width="180" height="40" rx="20" fill={MOR} />
+        <Texto x={200} y={262} t="UUU = fenilalanina" c="#fff" s={15} />
+      </g>
+      <g style={ver(i === 3)}>
+        <Texto x={200} y={30} t="Hacia 1966: los 64 codones" s={13} />
+        {Array.from({ length: 64 }, (_, k) => (
+          <rect key={k} x={104 + (k % 8) * 25} y={46 + Math.floor(k / 8) * 25} width="21" height="21" rx="3"
+            fill={k === 0 ? MOR : k === 2 || k === 50 || k === 58 ? ROJO : '#cfdcec'} />
+        ))}
+        <Texto x={200} y={270} t="61 codones para 20 aminoácidos y 3 de parada" s={11} />
+        <Texto x={200} y={286} t="(colores ilustrativos)" s={9} peso={500} />
+      </g>
+    </svg>
+  )
+}
+
+/* ── El Proyecto Genoma Humano ────────────────────────────────────────── */
+
+const GENOMA = ['libro', 'leer', 'carrera', 'genes', 'completo']
+
+export function EscenaGenoma({ fase }: { fase: string }) {
+  const i = Math.max(0, GENOMA.indexOf(fase))
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label={`El Proyecto Genoma Humano: ${fase}`} className="h-full w-full">
+      {fondo('#f2f4f6')}
+      <g style={ver(i === 0)}>
+        {Array.from({ length: 10 }, (_, k) => <rect key={k} x={80 + k * 24} y={70} width="20" height="110" rx="3" fill={k % 2 ? '#6f8fc4' : AZUL} />)}
+        <Texto x={200} y={214} t="Unos 3000 millones de letras" s={15} />
+        <Texto x={200} y={234} t="Impresas, llenarían cientos de libros gruesos" s={11} peso={600} />
+      </g>
+      <g style={ver(i === 1)}>
+        <Texto x={200} y={40} t="Se corta en pedazos, se leen y se arman" s={12} />
+        {['ATGCCGTA', 'CGTAATCG', 'ATCGGCTA'].map((p, k) => (
+          <g key={p} transform={`translate(${70 + k * 56} ${70 + k * 44})`}>
+            <rect width="150" height="26" rx="6" fill="#fff" stroke={AZUL} strokeWidth="2" />
+            <text x="75" y="18" textAnchor="middle" fontSize="13" fontFamily="monospace" fontWeight="700" fill={AZUL}>{p}</text>
+          </g>
+        ))}
+        <rect x="70" y="220" width="262" height="26" rx="6" fill={AZUL} />
+        <text x="201" y="238" textAnchor="middle" fontSize="13" fontFamily="monospace" fontWeight="700" fill="#fff">ATGCCGTAATCGGCTA</text>
+      </g>
+      <g style={ver(i === 2)}>
+        <Persona x={110} y={90} c={AZUL} nombre="Consorcio público" sub="6 países, desde 1990" />
+        <Persona x={290} y={90} c={NARANJA} nombre="Celera (empresa)" sub="desde 1998" />
+        <rect x="100" y="200" width="200" height="30" rx="15" fill={TINTA} />
+        <Texto x={200} y={220} t="2000: borrador, anunciado juntos" c="#fff" s={12} />
+        <Texto x={200} y={258} t="2003: el genoma casi completo" s={12} />
+      </g>
+      <g style={ver(i === 3)}>
+        <Texto x={200} y={36} t="¿Cuántos genes tenemos?" s={13} />
+        <rect x="70" y="70" width="260" height="34" rx="6" fill="#d9e2ec" />
+        <Texto x={200} y={92} t="Se esperaban ≈ 100 000" s={12} />
+        <rect x="70" y="130" width="52" height="34" rx="6" fill={AZUL} style={{ transition: suave }} />
+        <Texto x={210} y={152} t="Resultaron ≈ 20 000" c={AZUL} s={12} />
+        <Texto x={200} y={214} t="Pocos más que un ratón o un gusano:" s={11} peso={600} />
+        <Texto x={200} y={230} t="importa cómo se usan, no solo cuántos son" s={11} peso={600} />
+      </g>
+      <g style={ver(i === 4)}>
+        <Texto x={200} y={110} t="2022: completo de verdad" c={AZUL} s={16} />
+        <Texto x={200} y={140} t="Se leyeron las partes que faltaban" s={12} />
+        <Texto x={200} y={190} t="El primero tomó 13 años; hoy, horas o días" s={12} />
+      </g>
+    </svg>
+  )
+}
+
+/* ── CRISPR: de defensa bacteriana a herramienta ──────────────────────── */
+
+const CRISPR = ['virus', 'memoria', 'ataque', 'herramienta']
+
+function Virus({ x, y, c = ROJO }: { x: number; y: number; c?: string }) {
+  return (
+    <g transform={`translate(${x} ${y})`}>
+      <polygon points="0,-14 12,-7 12,7 0,14 -12,7 -12,-7" fill="#fbeaea" stroke={c} strokeWidth="2.5" />
+      <path d="M -5 -5 q 5 -4 8 2 q -6 3 -1 7" fill="none" stroke={c} strokeWidth="2" />
+      <path d="M 0 14 v 10 M -6 24 l 6 -4 l 6 4" stroke={c} strokeWidth="2" fill="none" />
+    </g>
+  )
+}
+
+export function EscenaCrispr({ fase }: { fase: string }) {
+  const i = Math.max(0, CRISPR.indexOf(fase))
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label={`CRISPR: ${fase}`} className="h-full w-full">
+      {fondo('#f3f2ee')}
+      {/* bacteria */}
+      <g style={ver(i <= 2)}>
+        <rect x="70" y="110" width="260" height="120" rx="60" fill="#f6e7d4" stroke="#c9a77d" strokeWidth="3" />
+        {/* archivo CRISPR: repeticiones y espaciadores */}
+        <g transform="translate(130 196)">
+          {[0, 1, 2, 3].map((k) => <polygon key={k} points={`${k * 36},0 ${k * 36 + 8},-7 ${k * 36 + 16},0 ${k * 36 + 8},7`} fill={TINTA} />)}
+          {[0, 1, 2].map((k) => <rect key={k} x={k * 36 + 18} y="-4" width="16" height="8" rx="2" fill={k === 2 ? ROJO : '#9aa4ae'} style={{ transition: 'opacity 0.8s', opacity: k < 2 || i >= 1 ? 1 : 0 }} />)}
+          <Texto x={64} y={24} t="archivo CRISPR" s={10} />
+        </g>
+      </g>
+      <g style={ver(i === 0)}>
+        <Virus x={200} y={70} />
+        <path d="M 200 98 q 10 30 -10 50" stroke={ROJO} strokeWidth="3" fill="none" strokeDasharray="5 3" />
+        <Texto x={200} y={30} t="Un virus ataca a la bacteria" s={12} />
+      </g>
+      <g style={ver(i === 1)}>
+        <Texto x={200} y={30} t="La bacteria guarda un pedazo" s={12} />
+        <Texto x={200} y={46} t="del ADN del virus, como recuerdo" s={12} />
+        <rect x="186" y="140" width="16" height="8" rx="2" fill={ROJO} />
+        <path d="M 194 150 L 214 186" stroke="#888" strokeWidth="2" strokeDasharray="3 3" />
+      </g>
+      <g style={ver(i === 2)}>
+        <Texto x={200} y={30} t="Si el virus vuelve, Cas9 lo reconoce y lo corta" s={12} />
+        <Virus x={110} y={70} />
+        <path d="M 160 150 q 15 -10 30 0 t 30 0" stroke={ROJO} strokeWidth="4" fill="none" />
+        <path d="M 230 150 q 15 -10 30 0" stroke={ROJO} strokeWidth="4" fill="none" transform="translate(6 6) rotate(12 245 150)" />
+        <ellipse cx="226" cy="150" rx="20" ry="14" fill={VERDE} opacity="0.85" />
+        <Texto x={226} y={154} t="Cas9" c="#fff" s={11} />
+        <Texto x={226} y={128} t="✂" c={ROJO} s={16} />
+      </g>
+      <g style={ver(i === 3)}>
+        <Texto x={200} y={36} t="Doudna y Charpentier, 2012:" s={13} />
+        <Texto x={200} y={54} t="se le cambia la guía y corta donde queramos" s={12} />
+        <path d="M 40 150 q 20 -14 40 0 t 40 0 t 40 0 t 40 0 t 40 0 t 40 0 t 40 0 t 40 0" stroke={AZUL} strokeWidth="5" fill="none" />
+        <rect x="190" y="138" width="44" height="24" rx="4" fill="none" stroke="#e0a020" strokeWidth="3" />
+        <Texto x={212} y={184} t="el gen elegido" c="#b07a00" s={11} />
+        <ellipse cx="212" cy="112" rx="24" ry="16" fill={VERDE} opacity="0.9" />
+        <Texto x={212} y={116} t="Cas9" c="#fff" s={11} />
+        <rect x="196" y="88" width="32" height="6" rx="3" fill="#e0a020" />
+        <Texto x={200} y={236} t="Investigación, cultivos y tratamientos médicos" s={11} peso={600} />
+        <Texto x={200} y={254} t="Nobel de Química 2020" c={MOR} s={12} />
+      </g>
+    </svg>
+  )
+}
