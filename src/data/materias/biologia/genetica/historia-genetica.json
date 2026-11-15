@@ -1078,38 +1078,38 @@
         {
           "titulo": "Fotografiar una molécula",
           "visual": {
-            "tipo": "tarjetas",
-            "items": [
+            "tipo": "escena",
+            "id": "foto51",
+            "fases": [
               {
-                "icono": "☢️",
-                "titulo": "Rayos X",
-                "texto": "Atraviesan una fibra de ADN y se desvían en los átomos."
+                "id": "fibra",
+                "nombre": "El montaje",
+                "texto": "Franklin estiraba fibras de ADN muy finas y les apuntaba un haz de rayos X. Detrás ponía una placa fotográfica."
               },
               {
-                "icono": "🎞️",
-                "titulo": "Placa fotográfica",
-                "texto": "Los rayos desviados dejan un dibujo de manchas."
+                "id": "rayos",
+                "nombre": "Los rayos se desvían",
+                "texto": "Al chocar con los átomos del ADN, los rayos se desvían. Por dónde caen en la placa depende de cómo están ordenados los átomos.",
+                "nota": "Se llama difracción de rayos X."
               },
               {
-                "icono": "✖️",
-                "titulo": "Una X",
-                "texto": "Esa X es la huella de una hélice."
+                "id": "foto",
+                "nombre": "La Foto 51",
+                "texto": "En mayo de 1952, Franklin y su estudiante Raymond Gosling obtuvieron esta imagen. Necesitó unas 60 horas de exposición."
+              },
+              {
+                "id": "lectura",
+                "nombre": "Leer la foto",
+                "texto": "La X dice que es una hélice. La separación de las manchas da la distancia entre vueltas, y las manchas de arriba y abajo, las bases apiladas."
+              },
+              {
+                "id": "helice",
+                "nombre": "Una hélice doble",
+                "texto": "Con la foto y sus medidas, Franklin concluyó que el ADN es una hélice con los fosfatos por fuera.",
+                "nota": "Estuvo muy cerca del modelo completo."
               }
             ]
           }
-        },
-        {
-          "titulo": "La Foto 51",
-          "visual": {
-            "tipo": "cifra",
-            "icono": "📷",
-            "valor": "Mayo de 1952",
-            "texto": "Rosalind Franklin y su estudiante Raymond Gosling, King's College de Londres"
-          },
-          "puntos": [
-            "La X muestra que el ADN es una hélice",
-            "Las medidas dieron su ancho y sus vueltas"
-          ]
         },
         {
           "titulo": "¿Cómo llegó la foto a Watson y Crick?",
@@ -1162,7 +1162,8 @@
           "explicacion": "Hizo pasar rayos X por fibras de ADN y estudió cómo se desviaban."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "juego": "foto51-juego"
     },
     {
       "id": "watson-crick",
@@ -1227,53 +1228,49 @@
       },
       "diapositivas": [
         {
-          "titulo": "Las piezas del rompecabezas",
-          "visual": {
-            "tipo": "tarjetas",
-            "items": [
-              {
-                "icono": "📷",
-                "titulo": "Franklin",
-                "texto": "Es una hélice, con los fosfatos por fuera."
-              },
-              {
-                "icono": "⚖️",
-                "titulo": "Chargaff",
-                "texto": "A = T y G = C."
-              },
-              {
-                "icono": "🧩",
-                "titulo": "Watson y Crick",
-                "texto": "Armaron modelos hasta que todo encajó."
-              }
-            ]
-          }
-        },
-        {
-          "titulo": "Una escalera de caracol",
-          "visual": {
-            "tipo": "tarjetas",
-            "items": [
-              {
-                "icono": "🪜",
-                "titulo": "Pasamanos",
-                "texto": "Azúcar y fosfato, uno tras otro."
-              },
-              {
-                "icono": "🔗",
-                "titulo": "Peldaños",
-                "texto": "Pares de bases: A con T, G con C."
-              },
-              {
-                "icono": "🌀",
-                "titulo": "Dos cadenas",
-                "texto": "Enrolladas una alrededor de la otra."
-              }
-            ]
-          },
+          "titulo": "De las piezas a la doble hélice",
           "atajo": {
             "texto": "Más sobre esto: ADN, genes y cromosomas",
             "tema": "adn-genes-cromosomas"
+          },
+          "visual": {
+            "tipo": "escena",
+            "id": "doble-helice",
+            "fases": [
+              {
+                "id": "piezas",
+                "nombre": "Las piezas",
+                "texto": "Watson y Crick juntaron datos de otros: la hélice de Franklin, las reglas de Chargaff y la forma correcta de las bases, que les indicó Jerry Donohue."
+              },
+              {
+                "id": "triple",
+                "nombre": "Un primer error",
+                "texto": "En 1951 propusieron tres cadenas con los fosfatos por dentro. Franklin les mostró que no encajaba con sus datos.",
+                "nivel": "intermedio"
+              },
+              {
+                "id": "bases",
+                "nombre": "Los pares de bases",
+                "texto": "A se une con T y G con C. Los dos pares miden lo mismo, así que los peldaños quedan parejos.",
+                "nota": "Por eso hay tanta A como T y tanta G como C."
+              },
+              {
+                "id": "escalera",
+                "nombre": "Una escalera",
+                "texto": "Los pasamanos son azúcar y fosfato; los peldaños, los pares de bases."
+              },
+              {
+                "id": "helice",
+                "nombre": "La doble hélice",
+                "texto": "La escalera se enrolla: dos cadenas en hélice, como una escalera de caracol. Así lo publicaron en abril de 1953."
+              },
+              {
+                "id": "copia",
+                "nombre": "Cómo se copia",
+                "texto": "Si las cadenas se separan, cada una sirve de molde para hacer la otra. Su artículo lo insinuaba en una sola frase.",
+                "nota": "La copia paso a paso está en el tema 3."
+              }
+            ]
           }
         }
       ],
@@ -1303,7 +1300,8 @@
           "explicacion": "No hicieron experimentos propios: armaron modelos que encajaran con los datos de Franklin, Wilkins y Chargaff."
         }
       ],
-      "revisado": false
+      "revisado": false,
+      "juego": "piezas-helice-juego"
     },
     {
       "id": "meselson-stahl",

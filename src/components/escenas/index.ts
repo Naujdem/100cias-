@@ -12,7 +12,7 @@ import { EscenaFotosintesis, EscenaOrigen } from './EscenaOrigenFoto.tsx'
 import { EscenaUnicelulares, EscenaFlor, EscenaAnimales, EscenaEsqueje, EscenaPorPedazos, EscenaDesarrollo } from './EscenasReproduccion.tsx'
 import { EscenaMicroscopio, EscenaAumento, EscenaOpticoElectronico } from './EscenasMicroscopio.tsx'
 import EscenaMendel from './EscenaMendel.tsx'
-import { EscenaGriffith, EscenaAvery, EscenaHersheyChase, EscenaMiescher } from './EscenasGenetica.tsx'
+import { EscenaGriffith, EscenaAvery, EscenaHersheyChase, EscenaMiescher, EscenaFoto51, EscenaDobleHelice } from './EscenasGenetica.tsx'
 
 /** Escenas vivas: un dibujo que se transforma según la fase (`fase` = id de la fase en el JSON). */
 export const ESCENAS: Record<string, ComponentType<{ fase: string }>> = {
@@ -42,6 +42,8 @@ export const ESCENAS: Record<string, ComponentType<{ fase: string }>> = {
   avery: EscenaAvery,
   'hershey-chase': EscenaHersheyChase,
   miescher: EscenaMiescher,
+  foto51: EscenaFoto51,
+  'doble-helice': EscenaDobleHelice,
   'optico-electronico': EscenaOpticoElectronico,
   'celula-animal': EscenaZoomCelula,
   'celula-vegetal': ({ fase }) => EscenaZoomCelula({ fase, vegetal: true }),

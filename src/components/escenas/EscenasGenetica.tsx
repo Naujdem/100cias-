@@ -336,3 +336,234 @@ export function EscenaMiescher({ fase }: { fase: string }) {
     </svg>
   )
 }
+
+/* ── Franklin: la Foto 51 ─────────────────────────────────────────────── */
+
+const FOTO51 = ['fibra', 'rayos', 'foto', 'lectura', 'helice', 'polemica']
+
+/** Hélice doble dibujada en vertical, centrada en (x, y). */
+function Helice({ x, y, alto = 160, ancho = 46, vueltas = 2 }: { x: number; y: number; alto?: number; ancho?: number; vueltas?: number }) {
+  const n = 48
+  const pts = (fase: number) =>
+    Array.from({ length: n + 1 }, (_, k) => {
+      const t = k / n
+      return `${(x + (ancho / 2) * Math.sin(t * vueltas * 2 * Math.PI + fase)).toFixed(1)},${(y - alto / 2 + t * alto).toFixed(1)}`
+    }).join(' ')
+  const peldanos = Array.from({ length: vueltas * 8 }, (_, k) => {
+    const t = (k + 0.5) / (vueltas * 8)
+    const a = t * vueltas * 2 * Math.PI
+    const yy = y - alto / 2 + t * alto
+    return <line key={k} x1={x + (ancho / 2) * Math.sin(a)} y1={yy} x2={x + (ancho / 2) * Math.sin(a + Math.PI)} y2={yy} stroke={k % 2 ? '#e0a020' : '#3f9a5a'} strokeWidth="3" />
+  })
+  return (
+    <g>
+      {peldanos}
+      <polyline points={pts(0)} fill="none" stroke={AZUL} strokeWidth="4" strokeLinecap="round" />
+      <polyline points={pts(Math.PI)} fill="none" stroke="#8fb2e2" strokeWidth="4" strokeLinecap="round" />
+    </g>
+  )
+}
+
+/** Patrón de difracción de la Foto 51 (simplificado): una X de manchas y un rombo. */
+function Patron({ x, y, k = 1 }: { x: number; y: number; k?: number }) {
+  const manchas: [number, number][] = []
+  for (let j = 1; j <= 5; j++) for (const s of [-1, 1]) { manchas.push([s * j * 9, j * 11]); manchas.push([s * j * 9, -j * 11]) }
+  return (
+    <g transform={`translate(${x} ${y}) scale(${k})`}>
+      <circle r="78" fill="#1d1d22" />
+      <circle r="78" fill="url(#f51-halo)" />
+      {manchas.map(([a, b], i) => <ellipse key={i} cx={a} cy={b} rx="5" ry="2.6" fill="#f2efe6" opacity={Math.abs(b) === 44 ? 0.25 : 0.85} />)}
+      <ellipse cx="0" cy="-70" rx="16" ry="4" fill="#f2efe6" /><ellipse cx="0" cy="70" rx="16" ry="4" fill="#f2efe6" />
+      <circle r="5" fill="#f2efe6" opacity="0.5" />
+    </g>
+  )
+}
+
+export function EscenaFoto51({ fase }: { fase: string }) {
+  const i = Math.max(0, FOTO51.indexOf(fase))
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label={`La Foto 51: ${fase}`} className="h-full w-full">
+      {fondo(i >= 2 && i <= 4 ? '#e9e7e2' : '#f3f1ec')}
+      <defs>
+        <radialGradient id="f51-halo"><stop offset="0" stopColor="#555" stopOpacity="0.7" /><stop offset="1" stopColor="#1d1d22" stopOpacity="0" /></radialGradient>
+      </defs>
+
+      {/* montaje: tubo de rayos X → fibra de ADN → placa */}
+      <g style={ver(i <= 1, 'none', 'translate(0, -20px)')}>
+        <rect x="16" y="128" width="56" height="44" rx="8" fill="#6c7480" />
+        <Texto x={44} y={192} t="rayos X" s={11} />
+        <line x1="72" y1="150" x2="182" y2="150" stroke="#9b6ad8" strokeWidth="5" strokeDasharray="10 6" />
+        <rect x="186" y="100" width="12" height="100" rx="6" fill="#dfe8f3" stroke={AZUL} strokeWidth="2" />
+        <path d="M 192 104 v 92" stroke={AZUL} strokeWidth="2" strokeDasharray="2 3" />
+        <Texto x={192} y={92} t="fibra de ADN" c={AZUL} s={11} />
+        <rect x="330" y="70" width="22" height="160" fill="#2a2a30" />
+        <Texto x={341} y={248} t="placa" s={11} />
+        <g style={{ transition: 'opacity 0.8s', opacity: i === 1 ? 1 : 0 }} stroke="#9b6ad8" strokeWidth="2.5" strokeDasharray="6 5">
+          <line x1="198" y1="150" x2="330" y2="88" /><line x1="198" y1="150" x2="330" y2="212" />
+          <line x1="198" y1="150" x2="330" y2="120" /><line x1="198" y1="150" x2="330" y2="180" />
+          <line x1="198" y1="150" x2="330" y2="150" />
+        </g>
+        <g style={{ transition: 'opacity 0.8s', opacity: i === 1 ? 1 : 0 }}><Texto x={262} y={258} t="los átomos desvían los rayos" c="#7b4ab8" s={11} /></g>
+      </g>
+
+      {/* la foto */}
+      <g style={{ transition: suave, opacity: i >= 2 && i <= 4 ? 1 : 0, transform: i >= 3 ? 'translate(-90px, 0)' : 'none' }}>
+        <Patron x={200} y={146} />
+        <Texto x={200} y={246} t="Foto 51 · mayo de 1952" s={12} />
+        <Texto x={200} y={262} t="(dibujo simplificado)" s={10} peso={500} />
+      </g>
+      {/* lectura de la foto */}
+      <g style={ver(i === 3)}>
+        <path d="M 65 101 L 155 191 M 155 101 L 65 191" stroke="#ffd34d" strokeWidth="3" strokeDasharray="6 4" opacity="0.9" />
+        <Texto x={300} y={100} t="La X: es una hélice" c="#b07a00" s={12} />
+        <Texto x={300} y={134} t="Las rayas: distancia" c="#b07a00" s={12} />
+        <Texto x={300} y={150} t="entre vueltas" c="#b07a00" s={12} />
+        <Texto x={300} y={184} t="Arriba y abajo: las" c="#b07a00" s={12} />
+        <Texto x={300} y={200} t="bases, apiladas" c="#b07a00" s={12} />
+      </g>
+      {/* de la foto a la hélice */}
+      <g style={ver(i === 4, 'none', 'translate(30px, 0)')}>
+        <path d="M 196 146 h 60" stroke="#888" strokeWidth="3" markerEnd="url(#f51-fl)" />
+        <Helice x={300} y={146} />
+        <Texto x={300} y={250} t="dos cadenas en hélice" c={AZUL} s={12} />
+      </g>
+      {/* la polémica (11°) */}
+      <g style={ver(i === 5)}>
+        <Patron x={200} y={70} k={0.5} />
+        {[{ x: 70, n: 'Franklin', c: '#8a5aa8', s: 'no lo supo' }, { x: 200, n: 'Wilkins', c: TINTA, s: 'enero de 1953' }, { x: 330, n: 'Watson', c: AZUL, s: '«se me abrió la boca»' }].map((p) => (
+          <g key={p.n}>
+            <circle cx={p.x} cy={160} r="16" fill={p.c} opacity="0.85" />
+            <path d={`M ${p.x - 26} 210 q 26 -46 52 0 z`} fill={p.c} opacity="0.85" />
+            <Texto x={p.x} y={232} t={p.n} c={p.c} s={13} />
+            <Texto x={p.x} y={248} t={p.s} s={10} peso={600} />
+          </g>
+        ))}
+        <path d="M 96 180 h 74" stroke="#888" strokeWidth="2.5" markerEnd="url(#f51-fl)" />
+        <path d="M 226 180 h 74" stroke="#888" strokeWidth="2.5" markerEnd="url(#f51-fl)" />
+        <Texto x={200} y={284} t="La foto llegó a Watson sin permiso de Franklin" c={ROJO} s={12} />
+      </g>
+      <defs>
+        <marker id="f51-fl" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#888" /></marker>
+      </defs>
+    </svg>
+  )
+}
+
+/* ── Watson y Crick: de las piezas a la doble hélice ──────────────────── */
+
+const DOBLE = ['piezas', 'triple', 'bases', 'escalera', 'helice', 'copia']
+const VERDE = '#3f9a5a'
+const BASES = { A: VERDE, T: '#d0453a', G: '#e0a020', C: AZUL } as const
+type Base = keyof typeof BASES
+
+/** Par de bases: a la izquierda una, a la derecha su pareja, con sus puentes. */
+function Par({ x, y, izq, ancho = 70 }: { x: number; y: number; izq: Base; ancho?: number }) {
+  const der: Base = ({ A: 'T', T: 'A', G: 'C', C: 'G' } as const)[izq]
+  const puentes = izq === 'G' || izq === 'C' ? 3 : 2
+  const m = ancho / 2
+  return (
+    <g transform={`translate(${x} ${y})`}>
+      <rect x={-m} y="-8" width={m - 5} height="16" rx="4" fill={BASES[izq]} />
+      <rect x="5" y="-8" width={m - 5} height="16" rx="4" fill={BASES[der]} />
+      {Array.from({ length: puentes }, (_, k) => <line key={k} x1="-5" x2="5" y1={-5 + (k * 10) / Math.max(1, puentes - 1)} y2={-5 + (k * 10) / Math.max(1, puentes - 1)} stroke="#555" strokeWidth="1.5" strokeDasharray="2 1.5" />)}
+      <text x={-m / 2 - 2} y="4.5" textAnchor="middle" fontSize="11" fontWeight="900" fill="#fff">{izq}</text>
+      <text x={m / 2 + 2} y="4.5" textAnchor="middle" fontSize="11" fontWeight="900" fill="#fff">{der}</text>
+    </g>
+  )
+}
+
+const SECUENCIA: Base[] = ['A', 'G', 'T', 'C', 'C', 'A', 'G', 'T']
+
+export function EscenaDobleHelice({ fase }: { fase: string }) {
+  const i = Math.max(0, DOBLE.indexOf(fase))
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label={`El modelo de la doble hélice: ${fase}`} className="h-full w-full">
+      {fondo('#f3f2ee')}
+
+      {/* las piezas del rompecabezas */}
+      <g style={ver(i === 0, 'none', 'scale(0.9)')}>
+        {[
+          { x: 70, t: 'Franklin', s: 'es una hélice', c: '#8a5aa8' },
+          { x: 200, t: 'Chargaff', s: 'A = T y G = C', c: '#b07a00' },
+          { x: 330, t: 'Donohue', s: 'forma de las bases', c: VERDE },
+        ].map((p) => (
+          <g key={p.t}>
+            <path d={`M ${p.x - 50} 80 h 34 q 0 -14 16 -14 q 16 0 16 14 h 34 v 100 h -100 z`} fill="#fff" stroke={p.c} strokeWidth="3" />
+            <Texto x={p.x} y={120} t={p.t} c={p.c} s={14} />
+            <Texto x={p.x} y={142} t={p.s} s={11} peso={600} />
+          </g>
+        ))}
+        <Texto x={200} y={226} t="Watson y Crick no hicieron experimentos:" s={12} />
+        <Texto x={200} y={244} t="armaron modelos hasta que todo encajó" s={12} />
+      </g>
+
+      {/* el intento fallido de 1951 */}
+      <g style={ver(i === 1)}>
+        <Texto x={200} y={30} t="1951: tres cadenas, con los fosfatos por dentro" s={12} />
+        {[0, 1, 2].map((k) => <circle key={k} cx={200} cy={150} r={30 + k * 22} fill="none" stroke="#9aa4ae" strokeWidth="3" />)}
+        {Array.from({ length: 8 }, (_, k) => <circle key={k} cx={200 + 14 * Math.cos(k * 0.785)} cy={150 + 14 * Math.sin(k * 0.785)} r="5" fill="#e0a020" />)}
+        <path d="M 120 70 L 280 230 M 280 70 L 120 230" stroke={ROJO} strokeWidth="8" strokeLinecap="round" opacity="0.8" />
+        <Texto x={200} y={268} t="Franklin les mostró que estaba mal" c={ROJO} s={12} />
+      </g>
+
+      {/* los pares de bases */}
+      <g style={ver(i === 2)}>
+        <Par x={120} y={110} izq="A" ancho={110} />
+        <Par x={280} y={110} izq="G" ancho={110} />
+        <Texto x={120} y={146} t="A con T: 2 puentes" s={12} />
+        <Texto x={280} y={146} t="G con C: 3 puentes" s={12} />
+        <Texto x={200} y={220} t="Los dos pares miden lo mismo:" s={12} />
+        <Texto x={200} y={238} t="los peldaños quedan parejos" s={12} />
+        <Texto x={200} y={268} t="(y por eso A = T y G = C, como vio Chargaff)" c="#b07a00" s={11} />
+      </g>
+
+      {/* la escalera */}
+      <g style={ver(i === 3)}>
+        <rect x="152" y="40" width="10" height="226" rx="5" fill={AZUL} />
+        <rect x="238" y="40" width="10" height="226" rx="5" fill="#8fb2e2" />
+        {SECUENCIA.map((b, k) => <Par key={k} x={200} y={56 + k * 28} izq={b} />)}
+        <Texto x={90} y={150} t="pasamanos:" c={AZUL} s={11} />
+        <Texto x={90} y={164} t="azúcar y fosfato" c={AZUL} s={11} />
+        <Texto x={316} y={150} t="peldaños:" s={11} />
+        <Texto x={316} y={164} t="pares de bases" s={11} />
+      </g>
+
+      {/* la hélice */}
+      <g style={ver(i === 4, 'none', 'scale(0.8)')}>
+        <Helice x={200} y={150} alto={230} ancho={70} vueltas={2} />
+        <Texto x={86} y={140} t="dos cadenas" s={12} />
+        <Texto x={86} y={156} t="enrolladas" s={12} />
+        <Texto x={318} y={140} t="como una escalera" s={12} />
+        <Texto x={318} y={156} t="de caracol" s={12} />
+      </g>
+
+      {/* cómo se copia: cada cadena vieja con su nueva pareja */}
+      <g style={ver(i === 5)}>
+        <rect x="66" y="40" width="8" height="196" rx="4" fill={AZUL} />
+        <rect x="132" y="40" width="8" height="196" rx="4" fill="none" stroke="#8fb2e2" strokeWidth="2" strokeDasharray="4 3" />
+        <rect x="260" y="40" width="8" height="196" rx="4" fill="none" stroke={AZUL} strokeWidth="2" strokeDasharray="4 3" />
+        <rect x="326" y="40" width="8" height="196" rx="4" fill="#8fb2e2" />
+        {SECUENCIA.slice(0, 7).map((b, k) => {
+          const par: Base = ({ A: 'T', T: 'A', G: 'C', C: 'G' } as const)[b]
+          const y = 50 + k * 26
+          const caja = (x: number, base: Base, nueva: boolean) => (
+            <g key={x}>
+              <rect x={x} y={y} width="26" height="16" rx="4" fill={BASES[base]} opacity={nueva ? 0.55 : 1} />
+              <text x={x + 13} y={y + 12} textAnchor="middle" fontSize="10" fontWeight="900" fill="#fff">{base}</text>
+            </g>
+          )
+          return <g key={k}>{caja(76, b, false)}{caja(104, par, true)}{caja(270, b, true)}{caja(298, par, false)}</g>
+        })}
+        <Texto x={200} y={130} t="se separan" s={11} />
+        <path d="M 176 142 h -22" stroke="#888" strokeWidth="2.5" markerEnd="url(#dh-fl)" /><path d="M 224 142 h 22" stroke="#888" strokeWidth="2.5" markerEnd="url(#dh-fl)" />
+        <Texto x={103} y={32} t="vieja + nueva" s={10} />
+        <Texto x={297} y={32} t="nueva + vieja" s={10} />
+        <Texto x={200} y={262} t="Cada cadena sirve de molde para una nueva" s={12} />
+        <Texto x={200} y={280} t="«No ha escapado a nuestra atención…» (Nature, 1953)" c={AZUL} s={10} peso={600} />
+      </g>
+      <defs>
+        <marker id="dh-fl" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#888" /></marker>
+      </defs>
+    </svg>
+  )
+}

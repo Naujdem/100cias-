@@ -87,3 +87,46 @@ export function MiescherJuego() {
     />
   )
 }
+
+export function Foto51Juego() {
+  return (
+    <JuegoDecide
+      titulo="¿Qué dice la Foto 51?"
+      pregunta="¿Es cierto?"
+      instrucciones="Decide si cada frase sobre Rosalind Franklin y la Foto 51 es cierta o falsa."
+      clave="cien:foto51-mejor"
+      opciones={[o('v', 'Cierto', '✅'), o('f', 'Falso', '❌')]}
+      cartas={[
+        c('✖️', 'La X del centro indica que el ADN es una hélice', 'v', 'Una molécula en hélice deja una X al desviar los rayos X.'),
+        c('🔬', 'Es una foto tomada con un microscopio óptico', 'f', 'Es un patrón de difracción: rayos X que se desvían en los átomos.'),
+        c('📅', 'Se tomó en mayo de 1952', 'v', 'La tomó Raymond Gosling, estudiante de Franklin.'),
+        c('🧭', 'Los fosfatos van por fuera de la hélice', 'v', 'Franklin lo concluyó de sus datos.'),
+        c('🤝', 'Franklin le entregó la foto a Watson', 'f', 'Wilkins se la mostró a Watson sin que ella lo supiera.'),
+        c('🏅', 'Franklin recibió el Nobel de 1962', 'f', 'Murió en 1958 y el Nobel no se da a personas fallecidas.'),
+      ]}
+      cierre="La Foto 51 mostró la hélice; Franklin no recibió el reconocimiento que merecía."
+    />
+  )
+}
+
+export function PiezasDobleHeliceJuego() {
+  return (
+    <JuegoDecide
+      titulo="¿Quién aportó la pieza?"
+      pregunta="¿De quién es esta pieza?"
+      instrucciones="El modelo de la doble hélice juntó datos de varias personas. Decide de quién es cada aporte."
+      clave="cien:piezas-helice-mejor"
+      opciones={[o('fr', 'Franklin', '📷'), o('ch', 'Chargaff', '⚖️'), o('wc', 'Watson y Crick', '🧩')]}
+      cartas={[
+        c('📷', 'La Foto 51, con la X de la hélice', 'fr', 'Franklin y Gosling la tomaron en 1952.'),
+        c('⚖️', 'Hay tanta A como T, y tanta G como C', 'ch', 'Chargaff lo midió en 1950 en muchas especies.'),
+        c('🧩', 'Armar el modelo con piezas de cartón y metal', 'wc', 'No hicieron experimentos: construyeron modelos.'),
+        c('📐', 'Medidas del ancho de la hélice y de sus vueltas', 'fr', 'Salieron de los datos de rayos X de Franklin.'),
+        c('🔗', 'A se une con T y G con C en los peldaños', 'wc', 'Explicaba las reglas de Chargaff.'),
+        c('🌍', 'Las proporciones de bases cambian entre especies', 'ch', 'Así se supo que el ADN no es una repetición simple.'),
+        c('📄', 'El artículo de una página en Nature, 1953', 'wc', 'Terminaba insinuando cómo se copia el ADN.'),
+      ]}
+      cierre="La doble hélice fue un rompecabezas armado con piezas de muchas personas."
+    />
+  )
+}
