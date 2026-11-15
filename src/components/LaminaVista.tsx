@@ -145,16 +145,18 @@ function VisualVista({ v, visibles }: { v: Visual; visibles: number }) {
   }
 
   if (v.tipo === 'tarjetas') {
-    const cols = v.items.length >= 5 ? 'sm:grid-cols-3 lg:grid-cols-5' : v.items.length === 4 ? 'sm:grid-cols-2 lg:grid-cols-4' : v.items.length === 3 ? 'sm:grid-cols-3' : 'sm:grid-cols-2'
+    const grandes = v.items.some((it) => it.imagen || it.dibujo)
+    const cols = grandes ? (v.items.length >= 3 ? 'sm:grid-cols-3' : 'sm:grid-cols-2') : v.items.length >= 5 ? 'sm:grid-cols-3 lg:grid-cols-5' : v.items.length === 4 ? 'sm:grid-cols-2 lg:grid-cols-4' : v.items.length === 3 ? 'sm:grid-cols-3' : 'sm:grid-cols-2'
     return (
-      <ul className={`grid grid-cols-2 gap-3 ${cols}`}>
+      <ul className={`grid ${grandes ? 'grid-cols-1 gap-5' : 'grid-cols-2 gap-3'} ${cols}`}>
         {v.items.map((it, k) => (
           <li
             key={it.titulo}
             aria-hidden={k >= visibles}
             className={`flex flex-col items-center rounded-2xl border border-[var(--linea)] bg-[var(--tarjeta)] p-4 text-center shadow-sm ${aparece(k < visibles)}`}
           >
-            {it.icono && (
+            {(it.imagen || it.dibujo) && <ImagenTarjeta it={it} visible={k < visibles} />}
+            {!it.imagen && !it.dibujo && it.icono && (
               <span aria-hidden="true" className="text-4xl sm:text-5xl">
                 {it.icono}
               </span>
@@ -362,5 +364,22 @@ function EscenaVista({ v, fase, onFase }: { v: Extract<Visual, { tipo: 'escena' 
         </div>
       </div>
     </div>
+  )
+}
+
+/** Imagen o dibujo animado de una tarjeta grande. El dibujo se monta al aparecer, para que su animación empiece ahí. */
+function ImagenTarjeta({ it, visible }: { it: { imagen?: string; credito?: string; dibujo?: string; titulo: string }; visible: boolean }) {
+  const Svg = it.dibujo ? ILUSTRACIONES_SVG[it.dibujo] : undefined
+  return (
+    <figure className="w-full">
+      <div className="mx-auto aspect-square max-h-[30dvh] overflow-hidden rounded-xl border-4 border-[#efe3cc] bg-[#efe3cc] shadow-inner">
+        {it.imagen ? (
+          <img src={`${import.meta.env.BASE_URL}${it.imagen}`} alt={it.titulo} className="h-full w-full object-cover object-top sepia-[.35]" />
+        ) : (
+          Svg && visible && <Svg />
+        )}
+      </div>
+      {it.credito && <figcaption className="mt-1 text-[10px] leading-tight text-[var(--suave)]">{it.credito}</figcaption>}
+    </figure>
   )
 }

@@ -15,11 +15,14 @@ import { NivCuatroAtomos, NivOtrosAtomos, NivMoleculasEjemplos, NivAguaCuerpo, N
 import { UniFunciones, UniNucleo, UniInvisible, UniFision, PluriCigoto, PluriSenales, DivOficios, DivMismoAdn, VenTransporte, OriDosFormas, OriCopoNieve, ColEspectro, ColCoanoflagelado } from './Escenas13.tsx'
 import { EscenaProEuLado, EscenaAnimalVegetalLado, EscenaBacteriasFormas, EscenaEucariotas, EscenaEspecializadas, EscenaVirusCelula, EscenaArbol } from './CelulasTipos.tsx'
 import { EscenaCelulaRotulada, EscenaVegetalRotulada, EscenaMembrana, EscenaNucleo, EscenaRutaProteina, EscenaEnergia, EscenaLisosoma, EscenaCitoplasma, EscenaCiudad, EscenaResumenOrganulos } from './CelulaEuc.tsx'
+import { RelojAnios, ContadorPlantas } from './MendelDatos.tsx'
 import { PostuladoSeres, PostuladoUnidad, PostuladoOrigen } from './Postulados.tsx'
 
 /** Registro de ilustraciones SVG. La clave es el `recurso` de una ilustración de tipo «svg». */
 export const ILUSTRACIONES_SVG: Record<string, ComponentType> = {
   'corcho-lamina': CorchoLamina,
+  'mendel-reloj': RelojAnios,
+  'mendel-contador': ContadorPlantas,
   'microscopio-hooke': MicroscopioHooke,
   'microscopio-leeuwenhoek': MicroscopioLeeuwenhoek,
   'gota-animalculos': GotaAnimalculos,

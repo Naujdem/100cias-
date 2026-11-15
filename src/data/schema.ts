@@ -96,7 +96,11 @@ export type Visual =
   /** un dato grande con su icono */
   | { tipo: 'cifra'; icono?: string; valor: string; texto: string }
   /** tarjetas que aparecen una a una */
-  | { tipo: 'tarjetas'; items: { icono?: string; titulo: string; texto?: string }[] }
+  | {
+      tipo: 'tarjetas'
+      /** `imagen`: ruta en public/ (con `credito`); `dibujo`: clave de ILUSTRACIONES_SVG. Con imagen o dibujo, la tarjeta es grande. */
+      items: { icono?: string; imagen?: string; credito?: string; dibujo?: string; titulo: string; texto?: string }[]
+    }
   /** dos lados que aparecen uno a uno */
   | { tipo: 'compara'; izq: Lado; der: Lado }
   /** pregunta rápida («¿Qué crees?»): se responde con un toque o con las teclas 1–4; no cuenta en el progreso */

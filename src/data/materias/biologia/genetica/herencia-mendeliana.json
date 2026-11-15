@@ -125,16 +125,26 @@
         },
         {
           "titulo": "Un monje que contaba semillas",
-          "puntos": [
-            "Gregor Mendel, monje en Brno",
-            "Ocho años cruzando arvejas",
-            "Contó casi 30 000 plantas"
-          ],
           "visual": {
-            "tipo": "cifra",
-            "icono": "🫛",
-            "valor": "≈ 30 000",
-            "texto": "plantas de arveja estudiadas entre 1856 y 1863"
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "imagen": "imagenes/mendel-retrato.jpg",
+                "credito": "Gregor Mendel, hacia 1862. Autor desconocido, dominio público (Wikimedia Commons).",
+                "titulo": "Gregor Mendel",
+                "texto": "monje del monasterio de Brno"
+              },
+              {
+                "dibujo": "mendel-reloj",
+                "titulo": "Ocho años",
+                "texto": "cruzando arvejas, de 1856 a 1863"
+              },
+              {
+                "dibujo": "mendel-contador",
+                "titulo": "≈ 28 000 plantas",
+                "texto": "sembradas, cruzadas y contadas una a una"
+              }
+            ]
           }
         },
         {
