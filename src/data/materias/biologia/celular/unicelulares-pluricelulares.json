@@ -85,6 +85,7 @@
         }
       ],
       "diagrama": "uni-paso-0",
+      "juego": "unicelulares-juego",
       "preguntas": [
         {
           "id": "uni-1",
@@ -283,6 +284,7 @@
         }
       ],
       "diagrama": "uni-paso-2",
+      "juego": "colonias-juego",
       "preguntas": [
         {
           "id": "col-1",
@@ -634,6 +636,7 @@
         }
       ],
       "diagrama": "uni-paso-3",
+      "juego": "oficio-juego",
       "preguntas": [
         {
           "id": "div-1",
@@ -810,6 +813,7 @@
         }
       ],
       "diagrama": "uni-paso-4",
+      "juego": "ventajas-juego",
       "preguntas": [
         {
           "id": "ven-1",
@@ -827,10 +831,10 @@
           "id": "ven-2",
           "enunciado": "¿Por qué un organismo grande necesita sistemas de transporte?",
           "opciones": [
-            "Porque tienen más ADN que los pequeños",
-            "Porque sus células no tienen membrana",
-            "Porque las células del interior no pueden recibir sustancias directamente del exterior",
-            "Porque los organismos grandes son más antiguos"
+            "Porque sus células tienen más ADN que las de los pequeños",
+            "Porque sus células no tienen membrana y no pueden absorber",
+            "Porque las células del interior quedan lejos del exterior",
+            "Porque sus células gastan menos energía que las de los pequeños"
           ],
           "correcta": 2,
           "explicacion": "El volumen crece más rápido que la superficie, así que el interior no alcanza a intercambiar sustancias con el entorno."
@@ -995,6 +999,7 @@
         }
       ],
       "diagrama": "uni-paso-1",
+      "juego": "origen-pluri-juego",
       "preguntas": [
         {
           "id": "ori-1",
@@ -1024,10 +1029,10 @@
           "id": "ori-3",
           "enunciado": "¿Por qué la ameba social Dictyostelium es un buen ejemplo?",
           "opciones": [
-            "Es una planta que forma colonias en el suelo",
-            "Nunca se agrupa: siempre vive aislada",
-            "Vive sola, pero se agrupa en un cuerpo con células distintas cuando falta alimento",
-            "Es un órgano que forma parte de los hongos"
+            "Es una planta que forma colonias en el suelo húmedo",
+            "Nunca se agrupa: vive siempre sola, como una bacteria",
+            "Vive sola, pero se agrupa en un cuerpo con células distintas",
+            "Es un hongo que forma tejidos y órganos verdaderos"
           ],
           "correcta": 2,
           "explicacion": "Muestra cómo células que viven solas pueden unirse y repartirse tareas."

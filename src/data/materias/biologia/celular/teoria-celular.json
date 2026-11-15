@@ -91,6 +91,7 @@
           "minutos": 10
         }
       },
+      "juego": "hooke-leeu-juego",
       "preguntas": [
         {
           "id": "hl-1",
@@ -311,6 +312,7 @@
           "minutos": 10
         }
       },
+      "juego": "hooke-leeu-juego",
       "preguntas": [
         {
           "id": "ll-1",
@@ -532,6 +534,7 @@
           "minutos": 8
         }
       },
+      "juego": "schleiden-schwann-juego",
       "preguntas": [
         {
           "id": "ss-2",
@@ -721,6 +724,7 @@
           "minutos": 8
         }
       },
+      "juego": "schleiden-schwann-juego",
       "preguntas": [
         {
           "id": "ss-1",
@@ -1162,6 +1166,7 @@
           "minutos": 12
         }
       },
+      "juego": "pasteur-juego",
       "preguntas": [
         {
           "id": "pa-1",
@@ -1191,10 +1196,10 @@
           "id": "pa-3",
           "enunciado": "¿Para qué cubrió Redi algunos frascos con gasa?",
           "opciones": [
-            "Para que no entrara aire, ya que lo creía dañino",
-            "Para que las moscas no pudieran poner huevos en la carne, pero el aire sí entrara",
-            "Para evitar que la carne se pudriera por completo",
-            "Para que se calentara y se descompusiera más rápido"
+            "Para que no entrara aire, porque creía que el aire pudría la carne",
+            "Para que las moscas no pusieran huevos en la carne, pero el aire sí entrara",
+            "Para que la carne no se pudriera, porque la gasa la mantenía fría",
+            "Para que se calentara al sol y se descompusiera más rápido"
           ],
           "correcta": 1,
           "explicacion": "La gasa deja pasar el aire pero no las moscas. Así comprobó que las larvas salen de huevos de moscas y no de la carne."
@@ -1397,13 +1402,14 @@
           "minutos": 10
         }
       },
+      "juego": "teoria-moderna-juego",
       "preguntas": [
         {
           "id": "tm-1",
           "enunciado": "¿Por qué los virus se consideran un caso límite de la teoría celular?",
           "opciones": [
-            "Porque son más grandes que cualquier célula",
-            "Porque no están formados por células y dependen de una célula hospedera para reproducirse",
+            "Porque son más grandes que cualquier célula conocida",
+            "Porque no son células y solo se reproducen dentro de una",
             "Porque tienen núcleo y mitocondrias, pero no membrana",
             "Porque se dividen por mitosis como las demás células"
           ],
@@ -1631,6 +1637,7 @@
         }
       },
       "revisado": false,
+      "juego": "origen-celulas-juego",
       "preguntas": [
         {
           "id": "tc-origen-1",
@@ -1861,6 +1868,7 @@
           "minutos": 12
         }
       },
+      "juego": "endosimbiosis-juego",
       "preguntas": [
         {
           "id": "en-1",

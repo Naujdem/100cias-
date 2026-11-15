@@ -80,6 +80,7 @@
         }
       },
       "diagrama": "diferenciacion",
+      "juego": "diferenciacion-juego",
       "preguntas": [
         {
           "id": "co-diferenciacion-1",
@@ -108,8 +109,8 @@
           "enunciado": "¿Qué probó Gurdon al clonar una rana con el núcleo de una célula del intestino?",
           "opciones": [
             "Que la célula diferenciada conserva todo el ADN",
-            "Que las ranas no tienen ADN",
-            "Que el intestino hace meiosis"
+            "Que cada tejido tiene un ADN diferente",
+            "Que el intestino pierde los genes que no usa"
           ],
           "correcta": 0,
           "explicacion": "Ese núcleo pudo formar una rana completa."
@@ -254,6 +255,7 @@
         }
       },
       "diagrama": "celulas-madre",
+      "juego": "celulas-madre-juego",
       "preguntas": [
         {
           "id": "co-celulas-madre-1",
@@ -282,8 +284,8 @@
           "enunciado": "¿Qué logró Yamanaka?",
           "opciones": [
             "Convertir células de piel en células pluripotentes",
-            "Clonar una oveja",
-            "Descubrir el ADN"
+            "Clonar una oveja a partir de una célula adulta",
+            "Descubrir la estructura de doble hélice del ADN"
           ],
           "correcta": 0,
           "explicacion": "Las llamó iPS."
@@ -595,8 +597,8 @@
           "enunciado": "¿Dónde están los meristemos?",
           "opciones": [
             "En las puntas de la raíz y del tallo",
-            "Solo en las hojas",
-            "En las flores"
+            "Solo en las hojas, junto a los estomas",
+            "Dentro de las flores y los frutos"
           ],
           "correcta": 0,
           "explicacion": "Allí la planta crece."

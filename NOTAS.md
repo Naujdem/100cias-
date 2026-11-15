@@ -1,6 +1,6 @@
 # Notas de trabajo · 100cias
 
-Última actualización: 28 oct 2026.
+Última actualización: 14 nov 2026. El área 1 está completa y publicada en Vercel. Lo vigente está en los apartados del final (desde «Progresión sin repeticiones»); las listas de «Pendiente» de octubre son históricas.
 
 ## Qué es
 App de material didáctico interactivo de ciencias naturales (React + Vite + Tailwind, PWA). Empieza con biología celular; la estructura permite sumar física, química y otras materias.
@@ -337,3 +337,10 @@ Hooke usa la reconstrucción de Rita Greer (2004, Free Art License, Wikimedia Co
 - Reproducción, paso a paso: cada proceso tiene su lámina con más pasos (fases `bip-1…4`, `gem-1…4`, `esp-1…3`, `con-1…4`, `hidra-1…4`, `est-1…4`, `ext-1…3`, `int-1…2`); nuevas escenas `esqueje` (`esq-1…4`) y germinación como último paso de `flor`.
 - Por pedazos, paso a paso: escena `por-pedazos` con tubérculo (`tub-1…4`, papa), estolón (`esto-1…4`, fresa) y bulbo (`bul-1…4`, ajo); las estacas usan la escena `esqueje` (lámina «Estacas (yuca, caña), paso a paso»).
 - Huevo o vientre: escena `desarrollo` paso a paso para ovíparos (gallina, `ovi-1…3`), vivíparos (perra, `viv-1…3`) y ovovivíparos (serpiente, `ovov-1…3`); las tarjetas quedan como resumen.
+
+## Revisión del área 1 (14 nov)
+- «Comprueba» mezcla las opciones en cada intento (antes la correcta era la 1 en el 58 % de las preguntas).
+- 46 preguntas con la correcta mucho más larga que las demás: se reescribieron las opciones para que no se delate.
+- Quitada la tarjeta fantasma de «Técnicas de estudio» en `catalogo.ts` (PROXIMOS).
+- 28 juegos nuevos «decide rápido» en `JuegosDecide3.tsx` para las fichas que no tenían «Juega» (temas 1, 2b, 3, 6, 7, 8 y 9); Bacterias y arqueas usa `bacterias-donde-viven`. Niveles de organización queda como excepción (ver NORMA-LECCIONES.md).
+- Pendiente: retratos de Oparin, Haldane, Miller y Urey (siguen con silueta; JuanMed enviará imágenes con licencia). La revisión docente de las 74 fichas la hará JuanMed.

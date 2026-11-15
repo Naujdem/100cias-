@@ -491,6 +491,7 @@
         }
       ],
       "diagrama": "explorador-bacterias",
+      "juego": "bacterias-donde-viven",
       "preguntas": [
         {
           "id": "tc-ba-1",
@@ -689,6 +690,7 @@
           "recurso": "tipos-eucariotas"
         }
       ],
+      "juego": "eucariotas-juego",
       "preguntas": [
         {
           "id": "tc-eu-1",
@@ -1163,6 +1165,7 @@
         }
       ],
       "diagrama": "galeria-especializadas",
+      "juego": "especializadas-juego",
       "preguntas": [
         {
           "id": "tc-es-1",
@@ -1326,6 +1329,7 @@
         }
       ],
       "diagrama": "cuenta-celula",
+      "juego": "virus-juego",
       "preguntas": [
         {
           "id": "tc-vi-1",

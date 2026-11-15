@@ -15,6 +15,7 @@ import { MitocondriaJuego, NucleoJuego } from './JuegosPropios.tsx'
 import ComparadorRotulado from './ComparadorRotulado.tsx'
 import EnfocaMuestra from './EnfocaMuestra.tsx'
 import { ReproUnicelularesJuego, ReproPlantasJuego, ReproAnimalesJuego, PartesMicroscopioJuego, AumentoJuego, OpticoElectronicoJuego, FotoRespJuego, DescubridoresJuego, UniPluriJuego, ProEuJuego, AnimalVegetalJuego, CicloJuego, DiploideJuego, MetabolismoJuego, TejidosVegetalesJuego, SistemasJuego } from './JuegosDecide2.tsx'
+import { AtpJuego, CelulasMadreJuego, CitocinesisJuego, ColoniasJuego, ControlCicloJuego, CromatinaJuego, CuantosCromosomasJuego, DiferenciacionJuego, EndosimbiosisJuego, EspecializadasJuego, EucariotasJuego, HookeLeeuJuego, MeiosisIoIIJuego, OficioJuego, OrigenCelulasJuego, OrigenPluriJuego, ParaQueDividirseJuego, PasteurJuego, SchleidenSchwannJuego, SenalJuego, TeoriaModernaJuego, UnicelularesJuego, UnionesJuego, VariedadJuego, VentajasJuego, VirusJuego } from './JuegosDecide3.tsx'
 import FasesMitosis from './FasesMitosis.tsx'
 import MeiosisJuego from './MeiosisJuego.tsx'
 import ClasificaCasos, { CASOS_OXIGENO, CASOS_MUERTE, CASOS_TEJIDOS, CASOS_REPRODUCCION } from './ClasificaCasos.tsx'
@@ -90,6 +91,33 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'partes-microscopio-juego': PartesMicroscopioJuego,
   'aumento-juego': AumentoJuego,
   'optico-electronico-juego': OpticoElectronicoJuego,
+  // revisión del área 1: juegos para las fichas que no tenían «Juega»
+  'atp-juego': AtpJuego,
+  'celulas-madre-juego': CelulasMadreJuego,
+  'citocinesis-juego': CitocinesisJuego,
+  'colonias-juego': ColoniasJuego,
+  'control-ciclo-juego': ControlCicloJuego,
+  'cromatina-juego': CromatinaJuego,
+  'cuantos-cromosomas-juego': CuantosCromosomasJuego,
+  'diferenciacion-juego': DiferenciacionJuego,
+  'dividirse-juego': ParaQueDividirseJuego,
+  'endosimbiosis-juego': EndosimbiosisJuego,
+  'especializadas-juego': EspecializadasJuego,
+  'eucariotas-juego': EucariotasJuego,
+  'hooke-leeu-juego': HookeLeeuJuego,
+  'meiosis-i-ii-juego': MeiosisIoIIJuego,
+  'oficio-juego': OficioJuego,
+  'origen-celulas-juego': OrigenCelulasJuego,
+  'origen-pluri-juego': OrigenPluriJuego,
+  'pasteur-juego': PasteurJuego,
+  'schleiden-schwann-juego': SchleidenSchwannJuego,
+  'senal-juego': SenalJuego,
+  'teoria-moderna-juego': TeoriaModernaJuego,
+  'unicelulares-juego': UnicelularesJuego,
+  'uniones-juego': UnionesJuego,
+  'variedad-juego': VariedadJuego,
+  'ventajas-juego': VentajasJuego,
+  'virus-juego': VirusJuego,
   'ciclo-reloj': CicloReloj,
   'fases-mitosis': FasesMitosis,
   'cromosoma-compacta': CromosomaCompacta,
