@@ -1,6 +1,6 @@
 # Notas de trabajo · 100cias
 
-Última actualización: 28 oct 2026.
+Última actualización: 14 nov 2026. El área 1 está completa y publicada en Vercel. Lo vigente está en los apartados del final (desde «Progresión sin repeticiones»); las listas de «Pendiente» de octubre son históricas.
 
 ## Qué es
 App de material didáctico interactivo de ciencias naturales (React + Vite + Tailwind, PWA). Empieza con biología celular; la estructura permite sumar física, química y otras materias.

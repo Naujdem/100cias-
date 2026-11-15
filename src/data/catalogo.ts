@@ -30,7 +30,5 @@ export const UNIDADES: Record<string, Unidad[]> = {
 
 /** Temas anunciados que aún no tienen contenido, por unidad. */
 export const PROXIMOS: Record<string, { etiqueta: string; nombre: string }[]> = {
-  celular: [
-    { etiqueta: '6', nombre: 'Técnicas de estudio' },
-  ],
+  celular: [],
 }
