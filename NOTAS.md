@@ -355,3 +355,10 @@ Hooke usa la reconstrucción de Rita Greer (2004, Free Art License, Wikimedia Co
 
 ## Área 2 · Genética y biotecnología (14 nov)
 - Área 1 cerrada. Plan del área 2 aprobado: ver **PLAN-AREA-2.md** (8 temas). Se empezó por el tema 5, herencia mendeliana.
+
+## Área 2 · Tema 1 «Historia de la genética» (14 nov)
+- `data/materias/biologia/genetica/historia-genetica.json` (orden 21, etiqueta 1): línea de tiempo con 14 hitos (ver PLAN-AREA-2.md), por ahora solo texto, autores con silueta, preguntas y «Para el cuaderno». Generado con un script; editar el JSON directamente de aquí en adelante.
+- Grados en `perfiles.json`: 6° = 6 hitos, 9° = 10, 11° = 14.
+- Atajos «Más sobre esto» en Mendel (→ herencia-mendeliana), Morgan (→ herencia-no-mendeliana), Watson y Crick (→ adn-genes-cromosomas), Meselson y Stahl (→ replicacion-adn), código genético (→ expresion-genica) y CRISPR (→ biotecnologia). Al crear esos temas, usar esos ids.
+- Corregido respecto a la presentación: la Foto 51 es de mayo de 1952 (no 1951) y la tomó Raymond Gosling con Franklin; en 11° se cuenta que Wilkins se la mostró a Watson sin permiso de Franklin.
+- Pendiente: escenas Griffith → Avery → Hershey y Chase → Miescher (una por sesión); retratos (JuanMed enviará imágenes con licencia).

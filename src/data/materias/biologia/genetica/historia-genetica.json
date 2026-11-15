@@ -1,0 +1,1311 @@
+{
+  "orden": 21,
+  "etiqueta": "1",
+  "id": "historia-genetica",
+  "materia": "biologia",
+  "area": "genetica",
+  "titulo": "Historia de la genética",
+  "subtema": "Del jardín de Mendel a la edición de genes",
+  "diapositivas": true,
+  "objetivos": [
+    "Contar cómo se descubrió que el ADN es el material de la herencia.",
+    "Explicar los experimentos de Griffith, Avery y Hershey y Chase.",
+    "Reconocer el aporte de Franklin, Watson y Crick a la estructura del ADN."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar contra un texto de genética de bachillerato. Base: presentación «La base molecular de la genética» de JuanMed (nov 2026). A verificar: años y fechas de vida, Foto 51 (mayo de 1952), proporciones de bases de Chargaff, ≈ 20 000 genes humanos."
+  ],
+  "bloques": [
+    {
+      "id": "mendel",
+      "titulo": "Gregor Mendel: las leyes de la herencia",
+      "anio": 1866,
+      "nivel": "basico",
+      "nucleo": true,
+      "resumen": "Cruzando arvejas descubrió que los caracteres se heredan por «factores» que pasan de padres a hijos sin mezclarse.",
+      "autores": [
+        {
+          "nombre": "Gregor Mendel",
+          "vida": "1822–1884",
+          "aporte": "Monje agustino de la abadía de Santo Tomás, en Brno (hoy República Checa). Entre 1856 y 1863 cruzó miles de plantas de arveja y publicó sus resultados en 1866."
+        }
+      ],
+      "ficha": {
+        "quien": "Gregor Mendel",
+        "cuando": "1856–1863 (experimentos), 1866 (publicación)",
+        "idea": "Mendel mostró que los caracteres no se heredan mezclados, como pintura, sino por «factores» que pasan enteros de padres a hijos. Hoy esos factores se llaman genes. Su trabajo pasó casi desapercibido durante 34 años.",
+        "contexto": [
+          {
+            "titulo": "Un monje que sabía matemáticas",
+            "texto": "Estudió física y matemáticas en Viena. Por eso contó sus plantas y buscó proporciones, algo raro para los naturalistas de su época."
+          },
+          {
+            "titulo": "El jardín de la abadía",
+            "texto": "Cultivó unas 28 000 plantas de arveja en un huerto del monasterio, durante ocho años."
+          },
+          {
+            "titulo": "¿Por qué lo ignoraron?",
+            "texto": "Publicó en una revista local poco leída, usó matemáticas que los botánicos no esperaban y, al hacerse abad en 1868, casi dejó la investigación."
+          },
+          {
+            "titulo": "Una mala sugerencia",
+            "texto": "El botánico Carl Nägeli le recomendó repetir sus cruces con otra planta, la vellosilla, que se reproduce de forma rara y no le dio las mismas proporciones."
+          }
+        ],
+        "evidencia": [
+          "Las proporciones 3 : 1 y 9 : 3 : 3 : 1 que se repetían en miles de plantas."
+        ],
+        "limites": "Mendel no sabía qué eran los «factores» ni dónde estaban: eso se descubrió en el siglo XX.",
+        "cuaderno": {
+          "facil": [
+            "Gregor Mendel, monje agustino, publicó en 1866 sus experimentos con arvejas.",
+            "Los caracteres se heredan por factores (hoy, genes) que no se mezclan."
+          ],
+          "media": [
+            "Su trabajo fue ignorado hasta 1900."
+          ],
+          "avanzada": []
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Un monje y sus arvejas",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🌱",
+            "valor": "≈ 28 000",
+            "texto": "plantas de arveja cultivadas en el huerto de la abadía"
+          },
+          "puntos": [
+            "Ocho años de cruces, de 1856 a 1863",
+            "Contó cada planta y buscó proporciones"
+          ]
+        },
+        {
+          "titulo": "¿Por qué nadie le hizo caso?",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "📰",
+                "titulo": "Revista local",
+                "texto": "Publicó en una revista que casi nadie leía."
+              },
+              {
+                "icono": "🔢",
+                "titulo": "Demasiadas matemáticas",
+                "texto": "Los botánicos no esperaban proporciones."
+              },
+              {
+                "icono": "⛪",
+                "titulo": "Se volvió abad",
+                "texto": "Desde 1868 casi no siguió investigando."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre esto: Herencia mendeliana",
+            "tema": "herencia-mendeliana",
+            "bloque": "jardin-mendel"
+          }
+        }
+      ],
+      "preguntas": [
+        {
+          "id": "hg-me-1",
+          "enunciado": "¿Qué propuso Mendel a partir de sus cruces de arvejas?",
+          "opciones": [
+            "Que los caracteres se heredan por factores que no se mezclan",
+            "Que los hijos son una mezcla exacta de los padres",
+            "Que el ADN es la molécula de la herencia",
+            "Que los caracteres se adquieren con el uso"
+          ],
+          "correcta": 0,
+          "explicacion": "Mendel vio que un carácter que desaparecía en una generación volvía a aparecer en la siguiente: no se había mezclado, seguía ahí como un factor."
+        },
+        {
+          "id": "hg-me-2",
+          "enunciado": "¿Por qué el trabajo de Mendel fue ignorado durante décadas?",
+          "opciones": [
+            "Publicó en una revista poco leída y con métodos raros para la época",
+            "Sus experimentos tenían errores graves de conteo",
+            "La Iglesia prohibió que se publicara",
+            "Lo publicó en un idioma inventado por él"
+          ],
+          "correcta": 0,
+          "explicacion": "Fue una mezcla de poca difusión, matemáticas inesperadas para los botánicos y que dejó de investigar al hacerse abad."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "miescher",
+      "titulo": "Friedrich Miescher: la nucleína",
+      "anio": 1869,
+      "nivel": "basico",
+      "resumen": "Aisló del núcleo de glóbulos blancos una sustancia rica en fósforo, distinta de las proteínas: el ADN, aunque no sabía para qué servía.",
+      "autores": [
+        {
+          "nombre": "Friedrich Miescher",
+          "vida": "1844–1895",
+          "aporte": "Médico suizo. En 1869, en el laboratorio de Felix Hoppe-Seyler en Tubinga (Alemania), aisló por primera vez el ADN, al que llamó nucleína."
+        }
+      ],
+      "ficha": {
+        "quien": "Friedrich Miescher",
+        "cuando": "1869",
+        "idea": "Miescher quería saber de qué estaban hechas las células. Del núcleo de glóbulos blancos sacó una sustancia rica en fósforo que no se comportaba como una proteína y la llamó nucleína. Era ADN, el primer aislamiento de la historia, aunque nadie sabía todavía cuál era su función.",
+        "contexto": [
+          {
+            "titulo": "Células del pus",
+            "texto": "Recogió vendajes con pus de un hospital cercano. El pus está lleno de glóbulos blancos, células con un núcleo grande, ideales para estudiar."
+          },
+          {
+            "titulo": "Quitar lo que sobra",
+            "texto": "Lavó las células con soluciones de sal y usó pepsina, una enzima digestiva sacada del estómago de cerdo, para deshacer las proteínas."
+          },
+          {
+            "titulo": "Lo que quedó",
+            "texto": "En el núcleo quedaba una sustancia que tenía mucho fósforo, no se disolvía como las proteínas y siempre estaba en el núcleo."
+          },
+          {
+            "titulo": "Un laboratorio en un castillo",
+            "texto": "El laboratorio de Hoppe-Seyler funcionaba en la antigua cocina del castillo de Tubinga."
+          },
+          {
+            "titulo": "Del salmón al nombre",
+            "texto": "Después usó esperma de salmón, casi todo núcleo. En 1889 Richard Altmann llamó «ácido nucleico» a la nucleína."
+          }
+        ],
+        "evidencia": [
+          "La nucleína tenía fósforo, algo que las proteínas conocidas no tenían en esa cantidad.",
+          "Aparecía en el núcleo de células de distintos tejidos."
+        ],
+        "limites": "Miescher no relacionó la nucleína con la herencia. Durante décadas se pensó que era una molécula demasiado simple para guardar información.",
+        "cuaderno": {
+          "facil": [
+            "En 1869 Friedrich Miescher aisló del núcleo una sustancia rica en fósforo: la nucleína.",
+            "La nucleína era el ADN, pero aún no se sabía su función."
+          ],
+          "media": [
+            "La obtuvo de glóbulos blancos del pus, quitando grasas y proteínas."
+          ],
+          "avanzada": []
+        }
+      },
+      "preguntas": [
+        {
+          "id": "hg-mi-1",
+          "enunciado": "¿Qué descubrió Friedrich Miescher en 1869?",
+          "opciones": [
+            "Una sustancia del núcleo rica en fósforo, la nucleína",
+            "Que los genes están en los cromosomas",
+            "La forma de doble hélice del ADN",
+            "Que las bacterias se pueden transformar"
+          ],
+          "correcta": 0,
+          "explicacion": "La nucleína era ADN. Miescher la aisló, pero no sabía que tenía que ver con la herencia."
+        },
+        {
+          "id": "hg-mi-2",
+          "enunciado": "¿Por qué Miescher usó glóbulos blancos del pus?",
+          "opciones": [
+            "Porque son células con un núcleo grande y fáciles de conseguir",
+            "Porque son las únicas células que tienen ADN",
+            "Porque no tienen proteínas que estorben",
+            "Porque se reproducen muy rápido en el frasco"
+          ],
+          "correcta": 0,
+          "explicacion": "Todas las células con núcleo tienen ADN, pero los glóbulos blancos del pus eran abundantes y tenían un núcleo grande."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "redescubrimiento",
+      "titulo": "1900: el redescubrimiento de Mendel",
+      "anio": 1900,
+      "nivel": "avanzado",
+      "requiere": [
+        "mendel"
+      ],
+      "resumen": "Tres botánicos, cada uno por su lado, llegan a las mismas proporciones que Mendel y encuentran su artículo olvidado.",
+      "autores": [
+        {
+          "nombre": "Hugo de Vries, Carl Correns y Erich von Tschermak",
+          "vida": "1848–1935 · 1864–1933 · 1871–1962",
+          "aporte": "Botánicos de Países Bajos, Alemania y Austria que en 1900 publicaron resultados que confirmaban las leyes de Mendel."
+        },
+        {
+          "nombre": "William Bateson",
+          "vida": "1861–1926",
+          "aporte": "Biólogo inglés que difundió el trabajo de Mendel y propuso el nombre «genética» en 1905."
+        }
+      ],
+      "ficha": {
+        "quien": "De Vries, Correns, Tschermak y Bateson",
+        "cuando": "1900–1909",
+        "idea": "En 1900 tres investigadores repitieron cruces parecidos a los de Mendel, obtuvieron las mismas proporciones y reconocieron que él ya lo había explicado en 1866. A partir de ahí nace la genética como ciencia.",
+        "contexto": [
+          {
+            "titulo": "Tres a la vez",
+            "texto": "Hugo de Vries, Carl Correns y Erich von Tschermak llegaron a resultados similares casi al mismo tiempo, sin trabajar juntos."
+          },
+          {
+            "titulo": "Nombres nuevos",
+            "texto": "Bateson propuso «genética» en 1905, y el danés Wilhelm Johannsen acuñó «gen», «genotipo» y «fenotipo» en 1909."
+          },
+          {
+            "titulo": "Los cromosomas entran en escena",
+            "texto": "Entre 1902 y 1903, Walter Sutton y Theodor Boveri notaron que los cromosomas se reparten en la meiosis igual que los factores de Mendel."
+          }
+        ],
+        "limites": "La idea de que los genes están en los cromosomas era todavía una hipótesis: Morgan la comprobó después.",
+        "cuaderno": {
+          "facil": [
+            "En 1900 tres botánicos redescubren las leyes de Mendel.",
+            "En 1909 Johannsen inventa la palabra «gen»."
+          ],
+          "media": [
+            "Sutton y Boveri proponen que los factores de Mendel están en los cromosomas."
+          ],
+          "avanzada": []
+        }
+      },
+      "preguntas": [
+        {
+          "id": "hg-re-1",
+          "enunciado": "¿Qué pasó en 1900 con el trabajo de Mendel?",
+          "opciones": [
+            "Tres investigadores llegaron a sus mismas conclusiones y lo redescubrieron",
+            "Mendel publicó por fin su experimento con arvejas",
+            "Se demostró que sus leyes eran falsas",
+            "Se descubrió que los genes son de ADN"
+          ],
+          "correcta": 0,
+          "explicacion": "De Vries, Correns y Tschermak encontraron las mismas proporciones y reconocieron que Mendel se les había adelantado 34 años."
+        },
+        {
+          "id": "hg-re-2",
+          "enunciado": "¿Quién inventó la palabra «gen»?",
+          "opciones": [
+            "Wilhelm Johannsen",
+            "Gregor Mendel",
+            "Friedrich Miescher",
+            "James Watson"
+          ],
+          "correcta": 0,
+          "explicacion": "Johannsen la propuso en 1909. Mendel hablaba de «factores»."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "morgan",
+      "titulo": "Thomas Morgan: los genes están en los cromosomas",
+      "anio": 1910,
+      "nivel": "intermedio",
+      "resumen": "Con moscas de la fruta y un macho de ojos blancos comprobó que los genes van en los cromosomas.",
+      "autores": [
+        {
+          "nombre": "Thomas Hunt Morgan",
+          "vida": "1866–1945",
+          "aporte": "Biólogo estadounidense. En la Universidad de Columbia crió miles de moscas de la fruta (Drosophila). Recibió el Nobel de Medicina en 1933."
+        }
+      ],
+      "ficha": {
+        "quien": "Thomas Hunt Morgan",
+        "cuando": "1910",
+        "idea": "Morgan encontró un macho de mosca de la fruta con ojos blancos. Al cruzarlo, el carácter aparecía casi solo en machos, siguiendo al cromosoma X. Así comprobó que los genes están en los cromosomas.",
+        "contexto": [
+          {
+            "titulo": "El cuarto de las moscas",
+            "texto": "Su laboratorio, lleno de frascos de leche con moscas, se conocía como «el cuarto de las moscas»."
+          },
+          {
+            "titulo": "¿Por qué moscas?",
+            "texto": "Se crían en frascos con fruta, tienen una generación cada dos semanas y solo cuatro pares de cromosomas."
+          },
+          {
+            "titulo": "Era escéptico",
+            "texto": "Al principio Morgan dudaba de Mendel y de que los genes estuvieran en los cromosomas. Sus propias moscas lo convencieron."
+          },
+          {
+            "titulo": "El primer mapa",
+            "texto": "En 1913 su estudiante Alfred Sturtevant hizo el primer mapa genético: el orden de varios genes en un cromosoma."
+          }
+        ],
+        "evidencia": [
+          "El color blanco de ojos se heredaba unido al cromosoma X."
+        ],
+        "cuaderno": {
+          "facil": [
+            "Thomas Morgan, con moscas de la fruta, comprobó en 1910 que los genes están en los cromosomas."
+          ],
+          "media": [
+            "El gen de ojos blancos estaba en el cromosoma X."
+          ],
+          "avanzada": []
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Un macho de ojos blancos",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🪰",
+                "titulo": "Mosca de la fruta",
+                "texto": "Se cría en un frasco y tiene hijos cada dos semanas."
+              },
+              {
+                "icono": "👁️",
+                "titulo": "Ojos blancos",
+                "texto": "Morgan encontró un macho raro entre miles de ojos rojos."
+              },
+              {
+                "icono": "🧬",
+                "titulo": "Cromosoma X",
+                "texto": "El carácter seguía al cromosoma X: el gen estaba ahí."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre esto: Herencia no mendeliana",
+            "tema": "herencia-no-mendeliana"
+          }
+        }
+      ],
+      "preguntas": [
+        {
+          "id": "hg-mo-1",
+          "enunciado": "¿Qué comprobó Morgan con las moscas de la fruta?",
+          "opciones": [
+            "Que los genes están en los cromosomas",
+            "Que el ADN tiene forma de doble hélice",
+            "Que las proteínas guardan la herencia",
+            "Que los caracteres se mezclan como pintura"
+          ],
+          "correcta": 0,
+          "explicacion": "El color de ojos blanco viajaba con el cromosoma X: el gen tenía que estar en ese cromosoma."
+        },
+        {
+          "id": "hg-mo-2",
+          "enunciado": "¿Por qué la mosca de la fruta es buena para estudiar herencia?",
+          "opciones": [
+            "Tiene muchas generaciones en poco tiempo y pocos cromosomas",
+            "Es la única especie que tiene cromosoma X",
+            "No tiene ADN, solo proteínas",
+            "Siempre tiene hijos idénticos a los padres"
+          ],
+          "correcta": 0,
+          "explicacion": "Una generación cada dos semanas y solo cuatro pares de cromosomas: ideal para seguir caracteres."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "griffith",
+      "titulo": "Frederick Griffith: el principio transformante",
+      "anio": 1928,
+      "nivel": "basico",
+      "resumen": "Bacterias muertas por calor lograron transformar a otras vivas e inofensivas en mortales: algo pasaba de unas a otras.",
+      "autores": [
+        {
+          "nombre": "Frederick Griffith",
+          "vida": "1879–1941",
+          "aporte": "Médico y bacteriólogo británico del Ministerio de Salud. Buscaba una vacuna contra la neumonía."
+        }
+      ],
+      "ficha": {
+        "quien": "Frederick Griffith",
+        "cuando": "1928",
+        "idea": "Griffith trabajó con dos cepas de neumococo, la bacteria de la neumonía: la S, que mata a los ratones, y la R, inofensiva. Al inyectar bacterias S muertas por calor junto con R vivas, el ratón murió, y en su sangre había bacterias S vivas. Algo de las bacterias muertas había transformado a las R. Lo llamó principio transformante.",
+        "contexto": [
+          {
+            "titulo": "Cepa S (lisa)",
+            "texto": "Tiene una cápsula que la protege de las defensas del ratón. Sus colonias se ven lisas. Es mortal."
+          },
+          {
+            "titulo": "Cepa R (rugosa)",
+            "texto": "No tiene cápsula y las defensas la eliminan. Sus colonias se ven rugosas. Es inofensiva."
+          },
+          {
+            "titulo": "Los cuatro ratones",
+            "texto": "S vivas: muere. R vivas: vive. S muertas por calor: vive. S muertas + R vivas: muere."
+          },
+          {
+            "titulo": "Buscaba otra cosa",
+            "texto": "Griffith quería una vacuna contra la neumonía. Murió en 1941 durante un bombardeo sobre Londres, sin saber qué era el principio transformante."
+          }
+        ],
+        "evidencia": [
+          "En la sangre del cuarto ratón había bacterias S vivas, aunque solo se habían inyectado S muertas."
+        ],
+        "limites": "Griffith no supo qué molécula hacía la transformación. Eso lo mostraron Avery, MacLeod y McCarty en 1944.",
+        "cuaderno": {
+          "facil": [
+            "En 1928 Griffith descubrió la transformación bacteriana.",
+            "Bacterias muertas pasaron su carácter mortal a bacterias vivas inofensivas."
+          ],
+          "media": [
+            "Usó neumococos: la cepa S, mortal y con cápsula, y la cepa R, inofensiva."
+          ],
+          "avanzada": []
+        }
+      },
+      "preguntas": [
+        {
+          "id": "hg-gr-1",
+          "enunciado": "En el experimento de Griffith, ¿qué le pasó al ratón que recibió bacterias S muertas por calor junto con R vivas?",
+          "opciones": [
+            "Murió, y en su sangre había bacterias S vivas",
+            "Vivió, porque todas las bacterias S estaban muertas",
+            "Vivió, pero quedó con bacterias R en la sangre",
+            "Murió por las bacterias R, que son mortales"
+          ],
+          "correcta": 0,
+          "explicacion": "Las R vivas recibieron algo de las S muertas y se transformaron en S, que son mortales."
+        },
+        {
+          "id": "hg-gr-2",
+          "enunciado": "¿Qué hace mortal a la cepa S del neumococo?",
+          "opciones": [
+            "Una cápsula que la protege de las defensas del ratón",
+            "Que se reproduce solo cuando está muerta",
+            "Que no tiene ADN dentro de la célula",
+            "Que es mucho más grande que la cepa R"
+          ],
+          "correcta": 0,
+          "explicacion": "La cápsula impide que las defensas la eliminen. La cepa R no la tiene."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "avery",
+      "titulo": "Avery, MacLeod y McCarty: el factor es el ADN",
+      "anio": 1944,
+      "nivel": "intermedio",
+      "requiere": [
+        "griffith"
+      ],
+      "resumen": "Destruyendo una por una las moléculas de las bacterias muertas, mostraron que el principio transformante era el ADN y no las proteínas.",
+      "autores": [
+        {
+          "nombre": "Oswald Avery, Colin MacLeod y Maclyn McCarty",
+          "vida": "1877–1955 · 1909–1972 · 1911–2005",
+          "aporte": "Investigadores del Instituto Rockefeller de Nueva York. Trabajaron diez años para identificar el principio transformante de Griffith."
+        }
+      ],
+      "ficha": {
+        "quien": "Oswald Avery, Colin MacLeod y Maclyn McCarty",
+        "cuando": "1944",
+        "idea": "Tomaron el extracto de bacterias S muertas y, en tubos separados, le quitaron las proteínas (con proteasa), el ARN (con RNasa) o el ADN (con DNasa). Luego le agregaron bacterias R vivas. Solo cuando se destruía el ADN no había transformación: el principio transformante era el ADN.",
+        "contexto": [
+          {
+            "titulo": "Tijeras moleculares",
+            "texto": "Las enzimas cortan un solo tipo de molécula: la proteasa corta proteínas, la RNasa corta ARN y la DNasa corta ADN."
+          },
+          {
+            "titulo": "Los tubos",
+            "texto": "Sin proteínas: hubo transformación. Sin ARN: hubo transformación. Sin ADN: no hubo transformación."
+          },
+          {
+            "titulo": "Nadie les creyó del todo",
+            "texto": "Se pensaba que el ADN era una molécula simple y repetitiva, y que solo las proteínas, con 20 piezas distintas, podían guardar información."
+          },
+          {
+            "titulo": "Sin Nobel",
+            "texto": "Avery fue propuesto varias veces para el Premio Nobel, pero nunca lo recibió."
+          }
+        ],
+        "evidencia": [
+          "El extracto perdía el poder de transformar solo cuando se le aplicaba DNasa."
+        ],
+        "limites": "Muchos pensaron que quedaban restos de proteína en el extracto. Hershey y Chase despejaron la duda en 1952.",
+        "cuaderno": {
+          "facil": [
+            "En 1944 Avery, MacLeod y McCarty mostraron que el principio transformante de Griffith era el ADN."
+          ],
+          "media": [
+            "Destruyeron proteínas, ARN o ADN con enzimas: solo sin ADN no hubo transformación."
+          ],
+          "avanzada": []
+        }
+      },
+      "preguntas": [
+        {
+          "id": "hg-av-1",
+          "enunciado": "En el experimento de Avery, ¿en qué tubo NO hubo transformación?",
+          "opciones": [
+            "En el que se destruyó el ADN con DNasa",
+            "En el que se destruyeron las proteínas con proteasa",
+            "En el que se destruyó el ARN con RNasa",
+            "En todos hubo transformación por igual"
+          ],
+          "correcta": 0,
+          "explicacion": "Sin ADN las bacterias R no cambiaron: el ADN era el que transformaba."
+        },
+        {
+          "id": "hg-av-2",
+          "enunciado": "¿Por qué muchos científicos dudaron de Avery en 1944?",
+          "opciones": [
+            "Creían que el ADN era demasiado simple para guardar información",
+            "Porque Avery no usó bacterias en su experimento",
+            "Porque el ADN todavía no se había descubierto",
+            "Porque sus ratones no se enfermaron nunca"
+          ],
+          "correcta": 0,
+          "explicacion": "Se pensaba que solo las proteínas, con 20 aminoácidos distintos, eran lo bastante variadas para llevar la herencia."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "chargaff",
+      "titulo": "Erwin Chargaff: A con T, G con C",
+      "anio": 1950,
+      "nivel": "avanzado",
+      "resumen": "Midió las bases del ADN de muchas especies: siempre hay tanta adenina como timina y tanta guanina como citosina.",
+      "autores": [
+        {
+          "nombre": "Erwin Chargaff",
+          "vida": "1905–2002",
+          "aporte": "Bioquímico nacido en el Imperio austrohúngaro que trabajó en la Universidad de Columbia, en Nueva York."
+        }
+      ],
+      "ficha": {
+        "quien": "Erwin Chargaff",
+        "cuando": "1950",
+        "idea": "Chargaff midió cuánto había de cada base (A, T, G y C) en el ADN de distintas especies. Encontró dos reglas: la cantidad de A es igual a la de T, y la de G es igual a la de C; y las proporciones cambian de una especie a otra. Esto fue una pista clave para Watson y Crick.",
+        "contexto": [
+          {
+            "titulo": "Adiós al ADN aburrido",
+            "texto": "Si cada especie tiene proporciones distintas, el ADN no es una repetición simple: puede llevar información diferente en cada especie."
+          },
+          {
+            "titulo": "Una pista sin explicación",
+            "texto": "Chargaff no supo por qué A = T y G = C. La explicación llegó con la doble hélice: A se une siempre con T, y G con C."
+          },
+          {
+            "titulo": "Un encuentro tenso",
+            "texto": "En 1952 conoció a Watson y Crick en Cambridge y no le parecieron serios. Más tarde criticó que su trabajo se recordara poco."
+          }
+        ],
+        "evidencia": [
+          "En el ADN humano hay cerca de 30 % de A y 30 % de T, y cerca de 20 % de G y 20 % de C."
+        ],
+        "cuaderno": {
+          "facil": [
+            "Chargaff descubrió que en el ADN la cantidad de A es igual a la de T, y la de G igual a la de C."
+          ],
+          "media": [
+            "Las proporciones cambian de una especie a otra."
+          ],
+          "avanzada": []
+        }
+      },
+      "preguntas": [
+        {
+          "id": "hg-ch-1",
+          "enunciado": "Si un ADN tiene 30 % de adenina (A), ¿cuánta timina (T) tiene?",
+          "opciones": [
+            "30 %",
+            "70 %",
+            "20 %",
+            "40 %"
+          ],
+          "correcta": 0,
+          "explicacion": "Por la regla de Chargaff, A = T. Si hay 30 % de A, hay 30 % de T."
+        },
+        {
+          "id": "hg-ch-2",
+          "enunciado": "Si un ADN tiene 30 % de A, ¿cuánta guanina (G) tiene?",
+          "opciones": [
+            "20 %",
+            "30 %",
+            "40 %",
+            "70 %"
+          ],
+          "correcta": 0,
+          "explicacion": "A + T = 60 %, así que G + C = 40 %. Como G = C, cada una es 20 %."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "hershey-chase",
+      "titulo": "Hershey y Chase: el ADN entra, la proteína se queda",
+      "anio": 1952,
+      "nivel": "intermedio",
+      "requiere": [
+        "avery"
+      ],
+      "resumen": "Marcaron con radiactividad el ADN y la proteína de un virus: solo el ADN entró en la bacteria para fabricar virus nuevos.",
+      "autores": [
+        {
+          "nombre": "Alfred Hershey y Martha Chase",
+          "vida": "1908–1997 · 1927–2003",
+          "aporte": "Trabajaban en el laboratorio de Cold Spring Harbor (Nueva York). Chase era la técnica de laboratorio, con 24 años. Hershey recibió el Nobel en 1969; Chase no."
+        }
+      ],
+      "ficha": {
+        "quien": "Alfred Hershey y Martha Chase",
+        "cuando": "1952",
+        "idea": "Usaron un bacteriófago, un virus que infecta bacterias y que solo tiene ADN por dentro y una cubierta de proteína. Marcaron unos virus con azufre radiactivo (que solo va en la proteína) y otros con fósforo radiactivo (que solo va en el ADN). Tras la infección, la radiactividad del fósforo estaba dentro de las bacterias y la del azufre quedaba afuera: el ADN es lo que entra y lleva las instrucciones.",
+        "contexto": [
+          {
+            "titulo": "Un virus como jeringa",
+            "texto": "El fago se pega a la bacteria e inyecta su contenido. Con eso la bacteria fabrica cientos de virus nuevos."
+          },
+          {
+            "titulo": "¿Por qué azufre y fósforo?",
+            "texto": "Las proteínas tienen azufre y casi no tienen fósforo; el ADN tiene fósforo y no tiene azufre. Así cada marca señala una sola molécula."
+          },
+          {
+            "titulo": "La licuadora",
+            "texto": "Agitaron el cultivo en una licuadora de cocina para despegar las cubiertas de los virus de las bacterias."
+          },
+          {
+            "titulo": "La centrífuga",
+            "texto": "Al centrifugar, las bacterias, más pesadas, se van al fondo. Las cubiertas vacías quedan en el líquido de arriba."
+          }
+        ],
+        "evidencia": [
+          "El fósforo radiactivo (ADN) apareció dentro de las bacterias, en el fondo del tubo.",
+          "El azufre radiactivo (proteína) quedó en el líquido, fuera de las bacterias."
+        ],
+        "limites": "Una pequeña parte de proteína también entraba. Aun así, junto con Avery, convenció a casi todos de que el ADN es el material genético.",
+        "cuaderno": {
+          "facil": [
+            "En 1952 Hershey y Chase confirmaron que el ADN, y no la proteína, lleva la información genética."
+          ],
+          "media": [
+            "Marcaron el ADN de un virus con fósforo radiactivo y su proteína con azufre radiactivo.",
+            "Solo el ADN entró en las bacterias."
+          ],
+          "avanzada": []
+        }
+      },
+      "preguntas": [
+        {
+          "id": "hg-hc-1",
+          "enunciado": "¿Por qué Hershey y Chase usaron fósforo radiactivo para marcar el ADN?",
+          "opciones": [
+            "Porque el ADN tiene fósforo y las proteínas casi no",
+            "Porque el fósforo destruye las proteínas del virus",
+            "Porque el fósforo hace que el virus brille",
+            "Porque las bacterias no tienen fósforo"
+          ],
+          "correcta": 0,
+          "explicacion": "El fósforo está en el ADN y el azufre en las proteínas: cada marca sigue a una sola molécula."
+        },
+        {
+          "id": "hg-hc-2",
+          "enunciado": "Después de la licuadora y la centrífuga, ¿dónde estaba el fósforo radiactivo?",
+          "opciones": [
+            "Dentro de las bacterias, en el fondo del tubo",
+            "En las cubiertas vacías del virus, arriba",
+            "Repartido igual entre el fondo y el líquido",
+            "Se perdió durante el licuado"
+          ],
+          "correcta": 0,
+          "explicacion": "El ADN marcado con fósforo había entrado en las bacterias, que se van al fondo al centrifugar."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "franklin",
+      "titulo": "Rosalind Franklin y Maurice Wilkins: la Foto 51",
+      "anio": 1952,
+      "nivel": "basico",
+      "resumen": "Con rayos X obtuvieron imágenes del ADN. La Foto 51 mostró que el ADN tiene forma de hélice.",
+      "autores": [
+        {
+          "nombre": "Rosalind Franklin",
+          "vida": "1920–1958",
+          "aporte": "Química británica, experta en difracción de rayos X. Trabajó en el King's College de Londres entre 1951 y 1953. Murió de cáncer a los 37 años."
+        },
+        {
+          "nombre": "Maurice Wilkins",
+          "vida": "1916–2004",
+          "aporte": "Físico nacido en Nueva Zelanda, también en el King's College. Compartió el Nobel de 1962 con Watson y Crick."
+        }
+      ],
+      "ficha": {
+        "quien": "Rosalind Franklin y Maurice Wilkins",
+        "cuando": "1951–1953 (Foto 51: mayo de 1952)",
+        "idea": "Franklin hizo pasar rayos X a través de fibras de ADN. Los rayos se desvían y dejan un dibujo en una placa fotográfica. En la Foto 51, tomada en mayo de 1952 con su estudiante Raymond Gosling, se ve una X: la marca de una hélice. Sus medidas dieron el ancho de la hélice y la distancia entre vueltas.",
+        "contexto": [
+          {
+            "titulo": "Difracción de rayos X",
+            "texto": "Los rayos chocan con los átomos de la molécula y se desvían. Por la forma del dibujo que dejan se puede calcular cómo están ordenados los átomos."
+          },
+          {
+            "titulo": "La X de la foto",
+            "texto": "Una X en el centro es lo que deja una hélice. Los huecos de la X indicaban que eran dos cadenas."
+          },
+          {
+            "titulo": "Por fuera, el fosfato",
+            "texto": "Franklin también concluyó que los fosfatos van por fuera de la hélice, en contacto con el agua."
+          },
+          {
+            "titulo": "Mal ambiente",
+            "texto": "Franklin y Wilkins tenían una relación difícil. Además, como mujer, Franklin no podía entrar a algunos espacios del King's College."
+          }
+        ],
+        "evidencia": [
+          "La Foto 51 y las medidas de Franklin fueron datos clave para el modelo de Watson y Crick."
+        ],
+        "limites": "Franklin estaba cerca de la estructura completa, pero no llegó a proponer el modelo de doble hélice.",
+        "cuaderno": {
+          "facil": [
+            "Rosalind Franklin obtuvo con rayos X la Foto 51 (1952), que mostró que el ADN es una hélice."
+          ],
+          "media": [
+            "Maurice Wilkins también estudiaba el ADN en el King's College de Londres."
+          ],
+          "avanzada": [
+            "Wilkins le mostró la Foto 51 a Watson sin que Franklin lo supiera."
+          ]
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Fotografiar una molécula",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "☢️",
+                "titulo": "Rayos X",
+                "texto": "Atraviesan una fibra de ADN y se desvían en los átomos."
+              },
+              {
+                "icono": "🎞️",
+                "titulo": "Placa fotográfica",
+                "texto": "Los rayos desviados dejan un dibujo de manchas."
+              },
+              {
+                "icono": "✖️",
+                "titulo": "Una X",
+                "texto": "Esa X es la huella de una hélice."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "La Foto 51",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "📷",
+            "valor": "Mayo de 1952",
+            "texto": "Rosalind Franklin y su estudiante Raymond Gosling, King's College de Londres"
+          },
+          "puntos": [
+            "La X muestra que el ADN es una hélice",
+            "Las medidas dieron su ancho y sus vueltas"
+          ]
+        },
+        {
+          "titulo": "¿Cómo llegó la foto a Watson y Crick?",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🤝",
+                "titulo": "Wilkins",
+                "texto": "En enero de 1953 le mostró la Foto 51 a Watson, sin permiso de Franklin."
+              },
+              {
+                "icono": "📄",
+                "titulo": "Un informe",
+                "texto": "Crick leyó también un informe con los datos de Franklin."
+              },
+              {
+                "icono": "🏅",
+                "titulo": "Nobel de 1962",
+                "texto": "Fue para Watson, Crick y Wilkins. Franklin había muerto en 1958 y el Nobel no se da a personas fallecidas."
+              }
+            ]
+          },
+          "nivel": "avanzado"
+        }
+      ],
+      "preguntas": [
+        {
+          "id": "hg-fr-1",
+          "enunciado": "¿Qué mostró la Foto 51 de Rosalind Franklin?",
+          "opciones": [
+            "Que el ADN tiene forma de hélice",
+            "Que el ADN está en el núcleo",
+            "Que los genes están en los cromosomas",
+            "Que el ARN copia al ADN"
+          ],
+          "correcta": 0,
+          "explicacion": "La X del centro de la foto es el dibujo que deja una molécula en forma de hélice."
+        },
+        {
+          "id": "hg-fr-2",
+          "enunciado": "¿Qué técnica usó Franklin para estudiar el ADN?",
+          "opciones": [
+            "La difracción de rayos X",
+            "El microscopio óptico",
+            "La radiactividad con fósforo",
+            "Las enzimas que cortan el ADN"
+          ],
+          "correcta": 0,
+          "explicacion": "Hizo pasar rayos X por fibras de ADN y estudió cómo se desviaban."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "watson-crick",
+      "titulo": "Watson y Crick: la doble hélice",
+      "anio": 1953,
+      "nivel": "basico",
+      "nucleo": true,
+      "requiere": [
+        "franklin"
+      ],
+      "resumen": "Juntando los datos de Franklin y Chargaff con modelos de cartón y metal, propusieron que el ADN son dos cadenas enrolladas unidas por pares de bases.",
+      "autores": [
+        {
+          "nombre": "James Watson",
+          "vida": "1928–2025",
+          "aporte": "Biólogo estadounidense. Tenía 24 años cuando llegó a la Universidad de Cambridge."
+        },
+        {
+          "nombre": "Francis Crick",
+          "vida": "1916–2004",
+          "aporte": "Físico británico que pasó a la biología. Trabajaba en el laboratorio Cavendish de Cambridge."
+        }
+      ],
+      "ficha": {
+        "quien": "James Watson y Francis Crick",
+        "cuando": "1953",
+        "idea": "En abril de 1953 publicaron el modelo de la doble hélice: dos cadenas enrolladas, como una escalera de caracol. Los fosfatos y azúcares forman los pasamanos y los pares de bases forman los peldaños: A con T, G con C. El modelo explicaba de inmediato cómo se copia el ADN.",
+        "contexto": [
+          {
+            "titulo": "Armando modelos",
+            "texto": "No hicieron experimentos propios: construyeron modelos con piezas de cartón y metal hasta que encajaron con los datos de los demás."
+          },
+          {
+            "titulo": "Un primer intento fallido",
+            "texto": "En 1951 propusieron un modelo de tres cadenas con los fosfatos por dentro. Franklin les señaló que estaba mal."
+          },
+          {
+            "titulo": "Las piezas del rompecabezas",
+            "texto": "La forma de hélice y las medidas, de Franklin; las reglas A = T y G = C, de Chargaff; y la forma correcta de las bases, que les indicó el químico Jerry Donohue."
+          },
+          {
+            "titulo": "Una página en Nature",
+            "texto": "El artículo de 1953 ocupaba poco más de una página. Terminaba insinuando que el emparejamiento de bases sugiere cómo se copia el material genético."
+          }
+        ],
+        "evidencia": [
+          "El modelo encajaba con la Foto 51, con las medidas de Franklin y con las reglas de Chargaff."
+        ],
+        "limites": "El modelo se apoyó en datos de otros, algunos obtenidos sin permiso de Franklin. Ella no fue reconocida como merecía.",
+        "cuaderno": {
+          "facil": [
+            "En 1953 Watson y Crick propusieron el modelo de la doble hélice del ADN.",
+            "Son dos cadenas unidas por pares de bases: A con T y G con C."
+          ],
+          "media": [
+            "Se basaron en la Foto 51 de Franklin y en las reglas de Chargaff."
+          ],
+          "avanzada": [
+            "Recibieron el Nobel en 1962 junto con Wilkins."
+          ]
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Las piezas del rompecabezas",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "📷",
+                "titulo": "Franklin",
+                "texto": "Es una hélice, con los fosfatos por fuera."
+              },
+              {
+                "icono": "⚖️",
+                "titulo": "Chargaff",
+                "texto": "A = T y G = C."
+              },
+              {
+                "icono": "🧩",
+                "titulo": "Watson y Crick",
+                "texto": "Armaron modelos hasta que todo encajó."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Una escalera de caracol",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🪜",
+                "titulo": "Pasamanos",
+                "texto": "Azúcar y fosfato, uno tras otro."
+              },
+              {
+                "icono": "🔗",
+                "titulo": "Peldaños",
+                "texto": "Pares de bases: A con T, G con C."
+              },
+              {
+                "icono": "🌀",
+                "titulo": "Dos cadenas",
+                "texto": "Enrolladas una alrededor de la otra."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre esto: ADN, genes y cromosomas",
+            "tema": "adn-genes-cromosomas"
+          }
+        }
+      ],
+      "preguntas": [
+        {
+          "id": "hg-wc-1",
+          "enunciado": "Según el modelo de Watson y Crick, ¿con qué base se une la adenina (A)?",
+          "opciones": [
+            "Con la timina (T)",
+            "Con la guanina (G)",
+            "Con la citosina (C)",
+            "Con otra adenina (A)"
+          ],
+          "correcta": 0,
+          "explicacion": "En la doble hélice A siempre se une con T, y G con C. Eso explica las reglas de Chargaff."
+        },
+        {
+          "id": "hg-wc-2",
+          "enunciado": "¿Qué datos usaron Watson y Crick para construir su modelo?",
+          "opciones": [
+            "La Foto 51 de Franklin y las reglas de Chargaff",
+            "Sus propios experimentos con ratones",
+            "Los cruces de arvejas de Mendel",
+            "Las moscas de la fruta de Morgan"
+          ],
+          "correcta": 0,
+          "explicacion": "No hicieron experimentos propios: armaron modelos que encajaran con los datos de Franklin, Wilkins y Chargaff."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "meselson-stahl",
+      "titulo": "Meselson y Stahl: cómo se copia el ADN",
+      "anio": 1958,
+      "nivel": "avanzado",
+      "requiere": [
+        "watson-crick"
+      ],
+      "resumen": "Con nitrógeno pesado y liviano mostraron que cada ADN nuevo guarda una cadena vieja y una nueva.",
+      "autores": [
+        {
+          "nombre": "Matthew Meselson y Franklin Stahl",
+          "aporte": "Investigadores del Instituto de Tecnología de California (Caltech)."
+        }
+      ],
+      "ficha": {
+        "quien": "Matthew Meselson y Franklin Stahl",
+        "cuando": "1958",
+        "idea": "Cultivaron bacterias con nitrógeno pesado y luego las pasaron a nitrógeno liviano. Al pesar el ADN de las hijas vieron que tenía un peso intermedio: cada copia lleva una cadena vieja y una nueva. Es la replicación semiconservativa que el modelo de Watson y Crick sugería.",
+        "contexto": [
+          {
+            "titulo": "Un experimento elegante",
+            "texto": "Se le ha llamado «el experimento más bello de la biología» por lo claro de su resultado."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "En 1958 Meselson y Stahl mostraron que la replicación del ADN es semiconservativa."
+          ],
+          "media": [],
+          "avanzada": []
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Una cadena vieja, una nueva",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "⚖️",
+                "titulo": "Nitrógeno pesado",
+                "texto": "Marca las cadenas viejas."
+              },
+              {
+                "icono": "🪶",
+                "titulo": "Nitrógeno liviano",
+                "texto": "Marca las cadenas nuevas."
+              },
+              {
+                "icono": "🧬",
+                "titulo": "Peso intermedio",
+                "texto": "Cada copia tiene una vieja y una nueva."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre esto: Replicación del ADN",
+            "tema": "replicacion-adn"
+          }
+        }
+      ],
+      "preguntas": [
+        {
+          "id": "hg-ms-1",
+          "enunciado": "¿Qué mostraron Meselson y Stahl en 1958?",
+          "opciones": [
+            "Que cada ADN nuevo tiene una cadena vieja y una nueva",
+            "Que el ADN tiene forma de doble hélice",
+            "Que el ADN es el material genético",
+            "Que tres bases forman un codón"
+          ],
+          "correcta": 0,
+          "explicacion": "El ADN de las hijas tenía un peso intermedio: mitad cadena pesada (vieja) y mitad liviana (nueva)."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "codigo-genetico",
+      "titulo": "Se descifra el código genético",
+      "anio": 1961,
+      "nivel": "avanzado",
+      "requiere": [
+        "watson-crick"
+      ],
+      "resumen": "Nirenberg y Matthaei leen la primera «palabra» del código: tres letras del ARN indican un aminoácido.",
+      "autores": [
+        {
+          "nombre": "Marshall Nirenberg y Heinrich Matthaei",
+          "aporte": "Investigadores de los Institutos Nacionales de Salud de Estados Unidos. Nirenberg recibió el Nobel en 1968 con Har Gobind Khorana y Robert Holley."
+        }
+      ],
+      "ficha": {
+        "quien": "Marshall Nirenberg y Heinrich Matthaei",
+        "cuando": "1961–1966",
+        "idea": "En 1961 fabricaron un ARN hecho solo de uracilo (UUU…) y lo pusieron en un extracto de células. Se formó una proteína hecha solo de fenilalanina: UUU significa fenilalanina. Hacia 1966 ya se conocían los 64 codones.",
+        "contexto": [
+          {
+            "titulo": "Palabras de tres letras",
+            "texto": "También en 1961, Crick y Sydney Brenner mostraron que el código se lee de a tres bases, sin espacios."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "En 1961 Nirenberg y Matthaei descifraron el primer codón: UUU = fenilalanina."
+          ],
+          "media": [
+            "Hacia 1966 se conocían los 64 codones."
+          ],
+          "avanzada": []
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "La primera palabra",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🔤",
+            "valor": "UUU",
+            "texto": "significa fenilalanina (1961)"
+          },
+          "puntos": [
+            "El código se lee de a tres letras",
+            "En 1966 ya se conocían los 64 codones"
+          ],
+          "atajo": {
+            "texto": "Más sobre esto: Expresión génica",
+            "tema": "expresion-genica"
+          }
+        }
+      ],
+      "preguntas": [
+        {
+          "id": "hg-cg-1",
+          "enunciado": "¿Qué descubrieron Nirenberg y Matthaei en 1961?",
+          "opciones": [
+            "Que el codón UUU corresponde a la fenilalanina",
+            "Que el ADN tiene forma de doble hélice",
+            "Que el ADN se copia de forma semiconservativa",
+            "Que los genes están en los cromosomas"
+          ],
+          "correcta": 0,
+          "explicacion": "Un ARN hecho solo de U produjo una proteína hecha solo de fenilalanina."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "genoma-humano",
+      "titulo": "El Proyecto Genoma Humano",
+      "anio": 2003,
+      "nivel": "basico",
+      "resumen": "Un esfuerzo internacional de 13 años leyó casi todas las letras del ADN humano: unos 3000 millones de pares de bases.",
+      "ficha": {
+        "quien": "Consorcio internacional (y la empresa Celera)",
+        "cuando": "1990–2003",
+        "idea": "Laboratorios de seis países trabajaron entre 1990 y 2003 para leer el orden de las bases del ADN humano. Son unos 3000 millones de pares de bases y unos 20 000 genes, muchos menos de los que se esperaba.",
+        "contexto": [
+          {
+            "titulo": "Una carrera",
+            "texto": "En 1998 la empresa Celera, de Craig Venter, empezó su propio proyecto. En 2000 ambos anunciaron juntos un primer borrador."
+          },
+          {
+            "titulo": "Pocos genes",
+            "texto": "Se calculaban unos 100 000 genes. Resultaron ser cerca de 20 000, parecido a otros animales."
+          },
+          {
+            "titulo": "Datos abiertos",
+            "texto": "Los participantes públicos acordaron publicar sus resultados en internet cada día, gratis para todos."
+          },
+          {
+            "titulo": "Completo de verdad",
+            "texto": "Al genoma de 2003 le faltaban partes difíciles de leer. Se completó en 2022."
+          }
+        ],
+        "evidencia": [
+          "Hoy leer un genoma completo toma horas o días, cuando el primero tomó 13 años."
+        ],
+        "limites": "Conocer las letras no es entender qué hace cada gen: eso se sigue investigando.",
+        "cuaderno": {
+          "facil": [
+            "El Proyecto Genoma Humano (1990–2003) leyó el orden de las bases del ADN humano."
+          ],
+          "media": [
+            "Son unos 3000 millones de pares de bases y unos 20 000 genes."
+          ],
+          "avanzada": []
+        }
+      },
+      "preguntas": [
+        {
+          "id": "hg-gh-1",
+          "enunciado": "¿Qué logró el Proyecto Genoma Humano?",
+          "opciones": [
+            "Leer el orden de las bases del ADN humano",
+            "Descubrir la forma de doble hélice",
+            "Curar todas las enfermedades genéticas",
+            "Crear el primer ser humano clonado"
+          ],
+          "correcta": 0,
+          "explicacion": "Leyó la secuencia de unos 3000 millones de pares de bases. Entender qué hace cada gen sigue siendo trabajo pendiente."
+        },
+        {
+          "id": "hg-gh-2",
+          "enunciado": "¿Cuántos genes tiene, aproximadamente, el ser humano?",
+          "opciones": [
+            "Unos 20 000",
+            "Unos 3000 millones",
+            "Unos 46",
+            "Unos 100"
+          ],
+          "correcta": 0,
+          "explicacion": "Unos 20 000 genes. Los 3000 millones son pares de bases y 46 es el número de cromosomas."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "crispr",
+      "titulo": "CRISPR: unas tijeras para editar genes",
+      "anio": 2012,
+      "nivel": "intermedio",
+      "resumen": "Doudna y Charpentier convierten un sistema de defensa de las bacterias en una herramienta para cortar el ADN donde se quiera.",
+      "autores": [
+        {
+          "nombre": "Jennifer Doudna y Emmanuelle Charpentier",
+          "vida": "1964– · 1968–",
+          "aporte": "Bioquímica estadounidense y microbióloga francesa. Recibieron el Nobel de Química en 2020."
+        },
+        {
+          "nombre": "Francisco Mojica",
+          "vida": "1963–",
+          "aporte": "Microbiólogo español que en los años 1990 descubrió en bacterias las secuencias repetidas que luego llamó CRISPR."
+        }
+      ],
+      "ficha": {
+        "quien": "Jennifer Doudna y Emmanuelle Charpentier",
+        "cuando": "2012",
+        "idea": "Las bacterias guardan pedazos del ADN de los virus que las atacan y usan una proteína, Cas9, para cortarlos si vuelven. Doudna y Charpentier mostraron en 2012 que se puede guiar a Cas9 para que corte cualquier ADN en el punto elegido. Así se pueden editar genes de forma precisa y barata.",
+        "contexto": [
+          {
+            "titulo": "Empezó en unas salinas",
+            "texto": "Francisco Mojica encontró las secuencias repetidas estudiando microbios de las salinas de Santa Pola, en España."
+          },
+          {
+            "titulo": "Usos",
+            "texto": "Se usa en investigación, en cultivos y en tratamientos de enfermedades como la anemia falciforme."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "En 2012 Doudna y Charpentier convirtieron CRISPR-Cas9 en una herramienta para editar genes."
+          ],
+          "media": [],
+          "avanzada": []
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "De defensa bacteriana a herramienta",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🦠",
+                "titulo": "Las bacterias",
+                "texto": "Guardan pedazos del ADN de los virus que las atacan."
+              },
+              {
+                "icono": "✂️",
+                "titulo": "Cas9",
+                "texto": "Una proteína que corta el ADN que reconoce."
+              },
+              {
+                "icono": "🎯",
+                "titulo": "La guía",
+                "texto": "Se programa para cortar donde se quiera."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre esto: Biotecnología",
+            "tema": "biotecnologia"
+          }
+        }
+      ],
+      "preguntas": [
+        {
+          "id": "hg-cr-1",
+          "enunciado": "¿De dónde viene el sistema CRISPR-Cas9?",
+          "opciones": [
+            "De la defensa de las bacterias contra los virus",
+            "De las células del sistema inmune humano",
+            "De las arvejas que estudió Mendel",
+            "De un virus que infecta plantas"
+          ],
+          "correcta": 0,
+          "explicacion": "Las bacterias lo usan para reconocer y cortar el ADN de los virus que ya las atacaron."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}

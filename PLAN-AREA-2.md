@@ -6,8 +6,15 @@ Aprobado por JuanMed el 14 nov 2026. Se construye **una lección por sesión**, 
 
 ## Ruta de temas
 
-1. **Historia de la genética** — línea de tiempo (mismo formato que la teoría celular, con fichas emergentes):
-   Mendel, Miescher, Morgan, Griffith, Avery, Franklin, Watson y Crick, Proyecto Genoma, CRISPR.
+1. **Historia de la genética** — línea de tiempo (mismo formato que la teoría celular, con fichas emergentes).
+   Complementada el 14 nov con la presentación «La base molecular de la genética» de JuanMed. 14 hitos:
+   Mendel (1866) · Miescher (1869) · redescubrimiento de Mendel (1900, 11°) · Morgan (1910, 9°) · Griffith (1928) ·
+   Avery, MacLeod y McCarty (1944, 9°) · Chargaff (1950, 11°) · Hershey y Chase (1952, 9°) · Franklin y Wilkins,
+   Foto 51 (1952) · Watson y Crick (1953) · Meselson y Stahl (1958, 11°) · código genético (1961, 11°) ·
+   Proyecto Genoma Humano (2003) · CRISPR (2012, 9°). 6° ve 6 hitos, 9° ve 10 y 11° los 14.
+   Escenas previstas (una por sesión): Griffith (4 ratones) → Avery (tubos con enzimas) → Hershey y Chase
+   (fago marcado, licuadora, centrífuga) → Miescher (del pus a la nucleína). Las diapositivas 2–7 de la
+   presentación (qué es la genética, ADN, ARN) van al tema 2.
 2. **ADN, genes y cromosomas** — doble hélice armable (nucleótidos, pares de bases); zoom del ADN al cromosoma;
    gen, alelo, genoma.
 3. **Replicación del ADN** — escena viva de la horquilla: se abre, se copia cada hebra (semiconservativa).
