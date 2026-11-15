@@ -186,13 +186,36 @@ export function VistaUnidad({ materia, unidad }: { materia: string; unidad: stri
   const temas = temasDe(materia, unidad)
   if (!m || !u || !temas.length) return <NoExiste />
   const ultimo = leer<string>(CLAVE_TEMA, '')
+  // temas hechos y «en construcción» juntos, en el orden de su etiqueta (1, 2, … 5, 5b, 6)
+  const clave = (e?: string) => [parseFloat(e ?? '') || 99, e ?? ''] as const
+  const paradas = [
+    ...temas.map((t) => ({ etiqueta: t.etiqueta, tema: t, pronto: undefined })),
+    ...(PROXIMOS[unidad] ?? []).map((p) => ({ etiqueta: p.etiqueta, tema: undefined, pronto: p })),
+  ].sort((x, y) => {
+    const [a, ea] = clave(x.etiqueta)
+    const [b, eb] = clave(y.etiqueta)
+    return a - b || ea.localeCompare(eb)
+  })
   return (
     <div>
       <Migas pasos={[{ texto: 'Inicio', a: enlace.inicio }, { texto: m.nombre, a: enlace.materia(m.id) }, { texto: u.nombre }]} />
       <h1 className="mt-1 text-3xl font-semibold sm:text-4xl">{u.nombre}: tu ruta</h1>
       <p className="mt-1 text-[var(--suave)]">Toca una parada para entrar. Puedes ir en cualquier orden.</p>
       <ol className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {temas.map((t) => {
+        {paradas.map((x) => {
+          if (x.pronto) {
+            const p = x.pronto
+            return (
+              <li key={`p-${p.etiqueta}`}>
+                <div className={PRONTO}>
+                  <span className="text-sm font-bold">{p.etiqueta}</span>
+                  <span className="titulo text-xl font-semibold leading-snug">{p.nombre}</span>
+                  <span className="mt-auto pt-2 text-sm font-semibold">En construcción</span>
+                </div>
+              </li>
+            )
+          }
+          const t = x.tema!
           const a = avance(progreso, t)
           const aqui = t.id === ultimo
           return (
@@ -212,15 +235,6 @@ export function VistaUnidad({ materia, unidad }: { materia: string; unidad: stri
             </li>
           )
         })}
-        {(PROXIMOS[unidad] ?? []).map((p) => (
-          <li key={p.etiqueta}>
-            <div className={PRONTO}>
-              <span className="text-sm font-bold">{p.etiqueta}</span>
-              <span className="titulo text-xl font-semibold leading-snug">{p.nombre}</span>
-              <span className="mt-auto pt-2 text-sm font-semibold">En construcción</span>
-            </div>
-          </li>
-        ))}
       </ol>
     </div>
   )
