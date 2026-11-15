@@ -1,5 +1,5 @@
 import Resguardo from './Resguardo.tsx'
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import type { KeyboardEvent as KeyEvt, ReactNode } from 'react'
 import type { Bloque } from '../data/schema.ts'
 import { construir, pasosDe } from '../lib/diapositivas.ts'
@@ -76,6 +76,30 @@ export default function Presentacion({ bloques, inicio, temaId, unidad = 'Hito',
   const pausadaRef = useRef(pausada)
   pausadaRef.current = pausada
   const caja = useRef<HTMLDivElement>(null)
+  // Al proyectar: la barra de abajo se oculta sola y reaparece al mover el mouse (o tocar la pantalla).
+  const [verBarra, setVerBarra] = useState(true)
+  const temporizador = useRef<number | undefined>(undefined)
+  const mostrarBarra = () => {
+    setVerBarra(true)
+    window.clearTimeout(temporizador.current)
+    temporizador.current = window.setTimeout(() => setVerBarra(false), 2500)
+  }
+  useEffect(() => {
+    if (!proy) return
+    mostrarBarra()
+    return () => window.clearTimeout(temporizador.current)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [proy])
+  // Al proyectar, la lámina se agranda hasta llenar la pantalla sin desbordarse.
+  const zona = useRef<HTMLElement>(null)
+  const hoja = useRef<HTMLDivElement>(null)
+  const [zoom, setZoom] = useState(1)
+  const [tamano, setTamano] = useState(0)
+  useEffect(() => {
+    const alCambiar = () => setTamano((n) => n + 1)
+    window.addEventListener('resize', alCambiar)
+    return () => window.removeEventListener('resize', alCambiar)
+  }, [])
   const iRef = useRef(i)
   iRef.current = i
   const it = items[Math.min(i, items.length - 1)]
@@ -198,6 +222,21 @@ export default function Presentacion({ bloques, inicio, temaId, unidad = 'Hito',
   const b = it.bloque
   const idxBloque = bloques.findIndex((x) => x.id === b.id)
   const siguienteBloque = bloques[idxBloque + 1]
+  useLayoutEffect(() => {
+    if (!proy || !zona.current || !hoja.current) {
+      if (zoom !== 1) setZoom(1)
+      return
+    }
+    const z = zoom
+    const r = hoja.current.getBoundingClientRect()
+    const altoNatural = r.height / z
+    const disponible = zona.current.clientHeight - 24
+    if (altoNatural <= 0) return
+    const anchoMax = (zona.current.clientWidth - 64) / Math.min(1024, r.width / z)
+    const nuevo = Math.max(1, Math.min(1.7, anchoMax, disponible / altoNatural))
+    if (Math.abs(nuevo - z) > 0.04) setZoom(nuevo)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [proy, i, tamano])
   const momentos = items.map((x, k) => ({ x, k })).filter(({ x }) => x.bloque.id === b.id)
 
   return (
@@ -208,6 +247,8 @@ export default function Presentacion({ bloques, inicio, temaId, unidad = 'Hito',
       aria-label={`Diapositivas: ${b.titulo}`}
       tabIndex={-1}
       onKeyDown={atrapar}
+      onMouseMove={proy ? mostrarBarra : undefined}
+      onTouchStart={proy ? mostrarBarra : undefined}
       className="fixed inset-0 z-50 flex flex-col bg-[var(--fondo)] outline-none"
     >
       <header className="flex items-center gap-3 border-b border-[var(--linea)] bg-[var(--tarjeta)] px-3 py-2">
@@ -305,13 +346,19 @@ export default function Presentacion({ bloques, inicio, temaId, unidad = 'Hito',
         </aside>
       )}
       <main
-        className="min-h-0 flex-1 overflow-y-auto px-4 py-5 sm:px-8"
+        ref={zona}
+        className={`min-h-0 flex-1 overflow-y-auto px-4 sm:px-8 ${proy ? 'flex flex-col py-3' : 'py-5'}`}
         onClick={(e) => {
           if ((e.target as HTMLElement).closest('button, a, input, select, textarea, summary, [data-diagrama], [data-escena]')) return
           if (paso < pasosDe(it.d)) setPaso((p) => p + 1)
         }}
       >
-        <div key={`${b.id}-${it.n}`} className="mx-auto flex min-h-full w-full max-w-5xl flex-col justify-center">
+        <div
+          key={`${b.id}-${it.n}`}
+          ref={hoja}
+          className={`mx-auto flex w-full max-w-5xl flex-col justify-center ${proy ? 'my-auto' : 'min-h-full'}`}
+          style={proy && zoom !== 1 ? { zoom } : undefined}
+        >
           <Lamina
             it={it}
             onVerFicha={onVerFicha}
@@ -328,7 +375,12 @@ export default function Presentacion({ bloques, inicio, temaId, unidad = 'Hito',
       </main>
       </div>
 
-      <footer className="flex items-center justify-between gap-2 border-t border-[var(--linea)] bg-[var(--tarjeta)] px-3 py-2 sm:px-5">
+      <footer
+        onMouseEnter={proy ? () => { window.clearTimeout(temporizador.current); setVerBarra(true) } : undefined}
+        className={`flex items-center justify-between gap-2 border-t border-[var(--linea)] bg-[var(--tarjeta)] px-3 py-2 sm:px-5 ${
+          proy ? `absolute inset-x-0 bottom-0 z-10 shadow-lg transition-all duration-300 ${verBarra ? 'opacity-100' : 'pointer-events-none translate-y-full opacity-0'}` : ''
+        }`}
+      >
         <button
           type="button"
           onClick={retroceder}
