@@ -1,0 +1,615 @@
+{
+  "id": "replicacion-adn",
+  "materia": "biologia",
+  "area": "genetica",
+  "titulo": "Replicación del ADN",
+  "subtema": "Cómo se copia la molécula de la herencia",
+  "orden": 23,
+  "etiqueta": "3",
+  "vistas": [
+    "ruta"
+  ],
+  "tituloVista": "Ruta de la replicación",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Explicar por qué y cuándo se copia el ADN.",
+    "Describir la horquilla: helicasa, hebras molde y ADN polimerasa.",
+    "Reconocer que la replicación es semiconservativa y casi sin errores."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con un texto de genética de bachillerato. A verificar: ≈ 6000 millones de bases por célula, velocidades (≈ 1000 bases/s en bacterias, ≈ 50 en humanos) y ≈ 1 error en 1000 millones."
+  ],
+  "bloques": [
+    {
+      "id": "para-que",
+      "titulo": "¿Para qué se copia el ADN?",
+      "resumen": "Antes de dividirse, la célula copia todo su ADN para que cada célula hija reciba una copia completa.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "Cuando una célula se divide, cada célula hija necesita todas las instrucciones. Por eso, antes de dividirse, la célula copia todo su ADN: es la replicación. Ocurre en la fase S de la interfase, y al terminar cada cromosoma tiene dos cromátidas hermanas idénticas.",
+        "contexto": [
+          {
+            "titulo": "Fase S",
+            "texto": "La S es de síntesis: en esta etapa del ciclo celular se fabrica el ADN nuevo."
+          },
+          {
+            "titulo": "Una tarea enorme",
+            "texto": "En una célula humana se copian unos 6000 millones de bases en pocas horas, empezando en miles de puntos a la vez."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "La replicación es la copia del ADN.",
+            "Ocurre antes de la división celular, en la fase S.",
+            "Cada célula hija recibe una copia completa."
+          ],
+          "media": [
+            "Después de copiarse, cada cromosoma tiene dos cromátidas hermanas."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "Si fotocopias un libro para dos personas, ¿qué tiene que tener cada copia?",
+          "actividad": "Relacionar la escena con el ciclo celular del área 1 (atajo).",
+          "errores": [
+            "Creer que cada hija recibe la mitad del ADN.",
+            "Pensar que la copia ocurre durante la mitosis."
+          ],
+          "minutos": 15
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Una célula se va a dividir en dos. ¿Qué tiene que pasar antes con su ADN?",
+            "opciones": [
+              "Copiarse completo, para que cada hija tenga uno",
+              "Partirse por la mitad, una para cada hija",
+              "Nada: las hijas fabrican su ADN después",
+              "Salir del núcleo"
+            ],
+            "correcta": 0,
+            "explicacion": "Cada célula hija necesita el ADN completo, así que antes se copia."
+          }
+        },
+        {
+          "titulo": "Primero copiar, después dividir",
+          "visual": {
+            "tipo": "escena",
+            "id": "para-que-copiar",
+            "fases": [
+              {
+                "id": "antes",
+                "nombre": "Antes",
+                "texto": "Cada cromosoma es una molécula de ADN."
+              },
+              {
+                "id": "fase-s",
+                "nombre": "La copia",
+                "texto": "En la fase S de la interfase, el ADN se copia. Las dos copias quedan unidas: son las cromátidas hermanas."
+              },
+              {
+                "id": "division",
+                "nombre": "La división",
+                "texto": "Al dividirse, las cromátidas se separan y cada célula hija recibe una copia completa."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre esto: el ciclo celular",
+            "tema": "procesos-celulares",
+            "bloque": "ciclo-celular"
+          }
+        }
+      ],
+      "juego": "para-que-copiar-juego",
+      "preguntas": [
+        {
+          "id": "rep-pq-1",
+          "enunciado": "¿En qué momento del ciclo celular se copia el ADN?",
+          "opciones": [
+            "En la fase S de la interfase",
+            "Durante la anafase",
+            "Después de la citocinesis",
+            "Solo cuando la célula muere"
+          ],
+          "correcta": 0,
+          "explicacion": "S de síntesis: el ADN se copia antes de que empiece la mitosis."
+        },
+        {
+          "id": "rep-pq-2",
+          "enunciado": "¿Por qué la célula copia su ADN antes de dividirse?",
+          "opciones": [
+            "Para que cada célula hija tenga una copia completa",
+            "Para tener el doble de ADN para siempre",
+            "Para eliminar el ADN viejo",
+            "Para convertir el ADN en ARN"
+          ],
+          "correcta": 0,
+          "explicacion": "Cada hija debe recibir todas las instrucciones."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "horquilla",
+      "titulo": "La horquilla de replicación",
+      "resumen": "La helicasa abre el ADN, cada hebra sirve de molde y la ADN polimerasa construye la hebra nueva.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "nucleo": true,
+      "requiere": [
+        "para-que"
+      ],
+      "ficha": {
+        "idea": "Para copiarse, el ADN se abre como un cierre: la helicasa rompe los puentes entre las bases y separa las dos hebras, formando una horquilla. Cada hebra vieja sirve de molde: la ADN polimerasa le pone enfrente los nucleótidos que corresponden, A con T y G con C. Al final hay dos moléculas iguales a la original.",
+        "contexto": [
+          {
+            "titulo": "Como un cierre",
+            "texto": "Las bases están unidas por puentes de hidrógeno, que son débiles: por eso el ADN se puede abrir sin romper las hebras."
+          },
+          {
+            "titulo": "Moldes",
+            "texto": "Como A siempre va con T y G con C, cada hebra tiene toda la información para reconstruir la otra."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "La helicasa abre el ADN.",
+            "Cada hebra sirve de molde.",
+            "La ADN polimerasa pone las bases complementarias.",
+            "Resultan dos moléculas iguales."
+          ],
+          "media": [
+            "La zona donde se abre el ADN se llama horquilla de replicación."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "Si te doy media escalera, ¿puedes reconstruir la otra mitad?",
+          "actividad": "Ver la escena y luego usar «Arma la doble hélice» como si fuera la polimerasa.",
+          "errores": [
+            "Creer que la hebra nueva es igual a su molde (y no complementaria).",
+            "Pensar que el ADN se copia entero de una vez, sin abrirse."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Se abre y se copia",
+          "visual": {
+            "tipo": "escena",
+            "id": "horquilla",
+            "fases": [
+              {
+                "id": "adn",
+                "nombre": "La molécula",
+                "texto": "Una molécula de ADN: dos hebras unidas por pares de bases."
+              },
+              {
+                "id": "abre",
+                "nombre": "Se abre",
+                "texto": "La helicasa rompe los puentes entre las bases y separa las hebras. Se forma la horquilla."
+              },
+              {
+                "id": "molde",
+                "nombre": "Los moldes",
+                "texto": "Cada hebra vieja queda expuesta. Alrededor hay nucleótidos sueltos listos para usarse."
+              },
+              {
+                "id": "copia",
+                "nombre": "La copia",
+                "texto": "La ADN polimerasa pone frente a cada base la que le corresponde: A con T y G con C."
+              },
+              {
+                "id": "dos",
+                "nombre": "Dos moléculas",
+                "texto": "Resultan dos moléculas idénticas. Cada una tiene una hebra vieja y una nueva."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Una hebra molde dice T A C G. ¿Qué pone la polimerasa enfrente?",
+            "opciones": [
+              "A T G C",
+              "T A C G",
+              "C G T A",
+              "U A C G"
+            ],
+            "correcta": 0,
+            "explicacion": "Frente a T, A; frente a A, T; frente a C, G; frente a G, C."
+          }
+        }
+      ],
+      "juego": "horquilla-juego",
+      "diagrama": "arma-helice",
+      "preguntas": [
+        {
+          "id": "rep-ho-1",
+          "enunciado": "¿Qué hace la helicasa en la replicación?",
+          "opciones": [
+            "Separa las dos hebras del ADN",
+            "Une los nucleótidos nuevos",
+            "Lleva el mensaje a los ribosomas",
+            "Enrolla el ADN en las histonas"
+          ],
+          "correcta": 0,
+          "explicacion": "La helicasa abre el ADN y forma la horquilla."
+        },
+        {
+          "id": "rep-ho-2",
+          "enunciado": "Si la hebra molde es A A G C, ¿cómo es la hebra nueva?",
+          "opciones": [
+            "T T C G",
+            "A A G C",
+            "U U C G",
+            "G G A T"
+          ],
+          "correcta": 0,
+          "explicacion": "La hebra nueva es complementaria: A→T, A→T, G→C, C→G."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "semiconservativa",
+      "titulo": "Una hebra vieja, una nueva",
+      "resumen": "Cada molécula nueva conserva una hebra de la original: la replicación es semiconservativa.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "intermedio",
+      "requiere": [
+        "horquilla"
+      ],
+      "ficha": {
+        "idea": "Había tres ideas sobre cómo se copiaba el ADN: conservativa (la original queda entera y la copia es toda nueva), semiconservativa (cada copia tiene una hebra vieja y una nueva) y dispersiva (trozos viejos y nuevos mezclados). En 1958 Meselson y Stahl demostraron que es semiconservativa.",
+        "contexto": [
+          {
+            "titulo": "La pista del modelo",
+            "texto": "Watson y Crick ya lo sospechaban en 1953: si las hebras se separan y cada una es molde, cada copia debe llevar una hebra vieja."
+          },
+          {
+            "titulo": "La prueba",
+            "texto": "Con nitrógeno pesado y liviano, Meselson y Stahl vieron que en la primera generación todo el ADN tenía un peso intermedio."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "La replicación es semiconservativa: cada molécula nueva tiene una hebra vieja y una nueva."
+          ],
+          "media": [
+            "Los otros modelos eran el conservativo y el dispersivo.",
+            "Meselson y Stahl lo comprobaron en 1958."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "Si copias un dibujo calcándolo, ¿qué queda de la hoja original?",
+          "actividad": "Dibujar los tres modelos en el tablero y predecir qué bandas daría cada uno en el experimento de Meselson y Stahl.",
+          "errores": [
+            "Confundir semiconservativa con «la mitad del ADN es nuevo en cada hebra».",
+            "Creer que la molécula original se conserva entera."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Tres ideas, una respuesta",
+          "visual": {
+            "tipo": "escena",
+            "id": "modelos-replicacion",
+            "fases": [
+              {
+                "id": "original",
+                "nombre": "La pregunta",
+                "texto": "Al copiarse, ¿cómo se reparten las hebras viejas y las nuevas?"
+              },
+              {
+                "id": "conservativa",
+                "nombre": "Conservativa",
+                "texto": "Idea 1: la molécula original queda entera y la copia es toda nueva."
+              },
+              {
+                "id": "semiconservativa",
+                "nombre": "Semiconservativa",
+                "texto": "Idea 2: cada molécula nueva lleva una hebra vieja y una nueva."
+              },
+              {
+                "id": "dispersiva",
+                "nombre": "Dispersiva",
+                "texto": "Idea 3: cada hebra queda hecha de trozos viejos y nuevos mezclados.",
+                "nivel": "avanzado"
+              },
+              {
+                "id": "resultado",
+                "nombre": "La respuesta",
+                "texto": "Meselson y Stahl (1958) mostraron que es semiconservativa, como sugería la doble hélice."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre esto: el experimento",
+            "tema": "historia-genetica",
+            "bloque": "meselson-stahl"
+          }
+        }
+      ],
+      "juego": "modelos-replicacion-juego",
+      "preguntas": [
+        {
+          "id": "rep-se-1",
+          "enunciado": "¿Qué significa que la replicación sea semiconservativa?",
+          "opciones": [
+            "Cada molécula nueva tiene una hebra vieja y una nueva",
+            "La molécula original se conserva entera",
+            "Solo se copia la mitad del ADN",
+            "Las hebras quedan con trozos mezclados"
+          ],
+          "correcta": 0,
+          "explicacion": "Cada hebra vieja sirve de molde y se queda unida a su hebra nueva."
+        },
+        {
+          "id": "rep-se-2",
+          "enunciado": "¿Quiénes demostraron que la replicación es semiconservativa?",
+          "opciones": [
+            "Meselson y Stahl",
+            "Watson y Crick",
+            "Hershey y Chase",
+            "Avery y McCarty"
+          ],
+          "correcta": 0,
+          "explicacion": "Lo demostraron en 1958 con nitrógeno pesado y liviano."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "enzimas",
+      "titulo": "Las enzimas de la horquilla",
+      "resumen": "Primasa, ADN polimerasa y ligasa: una hebra se copia seguida y la otra a trozos (fragmentos de Okazaki).",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "avanzado",
+      "requiere": [
+        "horquilla"
+      ],
+      "ficha": {
+        "idea": "La ADN polimerasa solo puede alargar una hebra en sentido 5′ → 3′ y necesita un punto de partida: un cebador de ARN que pone la primasa. Como las hebras son antiparalelas, una (la adelantada) se copia seguida hacia la horquilla y la otra (la rezagada) a trozos, los fragmentos de Okazaki. Luego los cebadores se cambian por ADN y la ligasa une los trozos.",
+        "contexto": [
+          {
+            "titulo": "Topoisomerasa",
+            "texto": "Al abrirse la hélice, el ADN de adelante se tuerce de más; la topoisomerasa corta y vuelve a unir para aliviar la tensión."
+          },
+          {
+            "titulo": "Reiji Okazaki",
+            "texto": "El biólogo japonés Reiji Okazaki y su equipo descubrieron los fragmentos a finales de los años 60."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "La ADN polimerasa copia en sentido 5′ → 3′."
+          ],
+          "media": [
+            "La primasa pone cebadores de ARN.",
+            "La hebra adelantada se copia seguida; la rezagada, a trozos."
+          ],
+          "avanzada": [
+            "Los fragmentos de Okazaki se unen con la ligasa.",
+            "La topoisomerasa alivia la torsión del ADN."
+          ]
+        },
+        "docente": {
+          "abrir": "Si solo puedes escribir de izquierda a derecha y la hoja se va desenrollando hacia la derecha, ¿cómo escribes en el otro renglón?",
+          "actividad": "Simular con dos cintas de papel antiparalelas: una se escribe seguida y la otra a trozos.",
+          "errores": [
+            "Creer que las dos hebras se copian igual.",
+            "Confundir cebador (ARN) con ADN."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Una hebra seguida, otra a trozos",
+          "visual": {
+            "tipo": "escena",
+            "id": "enzimas-replicacion",
+            "fases": [
+              {
+                "id": "helicasa",
+                "nombre": "Helicasa",
+                "texto": "La helicasa avanza abriendo el ADN. Las dos hebras molde van en sentidos opuestos."
+              },
+              {
+                "id": "primasa",
+                "nombre": "Primasa",
+                "texto": "La polimerasa no puede empezar de cero: la primasa pone cebadores cortos de ARN."
+              },
+              {
+                "id": "adelantada",
+                "nombre": "Hebra adelantada",
+                "texto": "En una hebra, la polimerasa avanza hacia la horquilla y copia seguido (5′ → 3′)."
+              },
+              {
+                "id": "rezagada",
+                "nombre": "Hebra rezagada",
+                "texto": "En la otra, tiene que copiar alejándose de la horquilla: lo hace a trozos, los fragmentos de Okazaki."
+              },
+              {
+                "id": "ligasa",
+                "nombre": "Ligasa",
+                "texto": "Los cebadores se cambian por ADN y la ligasa une los trozos en una sola hebra."
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "enzimas-replicacion-juego",
+      "preguntas": [
+        {
+          "id": "rep-en-1",
+          "enunciado": "¿Por qué la hebra rezagada se copia a trozos?",
+          "opciones": [
+            "Porque la polimerasa solo avanza 5′→3′ y esa hebra va en sentido contrario a la horquilla",
+            "Porque esa hebra tiene menos bases",
+            "Porque la helicasa la corta en pedazos",
+            "Porque se copia con ARN en vez de ADN"
+          ],
+          "correcta": 0,
+          "explicacion": "Como las hebras son antiparalelas, en una la polimerasa debe alejarse de la horquilla y empezar una y otra vez."
+        },
+        {
+          "id": "rep-en-2",
+          "enunciado": "¿Qué enzima une los fragmentos de Okazaki?",
+          "opciones": [
+            "La ligasa",
+            "La helicasa",
+            "La primasa",
+            "La ARN polimerasa"
+          ],
+          "correcta": 0,
+          "explicacion": "La ligasa sella los cortes entre fragmentos."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "errores",
+      "titulo": "Errores y corrección",
+      "resumen": "La polimerasa revisa su trabajo; los pocos errores que se escapan pueden convertirse en mutaciones.",
+      "anio": 5,
+      "etiqueta": "Paso 5",
+      "nivel": "intermedio",
+      "requiere": [
+        "horquilla"
+      ],
+      "ficha": {
+        "idea": "La copia del ADN es rápida y muy precisa. La ADN polimerasa revisa cada base que pone: si se equivoca, se devuelve, la quita y pone la correcta. Además, la célula tiene sistemas de reparación. Aun así, se escapa más o menos un error por cada mil millones de bases; si no se repara, en la siguiente copia queda como un cambio permanente: una mutación.",
+        "contexto": [
+          {
+            "titulo": "Velocidad",
+            "texto": "En las bacterias, la polimerasa pone cerca de mil bases por segundo; en nuestras células, unas cincuenta, pero en miles de puntos a la vez."
+          },
+          {
+            "titulo": "Variación",
+            "texto": "Esos pocos errores son una de las fuentes de la variación entre los seres vivos, la materia prima de la evolución."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "La ADN polimerasa corrige sus errores.",
+            "Un error que no se corrige puede ser una mutación."
+          ],
+          "media": [
+            "Queda más o menos un error por cada mil millones de bases."
+          ],
+          "avanzada": [
+            "Las mutaciones son una fuente de variación para la evolución."
+          ]
+        },
+        "docente": {
+          "abrir": "Si copias a mano un libro de mil páginas, ¿cuántos errores cometerías?",
+          "actividad": "Copiar una secuencia larga en parejas, revisar y contar errores antes y después de revisar.",
+          "errores": [
+            "Creer que la replicación no tiene errores.",
+            "Pensar que toda mutación es dañina."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Revisar y corregir",
+          "visual": {
+            "tipo": "escena",
+            "id": "errores-replicacion",
+            "fases": [
+              {
+                "id": "copia",
+                "nombre": "Copia rápida",
+                "texto": "La polimerasa avanza poniendo bases a gran velocidad."
+              },
+              {
+                "id": "error",
+                "nombre": "Un error",
+                "texto": "De vez en cuando pone una base que no va, como una T frente a una G. El par queda torcido."
+              },
+              {
+                "id": "revisa",
+                "nombre": "Revisa",
+                "texto": "La polimerasa nota que no encaja, se devuelve y quita la base equivocada."
+              },
+              {
+                "id": "corrige",
+                "nombre": "Corrige",
+                "texto": "Pone la base correcta, C frente a G, y sigue."
+              },
+              {
+                "id": "mutacion",
+                "nombre": "Si se escapa",
+                "texto": "Si un error no se corrige, en la siguiente copia una de las moléculas queda con un par cambiado: una mutación."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre esto: Mutaciones y variación",
+            "tema": "mutaciones"
+          }
+        },
+        {
+          "titulo": "Una copia casi perfecta",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🎯",
+            "valor": "1 en 1000 millones",
+            "texto": "errores que se escapan, más o menos, por cada base copiada"
+          },
+          "puntos": [
+            "Gracias a la revisión y la reparación"
+          ]
+        }
+      ],
+      "juego": "errores-replicacion-juego",
+      "preguntas": [
+        {
+          "id": "rep-er-1",
+          "enunciado": "¿Qué hace la ADN polimerasa cuando pone una base equivocada?",
+          "opciones": [
+            "Se devuelve, la quita y pone la correcta",
+            "Destruye toda la hebra nueva",
+            "Deja el error y nunca lo corrige",
+            "Detiene la división celular para siempre"
+          ],
+          "correcta": 0,
+          "explicacion": "Es la corrección de pruebas de la polimerasa."
+        },
+        {
+          "id": "rep-er-2",
+          "enunciado": "¿Qué puede pasar si un error de copia no se corrige?",
+          "opciones": [
+            "Se vuelve una mutación en la siguiente copia",
+            "Desaparece solo al dividirse la célula",
+            "El ADN se convierte en ARN",
+            "La célula fabrica el doble de ADN"
+          ],
+          "correcta": 0,
+          "explicacion": "El cambio queda copiado en las moléculas hijas."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}
