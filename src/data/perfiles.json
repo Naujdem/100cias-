@@ -81,6 +81,14 @@
         "franklin",
         "watson-crick",
         "genoma-humano"
+      ],
+      "adn-genes-cromosomas": [
+        "informacion-genetica",
+        "nucleotidos",
+        "doble-helice",
+        "adn-arn",
+        "cromosomas",
+        "genes"
       ]
     },
     "nivelDibujo": "basico",
@@ -97,7 +105,8 @@
       "tecnicas-estudio": "Microscopio óptico y aumentos.",
       "reproduccion-seres-vivos": "Asexual y sexual, en unicelulares, plantas y animales.",
       "herencia-mendeliana": "Método de Mendel, dominante y recesivo, alelos y cuadro de Punnett de un carácter.",
-      "historia-genetica": "Seis hitos: Mendel, Miescher, Griffith, Franklin, Watson y Crick y el Proyecto Genoma."
+      "historia-genetica": "Seis hitos: Mendel, Miescher, Griffith, Franklin, Watson y Crick y el Proyecto Genoma.",
+      "adn-genes-cromosomas": "Los seis pasos en lo básico: del cuerpo al ADN, nucleótidos, doble hélice, ADN y ARN, cromosomas y genes."
     }
   },
   {
@@ -208,6 +217,14 @@
         "watson-crick",
         "genoma-humano",
         "crispr"
+      ],
+      "adn-genes-cromosomas": [
+        "informacion-genetica",
+        "nucleotidos",
+        "doble-helice",
+        "adn-arn",
+        "cromosomas",
+        "genes"
       ]
     },
     "nivelDibujo": "intermedio",
@@ -224,7 +241,8 @@
       "tecnicas-estudio": "Microscopio óptico, aumentos y comparación con el electrónico.",
       "reproduccion-seres-vivos": "Asexual y sexual, en unicelulares, plantas y animales.",
       "herencia-mendeliana": "Leyes de uniformidad y segregación, cuadro de Punnett y cruce de prueba.",
-      "historia-genetica": "Diez hitos: suma a Morgan, Avery, Hershey y Chase y CRISPR."
+      "historia-genetica": "Diez hitos: suma a Morgan, Avery, Hershey y Chase y CRISPR.",
+      "adn-genes-cromosomas": "Los seis pasos; suma las histonas y el enrollamiento del ADN."
     }
   },
   {
@@ -352,6 +370,14 @@
         "codigo-genetico",
         "genoma-humano",
         "crispr"
+      ],
+      "adn-genes-cromosomas": [
+        "informacion-genetica",
+        "nucleotidos",
+        "doble-helice",
+        "adn-arn",
+        "cromosomas",
+        "genes"
       ]
     },
     "nivelDibujo": "avanzado",
@@ -368,7 +394,8 @@
       "tecnicas-estudio": "Microscopio óptico, aumentos y comparación con el electrónico.",
       "reproduccion-seres-vivos": "Asexual y sexual, en unicelulares, plantas y animales.",
       "herencia-mendeliana": "Las tres leyes de Mendel, cruces de dos caracteres y probabilidad.",
-      "historia-genetica": "Los catorce hitos: suma el redescubrimiento de Mendel, Chargaff, Meselson y Stahl y el código genético."
+      "historia-genetica": "Los catorce hitos: suma el redescubrimiento de Mendel, Chargaff, Meselson y Stahl y el código genético.",
+      "adn-genes-cromosomas": "Los seis pasos completos: purinas y pirimidinas, cadenas antiparalelas e histonas."
     }
   }
 ]

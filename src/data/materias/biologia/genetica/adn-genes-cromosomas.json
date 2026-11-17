@@ -1,0 +1,882 @@
+{
+  "id": "adn-genes-cromosomas",
+  "materia": "biologia",
+  "area": "genetica",
+  "titulo": "ADN, genes y cromosomas",
+  "subtema": "La molécula de la herencia",
+  "orden": 22,
+  "etiqueta": "2",
+  "vistas": [
+    "ruta"
+  ],
+  "tituloVista": "Ruta del ADN",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Ubicar la información genética: cuerpo, célula, núcleo, cromosoma, ADN.",
+    "Describir el nucleótido y la doble hélice (A con T, G con C).",
+    "Diferenciar ADN y ARN, y gen, alelo, cromosoma y genoma."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con un texto de genética de bachillerato. Base: presentación «La base molecular de la genética» de JuanMed (diapositivas 2–7). A verificar: ≈ 2 m de ADN por célula, ≈ 30 billones de células, tamaños del zoom, 78 cromosomas del perro y 20 del maíz."
+  ],
+  "bloques": [
+    {
+      "id": "informacion-genetica",
+      "titulo": "La información genética",
+      "resumen": "La genética estudia la herencia; las instrucciones de cada ser vivo están escritas en el ADN, dentro del núcleo.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "La genética estudia cómo se transmiten las características de padres a hijos, y explica por qué nos parecemos a nuestros padres sin ser idénticos. Las instrucciones para formar y hacer funcionar un ser vivo, su información genética, están escritas en el ADN, que se guarda en el núcleo de cada célula.",
+        "contexto": [
+          {
+            "titulo": "Genética molecular",
+            "texto": "Es la parte de la genética que estudia el ADN y el ARN: cómo se guarda la información, cómo se copia y cómo se usa."
+          },
+          {
+            "titulo": "Información genética",
+            "texto": "Son instrucciones: el color de los ojos, la forma del cuerpo o cómo funciona cada órgano dependen de ellas."
+          },
+          {
+            "titulo": "El núcleo",
+            "texto": "Es la parte de la célula que controla sus actividades y guarda el ADN."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "La genética estudia cómo se heredan las características.",
+            "La información genética está en el ADN, dentro del núcleo."
+          ],
+          "media": [
+            "Cuerpo → célula → núcleo → cromosoma → ADN → bases."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Por qué te pareces a tu familia, pero no eres idéntico a nadie?",
+          "actividad": "Recorrer el zoom con la clase y pedir que estimen cuántas veces más pequeño es cada nivel.",
+          "errores": [
+            "Creer que el ADN está solo en la sangre o en el cabello.",
+            "Confundir genética con genealogía."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Te pareces a tus padres, pero no eres igual a ninguno. ¿Por qué crees que pasa?",
+            "opciones": [
+              "Recibes instrucciones de los dos, mezcladas de forma única",
+              "Solo heredas de uno de los dos",
+              "Las instrucciones las eliges tú al crecer",
+              "Es pura casualidad, sin herencia"
+            ],
+            "correcta": 0,
+            "explicacion": "Recibes la mitad de tu información genética de cada padre, en una combinación única."
+          }
+        },
+        {
+          "titulo": "¿Qué es la genética?",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "👪",
+                "titulo": "La herencia",
+                "texto": "Cómo pasan las características de padres a hijos."
+              },
+              {
+                "icono": "🧬",
+                "titulo": "Genética molecular",
+                "texto": "Estudia el ADN y el ARN: cómo guardan, copian y usan la información."
+              },
+              {
+                "icono": "📋",
+                "titulo": "Información genética",
+                "texto": "Las instrucciones para formar y hacer funcionar un ser vivo."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "¿Dónde está la información?",
+          "visual": {
+            "tipo": "escena",
+            "id": "zoom-adn",
+            "fases": [
+              {
+                "id": "cuerpo",
+                "nombre": "Tu cuerpo",
+                "texto": "Tu cuerpo está hecho de unos 30 billones de células. Vamos a acercarnos a una."
+              },
+              {
+                "id": "celula",
+                "nombre": "Una célula",
+                "texto": "Cada célula mide unas centésimas de milímetro. En el centro está el núcleo."
+              },
+              {
+                "id": "nucleo",
+                "nombre": "El núcleo",
+                "texto": "El núcleo guarda el ADN. Cuando la célula no se está dividiendo, está suelto como hilos."
+              },
+              {
+                "id": "cromosoma",
+                "nombre": "Un cromosoma",
+                "texto": "Cuando la célula se va a dividir, el ADN se enrolla mucho y forma cromosomas."
+              },
+              {
+                "id": "collar",
+                "nombre": "ADN enrollado",
+                "texto": "El ADN se enrolla en unas proteínas, como un collar de perlas.",
+                "nivel": "intermedio"
+              },
+              {
+                "id": "adn",
+                "nombre": "La doble hélice",
+                "texto": "El ADN es una molécula con forma de escalera de caracol."
+              },
+              {
+                "id": "bases",
+                "nombre": "Las letras",
+                "texto": "Los peldaños son pares de bases: A con T, G con C. Su orden es la información."
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "donde-adn-juego",
+      "preguntas": [
+        {
+          "id": "adn-ig-1",
+          "enunciado": "¿Dónde se guarda la información genética en una célula como las nuestras?",
+          "opciones": [
+            "En el ADN, dentro del núcleo",
+            "En la membrana celular",
+            "En las mitocondrias, solamente",
+            "En la sangre, fuera de las células"
+          ],
+          "correcta": 0,
+          "explicacion": "El ADN está en el núcleo. (Las mitocondrias tienen un poco de ADN propio, pero casi todo está en el núcleo.)"
+        },
+        {
+          "id": "adn-ig-2",
+          "enunciado": "¿Qué estudia la genética?",
+          "opciones": [
+            "Cómo se transmiten las características de una generación a otra",
+            "Cómo se forman las rocas y los minerales",
+            "Cómo se mueven los planetas",
+            "Cómo se clasifican las plantas por su forma"
+          ],
+          "correcta": 0,
+          "explicacion": "La genética estudia la herencia y la variación de los seres vivos."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "nucleotidos",
+      "titulo": "Los nucleótidos",
+      "resumen": "El ADN es una cadena de nucleótidos: fosfato, azúcar y una de cuatro bases (A, T, G, C).",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "requiere": [
+        "informacion-genetica"
+      ],
+      "ficha": {
+        "idea": "El ADN es una cadena muy larga de piezas llamadas nucleótidos. Cada nucleótido tiene un fosfato, un azúcar (la desoxirribosa) y una base nitrogenada. Hay cuatro bases: adenina (A), timina (T), guanina (G) y citosina (C). El orden de las bases es la información.",
+        "contexto": [
+          {
+            "titulo": "Un alfabeto de cuatro letras",
+            "texto": "Con solo cuatro letras, en distinto orden, se escriben las instrucciones de todos los seres vivos."
+          },
+          {
+            "titulo": "¿Por qué «ácido»?",
+            "texto": "El ADN y el ARN se llaman ácidos nucleicos porque, químicamente, el fosfato les da propiedades de ácido, aunque no son como los ácidos de la vida diaria."
+          },
+          {
+            "titulo": "Purinas y pirimidinas",
+            "texto": "A y G (purinas) son bases más grandes, de dos anillos; T y C (pirimidinas) son de un anillo."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "El ADN está hecho de nucleótidos.",
+            "Nucleótido = fosfato + azúcar + base.",
+            "Las bases son A, T, G y C."
+          ],
+          "media": [
+            "El azúcar del ADN es la desoxirribosa."
+          ],
+          "avanzada": [
+            "A y G son purinas; T y C, pirimidinas.",
+            "Las dos cadenas son antiparalelas (5′→3′ y 3′→5′)."
+          ]
+        },
+        "docente": {
+          "abrir": "Si solo tuvieras cuatro letras, ¿podrías escribir un libro?",
+          "actividad": "Armar nucleótidos con papel de colores: un círculo (fosfato), un pentágono (azúcar) y un rectángulo (base).",
+          "errores": [
+            "Creer que cada nucleótido tiene las cuatro bases.",
+            "Confundir nucleótido con base."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "La pieza que se repite",
+          "visual": {
+            "tipo": "escena",
+            "id": "nucleotido",
+            "fases": [
+              {
+                "id": "piezas",
+                "nombre": "Tres piezas",
+                "texto": "Un fosfato, un azúcar llamado desoxirribosa y una base nitrogenada."
+              },
+              {
+                "id": "nucleotido",
+                "nombre": "El nucleótido",
+                "texto": "Unidas, forman un nucleótido: la pieza que se repite millones de veces en el ADN."
+              },
+              {
+                "id": "bases",
+                "nombre": "Cuatro bases",
+                "texto": "Lo único que cambia de un nucleótido a otro es la base: A, G, T o C."
+              },
+              {
+                "id": "purinas",
+                "nombre": "Grandes y pequeñas",
+                "texto": "A y G (purinas) son más grandes; T y C (pirimidinas), más pequeñas.",
+                "nivel": "avanzado"
+              },
+              {
+                "id": "cadena",
+                "nombre": "La cadena",
+                "texto": "Los nucleótidos se unen por el fosfato y el azúcar. Las bases quedan hacia un lado, como dientes de una peinilla."
+              },
+              {
+                "id": "antiparalelas",
+                "nombre": "Dos sentidos",
+                "texto": "La segunda cadena va en sentido contrario: por eso se dice que son antiparalelas (5′→3′ frente a 3′→5′).",
+                "nivel": "avanzado"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Un alfabeto de cuatro letras",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🔤",
+            "valor": "A · T · G · C",
+            "texto": "con ellas se escriben las instrucciones de todos los seres vivos"
+          },
+          "puntos": [
+            "El orden de las bases es el mensaje"
+          ]
+        }
+      ],
+      "juego": "nucleotido-juego",
+      "preguntas": [
+        {
+          "id": "adn-nu-1",
+          "enunciado": "¿Cuáles son las tres partes de un nucleótido de ADN?",
+          "opciones": [
+            "Fosfato, azúcar y base nitrogenada",
+            "Proteína, grasa y azúcar",
+            "Núcleo, membrana y citoplasma",
+            "Adenina, timina y guanina"
+          ],
+          "correcta": 0,
+          "explicacion": "Fosfato y azúcar forman el esqueleto; la base lleva la información."
+        },
+        {
+          "id": "adn-nu-2",
+          "enunciado": "¿Qué cambia de un nucleótido a otro en el ADN?",
+          "opciones": [
+            "La base: A, T, G o C",
+            "El fosfato",
+            "El azúcar",
+            "Nada, todos son iguales"
+          ],
+          "correcta": 0,
+          "explicacion": "Fosfato y azúcar son siempre los mismos; la base es lo que varía."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "doble-helice",
+      "titulo": "La doble hélice",
+      "resumen": "Dos cadenas unidas por pares de bases, A con T y G con C, enrolladas como una escalera de caracol.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "basico",
+      "nucleo": true,
+      "requiere": [
+        "nucleotidos"
+      ],
+      "ficha": {
+        "idea": "El ADN tiene dos cadenas de nucleótidos unidas por sus bases, como una escalera: fosfato y azúcar forman los pasamanos y los pares de bases, los peldaños. A siempre se une con T (2 puentes) y G con C (3 puentes). La escalera está enrollada: es una doble hélice.",
+        "contexto": [
+          {
+            "titulo": "Cadenas complementarias",
+            "texto": "Si conoces una cadena, conoces la otra: frente a cada A va una T y frente a cada G, una C."
+          },
+          {
+            "titulo": "Puentes de hidrógeno",
+            "texto": "Las bases se unen con enlaces débiles, los puentes de hidrógeno. Por eso la doble hélice se puede abrir para copiarse o leerse."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "El ADN es una doble hélice: dos cadenas enrolladas.",
+            "A se une con T y G con C."
+          ],
+          "media": [
+            "A–T tiene 2 puentes de hidrógeno y G–C, 3."
+          ],
+          "avanzada": [
+            "Los puentes de hidrógeno son débiles: la hélice se abre para copiarse."
+          ]
+        },
+        "docente": {
+          "abrir": "Si te doy una cadena ATGC, ¿puedes escribir la otra?",
+          "actividad": "Usar «Arma la doble hélice» por parejas: uno dicta una cadena y el otro escribe la complementaria.",
+          "errores": [
+            "Unir A con G o T con C.",
+            "Creer que las dos cadenas son iguales."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Una escalera de caracol",
+          "visual": {
+            "tipo": "escena",
+            "id": "doble-helice",
+            "fases": [
+              {
+                "id": "bases",
+                "nombre": "Los pares",
+                "texto": "A se une con T y G con C. Los dos pares miden lo mismo, así que los peldaños quedan parejos."
+              },
+              {
+                "id": "escalera",
+                "nombre": "La escalera",
+                "texto": "Fosfato y azúcar forman los pasamanos; los pares de bases, los peldaños."
+              },
+              {
+                "id": "helice",
+                "nombre": "La hélice",
+                "texto": "La escalera se enrolla sobre sí misma: es una doble hélice."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre esto: cómo se descubrió",
+            "tema": "historia-genetica",
+            "bloque": "watson-crick"
+          }
+        },
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Una cadena dice A T G C. ¿Qué dice la otra?",
+            "opciones": [
+              "T A C G",
+              "A T G C",
+              "G C A T",
+              "C G T A"
+            ],
+            "correcta": 0,
+            "explicacion": "Frente a A va T, frente a T va A, frente a G va C y frente a C va G."
+          }
+        },
+        {
+          "titulo": "¿Para qué sirve que sean complementarias?",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "📋",
+                "titulo": "Copiarse",
+                "texto": "Cada cadena sirve de molde para hacer la otra."
+              },
+              {
+                "icono": "🩹",
+                "titulo": "Repararse",
+                "texto": "Si una cadena se daña, la otra guarda el original."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre esto: Replicación del ADN",
+            "tema": "replicacion-adn"
+          }
+        }
+      ],
+      "juego": "pareja-base-juego",
+      "diagrama": "arma-helice",
+      "preguntas": [
+        {
+          "id": "adn-dh-1",
+          "enunciado": "En el ADN, ¿con qué base se une la guanina (G)?",
+          "opciones": [
+            "Con la citosina (C)",
+            "Con la adenina (A)",
+            "Con la timina (T)",
+            "Con otra guanina (G)"
+          ],
+          "correcta": 0,
+          "explicacion": "G se une con C mediante 3 puentes de hidrógeno."
+        },
+        {
+          "id": "adn-dh-2",
+          "enunciado": "Si una cadena es AATGC, ¿cuál es la complementaria?",
+          "opciones": [
+            "TTACG",
+            "AATGC",
+            "GGCAT",
+            "CCGTA"
+          ],
+          "correcta": 0,
+          "explicacion": "A→T, A→T, T→A, G→C, C→G."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "adn-arn",
+      "titulo": "ADN y ARN",
+      "resumen": "El ADN guarda la información; el ARN, de una sola cadena y con uracilo, la copia y la lleva fuera del núcleo.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "basico",
+      "requiere": [
+        "nucleotidos"
+      ],
+      "ficha": {
+        "idea": "El ARN (ácido ribonucleico) también está hecho de nucleótidos, pero tiene una sola cadena, su azúcar es la ribosa y usa uracilo (U) en vez de timina (T). El ADN guarda la información en el núcleo; el ARN copia el mensaje de un gen y lo lleva a los ribosomas, donde se fabrican las proteínas.",
+        "contexto": [
+          {
+            "titulo": "Una copia de trabajo",
+            "texto": "Como no se saca el libro original de la biblioteca, el ADN no sale del núcleo: sale una copia del gen, en ARN."
+          },
+          {
+            "titulo": "Tipos de ARN",
+            "texto": "El ARN mensajero lleva el mensaje; el de transferencia trae los aminoácidos y el ribosómico forma los ribosomas."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "El ARN tiene una cadena; el ADN, dos.",
+            "El ARN usa U en vez de T.",
+            "El ARN copia el mensaje del ADN y lo lleva fuera del núcleo."
+          ],
+          "media": [
+            "El azúcar del ARN es la ribosa."
+          ],
+          "avanzada": [
+            "Hay ARN mensajero, de transferencia y ribosómico."
+          ]
+        },
+        "docente": {
+          "abrir": "Si un libro no puede salir de la biblioteca, ¿cómo te llevas una receta?",
+          "actividad": "Comparar ADN y ARN en una tabla con la escena; luego escribir el ARN de una cadena corta (cambiando T por U).",
+          "errores": [
+            "Creer que el ARN tiene T.",
+            "Pensar que el ADN sale del núcleo."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Dos ácidos nucleicos",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "🧬",
+              "titulo": "ADN",
+              "puntos": [
+                "Dos cadenas",
+                "Azúcar desoxirribosa",
+                "A, T, G, C"
+              ]
+            },
+            "der": {
+              "icono": "📨",
+              "titulo": "ARN",
+              "puntos": [
+                "Una cadena",
+                "Azúcar ribosa",
+                "A, U, G, C"
+              ]
+            }
+          }
+        },
+        {
+          "titulo": "De ADN a ARN",
+          "visual": {
+            "tipo": "escena",
+            "id": "adn-arn",
+            "fases": [
+              {
+                "id": "adn",
+                "nombre": "El ADN",
+                "texto": "Dos cadenas, con desoxirribosa y las bases A, T, G y C."
+              },
+              {
+                "id": "arn",
+                "nombre": "El ARN",
+                "texto": "Se copia una sola cadena. Donde iría T, el ARN pone U (uracilo), y su azúcar es la ribosa."
+              },
+              {
+                "id": "sale",
+                "nombre": "El mensaje sale",
+                "texto": "El ADN se queda en el núcleo. El ARN sale y lleva el mensaje a los ribosomas, donde se fabrican las proteínas.",
+                "nota": "Cómo se copia y se lee el mensaje está en el tema 4."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre esto: Expresión génica",
+            "tema": "expresion-genica"
+          }
+        }
+      ],
+      "juego": "adn-arn-juego",
+      "preguntas": [
+        {
+          "id": "adn-aa-1",
+          "enunciado": "¿Qué base tiene el ARN en lugar de la timina (T)?",
+          "opciones": [
+            "Uracilo (U)",
+            "Adenina (A)",
+            "Guanina (G)",
+            "Citosina (C)"
+          ],
+          "correcta": 0,
+          "explicacion": "El ARN usa uracilo; la timina solo está en el ADN."
+        },
+        {
+          "id": "adn-aa-2",
+          "enunciado": "¿Cuál es la función principal del ARN mensajero?",
+          "opciones": [
+            "Llevar el mensaje de un gen del núcleo a los ribosomas",
+            "Guardar toda la información de la célula",
+            "Formar la membrana del núcleo",
+            "Dar energía a la célula"
+          ],
+          "correcta": 0,
+          "explicacion": "El ADN guarda; el ARN mensajero copia un gen y lo lleva a donde se fabrican las proteínas."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "cromosomas",
+      "titulo": "Del ADN al cromosoma",
+      "resumen": "Unos 2 metros de ADN caben en el núcleo enrollados en histonas; así se forman los cromosomas. Los humanos tenemos 46.",
+      "anio": 5,
+      "etiqueta": "Paso 5",
+      "nivel": "basico",
+      "requiere": [
+        "informacion-genetica"
+      ],
+      "ficha": {
+        "idea": "Estirado, el ADN de una célula humana mide unos 2 metros. Para caber en el núcleo se enrolla en proteínas llamadas histonas, como un collar de perlas, y se pliega una y otra vez. Cuando la célula se va a dividir, se condensa al máximo y se ven los cromosomas. Las células del cuerpo humano tienen 46 cromosomas, en 23 pares.",
+        "contexto": [
+          {
+            "titulo": "Cromatina",
+            "texto": "Mientras la célula no se divide, el ADN con sus proteínas está menos enrollado y se llama cromatina."
+          },
+          {
+            "titulo": "Cromátidas hermanas",
+            "texto": "Antes de dividirse, la célula copia su ADN: cada cromosoma queda con dos copias idénticas unidas por el centrómero. Por eso tiene forma de X."
+          },
+          {
+            "titulo": "Uno de cada padre",
+            "texto": "De cada par de cromosomas, uno viene de la madre y otro del padre."
+          },
+          {
+            "titulo": "Otras especies",
+            "texto": "El número cambia entre especies: el perro tiene 78 y el maíz, 20. No tiene que ver con lo complejo que sea el ser vivo."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "El ADN se enrolla para formar los cromosomas.",
+            "Los humanos tenemos 46 cromosomas (23 pares)."
+          ],
+          "media": [
+            "El ADN se enrolla en histonas.",
+            "Un cromosoma duplicado tiene dos cromátidas unidas por el centrómero."
+          ],
+          "avanzada": [
+            "El par 23 son los cromosomas sexuales: XX o XY.",
+            "El cariotipo es el ordenamiento de los cromosomas de una célula."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Cómo meterías 2 metros de hilo en una cabeza de alfiler?",
+          "actividad": "Enrollar un hilo largo en botones o cuentas para ver el «collar de perlas» y luego plegarlo.",
+          "errores": [
+            "Creer que los cromosomas siempre tienen forma de X.",
+            "Creer que más cromosomas significa un ser más complejo."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "El ADN de una célula estirado mide unos 2 metros. ¿Cómo cabe en un núcleo microscópico?",
+            "opciones": [
+              "Se enrolla y se pliega muchísimo",
+              "Se corta en millones de pedazos sueltos",
+              "Solo una parte del ADN entra en el núcleo",
+              "El núcleo se estira hasta medir 2 metros"
+            ],
+            "correcta": 0,
+            "explicacion": "Se enrolla en histonas y se pliega una y otra vez."
+          }
+        },
+        {
+          "titulo": "Enrollar, plegar, condensar",
+          "visual": {
+            "tipo": "escena",
+            "id": "empaquetamiento",
+            "fases": [
+              {
+                "id": "largo",
+                "nombre": "Muy largo",
+                "texto": "Estirado, el ADN de una sola célula humana mide unos 2 metros."
+              },
+              {
+                "id": "histonas",
+                "nombre": "Las histonas",
+                "texto": "El ADN da vueltas alrededor de unas proteínas llamadas histonas.",
+                "nivel": "intermedio"
+              },
+              {
+                "id": "collar",
+                "nombre": "Un collar de perlas",
+                "texto": "Así enrollado, el ADN parece un collar de perlas."
+              },
+              {
+                "id": "fibra",
+                "nombre": "Más enrollado",
+                "texto": "El collar se pliega y se enrolla sobre sí mismo una y otra vez.",
+                "nivel": "intermedio"
+              },
+              {
+                "id": "cromosoma",
+                "nombre": "El cromosoma",
+                "texto": "Cuando la célula se va a dividir, el ADN ya copiado se condensa al máximo: dos cromátidas unidas por el centrómero."
+              },
+              {
+                "id": "cariotipo",
+                "nombre": "Los 46 cromosomas",
+                "texto": "Las células del cuerpo humano tienen 46 cromosomas en 23 pares; uno de cada par viene de cada padre. El par 23 define el sexo: XX o XY."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Muchos o pocos",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🧮",
+            "valor": "46",
+            "texto": "cromosomas en una célula humana"
+          },
+          "puntos": [
+            "El perro tiene 78 y el maíz, 20",
+            "El número no indica lo complejo que es un ser vivo"
+          ]
+        }
+      ],
+      "juego": "cromosomas-juego",
+      "preguntas": [
+        {
+          "id": "adn-cr-1",
+          "enunciado": "¿Cuántos cromosomas hay en una célula del cuerpo humano?",
+          "opciones": [
+            "46, en 23 pares",
+            "23, sin pares",
+            "78, en 39 pares",
+            "2, uno de cada padre"
+          ],
+          "correcta": 0,
+          "explicacion": "46 cromosomas: 23 vienen de la madre y 23 del padre."
+        },
+        {
+          "id": "adn-cr-2",
+          "enunciado": "¿Cómo se llaman las proteínas en las que se enrolla el ADN?",
+          "opciones": [
+            "Histonas",
+            "Enzimas",
+            "Ribosomas",
+            "Hormonas"
+          ],
+          "correcta": 0,
+          "explicacion": "El ADN da vueltas alrededor de las histonas, como un collar de perlas."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "genes",
+      "titulo": "Gen, alelo y genoma",
+      "resumen": "Un gen es un tramo de ADN con una instrucción; sus versiones son los alelos y todo el ADN es el genoma.",
+      "anio": 6,
+      "etiqueta": "Paso 6",
+      "nivel": "basico",
+      "requiere": [
+        "cromosomas"
+      ],
+      "ficha": {
+        "idea": "Un gen es un tramo de ADN que tiene la instrucción para fabricar una proteína (o un ARN). Cada gen está en un lugar fijo de un cromosoma. Un mismo gen puede tener versiones distintas, los alelos. Todo el ADN de un ser vivo es su genoma: en los humanos, unos 3000 millones de pares de bases y unos 20 000 genes.",
+        "contexto": [
+          {
+            "titulo": "El genoma como un libro",
+            "texto": "Si el genoma fuera un libro, los cromosomas serían los capítulos y los genes, las recetas dentro de ellos."
+          },
+          {
+            "titulo": "No todo son genes",
+            "texto": "Solo una pequeña parte del ADN humano son genes que codifican proteínas. El resto regula los genes o aún se investiga."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Un gen es un tramo de ADN con una instrucción.",
+            "Los alelos son versiones de un mismo gen.",
+            "El genoma es todo el ADN de un ser vivo."
+          ],
+          "media": [
+            "Cada gen tiene un lugar fijo en un cromosoma (locus)."
+          ],
+          "avanzada": [
+            "Solo una pequeña parte del genoma humano codifica proteínas."
+          ]
+        },
+        "docente": {
+          "abrir": "Si el genoma fuera un libro, ¿qué serían los cromosomas y los genes?",
+          "actividad": "Construir con la clase la analogía del libro (genoma → capítulos → recetas) y discutir sus límites.",
+          "errores": [
+            "Creer que «gen» y «alelo» son lo mismo.",
+            "Pensar que todo el ADN son genes."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Del cromosoma al gen",
+          "visual": {
+            "tipo": "escena",
+            "id": "gen",
+            "fases": [
+              {
+                "id": "cromosoma",
+                "nombre": "Un cromosoma",
+                "texto": "Cada cromosoma es una molécula de ADN muy larga, con cientos o miles de genes."
+              },
+              {
+                "id": "gen",
+                "nombre": "Un gen",
+                "texto": "Un gen es un tramo de ADN con la instrucción para fabricar una proteína. Está siempre en el mismo lugar del cromosoma."
+              },
+              {
+                "id": "secuencia",
+                "nombre": "Un orden de letras",
+                "texto": "Lo que hace distinto a cada gen es el orden de sus bases."
+              },
+              {
+                "id": "alelos",
+                "nombre": "Los alelos",
+                "texto": "En los dos cromosomas de un par, el mismo gen puede tener versiones distintas: los alelos.",
+                "nota": "Dominantes, recesivos y el cuadro de Punnett, en el tema 5."
+              },
+              {
+                "id": "genoma",
+                "nombre": "El genoma",
+                "texto": "Todo el ADN de un ser vivo es su genoma: en los humanos, unos 3000 millones de pares de bases y unos 20 000 genes."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre esto: Genes y alelos",
+            "tema": "herencia-mendeliana",
+            "bloque": "genes-alelos"
+          }
+        },
+        {
+          "titulo": "El genoma como un libro",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "📚",
+                "titulo": "Genoma",
+                "texto": "El libro completo."
+              },
+              {
+                "icono": "📖",
+                "titulo": "Cromosoma",
+                "texto": "Un capítulo."
+              },
+              {
+                "icono": "📝",
+                "titulo": "Gen",
+                "texto": "Una receta dentro del capítulo."
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "gen-alelo-juego",
+      "preguntas": [
+        {
+          "id": "adn-ge-1",
+          "enunciado": "¿Qué es un gen?",
+          "opciones": [
+            "Un tramo de ADN con la instrucción para una proteína",
+            "Todo el ADN de un ser vivo",
+            "Una proteína que enrolla el ADN",
+            "Un cromosoma completo"
+          ],
+          "correcta": 0,
+          "explicacion": "El gen es una parte del ADN; todo el ADN es el genoma."
+        },
+        {
+          "id": "adn-ge-2",
+          "enunciado": "¿Qué son los alelos?",
+          "opciones": [
+            "Versiones distintas de un mismo gen",
+            "Dos genes distintos en cromosomas distintos",
+            "Las bases A, T, G y C",
+            "Los cromosomas sexuales"
+          ],
+          "correcta": 0,
+          "explicacion": "Por ejemplo, el gen del color de ojos puede tener un alelo para ojos cafés y otro para azules."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}
