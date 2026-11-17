@@ -17,6 +17,8 @@ import EnfocaMuestra from './EnfocaMuestra.tsx'
 import { ReproUnicelularesJuego, ReproPlantasJuego, ReproAnimalesJuego, PartesMicroscopioJuego, AumentoJuego, OpticoElectronicoJuego, FotoRespJuego, DescubridoresJuego, UniPluriJuego, ProEuJuego, AnimalVegetalJuego, CicloJuego, DiploideJuego, MetabolismoJuego, TejidosVegetalesJuego, SistemasJuego } from './JuegosDecide2.tsx'
 import { AtpJuego, CelulasMadreJuego, CitocinesisJuego, ColoniasJuego, ControlCicloJuego, CromatinaJuego, CuantosCromosomasJuego, DiferenciacionJuego, EndosimbiosisJuego, EspecializadasJuego, EucariotasJuego, HookeLeeuJuego, MeiosisIoIIJuego, OficioJuego, OrigenCelulasJuego, OrigenPluriJuego, ParaQueDividirseJuego, PasteurJuego, SchleidenSchwannJuego, SenalJuego, TeoriaModernaJuego, UnicelularesJuego, UnionesJuego, VariedadJuego, VentajasJuego, VirusJuego } from './JuegosDecide3.tsx'
 import { AveryJuego, GriffithJuego, HersheyChaseJuego, MiescherJuego, Foto51Juego, PiezasDobleHeliceJuego, RedescubrimientoJuego, MorganJuego, ChargaffJuego, MeselsonJuego, CodigoJuego, GenomaJuego, CrisprJuego, MendelVidaJuego } from './JuegosHistoriaGenetica.tsx'
+import ArmaHelice from './ArmaHelice.tsx'
+import { DondeEstaJuego, NucleotidoJuego, ParejaBaseJuego, AdnArnJuego, CromosomasJuego, GenAleloJuego } from './JuegosAdn.tsx'
 import FasesMitosis from './FasesMitosis.tsx'
 import MeiosisJuego from './MeiosisJuego.tsx'
 import ClasificaCasos, { CASOS_OXIGENO, CASOS_MUERTE, CASOS_TEJIDOS, CASOS_REPRODUCCION } from './ClasificaCasos.tsx'
@@ -140,6 +142,13 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'genoma-juego': GenomaJuego,
   'crispr-juego': CrisprJuego,
   'mendel-vida-juego': MendelVidaJuego,
+  'arma-helice': ArmaHelice,
+  'donde-adn-juego': DondeEstaJuego,
+  'nucleotido-juego': NucleotidoJuego,
+  'pareja-base-juego': ParejaBaseJuego,
+  'adn-arn-juego': AdnArnJuego,
+  'cromosomas-juego': CromosomasJuego,
+  'gen-alelo-juego': GenAleloJuego,
   'meiosis-i-ii-juego': MeiosisIoIIJuego,
   'oficio-juego': OficioJuego,
   'origen-celulas-juego': OrigenCelulasJuego,

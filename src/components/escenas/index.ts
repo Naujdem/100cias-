@@ -13,6 +13,7 @@ import { EscenaUnicelulares, EscenaFlor, EscenaAnimales, EscenaEsqueje, EscenaPo
 import { EscenaMicroscopio, EscenaAumento, EscenaOpticoElectronico } from './EscenasMicroscopio.tsx'
 import EscenaMendel from './EscenaMendel.tsx'
 import { EscenaGriffith, EscenaAvery, EscenaHersheyChase, EscenaMiescher, EscenaFoto51, EscenaDobleHelice, EscenaRedescubrimiento, EscenaMorgan, EscenaChargaff, EscenaMeselson, EscenaCodigo, EscenaGenoma, EscenaCrispr } from './EscenasGenetica.tsx'
+import { EscenaZoomAdn, EscenaNucleotido, EscenaAdnArn, EscenaEmpaquetamiento, EscenaGen } from './EscenasAdn.tsx'
 
 /** Escenas vivas: un dibujo que se transforma según la fase (`fase` = id de la fase en el JSON). */
 export const ESCENAS: Record<string, ComponentType<{ fase: string }>> = {
@@ -51,6 +52,11 @@ export const ESCENAS: Record<string, ComponentType<{ fase: string }>> = {
   codigo: EscenaCodigo,
   genoma: EscenaGenoma,
   crispr: EscenaCrispr,
+  'zoom-adn': EscenaZoomAdn,
+  nucleotido: EscenaNucleotido,
+  'adn-arn': EscenaAdnArn,
+  empaquetamiento: EscenaEmpaquetamiento,
+  gen: EscenaGen,
   'optico-electronico': EscenaOpticoElectronico,
   'celula-animal': EscenaZoomCelula,
   'celula-vegetal': ({ fase }) => EscenaZoomCelula({ fase, vegetal: true }),

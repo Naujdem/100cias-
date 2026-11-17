@@ -368,3 +368,8 @@ Hooke usa la reconstrucción de Rita Greer (2004, Free Art License, Wikimedia Co
 - Escenas `foto51` (montaje → rayos → foto → lectura → hélice; fase `polemica` disponible pero no usada, la polémica va en la lámina de 11°) y `doble-helice` (piezas → error de 1951 desde 9° → pares de bases → escalera → hélice → copia, con atajo al tema 2). Juegos `foto51-juego` y `piezas-helice-juego`.
 - Siguen sin escena ni juego: redescubrimiento, Morgan, Chargaff, Meselson y Stahl, código genético, Genoma, CRISPR.
 - (14 nov) Escenas y juegos para los 14 hitos de la historia: además de los anteriores, `redescubrimiento`, `morgan`, `chargaff`, `meselson`, `codigo`, `genoma`, `crispr` (todas en `EscenasGenetica.tsx`) y sus juegos en `JuegosHistoriaGenetica.tsx`; Mendel tiene `mendel-vida-juego` (su experimento sigue en el tema 5). El tema 1 del área 2 queda completo, pendiente de revisión docente y retratos.
+
+## Área 2 · Tema 2 «ADN, genes y cromosomas» (17 nov)
+- `data/materias/biologia/genetica/adn-genes-cromosomas.json` (orden 22, ruta de 6 pasos): información genética (zoom cuerpo → bases), nucleótidos, doble hélice (Explora: `arma-helice`, armar la cadena complementaria con botones o teclas A/T/G/C y enrollarla), ADN y ARN, del ADN al cromosoma (histonas, 46 cromosomas) y gen/alelo/genoma.
+- Escenas en `escenas/EscenasAdn.tsx`: `zoom-adn`, `nucleotido` (purinas y antiparalelas solo 11°), `adn-arn`, `empaquetamiento` (histonas y fibra desde 9°), `gen`. La doble hélice reutiliza la escena `doble-helice` de la historia. Juegos en `diagramas/JuegosAdn.tsx`.
+- Diapositivas 2–7 de la presentación de JuanMed incorporadas en los pasos 1, 2 y 4. Alelos a fondo siguen en el tema 5 (atajo).
