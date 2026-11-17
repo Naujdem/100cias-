@@ -373,3 +373,7 @@ Hooke usa la reconstrucción de Rita Greer (2004, Free Art License, Wikimedia Co
 - `data/materias/biologia/genetica/adn-genes-cromosomas.json` (orden 22, ruta de 6 pasos): información genética (zoom cuerpo → bases), nucleótidos, doble hélice (Explora: `arma-helice`, armar la cadena complementaria con botones o teclas A/T/G/C y enrollarla), ADN y ARN, del ADN al cromosoma (histonas, 46 cromosomas) y gen/alelo/genoma.
 - Escenas en `escenas/EscenasAdn.tsx`: `zoom-adn`, `nucleotido` (purinas y antiparalelas solo 11°), `adn-arn`, `empaquetamiento` (histonas y fibra desde 9°), `gen`. La doble hélice reutiliza la escena `doble-helice` de la historia. Juegos en `diagramas/JuegosAdn.tsx`.
 - Diapositivas 2–7 de la presentación de JuanMed incorporadas en los pasos 1, 2 y 4. Alelos a fondo siguen en el tema 5 (atajo).
+
+## Área 2 · Tema 3 «Replicación del ADN» (17 nov)
+- `replicacion-adn.json` (orden 23, ruta de 5 pasos): para qué se copia (fase S, atajo al ciclo celular), la horquilla (Explora: `arma-helice`), semiconservativa (desde 9°, atajo a Meselson y Stahl), las enzimas (11°: primasa, adelantada/rezagada, Okazaki, ligasa) y errores y corrección (desde 9°, atajo a mutaciones).
+- Escenas en `escenas/EscenasReplicacion.tsx` (`para-que-copiar`, `horquilla`, `modelos-replicacion`, `enzimas-replicacion`, `errores-replicacion`); juegos en `diagramas/JuegosReplicacion.tsx`.

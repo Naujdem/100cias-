@@ -19,6 +19,7 @@ import { AtpJuego, CelulasMadreJuego, CitocinesisJuego, ColoniasJuego, ControlCi
 import { AveryJuego, GriffithJuego, HersheyChaseJuego, MiescherJuego, Foto51Juego, PiezasDobleHeliceJuego, RedescubrimientoJuego, MorganJuego, ChargaffJuego, MeselsonJuego, CodigoJuego, GenomaJuego, CrisprJuego, MendelVidaJuego } from './JuegosHistoriaGenetica.tsx'
 import ArmaHelice from './ArmaHelice.tsx'
 import { DondeEstaJuego, NucleotidoJuego, ParejaBaseJuego, AdnArnJuego, CromosomasJuego, GenAleloJuego } from './JuegosAdn.tsx'
+import { ParaQueCopiarJuego, HorquillaJuego, ModelosJuego, EnzimasJuego, ErroresJuego } from './JuegosReplicacion.tsx'
 import FasesMitosis from './FasesMitosis.tsx'
 import MeiosisJuego from './MeiosisJuego.tsx'
 import ClasificaCasos, { CASOS_OXIGENO, CASOS_MUERTE, CASOS_TEJIDOS, CASOS_REPRODUCCION } from './ClasificaCasos.tsx'
@@ -149,6 +150,11 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'adn-arn-juego': AdnArnJuego,
   'cromosomas-juego': CromosomasJuego,
   'gen-alelo-juego': GenAleloJuego,
+  'para-que-copiar-juego': ParaQueCopiarJuego,
+  'horquilla-juego': HorquillaJuego,
+  'modelos-replicacion-juego': ModelosJuego,
+  'enzimas-replicacion-juego': EnzimasJuego,
+  'errores-replicacion-juego': ErroresJuego,
   'meiosis-i-ii-juego': MeiosisIoIIJuego,
   'oficio-juego': OficioJuego,
   'origen-celulas-juego': OrigenCelulasJuego,

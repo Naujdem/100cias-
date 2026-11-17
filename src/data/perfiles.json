@@ -89,6 +89,10 @@
         "adn-arn",
         "cromosomas",
         "genes"
+      ],
+      "replicacion-adn": [
+        "para-que",
+        "horquilla"
       ]
     },
     "nivelDibujo": "basico",
@@ -106,7 +110,8 @@
       "reproduccion-seres-vivos": "Asexual y sexual, en unicelulares, plantas y animales.",
       "herencia-mendeliana": "Método de Mendel, dominante y recesivo, alelos y cuadro de Punnett de un carácter.",
       "historia-genetica": "Seis hitos: Mendel, Miescher, Griffith, Franklin, Watson y Crick y el Proyecto Genoma.",
-      "adn-genes-cromosomas": "Los seis pasos en lo básico: del cuerpo al ADN, nucleótidos, doble hélice, ADN y ARN, cromosomas y genes."
+      "adn-genes-cromosomas": "Los seis pasos en lo básico: del cuerpo al ADN, nucleótidos, doble hélice, ADN y ARN, cromosomas y genes.",
+      "replicacion-adn": "Para qué se copia el ADN y la horquilla de replicación."
     }
   },
   {
@@ -225,6 +230,12 @@
         "adn-arn",
         "cromosomas",
         "genes"
+      ],
+      "replicacion-adn": [
+        "para-que",
+        "horquilla",
+        "semiconservativa",
+        "errores"
       ]
     },
     "nivelDibujo": "intermedio",
@@ -242,7 +253,8 @@
       "reproduccion-seres-vivos": "Asexual y sexual, en unicelulares, plantas y animales.",
       "herencia-mendeliana": "Leyes de uniformidad y segregación, cuadro de Punnett y cruce de prueba.",
       "historia-genetica": "Diez hitos: suma a Morgan, Avery, Hershey y Chase y CRISPR.",
-      "adn-genes-cromosomas": "Los seis pasos; suma las histonas y el enrollamiento del ADN."
+      "adn-genes-cromosomas": "Los seis pasos; suma las histonas y el enrollamiento del ADN.",
+      "replicacion-adn": "Suma la replicación semiconservativa y los errores de copia."
     }
   },
   {
@@ -378,6 +390,13 @@
         "adn-arn",
         "cromosomas",
         "genes"
+      ],
+      "replicacion-adn": [
+        "para-que",
+        "horquilla",
+        "semiconservativa",
+        "enzimas",
+        "errores"
       ]
     },
     "nivelDibujo": "avanzado",
@@ -395,7 +414,8 @@
       "reproduccion-seres-vivos": "Asexual y sexual, en unicelulares, plantas y animales.",
       "herencia-mendeliana": "Las tres leyes de Mendel, cruces de dos caracteres y probabilidad.",
       "historia-genetica": "Los catorce hitos: suma el redescubrimiento de Mendel, Chargaff, Meselson y Stahl y el código genético.",
-      "adn-genes-cromosomas": "Los seis pasos completos: purinas y pirimidinas, cadenas antiparalelas e histonas."
+      "adn-genes-cromosomas": "Los seis pasos completos: purinas y pirimidinas, cadenas antiparalelas e histonas.",
+      "replicacion-adn": "Los cinco pasos, con las enzimas y los fragmentos de Okazaki."
     }
   }
 ]
