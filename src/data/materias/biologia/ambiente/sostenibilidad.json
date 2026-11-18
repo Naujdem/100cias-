@@ -1,0 +1,408 @@
+{
+  "id": "sostenibilidad",
+  "materia": "biologia",
+  "area": "ambiente",
+  "titulo": "Sostenibilidad y acción ambiental",
+  "subtema": "De entender el problema a hacer algo",
+  "orden": 59,
+  "etiqueta": "9",
+  "vistas": ["ruta"],
+  "tituloVista": "Ruta de la acción",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Explicar el desarrollo sostenible y sus tres dimensiones.",
+    "Reconocer los Objetivos de Desarrollo Sostenible relacionados con el ambiente.",
+    "Conocer el PRAE y cómo participar en él.",
+    "Diseñar un proyecto ambiental de aula a partir de un problema real.",
+    "Conocer los derechos y mecanismos para defender el ambiente."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con la Política Nacional de Educación Ambiental, el Decreto 1743 de 1994 (PRAE), la Constitución (art. 79) y la Agenda 2030 de la ONU. Contenido general: cada docente lo completa con los problemas de su territorio."
+  ],
+  "bloques": [
+    {
+      "id": "desarrollo-sostenible",
+      "titulo": "Desarrollo sostenible",
+      "resumen": "Satisfacer lo que necesitamos hoy sin quitarles a las próximas generaciones lo que van a necesitar. Une lo ambiental, lo social y lo económico.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "En 1987 el informe «Nuestro futuro común» de las Naciones Unidas definió el desarrollo sostenible como el que satisface las necesidades del presente sin comprometer la capacidad de las generaciones futuras de satisfacer las suyas. Tiene tres dimensiones que deben ir juntas: la ambiental (cuidar los ecosistemas y los recursos), la social (que haya equidad, salud, educación y respeto por las culturas) y la económica (que las personas tengan con qué vivir). Una actividad que da mucho dinero pero destruye el río no es sostenible; tampoco lo es una que cuida el bosque pero deja a la gente sin sustento.",
+        "contexto": [
+          {
+            "titulo": "La herencia",
+            "texto": "Es como una finca que se hereda: si se agota el suelo y se secan los nacimientos, los nietos reciben una tierra que ya no produce."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Desarrollo sostenible: vivir bien hoy sin dañar el futuro."
+          ],
+          "media": [
+            "Tres dimensiones: ambiental, social y económica.",
+            "Las tres tienen que ir juntas."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Qué finca, qué río o qué bosque quieren dejarles a sus nietos?",
+          "actividad": "Analizar una actividad económica de la región (café, ganadería, piscicultura, turismo) con las tres dimensiones.",
+          "errores": [
+            "Creer que sostenible es solo «verde» y olvidar lo social y lo económico."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Una mina da mucho empleo pero contamina el río del pueblo. ¿Es sostenible?",
+            "opciones": ["No: falla en lo ambiental y a la larga en lo social", "Sí, porque da empleo", "Sí, si paga impuestos", "No importa mientras dure"],
+            "correcta": 0,
+            "explicacion": "Lo sostenible tiene que funcionar en lo ambiental, lo social y lo económico al mismo tiempo."
+          }
+        },
+        {
+          "titulo": "Tres patas",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "🌳", "titulo": "Ambiental", "texto": "Ecosistemas y recursos cuidados." },
+              { "icono": "🤝", "titulo": "Social", "texto": "Equidad, salud, educación, culturas." },
+              { "icono": "💰", "titulo": "Económica", "texto": "Con qué vivir dignamente." }
+            ]
+          }
+        }
+      ],
+      "juego": "desarrollo-sostenible-juego",
+      "preguntas": [
+        {
+          "id": "am-so-1",
+          "enunciado": "¿Qué es el desarrollo sostenible?",
+          "opciones": [
+            "Satisfacer las necesidades de hoy sin dañar las del futuro",
+            "Crecer económicamente a cualquier costo",
+            "No usar ningún recurso natural",
+            "Sembrar árboles en las ciudades"
+          ],
+          "correcta": 0,
+          "explicacion": "Definición del informe «Nuestro futuro común» (1987)."
+        },
+        {
+          "id": "am-so-2",
+          "enunciado": "¿Cuáles son las tres dimensiones de la sostenibilidad?",
+          "opciones": [
+            "Ambiental, social y económica",
+            "Agua, aire y suelo",
+            "Reducir, reutilizar y reciclar",
+            "Pasado, presente y futuro"
+          ],
+          "correcta": 0,
+          "explicacion": "Tienen que ir juntas."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "ods",
+      "titulo": "Los Objetivos de Desarrollo Sostenible",
+      "resumen": "En 2015 los países del mundo acordaron 17 objetivos para cumplir hacia 2030: acabar con la pobreza, cuidar el planeta y vivir en paz.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "requiere": ["desarrollo-sostenible"],
+      "ficha": {
+        "idea": "Los Objetivos de Desarrollo Sostenible (ODS) son 17 metas que los países de las Naciones Unidas, incluida Colombia, acordaron en 2015 para cumplir hacia 2030, en la llamada Agenda 2030. Van desde el fin de la pobreza y el hambre hasta la educación de calidad y la paz. Varios tratan directamente del ambiente: agua limpia y saneamiento (6), energía asequible y no contaminante (7), producción y consumo responsables (12), acción por el clima (13), vida submarina (14) y vida de ecosistemas terrestres (15). Todos están conectados: no se acaba el hambre si se agotan los suelos, ni se cuida el bosque si la gente no tiene con qué vivir.",
+        "contexto": [
+          {
+            "titulo": "Colombia y los ODS",
+            "texto": "Colombia fue uno de los países que propuso la idea de los ODS en las Naciones Unidas."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Los ODS son 17 objetivos que el mundo acordó para 2030."
+          ],
+          "media": [
+            "Ambientales: agua (6), energía (7), consumo (12), clima (13), océanos (14) y vida terrestre (15).",
+            "Todos están conectados."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "Si pudieras cumplir una sola meta para el mundo en 2030, ¿cuál sería?",
+          "actividad": "Repartir los 17 ODS en el grupo y que cada estudiante encuentre un ejemplo en la vereda o el municipio.",
+          "errores": [
+            "Pensar que los ODS son solo asunto de los gobiernos."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Los ODS del ambiente",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "💧", "titulo": "6 · Agua limpia", "texto": "Agua y saneamiento para todos." },
+              { "icono": "⚡", "titulo": "7 · Energía limpia", "texto": "Asequible y no contaminante." },
+              { "icono": "♻️", "titulo": "12 · Consumo responsable", "texto": "Producir y consumir con cuidado." },
+              { "icono": "🌡️", "titulo": "13 · Acción por el clima", "texto": "Mitigar y adaptarse." },
+              { "icono": "🐠", "titulo": "14 · Vida submarina", "texto": "Mares y costas sanos." },
+              { "icono": "🌳", "titulo": "15 · Vida terrestre", "texto": "Bosques, suelos y biodiversidad." }
+            ]
+          }
+        }
+      ],
+      "juego": "ods-juego",
+      "preguntas": [
+        {
+          "id": "am-so-3",
+          "enunciado": "¿Para qué año se propusieron cumplir los ODS?",
+          "opciones": ["2030", "2000", "2050", "2100"],
+          "correcta": 0,
+          "explicacion": "Es la Agenda 2030."
+        },
+        {
+          "id": "am-so-4",
+          "enunciado": "Proteger un páramo ayuda sobre todo al ODS…",
+          "opciones": ["15 · Vida de ecosistemas terrestres", "14 · Vida submarina", "7 · Energía", "4 · Educación"],
+          "correcta": 0,
+          "explicacion": "Y también al 6, porque del páramo sale el agua."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "prae",
+      "titulo": "El PRAE",
+      "resumen": "El Proyecto Ambiental Escolar: cada colegio de Colombia debe tener uno que trabaje un problema ambiental de su territorio.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "basico",
+      "requiere": ["ods"],
+      "ficha": {
+        "idea": "En Colombia, todos los colegios deben tener un Proyecto Ambiental Escolar (PRAE), que hace parte del Proyecto Educativo Institucional (PEI) desde el Decreto 1743 de 1994. El PRAE no es una materia ni una campaña de un día: parte de un problema ambiental real del colegio o del territorio (el agua, los residuos, el bosque, el suelo) y lo trabaja desde todas las áreas, con estudiantes, docentes, familias y otras instituciones. Lo acompaña un comité ambiental escolar, y en muchos colegios hay vigías o guardianes ambientales. En el municipio, los proyectos ciudadanos de educación ambiental (PROCEDA) y el comité interinstitucional (CIDEA) conectan el trabajo del colegio con la comunidad.",
+        "contexto": [
+          {
+            "titulo": "Desde el territorio",
+            "texto": "Un buen PRAE nace de preguntarle al territorio: qué le duele a la quebrada, qué saben los mayores, qué se puede hacer entre todos."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "PRAE: Proyecto Ambiental Escolar.",
+            "Trabaja un problema ambiental real del colegio o la vereda."
+          ],
+          "media": [
+            "Es obligatorio y hace parte del PEI.",
+            "Lo trabajan todas las áreas, con la comunidad."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Conocen el PRAE de nuestro colegio? ¿Qué problema trabaja?",
+          "actividad": "Invitar al comité ambiental o al docente líder del PRAE a contar qué se ha hecho y cómo pueden participar.",
+          "errores": [
+            "Reducir el PRAE a jornadas de aseo o a sembrar un árbol al año."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Cómo es un buen PRAE",
+          "visual": {
+            "tipo": "compara",
+            "izq": { "icono": "📅", "titulo": "No es", "puntos": ["Una jornada de aseo al año", "Solo de Ciencias Naturales", "Un cartel en la pared"] },
+            "der": { "icono": "🌱", "titulo": "Sí es", "puntos": ["Un problema real del territorio", "Trabajo de todas las áreas", "Con familias y comunidad"] }
+          }
+        }
+      ],
+      "juego": "prae-juego",
+      "preguntas": [
+        {
+          "id": "am-so-5",
+          "enunciado": "¿Qué es el PRAE?",
+          "opciones": [
+            "El Proyecto Ambiental Escolar de cada colegio",
+            "Un premio de reciclaje",
+            "Una materia nueva",
+            "Un parque natural"
+          ],
+          "correcta": 0,
+          "explicacion": "Hace parte del PEI."
+        },
+        {
+          "id": "am-so-6",
+          "enunciado": "Un buen PRAE parte de…",
+          "opciones": [
+            "Un problema ambiental real del territorio",
+            "Lo que diga un libro de otro país",
+            "Una sola jornada al año",
+            "Lo que decida solo el rector"
+          ],
+          "correcta": 0,
+          "explicacion": "Y lo trabaja con toda la comunidad."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "proyecto-aula",
+      "titulo": "Un proyecto ambiental de aula",
+      "resumen": "Diagnosticar, elegir un problema, buscar sus causas, actuar y evaluar: un proyecto pequeño puede cambiar algo de verdad.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "basico",
+      "requiere": ["prae"],
+      "ficha": {
+        "idea": "Un proyecto ambiental de aula sigue unos pasos. Primero, un diagnóstico: recorrer el colegio y la vereda, preguntar a las familias y a los mayores, hacer un mapa de problemas. Luego elegir uno, el que más importe y en el que se pueda hacer algo. Para entenderlo se hace un árbol de problemas: en el tronco el problema, en las raíces sus causas y en las ramas sus efectos. Las soluciones atacan las raíces. Después se planean acciones concretas (qué, quién, cuándo, con qué), se actúa, se mide si funcionó y se comparte con la comunidad. Lo importante no es hacer algo enorme, sino algo real y bien hecho.",
+        "contexto": [
+          {
+            "titulo": "Pequeño y real",
+            "texto": "Cercar un nacimiento, montar una compostera o separar los residuos del restaurante escolar son proyectos pequeños con efectos que se pueden medir."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Pasos: diagnosticar, elegir, investigar, actuar y evaluar."
+          ],
+          "media": [
+            "Árbol de problemas: raíces = causas, tronco = problema, ramas = efectos.",
+            "Las soluciones atacan las causas."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Qué problema ambiental del colegio o la vereda les gustaría resolver este año?",
+          "actividad": "Armar en el Explora el árbol de un problema y luego hacer el árbol propio en papelógrafo con un problema real.",
+          "errores": [
+            "Atacar los efectos (recoger la basura) sin cambiar las causas (no hay canecas ni separación)."
+          ],
+          "minutos": 40
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Los pasos del proyecto",
+          "visual": {
+            "tipo": "escena",
+            "id": "proyecto-aula",
+            "fases": [
+              { "id": "diagnostico", "nombre": "Diagnosticar", "texto": "Recorrer, preguntar y hacer un mapa de problemas." },
+              { "id": "elegir", "nombre": "Elegir", "texto": "Escoger el problema que más importa y en el que se puede actuar." },
+              { "id": "causas", "nombre": "Investigar", "texto": "Árbol de problemas: causas, problema y efectos." },
+              { "id": "actuar", "nombre": "Actuar", "texto": "Acciones concretas: qué, quién, cuándo y con qué." },
+              { "id": "evaluar", "nombre": "Evaluar y compartir", "texto": "Medir si funcionó y contarlo a la comunidad." }
+            ]
+          }
+        }
+      ],
+      "juego": "proyecto-aula-juego",
+      "diagrama": "arbol-problemas",
+      "preguntas": [
+        {
+          "id": "am-so-7",
+          "enunciado": "En un árbol de problemas, ¿qué representan las raíces?",
+          "opciones": ["Las causas", "Los efectos", "Las soluciones", "Los responsables"],
+          "correcta": 0,
+          "explicacion": "Las ramas son los efectos."
+        },
+        {
+          "id": "am-so-8",
+          "enunciado": "¿Por qué las soluciones deben atacar las causas?",
+          "opciones": [
+            "Porque si no, el problema vuelve a aparecer",
+            "Porque es más barato",
+            "Porque los efectos no importan",
+            "Porque así lo dice la ley"
+          ],
+          "correcta": 0,
+          "explicacion": "Recoger basura sin cambiar hábitos no resuelve nada."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "participacion",
+      "titulo": "Participar y defender el ambiente",
+      "resumen": "La Constitución nos da derecho a un ambiente sano y herramientas para defenderlo. En Colombia, hasta ríos y la Amazonía tienen derechos.",
+      "anio": 5,
+      "etiqueta": "Paso 5",
+      "nivel": "intermedio",
+      "requiere": ["prae"],
+      "ficha": {
+        "idea": "La Constitución de 1991 dice que todas las personas tienen derecho a gozar de un ambiente sano y que la comunidad debe participar en las decisiones que puedan afectarlo (artículo 79). Para defenderlo hay herramientas: el derecho de petición, para pedir información o actuaciones a las autoridades; la acción de tutela, cuando se vulnera un derecho fundamental; la acción popular, para proteger derechos colectivos como el ambiente; las veedurías ciudadanas, y la consulta previa de los pueblos indígenas y afrodescendientes. La Corte Constitucional reconoció en 2016 al río Atrato como sujeto de derechos, y la Corte Suprema hizo lo mismo con la Amazonía colombiana en 2018, a partir de una tutela de niños y jóvenes. Participar también es hablar con los mayores, sumar a la junta de acción comunal y proponer.",
+        "contexto": [
+          {
+            "titulo": "Jóvenes por la Amazonía",
+            "texto": "En 2018, 25 niños y jóvenes pusieron una tutela por su derecho a un ambiente sano y la Corte Suprema ordenó al gobierno frenar la deforestación de la Amazonía."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Todos tenemos derecho a un ambiente sano."
+          ],
+          "media": [
+            "Herramientas: derecho de petición, tutela, acción popular, veedurías.",
+            "El río Atrato y la Amazonía son sujetos de derechos."
+          ],
+          "avanzada": [
+            "La consulta previa protege a los pueblos étnicos en decisiones sobre su territorio."
+          ]
+        },
+        "docente": {
+          "abrir": "Si una empresa contaminara la quebrada de la vereda, ¿qué podrían hacer ustedes?",
+          "actividad": "Redactar en grupo un derecho de petición real o simulado a la alcaldía o a la CAM sobre un problema ambiental del municipio.",
+          "errores": [
+            "Creer que los estudiantes no pueden hacer nada porque son menores de edad."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Herramientas para defender el ambiente",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "✉️", "titulo": "Derecho de petición", "texto": "Pedir información o acciones a las autoridades." },
+              { "icono": "⚖️", "titulo": "Tutela", "texto": "Cuando se vulnera un derecho fundamental." },
+              { "icono": "👥", "titulo": "Acción popular", "texto": "Para proteger derechos colectivos." },
+              { "icono": "👀", "titulo": "Veeduría", "texto": "Vigilar obras y recursos públicos." }
+            ]
+          },
+          "atajo": { "texto": "Más sobre esto: diálogo de saberes", "tema": "territorio-saberes", "bloque": "dialogo" }
+        },
+        {
+          "titulo": "Un río con derechos",
+          "visual": { "tipo": "cifra", "icono": "🏞️", "valor": "2016", "texto": "la Corte Constitucional reconoció al río Atrato como sujeto de derechos." }
+        }
+      ],
+      "juego": "participacion-juego",
+      "preguntas": [
+        {
+          "id": "am-so-9",
+          "enunciado": "¿Qué artículo de la Constitución habla del derecho a un ambiente sano?",
+          "opciones": ["El 79", "El 1", "El 100", "El 200"],
+          "correcta": 0,
+          "explicacion": "Incluye la participación de la comunidad."
+        },
+        {
+          "id": "am-so-10",
+          "enunciado": "¿Qué herramienta sirve para pedir información a la alcaldía sobre un problema ambiental?",
+          "opciones": ["El derecho de petición", "La consulta previa", "El voto", "La matrícula"],
+          "correcta": 0,
+          "explicacion": "La autoridad debe responder en un plazo fijado por la ley."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}
