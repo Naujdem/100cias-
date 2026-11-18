@@ -25,7 +25,7 @@ import { EscenaIntraespecificas, EscenaDepredacion, EscenaSimbiosis } from './Es
 import { EscenaDensidad, EscenaCrecimiento, EscenaDepredadorPresa } from './EscenasPoblaciones.tsx'
 import { EscenaSucesionPrimaria, EscenaSucesionSecundaria, EscenaPerturbaciones } from './EscenasSucesion.tsx'
 import { EscenaBiodiversidadNiveles, EscenaMegadiversa, EscenaAmenazas, EscenaConservar } from './EscenasBiodiversidad.tsx'
-import { EscenaLinneo, EscenaLamarck, EscenaCuvier, EscenaLyell, EscenaBeagle, EscenaSeleccion, EscenaSintesis, EscenaRitmos } from './EscenasEvolucion.tsx'
+import { EscenaLinneo, EscenaLamarck, EscenaCuvier, EscenaLyell, EscenaBeagle, EscenaSeleccion, EscenaSintesis, EscenaRitmos, EscenaFosil, EscenaAnatomia, EscenaEmbriones, EscenaIslas, EscenaMolecular } from './EscenasEvolucion.tsx'
 import { EscenaTerritorio, EscenaCalendario, EscenaPolicultivo, EscenaDialogo } from './EscenasTerritorio.tsx'
 
 /** Escenas vivas: un dibujo que se transforma según la fase (`fase` = id de la fase en el JSON). */
@@ -137,4 +137,9 @@ export const ESCENAS: Record<string, ComponentType<{ fase: string }>> = {
   'ev-seleccion': EscenaSeleccion,
   'ev-sintesis': EscenaSintesis,
   'ev-ritmos': EscenaRitmos,
+  'ev-fosil': EscenaFosil,
+  'ev-anatomia': EscenaAnatomia,
+  'ev-embriones': EscenaEmbriones,
+  'ev-islas': EscenaIslas,
+  'ev-molecular': EscenaMolecular,
 }
