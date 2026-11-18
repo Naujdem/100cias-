@@ -18,6 +18,7 @@ import type { Resultado } from './lib/buscar.ts'
 import { ContextoAtajos } from './lib/atajos.ts'
 
 const Editor = lazy(() => import('./components/Editor.tsx'))
+const VistaLaboratorios = lazy(() => import('./components/lab/VistaLaboratorios.tsx'))
 
 /** Petición de abrir una ficha al llegar a su tema (búsqueda, atajo, «Seguir», «Para tocar y jugar»). */
 interface Salto {
@@ -107,6 +108,11 @@ export default function App() {
         {ruta.v === 'unidad' && <VistaUnidad key={version} materia={ruta.materia} unidad={ruta.unidad} />}
         {ruta.v === 'jugar' && <VistaJugar key={version} onAbrir={abrir} />}
         {ruta.v === 'quices' && <VistaQuices key={`${version}-${ruta.tema}`} temaId={ruta.tema} onIr={abrir} />}
+        {ruta.v === 'lab' && (
+          <Suspense fallback={<p>Cargando el laboratorio…</p>}>
+            <VistaLaboratorios key={`${version}-${perfilId}`} practica={ruta.practica} perfilId={perfilId} />
+          </Suspense>
+        )}
         {ruta.v === 'tema' &&
           (tema ? (
             <TemaView key={`${tema.id}-${version}`} TEMA={tema} salto={salto && salto.tema === tema.id ? salto : null} />
@@ -163,6 +169,9 @@ function Menu({ onEditor }: { onEditor: () => void }) {
           </a>
           <a href={enlace.quices()} onClick={() => setAbierto(false)} className={item}>
             Quices
+          </a>
+          <a href={enlace.lab()} onClick={() => setAbierto(false)} className={item}>
+            Laboratorios
           </a>
           <button
             type="button"
