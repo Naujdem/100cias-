@@ -10,6 +10,7 @@ import Material from './practicas/Material.tsx'
 import Microscopio from './practicas/Microscopio.tsx'
 import Montaje from './practicas/Montaje.tsx'
 import Tinciones from './practicas/Tinciones.tsx'
+import Osmosis from './practicas/Osmosis.tsx'
 
 // Laboratorios virtuales (PLAN-LABORATORIOS.md). Las prácticas listas van en PRACTICAS; las demás de la
 // ruta salen como «próximamente».
@@ -32,6 +33,7 @@ const PRACTICAS: Entrada[] = [
   { id: 'microscopio', titulo: 'El microscopio', resumen: 'Sus partes, cómo enfocar sin romper la lámina y el reto de ver células a 400x.', grupo: 'Biología', desdeGrado: 6, Juego: Microscopio },
   { id: 'montaje', titulo: 'Montaje húmedo', resumen: 'Prepara una lámina de cebolla: limpia, extendida y sin burbujas. Al observarla se ven tus errores.', grupo: 'Biología', desdeGrado: 6, Juego: Montaje },
   { id: 'tinciones', titulo: 'Tinciones', resumen: 'Lugol y azul de metileno en cebolla, mejilla y papa; en 11°, la tinción de Gram.', grupo: 'Biología', desdeGrado: 6, Juego: Tinciones },
+  { id: 'osmosis', titulo: 'Ósmosis', resumen: 'Plasmólisis en elodea y tiras de papa en agua con sal: tabla, gráfica y punto isotónico.', grupo: 'Biología', desdeGrado: 6, Juego: Osmosis },
   { id: solucionMolar.id, titulo: solucionMolar.titulo, resumen: solucionMolar.resumen, grupo: 'Química', desdeGrado: solucionMolar.desdeGrado, mesa: solucionMolar },
 ]
 
@@ -42,7 +44,7 @@ const PROXIMAS: { lab: string; items: string[] }[] = [
   },
   {
     lab: 'Biología',
-    items: ['Ósmosis', 'Biomoléculas', 'Enzimas', 'Fotosíntesis', 'Fermentación', 'Extracción de ADN', 'Microbiología', 'Calidad del agua y del suelo'],
+    items: ['Biomoléculas', 'Enzimas', 'Fotosíntesis', 'Fermentación', 'Extracción de ADN', 'Microbiología', 'Calidad del agua y del suelo'],
   },
 ]
 
