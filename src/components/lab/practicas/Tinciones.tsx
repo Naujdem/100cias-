@@ -1,4 +1,7 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
+import MesaViva from '../MesaViva.tsx'
+import type { Pieza, Uso } from '../MesaViva.tsx'
+import { Caneca, Cebolla, Gotero, MicroscopioMini, Palillo, Papa, Piseta, Portaobjetos, Reloj } from '../dibujos.tsx'
 import type { ReactNode } from 'react'
 
 // Laboratorio de Biología 3 (PLAN-LABORATORIOS.md): tinciones.
@@ -127,54 +130,72 @@ function revisarSimple(s: S): { ok: boolean; lineas: string[] } {
   return { ok, lineas: l }
 }
 
+const MUESTRA_COLOR: Record<Muestra, string> = { cebolla: '#f1e6cf', mucosa: '#f2d5d0', papa: '#f4e2a8' }
+const GOTERO_COLOR: Record<Col, string> = { ninguno: '#ccc', lugol: '#a0601a', azul: '#2a55c4' }
+
+interface SM { muestra: Muestra | null; col: Col; t: number; lavado: boolean; ver: boolean }
+const VACIA: SM = { muestra: null, col: 'ninguno', t: 0, lavado: false, ver: false }
+
 function Simples({ grado }: { grado: number }) {
-  const [s, setS] = useState<S>({ muestra: 'cebolla', col: 'ninguno', t: 0, lavado: false })
-  const [ver, setVer] = useState(false)
-  const r = revisarSimple(s)
-  const btn = 'min-h-10 rounded-full border px-3 text-sm font-semibold'
-  const on = (b: boolean) => (b ? 'border-[var(--acento)] bg-[var(--acento)] text-white' : 'border-[var(--linea)] bg-[var(--tarjeta)]')
-  const cambiar = (p: Partial<S>) => { setS((x) => ({ ...x, ...p })); setVer(false) }
+  const [s, setS] = useState<SM>(VACIA)
+  const cambiar = (p: Partial<SM>) => setS((x) => ({ ...x, ver: false, ...p }))
+  const sv: S = { muestra: s.muestra ?? 'cebolla', col: s.col, t: s.t, lavado: s.lavado }
+  const r = revisarSimple(sv)
+  const tinte = s.col !== 'ninguno' ? tono(s.col, Math.min(0.85, 0.2 + intensidad(sv) * 0.4)) : undefined
+  const piezas: Pieza[] = [
+    { id: 'cebolla', nombre: 'Cebolla', x: 70, y: 330, ancho: 70, alto: 50, tomable: true, dibujo: <Cebolla /> },
+    { id: 'mucosa', nombre: 'Palillo (mejilla)', x: 150, y: 320, ancho: 50, alto: 80, tomable: true, dibujo: <Palillo /> },
+    { id: 'papa', nombre: 'Papa', x: 230, y: 335, ancho: 70, alto: 40, tomable: true, dibujo: <Papa /> },
+    { id: 'lugol', nombre: 'Lugol', x: 335, y: 312, ancho: 50, alto: 96, tomable: true, color: GOTERO_COLOR.lugol, dibujo: <Gotero color={GOTERO_COLOR.lugol} etiqueta="LUGOL" oscuro /> },
+    { id: 'azul', nombre: 'Azul de metileno', x: 415, y: 312, ancho: 50, alto: 96, tomable: true, color: GOTERO_COLOR.azul, dibujo: <Gotero color={GOTERO_COLOR.azul} etiqueta="AZUL" /> },
+    { id: 'lamina', nombre: 'Lámina', x: 550, y: 345, ancho: 130, alto: 30, tomable: true, dibujo: <Portaobjetos muestra={s.muestra ? MUESTRA_COLOR[s.muestra] : undefined} tinte={tinte} charco={s.col !== 'ninguno' && !s.lavado ? tono(s.col, 0.8) : undefined} /> },
+    { id: 'piseta', nombre: 'Piseta con agua', x: 680, y: 305, ancho: 60, alto: 106, tomable: true, color: '#a9d3f5', dibujo: <Piseta /> },
+    { id: 'reloj', nombre: 'Reloj (toca: +15 s)', x: 780, y: 300, ancho: 72, alto: 72, alTocar: () => { if (s.col !== 'ninguno' && !s.lavado) cambiar({ t: s.t + 15 }) }, dibujo: <Reloj s={s.t} /> },
+    { id: 'micro', nombre: 'Microscopio', x: 880, y: 290, ancho: 90, alto: 140, dibujo: <MicroscopioMini lamina={s.ver} /> },
+    { id: 'caneca', nombre: 'Residuos', x: 960, y: 325, ancho: 54, alto: 76, dibujo: <Caneca /> },
+  ]
+  const destinos = (de: string) => (de === 'lamina' ? ['micro', 'caneca'] : ['lamina'])
+  const soltar = (de: string, en: string): Uso | string => {
+    if (de === 'lamina') {
+      if (en === 'micro') return s.muestra ? { anim: 'poner', hecho: () => setS((x) => ({ ...x, ver: true })) } : 'La lámina está vacía: primero ponle una muestra.'
+      if (en === 'caneca') return { anim: 'poner', hecho: () => setS(VACIA) }
+      return 'Lleva la lámina al microscopio para observarla, o a la caneca para empezar otra.'
+    }
+    if (en !== 'lamina') return 'Eso va sobre la lámina.'
+    if (de === 'cebolla' || de === 'mucosa' || de === 'papa') {
+      if (s.muestra) return 'La lámina ya tiene muestra. Bótala en la caneca para empezar otra.'
+      return { anim: de === 'mucosa' ? 'frotar' : 'poner', hecho: () => cambiar({ muestra: de }) }
+    }
+    if (!s.muestra) return 'Primero pon una muestra en la lámina.'
+    if (de === 'lugol' || de === 'azul') {
+      if (s.col !== 'ninguno' && s.col !== de) return `Ya tiene ${COLORANTES[s.col].toLowerCase()}. Para probar otro colorante, empieza una lámina nueva.`
+      if (s.col === de) return 'Ya tiene ese colorante. Toca el reloj para dejarlo actuar.'
+      return { anim: 'gotas', gotas: 2, hecho: () => cambiar({ col: de, t: 0, lavado: false }) }
+    }
+    if (de === 'piseta') {
+      if (s.col === 'ninguno') return 'No hay colorante que lavar.'
+      if (s.lavado) return 'Ya está lavada.'
+      return { anim: 'verter', hecho: () => cambiar({ lavado: true }) }
+    }
+    return 'No se puede.'
+  }
   return (
-    <div className="grid items-start gap-4 md:grid-cols-[1fr_300px]">
-      <div className="flex flex-col gap-3 rounded-2xl border border-[var(--linea)] bg-[var(--tarjeta)] p-4">
-        <div>
-          <p className="text-sm font-semibold">1. Muestra (ya montada con agua y cubreobjetos)</p>
-          <div className="mt-1 flex flex-wrap gap-2">
-            {(Object.keys(MUESTRAS) as Muestra[]).map((m) => <button key={m} type="button" onClick={() => cambiar({ muestra: m, col: 'ninguno', t: 0, lavado: false })} className={`${btn} ${on(s.muestra === m)}`}>{MUESTRAS[m]}</button>)}
-          </div>
-          {s.muestra === 'mucosa' && <p className="mt-1 text-xs text-[var(--suave)]">Se raspa suavemente el interior de la mejilla con un palillo limpio, que luego se bota.</p>}
+    <div className="flex flex-col gap-3">
+      <p className="rounded-2xl bg-[var(--tarjeta)] p-4 text-sm">
+        Pon una muestra en la lámina, échale el colorante, toca el reloj para dejarlo actuar, lava el exceso con la piseta y lleva la lámina al microscopio. {s.muestra === 'mucosa' ? 'La mejilla se raspa suavemente con un palillo limpio, que luego se bota.' : ''}
+      </p>
+      <div className="grid items-start gap-4 lg:grid-cols-[1fr_300px]">
+        <MesaViva desde={190} piezas={piezas} destinos={destinos} soltar={soltar} />
+        <div className="flex flex-col items-center gap-2">
+          <VistaSimple s={s.ver ? sv : { ...sv, col: 'ninguno', t: 0 }} />
+          <p className="text-sm font-semibold">{s.ver && s.muestra ? `${MUESTRAS[s.muestra]} · ${COLORANTES[s.col]} · 400x` : 'Lleva la lámina al microscopio'}</p>
+          {s.ver && (
+            <div className={`w-full rounded-xl border-2 p-3 text-sm ${r.ok ? 'border-[#2e7d5a] bg-[#eaf5ee]' : 'border-[#b5462c] bg-[#fbeee9]'}`}>
+              <ul className="list-disc pl-5">{r.lineas.map((x) => <li key={x}>{x}</li>)}</ul>
+            </div>
+          )}
+          {grado < 11 && <p className="text-xs text-[var(--suave)]">Pista: el lugol actúa en unos 30 s y el azul de metileno en cerca de 1 minuto.</p>}
         </div>
-        <div>
-          <p className="text-sm font-semibold">2. Colorante: una gota por un borde del cubreobjetos y papel absorbente por el otro</p>
-          <div className="mt-1 flex flex-wrap gap-2">
-            {(['lugol', 'azul'] as Col[]).map((c) => <button key={c} type="button" onClick={() => cambiar({ col: c, t: 0, lavado: false })} className={`${btn} ${on(s.col === c)}`}>{COLORANTES[c]}</button>)}
-          </div>
-        </div>
-        <div>
-          <p className="text-sm font-semibold">3. Dejar actuar: {s.t} s</p>
-          <div className="mt-1 flex gap-2">
-            <button type="button" disabled={s.col === 'ninguno' || s.lavado} onClick={() => cambiar({ t: s.t + 15 })} className={`${btn} ${on(false)}`}>Esperar 15 s</button>
-            <button type="button" disabled={s.col === 'ninguno' || s.lavado} onClick={() => cambiar({ t: s.t + 60 })} className={`${btn} ${on(false)}`}>Esperar 1 min</button>
-          </div>
-        </div>
-        <div>
-          <p className="text-sm font-semibold">4. Lavar el exceso</p>
-          <button type="button" disabled={s.col === 'ninguno' || s.lavado} onClick={() => cambiar({ lavado: true })} className={`${btn} ${on(s.lavado)} mt-1`}>{s.lavado ? 'Lavado ✔' : 'Pasar agua y absorber'}</button>
-        </div>
-        <div className="flex gap-2">
-          <button type="button" onClick={() => setVer(true)} className={`${btn} border-[var(--acento)] bg-[var(--acento)] text-white`}>Observar</button>
-          <button type="button" onClick={() => cambiar({ col: 'ninguno', t: 0, lavado: false })} className={`${btn} ${on(false)}`}>Nueva lámina</button>
-        </div>
-        {grado < 11 && <p className="text-xs text-[var(--suave)]">Pista: el lugol actúa en unos 30 s y el azul de metileno en cerca de 1 minuto.</p>}
-      </div>
-      <div className="flex flex-col items-center gap-2">
-        <VistaSimple s={ver ? s : { ...s, col: 'ninguno', t: 0 }} />
-        <p className="text-sm font-semibold">{ver ? `${MUESTRAS[s.muestra]} · ${COLORANTES[s.col]} · 400x` : 'Sin teñir · 400x'}</p>
-        {ver && (
-          <div className={`w-full rounded-xl border-2 p-3 text-sm ${r.ok ? 'border-[#2e7d5a] bg-[#eaf5ee]' : 'border-[#b5462c] bg-[#fbeee9]'}`}>
-            <ul className="list-disc pl-5">{r.lineas.map((x) => <li key={x}>{x}</li>)}</ul>
-          </div>
-        )}
       </div>
     </div>
   )
@@ -203,6 +224,9 @@ function aplicar(pasos: Paso[], gramPos: boolean): Bact {
 const colorDe = (b: Bact) => (b.cv ? '#5b2a8c' : b.safra ? '#e0607e' : 'rgba(150,150,150,0.25)')
 const nombreColor = (b: Bact) => (b.cv ? 'moradas' : b.safra ? 'rosadas' : 'casi invisibles')
 
+const GRAM_COLOR: Record<Paso['p'], string> = { cv: '#5b2a8c', lugol: '#a0601a', alcohol: '#e8eef2', safranina: '#d9406a', lavar: '#a9d3f5' }
+const ETIQ: Record<Paso['p'], string> = { cv: 'CRISTAL V.', lugol: 'LUGOL', alcohol: 'ALCOHOL', safranina: 'SAFRANINA', lavar: 'AGUA' }
+
 function Gram() {
   const [pasos, setPasos] = useState<Paso[]>([])
   const [ver, setVer] = useState(false)
@@ -214,15 +238,6 @@ function Gram() {
       return [...x, { p, s: p === 'alcohol' ? 5 : 60 }]
     })
   }
-  useEffect(() => {
-    const t = (ev: KeyboardEvent) => {
-      const m: Record<string, Paso['p']> = { '1': 'cv', '2': 'lugol', '3': 'alcohol', '4': 'safranina', '5': 'lavar' }
-      if (m[ev.key]) agregar(m[ev.key])
-      else if (ev.key.toLowerCase() === 'o') setVer(true)
-    }
-    document.addEventListener('keydown', t)
-    return () => document.removeEventListener('keydown', t)
-  }, [])
   const pos = aplicar(pasos, true)
   const neg = aplicar(pasos, false)
   const lineas: string[] = []
@@ -239,28 +254,36 @@ function Gram() {
   const ok = pos.cv && !neg.cv && neg.safra && !lineas.length
   if (ok) lineas.push('¡Tinción correcta! Lactobacillus (Gram +) morados: su pared gruesa de peptidoglicano retiene el violeta. E. coli (Gram −) rosados: su pared delgada lo pierde con el alcohol y toma la safranina.')
 
+  const ultimo = [...pasos].reverse().find((p) => p.p !== 'lavar')
+  const charco = pasos.length && pasos[pasos.length - 1].p !== 'lavar' ? GRAM_COLOR[pasos[pasos.length - 1].p] : undefined
+  const piezas: Pieza[] = [
+    ...(['cv', 'lugol', 'alcohol', 'safranina'] as const).map((p, k): Pieza => ({ id: p, nombre: NOMBRE[p] + (p === 'alcohol' ? ' (cada gota: 5 s)' : ''), x: 70 + k * 85, y: 312, ancho: 50, alto: 96, tomable: true, color: GRAM_COLOR[p], dibujo: <Gotero color={GRAM_COLOR[p]} etiqueta={ETIQ[p]} oscuro={p === 'lugol'} /> })),
+    { id: 'lamina', nombre: 'Frotis', x: 520, y: 345, ancho: 130, alto: 30, tomable: true, dibujo: <Portaobjetos muestra="#e9e2d6" tinte={ultimo ? GRAM_COLOR[ultimo.p] + '88' : undefined} charco={charco} cubre={false} /> },
+    { id: 'piseta', nombre: 'Lavar con agua', x: 660, y: 305, ancho: 60, alto: 106, tomable: true, color: '#a9d3f5', dibujo: <Piseta /> },
+    { id: 'micro', nombre: 'Microscopio (1000x)', x: 800, y: 290, ancho: 90, alto: 140, dibujo: <MicroscopioMini lamina={ver} /> },
+    { id: 'caneca', nombre: 'Residuos (nuevo frotis)', x: 930, y: 325, ancho: 54, alto: 76, dibujo: <Caneca /> },
+  ]
+  const destinos = (de: string) => (de === 'lamina' ? ['micro', 'caneca'] : ['lamina'])
+  const soltar = (de: string, en: string): Uso | string => {
+    if (de === 'lamina') {
+      if (en === 'micro') return { anim: 'poner', hecho: () => setVer(true) }
+      if (en === 'caneca') return { anim: 'poner', hecho: () => { setPasos([]); setVer(false) } }
+      return 'Lleva el frotis al microscopio o a la caneca.'
+    }
+    if (en !== 'lamina') return 'Eso va sobre el frotis.'
+    if (de === 'piseta') return { anim: 'verter', hecho: () => agregar('lavar') }
+    return { anim: 'gotas', gotas: de === 'alcohol' ? 1 : 3, hecho: () => agregar(de as Paso['p']) }
+  }
   return (
-    <div className="grid items-start gap-4 md:grid-cols-[1fr_300px]">
-      <div className="flex flex-col gap-3 rounded-2xl border border-[var(--linea)] bg-[var(--tarjeta)] p-4">
-        <p className="text-sm">
-          <b>Muestra:</b> frotis ya fijado con calor de <i>Lactobacillus</i> (del yogur) y <i>Escherichia coli</i>. Agrega los reactivos en orden; cada clic en alcohol son 5 s más.
+    <div className="grid items-start gap-4 lg:grid-cols-[1fr_300px]">
+      <div className="flex flex-col gap-2">
+        <p className="rounded-2xl bg-[var(--tarjeta)] p-4 text-sm">
+          <b>Muestra:</b> frotis ya fijado con calor de <i>Lactobacillus</i> (del yogur) y <i>Escherichia coli</i>. Echa los reactivos sobre el frotis en el orden que creas y lava con la piseta. Cada gota de alcohol son 5 s de decoloración.
         </p>
-        <div className="flex flex-wrap gap-2">
-          {(Object.keys(NOMBRE) as Paso['p'][]).map((p, k) => (
-            <button key={p} type="button" onClick={() => agregar(p)} className="min-h-10 rounded-full border border-[var(--linea)] bg-white px-3 text-sm font-semibold hover:border-[var(--acento)]">
-              <span className="mr-1 opacity-50">{k + 1}</span> {NOMBRE[p]}
-            </button>
-          ))}
-        </div>
+        <MesaViva desde={190} piezas={piezas} destinos={destinos} soltar={soltar} />
         <ol className="flex flex-wrap gap-1 text-xs">
-          {pasos.map((p, k) => (
-            <li key={k} className="rounded-full bg-[var(--fondo)] px-2 py-1">{NOMBRE[p.p]}{p.p === 'alcohol' ? ` ${p.s} s` : ''}</li>
-          ))}
+          {pasos.map((p, k) => <li key={k} className="rounded-full bg-[var(--tarjeta)] px-2 py-1">{NOMBRE[p.p]}{p.p === 'alcohol' ? ` ${p.s} s` : ''}</li>)}
         </ol>
-        <div className="flex gap-2">
-          <button type="button" onClick={() => setVer(true)} className="min-h-10 rounded-full bg-[var(--acento)] px-5 text-sm font-semibold text-white">Observar a 1000x (O)</button>
-          <button type="button" onClick={() => { setPasos([]); setVer(false) }} className="min-h-10 rounded-full border border-[var(--linea)] px-4 text-sm font-semibold">Nuevo frotis</button>
-        </div>
         <p className="text-xs text-[var(--suave)]">⚠ El cristal violeta y la safranina manchan la piel y la ropa; el alcohol es inflamable: lejos del mechero.</p>
       </div>
       <div className="flex flex-col items-center gap-2">
