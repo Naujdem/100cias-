@@ -103,6 +103,11 @@
       "herencia-no-mendeliana": [
         "incompleta",
         "grupos-sanguineos"
+      ],
+      "mutaciones": [
+        "que-es",
+        "puntuales",
+        "variacion"
       ]
     },
     "nivelDibujo": "basico",
@@ -123,7 +128,8 @@
       "adn-genes-cromosomas": "Los seis pasos en lo básico: del cuerpo al ADN, nucleótidos, doble hélice, ADN y ARN, cromosomas y genes.",
       "replicacion-adn": "Para qué se copia el ADN y la horquilla de replicación.",
       "expresion-genica": "Del gen a la proteína: transcripción, código genético y traducción.",
-      "herencia-no-mendeliana": "Dominancia incompleta y grupos sanguíneos."
+      "herencia-no-mendeliana": "Dominancia incompleta y grupos sanguíneos.",
+      "mutaciones": "Qué es una mutación, mutaciones puntuales y de dónde sale la variación."
     }
   },
   {
@@ -262,6 +268,13 @@
         "grupos-sanguineos",
         "ligada-sexo",
         "genealogias"
+      ],
+      "mutaciones": [
+        "que-es",
+        "puntuales",
+        "efectos",
+        "numericas",
+        "variacion"
       ]
     },
     "nivelDibujo": "intermedio",
@@ -282,7 +295,8 @@
       "adn-genes-cromosomas": "Los seis pasos; suma las histonas y el enrollamiento del ADN.",
       "replicacion-adn": "Suma la replicación semiconservativa y los errores de copia.",
       "expresion-genica": "Suma los genes encendidos y apagados.",
-      "herencia-no-mendeliana": "Suma codominancia, herencia ligada al sexo y genealogías."
+      "herencia-no-mendeliana": "Suma codominancia, herencia ligada al sexo y genealogías.",
+      "mutaciones": "Suma los efectos (anemia falciforme) y los cambios en el número de cromosomas."
     }
   },
   {
@@ -441,6 +455,14 @@
         "ligada-sexo",
         "genealogias",
         "poligenica"
+      ],
+      "mutaciones": [
+        "que-es",
+        "puntuales",
+        "efectos",
+        "numericas",
+        "cromosomicas",
+        "variacion"
       ]
     },
     "nivelDibujo": "avanzado",
@@ -461,7 +483,8 @@
       "adn-genes-cromosomas": "Los seis pasos completos: purinas y pirimidinas, cadenas antiparalelas e histonas.",
       "replicacion-adn": "Los cinco pasos, con las enzimas y los fragmentos de Okazaki.",
       "expresion-genica": "Los seis pasos, con intrones, exones y empalme alternativo.",
-      "herencia-no-mendeliana": "Los seis pasos, con la herencia poligénica y el ambiente."
+      "herencia-no-mendeliana": "Los seis pasos, con la herencia poligénica y el ambiente.",
+      "mutaciones": "Los seis pasos, con las mutaciones cromosómicas estructurales."
     }
   }
 ]
