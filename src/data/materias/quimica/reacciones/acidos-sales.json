@@ -1,0 +1,627 @@
+{
+  "id": "acidos-sales",
+  "materia": "quimica",
+  "area": "reacciones",
+  "titulo": "Nomenclatura: ácidos y sales",
+  "subtema": "Hidrácidos, oxácidos, aniones y sales del campo",
+  "orden": 123,
+  "etiqueta": "3",
+  "vistas": [
+    "ruta"
+  ],
+  "tituloVista": "Ruta de ácidos y sales",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Diferenciar hidrácidos y oxácidos y nombrarlos.",
+    "Pasar del nombre de un ácido al de su anión (-uro, -ito, -ato).",
+    "Formular y nombrar sales equilibrando las cargas del catión y el anión.",
+    "Reconocer sales de uso cotidiano y agrícola (abonos, cal, bicarbonato)."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con un texto de química de bachillerato (nomenclatura tradicional y stock de ácidos y sales, regla -hídrico/-uro, -oso/-ito, -ico/-ato) y fichas técnicas de abonos para los usos agrícolas."
+  ],
+  "bloques": [
+    {
+      "id": "hidracidos",
+      "titulo": "Hidrácidos",
+      "resumen": "Hidrógeno con un no metal (F, Cl, Br, I, S): en agua son ácidos y terminan en -hídrico.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "Los ácidos son compuestos que en agua liberan iones hidrógeno (H⁺); por eso sus fórmulas empiezan con H. Los hidrácidos no tienen oxígeno: son hidrógeno unido a un no metal de los grupos 16 o 17 (flúor, cloro, bromo, yodo, azufre). Tienen dos nombres. Como gas, se nombran con el no metal terminado en -uro: cloruro de hidrógeno (HCl). Disueltos en agua, se nombran «ácido» + no metal + -hídrico: ácido clorhídrico. Se formulan igual que siempre, cruzando cargas: H⁺ y S²⁻ dan H₂S.",
+        "contexto": [
+          {
+            "titulo": "Ácido en el estómago",
+            "texto": "El jugo gástrico tiene ácido clorhídrico: ayuda a digerir las proteínas y mata bacterias. La mucosa del estómago lo aguanta; el esófago no, y por eso arde la acidez."
+          },
+          {
+            "titulo": "Huevo podrido",
+            "texto": "El sulfuro de hidrógeno (H₂S) huele a huevo podrido; sale de pantanos, aguas termales y de la descomposición de la materia orgánica."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Ácido: libera H⁺ en agua. Su fórmula empieza con H."
+          ],
+          "media": [
+            "Hidrácido = H + no metal (sin oxígeno). En agua: ácido …hídrico (HCl: ácido clorhídrico)."
+          ],
+          "avanzada": [
+            "Gas: cloruro de hidrógeno. En agua: ácido clorhídrico. HF, HCl, HBr, HI, H₂S."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué el estómago tiene un ácido tan fuerte y no se disuelve?",
+          "actividad": "Tabla en el tablero: no metal, fórmula del hidrácido, nombre como gas y nombre en agua (F, Cl, Br, I, S).",
+          "errores": [
+            "Pensar que todo ácido tiene oxígeno.",
+            "Usar -hídrico para el gas."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Qué tienen en común?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "El limón, el vinagre y el jugo gástrico son ácidos. ¿Qué crees que tienen todos los ácidos?",
+            "opciones": [
+              "Hidrógeno que sueltan en el agua como H⁺",
+              "Oxígeno",
+              "Un metal",
+              "Carbono"
+            ],
+            "correcta": 0,
+            "explicacion": "Por eso las fórmulas de los ácidos empiezan con H."
+          }
+        },
+        {
+          "titulo": "Del gas al ácido",
+          "visual": {
+            "tipo": "escena",
+            "id": "ac-hidracido",
+            "fases": [
+              {
+                "id": "gas",
+                "nombre": "Un gas",
+                "texto": "HCl: cloruro de hidrógeno."
+              },
+              {
+                "id": "agua",
+                "nombre": "En agua",
+                "texto": "Se separa en H⁺ y Cl⁻: ácido clorhídrico."
+              },
+              {
+                "id": "estomago",
+                "nombre": "En el estómago",
+                "texto": "El jugo gástrico tiene ácido clorhídrico."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre ácidos, bases y pH",
+            "tema": "acidos-bases"
+          }
+        }
+      ],
+      "juego": "hidracidos-juego",
+      "preguntas": [
+        {
+          "id": "qa-hi-1",
+          "enunciado": "¿Cómo se llama el HCl disuelto en agua?",
+          "opciones": [
+            "Ácido clorhídrico",
+            "Cloruro de hidrógeno",
+            "Ácido clórico",
+            "Hipoclorito"
+          ],
+          "correcta": 0,
+          "explicacion": "En agua: ácido + cloro + -hídrico."
+        },
+        {
+          "id": "qa-hi-2",
+          "enunciado": "¿Qué diferencia a un hidrácido de un oxácido?",
+          "opciones": [
+            "El hidrácido no tiene oxígeno",
+            "El hidrácido no tiene hidrógeno",
+            "El hidrácido tiene un metal",
+            "No hay diferencia"
+          ],
+          "correcta": 0,
+          "explicacion": "Hidrácido: H + no metal."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "oxacidos",
+      "titulo": "Oxácidos",
+      "resumen": "Un óxido ácido con agua forma un oxácido (H + no metal + O), que se nombra con -oso o -ico.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "intermedio",
+      "requiere": [
+        "hidracidos"
+      ],
+      "ficha": {
+        "idea": "Los oxácidos tienen hidrógeno, un no metal y oxígeno. Se forman cuando un óxido ácido reacciona con agua: SO₃ + H₂O → H₂SO₄. Se nombran en el sistema tradicional como su óxido: «ácido» + no metal con -oso (estado menor) o -ico (estado mayor), y con hipo-…-oso y per-…-ico cuando hay cuatro estados. Así, H₂SO₃ es ácido sulfuroso (S +4) y H₂SO₄ ácido sulfúrico (S +6); HNO₂ es ácido nitroso y HNO₃ ácido nítrico; HClO es ácido hipocloroso y HClO₄ ácido perclórico. Para saber cuál es, se calcula el estado del no metal.",
+        "contexto": [
+          {
+            "titulo": "Lluvia ácida",
+            "texto": "El SO₂ y los óxidos de nitrógeno que salen de chimeneas y motores reaccionan con el agua de las nubes y forman ácidos sulfúrico y nítrico: es la lluvia ácida."
+          },
+          {
+            "titulo": "El ácido más fabricado",
+            "texto": "El ácido sulfúrico es el compuesto químico que más se produce en el mundo: se usa para fabricar abonos, baterías y muchos otros productos."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Óxido ácido + agua → oxácido (H + no metal + O)."
+          ],
+          "media": [
+            "-oso: estado menor (H₂SO₃, sulfuroso). -ico: estado mayor (H₂SO₄, sulfúrico)."
+          ],
+          "avanzada": [
+            "Cloro: HClO hipocloroso (+1), HClO₂ cloroso (+3), HClO₃ clórico (+5), HClO₄ perclórico (+7)."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Cómo puede llover ácido?",
+          "actividad": "Calcular el estado del no metal en diez oxácidos y, con eso, decidir si van con -oso o -ico.",
+          "errores": [
+            "Nombrar por el número de oxígenos y no por el estado del no metal.",
+            "Confundir sulfuroso con sulfhídrico."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Óxido ácido + agua",
+          "visual": {
+            "tipo": "escena",
+            "id": "ac-oxacido",
+            "fases": [
+              {
+                "id": "oxido",
+                "nombre": "El óxido ácido",
+                "texto": "SO₃: trióxido de azufre (S +6)."
+              },
+              {
+                "id": "agua",
+                "nombre": "Con agua",
+                "texto": "SO₃ + H₂O → H₂SO₄."
+              },
+              {
+                "id": "lluvia",
+                "nombre": "La lluvia ácida",
+                "texto": "Los óxidos del humo forman ácidos en las nubes.",
+                "nivel": "intermedio"
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre la contaminación del aire",
+            "tema": "contaminacion",
+            "bloque": "aire-contaminado"
+          }
+        },
+        {
+          "titulo": "-oso o -ico",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "⬇️",
+              "titulo": "-oso (menor)",
+              "puntos": [
+                "H₂SO₃: ácido sulfuroso",
+                "HNO₂: ácido nitroso",
+                "HClO₂: ácido cloroso"
+              ]
+            },
+            "der": {
+              "icono": "⬆️",
+              "titulo": "-ico (mayor)",
+              "puntos": [
+                "H₂SO₄: ácido sulfúrico",
+                "HNO₃: ácido nítrico",
+                "HClO₃: ácido clórico"
+              ]
+            }
+          },
+          "atajo": {
+            "texto": "Más sobre -oso e -ico",
+            "tema": "oxidos-hidroxidos",
+            "bloque": "sistemas"
+          }
+        }
+      ],
+      "juego": "oso-ico-juego",
+      "preguntas": [
+        {
+          "id": "qa-ox-1",
+          "enunciado": "¿Cuál es el nombre del H₂SO₄?",
+          "opciones": [
+            "Ácido sulfúrico",
+            "Ácido sulfuroso",
+            "Ácido sulfhídrico",
+            "Sulfato de hidrógeno (II)"
+          ],
+          "correcta": 0,
+          "explicacion": "El azufre está en +6, su estado mayor."
+        },
+        {
+          "id": "qa-ox-2",
+          "enunciado": "¿Qué se forma cuando el CO₂ reacciona con agua?",
+          "opciones": [
+            "Ácido carbónico (H₂CO₃)",
+            "Hidróxido de carbono",
+            "Carbonato de calcio",
+            "Ácido clorhídrico"
+          ],
+          "correcta": 0,
+          "explicacion": "Óxido ácido + agua → oxácido."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "aniones",
+      "titulo": "De ácido a anión",
+      "resumen": "Al quitarle los H a un ácido queda un anión: -hídrico → -uro, -oso → -ito, -ico → -ato.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "intermedio",
+      "requiere": [
+        "oxacidos"
+      ],
+      "ficha": {
+        "idea": "Cuando un ácido suelta sus hidrógenos como H⁺ queda un anión, con tantas cargas negativas como hidrógenos perdió: H₂SO₄ → SO₄²⁻. El nombre del anión sale del nombre del ácido cambiando la terminación: -hídrico pasa a -uro (clorhídrico → cloruro), -oso pasa a -ito (sulfuroso → sulfito) e -ico pasa a -ato (sulfúrico → sulfato). Los prefijos hipo- y per- se conservan: hipocloroso → hipoclorito, perclórico → perclorato. Un truco para recordarlo: «el oso bonito y el pico de pato».",
+        "contexto": [
+          {
+            "titulo": "Aniones que vale la pena saberse",
+            "texto": "Cloruro Cl⁻, sulfuro S²⁻, nitrato NO₃⁻, nitrito NO₂⁻, sulfato SO₄²⁻, sulfito SO₃²⁻, carbonato CO₃²⁻, fosfato PO₄³⁻, hipoclorito ClO⁻."
+          },
+          {
+            "titulo": "El cloro de la piscina",
+            "texto": "El blanqueador es hipoclorito de sodio, NaClO: su anión viene del ácido hipocloroso."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Ácido sin sus H = anión."
+          ],
+          "media": [
+            "-hídrico → -uro · -oso → -ito · -ico → -ato."
+          ],
+          "avanzada": [
+            "Carga del anión = número de H que perdió el ácido (H₃PO₄ → PO₄³⁻)."
+          ]
+        },
+        "docente": {
+          "abrir": "¿De dónde sale el nombre «sulfato» de la etiqueta del abono?",
+          "actividad": "Dominó de ácidos y aniones: cada ficha tiene un ácido de un lado y un anión de otro.",
+          "errores": [
+            "Olvidar la carga del anión.",
+            "Cambiar -oso por -ato."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "El ácido suelta sus H",
+          "visual": {
+            "tipo": "escena",
+            "id": "ac-aniones",
+            "fases": [
+              {
+                "id": "acido",
+                "nombre": "Ácido sulfúrico",
+                "texto": "H₂SO₄ tiene 2 hidrógenos."
+              },
+              {
+                "id": "suelta",
+                "nombre": "Suelta los H⁺",
+                "texto": "Quedan 2 H⁺ y el anión SO₄²⁻."
+              },
+              {
+                "id": "nombre",
+                "nombre": "Cambia la terminación",
+                "texto": "sulfúrico → sulfato: -ico pasa a -ato."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "El oso bonito y el pico de pato",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "💧",
+                "titulo": "-hídrico → -uro",
+                "texto": "clorhídrico → cloruro (Cl⁻)"
+              },
+              {
+                "icono": "🐻",
+                "titulo": "-oso → -ito",
+                "texto": "nitroso → nitrito (NO₂⁻)"
+              },
+              {
+                "icono": "🦆",
+                "titulo": "-ico → -ato",
+                "texto": "sulfúrico → sulfato (SO₄²⁻)"
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "aniones-juego",
+      "preguntas": [
+        {
+          "id": "qa-an-1",
+          "enunciado": "¿Cómo se llama el anión que viene del ácido nítrico?",
+          "opciones": [
+            "Nitrato",
+            "Nitrito",
+            "Nitruro",
+            "Nitroso"
+          ],
+          "correcta": 0,
+          "explicacion": "-ico → -ato."
+        },
+        {
+          "id": "qa-an-2",
+          "enunciado": "¿Qué carga tiene el anión fosfato, que viene del H₃PO₄?",
+          "opciones": [
+            "3−",
+            "1−",
+            "2−",
+            "3+"
+          ],
+          "correcta": 0,
+          "explicacion": "Perdió tres H⁺."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "sales",
+      "titulo": "Sales",
+      "resumen": "Un catión (metal o amonio) con un anión; se equilibran las cargas y se nombra primero el anión.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "intermedio",
+      "requiere": [
+        "aniones"
+      ],
+      "ficha": {
+        "idea": "Una sal se forma cuando un ácido reacciona con un hidróxido (neutralización): HCl + NaOH → NaCl + H₂O. Tiene un catión, casi siempre un metal o el amonio (NH₄⁺), y un anión. Si el anión no tiene oxígeno es una sal binaria (NaCl, cloruro de sodio); si lo tiene, una oxisal (KNO₃, nitrato de potasio). Para formularla se escriben el catión y el anión y se cruzan las cargas, con paréntesis si el ion poliatómico se repite: Ca²⁺ y PO₄³⁻ dan Ca₃(PO₄)₂. Se nombra primero el anión y luego el catión, con su número romano si tiene varios estados: sulfato de hierro (II), o en el tradicional, sulfato ferroso.",
+        "contexto": [
+          {
+            "titulo": "Sales del campo",
+            "texto": "Cloruro de potasio y nitrato de potasio (abonos con K), sulfato de amonio (abono con N y S), roca fosfórica (fosfato de calcio), cal agrícola (carbonato de calcio) y sulfato de cobre (caldo bordelés contra hongos)."
+          },
+          {
+            "titulo": "Leer el bulto de abono",
+            "texto": "Los tres números del NPK (por ejemplo, 15-15-15) indican el porcentaje de nitrógeno, fósforo y potasio, que vienen en forma de sales."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Ácido + hidróxido → sal + agua."
+          ],
+          "media": [
+            "Sal = catión + anión. Binaria: sin oxígeno (NaCl). Oxisal: con oxígeno (KNO₃)."
+          ],
+          "avanzada": [
+            "Cruzar cargas con paréntesis: Ca₃(PO₄)₂, (NH₄)₂SO₄, Al₂(SO₄)₃."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Qué dice la etiqueta de un bulto de abono, y qué tiene que ver con la química?",
+          "actividad": "Traer etiquetas de abonos y fertilizantes foliares; identificar las sales, escribir sus fórmulas y calcular su catión y anión.",
+          "errores": [
+            "Escribir el anión primero en la fórmula.",
+            "Olvidar el paréntesis: Ca₃PO₄₂.",
+            "Nombrar el catión primero (de sodio cloruro)."
+          ],
+          "minutos": 40
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Ácido + base = sal + agua",
+          "visual": {
+            "tipo": "escena",
+            "id": "ac-sal",
+            "fases": [
+              {
+                "id": "reactivos",
+                "nombre": "Ácido y base",
+                "texto": "HCl + NaOH."
+              },
+              {
+                "id": "intercambio",
+                "nombre": "Se juntan",
+                "texto": "El H⁺ y el OH⁻ forman agua."
+              },
+              {
+                "id": "producto",
+                "nombre": "Sal y agua",
+                "texto": "Quedan Na⁺ y Cl⁻: NaCl, la sal de cocina."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Fábrica de compuestos",
+          "visual": {
+            "tipo": "diagrama",
+            "id": "fabrica-compuestos"
+          }
+        },
+        {
+          "titulo": "Sales del campo",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🌱",
+                "titulo": "KCl",
+                "texto": "cloruro de potasio: abono"
+              },
+              {
+                "icono": "🌾",
+                "titulo": "(NH₄)₂SO₄",
+                "texto": "sulfato de amonio: abono"
+              },
+              {
+                "icono": "🪨",
+                "titulo": "CaCO₃",
+                "texto": "carbonato de calcio: cal agrícola"
+              },
+              {
+                "icono": "🍇",
+                "titulo": "CuSO₄",
+                "texto": "sulfato de cobre (II): caldo bordelés"
+              }
+            ]
+          }
+        }
+      ],
+      "diagrama": "fabrica-compuestos",
+      "juego": "sales-juego",
+      "preguntas": [
+        {
+          "id": "qa-sa-1",
+          "enunciado": "¿Cuál es la fórmula del carbonato de calcio (Ca²⁺ y CO₃²⁻)?",
+          "opciones": [
+            "CaCO₃",
+            "Ca₂CO₃",
+            "Ca(CO₃)₂",
+            "CaC₂O₃"
+          ],
+          "correcta": 0,
+          "explicacion": "Las cargas 2+ y 2− ya se equilibran."
+        },
+        {
+          "id": "qa-sa-2",
+          "enunciado": "¿Cómo se nombra el FeSO₄ en el sistema stock?",
+          "opciones": [
+            "Sulfato de hierro (II)",
+            "Sulfato de hierro (III)",
+            "Sulfito de hierro (II)",
+            "Hierro sulfato"
+          ],
+          "correcta": 0,
+          "explicacion": "SO₄²⁻ obliga al hierro a ser +2."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "sales-acidas",
+      "titulo": "Sales ácidas",
+      "resumen": "Sales que conservan algún hidrógeno del ácido, como el bicarbonato de sodio (NaHCO₃).",
+      "anio": 5,
+      "etiqueta": "Paso 5",
+      "nivel": "avanzado",
+      "requiere": [
+        "sales"
+      ],
+      "ficha": {
+        "idea": "Si un ácido con varios hidrógenos solo pierde algunos, queda un anión que todavía tiene hidrógeno: H₂CO₃ → HCO₃⁻. Las sales que llevan esos aniones se llaman sales ácidas. Se nombran agregando «hidrógeno» al anión: NaHCO₃ es hidrogenocarbonato de sodio. En el sistema tradicional se usa el prefijo bi-: bicarbonato de sodio. Con dos hidrógenos se dice dihidrógeno: KH₂PO₄ es dihidrogenofosfato de potasio, un abono foliar.",
+        "contexto": [
+          {
+            "titulo": "El bicarbonato en la cocina",
+            "texto": "Con el calor o con un ácido (limón, vinagre) suelta CO₂: por eso hace crecer las masas y sirve como antiácido."
+          },
+          {
+            "titulo": "Fosfatos para las plantas",
+            "texto": "Los fosfatos ácidos de potasio y de amonio se usan como abonos solubles porque aportan fósforo que la planta absorbe fácil."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Sal ácida: conserva algún H del ácido."
+          ],
+          "media": [
+            "NaHCO₃: hidrogenocarbonato de sodio = bicarbonato de sodio."
+          ],
+          "avanzada": [
+            "KH₂PO₄: dihidrogenofosfato de potasio. NaHSO₄: hidrogenosulfato de sodio."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué el bicarbonato con vinagre hace espuma?",
+          "actividad": "Bicarbonato y vinagre en una botella con un globo: el CO₂ infla el globo.",
+          "errores": [
+            "Pensar que el bicarbonato tiene dos carbonatos.",
+            "Confundir sal ácida con ácido."
+          ],
+          "minutos": 15
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Sal neutra o sal ácida",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "🧂",
+              "titulo": "Sal neutra",
+              "puntos": [
+                "Na₂CO₃",
+                "El ácido perdió todos sus H",
+                "carbonato de sodio"
+              ]
+            },
+            "der": {
+              "icono": "🧁",
+              "titulo": "Sal ácida",
+              "puntos": [
+                "NaHCO₃",
+                "Conserva un H",
+                "bicarbonato de sodio"
+              ]
+            }
+          }
+        }
+      ],
+      "preguntas": [
+        {
+          "id": "qa-sc-1",
+          "enunciado": "¿Cuál es el nombre tradicional del NaHCO₃?",
+          "opciones": [
+            "Bicarbonato de sodio",
+            "Carbonato de sodio",
+            "Ácido carbónico",
+            "Hidróxido de sodio"
+          ],
+          "correcta": 0,
+          "explicacion": "El prefijo bi- indica que conserva un H."
+        },
+        {
+          "id": "qa-sc-2",
+          "enunciado": "¿Qué tiene de especial una sal ácida?",
+          "opciones": [
+            "Conserva algún hidrógeno del ácido",
+            "No tiene metal",
+            "Es un ácido fuerte",
+            "No tiene oxígeno"
+          ],
+          "correcta": 0,
+          "explicacion": "Por ejemplo, el anión HCO₃⁻."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}
