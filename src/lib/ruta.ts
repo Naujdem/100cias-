@@ -10,6 +10,7 @@ export type Ruta =
   | { v: 'tema'; tema: string }
   | { v: 'jugar' }
   | { v: 'quices'; tema?: string }
+  | { v: 'lab'; practica?: string }
 
 export const enlace = {
   inicio: '#/',
@@ -18,6 +19,7 @@ export const enlace = {
   tema: (t: string) => `#/t/${t}`,
   jugar: '#/jugar',
   quices: (t?: string) => (t ? `#/quices/${t}` : '#/quices'),
+  lab: (p?: string) => (p ? `#/lab/${p}` : '#/lab'),
 }
 
 export function analizar(hash: string): Ruta {
@@ -26,6 +28,7 @@ export function analizar(hash: string): Ruta {
   if (a === 'm' && b) return { v: 'materia', materia: b }
   if (a === 't' && b) return { v: 'tema', tema: b }
   if (a === 'jugar') return { v: 'jugar' }
+  if (a === 'lab') return { v: 'lab', practica: b }
   if (a === 'quices') return { v: 'quices', tema: b }
   return { v: 'inicio' }
 }
