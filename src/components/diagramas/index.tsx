@@ -115,6 +115,8 @@ import OllaEbullicion from './OllaEbullicion.tsx'
 import LabSoluciones from './LabSoluciones.tsx'
 import PreparadorSoluciones from './PreparadorSoluciones.tsx'
 import ReactorColisiones from './ReactorColisiones.tsx'
+import BalancinChatelier from './BalancinChatelier.tsx'
+import { ReversibleJuego, EquilibrioJuego, ChatelierJuego, KcJuego, EquilibrioVidaJuego } from './JuegosEquilibrio.tsx'
 import { RapidaLentaJuego, MasRapidoJuego, ColisionJuego, ActivacionJuego, ConservarAlimentosJuego } from './JuegosCinetica.tsx'
 import { ConcentradaJuego, PorcentajeJuego, PpmJuego, MolaridadJuego, DilucionJuego, NormalidadJuego } from './JuegosConcentracion.tsx'
 import { SeDisuelveJuego, SaturacionJuego, FactoresSolubilidadJuego, CurvaJuego, ColoideJuego } from './JuegosSoluciones.tsx'
@@ -600,6 +602,12 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'colision-juego': ColisionJuego,
   'activacion-juego': ActivacionJuego,
   'conservar-alimentos-juego': ConservarAlimentosJuego,
+  'balancin-chatelier': BalancinChatelier,
+  'reversible-juego': ReversibleJuego,
+  'equilibrio-quimico-juego': EquilibrioJuego,
+  'chatelier-juego': ChatelierJuego,
+  'kc-juego': KcJuego,
+  'equilibrio-vida-juego': EquilibrioVidaJuego,
   'tipos-radiacion-juego': TiposRadiacionJuego,
   'vida-media-juego': VidaMediaJuego,
   'usos-nucleares-juego': UsosNuclearesJuego,

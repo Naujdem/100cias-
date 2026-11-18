@@ -52,6 +52,7 @@ import { EscenaAguaPuentes, EscenaTensionSuperficial, EscenaCalorEspecifico, Esc
 import { EscenaDisolver, EscenaSaturacion, EscenaFactoresSolubilidad, EscenaCurvasSolubilidad, EscenaTiposMezcla } from './EscenasSoluciones.tsx'
 import { EscenaConcentracionColor, EscenaPpm, EscenaPrepararMolar, EscenaDilucion } from './EscenasConcentracion.tsx'
 import { EscenaVelocidadReaccion, EscenaFactoresVelocidad, EscenaColisiones, EscenaEnergiaActivacion, EscenaConservarAlimentos } from './EscenasCinetica.tsx'
+import { EscenaIdaVuelta, EscenaEquilibrioDinamico, EscenaLeChatelier, EscenaEquilibrioNaturaleza } from './EscenasEquilibrio.tsx'
 import { EscenaMolContar, EscenaMasaMolar, EscenaCaminoMol } from './EscenasMol.tsx'
 import { EscenaReceta, EscenaMasaMasa, EscenaLimite } from './EscenasEstequiometria.tsx'
 import { EscenaIntra, EscenaPolaridad, EscenaFuerzas, EscenaSoluble } from './EscenasFuerzas.tsx'
@@ -321,6 +322,10 @@ export const ESCENAS: Record<string, ComponentType<{ fase: string }>> = {
   colisiones: EscenaColisiones,
   'energia-activacion': EscenaEnergiaActivacion,
   'conservar-alimentos': EscenaConservarAlimentos,
+  'ida-vuelta': EscenaIdaVuelta,
+  'equilibrio-dinamico': EscenaEquilibrioDinamico,
+  'le-chatelier': EscenaLeChatelier,
+  'equilibrio-naturaleza': EscenaEquilibrioNaturaleza,
   compostaje: EscenaCompostaje,
   riesgo: EscenaRiesgo,
   armero: EscenaArmero,

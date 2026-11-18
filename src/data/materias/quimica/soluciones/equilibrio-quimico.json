@@ -1,0 +1,561 @@
+{
+  "id": "equilibrio-quimico",
+  "materia": "quimica",
+  "area": "soluciones",
+  "titulo": "Equilibrio químico",
+  "subtema": "Reacciones reversibles, equilibrio dinámico, Le Chatelier y Kc",
+  "orden": 137,
+  "etiqueta": "7",
+  "vistas": [
+    "ruta"
+  ],
+  "tituloVista": "Ruta del equilibrio químico",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Diferenciar reacciones reversibles e irreversibles.",
+    "Explicar el equilibrio químico como un estado dinámico.",
+    "Predecir con el principio de Le Chatelier cómo responde un equilibrio a cambios de concentración, temperatura y presión.",
+    "Escribir e interpretar la constante de equilibrio Kc."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con un texto de química de bachillerato (Kc del N₂O₄ ⇌ 2 NO₂ ≈ 4,6 × 10⁻³ a 25 °C; ΔH ≈ +57 kJ/mol; Le Chatelier 1884; Haber 1909)."
+  ],
+  "bloques": [
+    {
+      "id": "reversibles",
+      "titulo": "Reacciones de ida y vuelta",
+      "resumen": "Algunas reacciones pueden ir en los dos sentidos: ⇌.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "Cuando se quema una hoja de papel, la ceniza y el humo no vuelven a formar papel: es una reacción irreversible, que va en un solo sentido y se escribe con una flecha →. Pero muchas reacciones pueden ir en los dos sentidos. En una gaseosa tapada, el dióxido de carbono se une al agua y forma ácido carbónico, y al mismo tiempo el ácido carbónico se deshace en CO₂ y agua. Esas son reacciones reversibles y se escriben con una doble flecha ⇌: la reacción de izquierda a derecha es la directa (ida) y la de derecha a izquierda, la inversa (vuelta). Para que una reacción pueda devolverse, los productos no se pueden escapar: si se destapa la gaseosa, el gas se va y la reacción sigue en un solo sentido hasta que se acaba el gas.",
+        "contexto": [
+          {
+            "titulo": "En el cuerpo",
+            "texto": "La hemoglobina de la sangre toma oxígeno en los pulmones y lo suelta en los tejidos: Hb + O₂ ⇌ HbO₂."
+          },
+          {
+            "titulo": "¿Y los cambios de estado?",
+            "texto": "Derretir hielo y congelar agua también van y vuelven, pero son cambios físicos; aquí se habla de reacciones químicas."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Irreversible: solo va en un sentido (→).",
+            "Reversible: puede ir y volver (⇌)."
+          ],
+          "media": [
+            "Reacción directa: reactivos → productos. Reacción inversa: productos → reactivos."
+          ],
+          "avanzada": [
+            "Las reacciones irreversibles suelen formar un gas que escapa, un precipitado o productos muy estables."
+          ]
+        },
+        "docente": {
+          "abrir": "Si una gaseosa tapada no pierde el gas, ¿significa que adentro no pasa nada?",
+          "actividad": "Comparar dos gaseosas, una tapada y otra destapada, durante un día.",
+          "errores": [
+            "Creer que reversible significa que se devuelve sola por completo.",
+            "Confundir cambios de estado con reacciones reversibles."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Ida y vuelta",
+          "visual": {
+            "tipo": "escena",
+            "id": "ida-vuelta",
+            "fases": [
+              {
+                "id": "ida",
+                "nombre": "Solo ida",
+                "texto": "El papel quemado no vuelve."
+              },
+              {
+                "id": "vuelta",
+                "nombre": "Ida y vuelta",
+                "texto": "El CO₂ sale y vuelve a entrar al líquido."
+              },
+              {
+                "id": "flecha",
+                "nombre": "La doble flecha",
+                "texto": "⇌ indica una reacción reversible."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "¿Se puede devolver?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Por qué una gaseosa destapada pierde el gas y una tapada no?",
+            "opciones": [
+              "Porque en la tapada el CO₂ no puede escapar y vuelve a disolverse",
+              "Porque la tapa enfría la gaseosa",
+              "Porque la tapada no tiene gas",
+              "Porque el azúcar atrapa el gas"
+            ],
+            "correcta": 0,
+            "explicacion": "Para que la reacción vaya y vuelva, los productos no deben escaparse."
+          }
+        }
+      ],
+      "juego": "reversible-juego",
+      "preguntas": [
+        {
+          "id": "qm-eq-1",
+          "enunciado": "¿Qué indica la doble flecha ⇌ en una ecuación?",
+          "opciones": [
+            "Que la reacción es reversible",
+            "Que la reacción es muy rápida",
+            "Que la reacción libera calor",
+            "Que hay dos productos"
+          ],
+          "correcta": 0,
+          "explicacion": "Puede ir en los dos sentidos."
+        },
+        {
+          "id": "qm-eq-2",
+          "enunciado": "¿Cuál es una reacción irreversible?",
+          "opciones": [
+            "Quemar papel",
+            "El CO₂ en la gaseosa tapada",
+            "La hemoglobina con el oxígeno",
+            "El amoníaco en un recipiente cerrado"
+          ],
+          "correcta": 0,
+          "explicacion": "Los productos se escapan y no vuelven."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "dinamico",
+      "titulo": "Equilibrio dinámico",
+      "resumen": "La ida y la vuelta ocurren al mismo ritmo y las cantidades dejan de cambiar.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "intermedio",
+      "requiere": [
+        "reversibles"
+      ],
+      "ficha": {
+        "idea": "Al empezar una reacción reversible solo hay reactivos, así que la reacción directa va rápido y la inversa casi no ocurre. A medida que se forman productos, la directa se va frenando (quedan menos reactivos) y la inversa se va acelerando (hay más productos). Llega un momento en que las dos van a la misma velocidad: por cada molécula de producto que se forma, otra se deshace. Desde ese momento las cantidades de reactivos y productos ya no cambian, aunque la reacción sigue ocurriendo en los dos sentidos. Eso es el equilibrio químico, y se llama dinámico porque no está quieto: es como dos personas que se pasan mangos entre dos canastos al mismo ritmo; los mangos se mueven todo el tiempo, pero cada canasto sigue con la misma cantidad. En el equilibrio las cantidades son constantes, no necesariamente iguales.",
+        "contexto": [
+          {
+            "titulo": "Las dos vías llegan al mismo lugar",
+            "texto": "Si se empieza solo con productos, la reacción se devuelve hasta llegar al mismo equilibrio que si se empieza con reactivos (a la misma temperatura)."
+          },
+          {
+            "titulo": "Sistema cerrado",
+            "texto": "El equilibrio solo se alcanza si no entra ni sale materia del recipiente."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "En el equilibrio la reacción no se detiene: va y vuelve al mismo ritmo."
+          ],
+          "media": [
+            "Equilibrio químico: velocidad directa = velocidad inversa; las concentraciones se mantienen constantes.",
+            "Constantes no quiere decir iguales."
+          ],
+          "avanzada": [
+            "El equilibrio se puede alcanzar desde cualquiera de los dos lados."
+          ]
+        },
+        "docente": {
+          "abrir": "Si en el equilibrio las cantidades no cambian, ¿cómo sabemos que la reacción sigue ocurriendo?",
+          "actividad": "Juego de los canastos: dos grupos se pasan fichas; uno pasa la mitad de las suyas y el otro un cuarto, en cada ronda. Anotar las cantidades hasta que dejan de cambiar.",
+          "errores": [
+            "Creer que en el equilibrio la reacción se detiene.",
+            "Pensar que en el equilibrio hay igual cantidad de reactivos y de productos."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Los canastos de mangos",
+          "visual": {
+            "tipo": "escena",
+            "id": "equilibrio-dinamico",
+            "fases": [
+              {
+                "id": "inicio",
+                "nombre": "Al empezar",
+                "texto": "Solo hay reactivos."
+              },
+              {
+                "id": "pasando",
+                "nombre": "Pasando",
+                "texto": "La ida va rápido; la vuelta, despacio."
+              },
+              {
+                "id": "equilibrio",
+                "nombre": "Equilibrio",
+                "texto": "Ida y vuelta al mismo ritmo."
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "equilibrio-quimico-juego",
+      "preguntas": [
+        {
+          "id": "qm-eq-3",
+          "enunciado": "¿Qué pasa en el equilibrio químico?",
+          "opciones": [
+            "La reacción directa y la inversa van a la misma velocidad",
+            "La reacción se detiene",
+            "Se acaban los reactivos",
+            "Hay la misma cantidad de reactivos y productos"
+          ],
+          "correcta": 0,
+          "explicacion": "Por eso es dinámico."
+        },
+        {
+          "id": "qm-eq-4",
+          "enunciado": "En el equilibrio, las concentraciones de reactivos y productos…",
+          "opciones": [
+            "Se mantienen constantes",
+            "Son siempre iguales",
+            "Siguen aumentando",
+            "Se vuelven cero"
+          ],
+          "correcta": 0,
+          "explicacion": "Constantes, no iguales."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "le-chatelier",
+      "titulo": "Principio de Le Chatelier",
+      "resumen": "Si se altera un equilibrio, el sistema reacciona para contrarrestar el cambio.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "intermedio",
+      "requiere": [
+        "dinamico"
+      ],
+      "ficha": {
+        "idea": "En 1884, Henri Le Chatelier enunció una regla para predecir qué le pasa a un equilibrio cuando se altera: el sistema se corre en el sentido que contrarresta el cambio. Si se agrega un reactivo, el equilibrio se corre hacia los productos para gastarlo; si se retira un producto, se corre también hacia los productos para reponerlo. Si se calienta, se favorece la reacción que absorbe calor (endotérmica); si se enfría, la que lo libera. En los gases, si se aumenta la presión (comprimiendo), se corre hacia el lado con menos moléculas de gas. Un catalizador no corre el equilibrio: solo hace que se alcance más rápido. En el Explora se ve con el N₂O₄ incoloro y el NO₂ marrón: al calentar, el gas se oscurece.",
+        "contexto": [
+          {
+            "titulo": "Como un balancín",
+            "texto": "Si se pone peso de un lado, el balancín se mueve; el equilibrio químico «se mueve» hasta compensar."
+          },
+          {
+            "titulo": "El color del NO₂",
+            "texto": "El NO₂ es el gas marrón del esmog de las ciudades. En un tubo sellado, se ve más oscuro en agua caliente y más claro en agua con hielo."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Si se cambia algo en un equilibrio, el sistema se acomoda para compensarlo."
+          ],
+          "media": [
+            "Le Chatelier: un equilibrio alterado se corre para contrarrestar el cambio.",
+            "Más reactivo o menos producto → hacia productos. Calentar → hacia el lado endotérmico. Más presión → hacia menos moles de gas."
+          ],
+          "avanzada": [
+            "Solo la temperatura cambia el valor de K; la concentración y la presión cambian Q."
+          ]
+        },
+        "docente": {
+          "abrir": "Si a una reacción en equilibrio le agregas más reactivo, ¿qué crees que hace el sistema?",
+          "actividad": "Usar el balancín: predecir antes de cada cambio hacia dónde se corre y comprobar con el color.",
+          "errores": [
+            "Creer que el catalizador corre el equilibrio.",
+            "Pensar que al agregar reactivo «se rompe» el equilibrio para siempre."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "El balancín",
+          "visual": {
+            "tipo": "escena",
+            "id": "le-chatelier",
+            "fases": [
+              {
+                "id": "equilibrio",
+                "nombre": "En equilibrio",
+                "texto": "Todo compensado."
+              },
+              {
+                "id": "agrego",
+                "nombre": "Agrego reactivo",
+                "texto": "El balancín se inclina."
+              },
+              {
+                "id": "responde",
+                "nombre": "El sistema responde",
+                "texto": "Se forma producto hasta compensar."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Balancín de Le Chatelier",
+          "visual": {
+            "tipo": "diagrama",
+            "id": "balancin-chatelier"
+          }
+        }
+      ],
+      "diagrama": "balancin-chatelier",
+      "juego": "chatelier-juego",
+      "preguntas": [
+        {
+          "id": "qm-eq-5",
+          "enunciado": "Si a un equilibrio se le retira un producto, el equilibrio se corre…",
+          "opciones": [
+            "Hacia los productos",
+            "Hacia los reactivos",
+            "No se corre",
+            "Se detiene"
+          ],
+          "correcta": 0,
+          "explicacion": "Para reponer lo que se quitó."
+        },
+        {
+          "id": "qm-eq-6",
+          "enunciado": "¿Qué efecto tiene un catalizador sobre un equilibrio?",
+          "opciones": [
+            "Hace que se alcance más rápido, sin correrlo",
+            "Lo corre hacia los productos",
+            "Lo corre hacia los reactivos",
+            "Lo destruye"
+          ],
+          "correcta": 0,
+          "explicacion": "Acelera las dos reacciones por igual."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "kc",
+      "titulo": "La constante de equilibrio Kc",
+      "resumen": "Un número que dice hacia dónde está corrido el equilibrio.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "avanzado",
+      "requiere": [
+        "le-chatelier"
+      ],
+      "ficha": {
+        "idea": "Para una reacción aA + bB ⇌ cC + dD en equilibrio se cumple que Kc = [C]ᶜ[D]ᵈ / [A]ᵃ[B]ᵇ, donde los corchetes son concentraciones molares y los exponentes, los coeficientes de la ecuación balanceada. Los sólidos puros y el agua líquida (como solvente) no se escriben. El valor de Kc solo cambia con la temperatura. Si Kc es muy grande, en el equilibrio hay casi solo productos; si es muy pequeña, casi solo reactivos. Con las concentraciones de un momento cualquiera se calcula el cociente de reacción Q con la misma fórmula: si Q < Kc, la reacción avanza hacia los productos; si Q > Kc, retrocede; si Q = Kc, ya está en equilibrio.",
+        "contexto": [
+          {
+            "titulo": "Ejemplo",
+            "texto": "N₂O₄ ⇌ 2 NO₂ a 25 °C: Kc = [NO₂]² / [N₂O₄] ≈ 4,6 × 10⁻³. Predomina el N₂O₄."
+          },
+          {
+            "titulo": "Kp",
+            "texto": "En gases también se usa Kp, con presiones parciales en lugar de concentraciones."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Hay un número que dice si en el equilibrio hay más reactivos o más productos."
+          ],
+          "media": [
+            "K grande: predominan los productos. K pequeña: predominan los reactivos."
+          ],
+          "avanzada": [
+            "Kc = [productos]^coef / [reactivos]^coef (sin sólidos ni líquidos puros).",
+            "Q < K: avanza →; Q > K: retrocede ←; Q = K: equilibrio.",
+            "Kc solo depende de la temperatura."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Cómo saber, con un número, si una reacción casi se completa o casi no ocurre?",
+          "actividad": "Calcular Kc con concentraciones del Explora a 298 K y a 373 K y compararlas.",
+          "errores": [
+            "Escribir sólidos o agua líquida en la expresión de Kc.",
+            "Olvidar elevar a los coeficientes."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "La expresión",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🧮",
+            "valor": "Kc = [C]ᶜ[D]ᵈ / [A]ᵃ[B]ᵇ",
+            "texto": "Concentraciones en el equilibrio, elevadas a sus coeficientes."
+          }
+        },
+        {
+          "titulo": "Leer el número",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🎁",
+                "titulo": "K ≫ 1",
+                "texto": "Casi todo es producto."
+              },
+              {
+                "icono": "🧱",
+                "titulo": "K ≪ 1",
+                "texto": "Casi todo es reactivo."
+              },
+              {
+                "icono": "➡️",
+                "titulo": "Q < K",
+                "texto": "Avanza hacia productos."
+              },
+              {
+                "icono": "⬅️",
+                "titulo": "Q > K",
+                "texto": "Retrocede hacia reactivos."
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "kc-juego",
+      "preguntas": [
+        {
+          "id": "qm-eq-7",
+          "enunciado": "¿Cuál es la expresión de Kc para N₂ + 3 H₂ ⇌ 2 NH₃?",
+          "opciones": [
+            "[NH₃]² / [N₂][H₂]³",
+            "[N₂][H₂]³ / [NH₃]²",
+            "[NH₃] / [N₂][H₂]",
+            "2[NH₃] / 3[H₂]"
+          ],
+          "correcta": 0,
+          "explicacion": "Productos arriba, reactivos abajo, con los coeficientes como exponentes."
+        },
+        {
+          "id": "qm-eq-8",
+          "enunciado": "Si Q es menor que Kc, la reacción…",
+          "opciones": [
+            "Avanza hacia los productos",
+            "Retrocede hacia los reactivos",
+            "Está en equilibrio",
+            "Se detiene"
+          ],
+          "correcta": 0,
+          "explicacion": "Faltan productos para llegar al equilibrio."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "naturaleza",
+      "titulo": "El equilibrio a nuestro alrededor",
+      "resumen": "Cuevas, sangre en la altura, el mar y los abonos.",
+      "anio": 5,
+      "etiqueta": "Paso 5",
+      "nivel": "intermedio",
+      "requiere": [
+        "le-chatelier"
+      ],
+      "ficha": {
+        "idea": "El equilibrio químico y el principio de Le Chatelier explican muchas cosas. En las cuevas de caliza, el agua con CO₂ disuelve la roca; cuando una gota cuelga del techo y suelta CO₂ al aire, el equilibrio se corre y vuelve a quedar caliza: así crecen, gota a gota, las estalactitas y estalagmitas. En la sangre, la hemoglobina se une al oxígeno (Hb + O₂ ⇌ HbO₂); en la alta montaña hay menos oxígeno, el equilibrio se corre hacia la izquierda y llega menos oxígeno a los tejidos; en unas semanas el cuerpo responde fabricando más hemoglobina. El mar absorbe parte del CO₂ que emitimos y se vuelve más ácido, lo que daña los corales. Y en la industria, el proceso de Haber produce amoníaco para los abonos aplicando Le Chatelier: alta presión, retirar el amoníaco y un catalizador.",
+        "contexto": [
+          {
+            "titulo": "Deportistas en la altura",
+            "texto": "Muchos atletas entrenan en lugares altos, como Boyacá, para que su cuerpo produzca más glóbulos rojos."
+          },
+          {
+            "titulo": "Fritz Haber",
+            "texto": "Su proceso, de 1909, permitió fabricar abonos nitrogenados en grandes cantidades; hoy buena parte de los alimentos del mundo dependen de él."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Las estalactitas y el cansancio en la altura se explican con el equilibrio químico."
+          ],
+          "media": [
+            "Los equilibrios explican las estalactitas, la adaptación a la altura y la acidificación del mar."
+          ],
+          "avanzada": [
+            "Proceso Haber: N₂ + 3 H₂ ⇌ 2 NH₃ (exotérmica), a alta presión, con catalizador de hierro y retirando el NH₃."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué uno se cansa más al jugar fútbol en Bogotá que en Neiva?",
+          "actividad": "Explicar con Le Chatelier cada una de las tres situaciones de la escena y proponer una cuarta.",
+          "errores": [
+            "Creer que en la montaña el aire tiene menor porcentaje de oxígeno (lo que baja es la presión).",
+            "Pensar que el equilibrio solo existe en el laboratorio."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Equilibrios de verdad",
+          "visual": {
+            "tipo": "escena",
+            "id": "equilibrio-naturaleza",
+            "fases": [
+              {
+                "id": "cueva",
+                "nombre": "La cueva",
+                "texto": "Las estalactitas crecen gota a gota."
+              },
+              {
+                "id": "altura",
+                "nombre": "La altura",
+                "texto": "Menos O₂, menos oxihemoglobina."
+              },
+              {
+                "id": "haber",
+                "nombre": "Proceso Haber",
+                "texto": "Amoníaco para los abonos.",
+                "nivel": "avanzado"
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre la presión del aire y la altura",
+            "tema": "gases-teoria",
+            "bloque": "altura"
+          }
+        }
+      ],
+      "juego": "equilibrio-vida-juego",
+      "preguntas": [
+        {
+          "id": "qm-eq-9",
+          "enunciado": "En la alta montaña llega menos oxígeno a los tejidos porque…",
+          "opciones": [
+            "Hay menos O₂ y el equilibrio Hb + O₂ ⇌ HbO₂ se corre a la izquierda",
+            "La sangre se congela",
+            "La hemoglobina desaparece",
+            "Hace más calor"
+          ],
+          "correcta": 0,
+          "explicacion": "Menos reactivo, menos producto."
+        },
+        {
+          "id": "qm-eq-10",
+          "enunciado": "¿Por qué crece una estalactita?",
+          "opciones": [
+            "Porque la gota suelta CO₂ y el equilibrio se corre hacia la caliza sólida",
+            "Porque el agua se congela",
+            "Porque los murciélagos la construyen",
+            "Porque la roca se derrite"
+          ],
+          "correcta": 0,
+          "explicacion": "Le Chatelier en una cueva."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}
