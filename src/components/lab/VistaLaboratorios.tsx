@@ -17,6 +17,7 @@ import Fotosintesis from './practicas/Fotosintesis.tsx'
 import Fermentacion from './practicas/Fermentacion.tsx'
 import ADN from './practicas/ADN.tsx'
 import Microbiologia from './practicas/Microbiologia.tsx'
+import Ambiente from './practicas/Ambiente.tsx'
 
 // Laboratorios virtuales (PLAN-LABORATORIOS.md). Las prácticas listas van en PRACTICAS; las demás de la
 // ruta salen como «próximamente».
@@ -46,6 +47,7 @@ const PRACTICAS: Entrada[] = [
   { id: 'fermentacion', titulo: 'Fermentación', resumen: 'Cuatro botellas con levadura y globo: azúcar, temperatura y un control. El gas, a prueba con agua de cal.', grupo: 'Biología', desdeGrado: 6, Juego: Fermentacion },
   { id: 'adn-fresa', titulo: 'Extracción de ADN de fresa', resumen: 'Machacar, jabón, sal, filtrar y alcohol frío: saca ADN visible con cosas de la cocina.', grupo: 'Biología', desdeGrado: 6, Juego: ADN },
   { id: 'microbiologia', titulo: 'Microbiología', resumen: 'Técnica aséptica, siembra con control, colonias día a día y conteo; discos y halos de inhibición.', grupo: 'Biología', desdeGrado: 6, Juego: Microbiologia },
+  { id: 'agua-suelo', titulo: 'Calidad del agua y del suelo (opcional)', resumen: 'Muestras de la vereda: pH, turbidez, oxígeno, bioindicadores, textura, infiltración y lombrices. Para el PRAE.', grupo: 'Biología', desdeGrado: 6, Juego: Ambiente },
   { id: solucionMolar.id, titulo: solucionMolar.titulo, resumen: solucionMolar.resumen, grupo: 'Química', desdeGrado: solucionMolar.desdeGrado, mesa: solucionMolar },
 ]
 
@@ -53,10 +55,6 @@ const PROXIMAS: { lab: string; items: string[] }[] = [
   {
     lab: 'Química',
     items: ['Medición: precisión y exactitud', 'Densidades', 'Mezclas y técnicas de separación', 'Conservación de la masa', 'Ensayo a la llama', 'Tipos de reacción', 'Reactivo límite con globos', 'Gases', 'Dilución y solubilidad', 'Ácidos, bases y pH', 'Titulación ácido-base', 'Velocidad de reacción', 'Saponificación', 'Combustión'],
-  },
-  {
-    lab: 'Biología',
-    items: ['Calidad del agua y del suelo'],
   },
 ]
 
