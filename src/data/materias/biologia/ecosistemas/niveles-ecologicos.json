@@ -1,0 +1,360 @@
+{
+  "id": "niveles-ecologicos",
+  "materia": "biologia",
+  "area": "ecosistemas",
+  "titulo": "Niveles de organización ecológica",
+  "subtema": "Del individuo a la biosfera",
+  "orden": 31,
+  "etiqueta": "1",
+  "vistas": [
+    "ruta"
+  ],
+  "tituloVista": "Ruta de la ecología",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Definir la ecología.",
+    "Ordenar los niveles: individuo, población, comunidad, ecosistema, bioma y biosfera.",
+    "Distinguir hábitat y nicho."
+  ],
+  "fuentes": [
+    "BORRADOR (área 3 en propuesta, ver PLAN-AREA-3.md). A verificar: Haeckel (1866), Colombia con cerca de la mitad de los páramos del mundo, crecimiento del frailejón (1–2 cm al año)."
+  ],
+  "bloques": [
+    {
+      "id": "que-es-ecologia",
+      "titulo": "¿Qué es la ecología?",
+      "resumen": "La ecología estudia cómo se relacionan los seres vivos entre sí y con su entorno.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "La ecología es la parte de la biología que estudia las relaciones de los seres vivos entre sí y con su entorno. Una rana, por ejemplo, se relaciona con los insectos que come, con la garza que la caza y con las plantas donde se esconde, pero también con el agua, la luz y la temperatura del lugar donde vive.",
+        "contexto": [
+          {
+            "titulo": "Oikos",
+            "texto": "La palabra la propuso Ernst Haeckel en 1866; viene del griego oikos, «casa»: la ecología estudia la «casa» de los seres vivos."
+          },
+          {
+            "titulo": "Ecología no es lo mismo que ecologismo",
+            "texto": "La ecología es una ciencia; el ecologismo es un movimiento que busca cuidar el ambiente, y usa lo que la ecología descubre."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "La ecología estudia las relaciones de los seres vivos entre sí y con su entorno."
+          ],
+          "media": [
+            "La palabra viene del griego oikos, «casa»."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Con qué cosas, vivas y no vivas, te relacionas tú en un día?",
+          "actividad": "Hacer en el tablero un mapa de relaciones de un animal de la región.",
+          "errores": [
+            "Confundir ecología con reciclaje o ecologismo."
+          ],
+          "minutos": 15
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Todo está relacionado",
+          "visual": {
+            "tipo": "escena",
+            "id": "ecologia-que",
+            "fases": [
+              {
+                "id": "organismo",
+                "nombre": "Una rana",
+                "texto": "Pensemos en una rana que vive en una laguna."
+              },
+              {
+                "id": "otros",
+                "nombre": "Con otros seres vivos",
+                "texto": "Se come a los insectos, la garza se la come a ella y se esconde entre las plantas."
+              },
+              {
+                "id": "entorno",
+                "nombre": "Con su entorno",
+                "texto": "También depende del agua, de la luz y de la temperatura."
+              },
+              {
+                "id": "ecologia",
+                "nombre": "La ecología",
+                "texto": "La ciencia que estudia todas esas relaciones es la ecología."
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "ecologia-que-juego",
+      "preguntas": [
+        {
+          "id": "ec-qe-1",
+          "enunciado": "¿Qué estudia la ecología?",
+          "opciones": [
+            "Las relaciones de los seres vivos entre sí y con su entorno",
+            "Solo cómo reciclar la basura",
+            "Las células y sus orgánulos",
+            "Los genes y la herencia"
+          ],
+          "correcta": 0,
+          "explicacion": "Viene de oikos, «casa»: estudia la casa de los seres vivos."
+        },
+        {
+          "id": "ec-qe-2",
+          "enunciado": "¿Cuál es una relación de la rana con su entorno sin vida?",
+          "opciones": [
+            "Necesita el agua de la laguna",
+            "Se come a los insectos",
+            "La garza se la come",
+            "Se esconde entre las plantas"
+          ],
+          "correcta": 0,
+          "explicacion": "El agua no está viva, pero la rana depende de ella."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "niveles",
+      "titulo": "Niveles de organización ecológica",
+      "resumen": "Del individuo a la biosfera: población, comunidad, ecosistema y bioma, con el páramo como ejemplo.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "nucleo": true,
+      "requiere": [
+        "que-es-ecologia"
+      ],
+      "ficha": {
+        "idea": "La ecología estudia la vida en varios niveles. Un individuo es un solo ser vivo, como un frailejón. Una población son todos los individuos de la misma especie en un lugar. Una comunidad son todas las poblaciones que viven juntas. Un ecosistema es la comunidad más el entorno sin vida (agua, suelo, clima). Un bioma reúne ecosistemas parecidos en una gran región, y la biosfera es toda la parte de la Tierra donde hay vida.",
+        "contexto": [
+          {
+            "titulo": "Los páramos",
+            "texto": "Colombia tiene cerca de la mitad de los páramos del mundo. De ellos nace buena parte del agua que llega a las ciudades."
+          },
+          {
+            "titulo": "El frailejón",
+            "texto": "Crece apenas uno o dos centímetros al año; un frailejón de un metro puede tener varias décadas."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Individuo → población → comunidad → ecosistema → bioma → biosfera."
+          ],
+          "media": [
+            "Población: una especie; comunidad: varias especies."
+          ],
+          "avanzada": [
+            "Ecosistema: comunidad + factores sin vida (abióticos)."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Qué diferencia hay entre «los frailejones del páramo» y «el páramo»?",
+          "actividad": "Recorrer la escena y pedir ejemplos de cada nivel en la región del colegio.",
+          "errores": [
+            "Confundir población con comunidad.",
+            "Olvidar que el ecosistema incluye lo no vivo."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Del frailejón a la biosfera",
+          "visual": {
+            "tipo": "escena",
+            "id": "niveles-ecologicos",
+            "fases": [
+              {
+                "id": "individuo",
+                "nombre": "Individuo",
+                "texto": "Un solo ser vivo: este frailejón."
+              },
+              {
+                "id": "poblacion",
+                "nombre": "Población",
+                "texto": "Todos los frailejones de la misma especie que viven en este páramo."
+              },
+              {
+                "id": "comunidad",
+                "nombre": "Comunidad",
+                "texto": "Frailejones, pajonales, osos de anteojos, venados, colibríes y ranas: todas las poblaciones juntas."
+              },
+              {
+                "id": "ecosistema",
+                "nombre": "Ecosistema",
+                "texto": "La comunidad más el agua, el suelo, la luz, la niebla y el frío: el páramo."
+              },
+              {
+                "id": "bioma",
+                "nombre": "Bioma",
+                "texto": "Los páramos de las montañas forman un gran conjunto de ecosistemas parecidos.",
+                "nivel": "intermedio"
+              },
+              {
+                "id": "biosfera",
+                "nombre": "Biosfera",
+                "texto": "Toda la parte de la Tierra donde hay vida: tierra, agua y aire."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Todos los osos de anteojos de un páramo forman…",
+            "opciones": [
+              "una población",
+              "una comunidad",
+              "un ecosistema",
+              "un bioma"
+            ],
+            "correcta": 0,
+            "explicacion": "Son individuos de la misma especie en el mismo lugar."
+          }
+        }
+      ],
+      "juego": "niveles-ecologicos-juego",
+      "preguntas": [
+        {
+          "id": "ec-ni-1",
+          "enunciado": "¿Qué diferencia una comunidad de un ecosistema?",
+          "opciones": [
+            "El ecosistema incluye también el agua, el suelo y el clima",
+            "La comunidad es más grande que el ecosistema",
+            "La comunidad tiene una sola especie",
+            "No hay diferencia"
+          ],
+          "correcta": 0,
+          "explicacion": "Ecosistema = comunidad + entorno sin vida."
+        },
+        {
+          "id": "ec-ni-2",
+          "enunciado": "¿Cuál es el orden correcto, de menor a mayor?",
+          "opciones": [
+            "Individuo, población, comunidad, ecosistema",
+            "Población, individuo, ecosistema, comunidad",
+            "Comunidad, población, individuo, ecosistema",
+            "Ecosistema, comunidad, población, individuo"
+          ],
+          "correcta": 0,
+          "explicacion": "Cada nivel contiene al anterior."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "habitat-nicho",
+      "titulo": "Hábitat y nicho",
+      "resumen": "El hábitat es dónde vive un ser vivo; el nicho, qué papel cumple en el ecosistema.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "basico",
+      "requiere": [
+        "que-es-ecologia"
+      ],
+      "ficha": {
+        "idea": "El hábitat es el lugar donde vive un ser vivo: su «dirección». El nicho ecológico es el papel que cumple en el ecosistema: qué come, quién se lo come, cuándo está activo y qué hace por los demás; es su «profesión». Un colibrí y un pájaro carpintero pueden vivir en el mismo bosque (mismo hábitat) y tener nichos muy distintos.",
+        "contexto": [
+          {
+            "titulo": "Competencia",
+            "texto": "Si dos especies tienen el mismo nicho en el mismo lugar, compiten: una puede desplazar a la otra o se reparten el recurso (por ejemplo, flores de distinta forma)."
+          },
+          {
+            "titulo": "Polinizadores",
+            "texto": "Muchas flores tienen la forma justa del pico de su colibrí: se adaptaron juntos."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Hábitat: dónde vive.",
+            "Nicho: qué hace en el ecosistema."
+          ],
+          "media": [
+            "Especies con el mismo nicho compiten."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Cuál sería tu «dirección» y tu «profesión» en el ecosistema del colegio?",
+          "actividad": "Elegir un animal de la región y describir su hábitat y su nicho.",
+          "errores": [
+            "Usar hábitat y nicho como sinónimos."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Dirección y profesión",
+          "visual": {
+            "tipo": "escena",
+            "id": "habitat-nicho",
+            "fases": [
+              {
+                "id": "habitat",
+                "nombre": "Hábitat",
+                "texto": "El colibrí y el carpintero viven en el mismo bosque: comparten hábitat."
+              },
+              {
+                "id": "nicho-colibri",
+                "nombre": "Nicho del colibrí",
+                "texto": "Toma néctar de las flores y, al hacerlo, las poliniza."
+              },
+              {
+                "id": "nicho-carpintero",
+                "nombre": "Nicho del carpintero",
+                "texto": "Come insectos de la corteza y deja huecos que usan otros animales."
+              },
+              {
+                "id": "direccion",
+                "nombre": "En resumen",
+                "texto": "El hábitat es la dirección; el nicho, la profesión."
+              },
+              {
+                "id": "competencia",
+                "nombre": "Mismo nicho",
+                "texto": "Si dos especies tienen el mismo nicho, compiten por el recurso.",
+                "nivel": "intermedio"
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "habitat-nicho-juego",
+      "preguntas": [
+        {
+          "id": "ec-hn-1",
+          "enunciado": "¿Qué es el nicho ecológico?",
+          "opciones": [
+            "El papel que cumple un ser vivo en el ecosistema",
+            "El lugar exacto donde duerme un animal",
+            "El nido de un ave",
+            "El clima de una región"
+          ],
+          "correcta": 0,
+          "explicacion": "Es su «profesión»: qué come, quién se lo come y qué hace."
+        },
+        {
+          "id": "ec-hn-2",
+          "enunciado": "Un colibrí y un carpintero viven en el mismo bosque. Entonces…",
+          "opciones": [
+            "comparten hábitat pero tienen nichos distintos",
+            "tienen el mismo nicho",
+            "forman una población",
+            "no se relacionan con nada"
+          ],
+          "correcta": 0,
+          "explicacion": "Mismo lugar, distinto papel."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}

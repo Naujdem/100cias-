@@ -19,6 +19,7 @@ import { EscenaDogma, EscenaTranscripcion, EscenaLecturaCodones, EscenaTraduccio
 import { EscenaIncompleta, EscenaCodominancia, EscenaAbo, EscenaLigada, EscenaGenealogia, EscenaPoligenica } from './EscenasNoMendel.tsx'
 import { EscenaQueEsMutacion, EscenaPuntuales, EscenaFalciforme, EscenaNoDisyuncion, EscenaCromosomicas, EscenaVariacion } from './EscenasMutaciones.tsx'
 import { EscenaBiotecQue, EscenaInsulina, EscenaPcr, EscenaTransgenico, EscenaEdicion, EscenaDebate } from './EscenasBiotec.tsx'
+import { EscenaEcologiaQue, EscenaNivelesEcologicos, EscenaHabitatNicho } from './EscenasEcologia.tsx'
 
 /** Escenas vivas: un dibujo que se transforma según la fase (`fase` = id de la fase en el JSON). */
 export const ESCENAS: Record<string, ComponentType<{ fase: string }>> = {
@@ -91,6 +92,9 @@ export const ESCENAS: Record<string, ComponentType<{ fase: string }>> = {
   transgenico: EscenaTransgenico,
   edicion: EscenaEdicion,
   debate: EscenaDebate,
+  'ecologia-que': EscenaEcologiaQue,
+  'niveles-ecologicos': EscenaNivelesEcologicos,
+  'habitat-nicho': EscenaHabitatNicho,
   'optico-electronico': EscenaOpticoElectronico,
   'celula-animal': EscenaZoomCelula,
   'celula-vegetal': ({ fase }) => EscenaZoomCelula({ fase, vegetal: true }),

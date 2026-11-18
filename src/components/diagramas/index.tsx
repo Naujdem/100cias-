@@ -25,6 +25,7 @@ import RuedaCodones from './RuedaCodones.tsx'
 import PunnettNoMendel from './PunnettNoMendel.tsx'
 import MutaGen from './MutaGen.tsx'
 import PcrCiclos from './PcrCiclos.tsx'
+import { EcologiaQueJuego, NivelesEcologicosJuego, HabitatNichoJuego } from './JuegosEcologia.tsx'
 import { BiotecQueJuego, InsulinaJuego, PcrJuego, TransgenicoJuego, EdicionJuego, DebateJuego } from './JuegosBiotec.tsx'
 import { QueEsMutacionJuego, PuntualesJuego, EfectosJuego, NumericasJuego, CromosomicasJuego, VariacionJuego } from './JuegosMutaciones.tsx'
 import { IncompletaJuego, CodominanciaJuego, SangreJuego, LigadaJuego, GenealogiaJuego, PoligenicaJuego } from './JuegosNoMendel.tsx'
@@ -194,6 +195,9 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'transgenico-juego': TransgenicoJuego,
   'edicion-juego': EdicionJuego,
   'debate-juego': DebateJuego,
+  'ecologia-que-juego': EcologiaQueJuego,
+  'niveles-ecologicos-juego': NivelesEcologicosJuego,
+  'habitat-nicho-juego': HabitatNichoJuego,
   'meiosis-i-ii-juego': MeiosisIoIIJuego,
   'oficio-juego': OficioJuego,
   'origen-celulas-juego': OrigenCelulasJuego,
