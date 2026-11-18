@@ -113,6 +113,11 @@
         "que-es",
         "transgenicos",
         "etica"
+      ],
+      "niveles-ecologicos": [
+        "que-es-ecologia",
+        "niveles",
+        "habitat-nicho"
       ]
     },
     "nivelDibujo": "basico",
@@ -135,7 +140,8 @@
       "expresion-genica": "Del gen a la proteína: transcripción, código genético y traducción.",
       "herencia-no-mendeliana": "Dominancia incompleta y grupos sanguíneos.",
       "mutaciones": "Qué es una mutación, mutaciones puntuales y de dónde sale la variación.",
-      "biotecnologia": "Qué es la biotecnología, los transgénicos y el debate."
+      "biotecnologia": "Qué es la biotecnología, los transgénicos y el debate.",
+      "niveles-ecologicos": "Qué es la ecología, los niveles y hábitat y nicho."
     }
   },
   {
@@ -289,6 +295,11 @@
         "transgenicos",
         "crispr",
         "etica"
+      ],
+      "niveles-ecologicos": [
+        "que-es-ecologia",
+        "niveles",
+        "habitat-nicho"
       ]
     },
     "nivelDibujo": "intermedio",
@@ -311,7 +322,8 @@
       "expresion-genica": "Suma los genes encendidos y apagados.",
       "herencia-no-mendeliana": "Suma codominancia, herencia ligada al sexo y genealogías.",
       "mutaciones": "Suma los efectos (anemia falciforme) y los cambios en el número de cromosomas.",
-      "biotecnologia": "Suma el ADN recombinante, la PCR y CRISPR."
+      "biotecnologia": "Suma el ADN recombinante, la PCR y CRISPR.",
+      "niveles-ecologicos": "Los tres pasos, con el bioma y la competencia."
     }
   },
   {
@@ -486,6 +498,11 @@
         "transgenicos",
         "crispr",
         "etica"
+      ],
+      "niveles-ecologicos": [
+        "que-es-ecologia",
+        "niveles",
+        "habitat-nicho"
       ]
     },
     "nivelDibujo": "avanzado",
@@ -508,7 +525,8 @@
       "expresion-genica": "Los seis pasos, con intrones, exones y empalme alternativo.",
       "herencia-no-mendeliana": "Los seis pasos, con la herencia poligénica y el ambiente.",
       "mutaciones": "Los seis pasos, con las mutaciones cromosómicas estructurales.",
-      "biotecnologia": "Los seis pasos completos."
+      "biotecnologia": "Los seis pasos completos.",
+      "niveles-ecologicos": "Los tres pasos, con el bioma y la competencia."
     }
   }
 ]

@@ -396,3 +396,7 @@ Hooke usa la reconstrucción de Rita Greer (2004, Free Art License, Wikimedia Co
 - `biotecnologia.json` (orden 28, ruta de 6 pasos): qué es (tradicional y moderna), ADN recombinante (9°, insulina), PCR (9°, Explora: `pcr-ciclos`), transgénicos (maíz Bt, contexto Colombia), CRISPR (9°, terapias 2023) y el debate (beneficios y preocupaciones, voces distintas).
 - Escenas en `escenas/EscenasBiotec.tsx`; juegos en `diagramas/JuegosBiotec.tsx`.
 - Con esto los 8 temas del área 2 tienen contenido; PROXIMOS de genética queda vacío. Todo en borrador para la revisión docente.
+
+## Área 3 · Relaciones ecosistémicas (aprobada el 17 nov, con el tema 8)
+- PLAN-AREA-3.md: ruta de 8 temas aprobada.
+- Tema 1 «Niveles de organización ecológica» hecho como muestra: `ecosistemas/niveles-ecologicos.json` (orden 31, 3 pasos: qué es la ecología, niveles con zoom del frailejón a la biosfera, hábitat y nicho). Escenas en `escenas/EscenasEcologia.tsx` (incluye dibujos de frailejón, colibrí, venado, oso de anteojos y rana reutilizables); juegos en `diagramas/JuegosEcologia.tsx`.
