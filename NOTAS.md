@@ -439,3 +439,7 @@ Hooke usa la reconstrucción de Rita Greer (2004, Free Art License, Wikimedia Co
 - **Tamaño de la app (18 nov):** el JS pasó de 2 MiB y el PWA dejaba de precachearlo (fallaba el build). Se subió `maximumFileSizeToCacheInBytes` a 6 MiB en `vite.config.ts`. Pendiente a futuro: dividir el código por área (carga diferida de escenas y diagramas) para que la app abra más rápido.
 - Tema 9 «Sostenibilidad y acción ambiental» (`ambiente/sostenibilidad.json`, orden 59, ruta de 5 pasos): desarrollo sostenible (tres dimensiones), ODS ambientales (6, 7, 12, 13, 14, 15), PRAE (Decreto 1743 de 1994; qué es y qué no), proyecto ambiental de aula (escena `proyecto-aula`; Explora: `arbol-problemas`, tres problemas de vereda con teclas 1–3 y C/E/S para causas, efectos y soluciones) y participación (9°: art. 79, petición, tutela, acción popular, veeduría, consulta previa; Atrato 2016 y Amazonía 2018; atajo a diálogo de saberes). Escena en `escenas/EscenasSostenibilidad.tsx`; juegos en `diagramas/JuegosSostenibilidad.tsx`.
 - Con esto el área 5 tiene sus 9 temas (pendiente: revisión docente y revisión visual en pantalla). Las cinco áreas de biología quedan con contenido.
+
+## Química (18 nov 2026)
+
+- Aprobado el plan de Química en 5 áreas (PLAN-QUIMICA.md): materia y sus cambios; átomo, tabla periódica y enlace; compuestos y reacciones; gases, soluciones y equilibrio; química orgánica. Ruta detallada del área 1 (6 temas). Siguiente paso: agregar Química a la biblioteca de Inicio y construir el tema 1 del área 1.
