@@ -25,7 +25,7 @@ import { EscenaIntraespecificas, EscenaDepredacion, EscenaSimbiosis } from './Es
 import { EscenaDensidad, EscenaCrecimiento, EscenaDepredadorPresa } from './EscenasPoblaciones.tsx'
 import { EscenaSucesionPrimaria, EscenaSucesionSecundaria, EscenaPerturbaciones } from './EscenasSucesion.tsx'
 import { EscenaBiodiversidadNiveles, EscenaMegadiversa, EscenaAmenazas, EscenaConservar } from './EscenasBiodiversidad.tsx'
-import { EscenaLinneo, EscenaLamarck, EscenaCuvier, EscenaLyell, EscenaBeagle, EscenaSeleccion, EscenaSintesis, EscenaRitmos, EscenaFosil, EscenaAnatomia, EscenaEmbriones, EscenaIslas, EscenaMolecular, EscenaPolillas, EscenaMaiz, EscenaResistencia, EscenaTiposSeleccion, EscenaAdaptacion, EscenaFrailejon, EscenaCactus, EscenaMigracion, EscenaMimetismo, EscenaAcervo, EscenaDeriva, EscenaFlujo, EscenaSexual, EscenaEspecie, EscenaAlopatrica, EscenaPoliploidia, EscenaRadiacion, EscenaCategorias, EscenaDominios, EscenaCladograma, EscenaArbolVida } from './EscenasEvolucion.tsx'
+import { EscenaLinneo, EscenaLamarck, EscenaCuvier, EscenaLyell, EscenaBeagle, EscenaSeleccion, EscenaSintesis, EscenaRitmos, EscenaFosil, EscenaAnatomia, EscenaEmbriones, EscenaIslas, EscenaMolecular, EscenaPolillas, EscenaMaiz, EscenaResistencia, EscenaTiposSeleccion, EscenaAdaptacion, EscenaFrailejon, EscenaCactus, EscenaMigracion, EscenaMimetismo, EscenaAcervo, EscenaDeriva, EscenaFlujo, EscenaSexual, EscenaEspecie, EscenaAlopatrica, EscenaPoliploidia, EscenaRadiacion, EscenaCategorias, EscenaDominios, EscenaCladograma, EscenaArbolVida, EscenaOxigeno, EscenaTierraFirme, EscenaExtinciones, EscenaFosilesColombia, EscenaHomininos } from './EscenasEvolucion.tsx'
 import { EscenaTerritorio, EscenaCalendario, EscenaPolicultivo, EscenaDialogo } from './EscenasTerritorio.tsx'
 
 /** Escenas vivas: un dibujo que se transforma según la fase (`fase` = id de la fase en el JSON). */
@@ -163,4 +163,9 @@ export const ESCENAS: Record<string, ComponentType<{ fase: string }>> = {
   'ev-dominios': EscenaDominios,
   'ev-cladograma': EscenaCladograma,
   'ev-arbol-vida': EscenaArbolVida,
+  'ev-oxigeno': EscenaOxigeno,
+  'ev-tierra-firme': EscenaTierraFirme,
+  'ev-extinciones': EscenaExtinciones,
+  'ev-fosiles-colombia': EscenaFosilesColombia,
+  'ev-homininos': EscenaHomininos,
 }

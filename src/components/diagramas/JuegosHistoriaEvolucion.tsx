@@ -557,3 +557,64 @@ export function ArbolVidaJuego() {
       cierre="Todos somos ramas del mismo árbol." />
   )
 }
+
+/* ═══ Tema 8 · Historia de la vida en la Tierra ═══ */
+
+export function OrdenHistoriaJuego() {
+  return (
+    <JuegoDecide titulo="¿Qué pasó primero?" pregunta="¿Cuál fue antes?" instrucciones="Decide cuál de los dos hechos ocurrió primero." clave="cien:orden-historia-mejor"
+      opciones={[o('a', 'El primero', '1️⃣'), o('b', 'El segundo', '2️⃣')]}
+      cartas={[
+        c('🦠', '¿Primeras células o primeros animales?', 'a', 'Células hace ≈ 3800 Ma; animales hace ≈ 600 Ma.'),
+        c('🦕', '¿Primeros dinosaurios o plantas en tierra?', 'b', 'Plantas ≈ 470 Ma; dinosaurios ≈ 230 Ma.'),
+        c('🫧', '¿Oxígeno en el aire o células con núcleo?', 'a', 'Oxígeno ≈ 2400 Ma; eucariotas ≈ 1800 Ma.'),
+        c('🧍', '¿Homo sapiens o extinción de los dinosaurios?', 'b', 'Dinosaurios ≈ 66 Ma; Homo sapiens ≈ 0,3 Ma.'),
+        c('🐍', '¿Titanoboa o Tiranosaurio?', 'b', 'El tiranosaurio vivió antes del asteroide; Titanoboa, después.'),
+        c('🐟', '¿Peces con patas o huevo con cáscara?', 'a', 'Tetrápodos ≈ 375 Ma; amniotas ≈ 310 Ma.'),
+      ]}
+      cierre="La vida fue unicelular la mayor parte de la historia de la Tierra." />
+  )
+}
+
+export function ExtincionesJuego() {
+  return (
+    <JuegoDecide titulo="Extinciones" pregunta="¿Es cierto?" instrucciones="Decide si cada frase sobre las extinciones masivas es cierta o falsa." clave="cien:extinciones-mejor" opciones={VF}
+      cartas={[
+        c('☄️', 'Un asteroide contribuyó a la extinción de los dinosaurios hace 66 Ma', 'v', 'Cayó en Chicxulub, en el actual México.'),
+        c('🐦', 'Todos los dinosaurios se extinguieron', 'f', 'Las aves son dinosaurios que sobrevivieron.'),
+        c('🌊', 'La extinción del Pérmico fue la más grande', 'v', 'Desapareció la gran mayoría de las especies marinas.'),
+        c('🧍', 'Los humanos no influyen en las extinciones de hoy', 'f', 'La pérdida de hábitat y la cacería causan muchas extinciones.'),
+        c('🌱', 'Después de cada extinción masiva la vida se recuperó con grupos nuevos', 'v', 'Pero tardó millones de años.'),
+      ]}
+      cierre="Las extinciones cierran capítulos y abren otros; la de hoy depende de nosotros." />
+  )
+}
+
+export function FosilesColombiaJuego() {
+  return (
+    <JuegoDecide titulo="Fósiles de Colombia" pregunta="¿Dónde se encontró?" instrucciones="Decide en qué lugar de Colombia se encontró cada fósil." clave="cien:fosiles-colombia-mejor"
+      opciones={[o('vl', 'Villa de Leyva', '🐊'), o('ce', 'Cerrejón', '🐍'), o('ta', 'Tatacoa', '🐒')]}
+      cartas={[
+        c('🐍', 'Titanoboa, la serpiente gigante', 'ce', 'En las minas de carbón de La Guajira.'),
+        c('🌊', 'Kronosaurus, un reptil marino gigante', 'vl', 'Boyacá estuvo cubierta por el mar en el Cretácico.'),
+        c('🐊', 'Purussaurus, un caimán gigante', 'ta', 'En La Venta, Huila; su nombre recuerda a Neiva.'),
+        c('🐚', 'Amonitas, conchas en espiral de animales marinos', 'vl', 'Son muy comunes en la región de Villa de Leyva.'),
+        c('🐒', 'Monos parientes de los actuales de la Amazonia', 'ta', 'Parte de la fauna de La Venta.'),
+      ]}
+      cierre="Colombia guarda fósiles de mares, selvas y pantanos de hace millones de años." />
+  )
+}
+
+export function HumanosJuego() {
+  return (
+    <JuegoDecide titulo="Evolución humana" pregunta="¿Es cierto?" instrucciones="Decide si cada frase sobre la evolución humana es cierta o falsa." clave="cien:humanos-mejor" opciones={VF}
+      cartas={[
+        c('🐒', 'Los humanos venimos de los chimpancés', 'f', 'Compartimos un antepasado común hace unos 6 o 7 millones de años.'),
+        c('👥', 'Hubo épocas en que varias especies humanas vivieron a la vez', 'v', 'Homo sapiens convivió con los neandertales.'),
+        c('🌍', 'Homo sapiens apareció en África', 'v', 'Hace unos 300 000 años.'),
+        c('🦕', 'Los primeros humanos convivieron con los dinosaurios', 'f', 'Los separan más de 60 millones de años.'),
+        c('🏹', 'Hay restos humanos de hace más de 12 000 años en la sabana de Bogotá', 'v', 'En sitios como El Abra y Tibitó.'),
+      ]}
+      cierre="La evolución humana es un arbusto con muchas ramas; solo queda la nuestra." />
+  )
+}

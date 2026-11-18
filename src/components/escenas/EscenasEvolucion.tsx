@@ -1369,3 +1369,197 @@ export function EscenaArbolVida({ fase }: { fase: string }) {
     </svg>
   )
 }
+
+/* ═══ Tema 8 · Historia de la vida en la Tierra ═════════════════════════ */
+
+/* ── las primeras células y el oxígeno ───────────────────────────────── */
+
+const OXIGENO = ['tierra-joven', 'celulas', 'estromatolitos', 'oxigeno', 'eucariotas']
+
+export function EscenaOxigeno({ fase }: { fase: string }) {
+  const i = idx(OXIGENO, fase)
+  const cielo = ['#c98a5a', '#c99a7a', '#b7a99a', '#9cc6e4', '#9cc6e4'][i]
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label={`Primeras células y oxígeno: ${fase}`} className="h-full w-full">
+      {fondo(cielo)}
+      <g style={ver(i === 0)}>
+        <path d="M 300 150 L 340 70 L 380 150 Z" fill="#5a4038" /><path d="M 330 70 q 10 -30 20 0" fill="#e05a2a" />
+        {[60, 140, 220].map((x) => <T key={x} x={x} y={60} t="☄️" s={16} />)}
+      </g>
+      <rect x="-10" y="150" width="420" height="160" fill="#4f7fa3" />
+      {/* células en el mar */}
+      {Array.from({ length: 10 }, (_, k) => (
+        <circle key={k} cx={40 + k * 35} cy={190 + ((k * 23) % 40)} r="4" fill={i >= 2 ? '#4fae6a' : '#a9d2c4'} style={{ transition: suave, opacity: i >= 1 ? 1 : 0 }} />
+      ))}
+      {/* estromatolitos */}
+      <g style={ver(i >= 2)}>
+        {[90, 200, 310].map((x) => <path key={x} d={`M ${x - 30} 300 Q ${x - 30} 245 ${x} 240 Q ${x + 30} 245 ${x + 30} 300 Z`} fill="#6f8f4a" />)}
+      </g>
+      {/* burbujas de oxígeno */}
+      <g style={ver(i >= 3)}>
+        {Array.from({ length: 8 }, (_, k) => <circle key={k} cx={60 + k * 40} cy={120 - (k % 3) * 25} r="6" fill="none" stroke="#fff" strokeWidth="2" />)}
+        <T x={200} y={50} t="O₂" s={22} c="#fff" />
+      </g>
+      <g style={ver(i === 4)}>
+        <circle cx="200" cy="215" r="22" fill="#cfe6f5" stroke="#2f5f86" strokeWidth="2" />
+        <circle cx="200" cy="215" r="8" fill="#7a5aa8" />
+        <T x={240} y={205} t="núcleo" s={10} c="#fff" />
+      </g>
+      <rect x="20" y="8" width="360" height="26" rx="8" fill="#ffffffcc" />
+      <T x={200} y={26} t={['Hace 4600 Ma: una Tierra caliente, sin oxígeno', 'Hace ≈ 3800 Ma: las primeras células en el mar', 'Cianobacterias que forman estromatolitos', 'Hace ≈ 2400 Ma: el oxígeno llena el aire', 'Hace ≈ 1800 Ma: células con núcleo'][i]} s={12} />
+    </svg>
+  )
+}
+
+/* ── de la explosión cámbrica a tierra firme ─────────────────────────── */
+
+const TIERRA = ['cambrico', 'plantas', 'tetrapodos', 'huevo']
+
+export function EscenaTierraFirme({ fase }: { fase: string }) {
+  const i = idx(TIERRA, fase)
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label={`Conquista de la tierra: ${fase}`} className="h-full w-full">
+      {fondo('#dcebf5')}
+      <rect x="-10" y="170" width="230" height="140" fill="#4f7fa3" />
+      <path d="M 220 170 Q 260 160 410 165 V 310 H 220 Z" fill="#b8a27a" />
+      {/* animales cámbricos */}
+      <g style={{ transition: suave, opacity: i === 0 ? 1 : 0.35 }}>
+        <T x={60} y={230} t="🦐" s={22} /><T x={120} y={260} t="🪼" s={22} /><T x={170} y={220} t="🐚" s={18} /><T x={90} y={290} t="🪱" s={16} />
+      </g>
+      <g style={ver(i >= 1)}>{[260, 300, 340, 380].map((x) => <T key={x} x={x} y={162} t="🌱" s={18} />)}</g>
+      <g style={ver(i >= 1)}><T x={320} y={130} t="🪲" s={16} /></g>
+      <g style={{ transition: 'transform 1.4s cubic-bezier(.45,.05,.25,1), opacity 0.7s', opacity: i >= 2 ? 1 : 0, transform: i >= 2 ? 'translate(230px, 150px)' : 'translate(150px, 210px)' }}>
+        <text textAnchor="middle" fontSize="28">🦎</text>
+      </g>
+      <g style={ver(i === 3)}><T x={330} y={200} t="🥚" s={24} /><T x={330} y={230} t="huevo con cáscara" s={10} /></g>
+      <rect x="20" y="10" width="360" height="40" rx="8" fill="#ffffffcc" />
+      <T x={200} y={28} t={['Hace 538 Ma: explosión cámbrica', 'Hace ≈ 470 Ma: plantas y luego insectos en tierra', 'Hace ≈ 375 Ma: peces con patas salen del agua', 'Hace ≈ 310 Ma: el huevo con cáscara'][i]} s={12} />
+      <T x={200} y={44} t={['aparecen casi todos los grandes grupos de animales', 'el suelo se cubre de verde', 'los primeros tetrápodos', 'los reptiles ya no dependen del agua para reproducirse'][i]} s={10} peso={600} />
+    </svg>
+  )
+}
+
+/* ── las cinco grandes extinciones ───────────────────────────────────── */
+
+const EXTINCIONES = ['curva', 'permico', 'kpg', 'sexta']
+// [tiempo en Ma, diversidad relativa]
+const DIVERSIDAD: [number, number][] = [[540, 20], [450, 55], [443, 30], [380, 60], [372, 42], [300, 65], [252, 18], [210, 50], [201, 35], [100, 85], [66, 55], [30, 95], [0, 110]]
+const XT = (ma: number) => 40 + ((540 - ma) / 540) * 330
+const YD = (d: number) => 230 - d * 1.6
+
+export function EscenaExtinciones({ fase }: { fase: string }) {
+  const i = idx(EXTINCIONES, fase)
+  const caidas = [443, 372, 252, 201, 66]
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label={`Extinciones masivas: ${fase}`} className="h-full w-full">
+      {fondo('#f4f1ea')}
+      <line x1="40" y1="230" x2="375" y2="230" stroke="#888" strokeWidth="2" />
+      <line x1="40" y1="230" x2="40" y2="40" stroke="#888" strokeWidth="2" />
+      <T x={210} y={250} t="millones de años atrás  →  hoy" s={10} peso={600} />
+      <text x="28" y="140" fontSize="10" fontWeight="700" textAnchor="middle" transform="rotate(-90 28 140)">diversidad</text>
+      <polyline points={DIVERSIDAD.map(([t, d]) => `${XT(t)},${YD(d)}`).join(' ')} fill="none" stroke={VERDE} strokeWidth="3" />
+      {caidas.map((t) => (
+        <g key={t}>
+          <text x={XT(t)} y="225" textAnchor="middle" fontSize="12">💀</text>
+          <circle cx={XT(t)} cy={YD(DIVERSIDAD.find((p) => p[0] === t)![1])} r="9" fill="none" stroke={ROJO} strokeWidth="2.5"
+            style={{ transition: suave, opacity: (i === 1 && t === 252) || (i === 2 && t === 66) || i === 0 ? 1 : 0.15 }} />
+          <text x={XT(t)} y="268" textAnchor="middle" fontSize="9" fontWeight="700" style={{ opacity: i === 0 ? 1 : 0, transition: suave }}>{t}</text>
+        </g>
+      ))}
+      <g style={ver(i === 3)}>
+        <circle cx={XT(0)} cy={YD(110)} r="10" fill="none" stroke={ROJO} strokeWidth="3" strokeDasharray="4 3" />
+        <path d={`M ${XT(0)} ${YD(110)} l 0 40`} stroke={ROJO} strokeWidth="3" strokeDasharray="4 3" markerEnd="url(#ex-fl)" />
+      </g>
+      <rect x="60" y="8" width="300" height="38" rx="8" fill="#fff" />
+      <T x={210} y={24} t={['Cinco grandes extinciones', 'Pérmico (252 Ma): la peor de todas', 'Cretácico (66 Ma): el asteroide', '¿La sexta? Hoy, causada por los humanos'][i]} s={12} />
+      <T x={210} y={39} t={['Después de cada una, la vida se recuperó con grupos nuevos', 'desapareció la gran mayoría de las especies marinas', 'adiós a los dinosaurios (menos las aves)', 'pérdida de hábitat, cacería, contaminación, clima'][i]} s={9} peso={600} />
+      <Flecha id="ex-fl" />
+    </svg>
+  )
+}
+
+/* ── fósiles de Colombia ─────────────────────────────────────────────── */
+
+const FOS_COL = ['mapa', 'kronosaurus', 'titanoboa', 'laventa']
+const SITIOS = [
+  { id: 'kronosaurus', x: 175, y: 120, n: 'Villa de Leyva', ic: '🐊', ed: '≈ 120 Ma' },
+  { id: 'titanoboa', x: 190, y: 30, n: 'Cerrejón', ic: '🐍', ed: '≈ 60 Ma' },
+  { id: 'laventa', x: 140, y: 175, n: 'La Tatacoa', ic: '🐒', ed: '≈ 13 Ma' },
+]
+
+export function EscenaFosilesColombia({ fase }: { fase: string }) {
+  const i = idx(FOS_COL, fase)
+  const s = SITIOS[i - 1]
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label={`Fósiles de Colombia: ${fase}`} className="h-full w-full">
+      {fondo('#dcebf5')}
+      {/* silueta esquemática de Colombia */}
+      <path d="M 180 15 L 215 25 L 230 60 L 285 80 L 300 130 L 280 200 L 240 270 L 200 250 L 175 200 L 120 190 L 95 150 L 110 100 L 140 70 L 160 30 Z" fill="#cfdcb8" stroke="#9fb08a" strokeWidth="2" />
+      {SITIOS.map((p, k) => (
+        <g key={p.id} style={{ transition: suave, opacity: i === 0 || i === k + 1 ? 1 : 0.25 }}>
+          <circle cx={p.x} cy={p.y} r="6" fill={ROJO} />
+          <text x={p.x + 10} y={p.y + 4} fontSize="11" fontWeight="800">{p.n}</text>
+        </g>
+      ))}
+      <g style={ver(i >= 1)}>
+        <rect x="300" y="150" width="90" height="120" rx="12" fill="#fff" stroke="#d8cfbd" />
+        <T x={345} y={200} t={s?.ic ?? ''} s={36} />
+        <T x={345} y={230} t={s ? ['', 'Kronosaurus', 'Titanoboa', 'Purussaurus'][i] : ''} s={11} />
+        <T x={345} y={250} t={s?.ed ?? ''} s={10} peso={600} c={AZUL} />
+      </g>
+      <rect x="10" y="255" width="280" height="38" rx="8" fill="#ffffffdd" />
+      <T x={150} y={272} t={['Tres ventanas al pasado en Colombia', 'Reptil marino gigante: Boyacá era un mar', 'La serpiente más grande conocida, ≈ 13 m', 'Caimanes gigantes, primates y tortugas'][i]} s={11} />
+      <T x={150} y={287} t={['', 'Cretácico', 'Paleoceno: selva tropical tras los dinosaurios', 'Mioceno, en el Huila'][i]} s={9} peso={600} />
+    </svg>
+  )
+}
+
+/* ── evolución humana: un arbusto, no una escalera ───────────────────── */
+
+const HUMANOS = ['escalera', 'arbusto', 'sapiens', 'america']
+const ESPECIES_H = [
+  { n: 'Australopithecus', de: 4.2, a: 2.0, f: 0 },
+  { n: 'Paranthropus', de: 2.7, a: 1.2, f: 1 },
+  { n: 'Homo habilis', de: 2.4, a: 1.5, f: 2 },
+  { n: 'Homo erectus', de: 1.9, a: 0.1, f: 3 },
+  { n: 'Neandertales', de: 0.4, a: 0.04, f: 4 },
+  { n: 'Homo sapiens', de: 0.3, a: 0, f: 5 },
+]
+const XH = (ma: number) => 60 + ((4.5 - ma) / 4.5) * 310
+
+export function EscenaHomininos({ fase }: { fase: string }) {
+  const i = idx(HUMANOS, fase)
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label={`Evolución humana: ${fase}`} className="h-full w-full">
+      {fondo('#f4f1ea')}
+      {/* la falsa escalera */}
+      <g style={ver(i === 0)}>
+        {['🐒', '🦍', '🧍'].map((e, k) => <T key={k} x={100 + k * 100} y={170 - k * 30} t={e} s={40 + k * 6} />)}
+        <line x1="80" y1="190" x2="320" y2="190" stroke={ROJO} strokeWidth="4" />
+        <line x1="80" y1="100" x2="320" y2="190" stroke={ROJO} strokeWidth="4" />
+        <T x={200} y={240} t="✗ Esta imagen famosa es incorrecta" s={13} c={ROJO} />
+      </g>
+      {/* el arbusto */}
+      <g style={ver(i >= 1)}>
+        <line x1="60" y1="230" x2="370" y2="230" stroke="#888" strokeWidth="1.5" />
+        {[4, 3, 2, 1, 0].map((m) => <text key={m} x={XH(m)} y="245" textAnchor="middle" fontSize="9" fontWeight="700">{m === 0 ? 'hoy' : `${m} Ma`}</text>)}
+        {ESPECIES_H.map((e) => {
+          const y = 60 + e.f * 28
+          const yo = e.n === 'Homo sapiens'
+          return (
+            <g key={e.n} style={{ transition: suave, opacity: i >= 2 && !yo ? 0.4 : 1 }}>
+              <rect x={XH(e.de)} y={y} width={Math.max(4, XH(e.a) - XH(e.de))} height="14" rx="7" fill={yo ? ROJO : MARRON} />
+              <text x={XH(e.de) - 4} y={y + 11} textAnchor="end" fontSize="9" fontWeight="700" fontStyle="italic">{e.n}</text>
+            </g>
+          )
+        })}
+      </g>
+      <g style={ver(i === 3)}>
+        <rect x="70" y="250" width="260" height="42" rx="8" fill="#fff" />
+        <T x={200} y={267} t="Hace más de 12 000 años ya había grupos" s={11} />
+        <T x={200} y={283} t="humanos en la sabana de Bogotá (El Abra, Tibitó)" s={11} />
+      </g>
+      <T x={200} y={30} t={['¿Una escalera del mono al humano?', 'Un arbusto: varias especies a la vez', 'Solo queda una rama: Homo sapiens (≈ 300 000 años)', 'Llegamos a América y a Colombia hace poco'][i]} s={13} />
+    </svg>
+  )
+}
