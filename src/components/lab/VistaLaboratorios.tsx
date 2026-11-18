@@ -16,6 +16,7 @@ import Enzimas from './practicas/Enzimas.tsx'
 import Fotosintesis from './practicas/Fotosintesis.tsx'
 import Fermentacion from './practicas/Fermentacion.tsx'
 import ADN from './practicas/ADN.tsx'
+import Microbiologia from './practicas/Microbiologia.tsx'
 
 // Laboratorios virtuales (PLAN-LABORATORIOS.md). Las prácticas listas van en PRACTICAS; las demás de la
 // ruta salen como «próximamente».
@@ -44,6 +45,7 @@ const PRACTICAS: Entrada[] = [
   { id: 'fotosintesis', titulo: 'Fotosíntesis', resumen: 'Burbujas de oxígeno de la elodea según la luz y el CO₂, y cromatografía de los pigmentos de las hojas.', grupo: 'Biología', desdeGrado: 6, Juego: Fotosintesis },
   { id: 'fermentacion', titulo: 'Fermentación', resumen: 'Cuatro botellas con levadura y globo: azúcar, temperatura y un control. El gas, a prueba con agua de cal.', grupo: 'Biología', desdeGrado: 6, Juego: Fermentacion },
   { id: 'adn-fresa', titulo: 'Extracción de ADN de fresa', resumen: 'Machacar, jabón, sal, filtrar y alcohol frío: saca ADN visible con cosas de la cocina.', grupo: 'Biología', desdeGrado: 6, Juego: ADN },
+  { id: 'microbiologia', titulo: 'Microbiología', resumen: 'Técnica aséptica, siembra con control, colonias día a día y conteo; discos y halos de inhibición.', grupo: 'Biología', desdeGrado: 6, Juego: Microbiologia },
   { id: solucionMolar.id, titulo: solucionMolar.titulo, resumen: solucionMolar.resumen, grupo: 'Química', desdeGrado: solucionMolar.desdeGrado, mesa: solucionMolar },
 ]
 
@@ -54,7 +56,7 @@ const PROXIMAS: { lab: string; items: string[] }[] = [
   },
   {
     lab: 'Biología',
-    items: ['Microbiología', 'Calidad del agua y del suelo'],
+    items: ['Calidad del agua y del suelo'],
   },
 ]
 
