@@ -1,0 +1,320 @@
+{
+  "id": "poblaciones",
+  "materia": "biologia",
+  "area": "ecosistemas",
+  "titulo": "Poblaciones",
+  "subtema": "Cuántos son y cómo cambian",
+  "orden": 35,
+  "etiqueta": "5",
+  "vistas": [
+    "ruta"
+  ],
+  "tituloVista": "Ruta de las poblaciones",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Calcular la densidad de una población.",
+    "Explicar las curvas de crecimiento J y S.",
+    "Describir los ciclos depredador–presa."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con un texto de ecología de bachillerato. El simulador usa un modelo sencillo de Lotka-Volterra con capacidad de carga."
+  ],
+  "bloques": [
+    {
+      "id": "tamano-densidad",
+      "titulo": "Tamaño y densidad",
+      "resumen": "Cuántos individuos hay y cuán apretados están; cómo se cuentan y qué hace subir o bajar una población.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "Una población se describe por su tamaño (cuántos individuos hay) y su densidad (cuántos hay por unidad de área, por ejemplo, frailejones por metro cuadrado). Como no se pueden contar todos, se cuentan en cuadros de muestra y se calcula para toda el área; para animales que se mueven se usa la captura y recaptura. La población crece con los nacimientos y las llegadas (inmigración) y baja con las muertes y las salidas (emigración).",
+        "contexto": [
+          {
+            "titulo": "Captura y recaptura",
+            "texto": "Se capturan y marcan 20 animales y se sueltan. Días después se capturan 20 y 4 tienen marca: la población es de unos 20 × 20 ÷ 4 = 100."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Densidad = individuos ÷ área.",
+            "Natalidad e inmigración suman; mortalidad y emigración restan."
+          ],
+          "media": [
+            "Se estima con cuadros de muestra o con captura y recaptura."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Cómo contarías las hormigas de un hormiguero sin contarlas una por una?",
+          "actividad": "Estimar la densidad de plantas del patio con cuadros de 1 m².",
+          "errores": [
+            "Confundir tamaño con densidad."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Contar sin contar todo",
+          "visual": {
+            "tipo": "escena",
+            "id": "densidad",
+            "fases": [
+              {
+                "id": "contar",
+                "nombre": "La pregunta",
+                "texto": "¿Cuántos frailejones hay en esta ladera?"
+              },
+              {
+                "id": "cuadros",
+                "nombre": "Cuadros de muestra",
+                "texto": "Se cuentan en unos cuadros y se calcula para toda el área."
+              },
+              {
+                "id": "densidad",
+                "nombre": "Densidad",
+                "texto": "Densidad = individuos ÷ área: por ejemplo, 2 frailejones por metro cuadrado."
+              },
+              {
+                "id": "marcar",
+                "nombre": "Captura y recaptura",
+                "texto": "Para animales que se mueven: capturar, marcar, soltar y volver a capturar.",
+                "nivel": "intermedio"
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "densidad-juego",
+      "preguntas": [
+        {
+          "id": "ec-de-1",
+          "enunciado": "En 10 m² hay 30 plantas. ¿Cuál es su densidad?",
+          "opciones": [
+            "3 plantas por m²",
+            "30 plantas por m²",
+            "300 plantas por m²",
+            "10 plantas por m²"
+          ],
+          "correcta": 0,
+          "explicacion": "30 ÷ 10 = 3."
+        },
+        {
+          "id": "ec-de-2",
+          "enunciado": "¿Qué hace disminuir una población?",
+          "opciones": [
+            "La mortalidad y la emigración",
+            "La natalidad y la inmigración",
+            "Tener mucha comida",
+            "Que lleguen individuos de otro lugar"
+          ],
+          "correcta": 0,
+          "explicacion": "Muertes y salidas restan."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "crecimiento",
+      "titulo": "Crecimiento: curvas J y S",
+      "resumen": "Sin límites una población crece en J; al faltar recursos se frena en S, cerca de la capacidad de carga.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "intermedio",
+      "requiere": [
+        "tamano-densidad"
+      ],
+      "ficha": {
+        "idea": "Cuando hay recursos de sobra, una población crece cada vez más rápido: es la curva en J (crecimiento exponencial). Pero los recursos se acaban: el alimento, el espacio y el agua escasean, aumentan las enfermedades y la competencia, y el crecimiento se frena. Se forma una curva en S que se estabiliza cerca de la capacidad de carga: el número máximo de individuos que el ambiente puede sostener.",
+        "contexto": [
+          {
+            "titulo": "Especies invasoras",
+            "texto": "El pez león en el Caribe o el caracol africano crecen casi en J porque no tienen depredadores naturales aquí."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Curva en J: crece sin freno.",
+            "Curva en S: se frena cerca de la capacidad de carga."
+          ],
+          "media": [
+            "La capacidad de carga es el máximo que el ambiente sostiene."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "Si una bacteria se divide en dos cada 20 minutos, ¿cuántas habría en un día? ¿Por qué no pasa?",
+          "actividad": "Graficar el crecimiento de levadura en agua con azúcar durante varios días.",
+          "errores": [
+            "Creer que una población puede crecer siempre."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Crecer y frenar",
+          "visual": {
+            "tipo": "escena",
+            "id": "crecimiento",
+            "fases": [
+              {
+                "id": "entradas",
+                "nombre": "Lo que suma y resta",
+                "texto": "Nacimientos y llegadas suman; muertes y salidas restan."
+              },
+              {
+                "id": "j",
+                "nombre": "Curva en J",
+                "texto": "Con recursos de sobra la población crece cada vez más rápido."
+              },
+              {
+                "id": "s",
+                "nombre": "Curva en S",
+                "texto": "Al escasear los recursos el crecimiento se frena."
+              },
+              {
+                "id": "carga",
+                "nombre": "Capacidad de carga",
+                "texto": "La población se estabiliza cerca del máximo que el ambiente puede sostener."
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "crecimiento-juego",
+      "preguntas": [
+        {
+          "id": "ec-cr-1",
+          "enunciado": "¿Qué es la capacidad de carga?",
+          "opciones": [
+            "El máximo de individuos que el ambiente puede sostener",
+            "El peso que puede cargar un animal",
+            "La velocidad de crecimiento",
+            "El número de crías por año"
+          ],
+          "correcta": 0,
+          "explicacion": "Depende de los recursos disponibles."
+        },
+        {
+          "id": "ec-cr-2",
+          "enunciado": "¿Por qué la curva en J no dura para siempre?",
+          "opciones": [
+            "Porque los recursos se acaban",
+            "Porque los animales dejan de reproducirse por gusto",
+            "Porque el tiempo se detiene",
+            "Porque siempre llega un huracán"
+          ],
+          "correcta": 0,
+          "explicacion": "Alimento, espacio y agua son limitados."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "depredador-presa",
+      "titulo": "Depredadores y presas",
+      "resumen": "Las poblaciones de presas y depredadores suben y bajan una tras otra, en ciclos.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "intermedio",
+      "requiere": [
+        "crecimiento"
+      ],
+      "ficha": {
+        "idea": "Las poblaciones de depredadores y presas se afectan entre sí. Si hay muchas presas, los depredadores tienen comida y aumentan; con muchos depredadores, las presas disminuyen; con pocas presas, los depredadores pasan hambre y bajan; y con pocos depredadores, las presas vuelven a aumentar. Así se forman ciclos, uno detrás del otro.",
+        "contexto": [
+          {
+            "titulo": "Un ejemplo famoso",
+            "texto": "En Canadá, las pieles compradas por una empresa durante casi cien años mostraron ciclos de unos 10 años en las liebres y los linces."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Depredadores y presas forman ciclos."
+          ],
+          "media": [
+            "El pico de los depredadores llega después del de las presas."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "Si en una finca eliminan a todos los zorros, ¿qué pasará con los conejos a largo plazo?",
+          "actividad": "Usar el simulador: quitar los depredadores y comparar las curvas.",
+          "errores": [
+            "Creer que sin depredadores las presas crecen para siempre."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Un ciclo",
+          "visual": {
+            "tipo": "escena",
+            "id": "depredador-presa",
+            "fases": [
+              {
+                "id": "muchas-presas",
+                "nombre": "Muchas presas",
+                "texto": "Hay muchos conejos de monte."
+              },
+              {
+                "id": "crecen-depredadores",
+                "nombre": "Suben los depredadores",
+                "texto": "Los zorros tienen comida y aumentan."
+              },
+              {
+                "id": "bajan-presas",
+                "nombre": "Bajan las presas",
+                "texto": "Se comen tantos conejos que estos disminuyen."
+              },
+              {
+                "id": "bajan-depredadores",
+                "nombre": "Bajan los depredadores",
+                "texto": "Sin comida, los zorros también bajan."
+              },
+              {
+                "id": "ciclo",
+                "nombre": "Vuelve a empezar",
+                "texto": "Con pocos zorros, los conejos se recuperan: es un ciclo."
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "depredador-presa-juego",
+      "diagrama": "simulador-poblaciones",
+      "preguntas": [
+        {
+          "id": "ec-dp-1",
+          "enunciado": "En un ciclo depredador–presa, ¿qué pasa después de que aumentan las presas?",
+          "opciones": [
+            "Aumentan los depredadores",
+            "Desaparecen los depredadores",
+            "Las presas siguen creciendo para siempre",
+            "No pasa nada"
+          ],
+          "correcta": 0,
+          "explicacion": "Los depredadores tienen más alimento."
+        },
+        {
+          "id": "ec-dp-2",
+          "enunciado": "Si se quitan los depredadores, ¿cómo crece la población de presas?",
+          "opciones": [
+            "En S, hasta la capacidad de carga",
+            "En J, para siempre",
+            "Desaparece",
+            "Se queda igual"
+          ],
+          "correcta": 0,
+          "explicacion": "La frenan los recursos."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}

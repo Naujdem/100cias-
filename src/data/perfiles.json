@@ -133,6 +133,9 @@
         "intraespecificas",
         "depredacion-competencia",
         "simbiosis"
+      ],
+      "poblaciones": [
+        "tamano-densidad"
       ]
     },
     "nivelDibujo": "basico",
@@ -159,7 +162,8 @@
       "niveles-ecologicos": "Qué es la ecología, los niveles y hábitat y nicho.",
       "factores-ecosistemas": "Factores, pisos térmicos y ecosistemas de Colombia.",
       "flujo-energia": "Productores y consumidores, cadenas y redes tróficas.",
-      "relaciones-seres-vivos": "Relaciones intra e interespecíficas: grupos, depredación, competencia y simbiosis."
+      "relaciones-seres-vivos": "Relaciones intra e interespecíficas: grupos, depredación, competencia y simbiosis.",
+      "poblaciones": "Tamaño y densidad de una población."
     }
   },
   {
@@ -335,6 +339,11 @@
         "intraespecificas",
         "depredacion-competencia",
         "simbiosis"
+      ],
+      "poblaciones": [
+        "tamano-densidad",
+        "crecimiento",
+        "depredador-presa"
       ]
     },
     "nivelDibujo": "intermedio",
@@ -361,7 +370,8 @@
       "niveles-ecologicos": "Los tres pasos, con el bioma y la competencia.",
       "factores-ecosistemas": "Suma el rango de tolerancia y el factor limitante.",
       "flujo-energia": "Suma la pirámide de energía (regla del 10 %).",
-      "relaciones-seres-vivos": "Relaciones intra e interespecíficas: grupos, depredación, competencia y simbiosis."
+      "relaciones-seres-vivos": "Relaciones intra e interespecíficas: grupos, depredación, competencia y simbiosis.",
+      "poblaciones": "Suma las curvas J y S y el ciclo depredador–presa con simulador."
     }
   },
   {
@@ -558,6 +568,11 @@
         "intraespecificas",
         "depredacion-competencia",
         "simbiosis"
+      ],
+      "poblaciones": [
+        "tamano-densidad",
+        "crecimiento",
+        "depredador-presa"
       ]
     },
     "nivelDibujo": "avanzado",
@@ -584,7 +599,8 @@
       "niveles-ecologicos": "Los tres pasos, con el bioma y la competencia.",
       "factores-ecosistemas": "Los cuatro pasos completos.",
       "flujo-energia": "Los cuatro pasos completos.",
-      "relaciones-seres-vivos": "Relaciones intra e interespecíficas: grupos, depredación, competencia y simbiosis."
+      "relaciones-seres-vivos": "Relaciones intra e interespecíficas: grupos, depredación, competencia y simbiosis.",
+      "poblaciones": "Los tres pasos, con captura y recaptura."
     }
   }
 ]
