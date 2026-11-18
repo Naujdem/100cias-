@@ -1,0 +1,425 @@
+{
+  "id": "recursos-energia",
+  "materia": "biologia",
+  "area": "ambiente",
+  "titulo": "Recursos naturales y energía",
+  "subtema": "Lo que tomamos de la naturaleza",
+  "orden": 56,
+  "etiqueta": "6",
+  "vistas": ["ruta"],
+  "tituloVista": "Ruta de los recursos",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Clasificar los recursos naturales en renovables y no renovables.",
+    "Explicar cómo funciona una hidroeléctrica y de dónde viene la electricidad de Colombia.",
+    "Analizar beneficios e impactos de las hidroeléctricas del Huila.",
+    "Comparar fuentes de energía según sus ventajas y desventajas.",
+    "Reconocer la huella ecológica como medida del consumo."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar porcentajes de la matriz eléctrica con XM y la UPME, y los datos de la huella ecológica con Global Footprint Network. El tema de El Quimbo tiene posiciones distintas: conviene leer a la empresa, a ASOQUIMBO y a la Contraloría o la ANLA."
+  ],
+  "bloques": [
+    {
+      "id": "recursos",
+      "titulo": "Recursos renovables y no renovables",
+      "resumen": "Unos recursos se renuevan si se usan con cuidado; otros se agotan porque tardaron millones de años en formarse.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "Los recursos naturales son los bienes de la naturaleza que las personas usan para vivir: agua, suelo, aire, bosques, animales, minerales y energía. Los renovables pueden recuperarse en un tiempo corto, como el agua, los bosques o los peces, pero solo si se usan a un ritmo menor al que se renuevan; si se sobreexplotan, también se acaban. Los no renovables existen en cantidades fijas porque tardaron millones de años en formarse, como el petróleo, el carbón, el gas y los minerales como el oro: cada barril o cada gramo que se usa ya no vuelve. Algunos, como la luz del Sol y el viento, no se agotan aunque se usen.",
+        "contexto": [
+          {
+            "titulo": "Renovable no es infinito",
+            "texto": "El bocachico es un recurso renovable, pero en el Magdalena se ha pescado tanto y su río ha cambiado tanto que cada vez hay menos."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Renovables: se recuperan si se usan con cuidado (agua, bosques, peces).",
+            "No renovables: se agotan (petróleo, carbón, oro)."
+          ],
+          "media": [
+            "Un recurso renovable sobreexplotado también se acaba.",
+            "El Sol y el viento no se agotan."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "Si el agua es renovable, ¿por qué hay pueblos que se quedan sin ella?",
+          "actividad": "Hacer una lista de todo lo que hay en el salón y clasificar de qué recurso natural viene cada cosa.",
+          "errores": [
+            "Creer que los recursos renovables no se pueden acabar."
+          ],
+          "minutos": 15
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Se pueden acabar los peces de un río, aunque sean un recurso renovable?",
+            "opciones": ["Sí, si se pescan más rápido de lo que se reproducen", "No, los renovables nunca se acaban", "Solo si el río se seca", "Solo los peces de mar"],
+            "correcta": 0,
+            "explicacion": "Renovable no quiere decir infinito: depende del ritmo de uso."
+          }
+        },
+        {
+          "titulo": "Se renueva o se agota",
+          "visual": {
+            "tipo": "compara",
+            "izq": { "icono": "🌳", "titulo": "Renovables", "puntos": ["Agua, suelo, bosques, peces", "Se recuperan con el tiempo", "Si se usan con cuidado"] },
+            "der": { "icono": "🛢️", "titulo": "No renovables", "puntos": ["Petróleo, carbón, gas", "Oro y otros minerales", "Lo que se usa no vuelve"] }
+          }
+        }
+      ],
+      "juego": "recursos-juego",
+      "preguntas": [
+        {
+          "id": "am-re-1",
+          "enunciado": "¿Cuál es un recurso no renovable?",
+          "opciones": ["El petróleo", "El agua", "Un bosque", "Los peces"],
+          "correcta": 0,
+          "explicacion": "Tardó millones de años en formarse."
+        },
+        {
+          "id": "am-re-2",
+          "enunciado": "¿Cuándo se puede agotar un recurso renovable?",
+          "opciones": [
+            "Cuando se usa más rápido de lo que se renueva",
+            "Nunca",
+            "Solo cuando se vende",
+            "Cuando llueve mucho"
+          ],
+          "correcta": 0,
+          "explicacion": "Es la sobreexplotación."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "hidroelectrica",
+      "titulo": "De dónde viene la luz",
+      "resumen": "La mayor parte de la electricidad de Colombia sale de hidroeléctricas: el agua que cae mueve turbinas.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "requiere": ["recursos"],
+      "ficha": {
+        "idea": "La energía se puede obtener de fuentes fósiles (carbón, petróleo y gas, que al quemarse emiten CO₂) o de fuentes renovables (agua, Sol, viento, biomasa). En Colombia, cerca de dos terceras partes de la electricidad sale de hidroeléctricas. Una represa detiene un río y forma un embalse; el agua baja por tubos y mueve una turbina, que hace girar un generador, y la electricidad viaja por las redes hasta las casas. Es una energía renovable y que emite poco, pero depende de las lluvias: en los años de El Niño los embalses bajan y hay que encender más termoeléctricas de gas y carbón.",
+        "contexto": [
+          {
+            "titulo": "La luz y el páramo",
+            "texto": "La electricidad del bombillo depende de que llueva y de que las cuencas guarden agua: cuidar los páramos también es cuidar la energía."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Casi toda la electricidad de Colombia viene del agua.",
+            "El agua que cae mueve una turbina y un generador."
+          ],
+          "media": [
+            "Fósiles: carbón, petróleo y gas. Renovables: agua, Sol, viento, biomasa.",
+            "Con El Niño bajan los embalses y se usan más termoeléctricas."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Qué tiene que ver la lluvia con el bombillo del salón?",
+          "actividad": "Hacer un molinito de papel y moverlo con un chorro de agua para mostrar cómo funciona la turbina.",
+          "errores": [
+            "Creer que la electricidad «sale del cable» sin importar de dónde viene."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Del río al bombillo",
+          "visual": {
+            "tipo": "escena",
+            "id": "hidroelectrica",
+            "fases": [
+              { "id": "embalse", "nombre": "Embalse", "texto": "La represa detiene el río y guarda el agua." },
+              { "id": "caida", "nombre": "Caída", "texto": "El agua baja con fuerza por un tubo." },
+              { "id": "turbina", "nombre": "Turbina y generador", "texto": "El agua hace girar la turbina, y el generador produce electricidad." },
+              { "id": "red", "nombre": "Red eléctrica", "texto": "Las torres llevan la electricidad hasta las casas." }
+            ]
+          }
+        },
+        {
+          "titulo": "La electricidad de Colombia",
+          "visual": { "tipo": "cifra", "icono": "💧", "valor": "≈ 2 de cada 3", "texto": "kilovatios que usa Colombia salen de hidroeléctricas." }
+        }
+      ],
+      "juego": "hidroelectrica-juego",
+      "preguntas": [
+        {
+          "id": "am-re-3",
+          "enunciado": "¿De dónde sale la mayor parte de la electricidad de Colombia?",
+          "opciones": ["De las hidroeléctricas", "Del carbón", "Del viento", "De la energía nuclear"],
+          "correcta": 0,
+          "explicacion": "Cerca de dos terceras partes."
+        },
+        {
+          "id": "am-re-4",
+          "enunciado": "¿Por qué El Niño es un problema para la electricidad en Colombia?",
+          "opciones": [
+            "Porque llueve menos y bajan los embalses",
+            "Porque daña las torres",
+            "Porque calienta los cables",
+            "Porque aumenta el viento"
+          ],
+          "correcta": 0,
+          "explicacion": "Entonces se usan más termoeléctricas, que emiten CO₂."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "represas-huila",
+      "titulo": "Betania y El Quimbo",
+      "resumen": "Dos hidroeléctricas sobre el Magdalena en el Huila: dan energía y empleo, pero inundaron tierras y cambiaron el río y la vida de muchas personas.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "intermedio",
+      "requiere": ["hidroelectrica"],
+      "ficha": {
+        "idea": "Sobre el río Magdalena, en el Huila, funcionan dos grandes hidroeléctricas: Betania, que empezó a operar en 1987, y El Quimbo, en 2015, unos kilómetros río arriba. Producen electricidad para el país y dejaron regalías y empleo; en el embalse de Betania se desarrolló la piscicultura. Pero sus embalses inundaron miles de hectáreas de tierras de cultivo y de bosque seco, y familias campesinas, pescadores y jornaleros tuvieron que irse; muchos denuncian que no fueron reparados como se prometió. Además, la represa corta el paso de peces migratorios como el bocachico y cambia el caudal y la calidad del agua río abajo. Analizar estas obras exige escuchar a todas las partes: la empresa, las comunidades afectadas y las autoridades ambientales.",
+        "contexto": [
+          {
+            "titulo": "La subienda",
+            "texto": "El bocachico sube los ríos para reproducirse; las represas sin paso para peces le cierran el camino."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Betania y El Quimbo son hidroeléctricas del Huila sobre el Magdalena."
+          ],
+          "media": [
+            "Beneficios: energía, regalías, empleo, piscicultura.",
+            "Impactos: tierras y bosque seco inundados, familias desplazadas, peces sin paso."
+          ],
+          "avanzada": [
+            "Toda gran obra exige estudios ambientales, consulta y reparación de los afectados."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Conocen a alguien que vivía en la zona que hoy está bajo el agua del embalse?",
+          "actividad": "Juego de roles: empresa, familia campesina, pescador, autoridad ambiental y alcaldía discuten si construir una nueva represa.",
+          "errores": [
+            "Ver el tema solo desde un lado: o todo beneficio o todo daño."
+          ],
+          "minutos": 35
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Dos caras de la represa",
+          "visual": {
+            "tipo": "compara",
+            "izq": { "icono": "⚡", "titulo": "Beneficios", "puntos": ["Electricidad para el país", "Regalías y empleo", "Piscicultura en el embalse"] },
+            "der": { "icono": "🏚️", "titulo": "Impactos", "puntos": ["Tierras y bosque seco inundados", "Familias que se fueron", "El bocachico sin paso", "Cambia el río abajo"] }
+          }
+        },
+        {
+          "titulo": "¿Tú qué opinas?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Antes de construir una represa, ¿a quién habría que escuchar?",
+            "opciones": ["A todos: empresa, comunidades, autoridades y expertos", "Solo a la empresa", "Solo al gobierno", "A nadie, la energía es urgente"],
+            "correcta": 0,
+            "explicacion": "Las decisiones ambientales afectan a muchos y deben tener en cuenta todas las voces."
+          }
+        }
+      ],
+      "juego": "represas-juego",
+      "preguntas": [
+        {
+          "id": "am-re-5",
+          "enunciado": "¿Qué impacto ambiental tiene una represa sobre los peces como el bocachico?",
+          "opciones": [
+            "Les corta el camino para subir el río a reproducirse",
+            "Los hace crecer más",
+            "Ninguno",
+            "Los vuelve peces de mar"
+          ],
+          "correcta": 0,
+          "explicacion": "Son peces migratorios."
+        },
+        {
+          "id": "am-re-6",
+          "enunciado": "¿Qué ecosistema quedó en gran parte bajo el agua del embalse de El Quimbo?",
+          "opciones": ["Bosque seco tropical", "Páramo", "Manglar", "Selva amazónica"],
+          "correcta": 0,
+          "explicacion": "Es uno de los ecosistemas más amenazados de Colombia."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "fuentes-energia",
+      "titulo": "Comparar fuentes de energía",
+      "resumen": "Ninguna fuente es perfecta: las fósiles emiten CO₂, el agua depende de la lluvia, el Sol y el viento no están siempre. Mezclarlas da seguridad.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "basico",
+      "requiere": ["hidroelectrica"],
+      "ficha": {
+        "idea": "Cada fuente de energía tiene ventajas y desventajas. Las termoeléctricas de carbón y gas funcionan siempre, pero emiten CO₂ y contaminan el aire. Las hidroeléctricas emiten poco, pero dependen de la lluvia e inundan tierras. La energía solar y la eólica no emiten al funcionar y se pueden instalar en pequeño, como un panel en una escuela rural, pero solo producen cuando hay Sol o viento. La biomasa aprovecha residuos como el bagazo de la caña. La Guajira tiene uno de los mejores vientos y soles de América del Sur, y allí se construyen parques eólicos y solares; también ahí hay que consultar y respetar al pueblo wayuu. Por eso un país necesita una mezcla de fuentes.",
+        "contexto": [
+          {
+            "titulo": "Paneles en la vereda",
+            "texto": "Muchas escuelas rurales sin red eléctrica funcionan con paneles solares y baterías."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Solar y eólica: limpias, pero solo con Sol o viento.",
+            "Fósiles: siempre disponibles, pero emiten CO₂."
+          ],
+          "media": [
+            "Una mezcla de fuentes da más seguridad.",
+            "La Guajira tiene mucho viento y Sol."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "Si la energía solar es tan buena, ¿por qué no usamos solo esa?",
+          "actividad": "En el Explora, buscar en grupos una mezcla que no emita mucho CO₂ y que aguante un año de El Niño.",
+          "errores": [
+            "Creer que las energías renovables no tienen ningún impacto."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Fuentes de energía",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "🏭", "titulo": "Térmica", "texto": "Siempre disponible; emite CO₂." },
+              { "icono": "💧", "titulo": "Hidráulica", "texto": "Emite poco; depende de la lluvia." },
+              { "icono": "☀️", "titulo": "Solar", "texto": "Limpia; solo de día." },
+              { "icono": "🌬️", "titulo": "Eólica", "texto": "Limpia; solo con viento." },
+              { "icono": "🌾", "titulo": "Biomasa", "texto": "Aprovecha residuos como el bagazo." }
+            ]
+          }
+        }
+      ],
+      "juego": "fuentes-energia-juego",
+      "diagrama": "mezcla-electrica",
+      "preguntas": [
+        {
+          "id": "am-re-7",
+          "enunciado": "¿Cuál es una desventaja de la energía solar?",
+          "opciones": ["Solo produce cuando hay luz", "Emite mucho CO₂", "Necesita un río", "Se acaba como el petróleo"],
+          "correcta": 0,
+          "explicacion": "Por eso se combina con baterías u otras fuentes."
+        },
+        {
+          "id": "am-re-8",
+          "enunciado": "¿Por qué conviene mezclar fuentes de energía?",
+          "opciones": [
+            "Porque si una falla, las otras ayudan",
+            "Porque así la luz es más barata siempre",
+            "Porque una sola fuente está prohibida",
+            "Porque así no hace falta ahorrar"
+          ],
+          "correcta": 0,
+          "explicacion": "Por ejemplo, cuando El Niño baja los embalses."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "huella-ecologica",
+      "titulo": "La huella ecológica",
+      "resumen": "Mide cuánta tierra y mar hacen falta para producir lo que consumimos y absorber lo que desechamos. Hoy la humanidad usa más de lo que el planeta renueva.",
+      "anio": 5,
+      "etiqueta": "Paso 5",
+      "nivel": "intermedio",
+      "requiere": ["recursos"],
+      "ficha": {
+        "idea": "La huella ecológica es la superficie de tierra y mar que se necesita para producir los alimentos, la energía, la madera y los demás recursos que consume una persona o un país, y para absorber el CO₂ que emite. Se compara con la biocapacidad: lo que el planeta puede renovar. Hoy la humanidad, en conjunto, consume como si tuviera cerca de 1,7 planetas: cada año, hacia finales de julio o comienzos de agosto, ya usamos todo lo que la Tierra renueva en el año (el día del sobregiro). La huella es muy distinta entre países: los más ricos consumen muchísimo más que los más pobres. Se reduce comiendo menos carne, desperdiciando menos, usando menos energía fósil y comprando con cuidado.",
+        "contexto": [
+          {
+            "titulo": "Día del sobregiro",
+            "texto": "Es como gastar en agosto el sueldo de todo el año y vivir prestado el resto: le quedamos debiendo al planeta."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Huella ecológica: cuánta naturaleza necesitamos para vivir como vivimos."
+          ],
+          "media": [
+            "La humanidad usa más de lo que el planeta renueva cada año.",
+            "Se reduce comiendo menos carne, desperdiciando menos y usando menos energía fósil."
+          ],
+          "avanzada": [
+            "Biocapacidad: lo que la Tierra puede renovar; sobregiro: cuando la huella la supera."
+          ]
+        },
+        "docente": {
+          "abrir": "Si todos vivieran como tú, ¿alcanzaría un planeta?",
+          "actividad": "Usar una calculadora de huella ecológica en línea (Global Footprint Network) y comparar los resultados del grupo.",
+          "errores": [
+            "Pensar que todos los países tienen la misma huella."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Viviendo prestado",
+          "visual": { "tipo": "cifra", "icono": "🌍", "valor": "≈ 1,7 planetas", "texto": "es lo que consume hoy la humanidad cada año." }
+        },
+        {
+          "titulo": "Bajar la huella",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "🥗", "titulo": "Menos carne", "texto": "Necesita mucha tierra y agua." },
+              { "icono": "🍽️", "titulo": "No desperdiciar", "texto": "Un tercio de la comida se pierde." },
+              { "icono": "🚲", "titulo": "Moverse limpio", "texto": "Caminar, bicicleta, transporte público." },
+              { "icono": "🧺", "titulo": "Comprar local", "texto": "Productos de la región." }
+            ]
+          }
+        }
+      ],
+      "juego": "huella-ecologica-juego",
+      "preguntas": [
+        {
+          "id": "am-re-9",
+          "enunciado": "¿Qué mide la huella ecológica?",
+          "opciones": [
+            "La tierra y el mar que hacen falta para sostener lo que consumimos",
+            "El tamaño del pie",
+            "La cantidad de animales de un bosque",
+            "Los kilómetros que caminamos"
+          ],
+          "correcta": 0,
+          "explicacion": "Incluye absorber el CO₂ que emitimos."
+        },
+        {
+          "id": "am-re-10",
+          "enunciado": "¿Qué es el día del sobregiro?",
+          "opciones": [
+            "El día en que ya usamos todo lo que la Tierra renueva en el año",
+            "El último día del año",
+            "Un día sin carros",
+            "El día del medio ambiente"
+          ],
+          "correcta": 0,
+          "explicacion": "Hoy cae hacia finales de julio o comienzos de agosto."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}
