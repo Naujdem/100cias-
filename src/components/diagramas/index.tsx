@@ -69,6 +69,8 @@ import { MateriaReciclaJuego, CicloAguaJuego, CicloCarbonoJuego, CicloNitrogenoJ
 import ViajeCarbono from './ViajeCarbono.tsx'
 import { AguaPlanetaJuego, CuencaJuego, FabricasAguaJuego, HuellaHidricaJuego } from './JuegosAgua.tsx'
 import MaquetaCuenca from './MaquetaCuenca.tsx'
+import { QueEsSueloJuego, HorizontesJuego, ErosionJuego, DeforestacionJuego, ConservarSueloJuego } from './JuegosSuelo.tsx'
+import PerfilSuelo from './PerfilSuelo.tsx'
 
 /** Registro de diagramas interactivos. La clave es el valor de `bloque.diagrama`. */
 export const DIAGRAMAS: Record<string, ComponentType> = {
@@ -365,4 +367,10 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'fabricas-agua-juego': FabricasAguaJuego,
   'huella-hidrica-juego': HuellaHidricaJuego,
   'maqueta-cuenca': MaquetaCuenca,
+  'que-es-suelo-juego': QueEsSueloJuego,
+  'horizontes-juego': HorizontesJuego,
+  'erosion-juego': ErosionJuego,
+  'deforestacion-juego': DeforestacionJuego,
+  'conservar-suelo-juego': ConservarSueloJuego,
+  'perfil-suelo': PerfilSuelo,
 }

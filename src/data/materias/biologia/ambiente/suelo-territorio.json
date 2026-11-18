@@ -1,0 +1,442 @@
+{
+  "id": "suelo-territorio",
+  "materia": "biologia",
+  "area": "ambiente",
+  "titulo": "Suelo y uso del territorio",
+  "subtema": "La piel viva de la Tierra",
+  "orden": 53,
+  "etiqueta": "3",
+  "vistas": ["ruta"],
+  "tituloVista": "Ruta del suelo",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Explicar de qué está hecho el suelo y cómo se forma.",
+    "Reconocer los horizontes de un perfil de suelo.",
+    "Identificar las causas de la erosión, la deforestación y la desertificación.",
+    "Proponer prácticas para conservar el suelo."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con el IGAC (suelos de Colombia) y los boletines de deforestación del IDEAM. Los tiempos de formación del suelo son aproximados."
+  ],
+  "bloques": [
+    {
+      "id": "que-es-suelo",
+      "titulo": "Qué es el suelo y cómo se forma",
+      "resumen": "El suelo es una mezcla viva de roca desmenuzada, restos orgánicos, agua, aire y seres vivos. Tarda cientos de años en formarse.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "El suelo es la capa delgada que cubre la tierra firme y sostiene casi toda la vida terrestre. Es una mezcla de partículas minerales (arena, limo y arcilla, que vienen de la roca), materia orgánica (restos de plantas y animales que forman el humus), agua, aire y muchísimos seres vivos: lombrices, insectos, hongos y bacterias. Se forma muy despacio: el clima y los seres vivos desgastan la roca (meteorización), los restos orgánicos se mezclan con ella y, con los años, se forman capas. Un centímetro de suelo puede tardar cientos de años en formarse, pero se puede perder en un solo aguacero.",
+        "contexto": [
+          {
+            "titulo": "Una cucharada viva",
+            "texto": "En una cucharada de suelo fértil puede haber más bacterias que personas en Colombia."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Suelo: mezcla de roca desmenuzada, restos orgánicos, agua, aire y seres vivos.",
+            "Se forma muy despacio y se pierde muy rápido."
+          ],
+          "media": [
+            "Humus: la materia orgánica descompuesta que hace fértil el suelo.",
+            "Meteorización: el desgaste de la roca por el clima y los seres vivos."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿La tierra de una matera es lo mismo que el suelo de un bosque?",
+          "actividad": "Echar suelo en un frasco con agua, agitar y dejarlo reposar un día: se separan la arena, el limo, la arcilla y la materia orgánica que flota.",
+          "errores": [
+            "Pensar que el suelo es solo «tierra» inerte, sin vida."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Cuánto puede tardar en formarse un centímetro de suelo?",
+            "opciones": ["Cientos de años", "Una semana", "Un año", "Un día de lluvia"],
+            "correcta": 0,
+            "explicacion": "Por eso el suelo que se pierde casi no se recupera en una vida humana."
+          }
+        },
+        {
+          "titulo": "De la roca al suelo",
+          "visual": {
+            "tipo": "escena",
+            "id": "formacion-suelo",
+            "fases": [
+              { "id": "roca", "nombre": "Roca", "texto": "Al principio solo hay roca." },
+              { "id": "meteorizacion", "nombre": "Meteorización", "texto": "El agua, el calor y el frío la agrietan y la desmenuzan." },
+              { "id": "pioneros", "nombre": "Pioneros", "texto": "Líquenes y musgos se instalan y aportan restos." },
+              { "id": "humus", "nombre": "Humus", "texto": "Plantas, lombrices, hongos y bacterias forman humus." },
+              { "id": "capas", "nombre": "Capas", "texto": "Con cientos de años el suelo se ordena en capas." }
+            ]
+          },
+          "atajo": { "texto": "Más sobre esto: sucesión primaria", "tema": "sucesion-ecologica", "bloque": "primaria" }
+        }
+      ],
+      "juego": "que-es-suelo-juego",
+      "preguntas": [
+        {
+          "id": "am-su-1",
+          "enunciado": "¿Qué es el humus?",
+          "opciones": [
+            "La materia orgánica descompuesta del suelo",
+            "La roca que está debajo del suelo",
+            "El agua que se infiltra",
+            "Un tipo de arena"
+          ],
+          "correcta": 0,
+          "explicacion": "Hace que el suelo sea fértil y guarde agua."
+        },
+        {
+          "id": "am-su-2",
+          "enunciado": "¿De dónde vienen la arena, el limo y la arcilla del suelo?",
+          "opciones": ["Del desgaste de la roca", "De los restos de animales", "De la lluvia", "De las raíces"],
+          "correcta": 0,
+          "explicacion": "Es la meteorización."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "horizontes",
+      "titulo": "Los horizontes del suelo",
+      "resumen": "Si se corta el suelo se ven capas: hojarasca, capa fértil, subsuelo, roca desmenuzada y roca madre.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "requiere": ["que-es-suelo"],
+      "ficha": {
+        "idea": "En un corte de carretera o en un hueco se ven las capas del suelo, llamadas horizontes; juntas forman el perfil del suelo. Arriba está el horizonte O, de hojarasca y restos. Debajo, el horizonte A o capa fértil: oscura, con humus, raíces y la mayor parte de la vida. Luego el B o subsuelo, más claro y arcilloso, donde se acumulan minerales que arrastra el agua. El C es roca en pedazos, y abajo está la roca madre (R), de donde salió el suelo. La capa A es la más valiosa y la primera que se pierde con la erosión.",
+        "contexto": [
+          {
+            "titulo": "Leer un barranco",
+            "texto": "En los cortes de las vías del Huila se ven muy bien los horizontes: la franja oscura de arriba es la capa fértil."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "El suelo tiene capas llamadas horizontes.",
+            "La capa de arriba (A) es la más fértil: tiene humus y vida."
+          ],
+          "media": [
+            "O: hojarasca · A: capa fértil · B: subsuelo · C: roca en pedazos · R: roca madre."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "En un barranco, ¿por qué la tierra de arriba es más oscura que la de abajo?",
+          "actividad": "Visitar un corte de carretera o abrir un hueco de 60 cm y dibujar el perfil, midiendo el grosor de cada capa.",
+          "errores": [
+            "Creer que el suelo es igual en toda su profundidad."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Capas que cuentan una historia",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "🍂", "titulo": "O · Hojarasca", "texto": "Hojas y restos que se descomponen." },
+              { "icono": "🪱", "titulo": "A · Capa fértil", "texto": "Oscura, con humus, raíces y vida." },
+              { "icono": "🟫", "titulo": "B · Subsuelo", "texto": "Más clara, con arcilla y minerales." },
+              { "icono": "🪨", "titulo": "C y R · Roca", "texto": "Roca en pedazos y roca madre." }
+            ]
+          }
+        }
+      ],
+      "juego": "horizontes-juego",
+      "diagrama": "perfil-suelo",
+      "preguntas": [
+        {
+          "id": "am-su-3",
+          "enunciado": "¿En qué horizonte hay más humus y más vida?",
+          "opciones": ["A, la capa fértil", "B, el subsuelo", "C, la roca en pedazos", "R, la roca madre"],
+          "correcta": 0,
+          "explicacion": "Por eso es la capa más valiosa."
+        },
+        {
+          "id": "am-su-4",
+          "enunciado": "¿Qué es la roca madre?",
+          "opciones": [
+            "La roca de la que se formó el suelo",
+            "Una piedra grande en la superficie",
+            "La capa de hojarasca",
+            "El barro de los ríos"
+          ],
+          "correcta": 0,
+          "explicacion": "Es el horizonte R, el más profundo."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "erosion",
+      "titulo": "La erosión",
+      "resumen": "El agua y el viento arrastran el suelo; sin cobertura vegetal se pierde la capa fértil y aparecen surcos y cárcavas.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "basico",
+      "requiere": ["horizontes"],
+      "ficha": {
+        "idea": "La erosión es el desgaste y arrastre del suelo por el agua o el viento. Es un proceso natural, pero las actividades humanas la aceleran muchísimo. Cuando el suelo queda desnudo, las gotas de lluvia golpean y sueltan las partículas; el agua que escurre se las lleva, primero en láminas y luego abriendo surcos que crecen hasta volverse cárcavas. La capa fértil termina en los ríos como barro. Las causas más comunes son talar y quemar, sembrar en surcos a favor de la pendiente, el sobrepastoreo, que compacta y pela el suelo, y las vías y la minería sin control.",
+        "contexto": [
+          {
+            "titulo": "Ríos color chocolate",
+            "texto": "Cuando el Magdalena baja color café después de un aguacero, lleva suelo fértil de toda su cuenca."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Erosión: el agua y el viento arrastran el suelo.",
+            "Sin plantas que lo cubran, el suelo se pierde más rápido."
+          ],
+          "media": [
+            "Lámina → surcos → cárcavas.",
+            "Causas humanas: tala, quemas, sobrepastoreo, cultivos en pendiente."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Por qué después de un aguacero los ríos bajan color café?",
+          "actividad": "Dos bandejas inclinadas con suelo, una con pasto y otra desnuda: regarlas igual y comparar el agua que sale.",
+          "errores": [
+            "Creer que la erosión es solo natural y que las personas no la causan."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "El suelo se va",
+          "visual": {
+            "tipo": "escena",
+            "id": "erosion",
+            "fases": [
+              { "id": "cubierto", "nombre": "Suelo cubierto", "texto": "Las plantas frenan las gotas y sus raíces sujetan el suelo." },
+              { "id": "salpicadura", "nombre": "Golpe de las gotas", "texto": "Sin cobertura, las gotas golpean y sueltan las partículas." },
+              { "id": "surcos", "nombre": "Surcos", "texto": "El agua que escurre se junta y abre canales." },
+              { "id": "carcavas", "nombre": "Cárcavas", "texto": "Los surcos crecen hasta volverse zanjas profundas." }
+            ]
+          }
+        }
+      ],
+      "juego": "erosion-juego",
+      "preguntas": [
+        {
+          "id": "am-su-5",
+          "enunciado": "¿Qué protege el suelo de la erosión?",
+          "opciones": ["La cobertura de plantas", "Quemar la maleza", "Arar a favor de la pendiente", "El sobrepastoreo"],
+          "correcta": 0,
+          "explicacion": "Frena las gotas y sujeta el suelo con las raíces."
+        },
+        {
+          "id": "am-su-6",
+          "enunciado": "¿Qué es una cárcava?",
+          "opciones": [
+            "Una zanja profunda que abre el agua en el suelo",
+            "Una capa del suelo",
+            "Un tipo de abono",
+            "Un nacimiento de agua"
+          ],
+          "correcta": 0,
+          "explicacion": "Es la etapa más grave de la erosión por agua."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "deforestacion",
+      "titulo": "Deforestación y desertificación",
+      "resumen": "Talar bosques para potreros y cultivos deja el suelo expuesto; en las zonas secas, el mal uso puede convertir la tierra en casi un desierto.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "intermedio",
+      "requiere": ["erosion"],
+      "ficha": {
+        "idea": "La deforestación es la pérdida de bosques para dar otro uso a la tierra. En Colombia sus causas principales son abrir potreros para ganadería extensiva (praderización), el acaparamiento de tierras, los cultivos de uso ilícito, la minería ilegal y las vías sin planeación; la mayor parte ocurre en el arco amazónico. Sin bosque el suelo se erosiona, se pierden agua y biodiversidad y se libera carbono. La desertificación es la degradación de la tierra en zonas secas: por el sobrepastoreo, la tala y las sequías, el suelo pierde su capa fértil y su capacidad de retener agua, y la tierra deja de producir. El desierto de la Tatacoa es en realidad un bosque seco con erosión muy fuerte; en sus alrededores y en otras zonas secas del Huila, el Tolima y La Guajira hay tierras en proceso de desertificación.",
+        "contexto": [
+          {
+            "titulo": "No es un desierto",
+            "texto": "La Tatacoa recibe más lluvia que un desierto verdadero: es un bosque seco tropical, y sus cárcavas son formas de erosión."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Deforestación: pérdida de bosques para otros usos."
+          ],
+          "media": [
+            "Causa principal en Colombia: potreros para ganadería extensiva.",
+            "Desertificación: degradación de la tierra en zonas secas."
+          ],
+          "avanzada": [
+            "Sin bosque se pierden suelo, agua, biodiversidad y carbono guardado."
+          ]
+        },
+        "docente": {
+          "abrir": "¿La Tatacoa siempre fue así? ¿Es un desierto de verdad?",
+          "actividad": "Comparar fotos de una misma ladera de la región con bosque, potrero y suelo degradado, y ordenar la historia.",
+          "errores": [
+            "Pensar que la desertificación es que «avanza la arena» de un desierto, y no la degradación de la tierra."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Del bosque al suelo pelado",
+          "visual": {
+            "tipo": "escena",
+            "id": "deforestacion",
+            "fases": [
+              { "id": "bosque", "nombre": "Bosque", "texto": "Suelo cubierto, agua que se infiltra, mucha vida." },
+              { "id": "tala", "nombre": "Tala y quema", "texto": "Se corta y se quema el bosque para abrir el terreno." },
+              { "id": "potrero", "nombre": "Potrero", "texto": "Pasto y ganado: el suelo se compacta y se erosiona." },
+              { "id": "degradado", "nombre": "Tierra degradada", "texto": "Sin capa fértil ni agua, la tierra deja de producir." }
+            ]
+          },
+          "atajo": { "texto": "Más sobre esto: amenazas a la biodiversidad", "tema": "biodiversidad", "bloque": "amenazas" }
+        },
+        {
+          "titulo": "¿Por qué se pierden los bosques?",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "🐄", "titulo": "Potreros", "texto": "Ganadería extensiva: la causa principal." },
+              { "icono": "🌿", "titulo": "Cultivos ilícitos", "texto": "Abren claros en la selva." },
+              { "icono": "⛏️", "titulo": "Minería ilegal", "texto": "Arranca el bosque y el suelo." },
+              { "icono": "🛣️", "titulo": "Vías sin planeación", "texto": "Abren paso a más tala." }
+            ]
+          }
+        }
+      ],
+      "juego": "deforestacion-juego",
+      "preguntas": [
+        {
+          "id": "am-su-7",
+          "enunciado": "¿Cuál es la principal causa de deforestación en Colombia?",
+          "opciones": [
+            "Abrir potreros para ganadería extensiva",
+            "Los incendios causados por rayos",
+            "La sucesión ecológica",
+            "La lluvia"
+          ],
+          "correcta": 0,
+          "explicacion": "Se conoce como praderización."
+        },
+        {
+          "id": "am-su-8",
+          "enunciado": "¿Qué es la desertificación?",
+          "opciones": [
+            "La degradación de la tierra en zonas secas",
+            "Que la arena de un desierto avance",
+            "Sembrar cactus",
+            "Que llueva menos un año"
+          ],
+          "correcta": 0,
+          "explicacion": "La tierra pierde su capa fértil y deja de producir."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "conservar-suelo",
+      "titulo": "Conservar el suelo",
+      "resumen": "Cubrir el suelo, sembrar en curvas de nivel, poner barreras vivas, mezclar árboles con cultivos y potreros y devolverle materia orgánica.",
+      "anio": 5,
+      "etiqueta": "Paso 5",
+      "nivel": "basico",
+      "requiere": ["erosion"],
+      "ficha": {
+        "idea": "El suelo se puede cuidar con prácticas sencillas. Mantenerlo cubierto, con cultivos, coberturas o hojarasca, frena las gotas. En las laderas se siembra en curvas de nivel, atravesando la pendiente, y se ponen barreras vivas de plantas o terrazas para que el agua no corra. Los sistemas agroforestales, como el café con sombrío, y los silvopastoriles, árboles en los potreros, protegen el suelo y dan sombra al ganado. Rotar cultivos y devolver materia orgánica con abonos orgánicos mantiene la fertilidad. Y donde el suelo ya se dañó, se puede restaurar.",
+        "contexto": [
+          {
+            "titulo": "Café con sombrío",
+            "texto": "Los cafetales con guamos, nogales o plátano conservan mejor el suelo y el agua que los cafetales a pleno sol."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Mantener el suelo cubierto.",
+            "Sembrar atravesando la pendiente (curvas de nivel)."
+          ],
+          "media": [
+            "Barreras vivas y terrazas frenan el agua.",
+            "Agroforestería y silvopastoreo: árboles con cultivos y ganado."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "Si tuvieras una finca en ladera, ¿cómo sembrarías para no perder el suelo?",
+          "actividad": "Con un nivel en A hecho con palos y una piedra, marcar una curva de nivel en una ladera del colegio.",
+          "errores": [
+            "Creer que la única forma de abonar es con fertilizantes químicos."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Sembrar con la ladera",
+          "visual": {
+            "tipo": "compara",
+            "izq": { "icono": "⬇️", "titulo": "A favor de la pendiente", "puntos": ["El agua corre por los surcos", "Se lleva la capa fértil", "Aparecen cárcavas"] },
+            "der": { "icono": "↔️", "titulo": "En curvas de nivel", "puntos": ["Cada surco frena el agua", "El agua se infiltra", "El suelo se queda"] }
+          }
+        },
+        {
+          "titulo": "Prácticas que cuidan",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "🌾", "titulo": "Barreras vivas", "texto": "Hileras de plantas que frenan el agua." },
+              { "icono": "☕", "titulo": "Agroforestería", "texto": "Café con sombrío de árboles." },
+              { "icono": "🐄", "titulo": "Silvopastoreo", "texto": "Árboles en los potreros." },
+              { "icono": "🍂", "titulo": "Abonos orgánicos", "texto": "Devolver materia orgánica." }
+            ]
+          },
+          "atajo": { "texto": "Más sobre esto: restauración", "tema": "sucesion-ecologica", "bloque": "perturbaciones" }
+        }
+      ],
+      "juego": "conservar-suelo-juego",
+      "preguntas": [
+        {
+          "id": "am-su-9",
+          "enunciado": "¿Por qué conviene sembrar en curvas de nivel en una ladera?",
+          "opciones": [
+            "Cada surco frena el agua y el suelo no se lava",
+            "Porque crece más rápido el cultivo",
+            "Porque así llueve menos",
+            "Porque así no hace falta abonar"
+          ],
+          "correcta": 0,
+          "explicacion": "El agua se infiltra en vez de correr."
+        },
+        {
+          "id": "am-su-10",
+          "enunciado": "¿Qué es un sistema silvopastoril?",
+          "opciones": [
+            "Potreros con árboles",
+            "Un bosque sin animales",
+            "Un cultivo de pasto en invernadero",
+            "Ganado en el páramo"
+          ],
+          "correcta": 0,
+          "explicacion": "Los árboles protegen el suelo y dan sombra y forraje."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}
