@@ -1,0 +1,267 @@
+{
+  "id": "cambios-materia",
+  "materia": "quimica",
+  "area": "materia",
+  "titulo": "Cambios físicos y químicos",
+  "subtema": "¿Se formó una sustancia nueva?",
+  "orden": 104,
+  "etiqueta": "4",
+  "vistas": ["ruta"],
+  "tituloVista": "Ruta de los cambios",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Diferenciar un cambio físico de uno químico.",
+    "Reconocer las señales de un cambio químico.",
+    "Diferenciar propiedades físicas y químicas, y explicar la oxidación."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con el plan curricular de Ciencias Naturales 2025 y un texto de química general (cambios y propiedades de la materia)."
+  ],
+  "bloques": [
+    {
+      "id": "fisico-quimico",
+      "titulo": "Físico o químico",
+      "resumen": "En un cambio físico la sustancia sigue siendo la misma; en uno químico se forman sustancias nuevas.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "La materia cambia todo el tiempo, pero no todos los cambios son iguales. En un cambio físico cambia la forma, el tamaño o el estado, pero la sustancia sigue siendo la misma: doblar o cortar papel, derretir hielo, disolver sal en agua. En un cambio químico, en cambio, las sustancias iniciales se transforman en sustancias nuevas, con otras propiedades: quemar papel produce ceniza, humo y gases; freír un huevo cambia sus proteínas; el hierro se oxida. Muchos cambios físicos se pueden devolver fácilmente (el agua se congela y se vuelve a derretir), mientras que los químicos casi nunca se devuelven con facilidad. La pregunta clave es: ¿se formó una sustancia nueva?",
+        "contexto": [
+          { "titulo": "La masa se conserva", "texto": "En un cambio químico los átomos no se crean ni se destruyen: solo se reorganizan. Si se recogen todos los gases, la masa total no cambia." }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Cambio físico: la sustancia es la misma (cortar, derretir, disolver).",
+            "Cambio químico: se forman sustancias nuevas (quemar, oxidar, cocinar)."
+          ],
+          "media": [
+            "En un cambio químico los átomos se reorganizan; la masa total se conserva."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "Si quemo una hoja de papel y la corto en pedazos, ¿en cuál de los dos casos sigue siendo papel?",
+          "actividad": "Mesa de cambios: derretir un trozo de vela, quemar la mecha, disolver azúcar, caramelizarla en una cuchara (con el docente) y clasificar.",
+          "errores": [
+            "Creer que todo cambio de estado es químico.",
+            "Pensar que disolver es un cambio químico porque «desaparece»."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿En cuál caso el papel deja de ser papel?",
+            "opciones": ["Al quemarlo", "Al doblarlo", "Al cortarlo", "Al mojarlo"],
+            "correcta": 0,
+            "explicacion": "Al quemarlo se forman ceniza, humo y gases: sustancias nuevas."
+          }
+        },
+        {
+          "titulo": "Una hoja, cuatro momentos",
+          "visual": {
+            "tipo": "escena",
+            "id": "papel-cambios",
+            "fases": [
+              { "id": "hoja", "nombre": "La hoja", "texto": "Papel nuevo." },
+              { "id": "doblar", "nombre": "Doblar", "texto": "Cambia la forma: cambio físico." },
+              { "id": "cortar", "nombre": "Cortar", "texto": "Cambia el tamaño: cambio físico." },
+              { "id": "quemar", "nombre": "Quemar", "texto": "Sustancias nuevas: cambio químico." }
+            ]
+          }
+        },
+        {
+          "titulo": "La pregunta clave",
+          "visual": {
+            "tipo": "compara",
+            "izq": { "icono": "🔁", "titulo": "Físico", "puntos": ["Misma sustancia", "Cambia forma, tamaño o estado"] },
+            "der": { "icono": "⚗️", "titulo": "Químico", "puntos": ["Sustancias nuevas", "Otras propiedades"] }
+          }
+        }
+      ],
+      "juego": "fisico-quimico-juego",
+      "preguntas": [
+        {
+          "id": "qm-cm-1",
+          "enunciado": "¿Cuál es un cambio químico?",
+          "opciones": ["Freír un huevo", "Derretir mantequilla", "Romper un vidrio", "Disolver azúcar en agua"],
+          "correcta": 0,
+          "explicacion": "Las proteínas del huevo se transforman."
+        },
+        {
+          "id": "qm-cm-2",
+          "enunciado": "¿Qué pasa en un cambio físico?",
+          "opciones": ["La sustancia sigue siendo la misma", "Se forma una sustancia nueva", "Siempre se libera un gas", "Desaparecen los átomos"],
+          "correcta": 0,
+          "explicacion": "Cambia la forma, el tamaño o el estado."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "senales",
+      "titulo": "Señales de un cambio químico",
+      "resumen": "Burbujas, cambio de color, luz o calor y un sólido nuevo avisan que hubo una reacción.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "ficha": {
+        "idea": "No podemos ver los átomos reorganizándose, pero hay señales que indican que ocurrió un cambio químico: sale un gas (burbujas al mezclar vinagre y bicarbonato), cambia el color (el hierro que se pone rojizo, la manzana que se pone café), se libera luz o calor (la leña que arde), aparece un sólido nuevo (la leche que se corta con limón) o cambia el olor (la comida que se descompone). Una señal sola no basta: el agua que hierve también hace burbujas y es un cambio físico. Por eso hay que preguntarse si la sustancia cambió.",
+        "contexto": [
+          { "titulo": "Precipitado", "texto": "Así se llama el sólido que aparece al mezclar dos líquidos, como los grumos de la leche cortada." }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Señales: gas, color, luz o calor, sólido nuevo, olor."
+          ],
+          "media": [
+            "Una señal sola no basta: hay que comprobar que se formó una sustancia nueva.",
+            "Precipitado: sólido que se forma en una reacción entre líquidos."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "Las burbujas del agua que hierve y las del vinagre con bicarbonato, ¿son el mismo tipo de cambio?",
+          "actividad": "Inflar un globo en la boca de una botella con vinagre al que se le agrega bicarbonato; cortar leche tibia con limón.",
+          "errores": [
+            "Pensar que toda burbuja indica un cambio químico."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Al echar bicarbonato en vinagre salen burbujas. ¿Qué indica?",
+            "opciones": ["Se formó un gas nuevo: hubo reacción", "El vinagre hirvió", "El bicarbonato se derritió", "Nada, solo se mezclaron"],
+            "correcta": 0,
+            "explicacion": "Se forma dióxido de carbono (CO₂)."
+          }
+        },
+        {
+          "titulo": "Cinco señales",
+          "visual": {
+            "tipo": "escena",
+            "id": "senales-quimicas",
+            "fases": [
+              { "id": "gas", "nombre": "Gas", "texto": "Aparecen burbujas de un gas nuevo." },
+              { "id": "color", "nombre": "Color", "texto": "El material cambia de color." },
+              { "id": "calor", "nombre": "Luz y calor", "texto": "La reacción libera energía." },
+              { "id": "solido", "nombre": "Sólido nuevo", "texto": "Se forma un precipitado." },
+              { "id": "olor", "nombre": "Olor", "texto": "Aparece un olor distinto." }
+            ]
+          }
+        },
+        {
+          "titulo": "Cuidado con las burbujas",
+          "visual": {
+            "tipo": "compara",
+            "izq": { "icono": "♨️", "titulo": "Agua que hierve", "puntos": ["Burbujas de vapor de agua", "Cambio físico"] },
+            "der": { "icono": "🫧", "titulo": "Vinagre + bicarbonato", "puntos": ["Burbujas de CO₂", "Cambio químico"] }
+          }
+        }
+      ],
+      "juego": "senal-quimica-juego",
+      "preguntas": [
+        {
+          "id": "qm-cm-3",
+          "enunciado": "La leche se corta al echarle limón. ¿Qué señal de cambio químico aparece?",
+          "opciones": ["Un sólido nuevo", "Un gas", "Luz", "Ninguna"],
+          "correcta": 0,
+          "explicacion": "Los grumos son un precipitado."
+        },
+        {
+          "id": "qm-cm-4",
+          "enunciado": "¿Por qué las burbujas del agua hirviendo no indican un cambio químico?",
+          "opciones": ["Porque son vapor de la misma agua", "Porque son de aire", "Porque son muy pequeñas", "Porque el agua no tiene átomos"],
+          "correcta": 0,
+          "explicacion": "Es un cambio de estado."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "propiedades-quimicas",
+      "titulo": "Propiedades químicas y oxidación",
+      "resumen": "Las propiedades químicas dicen cómo reacciona una sustancia; la oxidación del hierro es el ejemplo más cercano.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "intermedio",
+      "ficha": {
+        "idea": "Las propiedades físicas se observan sin cambiar la sustancia (color, densidad, punto de ebullición). Las propiedades químicas, en cambio, solo se ven cuando la sustancia se transforma: la combustibilidad (si arde, como la gasolina), la capacidad de oxidarse (como el hierro), la reactividad con ácidos o con el agua. La oxidación del hierro es un cambio químico lento: el hierro reacciona con el oxígeno del aire y con el agua y forma óxido de hierro, una sustancia rojiza y quebradiza. Por eso las herramientas se guardan secas, se aceitan o se pintan: así el oxígeno y el agua no llegan al metal.",
+        "contexto": [
+          { "titulo": "Combustión", "texto": "Es una oxidación rápida: un combustible reacciona con el oxígeno y libera luz y calor." }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Propiedad química: cómo reacciona una sustancia (si arde, si se oxida)."
+          ],
+          "media": [
+            "Oxidación del hierro: hierro + oxígeno + agua → óxido de hierro.",
+            "Se evita con pintura, aceite o guardándolo seco."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Por qué el machete que se deja en el potrero se oxida y el que se guarda aceitado no?",
+          "actividad": "Dejar tres puntillas una semana: en agua, en aceite y en un frasco seco con sal o arroz; comparar el óxido.",
+          "errores": [
+            "Creer que el óxido es suciedad que se pega al metal."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Qué necesita el hierro para oxidarse?",
+            "opciones": ["Oxígeno y agua", "Solo sol", "Solo frío", "Tierra"],
+            "correcta": 0,
+            "explicacion": "Por eso se oxida más en lugares húmedos."
+          }
+        },
+        {
+          "titulo": "El machete y el óxido",
+          "visual": {
+            "tipo": "escena",
+            "id": "machete-oxido",
+            "fases": [
+              { "id": "nuevo", "nombre": "Nuevo", "texto": "Hierro brillante." },
+              { "id": "humedad", "nombre": "Humedad", "texto": "Le llegan agua y oxígeno." },
+              { "id": "oxido", "nombre": "Óxido", "texto": "Se forma óxido de hierro: sustancia nueva." },
+              { "id": "proteger", "nombre": "Proteger", "texto": "Seco, aceitado o pintado." }
+            ]
+          }
+        }
+      ],
+      "juego": "propiedad-fq-juego",
+      "preguntas": [
+        {
+          "id": "qm-cm-5",
+          "enunciado": "¿Cuál es una propiedad química?",
+          "opciones": ["La gasolina arde con facilidad", "El cobre es rojizo", "El agua hierve a 100 °C", "El hierro es denso"],
+          "correcta": 0,
+          "explicacion": "La combustibilidad solo se ve cuando la sustancia reacciona."
+        },
+        {
+          "id": "qm-cm-6",
+          "enunciado": "¿Por qué aceitar el machete evita que se oxide?",
+          "opciones": ["Porque el aceite impide que lleguen el agua y el oxígeno", "Porque el aceite enfría el metal", "Porque el aceite es un ácido", "Porque lo hace más pesado"],
+          "correcta": 0,
+          "explicacion": "Sin agua y oxígeno no hay oxidación."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}
