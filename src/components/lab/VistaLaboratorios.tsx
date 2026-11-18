@@ -13,6 +13,7 @@ import Tinciones from './practicas/Tinciones.tsx'
 import Osmosis from './practicas/Osmosis.tsx'
 import Biomoleculas from './practicas/Biomoleculas.tsx'
 import Enzimas from './practicas/Enzimas.tsx'
+import Fotosintesis from './practicas/Fotosintesis.tsx'
 
 // Laboratorios virtuales (PLAN-LABORATORIOS.md). Las prácticas listas van en PRACTICAS; las demás de la
 // ruta salen como «próximamente».
@@ -38,6 +39,7 @@ const PRACTICAS: Entrada[] = [
   { id: 'osmosis', titulo: 'Ósmosis', resumen: 'Plasmólisis en elodea y tiras de papa en agua con sal: tabla, gráfica y punto isotónico.', grupo: 'Biología', desdeGrado: 6, Juego: Osmosis },
   { id: 'biomoleculas', titulo: 'Biomoléculas en los alimentos', resumen: 'Lugol, Benedict, Biuret y la mancha en papel sobre once alimentos: interpreta cada tubo.', grupo: 'Biología', desdeGrado: 6, Juego: Biomoleculas },
   { id: 'enzimas', titulo: 'Enzimas', resumen: 'Catalasa con agua oxigenada (temperatura y pH) y amilasa digiriendo almidón, vista con lugol.', grupo: 'Biología', desdeGrado: 6, Juego: Enzimas },
+  { id: 'fotosintesis', titulo: 'Fotosíntesis', resumen: 'Burbujas de oxígeno de la elodea según la luz y el CO₂, y cromatografía de los pigmentos de las hojas.', grupo: 'Biología', desdeGrado: 6, Juego: Fotosintesis },
   { id: solucionMolar.id, titulo: solucionMolar.titulo, resumen: solucionMolar.resumen, grupo: 'Química', desdeGrado: solucionMolar.desdeGrado, mesa: solucionMolar },
 ]
 
@@ -48,7 +50,7 @@ const PROXIMAS: { lab: string; items: string[] }[] = [
   },
   {
     lab: 'Biología',
-    items: ['Fotosíntesis', 'Fermentación', 'Extracción de ADN', 'Microbiología', 'Calidad del agua y del suelo'],
+    items: ['Fermentación', 'Extracción de ADN', 'Microbiología', 'Calidad del agua y del suelo'],
   },
 ]
 
