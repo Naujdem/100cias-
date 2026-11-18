@@ -28,6 +28,7 @@ import PcrCiclos from './PcrCiclos.tsx'
 import { EcologiaQueJuego, NivelesEcologicosJuego, HabitatNichoJuego, FactoresJuego, PisosJuego, EcosistemasColombiaJuego, ToleranciaJuego } from './JuegosEcologia.tsx'
 import PisosTermicos from './PisosTermicos.tsx'
 import RedTrofica from './RedTrofica.tsx'
+import { IntraJuego, DepredacionJuego, SimbiosisJuego } from './JuegosRelaciones.tsx'
 import { ProductoresJuego, CadenaJuego, RedJuego, PiramideJuego } from './JuegosEnergia.tsx'
 import { BiotecQueJuego, InsulinaJuego, PcrJuego, TransgenicoJuego, EdicionJuego, DebateJuego } from './JuegosBiotec.tsx'
 import { QueEsMutacionJuego, PuntualesJuego, EfectosJuego, NumericasJuego, CromosomicasJuego, VariacionJuego } from './JuegosMutaciones.tsx'
@@ -211,6 +212,9 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'cadena-juego': CadenaJuego,
   'red-juego': RedJuego,
   'piramide-juego': PiramideJuego,
+  'intra-juego': IntraJuego,
+  'depredacion-juego': DepredacionJuego,
+  'simbiosis-juego': SimbiosisJuego,
   'meiosis-i-ii-juego': MeiosisIoIIJuego,
   'oficio-juego': OficioJuego,
   'origen-celulas-juego': OrigenCelulasJuego,

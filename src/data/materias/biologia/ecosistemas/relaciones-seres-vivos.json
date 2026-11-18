@@ -1,0 +1,329 @@
+{
+  "id": "relaciones-seres-vivos",
+  "materia": "biologia",
+  "area": "ecosistemas",
+  "titulo": "Relaciones entre seres vivos",
+  "subtema": "Quién gana y quién pierde",
+  "orden": 34,
+  "etiqueta": "4",
+  "vistas": [
+    "ruta"
+  ],
+  "tituloVista": "Ruta de las relaciones",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Reconocer relaciones intraespecíficas.",
+    "Diferenciar depredación y competencia.",
+    "Clasificar mutualismo, comensalismo y parasitismo."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con un texto de ciencias naturales."
+  ],
+  "bloques": [
+    {
+      "id": "intraespecificas",
+      "titulo": "Entre individuos de la misma especie",
+      "resumen": "Manadas, colonias y sociedades ayudan a sobrevivir; también hay competencia dentro de la especie.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "ficha": {
+        "idea": "Las relaciones intraespecíficas ocurren entre individuos de la misma especie. Algunas los benefician: en una manada o bandada se protegen de los depredadores; en una colonia viven unidos, como los pólipos del coral; en una sociedad se reparten el trabajo, como las abejas o las hormigas arrieras. También compiten entre sí por alimento, territorio o pareja.",
+        "contexto": [
+          {
+            "titulo": "Hormigas arrieras",
+            "texto": "Cortan hojas pero no se las comen: las usan para cultivar un hongo del que se alimentan. Cada hormiga cumple un papel según su tamaño."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Intraespecífica: entre individuos de la misma especie.",
+            "Manada, colonia, sociedad y competencia."
+          ],
+          "media": [
+            "La competencia intraespecífica limita el tamaño de la población."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Por qué crees que los chigüiros andan en grupo?",
+          "actividad": "Clasificar ejemplos de animales de la región por tipo de grupo.",
+          "errores": [
+            "Creer que dentro de una especie solo hay cooperación."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Juntos o en competencia",
+          "visual": {
+            "tipo": "escena",
+            "id": "intraespecificas",
+            "fases": [
+              {
+                "id": "manada",
+                "nombre": "Manada",
+                "texto": "Los chigüiros viven en grupos: muchos ojos vigilan a los depredadores."
+              },
+              {
+                "id": "colonia",
+                "nombre": "Colonia",
+                "texto": "Los pólipos del coral viven pegados unos a otros y forman el arrecife."
+              },
+              {
+                "id": "sociedad",
+                "nombre": "Sociedad",
+                "texto": "En una colmena hay reina, obreras y zánganos: cada una tiene su trabajo."
+              },
+              {
+                "id": "competencia",
+                "nombre": "Competencia",
+                "texto": "Los individuos de la misma especie también compiten por comida, territorio o pareja."
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "intra-juego",
+      "preguntas": [
+        {
+          "id": "ec-in-1",
+          "enunciado": "¿Qué caracteriza a una sociedad, como la de las abejas?",
+          "opciones": [
+            "Los individuos se reparten el trabajo",
+            "Viven pegados físicamente",
+            "Son de especies distintas",
+            "No se relacionan entre sí"
+          ],
+          "correcta": 0,
+          "explicacion": "Hay reina, obreras y zánganos."
+        },
+        {
+          "id": "ec-in-2",
+          "enunciado": "Dos venados machos pelean por un territorio. ¿Qué relación es?",
+          "opciones": [
+            "Competencia intraespecífica",
+            "Mutualismo",
+            "Comensalismo",
+            "Depredación"
+          ],
+          "correcta": 0,
+          "explicacion": "Misma especie, mismo recurso."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "depredacion-competencia",
+      "titulo": "Depredación y competencia",
+      "resumen": "Entre especies distintas: el depredador gana y la presa pierde; en la competencia pierden ambas.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "requiere": [
+        "intraespecificas"
+      ],
+      "ficha": {
+        "idea": "Entre especies distintas (relaciones interespecíficas) también hay depredación y competencia. En la depredación, un animal (el depredador) caza y se come a otro (la presa): uno gana y el otro pierde (+/−). En la competencia, dos especies usan el mismo recurso escaso, como el alimento o el espacio, y las dos salen perdiendo (−/−).",
+        "contexto": [
+          {
+            "titulo": "Depredadores necesarios",
+            "texto": "Los depredadores mantienen controladas las poblaciones de presas; sin ellos, los herbívoros pueden acabar con la vegetación."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Depredación (+/−): uno se come al otro.",
+            "Competencia (−/−): usan el mismo recurso."
+          ],
+          "media": [],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Qué pasaría en los Llanos si no hubiera jaguares?",
+          "actividad": "Escribir los signos (+, −, 0) de cada especie en ejemplos de la región.",
+          "errores": [
+            "Pensar que los depredadores son «malos» para el ecosistema."
+          ],
+          "minutos": 15
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Ganar y perder",
+          "visual": {
+            "tipo": "escena",
+            "id": "depredacion",
+            "fases": [
+              {
+                "id": "depredacion",
+                "nombre": "Depredación",
+                "texto": "El jaguar caza al chigüiro: el jaguar gana (+) y el chigüiro pierde (−)."
+              },
+              {
+                "id": "competencia",
+                "nombre": "Competencia",
+                "texto": "El gavilán y la lechuza cazan los mismos ratones: los dos tienen menos comida (−/−)."
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "depredacion-juego",
+      "preguntas": [
+        {
+          "id": "ec-dc-1",
+          "enunciado": "¿Qué signos tiene la depredación?",
+          "opciones": [
+            "+ / −",
+            "+ / +",
+            "− / −",
+            "+ / 0"
+          ],
+          "correcta": 0,
+          "explicacion": "El depredador gana y la presa pierde."
+        },
+        {
+          "id": "ec-dc-2",
+          "enunciado": "¿Cuándo hay competencia entre dos especies?",
+          "opciones": [
+            "Cuando usan el mismo recurso escaso",
+            "Cuando una se come a la otra",
+            "Cuando las dos se benefician",
+            "Cuando viven en lugares distintos"
+          ],
+          "correcta": 0,
+          "explicacion": "Las dos pierden algo."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "simbiosis",
+      "titulo": "Mutualismo, comensalismo y parasitismo",
+      "resumen": "Especies que viven muy cerca: ganan las dos, gana una sin afectar a la otra, o una vive a costa de la otra.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "Algunas especies viven muy cerca unas de otras (simbiosis). En el mutualismo las dos se benefician (+/+): el colibrí toma néctar y poliniza la flor. En el comensalismo una se beneficia y a la otra no le afecta (+/0): la orquídea crece sobre un árbol. En el parasitismo una vive a costa de la otra y le hace daño, aunque por lo general no la mata pronto (+/−): la garrapata en la vaca.",
+        "contexto": [
+          {
+            "titulo": "Líquenes",
+            "texto": "Un liquen es un hongo y un alga viviendo juntos: el alga hace fotosíntesis y el hongo le da agua y protección."
+          },
+          {
+            "titulo": "Coevolución",
+            "texto": "Algunas flores y colibríes cambiaron juntos durante millones de años: el pico encaja justo en la flor."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Mutualismo +/+.",
+            "Comensalismo +/0.",
+            "Parasitismo +/−."
+          ],
+          "media": [
+            "El parásito por lo general no mata pronto a su hospedero."
+          ],
+          "avanzada": [
+            "Las especies que se relacionan pueden cambiar juntas (coevolución)."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Qué relación hay entre tú y las bacterias de tu intestino?",
+          "actividad": "Buscar en la huerta o el patio un ejemplo de cada relación.",
+          "errores": [
+            "Confundir parasitismo con depredación.",
+            "Creer que todas las bacterias son parásitas."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Vivir juntos",
+          "visual": {
+            "tipo": "escena",
+            "id": "simbiosis",
+            "fases": [
+              {
+                "id": "mutualismo",
+                "nombre": "Mutualismo",
+                "texto": "El colibrí toma néctar y poliniza la flor: ganan los dos (+/+)."
+              },
+              {
+                "id": "comensalismo",
+                "nombre": "Comensalismo",
+                "texto": "La orquídea vive sobre el árbol sin quitarle nada (+/0)."
+              },
+              {
+                "id": "parasitismo",
+                "nombre": "Parasitismo",
+                "texto": "La garrapata chupa sangre a la vaca: ella gana y la vaca pierde (+/−)."
+              },
+              {
+                "id": "resumen",
+                "nombre": "Resumen",
+                "texto": "Los signos ayudan a reconocer cada relación."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Parasitismo o depredación",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "🪲",
+              "titulo": "Parasitismo",
+              "puntos": [
+                "Vive sobre o dentro del otro",
+                "Por lo general no lo mata pronto"
+              ]
+            },
+            "der": {
+              "icono": "🐆",
+              "titulo": "Depredación",
+              "puntos": [
+                "Caza a la presa",
+                "La mata para comérsela"
+              ]
+            }
+          }
+        }
+      ],
+      "juego": "simbiosis-juego",
+      "preguntas": [
+        {
+          "id": "ec-si-1",
+          "enunciado": "El colibrí y la flor: ¿qué relación tienen?",
+          "opciones": [
+            "Mutualismo",
+            "Parasitismo",
+            "Comensalismo",
+            "Competencia"
+          ],
+          "correcta": 0,
+          "explicacion": "Ambos se benefician."
+        },
+        {
+          "id": "ec-si-2",
+          "enunciado": "¿Qué diferencia al parasitismo de la depredación?",
+          "opciones": [
+            "El parásito por lo general no mata pronto a su hospedero",
+            "En el parasitismo ganan los dos",
+            "El parásito siempre es más grande",
+            "No hay diferencia"
+          ],
+          "correcta": 0,
+          "explicacion": "Vive a costa del otro durante un tiempo."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}

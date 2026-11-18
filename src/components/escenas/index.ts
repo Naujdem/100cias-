@@ -21,6 +21,7 @@ import { EscenaQueEsMutacion, EscenaPuntuales, EscenaFalciforme, EscenaNoDisyunc
 import { EscenaBiotecQue, EscenaInsulina, EscenaPcr, EscenaTransgenico, EscenaEdicion, EscenaDebate } from './EscenasBiotec.tsx'
 import { EscenaEcologiaQue, EscenaNivelesEcologicos, EscenaHabitatNicho, EscenaFactores, EscenaPisos, EscenaEcosistemasColombia, EscenaTolerancia } from './EscenasEcologia.tsx'
 import { EscenaProductores, EscenaCadena, EscenaPiramide } from './EscenasEnergia.tsx'
+import { EscenaIntraespecificas, EscenaDepredacion, EscenaSimbiosis } from './EscenasRelaciones.tsx'
 
 /** Escenas vivas: un dibujo que se transforma según la fase (`fase` = id de la fase en el JSON). */
 export const ESCENAS: Record<string, ComponentType<{ fase: string }>> = {
@@ -103,6 +104,9 @@ export const ESCENAS: Record<string, ComponentType<{ fase: string }>> = {
   productores: EscenaProductores,
   cadena: EscenaCadena,
   piramide: EscenaPiramide,
+  intraespecificas: EscenaIntraespecificas,
+  depredacion: EscenaDepredacion,
+  simbiosis: EscenaSimbiosis,
   'optico-electronico': EscenaOpticoElectronico,
   'celula-animal': EscenaZoomCelula,
   'celula-vegetal': ({ fase }) => EscenaZoomCelula({ fase, vegetal: true }),
