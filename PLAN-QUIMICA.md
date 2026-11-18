@@ -29,12 +29,31 @@ Guía de contenidos: plan curricular de Ciencias Naturales 2025 (Química 6°–
 6. **Separación de mezclas** — filtración, decantación, tamizado, imantación, evaporación, destilación,
    cromatografía (10°). Juega: elegir la técnica para cada mezcla (incluye beneficio del café).
 
-## Áreas 2 a 5 (ruta detallada cuando se empiecen)
+## Área 2 · Átomo, tabla periódica y enlace (ruta aprobada el 18 nov 2026)
 
-- **Área 2 · Átomo, tabla periódica y enlace:** modelos atómicos (línea de tiempo con fichas, de Demócrito a
-  Schrödinger), partículas subatómicas, configuración electrónica y números cuánticos (10°–11°), historia,
-  estructura y propiedades periódicas, valencia, Lewis, octeto, tipos de enlace, fuerzas intermoleculares.
-  Interactivos: armar átomos, tabla periódica con casillas, armar estructuras de Lewis.
+Grados con las casillas de siempre (6°, 9°, 11°).
+
+1. **Historia de los modelos atómicos** — línea de tiempo con fichas (excepción, como las historias de Biología):
+   Demócrito, Dalton, Thomson, Rutherford, Bohr, Schrödinger (11°) y Chadwick (9°). Escena por hito.
+   Explora: disparar partículas alfa a la lámina de oro.
+2. **El átomo por dentro** — protones, neutrones, electrones; Z y A; iones; isótopos (9°). Explora: armar átomos
+   (qué elemento es, su carga, si es estable). Atajo: carbono-14 → fósiles (Biología área 4).
+3. **Los electrones en el átomo** — niveles de Bohr; configuración electrónica y diagrama de Moeller (9°);
+   orbitales y números cuánticos (11°). Explora: llenar orbitales con flechas.
+4. **La tabla periódica: historia y estructura** — Döbereiner, Newlands, Mendeléiev (huecos predichos), Moseley;
+   grupos, periodos, bloques; metales, no metales, metaloides; elementos de Colombia (platino del Chocó, níquel
+   de Cerro Matoso, berilio de las esmeraldas). Explora: tabla con casillas (familias, estados, bloques).
+5. **Propiedades periódicas** — radio, energía de ionización, electronegatividad, carácter metálico; afinidad
+   electrónica (11°). Explora: la tabla como mapa de calor.
+6. **Enlace químico** — valencia, octeto, Lewis; iónico, covalente polar y apolar, metálico; coordinado (11°).
+   Explora: armar estructuras de Lewis. Juega: ¿qué enlace es?
+7. **Geometría molecular y fuerzas intermoleculares** (9°–11°) — VSEPR (11°); dipolo, London, puentes de
+   hidrógeno. Las propiedades del agua solo se mencionan, con atajo al área 4.
+8. *(Opcional, 11°)* **Radiactividad** — tipos de radiación, vida media, usos (medicina, datación); enlaza con
+   el tema 2 y con los fósiles.
+
+## Áreas 3 a 5 (ruta detallada cuando se empiecen)
+
 - **Área 3 · Compuestos y reacciones:** estados de oxidación, nomenclatura inorgánica (óxidos, hidróxidos,
   ácidos, sales, oxisales), tipos de reacción, balanceo por tanteo y óxido-reducción, leyes ponderales, mol y
   Avogadro, cálculos estequiométricos, reactivo límite, rendimiento y pureza. Interactivos: balanza de

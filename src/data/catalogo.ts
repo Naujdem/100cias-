@@ -43,4 +43,13 @@ export const PROXIMOS: Record<string, { etiqueta: string; nombre: string }[]> = 
   evolucion: [],
   materia: [
   ],
+  atomo: [
+    { etiqueta: '2', nombre: 'El átomo por dentro' },
+    { etiqueta: '3', nombre: 'Los electrones en el átomo' },
+    { etiqueta: '4', nombre: 'La tabla periódica: historia y estructura' },
+    { etiqueta: '5', nombre: 'Propiedades periódicas' },
+    { etiqueta: '6', nombre: 'Enlace químico' },
+    { etiqueta: '7', nombre: 'Geometría molecular y fuerzas intermoleculares' },
+    { etiqueta: '8', nombre: 'Radiactividad (opcional, 11°)' },
+  ],
 }

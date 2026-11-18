@@ -1,0 +1,948 @@
+{
+  "orden": 111,
+  "etiqueta": "1",
+  "id": "modelos-atomicos",
+  "materia": "quimica",
+  "area": "atomo",
+  "titulo": "Historia de los modelos atómicos",
+  "subtema": "De Demócrito al modelo actual",
+  "diapositivas": true,
+  "objetivos": [
+    "Contar cómo cambió la idea del átomo, de Demócrito al modelo actual.",
+    "Relacionar cada modelo con el experimento que lo apoyó o lo descartó.",
+    "Reconocer que los modelos científicos se corrigen con nuevas evidencias."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar contra un texto de química de bachillerato. A verificar: fechas (Demócrito c. 460–370 a. C.; Dalton 1808; Thomson 1897 y modelo 1904; Geiger-Marsden 1909, Rutherford 1911; Bohr 1913; De Broglie 1924, Schrödinger 1926, Heisenberg 1927; Rutherford y el protón 1919; Chadwick 1932), años de los premios Nobel y la cita de Rutherford sobre la bala de cañón (aquí parafraseada)."
+  ],
+  "bloques": [
+    {
+      "id": "democrito",
+      "titulo": "Demócrito: la idea del átomo",
+      "anio": -400,
+      "etiqueta": "~400 a. C.",
+      "nivel": "basico",
+      "resumen": "Propuso que todo está hecho de partículas diminutas que no se pueden dividir: los átomos.",
+      "autores": [
+        {
+          "nombre": "Demócrito",
+          "vida": "c. 460–370 a. C.",
+          "aporte": "Filósofo griego. Con su maestro Leucipo propuso que la materia está hecha de átomos y vacío."
+        }
+      ],
+      "ficha": {
+        "quien": "Demócrito (y su maestro Leucipo)",
+        "cuando": "Hacia el 400 a. C., en la antigua Grecia",
+        "idea": "Si partimos una piedra una y otra vez, en algún momento llegaremos a un trozo que ya no se puede partir. Demócrito lo llamó átomo, que en griego significa «sin cortar». Para él todo estaba hecho de átomos que se mueven en el vacío.",
+        "contexto": [
+          {
+            "titulo": "Una idea sin laboratorio",
+            "texto": "Los filósofos griegos razonaban sobre la naturaleza, pero no hacían experimentos para comprobar sus ideas."
+          },
+          {
+            "titulo": "Aristóteles no estuvo de acuerdo",
+            "texto": "Aristóteles defendía que la materia es continua y está hecha de cuatro elementos: agua, aire, tierra y fuego. Su idea dominó casi 2000 años."
+          },
+          {
+            "titulo": "La palabra se quedó",
+            "texto": "Cuando la ciencia volvió a hablar de átomos, en el siglo XIX, usó la palabra de Demócrito."
+          }
+        ],
+        "evidencia": [
+          "Ninguna experimental: era un razonamiento filosófico."
+        ],
+        "limites": "No podía probar su idea ni decir cómo eran los átomos por dentro (y hoy sabemos que sí se pueden dividir).",
+        "cuaderno": {
+          "facil": [
+            "Demócrito pensó que todo está hecho de átomos.",
+            "Átomo significa «sin cortar»."
+          ],
+          "media": [
+            "Fue una idea filosófica, sin experimentos.",
+            "Aristóteles creía que la materia era continua."
+          ],
+          "avanzada": [
+            "La idea volvió con Dalton en 1808, ya apoyada en mediciones."
+          ]
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Partir y volver a partir",
+          "visual": {
+            "tipo": "escena",
+            "id": "at-democrito",
+            "fases": [
+              {
+                "id": "piedra",
+                "nombre": "Una piedra",
+                "texto": "Imagina que partes una piedra por la mitad."
+              },
+              {
+                "id": "mitad",
+                "nombre": "Dos mitades",
+                "texto": "Cada mitad se puede partir otra vez."
+              },
+              {
+                "id": "granos",
+                "nombre": "Granos",
+                "texto": "Y otra, y otra, hasta tener granos diminutos."
+              },
+              {
+                "id": "atomo",
+                "nombre": "El átomo",
+                "texto": "Demócrito pensó que al final queda algo que ya no se puede cortar: el átomo."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Dos ideas enfrentadas",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "⚪",
+                "titulo": "Demócrito",
+                "texto": "Todo está hecho de átomos y vacío."
+              },
+              {
+                "icono": "🌍",
+                "titulo": "Aristóteles",
+                "texto": "La materia es continua: agua, aire, tierra y fuego."
+              },
+              {
+                "icono": "⏳",
+                "titulo": "¿Quién ganó?",
+                "texto": "Aristóteles, durante casi 2000 años… hasta Dalton."
+              }
+            ]
+          }
+        }
+      ],
+      "preguntas": [
+        {
+          "id": "ma-de-1",
+          "enunciado": "¿Qué significa la palabra «átomo»?",
+          "opciones": [
+            "Sin cortar (indivisible)",
+            "Pequeño",
+            "Partícula de luz",
+            "Bola maciza"
+          ],
+          "correcta": 0,
+          "explicacion": "Viene del griego a- (sin) y tomos (corte)."
+        },
+        {
+          "id": "ma-de-2",
+          "enunciado": "¿Por qué la idea de Demócrito no era todavía una teoría científica?",
+          "opciones": [
+            "No la comprobó con experimentos",
+            "Nadie la escribió",
+            "Era demasiado complicada",
+            "Ya se sabía que era falsa"
+          ],
+          "correcta": 0,
+          "explicacion": "Era un razonamiento filosófico, sin pruebas experimentales."
+        }
+      ],
+      "revisado": false,
+      "juego": "democrito-juego"
+    },
+    {
+      "id": "dalton",
+      "titulo": "Dalton: el átomo como esfera maciza",
+      "anio": 1808,
+      "nivel": "basico",
+      "resumen": "Retomó la idea del átomo con base en mediciones: cada elemento tiene su tipo de átomo y los compuestos los combinan en proporciones fijas.",
+      "autores": [
+        {
+          "nombre": "John Dalton",
+          "vida": "1766–1844",
+          "aporte": "Químico y maestro inglés. Publicó su teoría atómica en «Nuevo sistema de filosofía química» (1808)."
+        }
+      ],
+      "ficha": {
+        "quien": "John Dalton",
+        "cuando": "1803–1808",
+        "idea": "Dalton propuso que la materia está hecha de átomos, esferas macizas e indivisibles. Los átomos de un mismo elemento son iguales entre sí y distintos de los de otros elementos. En una reacción química los átomos no se crean ni se destruyen: solo se reorganizan, y los compuestos se forman uniendo átomos en proporciones fijas.",
+        "contexto": [
+          {
+            "titulo": "Basado en medidas",
+            "texto": "A diferencia de Demócrito, Dalton se apoyó en las leyes de las masas de su época: la conservación de la masa y las proporciones definidas."
+          },
+          {
+            "titulo": "Una tabla de masas",
+            "texto": "Hizo una de las primeras tablas de masas atómicas, tomando el hidrógeno como unidad."
+          },
+          {
+            "titulo": "Curiosidad",
+            "texto": "Dalton era daltónico, y la palabra «daltonismo» viene de su nombre porque fue el primero en describirlo."
+          }
+        ],
+        "evidencia": [
+          "Las reacciones conservan la masa.",
+          "Un compuesto tiene siempre la misma proporción de masa de sus elementos."
+        ],
+        "limites": "Su átomo no tenía partes, y creía que todos los átomos de un elemento tienen la misma masa (hoy conocemos los isótopos).",
+        "cuaderno": {
+          "facil": [
+            "Para Dalton el átomo es una bola maciza.",
+            "Cada elemento tiene su propio tipo de átomo."
+          ],
+          "media": [
+            "En una reacción los átomos se reorganizan; no se crean ni se destruyen.",
+            "Los compuestos unen átomos en proporciones fijas."
+          ],
+          "avanzada": [
+            "Su teoría explicó las leyes ponderales (área 3).",
+            "Los isótopos corrigieron la idea de que todos los átomos de un elemento pesan igual."
+          ]
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Bolas que se combinan",
+          "visual": {
+            "tipo": "escena",
+            "id": "at-dalton",
+            "fases": [
+              {
+                "id": "esfera",
+                "nombre": "Esfera maciza",
+                "texto": "Para Dalton el átomo es una bola sólida, sin nada por dentro."
+              },
+              {
+                "id": "elementos",
+                "nombre": "Un átomo por elemento",
+                "texto": "El hidrógeno, el oxígeno y el carbono tienen átomos distintos, con masas distintas."
+              },
+              {
+                "id": "compuesto",
+                "nombre": "Compuestos",
+                "texto": "Los átomos se unen en proporciones fijas para formar compuestos, como el agua."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Lo que sigue en pie",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "✅",
+                "titulo": "Todo está hecho de átomos",
+                "texto": "La base de la química moderna."
+              },
+              {
+                "icono": "✅",
+                "titulo": "Se conservan",
+                "texto": "En una reacción los átomos solo se reorganizan."
+              },
+              {
+                "icono": "✏️",
+                "titulo": "Se corrigió",
+                "texto": "El átomo sí tiene partes y hay isótopos."
+              }
+            ]
+          }
+        }
+      ],
+      "preguntas": [
+        {
+          "id": "ma-da-1",
+          "enunciado": "Según Dalton, ¿qué pasa con los átomos en una reacción química?",
+          "opciones": [
+            "Se reorganizan, sin crearse ni destruirse",
+            "Se destruyen",
+            "Se convierten en átomos de otro elemento",
+            "Se dividen en partes más pequeñas"
+          ],
+          "correcta": 0,
+          "explicacion": "Por eso la masa se conserva en las reacciones."
+        },
+        {
+          "id": "ma-da-2",
+          "enunciado": "¿Qué idea de Dalton tuvo que corregirse después?",
+          "opciones": [
+            "Que el átomo es indivisible",
+            "Que la materia está formada por átomos",
+            "Que los compuestos tienen proporciones fijas",
+            "Que cada elemento tiene su tipo de átomo"
+          ],
+          "correcta": 0,
+          "explicacion": "Thomson, Rutherford y Chadwick encontraron partes dentro del átomo."
+        }
+      ],
+      "revisado": false,
+      "juego": "dalton-juego"
+    },
+    {
+      "id": "thomson",
+      "titulo": "Thomson: el electrón y el budín con pasas",
+      "anio": 1897,
+      "nivel": "basico",
+      "resumen": "Descubrió el electrón, la primera partícula más pequeña que el átomo, y propuso un átomo positivo con electrones incrustados.",
+      "autores": [
+        {
+          "nombre": "Joseph John Thomson",
+          "vida": "1856–1940",
+          "aporte": "Físico inglés. Descubrió el electrón en 1897 y recibió el Nobel de Física en 1906."
+        }
+      ],
+      "ficha": {
+        "quien": "J. J. Thomson",
+        "cuando": "1897 (electrón) y 1904 (modelo)",
+        "idea": "Thomson estudió los rayos que salen del electrodo negativo (cátodo) en un tubo casi vacío. Al ponerles placas con carga, el rayo se doblaba hacia la placa positiva: estaba hecho de partículas negativas, mucho más livianas que cualquier átomo. Eran los electrones. Como el átomo es neutro, propuso que es una masa positiva con los electrones incrustados, como las pasas en un budín.",
+        "contexto": [
+          {
+            "titulo": "El tubo de rayos catódicos",
+            "texto": "Es el mismo principio de los antiguos televisores de tubo: un haz de electrones que se desvía con campos eléctricos y magnéticos."
+          },
+          {
+            "titulo": "Más pequeño que el átomo",
+            "texto": "El electrón pesa unas 1800 veces menos que un átomo de hidrógeno: el átomo ya no era indivisible."
+          },
+          {
+            "titulo": "Un modelo de transición",
+            "texto": "El budín con pasas duró poco: su propio estudiante, Rutherford, lo puso a prueba."
+          }
+        ],
+        "evidencia": [
+          "El rayo catódico se desvía hacia la placa positiva.",
+          "Las partículas del rayo son iguales sin importar el metal del cátodo."
+        ],
+        "limites": "No explicaba cómo estaba repartida la carga positiva; el experimento de Rutherford lo descartó.",
+        "cuaderno": {
+          "facil": [
+            "Thomson descubrió el electrón, que tiene carga negativa.",
+            "Su modelo se llama «budín con pasas»."
+          ],
+          "media": [
+            "El átomo dejó de ser indivisible.",
+            "Si el átomo es neutro, debe tener carga positiva que compense a los electrones."
+          ],
+          "avanzada": [
+            "Midió la relación entre la carga y la masa del electrón."
+          ]
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "El rayo que se dobla",
+          "visual": {
+            "tipo": "escena",
+            "id": "at-thomson",
+            "fases": [
+              {
+                "id": "tubo",
+                "nombre": "El tubo",
+                "texto": "Del metal negativo sale un rayo que cruza el tubo."
+              },
+              {
+                "id": "desvio",
+                "nombre": "Se desvía",
+                "texto": "Con placas cargadas, el rayo se dobla hacia la positiva: son partículas negativas, los electrones."
+              },
+              {
+                "id": "budin",
+                "nombre": "Budín con pasas",
+                "texto": "Thomson imaginó el átomo como una masa positiva con electrones incrustados."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Qué cambió",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "⚪",
+                "titulo": "Dalton",
+                "texto": "Bola maciza, sin partes."
+              },
+              {
+                "icono": "🍮",
+                "titulo": "Thomson",
+                "texto": "Masa positiva con electrones."
+              },
+              {
+                "icono": "❓",
+                "titulo": "Pregunta abierta",
+                "texto": "¿Cómo está repartida la carga positiva?"
+              }
+            ]
+          }
+        }
+      ],
+      "preguntas": [
+        {
+          "id": "ma-th-1",
+          "enunciado": "¿Por qué Thomson concluyó que los rayos catódicos tienen carga negativa?",
+          "opciones": [
+            "Porque se desviaban hacia la placa positiva",
+            "Porque eran de color verde",
+            "Porque pesaban mucho",
+            "Porque atravesaban el vidrio"
+          ],
+          "correcta": 0,
+          "explicacion": "Las cargas opuestas se atraen."
+        },
+        {
+          "id": "ma-th-2",
+          "enunciado": "En el modelo del budín con pasas, ¿qué representan las pasas?",
+          "opciones": [
+            "Los electrones",
+            "Los protones",
+            "Los neutrones",
+            "El núcleo"
+          ],
+          "correcta": 0,
+          "explicacion": "Las pasas son los electrones incrustados en la masa positiva."
+        }
+      ],
+      "revisado": false,
+      "juego": "thomson-juego"
+    },
+    {
+      "id": "rutherford",
+      "titulo": "Rutherford: el núcleo",
+      "anio": 1911,
+      "nivel": "basico",
+      "resumen": "Disparó partículas alfa contra una lámina de oro y descubrió que el átomo tiene un núcleo diminuto, denso y positivo.",
+      "autores": [
+        {
+          "nombre": "Ernest Rutherford",
+          "vida": "1871–1937",
+          "aporte": "Físico neozelandés. Con Hans Geiger y Ernest Marsden hizo el experimento de la lámina de oro (1909–1911)."
+        }
+      ],
+      "ficha": {
+        "quien": "Ernest Rutherford, con Hans Geiger y Ernest Marsden",
+        "cuando": "1909 (experimento) y 1911 (modelo)",
+        "idea": "Lanzaron partículas alfa (positivas) contra una lámina de oro finísima. Si el átomo fuera un budín con pasas, todas debían pasar casi derecho. La mayoría pasó, pero unas pocas se desviaron mucho y alguna rebotó. Rutherford concluyó que toda la carga positiva y casi toda la masa están en un núcleo diminuto, y que el resto del átomo es casi vacío, con los electrones girando alrededor.",
+        "contexto": [
+          {
+            "titulo": "La sorpresa",
+            "texto": "Rutherford dijo que fue como disparar una bala de cañón contra un papel y que la bala rebotara."
+          },
+          {
+            "titulo": "Qué tan vacío",
+            "texto": "Si el núcleo fuera una canica en el centro de un estadio de fútbol, los electrones andarían por las tribunas."
+          },
+          {
+            "titulo": "Cómo contaban",
+            "texto": "Cada partícula alfa hacía brillar una pantalla; las contaban a ojo, en la oscuridad, con un microscopio."
+          }
+        ],
+        "evidencia": [
+          "Casi todas las alfa atraviesan la lámina.",
+          "Unas pocas se desvían mucho y muy pocas rebotan."
+        ],
+        "limites": "No explicaba por qué los electrones, que giran, no pierden energía y caen al núcleo. Bohr propuso una respuesta.",
+        "cuaderno": {
+          "facil": [
+            "El átomo tiene un núcleo pequeño y positivo.",
+            "El átomo es casi todo espacio vacío."
+          ],
+          "media": [
+            "Los electrones giran alrededor del núcleo.",
+            "Las alfa que rebotan chocaron de frente con un núcleo."
+          ],
+          "avanzada": [
+            "Según la física de la época, un electrón que gira debería perder energía y caer al núcleo: el modelo era inestable."
+          ]
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "La lámina de oro",
+          "visual": {
+            "tipo": "escena",
+            "id": "at-rutherford",
+            "fases": [
+              {
+                "id": "disparo",
+                "nombre": "El disparo",
+                "texto": "Una fuente lanza partículas alfa, con carga positiva, contra una lámina de oro."
+              },
+              {
+                "id": "atraviesan",
+                "nombre": "Casi todas pasan",
+                "texto": "La gran mayoría atraviesa la lámina sin desviarse."
+              },
+              {
+                "id": "rebotan",
+                "nombre": "Algunas rebotan",
+                "texto": "Unas pocas se desvían mucho y alguna se devuelve."
+              },
+              {
+                "id": "nucleo",
+                "nombre": "El núcleo",
+                "texto": "Conclusión: hay un núcleo diminuto y positivo; el resto es casi vacío."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Modelo planetario",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🎯",
+                "titulo": "Núcleo",
+                "texto": "Pequeño, denso y positivo, en el centro."
+              },
+              {
+                "icono": "🔵",
+                "titulo": "Electrones",
+                "texto": "Giran alrededor, lejos del núcleo."
+              },
+              {
+                "icono": "🌌",
+                "titulo": "Vacío",
+                "texto": "Casi todo el átomo es espacio vacío."
+              }
+            ]
+          }
+        }
+      ],
+      "preguntas": [
+        {
+          "id": "ma-ru-1",
+          "enunciado": "¿Qué demostró que casi todas las partículas alfa atravesaran la lámina?",
+          "opciones": [
+            "Que el átomo es casi todo espacio vacío",
+            "Que el oro es blando",
+            "Que las alfa son negativas",
+            "Que el átomo es una bola maciza"
+          ],
+          "correcta": 0,
+          "explicacion": "Si casi nada las detiene, casi todo el átomo está vacío."
+        },
+        {
+          "id": "ma-ru-2",
+          "enunciado": "¿Por qué algunas partículas alfa rebotaban?",
+          "opciones": [
+            "Chocaban de frente con un núcleo pequeño y positivo",
+            "Chocaban con los electrones",
+            "La lámina era muy gruesa",
+            "Perdían su carga"
+          ],
+          "correcta": 0,
+          "explicacion": "Dos cargas positivas se repelen; el núcleo concentra la carga y la masa."
+        }
+      ],
+      "revisado": false,
+      "juego": "rutherford-juego",
+      "diagrama": "lamina-oro"
+    },
+    {
+      "id": "bohr",
+      "titulo": "Bohr: niveles de energía",
+      "anio": 1913,
+      "nivel": "basico",
+      "resumen": "Propuso que los electrones solo pueden estar en ciertos niveles de energía y que al saltar entre ellos absorben o emiten luz.",
+      "autores": [
+        {
+          "nombre": "Niels Bohr",
+          "vida": "1885–1962",
+          "aporte": "Físico danés. Trabajó con Rutherford y propuso su modelo en 1913; Nobel de Física en 1922."
+        }
+      ],
+      "ficha": {
+        "quien": "Niels Bohr",
+        "cuando": "1913",
+        "idea": "Bohr propuso que el electrón gira en órbitas fijas, cada una con una energía determinada, y que mientras está en ellas no pierde energía. Cuando el electrón recibe energía salta a un nivel más alto; cuando vuelve, la suelta como luz de un color exacto. Eso explicaba por qué cada elemento emite solo ciertos colores: su espectro.",
+        "contexto": [
+          {
+            "titulo": "Huellas de colores",
+            "texto": "Al pasar la luz de un gas caliente por un prisma no sale un arcoíris completo, sino rayas de colores. Cada elemento tiene las suyas, como una huella digital."
+          },
+          {
+            "titulo": "En la vida diaria",
+            "texto": "Los colores de los fuegos artificiales y el naranja de las lámparas de sodio vienen de electrones que bajan de nivel."
+          },
+          {
+            "titulo": "Por qué funcionó",
+            "texto": "Con su modelo, Bohr calculó las rayas del espectro del hidrógeno."
+          }
+        ],
+        "evidencia": [
+          "Los espectros de rayas de los elementos.",
+          "El espectro del hidrógeno coincide con los saltos entre niveles."
+        ],
+        "limites": "Solo funcionaba bien para el hidrógeno, y las órbitas fijas resultaron ser una simplificación.",
+        "cuaderno": {
+          "facil": [
+            "Los electrones están en niveles de energía.",
+            "Al bajar de nivel, el electrón suelta luz."
+          ],
+          "media": [
+            "Cada elemento tiene su espectro, como una huella digital.",
+            "Para subir de nivel el electrón absorbe energía."
+          ],
+          "avanzada": [
+            "Los niveles se numeran n = 1, 2, 3…; los usaremos en la configuración electrónica (tema 3)."
+          ]
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Saltos de energía",
+          "visual": {
+            "tipo": "escena",
+            "id": "at-bohr",
+            "fases": [
+              {
+                "id": "orbitas",
+                "nombre": "Niveles",
+                "texto": "El electrón solo puede estar en ciertos niveles de energía."
+              },
+              {
+                "id": "salto",
+                "nombre": "Sube",
+                "texto": "Si recibe energía (calor, luz), salta a un nivel más alto."
+              },
+              {
+                "id": "luz",
+                "nombre": "Baja y brilla",
+                "texto": "Al volver suelta esa energía como luz de un color exacto."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "La luz de los elementos",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🎆",
+                "titulo": "Fuegos artificiales",
+                "texto": "Cada sal da un color: estroncio rojo, cobre verde."
+              },
+              {
+                "icono": "🟠",
+                "titulo": "Alumbrado",
+                "texto": "Las lámparas de sodio dan luz naranja."
+              },
+              {
+                "icono": "🔬",
+                "titulo": "Espectro",
+                "texto": "Rayas de colores únicas para cada elemento."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre los electrones en el átomo",
+            "tema": "electrones-atomo"
+          }
+        }
+      ],
+      "preguntas": [
+        {
+          "id": "ma-bo-1",
+          "enunciado": "Según Bohr, ¿qué pasa cuando un electrón baja de un nivel alto a uno más bajo?",
+          "opciones": [
+            "Emite energía en forma de luz",
+            "Absorbe luz",
+            "Sale del átomo",
+            "Se convierte en protón"
+          ],
+          "correcta": 0,
+          "explicacion": "La diferencia de energía entre los niveles sale como luz de un color determinado."
+        },
+        {
+          "id": "ma-bo-2",
+          "enunciado": "¿Qué explicó el modelo de Bohr que el de Rutherford no explicaba?",
+          "opciones": [
+            "Los espectros de rayas y la estabilidad del átomo",
+            "La existencia del núcleo",
+            "La existencia del electrón",
+            "Por qué el átomo es casi vacío"
+          ],
+          "correcta": 0,
+          "explicacion": "Con niveles fijos, el electrón no cae al núcleo y emite solo ciertos colores."
+        }
+      ],
+      "revisado": false,
+      "juego": "bohr-juego"
+    },
+    {
+      "id": "modelo-actual",
+      "titulo": "Schrödinger: el modelo actual",
+      "anio": 1926,
+      "nivel": "avanzado",
+      "resumen": "El electrón ya no se describe con una órbita, sino con orbitales: regiones donde es más probable encontrarlo.",
+      "autores": [
+        {
+          "nombre": "Erwin Schrödinger",
+          "vida": "1887–1961",
+          "aporte": "Físico austriaco. Propuso en 1926 la ecuación de onda del electrón; Nobel de Física en 1933."
+        },
+        {
+          "nombre": "Werner Heisenberg",
+          "vida": "1901–1976",
+          "aporte": "Físico alemán. En 1927 enunció el principio de incertidumbre."
+        },
+        {
+          "nombre": "Louis de Broglie",
+          "vida": "1892–1987",
+          "aporte": "Físico francés. En 1924 propuso que el electrón también se comporta como una onda."
+        }
+      ],
+      "ficha": {
+        "quien": "Erwin Schrödinger, con aportes de De Broglie y Heisenberg",
+        "cuando": "1924–1927",
+        "idea": "De Broglie propuso que el electrón también se comporta como una onda. Schrödinger escribió una ecuación para esa onda, y sus soluciones son los orbitales: zonas alrededor del núcleo donde es más probable encontrar al electrón. Heisenberg mostró que no se puede conocer a la vez la posición y la velocidad exactas del electrón, así que las órbitas precisas de Bohr no existen. Es el modelo mecánico-cuántico, el que se usa hoy.",
+        "contexto": [
+          {
+            "titulo": "Una nube",
+            "texto": "Si pudiéramos fotografiar al electrón muchas veces, los puntos formarían una nube, más densa donde es más probable hallarlo."
+          },
+          {
+            "titulo": "Formas de los orbitales",
+            "texto": "Hay orbitales s (esféricos), p (de dos lóbulos), d y f, con formas más complejas."
+          },
+          {
+            "titulo": "Lo que conserva de Bohr",
+            "texto": "Los niveles de energía siguen existiendo; lo que cambió es la idea de un camino fijo."
+          }
+        ],
+        "evidencia": [
+          "Los electrones se difractan como las ondas.",
+          "La ecuación de Schrödinger reproduce los espectros de los átomos."
+        ],
+        "limites": "Es un modelo matemático difícil de imaginar; por eso en el colegio se sigue usando el de Bohr para empezar.",
+        "cuaderno": {
+          "facil": [
+            "Hoy hablamos de orbitales, no de órbitas."
+          ],
+          "media": [
+            "Un orbital es la región donde es más probable encontrar al electrón."
+          ],
+          "avanzada": [
+            "Principio de incertidumbre: no se puede saber a la vez dónde está y qué velocidad lleva el electrón.",
+            "Orbitales s, p, d y f; los números cuánticos se estudian en el tema 3."
+          ]
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "De la órbita a la nube",
+          "visual": {
+            "tipo": "escena",
+            "id": "at-nube",
+            "fases": [
+              {
+                "id": "orbita",
+                "nombre": "La órbita de Bohr",
+                "texto": "Bohr imaginaba al electrón en un camino fijo."
+              },
+              {
+                "id": "nube",
+                "nombre": "La nube",
+                "texto": "Hoy solo sabemos dónde es más probable encontrarlo: una nube de probabilidad."
+              },
+              {
+                "id": "orbitales",
+                "nombre": "Orbitales",
+                "texto": "Esas zonas tienen formas: esferas (s), dos lóbulos (p) y otras más complejas."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Tres ideas del modelo actual",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🌊",
+                "titulo": "Onda",
+                "texto": "El electrón también se comporta como una onda (De Broglie)."
+              },
+              {
+                "icono": "📐",
+                "titulo": "Ecuación",
+                "texto": "Schrödinger describió esa onda con una ecuación."
+              },
+              {
+                "icono": "🎲",
+                "titulo": "Probabilidad",
+                "texto": "No hay camino exacto (Heisenberg)."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre orbitales y números cuánticos",
+            "tema": "electrones-atomo"
+          }
+        }
+      ],
+      "preguntas": [
+        {
+          "id": "ma-sc-1",
+          "enunciado": "En el modelo actual, ¿qué es un orbital?",
+          "opciones": [
+            "Una región donde es más probable encontrar al electrón",
+            "El camino circular fijo del electrón",
+            "El núcleo del átomo",
+            "Una partícula sin carga"
+          ],
+          "correcta": 0,
+          "explicacion": "El orbital reemplazó a la órbita fija de Bohr."
+        },
+        {
+          "id": "ma-sc-2",
+          "enunciado": "¿Qué dice el principio de incertidumbre de Heisenberg?",
+          "opciones": [
+            "No se puede conocer a la vez la posición y la velocidad exactas del electrón",
+            "El electrón no tiene carga",
+            "El átomo es indivisible",
+            "Los electrones giran en órbitas fijas"
+          ],
+          "correcta": 0,
+          "explicacion": "Por eso el modelo actual habla de probabilidades."
+        }
+      ],
+      "revisado": false,
+      "juego": "nube-juego"
+    },
+    {
+      "id": "chadwick",
+      "titulo": "Chadwick: el neutrón",
+      "anio": 1932,
+      "nivel": "intermedio",
+      "resumen": "Descubrió el neutrón, una partícula sin carga que está en el núcleo junto a los protones.",
+      "autores": [
+        {
+          "nombre": "James Chadwick",
+          "vida": "1891–1974",
+          "aporte": "Físico inglés, colaborador de Rutherford. Descubrió el neutrón en 1932; Nobel de Física en 1935."
+        }
+      ],
+      "ficha": {
+        "quien": "James Chadwick",
+        "cuando": "1932",
+        "idea": "Los núcleos pesaban más de lo que daban sus protones: el helio tiene dos protones pero masa cuatro. Rutherford sospechaba que había otra partícula. Chadwick bombardeó berilio con partículas alfa y obtuvo una radiación sin carga capaz de arrancar protones de la parafina. Eran neutrones: partículas sin carga, con una masa casi igual a la del protón. Así se completó el núcleo: protones y neutrones.",
+        "contexto": [
+          {
+            "titulo": "Por qué tardó tanto",
+            "texto": "El neutrón no tiene carga, así que no se desvía con imanes ni con placas cargadas y es difícil de detectar."
+          },
+          {
+            "titulo": "El protón",
+            "texto": "Rutherford había identificado el protón en 1919 como el núcleo del hidrógeno."
+          },
+          {
+            "titulo": "Lo que vino después",
+            "texto": "El neutrón abrió el camino a la física nuclear: fisión, energía nuclear y medicina nuclear."
+          }
+        ],
+        "evidencia": [
+          "El helio y otros núcleos tienen más masa que la de sus protones.",
+          "La radiación del berilio no se desvía, pero arranca protones."
+        ],
+        "limites": "Completó el núcleo, pero no cambió la forma de describir a los electrones.",
+        "cuaderno": {
+          "facil": [
+            "El neutrón está en el núcleo y no tiene carga."
+          ],
+          "media": [
+            "El núcleo tiene protones (+) y neutrones (sin carga).",
+            "Protones y neutrones tienen casi la misma masa."
+          ],
+          "avanzada": [
+            "La masa del átomo está casi toda en el núcleo; los isótopos difieren en el número de neutrones (tema 2)."
+          ]
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "La partícula escondida",
+          "visual": {
+            "tipo": "escena",
+            "id": "at-chadwick",
+            "fases": [
+              {
+                "id": "masa",
+                "nombre": "Falta masa",
+                "texto": "El helio tiene dos protones pero pesa como cuatro: algo más hay en el núcleo."
+              },
+              {
+                "id": "neutron",
+                "nombre": "El experimento",
+                "texto": "Chadwick bombardeó berilio y salió una partícula sin carga que empujaba protones: el neutrón."
+              },
+              {
+                "id": "nucleo",
+                "nombre": "El núcleo completo",
+                "texto": "Protones y neutrones juntos forman el núcleo."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Las tres partículas",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🔴",
+                "titulo": "Protón",
+                "texto": "Carga +, en el núcleo (1919)."
+              },
+              {
+                "icono": "⚪",
+                "titulo": "Neutrón",
+                "texto": "Sin carga, en el núcleo (1932)."
+              },
+              {
+                "icono": "🔵",
+                "titulo": "Electrón",
+                "texto": "Carga −, alrededor del núcleo (1897)."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre el átomo por dentro",
+            "tema": "atomo-por-dentro"
+          }
+        }
+      ],
+      "preguntas": [
+        {
+          "id": "ma-ch-1",
+          "enunciado": "¿Por qué fue difícil descubrir el neutrón?",
+          "opciones": [
+            "Porque no tiene carga y no se desvía con campos eléctricos",
+            "Porque es más pequeño que el electrón",
+            "Porque está fuera del átomo",
+            "Porque solo existe en el oro"
+          ],
+          "correcta": 0,
+          "explicacion": "Sin carga, no deja las huellas que dejan protones y electrones."
+        },
+        {
+          "id": "ma-ch-2",
+          "enunciado": "¿Qué partículas forman el núcleo del átomo?",
+          "opciones": [
+            "Protones y neutrones",
+            "Protones y electrones",
+            "Solo electrones",
+            "Neutrones y electrones"
+          ],
+          "correcta": 0,
+          "explicacion": "Los electrones están fuera del núcleo."
+        }
+      ],
+      "revisado": false,
+      "juego": "chadwick-juego"
+    }
+  ]
+}
