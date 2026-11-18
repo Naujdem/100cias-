@@ -1,0 +1,515 @@
+{
+  "id": "el-mol",
+  "materia": "quimica",
+  "area": "reacciones",
+  "titulo": "El mol",
+  "subtema": "Contar partículas pesando: masa molar, Avogadro y conversiones",
+  "orden": 127,
+  "etiqueta": "7",
+  "vistas": [
+    "ruta"
+  ],
+  "tituloVista": "Ruta del mol",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Explicar el mol como una unidad para contar partículas.",
+    "Calcular la masa molar de elementos y compuestos.",
+    "Convertir entre gramos, moles y número de partículas.",
+    "Hallar la fórmula empírica y la molecular a partir de la composición."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con un texto de química de bachillerato (número de Avogadro 6,022 × 10²³, masas atómicas redondeadas, edad del universo ≈ 13 800 millones de años para la comparación del conteo)."
+  ],
+  "bloques": [
+    {
+      "id": "que-es-mol",
+      "titulo": "¿Qué es un mol?",
+      "resumen": "Es una cantidad, como la docena: 6,022 × 10²³ partículas.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "Los átomos y las moléculas son tan pequeños que no se pueden contar de a uno. Por eso los químicos usan una unidad de conteo, como el panadero usa la docena (12) o la papelería la resma (500 hojas). Esa unidad es el mol: un mol son 6,022 × 10²³ partículas (átomos, moléculas o iones), el número de Avogadro. Es un número enorme: si contaras un átomo por segundo, para llegar a un mol necesitarías más de un millón de veces la edad del universo. Pero en la química de la cocina es poquito: un mol de agua son apenas 18 g, más o menos una cucharada grande.",
+        "contexto": [
+          {
+            "titulo": "Amedeo Avogadro",
+            "texto": "Fue un científico italiano que en 1811 propuso que volúmenes iguales de gases tienen el mismo número de moléculas. El número lleva su nombre en su honor, aunque él nunca lo calculó."
+          },
+          {
+            "titulo": "Seis seguido de 23 cifras",
+            "texto": "6,022 × 10²³ = 602 200 000 000 000 000 000 000."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Mol: unidad para contar partículas, como la docena."
+          ],
+          "media": [
+            "1 mol = 6,022 × 10²³ partículas (número de Avogadro)."
+          ],
+          "avanzada": [
+            "El mol es una de las siete unidades básicas del Sistema Internacional."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Cómo contarías los granos de arroz de un bulto sin contarlos uno por uno?",
+          "actividad": "Pesar 100 granos de arroz y, con ese dato, estimar cuántos granos hay en una libra sin contarlos: así trabaja el mol.",
+          "errores": [
+            "Pensar que un mol es una masa y no una cantidad.",
+            "Creer que un mol de cualquier sustancia pesa lo mismo."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Contar pesando",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "En la tienda venden arroz por libras, no por granos. ¿Por qué?",
+            "opciones": [
+              "Porque pesar es más fácil que contar cosas muy pequeñas",
+              "Porque los granos no se pueden contar",
+              "Porque cada grano pesa distinto",
+              "Porque así es la ley"
+            ],
+            "correcta": 0,
+            "explicacion": "Con átomos es igual, pero mucho más extremo: se cuentan pesando."
+          }
+        },
+        {
+          "titulo": "Unidades para contar",
+          "visual": {
+            "tipo": "escena",
+            "id": "mol-contar",
+            "fases": [
+              {
+                "id": "docena",
+                "nombre": "La docena",
+                "texto": "12 huevos, 12 arepas."
+              },
+              {
+                "id": "resma",
+                "nombre": "La resma",
+                "texto": "500 hojas de papel."
+              },
+              {
+                "id": "mol",
+                "nombre": "El mol",
+                "texto": "6,022 × 10²³ partículas: 18 g de agua."
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "unidad-contar-juego",
+      "preguntas": [
+        {
+          "id": "qm-qe-1",
+          "enunciado": "¿Cuántas partículas hay en un mol?",
+          "opciones": [
+            "6,022 × 10²³",
+            "12",
+            "500",
+            "6,022 × 10²³ gramos"
+          ],
+          "correcta": 0,
+          "explicacion": "Es el número de Avogadro."
+        },
+        {
+          "id": "qm-qe-2",
+          "enunciado": "¿Por qué los químicos usan el mol?",
+          "opciones": [
+            "Porque las partículas son demasiado pequeñas para contarlas de a una",
+            "Porque es más bonito",
+            "Porque los átomos son grandes",
+            "Porque así se mide el volumen"
+          ],
+          "correcta": 0,
+          "explicacion": "Se cuentan pesando."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "masa-molar",
+      "titulo": "Masa molar",
+      "resumen": "Es la masa de un mol: la masa atómica (o la suma de las masas atómicas) en gramos.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "intermedio",
+      "requiere": [
+        "que-es-mol"
+      ],
+      "ficha": {
+        "idea": "Un mol de átomos de un elemento pesa, en gramos, lo mismo que su masa atómica de la tabla periódica: un mol de carbono pesa 12 g; uno de hierro, 56 g. Esa es la masa molar, en g/mol. Para un compuesto se suman las masas de todos los átomos de la fórmula: el agua, H₂O, tiene 2 × 1 + 16 = 18 g/mol; el CO₂, 12 + 2 × 16 = 44 g/mol; la sal, NaCl, 23 + 35,5 = 58,5 g/mol. Un mol de cada sustancia tiene el mismo número de partículas, pero pesa distinto, igual que una docena de huevos y una docena de naranjas.",
+        "contexto": [
+          {
+            "titulo": "Masas que vale la pena tener a mano",
+            "texto": "H 1 · C 12 · N 14 · O 16 · Na 23 · S 32 · Cl 35,5 · Ca 40 · Fe 56 (g/mol, redondeadas)."
+          },
+          {
+            "titulo": "¿Y los decimales de la tabla?",
+            "texto": "La masa atómica del cloro es 35,45 porque es un promedio de sus isótopos (cloro-35 y cloro-37)."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Masa molar: lo que pesa un mol, en g/mol."
+          ],
+          "media": [
+            "Compuesto: sumar subíndice × masa atómica de cada elemento (H₂O = 18 g/mol)."
+          ],
+          "avanzada": [
+            "La masa molar en g/mol tiene el mismo número que la masa de la partícula en unidades de masa atómica (u)."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Pesa lo mismo una docena de huevos que una de naranjas? ¿Y un mol de hierro que uno de oro?",
+          "actividad": "Pesar en una balanza de cocina un mol de agua (18 g), de sal (58,5 g) y de azúcar (342 g) y comparar los montones.",
+          "errores": [
+            "Olvidar multiplicar por el subíndice.",
+            "Sumar los subíndices en lugar de las masas."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Cuánto pesa un mol de agua?",
+          "visual": {
+            "tipo": "escena",
+            "id": "mol-masa-molar",
+            "fases": [
+              {
+                "id": "atomos",
+                "nombre": "Los átomos",
+                "texto": "H₂O: 2 hidrógenos y 1 oxígeno."
+              },
+              {
+                "id": "suma",
+                "nombre": "La suma",
+                "texto": "2 × 1 + 16 = 18 g/mol."
+              },
+              {
+                "id": "cucharada",
+                "nombre": "En la mano",
+                "texto": "18 g de agua: un mol, como una cucharada grande."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre la masa atómica promedio",
+            "tema": "atomo-por-dentro",
+            "bloque": "isotopos"
+          }
+        },
+        {
+          "titulo": "Un mol de cada cosa",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "💧",
+                "titulo": "Agua (H₂O)",
+                "texto": "18 g"
+              },
+              {
+                "icono": "🧂",
+                "titulo": "Sal (NaCl)",
+                "texto": "58,5 g"
+              },
+              {
+                "icono": "🔩",
+                "titulo": "Hierro (Fe)",
+                "texto": "56 g"
+              },
+              {
+                "icono": "🍬",
+                "titulo": "Azúcar (C₁₂H₂₂O₁₁)",
+                "texto": "342 g"
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "masa-molar-juego",
+      "preguntas": [
+        {
+          "id": "qm-mm-1",
+          "enunciado": "¿Cuál es la masa molar del CO₂ (C = 12, O = 16)?",
+          "opciones": [
+            "44 g/mol",
+            "28 g/mol",
+            "32 g/mol",
+            "24 g/mol"
+          ],
+          "correcta": 0,
+          "explicacion": "12 + 2 × 16 = 44."
+        },
+        {
+          "id": "qm-mm-2",
+          "enunciado": "¿Qué tienen en común un mol de agua y un mol de hierro?",
+          "opciones": [
+            "El mismo número de partículas",
+            "La misma masa",
+            "El mismo volumen",
+            "El mismo color"
+          ],
+          "correcta": 0,
+          "explicacion": "Los dos tienen 6,022 × 10²³ partículas."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "conversiones",
+      "titulo": "Gramos, moles y partículas",
+      "resumen": "Gramos ÷ masa molar = moles; moles × 6,022 × 10²³ = partículas, y al revés.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "intermedio",
+      "requiere": [
+        "masa-molar"
+      ],
+      "ficha": {
+        "idea": "El mol es el puente entre lo que se pesa (gramos) y lo que se cuenta (partículas). De gramos a moles se divide por la masa molar: 36 g de agua ÷ 18 g/mol = 2 mol. De moles a partículas se multiplica por el número de Avogadro: 2 mol × 6,022 × 10²³ = 1,204 × 10²⁴ moléculas. Para devolverse se hace lo contrario: moles × masa molar = gramos y partículas ÷ 6,022 × 10²³ = moles. Para no confundirse se usan factores de conversión, que se escriben como fracción de modo que las unidades se cancelen: 36 g × (1 mol / 18 g) = 2 mol.",
+        "contexto": [
+          {
+            "titulo": "Siempre pasar por el mol",
+            "texto": "No hay un camino directo de gramos a partículas: siempre se pasa por los moles, como un puente con dos tramos."
+          },
+          {
+            "titulo": "Un bulto de café",
+            "texto": "Si un grano de café pesa en promedio 0,2 g, un bulto de 62,5 kg tiene unos 312 500 granos: se cuentan pesando, como los átomos."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "gramos ÷ masa molar = moles."
+          ],
+          "media": [
+            "moles × 6,022 × 10²³ = partículas."
+          ],
+          "avanzada": [
+            "Factor de conversión: lo que se quiere arriba, lo que se tiene abajo, para que las unidades se cancelen."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Cuántas moléculas de agua hay en un vaso?",
+          "actividad": "Calcular cuántas moléculas hay en un vaso de agua (250 g), en una cucharadita de sal (5 g) y en un clavo (5 g de hierro), usando el convertidor para comprobar.",
+          "errores": [
+            "Multiplicar por la masa molar cuando hay que dividir.",
+            "Escribir mal la notación científica (6,022 × 10²³ no es 6,022²³)."
+          ],
+          "minutos": 40
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "El camino del mol",
+          "visual": {
+            "tipo": "escena",
+            "id": "mol-camino",
+            "fases": [
+              {
+                "id": "gramos",
+                "nombre": "Gramos",
+                "texto": "36 g de agua en la balanza."
+              },
+              {
+                "id": "moles",
+                "nombre": "Moles",
+                "texto": "36 g ÷ 18 g/mol = 2 mol."
+              },
+              {
+                "id": "particulas",
+                "nombre": "Partículas",
+                "texto": "2 mol × 6,022 × 10²³ = 1,2 × 10²⁴ moléculas."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "El convertidor",
+          "visual": {
+            "tipo": "diagrama",
+            "id": "convertidor-mol"
+          }
+        },
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Cuántos moles hay en 112 g de hierro (Fe = 56 g/mol)?",
+            "opciones": [
+              "2 mol",
+              "56 mol",
+              "0,5 mol",
+              "6 272 mol"
+            ],
+            "correcta": 0,
+            "explicacion": "112 ÷ 56 = 2."
+          }
+        }
+      ],
+      "diagrama": "convertidor-mol",
+      "juego": "conversion-juego",
+      "preguntas": [
+        {
+          "id": "qm-co-1",
+          "enunciado": "¿Cuántos moles hay en 88 g de CO₂ (44 g/mol)?",
+          "opciones": [
+            "2 mol",
+            "44 mol",
+            "0,5 mol",
+            "88 mol"
+          ],
+          "correcta": 0,
+          "explicacion": "88 ÷ 44 = 2."
+        },
+        {
+          "id": "qm-co-2",
+          "enunciado": "¿Cuántas moléculas hay en 0,5 mol de agua?",
+          "opciones": [
+            "3,011 × 10²³",
+            "6,022 × 10²³",
+            "9 moléculas",
+            "1,2 × 10²⁴"
+          ],
+          "correcta": 0,
+          "explicacion": "0,5 × 6,022 × 10²³."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "formulas",
+      "titulo": "Fórmula empírica y molecular",
+      "resumen": "La empírica da la proporción más simple de átomos; la molecular, los átomos reales de la molécula.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "avanzado",
+      "requiere": [
+        "conversiones"
+      ],
+      "ficha": {
+        "idea": "La fórmula molecular dice cuántos átomos de cada elemento tiene la molécula: la glucosa es C₆H₁₂O₆. La fórmula empírica da solo la proporción más simple: CH₂O. Para hallar la empírica a partir de un análisis: 1) suponer 100 g, de modo que los porcentajes pasan a gramos (40 % C → 40 g); 2) pasar cada masa a moles (40 ÷ 12 = 3,33 mol de C; 6,7 ÷ 1 = 6,7 mol de H; 53,3 ÷ 16 = 3,33 mol de O); 3) dividir todo por el menor (1 : 2 : 1); 4) si salen decimales como ,5, multiplicar por 2. Resultado: CH₂O. Para la molecular se divide la masa molar real (180 g/mol) por la de la empírica (30 g/mol): 6, así que C₆H₁₂O₆.",
+        "contexto": [
+          {
+            "titulo": "La misma empírica, sustancias distintas",
+            "texto": "El formaldehído (CH₂O), el ácido acético del vinagre (C₂H₄O₂) y la glucosa (C₆H₁₂O₆) tienen la misma fórmula empírica, CH₂O."
+          },
+          {
+            "titulo": "Composición porcentual",
+            "texto": "Es el camino inverso: masa de cada elemento ÷ masa molar × 100. En el agua, 2 ÷ 18 × 100 ≈ 11 % de H."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Empírica: proporción más simple. Molecular: átomos reales."
+          ],
+          "media": [
+            "% → g (en 100 g) → mol → dividir por el menor → enteros."
+          ],
+          "avanzada": [
+            "n = masa molar real ÷ masa de la fórmula empírica; molecular = empírica × n."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Cómo saben los químicos la fórmula de una sustancia nueva?",
+          "actividad": "Hallar la fórmula empírica y molecular de tres sustancias a partir de su composición porcentual (glucosa, agua oxigenada, benceno).",
+          "errores": [
+            "Redondear 1,5 a 2 en lugar de multiplicar por 2.",
+            "Olvidar dividir por el menor número de moles."
+          ],
+          "minutos": 40
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "De porcentajes a fórmula",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "1️⃣",
+                "titulo": "En 100 g",
+                "texto": "40 g C · 6,7 g H · 53,3 g O"
+              },
+              {
+                "icono": "2️⃣",
+                "titulo": "A moles",
+                "texto": "3,33 · 6,7 · 3,33"
+              },
+              {
+                "icono": "3️⃣",
+                "titulo": "÷ el menor",
+                "texto": "1 : 2 : 1 → CH₂O"
+              },
+              {
+                "icono": "4️⃣",
+                "titulo": "Molecular",
+                "texto": "180 ÷ 30 = 6 → C₆H₁₂O₆"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Empírica o molecular",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "📐",
+              "titulo": "Empírica",
+              "puntos": [
+                "La proporción más simple",
+                "CH₂O, CH, HO",
+                "Sale del análisis"
+              ]
+            },
+            "der": {
+              "icono": "🧬",
+              "titulo": "Molecular",
+              "puntos": [
+                "Los átomos reales",
+                "C₆H₁₂O₆, C₆H₆, H₂O₂",
+                "Necesita la masa molar"
+              ]
+            }
+          }
+        }
+      ],
+      "juego": "empirica-juego",
+      "preguntas": [
+        {
+          "id": "qm-fo-1",
+          "enunciado": "¿Cuál es la fórmula empírica del benceno (C₆H₆)?",
+          "opciones": [
+            "CH",
+            "C₆H₆",
+            "C₃H₃",
+            "CH₂"
+          ],
+          "correcta": 0,
+          "explicacion": "6 : 6 = 1 : 1."
+        },
+        {
+          "id": "qm-fo-2",
+          "enunciado": "La fórmula empírica de un compuesto es CH₂O (30 g/mol) y su masa molar es 60 g/mol. ¿Cuál es su fórmula molecular?",
+          "opciones": [
+            "C₂H₄O₂",
+            "CH₂O",
+            "C₆H₁₂O₆",
+            "C₃H₆O₃"
+          ],
+          "correcta": 0,
+          "explicacion": "60 ÷ 30 = 2."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}

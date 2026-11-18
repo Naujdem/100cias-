@@ -108,6 +108,8 @@ import BalanzaEcuaciones from './BalanzaEcuaciones.tsx'
 import { BalanceadaJuego, CoeficienteJuego, OxidaReduceJuego } from './JuegosBalanceo.tsx'
 import FabricaFeS from './FabricaFeS.tsx'
 import { MasaCambiaJuego, ProporcionAguaJuego, CualLeyJuego } from './JuegosLeyes.tsx'
+import ConvertidorMol from './ConvertidorMol.tsx'
+import { UnidadContarJuego, MasaMolarJuego, ConversionJuego, EmpiricaJuego } from './JuegosMol.tsx'
 import { IntraInterJuego, GeometriaJuego, MoleculaPolarJuego, FuerzaJuego, DisuelveJuego } from './JuegosFuerzas.tsx'
 import { OctetoJuego, TipoEnlaceJuego, PolarJuego, LewisJuego } from './JuegosEnlace.tsx'
 import { RadioJuego, IonizacionJuego, ElectronegatividadJuego, MetalicoJuego } from './JuegosPeriodicas.tsx'
@@ -536,6 +538,11 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'masa-cambia-juego': MasaCambiaJuego,
   'proporcion-agua-juego': ProporcionAguaJuego,
   'cual-ley-juego': CualLeyJuego,
+  'convertidor-mol': ConvertidorMol,
+  'unidad-contar-juego': UnidadContarJuego,
+  'masa-molar-juego': MasaMolarJuego,
+  'conversion-juego': ConversionJuego,
+  'empirica-juego': EmpiricaJuego,
   'tipos-radiacion-juego': TiposRadiacionJuego,
   'vida-media-juego': VidaMediaJuego,
   'usos-nucleares-juego': UsosNuclearesJuego,
