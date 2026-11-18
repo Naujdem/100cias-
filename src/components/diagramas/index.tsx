@@ -77,6 +77,8 @@ import { QueEsContaminacionJuego, AguaContaminadaJuego, AireContaminadoJuego, Me
 import RioContaminado from './RioContaminado.tsx'
 import { RecursosJuego, HidroelectricaJuego, RepresasJuego, FuentesEnergiaJuego, HuellaEcologicaJuego } from './JuegosRecursos.tsx'
 import MezclaElectrica from './MezclaElectrica.tsx'
+import { ResiduosJuego, LasRJuego, SepararJuego, CompostajeJuego, EconomiaCircularJuego } from './JuegosResiduos.tsx'
+import Canecas from './Canecas.tsx'
 
 /** Registro de diagramas interactivos. La clave es el valor de `bloque.diagrama`. */
 export const DIAGRAMAS: Record<string, ComponentType> = {
@@ -398,4 +400,10 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'fuentes-energia-juego': FuentesEnergiaJuego,
   'huella-ecologica-juego': HuellaEcologicaJuego,
   'mezcla-electrica': MezclaElectrica,
+  'residuos-juego': ResiduosJuego,
+  'las-r-juego': LasRJuego,
+  'separar-juego': SepararJuego,
+  'compostaje-juego': CompostajeJuego,
+  'economia-circular-juego': EconomiaCircularJuego,
+  canecas: Canecas,
 }

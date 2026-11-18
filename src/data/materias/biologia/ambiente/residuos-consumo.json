@@ -1,0 +1,405 @@
+{
+  "id": "residuos-consumo",
+  "materia": "biologia",
+  "area": "ambiente",
+  "titulo": "Residuos y consumo",
+  "subtema": "Lo que botamos no desaparece",
+  "orden": 57,
+  "etiqueta": "7",
+  "vistas": ["ruta"],
+  "tituloVista": "Ruta de los residuos",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Diferenciar residuo aprovechable y basura, y conocer a dónde van.",
+    "Aplicar las R en la vida diaria.",
+    "Separar los residuos con el código de colores de Colombia.",
+    "Hacer compost con los residuos orgánicos.",
+    "Comparar la economía lineal y la circular."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con la Resolución 2184 de 2019 del Ministerio de Ambiente (código de colores) y los informes de la Superintendencia de Servicios Públicos sobre disposición final."
+  ],
+  "bloques": [
+    {
+      "id": "residuos",
+      "titulo": "Residuos y basura",
+      "resumen": "Casi todo lo que botamos es un residuo que se puede aprovechar; solo se vuelve basura cuando lo mezclamos y lo enterramos.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "Un residuo es lo que sobra después de usar algo: cáscaras, envases, papel, ropa vieja. Muchos residuos todavía sirven: se pueden reutilizar, reciclar o convertir en abono. Se vuelven «basura» cuando se mezclan y se ensucian, y ya nadie los puede aprovechar. En Colombia la mayor parte de los residuos termina en rellenos sanitarios, donde se entierran por capas; algunos municipios todavía tienen botaderos a cielo abierto, que contaminan mucho más. Al descomponerse, la basura enterrada produce lixiviados, un líquido tóxico que puede llegar al agua, y metano, un gas de efecto invernadero. Los rellenos se llenan, y abrir uno nuevo es cada vez más difícil.",
+        "contexto": [
+          {
+            "titulo": "Lixiviados",
+            "texto": "El líquido negro y maloliente que escurre de la basura arrastra metales y materia orgánica: si no se trata, contamina suelos y quebradas."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Residuo: lo que sobra y todavía se puede aprovechar.",
+            "Basura: residuos mezclados que ya no se aprovechan."
+          ],
+          "media": [
+            "Relleno sanitario: lugar donde se entierra la basura por capas.",
+            "La basura produce lixiviados y metano."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "Cuando el carro de la basura se va, ¿a dónde llega lo que botamos?",
+          "actividad": "Pesar durante una semana los residuos del salón, separados, y calcular cuánto se podría aprovechar.",
+          "errores": [
+            "Creer que lo que se bota «desaparece»."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Qué parte de lo que bota una casa se podría aprovechar?",
+            "opciones": ["La mayor parte", "Casi nada", "Solo las botellas", "Solo el papel"],
+            "correcta": 0,
+            "explicacion": "Los orgánicos y los reciclables son la mayor parte de los residuos de una casa."
+          }
+        },
+        {
+          "titulo": "El viaje de la basura",
+          "visual": {
+            "tipo": "escena",
+            "id": "viaje-basura",
+            "fases": [
+              { "id": "casa", "nombre": "La casa", "texto": "Todo mezclado en una bolsa: ya es difícil aprovecharlo." },
+              { "id": "carro", "nombre": "El carro recolector", "texto": "Lleva los residuos fuera del pueblo." },
+              { "id": "relleno", "nombre": "El relleno", "texto": "Se entierra por capas y se tapa con tierra." },
+              { "id": "efectos", "nombre": "Lixiviados y metano", "texto": "Al pudrirse sale un líquido tóxico y un gas de invernadero." }
+            ]
+          }
+        }
+      ],
+      "juego": "residuos-juego",
+      "preguntas": [
+        {
+          "id": "am-rs-1",
+          "enunciado": "¿Qué son los lixiviados?",
+          "opciones": [
+            "El líquido tóxico que escurre de la basura",
+            "Las bolsas de reciclaje",
+            "Los carros recolectores",
+            "Un tipo de abono"
+          ],
+          "correcta": 0,
+          "explicacion": "Pueden contaminar el suelo y el agua."
+        },
+        {
+          "id": "am-rs-2",
+          "enunciado": "¿Cuándo un residuo se vuelve basura?",
+          "opciones": [
+            "Cuando se mezcla y se ensucia y ya nadie lo puede aprovechar",
+            "Apenas se usa",
+            "Cuando es de plástico",
+            "Cuando lo recoge el carro"
+          ],
+          "correcta": 0,
+          "explicacion": "Separar evita que se vuelva basura."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "las-r",
+      "titulo": "Las R",
+      "resumen": "Primero rechazar y reducir; después reutilizar y reparar; y por último reciclar.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "requiere": ["residuos"],
+      "ficha": {
+        "idea": "Las R ordenan lo que se puede hacer para generar menos residuos, de la más importante a la menos. Rechazar lo que no necesitamos, como el pitillo o la bolsa extra. Reducir: comprar y consumir menos, preferir productos sin tanto empaque. Reutilizar: darle otro uso a las cosas, como un frasco de vidrio o una botella retornable. Reparar en vez de botar. Y reciclar: convertir el material en uno nuevo, lo cual es útil pero gasta energía y agua, y no todo se puede reciclar. Por eso reciclar es la última R y no la primera.",
+        "contexto": [
+          {
+            "titulo": "La de antes",
+            "texto": "Las abuelas iban a la tienda con su canasto y compraban la leche en botellas que se devolvían: reducir y reutilizar no es nada nuevo."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Reducir, reutilizar y reciclar."
+          ],
+          "media": [
+            "Orden: rechazar → reducir → reutilizar → reparar → reciclar.",
+            "Reciclar es la última opción, no la primera."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Qué es mejor: reciclar una botella o no comprarla?",
+          "actividad": "Cada estudiante trae un objeto que iba a botar y propone cómo aplicarle una de las R.",
+          "errores": [
+            "Creer que reciclar resuelve todo el problema de los residuos."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "De la más importante a la menos",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "🙅", "titulo": "Rechazar", "texto": "No aceptar lo que no se necesita." },
+              { "icono": "➖", "titulo": "Reducir", "texto": "Consumir menos, menos empaques." },
+              { "icono": "🔁", "titulo": "Reutilizar", "texto": "Darle otro uso." },
+              { "icono": "🔧", "titulo": "Reparar", "texto": "Arreglar en vez de botar." },
+              { "icono": "♻️", "titulo": "Reciclar", "texto": "Hacer material nuevo: la última opción." }
+            ]
+          }
+        }
+      ],
+      "juego": "las-r-juego",
+      "preguntas": [
+        {
+          "id": "am-rs-3",
+          "enunciado": "¿Cuál de las R es la más importante?",
+          "opciones": ["Reducir (o rechazar)", "Reciclar", "Reutilizar", "Todas valen igual"],
+          "correcta": 0,
+          "explicacion": "El residuo que no se produce no hay que manejarlo."
+        },
+        {
+          "id": "am-rs-4",
+          "enunciado": "Llevar la misma bolsa de tela al mercado cada semana es…",
+          "opciones": ["Reutilizar", "Reciclar", "Reparar", "Rechazar"],
+          "correcta": 0,
+          "explicacion": "Se usa muchas veces el mismo objeto."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "separar",
+      "titulo": "Separar en la fuente",
+      "resumen": "En Colombia: caneca blanca para aprovechables, negra para no aprovechables y verde para orgánicos. Los peligrosos van aparte.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "basico",
+      "requiere": ["las-r"],
+      "ficha": {
+        "idea": "Separar en la fuente es clasificar los residuos en la casa, el colegio o el trabajo, apenas se producen. En Colombia el código de colores es nacional desde 2021. En la bolsa o caneca blanca van los aprovechables: plástico, vidrio, metales, papel y cartón, limpios y secos. En la negra, los no aprovechables: papel higiénico, servilletas, papeles y cartones untados de comida. En la verde, los orgánicos aprovechables: restos de comida, cáscaras, residuos del jardín y de la finca. Los residuos peligrosos, como pilas, medicamentos vencidos, bombillos y envases de agroquímicos, no van en ninguna: se llevan a puntos de recolección especiales.",
+        "contexto": [
+          {
+            "titulo": "Recicladores de oficio",
+            "texto": "En Colombia miles de recicladores recuperan materiales cada día; separar bien en casa les facilita el trabajo y les mejora el ingreso."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Blanca: aprovechables limpios y secos.",
+            "Negra: no aprovechables.",
+            "Verde: orgánicos."
+          ],
+          "media": [
+            "Peligrosos (pilas, medicamentos, bombillos, agroquímicos): a puntos especiales."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Una caja de pizza untada de grasa va en la blanca o en la negra?",
+          "actividad": "Montar tres canecas en el salón con sus colores y revisar entre todos, al final de la semana, qué quedó mal separado.",
+          "errores": [
+            "Echar en la blanca envases sucios: contaminan todo lo demás."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Tres colores",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "⚪", "titulo": "Blanca", "texto": "Plástico, vidrio, metal, papel y cartón limpios y secos." },
+              { "icono": "⚫", "titulo": "Negra", "texto": "Papel higiénico, servilletas, cartón con comida." },
+              { "icono": "🟢", "titulo": "Verde", "texto": "Restos de comida y cáscaras." },
+              { "icono": "☢️", "titulo": "Peligrosos", "texto": "Pilas, medicamentos, bombillos: punto especial." }
+            ]
+          }
+        }
+      ],
+      "juego": "separar-juego",
+      "diagrama": "canecas",
+      "preguntas": [
+        {
+          "id": "am-rs-5",
+          "enunciado": "¿En qué caneca va una botella plástica limpia y seca?",
+          "opciones": ["Blanca", "Negra", "Verde", "En ninguna, es peligrosa"],
+          "correcta": 0,
+          "explicacion": "Es un residuo aprovechable."
+        },
+        {
+          "id": "am-rs-6",
+          "enunciado": "¿Qué se hace con las pilas usadas?",
+          "opciones": [
+            "Llevarlas a un punto de recolección especial",
+            "Echarlas en la caneca verde",
+            "Enterrarlas en el patio",
+            "Quemarlas"
+          ],
+          "correcta": 0,
+          "explicacion": "Tienen metales peligrosos."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "compostaje",
+      "titulo": "Compostaje",
+      "resumen": "Con restos de comida, hojas secas, aire y humedad, los descomponedores fabrican abono en pocos meses.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "basico",
+      "requiere": ["separar"],
+      "ficha": {
+        "idea": "Más de la mitad de los residuos de una casa colombiana son orgánicos. Si se entierran mezclados producen lixiviados y metano; si se compostan, se vuelven abono. El compostaje es la descomposición controlada de los residuos orgánicos por bacterias, hongos, lombrices e insectos. Se alternan capas de material verde y húmedo (cáscaras, restos de comida, pasto: aportan nitrógeno) con material café y seco (hojas secas, aserrín, cartón: aportan carbono). Hay que mantenerlo húmedo como una esponja exprimida y voltearlo para que le entre aire. La pila se calienta, y en dos a tres meses queda un abono oscuro y con olor a tierra. El lombricompost usa lombrices rojas que comen los residuos y dejan humus.",
+        "contexto": [
+          {
+            "titulo": "La pulpa del café",
+            "texto": "En las fincas cafeteras la pulpa del café se composta o se da a las lombrices: un residuo que vuelve al cafetal como abono."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Compostar: convertir los residuos orgánicos en abono.",
+            "Capas verdes (húmedas) y cafés (secas)."
+          ],
+          "media": [
+            "Necesita humedad y aire; la pila se calienta.",
+            "Lombricompost: las lombrices rojas producen humus."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Qué pasa con una cáscara de banano si la dejamos en la huerta?",
+          "actividad": "Montar una compostera en el colegio con un cajón de madera o una caneca con huecos y llevar un registro de temperatura cada semana.",
+          "errores": [
+            "Echar carne, huesos o grasa al compost casero: atraen plagas y huelen mal."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "De cáscara a abono",
+          "visual": {
+            "tipo": "escena",
+            "id": "compostaje",
+            "fases": [
+              { "id": "capas", "nombre": "Capas", "texto": "Verdes y húmedas, cafés y secas, una sobre otra." },
+              { "id": "calor", "nombre": "Calor", "texto": "Bacterias y hongos trabajan y la pila se calienta." },
+              { "id": "voltear", "nombre": "Voltear", "texto": "Darle aire y mantenerla húmeda." },
+              { "id": "abono", "nombre": "Abono", "texto": "En dos a tres meses: tierra oscura que huele a bosque." }
+            ]
+          },
+          "atajo": { "texto": "Más sobre esto: la materia se recicla", "tema": "ciclos-biogeoquimicos", "bloque": "materia-recicla" }
+        }
+      ],
+      "juego": "compostaje-juego",
+      "preguntas": [
+        {
+          "id": "am-rs-7",
+          "enunciado": "¿Para qué se voltea la pila de compost?",
+          "opciones": ["Para que le entre aire", "Para que se seque del todo", "Para que huela mal", "Para espantar las lombrices"],
+          "correcta": 0,
+          "explicacion": "Los descomponedores necesitan oxígeno."
+        },
+        {
+          "id": "am-rs-8",
+          "enunciado": "¿Cuál es un material «café» para el compost?",
+          "opciones": ["Hojas secas", "Cáscaras de fruta", "Pasto recién cortado", "Restos de verdura"],
+          "correcta": 0,
+          "explicacion": "Los cafés son secos y aportan carbono."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "economia-circular",
+      "titulo": "Consumo y economía circular",
+      "resumen": "En vez de sacar, usar y botar, la economía circular diseña las cosas para que duren, se reparen y sus materiales vuelvan a usarse.",
+      "anio": 5,
+      "etiqueta": "Paso 5",
+      "nivel": "intermedio",
+      "requiere": ["las-r"],
+      "ficha": {
+        "idea": "La economía lineal sigue el camino «extraer, fabricar, usar y botar»: necesita cada vez más recursos y produce cada vez más residuos. Algunos productos se diseñan para durar poco o para que no se puedan reparar (obsolescencia programada), y la publicidad empuja a comprar más. La economía circular propone cerrar el ciclo, como hace la naturaleza: diseñar productos duraderos y reparables, usar materiales que se puedan recuperar, compartir y alquilar en vez de comprar, y devolver los residuos como materia prima. El consumo responsable es la parte de cada persona: preguntarse si de verdad necesita algo, preferir lo local, lo duradero y lo reparable.",
+        "contexto": [
+          {
+            "titulo": "Como un bosque",
+            "texto": "En un bosque no hay basura: las hojas que caen son alimento del suelo. La economía circular copia esa idea."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Economía lineal: sacar, usar y botar.",
+            "Economía circular: los materiales vuelven a usarse."
+          ],
+          "media": [
+            "Obsolescencia programada: productos hechos para durar poco.",
+            "Consumo responsable: comprar solo lo necesario, duradero y local."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Por qué a veces sale más barato comprar un aparato nuevo que repararlo?",
+          "actividad": "Rastrear la vida de un objeto cotidiano (un celular, unos tenis) y rediseñarla en forma de círculo.",
+          "errores": [
+            "Pensar que la economía circular es solo reciclar."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Línea o círculo",
+          "visual": {
+            "tipo": "compara",
+            "izq": { "icono": "➡️", "titulo": "Lineal", "puntos": ["Extraer", "Fabricar", "Usar", "Botar"] },
+            "der": { "icono": "🔄", "titulo": "Circular", "puntos": ["Diseñar para durar", "Reparar y compartir", "Recuperar materiales", "Volver a fabricar"] }
+          }
+        }
+      ],
+      "juego": "economia-circular-juego",
+      "preguntas": [
+        {
+          "id": "am-rs-9",
+          "enunciado": "¿Qué es la obsolescencia programada?",
+          "opciones": [
+            "Diseñar productos para que duren poco",
+            "Reparar los aparatos viejos",
+            "Reciclar en la fuente",
+            "Comprar productos locales"
+          ],
+          "correcta": 0,
+          "explicacion": "Obliga a comprar de nuevo más pronto."
+        },
+        {
+          "id": "am-rs-10",
+          "enunciado": "¿Qué idea copia la economía circular de la naturaleza?",
+          "opciones": [
+            "Que los residuos de uno son materia prima de otro",
+            "Que todo se bota al final",
+            "Que los recursos son infinitos",
+            "Que lo nuevo siempre es mejor"
+          ],
+          "correcta": 0,
+          "explicacion": "En un bosque no hay basura."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}
