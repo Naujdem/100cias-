@@ -29,6 +29,7 @@ import { EscenaLinneo, EscenaLamarck, EscenaCuvier, EscenaLyell, EscenaBeagle, E
 import { EscenaTerritorio, EscenaCalendario, EscenaPolicultivo, EscenaDialogo } from './EscenasTerritorio.tsx'
 import { EscenaAguaPlaneta, EscenaCuenca, EscenaParamoEsponja } from './EscenasAgua.tsx'
 import { EscenaFormacionSuelo, EscenaErosion, EscenaDeforestacion } from './EscenasSuelo.tsx'
+import { EscenaInvernadero, EscenaGlaciares, EscenaEnos } from './EscenasClima.tsx'
 import { EscenaCicloAgua, EscenaCicloCarbono, EscenaCicloNitrogeno, EscenaCicloFosforo } from './EscenasCiclos.tsx'
 
 /** Escenas vivas: un dibujo que se transforma según la fase (`fase` = id de la fase en el JSON). */
@@ -181,4 +182,7 @@ export const ESCENAS: Record<string, ComponentType<{ fase: string }>> = {
   'formacion-suelo': EscenaFormacionSuelo,
   erosion: EscenaErosion,
   deforestacion: EscenaDeforestacion,
+  invernadero: EscenaInvernadero,
+  glaciares: EscenaGlaciares,
+  enos: EscenaEnos,
 }
