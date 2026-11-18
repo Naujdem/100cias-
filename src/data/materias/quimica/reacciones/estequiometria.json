@@ -1,0 +1,506 @@
+{
+  "id": "estequiometria",
+  "materia": "quimica",
+  "area": "reacciones",
+  "titulo": "Estequiometría",
+  "subtema": "Cuánto se necesita y cuánto se obtiene en una reacción",
+  "orden": 128,
+  "etiqueta": "8",
+  "vistas": [
+    "ruta"
+  ],
+  "tituloVista": "Ruta de la estequiometría",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Leer una ecuación balanceada como una receta en moles.",
+    "Resolver problemas mol-mol y masa-masa.",
+    "Identificar el reactivo límite y el reactivo en exceso.",
+    "Calcular el rendimiento de una reacción y tener en cuenta la pureza de los reactivos."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con un texto de química de bachillerato (problemas estequiométricos, volumen molar 22,4 L en condiciones normales, rendimiento y pureza)."
+  ],
+  "bloques": [
+    {
+      "id": "receta",
+      "titulo": "La ecuación como receta",
+      "resumen": "Los coeficientes de una ecuación balanceada dicen en qué proporción de moles reaccionan y se forman las sustancias.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "La estequiometría calcula cuánto de cada sustancia se necesita y cuánto se obtiene en una reacción. Su base es la ecuación balanceada, que se lee como una receta: 2 H₂ + O₂ → 2 H₂O dice que 2 moles de hidrógeno reaccionan con 1 mol de oxígeno y dan 2 moles de agua. Igual que en la cocina, si se duplica la receta se duplica todo: 4 mol de H₂ necesitan 2 mol de O₂ y dan 4 mol de agua. La relación entre dos sustancias de la ecuación se usa como factor de conversión: para saber cuánta agua dan 6 mol de H₂, se multiplica 6 mol de H₂ × (2 mol H₂O / 2 mol H₂) = 6 mol de H₂O.",
+        "contexto": [
+          {
+            "titulo": "La palabra",
+            "texto": "Estequiometría viene del griego stoicheion (elemento) y metron (medida). La propuso Jeremias Richter en 1792."
+          },
+          {
+            "titulo": "¿Para qué sirve?",
+            "texto": "Para saber cuánto abono echar, cuánta cal necesita un suelo, cuánto combustible consume un motor o cuánta materia prima compra una fábrica."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "La ecuación balanceada es una receta en moles."
+          ],
+          "media": [
+            "Relación molar: coeficiente de lo que busco / coeficiente de lo que tengo."
+          ],
+          "avanzada": [
+            "La relación molar solo vale con la ecuación balanceada."
+          ]
+        },
+        "docente": {
+          "abrir": "Si con 2 tazas de harina salen 4 arepas, ¿cuántas salen con 6 tazas?",
+          "actividad": "Escribir una receta de cocina como «ecuación» y hacer preguntas mol-mol con ella antes de pasar a una reacción real.",
+          "errores": [
+            "Usar los subíndices como si fueran la relación molar.",
+            "Usar una ecuación sin balancear."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "De la cocina a la química",
+          "visual": {
+            "tipo": "escena",
+            "id": "es-receta",
+            "fases": [
+              {
+                "id": "cocina",
+                "nombre": "La receta",
+                "texto": "2 tazas de harina + 1 taza de agua → 4 arepas."
+              },
+              {
+                "id": "ecuacion",
+                "nombre": "La ecuación",
+                "texto": "2 H₂ + 1 O₂ → 2 H₂O: también es una receta, en moles."
+              },
+              {
+                "id": "doble",
+                "nombre": "Receta doble",
+                "texto": "4 mol H₂ + 2 mol O₂ → 4 mol H₂O."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre el balanceo",
+            "tema": "balanceo-ecuaciones",
+            "bloque": "tanteo"
+          }
+        },
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "N₂ + 3 H₂ → 2 NH₃. ¿Cuántos moles de amoníaco se forman con 3 mol de N₂?",
+            "opciones": [
+              "6 mol",
+              "2 mol",
+              "3 mol",
+              "9 mol"
+            ],
+            "correcta": 0,
+            "explicacion": "3 mol N₂ × (2 mol NH₃ / 1 mol N₂) = 6 mol."
+          }
+        }
+      ],
+      "juego": "mol-mol-juego",
+      "preguntas": [
+        {
+          "id": "qs-re-1",
+          "enunciado": "En 2 H₂ + O₂ → 2 H₂O, ¿cuántos moles de O₂ se necesitan para 10 mol de H₂?",
+          "opciones": [
+            "5 mol",
+            "10 mol",
+            "20 mol",
+            "2 mol"
+          ],
+          "correcta": 0,
+          "explicacion": "Relación 2 : 1."
+        },
+        {
+          "id": "qs-re-2",
+          "enunciado": "¿Qué indican los coeficientes de una ecuación balanceada?",
+          "opciones": [
+            "La proporción en moles de reactivos y productos",
+            "La masa de cada átomo",
+            "El número de átomos en una molécula",
+            "La temperatura de la reacción"
+          ],
+          "correcta": 0,
+          "explicacion": "Por eso se lee como receta."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "masa-masa",
+      "titulo": "Problemas masa-masa",
+      "resumen": "Gramos → moles → relación molar → moles → gramos.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "intermedio",
+      "requiere": [
+        "receta"
+      ],
+      "ficha": {
+        "idea": "En la vida real los reactivos se pesan, así que casi todos los problemas empiezan y terminan en gramos. El camino tiene tres pasos: 1) pasar los gramos del dato a moles (÷ masa molar); 2) usar la relación molar de la ecuación para pasar a moles de la sustancia buscada; 3) pasar esos moles a gramos (× masa molar). Ejemplo: ¿cuánto CO₂ sale al quemar 44 g de propano? C₃H₈ + 5 O₂ → 3 CO₂ + 4 H₂O. 44 g de C₃H₈ ÷ 44 g/mol = 1 mol; 1 mol × (3 mol CO₂ / 1 mol C₃H₈) = 3 mol de CO₂; 3 mol × 44 g/mol = 132 g de CO₂. Quemar un poco de gas produce tres veces su masa en CO₂, porque se le suma el oxígeno del aire.",
+        "contexto": [
+          {
+            "titulo": "¿Cómo puede salir más de lo que entra?",
+            "texto": "No sale más: los 44 g de propano y los 160 g de oxígeno suman 204 g, igual que los 132 g de CO₂ más los 72 g de agua. Lavoisier se cumple."
+          },
+          {
+            "titulo": "Con gases, volumen",
+            "texto": "Para los gases también se puede usar el volumen: un mol de cualquier gas ocupa unos 22,4 L a 0 °C y 1 atm."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Gramos → moles → moles → gramos."
+          ],
+          "media": [
+            "Paso 1: ÷ masa molar. Paso 2: × relación molar. Paso 3: × masa molar."
+          ],
+          "avanzada": [
+            "Masa-volumen: 1 mol de gas ≈ 22,4 L en condiciones normales (0 °C, 1 atm)."
+          ]
+        },
+        "docente": {
+          "abrir": "Una pipeta de gas pesa unos kilos. ¿Cuánto CO₂ echa al aire cuando se gasta?",
+          "actividad": "Calcular el CO₂ que produce una pipeta de 40 libras de gas propano y discutir la huella de carbono de la cocina.",
+          "errores": [
+            "Saltarse el paso a moles y usar la relación molar con gramos.",
+            "Usar la masa molar de la sustancia equivocada en el último paso."
+          ],
+          "minutos": 40
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "El camino de tres pasos",
+          "visual": {
+            "tipo": "escena",
+            "id": "es-masa",
+            "fases": [
+              {
+                "id": "gramos",
+                "nombre": "Gramos del dato",
+                "texto": "44 g de propano."
+              },
+              {
+                "id": "moles",
+                "nombre": "A moles",
+                "texto": "44 g ÷ 44 g/mol = 1 mol de C₃H₈."
+              },
+              {
+                "id": "relacion",
+                "nombre": "Relación molar",
+                "texto": "1 mol C₃H₈ → 3 mol CO₂ (por la ecuación)."
+              },
+              {
+                "id": "resultado",
+                "nombre": "A gramos",
+                "texto": "3 mol × 44 g/mol = 132 g de CO₂."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre las conversiones con el mol",
+            "tema": "el-mol",
+            "bloque": "conversiones"
+          }
+        },
+        {
+          "titulo": "Con gases: volumen",
+          "nivel": "avanzado",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🎈",
+            "valor": "1 mol de gas ≈ 22,4 L",
+            "texto": "A 0 °C y 1 atm (condiciones normales). 3 mol de CO₂ ocupan unos 67 L."
+          },
+          "atajo": {
+            "texto": "Más sobre los gases",
+            "tema": "leyes-gases"
+          }
+        }
+      ],
+      "juego": "masa-masa-juego",
+      "preguntas": [
+        {
+          "id": "qs-mm-1",
+          "enunciado": "En 2 H₂ + O₂ → 2 H₂O, ¿cuántos gramos de agua se forman con 4 g de H₂ (H₂ = 2 g/mol, H₂O = 18 g/mol)?",
+          "opciones": [
+            "36 g",
+            "18 g",
+            "4 g",
+            "72 g"
+          ],
+          "correcta": 0,
+          "explicacion": "4 g → 2 mol H₂ → 2 mol H₂O → 36 g."
+        },
+        {
+          "id": "qs-mm-2",
+          "enunciado": "¿Cuál es el primer paso de un problema masa-masa?",
+          "opciones": [
+            "Pasar los gramos del dato a moles",
+            "Multiplicar por la masa molar del producto",
+            "Sumar las masas",
+            "Balancear el producto"
+          ],
+          "correcta": 0,
+          "explicacion": "La relación molar solo funciona con moles."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "limite",
+      "titulo": "Reactivo límite y en exceso",
+      "resumen": "El reactivo que se acaba primero limita cuánto producto se forma; del otro, sobra.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "intermedio",
+      "requiere": [
+        "masa-masa"
+      ],
+      "ficha": {
+        "idea": "Casi nunca los reactivos están en la proporción exacta de la receta. Si para un sánduche se usan 2 panes y 1 tajada de queso, con 10 panes y 3 tajadas solo salen 3 sánduches y sobran 4 panes: el queso es el reactivo límite y el pan, el reactivo en exceso. En química se hace igual: se pasan los dos reactivos a moles y se mira cuántas «recetas» alcanza cada uno (moles ÷ coeficiente). El que alcanza para menos es el límite, y con él se calcula el producto. Ejemplo: 2 H₂ + O₂ → 2 H₂O con 4 mol de H₂ y 3 mol de O₂. El H₂ alcanza para 4 ÷ 2 = 2 recetas y el O₂ para 3 ÷ 1 = 3: el límite es el H₂. Se forman 4 mol de agua y sobra 1 mol de O₂.",
+        "contexto": [
+          {
+            "titulo": "El que más hay no siempre manda",
+            "texto": "Puede haber más moles de un reactivo y aun así ser el límite, si la receta pide muchos de él: lo que importa es moles ÷ coeficiente."
+          },
+          {
+            "titulo": "En la industria",
+            "texto": "Se pone a propósito en exceso el reactivo más barato (como el oxígeno del aire) para que el caro se gaste completo."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Límite: el que se acaba primero. Exceso: el que sobra."
+          ],
+          "media": [
+            "Para cada reactivo: moles ÷ coeficiente. El menor es el límite."
+          ],
+          "avanzada": [
+            "El producto se calcula siempre con el reactivo límite."
+          ]
+        },
+        "docente": {
+          "abrir": "Tienes 10 panes y 3 tajadas de queso. ¿Cuántos sánduches salen?",
+          "actividad": "Con fichas de papel (panes y quesos), armar sánduches con distintas cantidades y anotar el límite; luego hacerlo con moléculas de plastilina para 2 H₂ + O₂ → 2 H₂O.",
+          "errores": [
+            "Escoger como límite el reactivo del que hay menos moles, sin dividir por el coeficiente.",
+            "Calcular el producto con el reactivo en exceso."
+          ],
+          "minutos": 40
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Sánduches y moléculas",
+          "visual": {
+            "tipo": "escena",
+            "id": "es-limite",
+            "fases": [
+              {
+                "id": "receta",
+                "nombre": "La receta",
+                "texto": "2 panes + 1 queso → 1 sánduche."
+              },
+              {
+                "id": "sanduches",
+                "nombre": "Con 10 panes y 3 quesos",
+                "texto": "Salen 3 sánduches y sobran 4 panes: el queso limita."
+              },
+              {
+                "id": "moleculas",
+                "nombre": "Con moléculas",
+                "texto": "4 H₂ + 3 O₂: salen 4 H₂O y sobra 1 O₂. El H₂ limita."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "La cocina del reactivo límite",
+          "visual": {
+            "tipo": "diagrama",
+            "id": "reactivo-limite"
+          }
+        },
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "N₂ + 3 H₂ → 2 NH₃. Hay 2 mol de N₂ y 3 mol de H₂. ¿Cuál es el reactivo límite?",
+            "opciones": [
+              "El H₂",
+              "El N₂",
+              "Ninguno",
+              "Los dos"
+            ],
+            "correcta": 0,
+            "explicacion": "N₂: 2 ÷ 1 = 2 recetas; H₂: 3 ÷ 3 = 1 receta. El H₂ alcanza para menos."
+          }
+        }
+      ],
+      "diagrama": "reactivo-limite",
+      "juego": "limite-juego",
+      "preguntas": [
+        {
+          "id": "qs-li-1",
+          "enunciado": "¿Qué es el reactivo límite?",
+          "opciones": [
+            "El que se acaba primero y determina cuánto producto se forma",
+            "El que hay en mayor cantidad",
+            "El que sobra al final",
+            "El producto principal"
+          ],
+          "correcta": 0,
+          "explicacion": "Con él se calcula el producto."
+        },
+        {
+          "id": "qs-li-2",
+          "enunciado": "En 2 H₂ + O₂ → 2 H₂O hay 6 mol de H₂ y 2 mol de O₂. ¿Cuánta agua se forma?",
+          "opciones": [
+            "4 mol (el O₂ limita)",
+            "6 mol",
+            "2 mol",
+            "8 mol"
+          ],
+          "correcta": 0,
+          "explicacion": "O₂: 2 recetas; H₂: 3. Con 2 recetas: 4 mol de agua."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "rendimiento",
+      "titulo": "Rendimiento y pureza",
+      "resumen": "En la práctica se obtiene menos producto que el calculado, y los reactivos no son 100 % puros.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "avanzado",
+      "requiere": [
+        "limite"
+      ],
+      "ficha": {
+        "idea": "Lo que se calcula con la estequiometría es el rendimiento teórico: lo máximo que podría salir. En la práctica casi siempre sale menos, porque hay reacciones secundarias, pérdidas al filtrar o reacciones que no terminan. El porcentaje de rendimiento es: (rendimiento real ÷ rendimiento teórico) × 100. Si se esperaban 50 g y salieron 40 g, el rendimiento es del 80 %. Además, los reactivos reales no son puros: una cal agrícola con 90 % de pureza tiene 90 g de CaCO₃ en cada 100 g; el resto son otras sustancias. Antes de calcular, hay que multiplicar la masa por la pureza.",
+        "contexto": [
+          {
+            "titulo": "Leer la etiqueta de la cal",
+            "texto": "El bulto de cal agrícola indica su contenido de carbonato de calcio y su poder de neutralización: no todo lo que se echa reacciona con el suelo."
+          },
+          {
+            "titulo": "Rendimientos en la industria",
+            "texto": "La síntesis del amoníaco para abonos tiene en cada pasada un rendimiento bajo, así que los gases que no reaccionaron se reciclan una y otra vez."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Rendimiento teórico: lo calculado. Real: lo que se obtuvo."
+          ],
+          "media": [
+            "% rendimiento = real ÷ teórico × 100."
+          ],
+          "avanzada": [
+            "Masa pura = masa total × % pureza ÷ 100 (se usa antes del cálculo)."
+          ]
+        },
+        "docente": {
+          "abrir": "Si la receta dice que salen 20 arepas, ¿por qué a veces salen 17?",
+          "actividad": "Reacción de bicarbonato con vinagre en exceso: calcular el CO₂ teórico, medir la pérdida de masa y calcular el rendimiento.",
+          "errores": [
+            "Olvidar la pureza o aplicarla al producto en lugar del reactivo.",
+            "Obtener rendimientos mayores al 100 % por no secar el producto."
+          ],
+          "minutos": 40
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Lo calculado y lo real",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "📐",
+              "titulo": "Rendimiento teórico",
+              "puntos": [
+                "Sale de la estequiometría",
+                "Es el máximo posible",
+                "50 g"
+              ]
+            },
+            "der": {
+              "icono": "⚖️",
+              "titulo": "Rendimiento real",
+              "puntos": [
+                "Se mide en el laboratorio",
+                "Casi siempre menor",
+                "40 g → 80 %"
+              ]
+            }
+          }
+        },
+        {
+          "titulo": "La pureza",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🪨",
+            "valor": "100 g de cal al 90 % → 90 g de CaCO₃",
+            "texto": "Primero se saca la parte pura y con ella se calcula."
+          }
+        },
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Se esperaban 132 g de CO₂ y se recogieron 99 g. ¿Cuál fue el rendimiento?",
+            "opciones": [
+              "75 %",
+              "99 %",
+              "133 %",
+              "25 %"
+            ],
+            "correcta": 0,
+            "explicacion": "99 ÷ 132 × 100 = 75 %."
+          }
+        }
+      ],
+      "preguntas": [
+        {
+          "id": "qs-rp-1",
+          "enunciado": "Se esperaban 50 g de producto y se obtuvieron 45 g. ¿Cuál es el porcentaje de rendimiento?",
+          "opciones": [
+            "90 %",
+            "45 %",
+            "111 %",
+            "5 %"
+          ],
+          "correcta": 0,
+          "explicacion": "45 ÷ 50 × 100."
+        },
+        {
+          "id": "qs-rp-2",
+          "enunciado": "¿Cuánto CaCO₃ puro hay en 200 g de una cal con 80 % de pureza?",
+          "opciones": [
+            "160 g",
+            "80 g",
+            "200 g",
+            "40 g"
+          ],
+          "correcta": 0,
+          "explicacion": "200 × 0,8."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}
