@@ -1,0 +1,603 @@
+{
+  "id": "geometria-fuerzas",
+  "materia": "quimica",
+  "area": "atomo",
+  "titulo": "Geometría molecular y fuerzas intermoleculares",
+  "subtema": "La forma de las moléculas y cómo se atraen",
+  "orden": 117,
+  "etiqueta": "7",
+  "vistas": [
+    "ruta"
+  ],
+  "tituloVista": "Ruta de la geometría y las fuerzas",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Diferenciar enlaces (dentro de la molécula) y fuerzas intermoleculares (entre moléculas).",
+    "Predecir la geometría de moléculas sencillas con la TRePEV (11°).",
+    "Decidir si una molécula es polar a partir de sus enlaces y su forma (11°).",
+    "Relacionar las fuerzas intermoleculares con los puntos de ebullición y la solubilidad."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con el plan curricular de Ciencias Naturales 2025 y un texto de química general. A verificar: ángulos de enlace (SO₂ ≈ 119°, O₃ ≈ 117°), puntos de ebullición (CH₄ −161 °C, H₂S −60 °C) y la comparación de energías enlace/evaporación del agua."
+  ],
+  "bloques": [
+    {
+      "id": "intra-inter",
+      "titulo": "Dentro y entre moléculas",
+      "resumen": "Los enlaces unen los átomos dentro de una molécula; las fuerzas intermoleculares, más débiles, unen unas moléculas con otras.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "intermedio",
+      "nucleo": true,
+      "ficha": {
+        "idea": "Hay dos tipos de fuerzas en una sustancia como el agua. Dentro de cada molécula, los átomos están unidos por enlaces covalentes, que son muy fuertes. Entre una molécula y otra actúan las fuerzas intermoleculares, mucho más débiles. Cuando el agua hierve o el hielo se derrite, lo que se vence son las fuerzas intermoleculares: las moléculas se separan, pero cada una sigue siendo H₂O. En cambio, en una reacción química sí se rompen los enlaces y se forman sustancias nuevas. Por eso la fuerza de las atracciones intermoleculares decide si una sustancia es sólida, líquida o gaseosa a temperatura ambiente.",
+        "contexto": [
+          {
+            "titulo": "Un ejemplo de fuerza",
+            "texto": "Romper los enlaces de un mol de agua cuesta unas diez veces más energía que evaporarla."
+          },
+          {
+            "titulo": "Conexión",
+            "texto": "Esto completa el modelo de partículas del área 1: lo que mantiene juntas a las partículas son estas fuerzas."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Enlaces: dentro de la molécula. Fuerzas intermoleculares: entre moléculas."
+          ],
+          "media": [
+            "Al hervir o fundirse se vencen las fuerzas intermoleculares, no los enlaces.",
+            "Más fuerza intermolecular → mayor punto de ebullición."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "Cuando el agua hierve, ¿qué hay dentro de las burbujas?",
+          "actividad": "Discusión con dibujos: los estudiantes representan el agua líquida y el vapor y marcan qué se rompió y qué no.",
+          "errores": [
+            "Creer que al hervir el agua se separa en hidrógeno y oxígeno.",
+            "Confundir fuerza intermolecular con enlace."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Qué hay dentro de las burbujas del agua que hierve?",
+            "opciones": [
+              "Vapor de agua (moléculas de H₂O)",
+              "Hidrógeno y oxígeno separados",
+              "Aire",
+              "Nada, están vacías"
+            ],
+            "correcta": 0,
+            "explicacion": "Al hervir no se rompen los enlaces O–H."
+          }
+        },
+        {
+          "titulo": "Dos clases de fuerzas",
+          "visual": {
+            "tipo": "escena",
+            "id": "fi-intra",
+            "fases": [
+              {
+                "id": "dentro",
+                "nombre": "Dentro",
+                "texto": "Enlaces covalentes: fuertes, unen O y H."
+              },
+              {
+                "id": "entre",
+                "nombre": "Entre",
+                "texto": "Fuerzas intermoleculares: más débiles, unen unas moléculas con otras."
+              },
+              {
+                "id": "hervir",
+                "nombre": "Al hervir",
+                "texto": "Se separan las moléculas, pero no se rompen."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre los estados de la materia",
+            "tema": "estados-materia"
+          }
+        }
+      ],
+      "juego": "intra-inter-juego",
+      "preguntas": [
+        {
+          "id": "qf-ii-1",
+          "enunciado": "Cuando el hielo se derrite, ¿qué se rompe?",
+          "opciones": [
+            "Parte de las fuerzas entre moléculas",
+            "Los enlaces O–H",
+            "Los núcleos de los átomos",
+            "Nada"
+          ],
+          "correcta": 0,
+          "explicacion": "Las moléculas siguen siendo H₂O."
+        },
+        {
+          "id": "qf-ii-2",
+          "enunciado": "¿Qué es más fuerte?",
+          "opciones": [
+            "Un enlace covalente",
+            "Una fuerza intermolecular",
+            "Son iguales",
+            "Depende del color"
+          ],
+          "correcta": 0,
+          "explicacion": "Los enlaces son mucho más fuertes."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "geometria",
+      "titulo": "Geometría molecular",
+      "resumen": "Los pares de electrones del átomo central se repelen y se alejan lo más posible: eso define la forma de la molécula.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "avanzado",
+      "requiere": [
+        "intra-inter"
+      ],
+      "ficha": {
+        "idea": "Las moléculas tienen forma en tres dimensiones. La teoría de repulsión de los pares de electrones de valencia (TRePEV, en inglés VSEPR) explica esa forma: alrededor del átomo central, los pares de electrones (de enlace y libres) se repelen y se ubican lo más lejos posible unos de otros. Con dos grupos la molécula es lineal (CO₂, 180°); con tres, trigonal plana (120°); con cuatro, tetraédrica (CH₄, 109,5°). Los pares libres ocupan espacio y empujan más que los de enlace: por eso el amoníaco, con un par libre, es piramidal (≈ 107°), y el agua, con dos, es angular (≈ 104,5°).",
+        "contexto": [
+          {
+            "titulo": "Los enlaces dobles cuentan como uno",
+            "texto": "Para contar los grupos, un enlace doble o triple vale como un solo grupo: el CO₂ tiene dos grupos y es lineal."
+          },
+          {
+            "titulo": "La forma importa",
+            "texto": "La forma decide si la molécula es polar (paso 3), y en biología explica cómo encajan las enzimas y las moléculas que reconocen."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Los pares de electrones se repelen y se alejan."
+          ],
+          "media": [
+            "Lineal, trigonal plana, tetraédrica, piramidal y angular."
+          ],
+          "avanzada": [
+            "Ángulos: 180°, 120°, 109,5°, ≈ 107°, ≈ 104,5°.",
+            "Los pares libres repelen más que los de enlace."
+          ]
+        },
+        "docente": {
+          "abrir": "Si amarras cuatro globos por el nudo, ¿cómo se acomodan?",
+          "actividad": "Modelos con globos: 2, 3 y 4 globos amarrados; observar la forma que toman solos. Luego, con plastilina y palillos, armar H₂O, NH₃ y CH₄.",
+          "errores": [
+            "Dibujar el agua en línea recta.",
+            "Olvidar contar los pares libres del átomo central."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Constructor de formas",
+          "visual": {
+            "tipo": "diagrama",
+            "id": "geometria-vsepr"
+          }
+        },
+        {
+          "titulo": "Cinco formas",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "➖",
+                "titulo": "Lineal",
+                "texto": "CO₂ · 180°"
+              },
+              {
+                "icono": "🔺",
+                "titulo": "Trigonal plana",
+                "texto": "BF₃ · 120°"
+              },
+              {
+                "icono": "🔷",
+                "titulo": "Tetraédrica",
+                "texto": "CH₄ · 109,5°"
+              },
+              {
+                "icono": "⛰️",
+                "titulo": "Piramidal",
+                "texto": "NH₃ · ≈ 107°"
+              },
+              {
+                "icono": "📐",
+                "titulo": "Angular",
+                "texto": "H₂O · ≈ 104,5°"
+              }
+            ]
+          }
+        }
+      ],
+      "diagrama": "geometria-vsepr",
+      "juego": "geometria-juego",
+      "preguntas": [
+        {
+          "id": "qf-ge-1",
+          "enunciado": "¿Por qué la molécula de agua es angular y no lineal?",
+          "opciones": [
+            "Porque los dos pares libres del oxígeno empujan los enlaces",
+            "Porque el hidrógeno es muy pesado",
+            "Porque tiene enlaces dobles",
+            "Porque es un líquido"
+          ],
+          "correcta": 0,
+          "explicacion": "Cuatro grupos de electrones: dos enlaces y dos pares libres."
+        },
+        {
+          "id": "qf-ge-2",
+          "enunciado": "¿Qué geometría tiene el metano (CH₄)?",
+          "opciones": [
+            "Tetraédrica",
+            "Lineal",
+            "Plana cuadrada",
+            "Angular"
+          ],
+          "correcta": 0,
+          "explicacion": "Cuatro enlaces separados 109,5°."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "polaridad",
+      "titulo": "Moléculas polares y apolares",
+      "resumen": "Una molécula es polar si tiene enlaces polares y una forma no simétrica; si es simétrica, las polaridades se anulan.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "avanzado",
+      "requiere": [
+        "geometria"
+      ],
+      "ficha": {
+        "idea": "Un enlace es polar cuando sus átomos tienen distinta electronegatividad. Pero para saber si la molécula completa es polar hay que mirar también su forma. En el agua, los dos enlaces O–H son polares y, como la molécula está doblada, sus efectos se suman: el lado del oxígeno queda negativo y el de los hidrógenos positivo. La molécula es polar, es un dipolo. En el CO₂ los dos enlaces C=O también son polares, pero la molécula es lineal y simétrica: los efectos se anulan y la molécula es apolar. Lo mismo pasa con el CH₄ y el CCl₄.",
+        "contexto": [
+          {
+            "titulo": "Una prueba casera",
+            "texto": "Un hilo fino de agua que cae de la llave se desvía hacia una regla o un globo frotado con el pelo: las moléculas polares responden a la carga. Con aceite casi no pasa."
+          },
+          {
+            "titulo": "Momento dipolar",
+            "texto": "La polaridad se mide con el momento dipolar; se dibuja como una flecha hacia el lado negativo."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Molécula polar: tiene un lado + y un lado −."
+          ],
+          "media": [
+            "Hay que mirar los enlaces y la forma.",
+            "Agua: polar. CO₂ y CH₄: apolares (simétricos)."
+          ],
+          "avanzada": [
+            "Momento dipolar: suma vectorial de los dipolos de enlace."
+          ]
+        },
+        "docente": {
+          "abrir": "Si el CO₂ tiene enlaces polares, ¿por qué no es una molécula polar?",
+          "actividad": "Frotar un globo o una regla con el pelo y acercarlo a un hilo de agua de la llave; repetir con aceite y comparar.",
+          "errores": [
+            "Pensar que todo enlace polar da una molécula polar.",
+            "Ignorar los pares libres al decidir la forma."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Suman o se anulan",
+          "visual": {
+            "tipo": "escena",
+            "id": "fi-polaridad",
+            "fases": [
+              {
+                "id": "agua",
+                "nombre": "Agua",
+                "texto": "Angular: los dipolos se suman. Polar."
+              },
+              {
+                "id": "co2",
+                "nombre": "CO₂",
+                "texto": "Lineal: los dipolos se anulan. Apolar."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre enlaces polares",
+            "tema": "enlace-quimico",
+            "bloque": "covalente"
+          }
+        }
+      ],
+      "juego": "molecula-polar-juego",
+      "preguntas": [
+        {
+          "id": "qf-po-1",
+          "enunciado": "¿Por qué el CO₂ es una molécula apolar?",
+          "opciones": [
+            "Es lineal y los dipolos de sus enlaces se anulan",
+            "Sus enlaces son apolares",
+            "No tiene electrones",
+            "Es un gas"
+          ],
+          "correcta": 0,
+          "explicacion": "La simetría cancela las polaridades."
+        },
+        {
+          "id": "qf-po-2",
+          "enunciado": "¿Qué hace falta para que una molécula sea polar?",
+          "opciones": [
+            "Enlaces polares y una forma no simétrica",
+            "Solo átomos iguales",
+            "Ser un sólido",
+            "Tener enlaces triples"
+          ],
+          "correcta": 0,
+          "explicacion": "Como el agua o el amoníaco."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "fuerzas",
+      "titulo": "Fuerzas intermoleculares",
+      "resumen": "London (todas las moléculas), dipolo-dipolo (moléculas polares) y puentes de hidrógeno (H unido a O, N o F).",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "intermedio",
+      "requiere": [
+        "intra-inter"
+      ],
+      "ficha": {
+        "idea": "Hay tres fuerzas intermoleculares principales. Las fuerzas de London (o de dispersión) existen en todas las moléculas: los electrones se amontonan por un instante a un lado y crean dipolos pasajeros que atraen a las moléculas vecinas; son las únicas en las moléculas apolares y crecen con el tamaño de la molécula. Las fuerzas dipolo-dipolo aparecen entre moléculas polares: el lado negativo de una atrae el lado positivo de otra. Los puentes de hidrógeno son un caso especial y más fuerte: un hidrógeno unido a oxígeno, nitrógeno o flúor es atraído por el O, N o F de otra molécula. Cuanto más fuertes son estas fuerzas, más alto es el punto de ebullición: el metano hierve a −161 °C y el agua, a 100 °C.",
+        "contexto": [
+          {
+            "titulo": "El agua es rara",
+            "texto": "Por sus puentes de hidrógeno, el agua es líquida a temperatura ambiente, aunque moléculas parecidas y más pesadas, como el H₂S, son gases. Sus propiedades especiales se estudian a fondo en el área 4."
+          },
+          {
+            "titulo": "Gecos",
+            "texto": "Las patas de los gecos se pegan a las paredes por millones de diminutas fuerzas de London."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Tres fuerzas: London, dipolo-dipolo y puentes de hidrógeno."
+          ],
+          "media": [
+            "Puente de H: H unido a O, N o F.",
+            "Más fuerza → mayor punto de ebullición."
+          ],
+          "avanzada": [
+            "London crece con el tamaño: por eso el I₂ es sólido y el F₂ es gas."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué el agua es líquida si el H₂S, que pesa más, es un gas?",
+          "actividad": "Poner gotas de agua, alcohol y aceite sobre una moneda o una tapa y comparar la forma de la gota y lo rápido que se evaporan.",
+          "errores": [
+            "Pensar que el puente de hidrógeno es un enlace dentro de la molécula.",
+            "Creer que cualquier H forma puentes (el del metano no)."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Tres fuerzas",
+          "visual": {
+            "tipo": "escena",
+            "id": "fi-fuerzas",
+            "fases": [
+              {
+                "id": "london",
+                "nombre": "London",
+                "texto": "Dipolos pasajeros: en todas las moléculas."
+              },
+              {
+                "id": "dipolo",
+                "nombre": "Dipolo-dipolo",
+                "texto": "Moléculas polares que se alinean."
+              },
+              {
+                "id": "puente",
+                "nombre": "Puente de hidrógeno",
+                "texto": "Un H unido a O, N o F atraído por otra molécula."
+              },
+              {
+                "id": "ebullicion",
+                "nombre": "Puntos de ebullición",
+                "texto": "Más fuerza entre moléculas, más alto el punto de ebullición."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Qué fuerza explica que el agua hierva a 100 °C y no a −60 °C como el H₂S?",
+            "opciones": [
+              "Los puentes de hidrógeno",
+              "Las fuerzas de London",
+              "El enlace iónico",
+              "La gravedad"
+            ],
+            "correcta": 0,
+            "explicacion": "El H del agua está unido a un oxígeno."
+          }
+        }
+      ],
+      "juego": "fuerza-juego",
+      "preguntas": [
+        {
+          "id": "qf-fu-1",
+          "enunciado": "¿En qué moléculas existen las fuerzas de London?",
+          "opciones": [
+            "En todas",
+            "Solo en las polares",
+            "Solo en el agua",
+            "Solo en los metales"
+          ],
+          "correcta": 0,
+          "explicacion": "Son las únicas en las apolares."
+        },
+        {
+          "id": "qf-fu-2",
+          "enunciado": "¿Cuál de estas moléculas forma puentes de hidrógeno?",
+          "opciones": [
+            "NH₃",
+            "CH₄",
+            "O₂",
+            "CO₂"
+          ],
+          "correcta": 0,
+          "explicacion": "Tiene H unido a N."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "consecuencias",
+      "titulo": "Lo que explican estas fuerzas",
+      "resumen": "Semejante disuelve a semejante, el agua y el aceite no se mezclan y los puentes de hidrógeno sostienen el ADN.",
+      "anio": 5,
+      "etiqueta": "Paso 5",
+      "nivel": "intermedio",
+      "requiere": [
+        "fuerzas"
+      ],
+      "ficha": {
+        "idea": "Las fuerzas intermoleculares explican muchas cosas cotidianas. Una sustancia se disuelve en otra si sus moléculas se atraen de forma parecida: «semejante disuelve a semejante». El agua, polar, disuelve la sal (iónica), el azúcar y el alcohol (polares), pero no el aceite ni la gasolina (apolares); por eso el aceite flota en una capa aparte y las manchas de grasa no se quitan solo con agua. El jabón funciona porque tiene una parte polar y otra apolar. En los seres vivos, los puentes de hidrógeno mantienen unidas las dos cadenas del ADN y dan forma a las proteínas.",
+        "contexto": [
+          {
+            "titulo": "El jabón",
+            "texto": "Su cola apolar se mete en la grasa y su cabeza polar queda en el agua: la grasa sale envuelta en pequeñas gotas."
+          },
+          {
+            "titulo": "El agua, a fondo en el área 4",
+            "texto": "Tensión superficial, el hielo que flota y el agua como disolvente universal se estudian en el área 4 (gases, soluciones y equilibrio)."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Semejante disuelve a semejante.",
+            "Agua y aceite no se mezclan."
+          ],
+          "media": [
+            "El agua disuelve lo polar y lo iónico.",
+            "Los puentes de H unen las cadenas del ADN."
+          ],
+          "avanzada": [
+            "El jabón tiene una parte polar y otra apolar."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué la grasa de un plato no sale solo con agua y sí con jabón?",
+          "actividad": "Experimento: agua, aceite y colorante en un frasco; agitar, dejar reposar y luego agregar jabón y comparar.",
+          "errores": [
+            "Pensar que el aceite no se mezcla porque es más pesado.",
+            "Creer que el jabón «destruye» la grasa."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Semejante disuelve a semejante",
+          "visual": {
+            "tipo": "escena",
+            "id": "fi-soluble",
+            "fases": [
+              {
+                "id": "aceite",
+                "nombre": "Agua y aceite",
+                "texto": "Polar y apolar no se atraen: dos capas."
+              },
+              {
+                "id": "sal",
+                "nombre": "Sal en agua",
+                "texto": "El agua rodea a cada ion y la sal se disuelve."
+              },
+              {
+                "id": "adn",
+                "nombre": "El ADN",
+                "texto": "Puentes de hidrógeno unen sus dos cadenas."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre la doble hélice",
+            "tema": "adn-genes-cromosomas",
+            "bloque": "doble-helice"
+          }
+        },
+        {
+          "titulo": "Cada uno con los suyos",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "💧",
+              "titulo": "El agua disuelve",
+              "puntos": [
+                "Sal",
+                "Azúcar",
+                "Alcohol"
+              ]
+            },
+            "der": {
+              "icono": "🫒",
+              "titulo": "El agua no disuelve",
+              "puntos": [
+                "Aceite",
+                "Gasolina",
+                "Parafina"
+              ]
+            }
+          }
+        }
+      ],
+      "juego": "disuelve-juego",
+      "preguntas": [
+        {
+          "id": "qf-co-1",
+          "enunciado": "¿Por qué el aceite no se disuelve en agua?",
+          "opciones": [
+            "El aceite es apolar y el agua es polar",
+            "El aceite es más pesado",
+            "El agua está fría",
+            "El aceite es iónico"
+          ],
+          "correcta": 0,
+          "explicacion": "Semejante disuelve a semejante."
+        },
+        {
+          "id": "qf-co-2",
+          "enunciado": "¿Qué une las dos cadenas del ADN?",
+          "opciones": [
+            "Puentes de hidrógeno",
+            "Enlaces iónicos",
+            "Enlaces metálicos",
+            "Fuerzas magnéticas"
+          ],
+          "correcta": 0,
+          "explicacion": "Entre las bases nitrogenadas de cada cadena."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}
