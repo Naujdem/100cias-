@@ -1,0 +1,556 @@
+{
+  "id": "electrones-atomo",
+  "materia": "quimica",
+  "area": "atomo",
+  "titulo": "Los electrones en el átomo",
+  "subtema": "Niveles, configuración electrónica y números cuánticos",
+  "orden": 113,
+  "etiqueta": "3",
+  "vistas": [
+    "ruta"
+  ],
+  "tituloVista": "Ruta de los electrones",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Distribuir los electrones por niveles de energía e identificar los de valencia.",
+    "Escribir configuraciones electrónicas con el diagrama de Moeller.",
+    "Aplicar el principio de Pauli y la regla de Hund en diagramas de orbitales.",
+    "Interpretar los cuatro números cuánticos de un electrón."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con el plan curricular de Ciencias Naturales 2025 y un texto de química general (estructura electrónica). A verificar: excepciones de Cr y Cu, y la convención de signo del espín."
+  ],
+  "bloques": [
+    {
+      "id": "niveles",
+      "titulo": "Niveles de energía",
+      "resumen": "Los electrones se ordenan en niveles alrededor del núcleo; cada nivel tiene un cupo y se llenan de adentro hacia afuera.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "Siguiendo la idea de Bohr, los electrones se ubican en niveles de energía alrededor del núcleo. Los niveles más cercanos tienen menos energía y se llenan primero. Cada nivel tiene un cupo: en los primeros veinte elementos, el nivel 1 admite 2 electrones y los niveles 2 y 3 admiten 8. Así, el sodio (11 electrones) queda 2 · 8 · 1. Los electrones del último nivel se llaman electrones de valencia: son los que participan cuando el átomo se une con otros.",
+        "contexto": [
+          {
+            "titulo": "Como un edificio",
+            "texto": "Los electrones ocupan primero los pisos de abajo, los de menos energía, y solo suben cuando los de abajo están llenos."
+          },
+          {
+            "titulo": "El cupo completo",
+            "texto": "En realidad el nivel n admite hasta 2n² electrones (2, 8, 18, 32), pero desde el potasio el cuarto nivel empieza antes de completar el tercero; eso se explica con los subniveles (paso 2)."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Los electrones están en niveles de energía.",
+            "Cupo: nivel 1 → 2, nivel 2 → 8, nivel 3 → 8 (primeros 20 elementos)."
+          ],
+          "media": [
+            "Electrones de valencia: los del último nivel.",
+            "Ejemplos: Na 2·8·1; Cl 2·8·7."
+          ],
+          "avanzada": [
+            "Cupo máximo del nivel n: 2n²."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué el sodio y el potasio se parecen tanto si tienen distinto número de electrones?",
+          "actividad": "Dibujar en el tablero los primeros 20 elementos con sus niveles y encerrar los electrones de valencia; buscar los que tienen el mismo número.",
+          "errores": [
+            "Poner más de 2 electrones en el primer nivel.",
+            "Confundir el número del nivel con el número de electrones."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Cuántos electrones caben en el primer nivel de energía?",
+            "opciones": [
+              "2",
+              "8",
+              "1",
+              "18"
+            ],
+            "correcta": 0,
+            "explicacion": "El primer nivel solo tiene un orbital s, con cupo para 2."
+          }
+        },
+        {
+          "titulo": "Llenar los niveles",
+          "visual": {
+            "tipo": "escena",
+            "id": "at-niveles",
+            "fases": [
+              {
+                "id": "niveles",
+                "nombre": "Niveles",
+                "texto": "Alrededor del núcleo hay niveles, cada uno con su cupo."
+              },
+              {
+                "id": "llenar",
+                "nombre": "Sodio: 2 · 8 · 1",
+                "texto": "Los 11 electrones del sodio llenan los niveles de adentro hacia afuera."
+              },
+              {
+                "id": "ultima",
+                "nombre": "Valencia",
+                "texto": "El electrón de la última capa es el de valencia: el que reacciona."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre el modelo de Bohr",
+            "tema": "modelos-atomicos",
+            "bloque": "bohr"
+          }
+        },
+        {
+          "titulo": "La última capa manda",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🧂",
+                "titulo": "Sodio: 1",
+                "texto": "Lo cede con facilidad."
+              },
+              {
+                "icono": "🧪",
+                "titulo": "Cloro: 7",
+                "texto": "Busca uno más para completar 8."
+              },
+              {
+                "icono": "🎈",
+                "titulo": "Neón: 8",
+                "texto": "Lleno: casi no reacciona."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre la valencia y el enlace",
+            "tema": "enlace-quimico"
+          }
+        }
+      ],
+      "juego": "capas-e-juego",
+      "preguntas": [
+        {
+          "id": "qe-ni-1",
+          "enunciado": "¿Cómo se distribuyen los 17 electrones del cloro por niveles?",
+          "opciones": [
+            "2 · 8 · 7",
+            "2 · 7 · 8",
+            "8 · 8 · 1",
+            "2 · 2 · 13"
+          ],
+          "correcta": 0,
+          "explicacion": "Dos, ocho, y los siete restantes en el tercer nivel."
+        },
+        {
+          "id": "qe-ni-2",
+          "enunciado": "¿Qué son los electrones de valencia?",
+          "opciones": [
+            "Los del último nivel de energía",
+            "Los del núcleo",
+            "Los del primer nivel",
+            "Los que no tienen carga"
+          ],
+          "correcta": 0,
+          "explicacion": "Son los que participan en las uniones con otros átomos."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "configuracion",
+      "titulo": "Configuración electrónica",
+      "resumen": "Los niveles se dividen en subniveles s, p, d y f, que se llenan en el orden del diagrama de Moeller.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "intermedio",
+      "requiere": [
+        "niveles"
+      ],
+      "ficha": {
+        "idea": "Cada nivel se divide en subniveles: s (cupo de 2 electrones), p (6), d (10) y f (14). El nivel 1 solo tiene s; el 2 tiene s y p; el 3, s, p y d; el 4, s, p, d y f. Los subniveles no se llenan en orden de nivel sino de energía, y ese orden se lee con el diagrama de Moeller, siguiendo las flechas diagonales: 1s 2s 2p 3s 3p 4s 3d 4p 5s… Por eso el 4s se llena antes que el 3d. La configuración electrónica se escribe con el nivel, la letra del subnivel y, como exponente, los electrones: el hierro (26) es 1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d⁶.",
+        "contexto": [
+          {
+            "titulo": "Comprobar",
+            "texto": "La suma de los exponentes debe dar el número de electrones."
+          },
+          {
+            "titulo": "Por qué el potasio es 2·8·8·1",
+            "texto": "Después del 3p viene el 4s, no el 3d: por eso el cuarto nivel empieza con solo 8 en el tercero."
+          },
+          {
+            "titulo": "Forma corta",
+            "texto": "Se puede abreviar con el gas noble anterior: el sodio es [Ne] 3s¹."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Subniveles: s (2), p (6), d (10), f (14)."
+          ],
+          "media": [
+            "Orden de Moeller: 1s 2s 2p 3s 3p 4s 3d 4p 5s…",
+            "La suma de exponentes = número de electrones."
+          ],
+          "avanzada": [
+            "Notación abreviada con el gas noble: Fe = [Ar] 4s² 3d⁶."
+          ]
+        },
+        "docente": {
+          "abrir": "Si el nivel 3 admite 18 electrones, ¿por qué el potasio pone su último electrón en el nivel 4?",
+          "actividad": "Cada estudiante recibe un elemento del 1 al 36, escribe su configuración con el diagrama de Moeller y la comprueba en el Explora.",
+          "errores": [
+            "Llenar el 3d antes que el 4s.",
+            "Olvidar que el exponente es el número de electrones, no el nivel."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "El orden de llenado",
+          "visual": {
+            "tipo": "escena",
+            "id": "at-moeller",
+            "fases": [
+              {
+                "id": "subniveles",
+                "nombre": "Subniveles",
+                "texto": "Cada nivel tiene subniveles s, p, d, f con cupos de 2, 6, 10 y 14."
+              },
+              {
+                "id": "diagonales",
+                "nombre": "Las diagonales",
+                "texto": "Se llenan siguiendo las flechas: por eso el 4s va antes que el 3d."
+              },
+              {
+                "id": "ejemplo",
+                "nombre": "Hierro",
+                "texto": "26 electrones: 1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d⁶."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Llena los orbitales",
+          "visual": {
+            "tipo": "diagrama",
+            "id": "llena-orbitales"
+          }
+        },
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Cuál es la configuración del oxígeno (8 electrones)?",
+            "opciones": [
+              "1s² 2s² 2p⁴",
+              "1s² 2s⁶",
+              "1s² 2p⁶",
+              "2s² 2p⁶"
+            ],
+            "correcta": 0,
+            "explicacion": "2 + 2 + 4 = 8."
+          }
+        },
+        {
+          "titulo": "Forma corta",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "✂️",
+            "valor": "Na = [Ne] 3s¹",
+            "texto": "Se escribe el gas noble anterior entre corchetes y solo lo que sigue."
+          },
+          "nivel": "avanzado"
+        }
+      ],
+      "diagrama": "llena-orbitales",
+      "juego": "moeller-juego",
+      "preguntas": [
+        {
+          "id": "qe-co-1",
+          "enunciado": "Según el diagrama de Moeller, ¿qué subnivel se llena justo después del 4s?",
+          "opciones": [
+            "3d",
+            "4p",
+            "4d",
+            "3p"
+          ],
+          "correcta": 0,
+          "explicacion": "El orden es 3p, 4s, 3d, 4p."
+        },
+        {
+          "id": "qe-co-2",
+          "enunciado": "¿Cuántos electrones caben como máximo en un subnivel p?",
+          "opciones": [
+            "6",
+            "2",
+            "10",
+            "8"
+          ],
+          "correcta": 0,
+          "explicacion": "Un subnivel p tiene 3 orbitales de 2 electrones."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "orbitales",
+      "titulo": "Orbitales: Pauli y Hund",
+      "resumen": "Cada orbital admite dos electrones con giros opuestos; en un subnivel, primero va uno en cada orbital.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "avanzado",
+      "requiere": [
+        "configuracion"
+      ],
+      "ficha": {
+        "idea": "Cada subnivel está formado por orbitales: s tiene 1, p tiene 3, d tiene 5 y f tiene 7. En un diagrama de cajas, cada orbital es una caja y cada electrón una flecha. El principio de exclusión de Pauli dice que en un orbital caben como máximo dos electrones, y con giros (espín) opuestos: ↑↓. La regla de Hund dice que, en un subnivel con varios orbitales, los electrones ocupan primero uno en cada orbital, con el mismo giro, y solo después se aparean. Así el nitrógeno tiene sus tres electrones 2p desapareados: [↑] [↑] [↑].",
+        "contexto": [
+          {
+            "titulo": "Electrones desapareados",
+            "texto": "Los átomos con electrones desapareados tienden a formar enlaces y algunos son atraídos por imanes (paramagnetismo)."
+          },
+          {
+            "titulo": "Excepciones",
+            "texto": "El cromo y el cobre no siguen el orden exacto: quedan 4s¹ 3d⁵ y 4s¹ 3d¹⁰, porque un subnivel d medio lleno o lleno es más estable."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Cada orbital (caja) admite dos electrones."
+          ],
+          "media": [
+            "Pauli: máximo 2 electrones por orbital, con giros opuestos."
+          ],
+          "avanzada": [
+            "Hund: primero uno en cada orbital del subnivel, con el mismo giro.",
+            "Orbitales por subnivel: s 1, p 3, d 5, f 7.",
+            "Excepciones: Cr [Ar] 4s¹ 3d⁵ y Cu [Ar] 4s¹ 3d¹⁰."
+          ]
+        },
+        "docente": {
+          "abrir": "En un bus con asientos dobles vacíos, ¿la gente se sienta junta o busca primero una silla sola?",
+          "actividad": "Representar con sillas: tres sillas dobles (un subnivel p) y estudiantes que entran uno a uno siguiendo Hund y Pauli.",
+          "errores": [
+            "Aparear electrones antes de llenar todos los orbitales.",
+            "Dibujar dos flechas iguales en la misma caja."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Diagrama de cajas",
+          "visual": {
+            "tipo": "escena",
+            "id": "at-cajas",
+            "fases": [
+              {
+                "id": "caja",
+                "nombre": "Una caja por orbital",
+                "texto": "Cada caja es un orbital; caben hasta dos electrones."
+              },
+              {
+                "id": "pauli",
+                "nombre": "Pauli",
+                "texto": "Dos electrones en el mismo orbital deben tener giros opuestos."
+              },
+              {
+                "id": "hund",
+                "nombre": "Hund",
+                "texto": "Primero uno en cada caja, todos con el mismo giro; luego se aparean."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Excepciones famosas",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "🔩",
+              "titulo": "Cromo (24)",
+              "puntos": [
+                "Se esperaría 4s² 3d⁴",
+                "Real: 4s¹ 3d⁵",
+                "d medio lleno"
+              ]
+            },
+            "der": {
+              "icono": "🟠",
+              "titulo": "Cobre (29)",
+              "puntos": [
+                "Se esperaría 4s² 3d⁹",
+                "Real: 4s¹ 3d¹⁰",
+                "d lleno"
+              ]
+            }
+          }
+        }
+      ],
+      "juego": "hund-juego",
+      "preguntas": [
+        {
+          "id": "qe-or-1",
+          "enunciado": "¿Qué dice el principio de exclusión de Pauli?",
+          "opciones": [
+            "En un orbital caben como máximo dos electrones, con giros opuestos",
+            "Los electrones llenan primero el 3d",
+            "Cada nivel tiene 8 electrones",
+            "Los electrones se aparean primero"
+          ],
+          "correcta": 0,
+          "explicacion": "Por eso dos flechas en una caja van ↑↓."
+        },
+        {
+          "id": "qe-or-2",
+          "enunciado": "¿Cómo quedan los 3 electrones 2p del nitrógeno según Hund?",
+          "opciones": [
+            "Uno en cada orbital, con el mismo giro",
+            "Dos en un orbital y uno en otro",
+            "Los tres en el mismo orbital",
+            "Uno en 2p y dos en 3s"
+          ],
+          "correcta": 0,
+          "explicacion": "Primero uno por caja: [↑] [↑] [↑]."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "cuanticos",
+      "titulo": "Números cuánticos",
+      "resumen": "Cuatro números (n, ℓ, mℓ, s) son la «dirección» de cada electrón: nivel, forma, orientación y giro.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "avanzado",
+      "requiere": [
+        "orbitales"
+      ],
+      "ficha": {
+        "idea": "En el modelo actual, cada electrón queda descrito por cuatro números cuánticos. El principal (n = 1, 2, 3…) indica el nivel y el tamaño del orbital. El secundario o azimutal (ℓ, de 0 a n − 1) indica la forma: 0 es s, 1 es p, 2 es d y 3 es f. El magnético (mℓ, de −ℓ a +ℓ) indica la orientación del orbital en el espacio; por eso p tiene 3 orbitales y d tiene 5. El de espín (s, +½ o −½) indica el giro. Según Pauli, no hay dos electrones en un átomo con los cuatro números iguales.",
+        "contexto": [
+          {
+            "titulo": "Una dirección",
+            "texto": "Como una dirección: piso (n), tipo de apartamento (ℓ), puerta (mℓ) y cuál de los dos inquilinos (s)."
+          },
+          {
+            "titulo": "De dónde salen",
+            "texto": "Son las soluciones de la ecuación de Schrödinger (tema 1)."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Cuatro números describen a cada electrón."
+          ],
+          "media": [
+            "n: nivel · ℓ: forma · mℓ: orientación · s: giro."
+          ],
+          "avanzada": [
+            "ℓ va de 0 a n − 1; mℓ de −ℓ a +ℓ; s = ±½.",
+            "Número de orbitales del subnivel = 2ℓ + 1.",
+            "No hay dos electrones con los cuatro números iguales."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Cuántos datos necesitas para encontrar a una persona en un edificio de apartamentos?",
+          "actividad": "Escribir los cuatro números cuánticos del último electrón de H, Li, N y O, y verificar entre parejas que no se repitan.",
+          "errores": [
+            "Usar ℓ = n.",
+            "Pensar que el espín puede ser 0 o 1."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "La dirección del electrón",
+          "visual": {
+            "tipo": "escena",
+            "id": "at-cuanticos",
+            "fases": [
+              {
+                "id": "n",
+                "nombre": "Principal (n)",
+                "texto": "El nivel: 1, 2, 3… Cuanto mayor, más lejos y más energía."
+              },
+              {
+                "id": "l",
+                "nombre": "Secundario (ℓ)",
+                "texto": "La forma del orbital: 0 = s, 1 = p, 2 = d, 3 = f."
+              },
+              {
+                "id": "m",
+                "nombre": "Magnético (mℓ)",
+                "texto": "La orientación: de −ℓ a +ℓ. Por eso hay 3 orbitales p."
+              },
+              {
+                "id": "s",
+                "nombre": "Espín (s)",
+                "texto": "El giro: +½ o −½. Dos por orbital, con giros opuestos."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre el modelo actual",
+            "tema": "modelos-atomicos",
+            "bloque": "modelo-actual"
+          }
+        },
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Si n = 2, ¿qué valores puede tomar ℓ?",
+            "opciones": [
+              "0 y 1",
+              "Solo 2",
+              "1 y 2",
+              "0, 1 y 2"
+            ],
+            "correcta": 0,
+            "explicacion": "ℓ va de 0 a n − 1: en el nivel 2 hay subniveles s y p."
+          }
+        }
+      ],
+      "juego": "cuanticos-juego",
+      "preguntas": [
+        {
+          "id": "qe-cu-1",
+          "enunciado": "¿Qué indica el número cuántico secundario (ℓ)?",
+          "opciones": [
+            "La forma del orbital",
+            "El nivel de energía",
+            "El giro del electrón",
+            "La carga del núcleo"
+          ],
+          "correcta": 0,
+          "explicacion": "0 = s, 1 = p, 2 = d, 3 = f."
+        },
+        {
+          "id": "qe-cu-2",
+          "enunciado": "¿Cuántos valores de mℓ hay para ℓ = 2?",
+          "opciones": [
+            "5",
+            "2",
+            "3",
+            "10"
+          ],
+          "correcta": 0,
+          "explicacion": "De −2 a +2: −2, −1, 0, 1, 2. Son los 5 orbitales d."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}

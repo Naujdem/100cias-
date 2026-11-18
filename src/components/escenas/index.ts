@@ -39,7 +39,7 @@ import { EscenaCicloEstados, EscenaCurvaCalentamiento } from './EscenasEstados.t
 import { EscenaPapelCambios, EscenaSenalesQuimicas, EscenaMacheteOxido } from './EscenasCambios.tsx'
 import { EscenaParticulasClasificacion } from './EscenasClasificacion.tsx'
 import { EscenaSepararMezclas } from './EscenasSeparacion.tsx'
-import { EscenaDemocrito, EscenaDalton, EscenaThomson, EscenaRutherford, EscenaBohr, EscenaNube, EscenaChadwick, EscenaParticulas, EscenaNumeros, EscenaIones, EscenaIsotopos } from './EscenasAtomo.tsx'
+import { EscenaDemocrito, EscenaDalton, EscenaThomson, EscenaRutherford, EscenaBohr, EscenaNube, EscenaChadwick, EscenaParticulas, EscenaNumeros, EscenaIones, EscenaIsotopos, EscenaNivelesE, EscenaMoeller, EscenaCajas, EscenaCuanticos } from './EscenasAtomo.tsx'
 import { EscenaRiesgo, EscenaArmero, EscenaEvacuacion } from './EscenasRiesgo.tsx'
 import { EscenaProyectoAula } from './EscenasSostenibilidad.tsx'
 import { EscenaCicloAgua, EscenaCicloCarbono, EscenaCicloNitrogeno, EscenaCicloFosforo } from './EscenasCiclos.tsx'
@@ -225,6 +225,10 @@ export const ESCENAS: Record<string, ComponentType<{ fase: string }>> = {
   'at-numeros': EscenaNumeros,
   'at-iones': EscenaIones,
   'at-isotopos': EscenaIsotopos,
+  'at-niveles': EscenaNivelesE,
+  'at-moeller': EscenaMoeller,
+  'at-cajas': EscenaCajas,
+  'at-cuanticos': EscenaCuanticos,
   compostaje: EscenaCompostaje,
   riesgo: EscenaRiesgo,
   armero: EscenaArmero,
