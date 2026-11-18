@@ -24,6 +24,8 @@ import { DogmaJuego, TranscripcionJuego, CodigoGeneticoJuego, TraduccionJuego, R
 import RuedaCodones from './RuedaCodones.tsx'
 import PunnettNoMendel from './PunnettNoMendel.tsx'
 import MutaGen from './MutaGen.tsx'
+import PcrCiclos from './PcrCiclos.tsx'
+import { BiotecQueJuego, InsulinaJuego, PcrJuego, TransgenicoJuego, EdicionJuego, DebateJuego } from './JuegosBiotec.tsx'
 import { QueEsMutacionJuego, PuntualesJuego, EfectosJuego, NumericasJuego, CromosomicasJuego, VariacionJuego } from './JuegosMutaciones.tsx'
 import { IncompletaJuego, CodominanciaJuego, SangreJuego, LigadaJuego, GenealogiaJuego, PoligenicaJuego } from './JuegosNoMendel.tsx'
 import FasesMitosis from './FasesMitosis.tsx'
@@ -185,6 +187,13 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'numericas-juego': NumericasJuego,
   'cromosomicas-juego': CromosomicasJuego,
   'variacion-juego': VariacionJuego,
+  'pcr-ciclos': PcrCiclos,
+  'biotec-que-juego': BiotecQueJuego,
+  'insulina-juego': InsulinaJuego,
+  'pcr-juego': PcrJuego,
+  'transgenico-juego': TransgenicoJuego,
+  'edicion-juego': EdicionJuego,
+  'debate-juego': DebateJuego,
   'meiosis-i-ii-juego': MeiosisIoIIJuego,
   'oficio-juego': OficioJuego,
   'origen-celulas-juego': OrigenCelulasJuego,

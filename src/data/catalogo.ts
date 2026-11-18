@@ -32,6 +32,5 @@ export const UNIDADES: Record<string, Unidad[]> = {
 export const PROXIMOS: Record<string, { etiqueta: string; nombre: string }[]> = {
   celular: [],
   genetica: [
-    { etiqueta: '8', nombre: 'Biotecnología' },
   ],
 }
