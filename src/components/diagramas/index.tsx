@@ -91,6 +91,8 @@ import { DemocritoJuego, DaltonJuego, ThomsonJuego, RutherfordJuego, BohrJuego, 
 import LaminaOro from './LaminaOro.tsx'
 import ArmaAtomo from './ArmaAtomo.tsx'
 import LlenaOrbitales from './LlenaOrbitales.tsx'
+import TablaPeriodica from './TablaPeriodica.tsx'
+import { HistoriaTablaJuego, GrupoPeriodoJuego, MetalJuego, FamiliaJuego, ColombiaElementosJuego } from './JuegosTabla.tsx'
 import { CapasElectronesJuego, MoellerJuego, HundJuego, CuanticosJuego } from './JuegosElectrones.tsx'
 import { ParticulasJuego, NumeroAtomicoJuego, IonJuego, IsotopoJuego } from './JuegosAtomoDentro.tsx'
 import { AmenazaVulnerabilidadJuego, AmenazasColombiaJuego, ArmeroJuego, AntesDuranteDespuesJuego, PlanEscolarJuego } from './JuegosRiesgo.tsx'
@@ -464,6 +466,12 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'moeller-juego': MoellerJuego,
   'hund-juego': HundJuego,
   'cuanticos-juego': CuanticosJuego,
+  'tabla-periodica': TablaPeriodica,
+  'historia-tabla-juego': HistoriaTablaJuego,
+  'grupo-periodo-juego': GrupoPeriodoJuego,
+  'metal-juego': MetalJuego,
+  'familia-juego': FamiliaJuego,
+  'colombia-elementos-juego': ColombiaElementosJuego,
   'amenaza-vulnerabilidad-juego': AmenazaVulnerabilidadJuego,
   'amenazas-colombia-juego': AmenazasColombiaJuego,
   'armero-juego': ArmeroJuego,
