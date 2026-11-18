@@ -106,6 +106,8 @@ import { HidracidosJuego, OsoIcoJuego, AnionesJuego, SalesJuego } from './Juegos
 import { PartesEcuacionJuego, SintesisDescomposicionJuego, DesplazamientoJuego, TiposReaccionJuego, ExoEndoJuego } from './JuegosReacciones.tsx'
 import BalanzaEcuaciones from './BalanzaEcuaciones.tsx'
 import { BalanceadaJuego, CoeficienteJuego, OxidaReduceJuego } from './JuegosBalanceo.tsx'
+import FabricaFeS from './FabricaFeS.tsx'
+import { MasaCambiaJuego, ProporcionAguaJuego, CualLeyJuego } from './JuegosLeyes.tsx'
 import { IntraInterJuego, GeometriaJuego, MoleculaPolarJuego, FuerzaJuego, DisuelveJuego } from './JuegosFuerzas.tsx'
 import { OctetoJuego, TipoEnlaceJuego, PolarJuego, LewisJuego } from './JuegosEnlace.tsx'
 import { RadioJuego, IonizacionJuego, ElectronegatividadJuego, MetalicoJuego } from './JuegosPeriodicas.tsx'
@@ -530,6 +532,10 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'balanceada-juego': BalanceadaJuego,
   'coeficiente-juego': CoeficienteJuego,
   'oxida-reduce-juego': OxidaReduceJuego,
+  'fabrica-fes': FabricaFeS,
+  'masa-cambia-juego': MasaCambiaJuego,
+  'proporcion-agua-juego': ProporcionAguaJuego,
+  'cual-ley-juego': CualLeyJuego,
   'tipos-radiacion-juego': TiposRadiacionJuego,
   'vida-media-juego': VidaMediaJuego,
   'usos-nucleares-juego': UsosNuclearesJuego,

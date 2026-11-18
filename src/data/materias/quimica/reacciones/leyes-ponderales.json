@@ -1,0 +1,495 @@
+{
+  "id": "leyes-ponderales",
+  "materia": "quimica",
+  "area": "reacciones",
+  "titulo": "Leyes ponderales",
+  "subtema": "Las leyes de las masas en las reacciones: Lavoisier, Proust, Dalton y Richter",
+  "orden": 126,
+  "etiqueta": "6",
+  "vistas": [
+    "ruta"
+  ],
+  "tituloVista": "Ruta de las leyes ponderales",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Aplicar la ley de conservación de la masa a reacciones en sistemas cerrados y abiertos.",
+    "Usar la ley de las proporciones definidas para calcular masas que reaccionan.",
+    "Reconocer las proporciones múltiples en compuestos como CO y CO₂.",
+    "Relacionar las leyes ponderales con la teoría atómica y el mol."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con un texto de química de bachillerato y de historia de la química (Lavoisier 1789, Proust 1794–1799, Dalton 1803–1808, Richter 1792; proporciones 1:8 en el agua y 7:4 en el FeS)."
+  ],
+  "bloques": [
+    {
+      "id": "lavoisier",
+      "titulo": "Conservación de la masa (Lavoisier)",
+      "resumen": "En una reacción, la masa de los reactivos es igual a la de los productos.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "Antoine Lavoisier pesó con mucho cuidado los reactivos y los productos de muchas reacciones en recipientes cerrados y encontró que la masa total no cambia: «en la naturaleza nada se crea ni se destruye, todo se transforma». Es la ley de conservación de la masa (1789). Si la masa parece cambiar es porque el sistema está abierto: cuando la leña arde, la ceniza pesa menos porque el CO₂ y el vapor de agua se van al aire; cuando un clavo se oxida, pesa más porque tomó oxígeno del aire. Esta ley es la razón por la que las ecuaciones se balancean.",
+        "contexto": [
+          {
+            "titulo": "El padre de la química moderna",
+            "texto": "Lavoisier también le dio nombre al oxígeno y al hidrógeno y explicó la combustión. Murió en la guillotina en 1794, durante la Revolución francesa."
+          },
+          {
+            "titulo": "Marie-Anne Paulze",
+            "texto": "Su esposa trabajó con él: traducía artículos, dibujaba los aparatos y llevaba los registros del laboratorio."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Masa de los reactivos = masa de los productos."
+          ],
+          "media": [
+            "En un sistema abierto la masa parece cambiar porque entran o salen gases."
+          ],
+          "avanzada": [
+            "Ejemplo: 4 g de H₂ + 32 g de O₂ → 36 g de H₂O."
+          ]
+        },
+        "docente": {
+          "abrir": "Si quemo un papel, ¿la materia desaparece?",
+          "actividad": "Pesar una botella con vinagre y un globo con bicarbonato, mezclar sin destapar y volver a pesar; repetir con la botella abierta.",
+          "errores": [
+            "Pensar que en la combustión la materia desaparece.",
+            "Creer que el óxido «aparece de la nada»."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Pesa lo mismo?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Mezclas vinagre y bicarbonato en una botella tapada con un globo. Después de la espuma, ¿cuánto pesa todo?",
+            "opciones": [
+              "Lo mismo que antes",
+              "Menos, porque salió gas",
+              "Más, porque se formó espuma",
+              "No se puede saber"
+            ],
+            "correcta": 0,
+            "explicacion": "El gas quedó atrapado en el globo: nada salió ni entró."
+          }
+        },
+        {
+          "titulo": "Cerrado y abierto",
+          "visual": {
+            "tipo": "escena",
+            "id": "lp-lavoisier",
+            "fases": [
+              {
+                "id": "antes",
+                "nombre": "Antes",
+                "texto": "Vinagre y bicarbonato en una botella tapada: 250 g."
+              },
+              {
+                "id": "cerrado",
+                "nombre": "Sistema cerrado",
+                "texto": "Reaccionan, el globo se infla y la balanza sigue en 250 g."
+              },
+              {
+                "id": "abierto",
+                "nombre": "Sistema abierto",
+                "texto": "Sin tapa, el CO₂ se escapa y la balanza marca menos."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre el balanceo",
+            "tema": "balanceo-ecuaciones",
+            "bloque": "por-que"
+          }
+        }
+      ],
+      "juego": "masa-cambia-juego",
+      "preguntas": [
+        {
+          "id": "qp-la-1",
+          "enunciado": "Si 56 g de hierro reaccionan con 32 g de azufre, ¿cuánta masa de sulfuro de hierro se forma?",
+          "opciones": [
+            "88 g",
+            "24 g",
+            "56 g",
+            "32 g"
+          ],
+          "correcta": 0,
+          "explicacion": "56 + 32 = 88."
+        },
+        {
+          "id": "qp-la-2",
+          "enunciado": "¿Por qué la ceniza pesa menos que la leña?",
+          "opciones": [
+            "Porque los gases de la combustión se fueron al aire",
+            "Porque la materia se destruye",
+            "Porque el fuego pesa",
+            "Porque la leña estaba mojada"
+          ],
+          "correcta": 0,
+          "explicacion": "El sistema es abierto."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "proust",
+      "titulo": "Proporciones definidas (Proust)",
+      "resumen": "Un compuesto tiene siempre los mismos elementos en la misma proporción de masa.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "intermedio",
+      "requiere": [
+        "lavoisier"
+      ],
+      "ficha": {
+        "idea": "Joseph Proust (1799) analizó muestras de un mismo compuesto de distintos lugares y encontró que su composición era siempre la misma: es la ley de las proporciones definidas. El agua, venga del río, de la lluvia o del laboratorio, tiene 1 g de hidrógeno por cada 8 g de oxígeno. El sulfuro de hierro se forma con 7 g de hierro por cada 4 g de azufre. Si se pone más de un reactivo del que pide la proporción, el exceso sobra sin reaccionar. Esto es lo que diferencia un compuesto de una mezcla, que puede tener cualquier proporción.",
+        "contexto": [
+          {
+            "titulo": "Una discusión famosa",
+            "texto": "El francés Claude Berthollet pensaba que los compuestos podían tener composición variable. Proust le respondió con análisis cuidadosos durante años, y la mayoría de los químicos le dio la razón."
+          },
+          {
+            "titulo": "Porcentaje en masa",
+            "texto": "En el agua, 1 de cada 9 g es hidrógeno (≈ 11 %) y 8 de cada 9 g son oxígeno (≈ 89 %)."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Un compuesto siempre tiene la misma proporción de sus elementos."
+          ],
+          "media": [
+            "Agua: 1 g de H por 8 g de O. FeS: 7 g de Fe por 4 g de S. Lo que pasa de la proporción, sobra."
+          ],
+          "avanzada": [
+            "Composición porcentual = masa del elemento ÷ masa del compuesto × 100."
+          ]
+        },
+        "docente": {
+          "abrir": "¿El agua de la quebrada y la del laboratorio son la misma sustancia?",
+          "actividad": "Con la fábrica de sulfuro de hierro, predecir cuánto sobra en cinco mezclas distintas y comprobar.",
+          "errores": [
+            "Pensar que 10 g de Fe y 10 g de S dan 20 g de FeS.",
+            "Confundir la proporción en masa con la proporción en átomos."
+          ],
+          "minutos": 35
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "El agua de todas partes",
+          "visual": {
+            "tipo": "escena",
+            "id": "lp-proust",
+            "fases": [
+              {
+                "id": "rio",
+                "nombre": "Agua del río",
+                "texto": "9 g de agua: 1 g de H y 8 g de O."
+              },
+              {
+                "id": "lluvia",
+                "nombre": "Agua de lluvia",
+                "texto": "18 g de agua: 2 g de H y 16 g de O."
+              },
+              {
+                "id": "razon",
+                "nombre": "Siempre 1 : 8",
+                "texto": "La proporción no cambia: es un compuesto."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "La fábrica de sulfuro de hierro",
+          "visual": {
+            "tipo": "diagrama",
+            "id": "fabrica-fes"
+          }
+        },
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Si tienes 3 g de hidrógeno, ¿cuánto oxígeno necesitas para formar agua sin que sobre nada?",
+            "opciones": [
+              "24 g",
+              "8 g",
+              "3 g",
+              "11 g"
+            ],
+            "correcta": 0,
+            "explicacion": "3 × 8 = 24 g de O."
+          }
+        }
+      ],
+      "diagrama": "fabrica-fes",
+      "juego": "proporcion-agua-juego",
+      "preguntas": [
+        {
+          "id": "qp-pr-1",
+          "enunciado": "¿Qué dice la ley de Proust?",
+          "opciones": [
+            "Un compuesto tiene siempre la misma proporción de masa de sus elementos",
+            "La masa se conserva",
+            "Dos elementos pueden formar varios compuestos",
+            "Los gases se mezclan en cualquier proporción"
+          ],
+          "correcta": 0,
+          "explicacion": "Ley de las proporciones definidas."
+        },
+        {
+          "id": "qp-pr-2",
+          "enunciado": "Se mezclan 14 g de Fe con 10 g de S (proporción 7 : 4). ¿Qué pasa?",
+          "opciones": [
+            "Se forman 22 g de FeS y sobran 2 g de S",
+            "Se forman 24 g de FeS",
+            "Sobran 2 g de Fe",
+            "No reaccionan"
+          ],
+          "correcta": 0,
+          "explicacion": "14 g de Fe necesitan 8 g de S."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "dalton",
+      "titulo": "Proporciones múltiples (Dalton)",
+      "resumen": "Si dos elementos forman varios compuestos, las masas de uno que se unen a una masa fija del otro están en números enteros sencillos.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "intermedio",
+      "requiere": [
+        "proust"
+      ],
+      "ficha": {
+        "idea": "El carbono y el oxígeno forman dos compuestos: el monóxido (CO) y el dióxido (CO₂). En el CO, 12 g de carbono se unen a 16 g de oxígeno; en el CO₂, los mismos 12 g de carbono se unen a 32 g. La relación entre las masas de oxígeno es 16 : 32 = 1 : 2, una razón de números enteros sencillos. John Dalton (1803) enunció esta ley de las proporciones múltiples y la explicó con su teoría atómica: si la materia está hecha de átomos que se unen enteros, un compuesto puede tener 1 o 2 oxígenos por carbono, pero nunca 1,37. Las leyes ponderales fueron la evidencia de que los átomos existen y el camino para calcular sus masas relativas, que llevan al concepto de mol.",
+        "contexto": [
+          {
+            "titulo": "Otros ejemplos",
+            "texto": "Hierro y oxígeno: FeO y Fe₂O₃. Nitrógeno y oxígeno: N₂O, NO, NO₂, N₂O₃, N₂O₅. Hidrógeno y oxígeno: H₂O y H₂O₂."
+          },
+          {
+            "titulo": "De las masas a los átomos",
+            "texto": "Como el agua tiene 8 g de O por 1 g de H, y hay 2 H por cada O, un átomo de oxígeno debe pesar 16 veces lo que uno de hidrógeno."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Dos elementos pueden formar varios compuestos (CO y CO₂)."
+          ],
+          "media": [
+            "Con la misma masa de C, el oxígeno del CO y el del CO₂ están en razón 1 : 2."
+          ],
+          "avanzada": [
+            "Las leyes ponderales se explican porque los átomos se combinan enteros (teoría de Dalton)."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué el CO es venenoso y el CO₂ no tanto, si tienen los mismos elementos?",
+          "actividad": "Calcular la razón de masas de oxígeno en FeO y Fe₂O₃ para una misma masa de hierro.",
+          "errores": [
+            "Comparar las masas sin fijar la del otro elemento."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Carbono con uno o dos oxígenos",
+          "visual": {
+            "tipo": "escena",
+            "id": "lp-dalton",
+            "fases": [
+              {
+                "id": "co",
+                "nombre": "Monóxido de carbono",
+                "texto": "12 g de C con 16 g de O."
+              },
+              {
+                "id": "co2",
+                "nombre": "Dióxido de carbono",
+                "texto": "Los mismos 12 g de C con 32 g de O."
+              },
+              {
+                "id": "razon",
+                "nombre": "Razón 1 : 2",
+                "texto": "16 : 32 = 1 : 2, porque los átomos se unen enteros."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre el modelo de Dalton",
+            "tema": "modelos-atomicos"
+          }
+        },
+        {
+          "titulo": "Tres leyes",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "⚖️",
+                "titulo": "Lavoisier",
+                "texto": "La masa se conserva"
+              },
+              {
+                "icono": "📏",
+                "titulo": "Proust",
+                "texto": "Un compuesto: siempre la misma proporción"
+              },
+              {
+                "icono": "✖️",
+                "titulo": "Dalton",
+                "texto": "Varios compuestos: razones enteras"
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre el mol",
+            "tema": "el-mol"
+          }
+        }
+      ],
+      "juego": "cual-ley-juego",
+      "preguntas": [
+        {
+          "id": "qp-da-1",
+          "enunciado": "En el CO y el CO₂, para 12 g de carbono, ¿en qué razón están las masas de oxígeno?",
+          "opciones": [
+            "1 : 2",
+            "1 : 1",
+            "2 : 3",
+            "1 : 8"
+          ],
+          "correcta": 0,
+          "explicacion": "16 g y 32 g."
+        },
+        {
+          "id": "qp-da-2",
+          "enunciado": "¿Con qué idea explicó Dalton las leyes ponderales?",
+          "opciones": [
+            "La materia está hecha de átomos que se combinan enteros",
+            "La materia es continua",
+            "Los compuestos tienen composición variable",
+            "El fuego es una sustancia"
+          ],
+          "correcta": 0,
+          "explicacion": "Su teoría atómica."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "richter",
+      "titulo": "Proporciones recíprocas (Richter)",
+      "resumen": "Las masas de dos elementos que se unen a una misma masa de un tercero son las que se combinan entre sí (o múltiplos).",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "avanzado",
+      "requiere": [
+        "dalton"
+      ],
+      "ficha": {
+        "idea": "Jeremias Richter (1792) notó que si 1 g de hidrógeno se combina con 8 g de oxígeno (en el agua) y también con 3 g de carbono (en el metano, CH₄), entonces el oxígeno y el carbono se combinan entre sí en la razón 8 : 3, o en un múltiplo sencillo de ella. Y así es: en el CO₂, 12 g de carbono se unen a 32 g de oxígeno, que es 8 : 3. Esta ley de las proporciones recíprocas llevó a la idea de peso equivalente: la masa de un elemento que se combina con 1 g de hidrógeno o con 8 g de oxígeno. Los pesos equivalentes se usan todavía en la concentración normal de las soluciones.",
+        "contexto": [
+          {
+            "titulo": "Richter y la estequiometría",
+            "texto": "Fue Richter quien inventó la palabra «estequiometría», del griego stoicheion (elemento) y metron (medida)."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Si A se une con B y con C, entonces B y C se unen en la misma razón (o un múltiplo)."
+          ],
+          "media": [
+            "H : O = 1 : 8 y H : C = 1 : 3 → C : O = 3 : 8 (CO₂)."
+          ],
+          "avanzada": [
+            "Peso equivalente: masa que se combina con 1 g de H o con 8 g de O."
+          ]
+        },
+        "docente": {
+          "abrir": "Si sé con cuánto se une cada uno al hidrógeno, ¿puedo predecir cómo se unen entre ellos?",
+          "actividad": "Con datos de H₂O, CH₄ y CO₂, comprobar la ley de Richter en el tablero.",
+          "errores": [
+            "Esperar siempre la misma razón exacta y no aceptar los múltiplos."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Un triángulo de masas",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "💧",
+                "titulo": "H₂O",
+                "texto": "1 g de H con 8 g de O"
+              },
+              {
+                "icono": "🔥",
+                "titulo": "CH₄",
+                "texto": "1 g de H con 3 g de C"
+              },
+              {
+                "icono": "💨",
+                "titulo": "CO₂",
+                "texto": "3 g de C con 8 g de O"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Una palabra de Richter",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "📐",
+            "valor": "estequiometría",
+            "texto": "stoicheion (elemento) + metron (medida): la medida de los elementos."
+          },
+          "atajo": {
+            "texto": "Más sobre la estequiometría",
+            "tema": "estequiometria"
+          }
+        }
+      ],
+      "preguntas": [
+        {
+          "id": "qp-ri-1",
+          "enunciado": "Si 1 g de H se une con 8 g de O y con 3 g de C, ¿en qué razón se unen C y O en el CO₂?",
+          "opciones": [
+            "3 : 8",
+            "1 : 8",
+            "8 : 1",
+            "1 : 3"
+          ],
+          "correcta": 0,
+          "explicacion": "Ley de las proporciones recíprocas."
+        },
+        {
+          "id": "qp-ri-2",
+          "enunciado": "¿Qué palabra inventó Richter?",
+          "opciones": [
+            "Estequiometría",
+            "Átomo",
+            "Oxígeno",
+            "Mol"
+          ],
+          "correcta": 0,
+          "explicacion": "La medida de los elementos."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}
