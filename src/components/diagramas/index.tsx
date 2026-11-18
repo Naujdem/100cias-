@@ -83,6 +83,7 @@ import { EsMateriaJuego, QueCienciaJuego, QuimicaCampoJuego, LabSeguroJuego } fr
 import { MasaVolumenJuego, FlotaHundeJuego, QuePropiedadJuego, HierveJuego } from './JuegosPropiedades.tsx'
 import { EstadoJuego, CambioEstadoJuego, MesetaJuego } from './JuegosEstados.tsx'
 import ParticulasTemperatura from './ParticulasTemperatura.tsx'
+import { FisicoQuimicoJuego, SenalJuego as SenalQuimicaJuego, PropiedadFQJuego } from './JuegosCambios.tsx'
 import { AmenazaVulnerabilidadJuego, AmenazasColombiaJuego, ArmeroJuego, AntesDuranteDespuesJuego, PlanEscolarJuego } from './JuegosRiesgo.tsx'
 import RiesgoVereda from './RiesgoVereda.tsx'
 import { DesarrolloSostenibleJuego, OdsJuego, PraeJuego, ProyectoAulaJuego, ParticipacionJuego } from './JuegosSostenibilidad.tsx'
@@ -426,6 +427,9 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'cambio-estado-juego': CambioEstadoJuego,
   'meseta-juego': MesetaJuego,
   'particulas-temperatura': ParticulasTemperatura,
+  'fisico-quimico-juego': FisicoQuimicoJuego,
+  'senal-quimica-juego': SenalQuimicaJuego,
+  'propiedad-fq-juego': PropiedadFQJuego,
   'amenaza-vulnerabilidad-juego': AmenazaVulnerabilidadJuego,
   'amenazas-colombia-juego': AmenazasColombiaJuego,
   'armero-juego': ArmeroJuego,
