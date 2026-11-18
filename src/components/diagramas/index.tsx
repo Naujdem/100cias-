@@ -114,6 +114,8 @@ import PistonGas from './PistonGas.tsx'
 import OllaEbullicion from './OllaEbullicion.tsx'
 import LabSoluciones from './LabSoluciones.tsx'
 import PreparadorSoluciones from './PreparadorSoluciones.tsx'
+import ReactorColisiones from './ReactorColisiones.tsx'
+import { RapidaLentaJuego, MasRapidoJuego, ColisionJuego, ActivacionJuego, ConservarAlimentosJuego } from './JuegosCinetica.tsx'
 import { ConcentradaJuego, PorcentajeJuego, PpmJuego, MolaridadJuego, DilucionJuego, NormalidadJuego } from './JuegosConcentracion.tsx'
 import { SeDisuelveJuego, SaturacionJuego, FactoresSolubilidadJuego, CurvaJuego, ColoideJuego } from './JuegosSoluciones.tsx'
 import { EnlacePuenteJuego, TensionJuego, CalorAguaJuego, HieloJuego, EbullicionJuego, SolidoJuego } from './JuegosAguaLiquidos.tsx'
@@ -592,6 +594,12 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'molaridad-juego': MolaridadJuego,
   'dilucion-juego': DilucionJuego,
   'normalidad-juego': NormalidadJuego,
+  'reactor-colisiones': ReactorColisiones,
+  'rapida-lenta-juego': RapidaLentaJuego,
+  'mas-rapido-juego': MasRapidoJuego,
+  'colision-juego': ColisionJuego,
+  'activacion-juego': ActivacionJuego,
+  'conservar-alimentos-juego': ConservarAlimentosJuego,
   'tipos-radiacion-juego': TiposRadiacionJuego,
   'vida-media-juego': VidaMediaJuego,
   'usos-nucleares-juego': UsosNuclearesJuego,

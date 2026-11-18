@@ -51,6 +51,7 @@ import { EscenaBoyle, EscenaCharles, EscenaGayLussac, EscenaAvogadro, EscenaDalt
 import { EscenaAguaPuentes, EscenaTensionSuperficial, EscenaCalorEspecifico, EscenaHieloFlota, EscenaPresionVapor, EscenaSolidos } from './EscenasAgua2.tsx'
 import { EscenaDisolver, EscenaSaturacion, EscenaFactoresSolubilidad, EscenaCurvasSolubilidad, EscenaTiposMezcla } from './EscenasSoluciones.tsx'
 import { EscenaConcentracionColor, EscenaPpm, EscenaPrepararMolar, EscenaDilucion } from './EscenasConcentracion.tsx'
+import { EscenaVelocidadReaccion, EscenaFactoresVelocidad, EscenaColisiones, EscenaEnergiaActivacion, EscenaConservarAlimentos } from './EscenasCinetica.tsx'
 import { EscenaMolContar, EscenaMasaMolar, EscenaCaminoMol } from './EscenasMol.tsx'
 import { EscenaReceta, EscenaMasaMasa, EscenaLimite } from './EscenasEstequiometria.tsx'
 import { EscenaIntra, EscenaPolaridad, EscenaFuerzas, EscenaSoluble } from './EscenasFuerzas.tsx'
@@ -315,6 +316,11 @@ export const ESCENAS: Record<string, ComponentType<{ fase: string }>> = {
   'ppm-piscina': EscenaPpm,
   'preparar-molar': EscenaPrepararMolar,
   dilucion: EscenaDilucion,
+  'velocidad-reaccion': EscenaVelocidadReaccion,
+  'factores-velocidad': EscenaFactoresVelocidad,
+  colisiones: EscenaColisiones,
+  'energia-activacion': EscenaEnergiaActivacion,
+  'conservar-alimentos': EscenaConservarAlimentos,
   compostaje: EscenaCompostaje,
   riesgo: EscenaRiesgo,
   armero: EscenaArmero,

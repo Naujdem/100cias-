@@ -1,0 +1,570 @@
+{
+  "id": "cinetica",
+  "materia": "quimica",
+  "area": "soluciones",
+  "titulo": "Velocidad de reacción",
+  "subtema": "Factores, teoría de colisiones, energía de activación y catalizadores",
+  "orden": 136,
+  "etiqueta": "6",
+  "vistas": [
+    "ruta"
+  ],
+  "tituloVista": "Ruta de la velocidad de reacción",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Diferenciar reacciones rápidas y lentas y explicar qué es la velocidad de reacción.",
+    "Explicar cómo la temperatura, la superficie, la concentración y los catalizadores cambian la velocidad.",
+    "Explicar la velocidad de reacción con la teoría de colisiones y la energía de activación.",
+    "Relacionar la cinética con la conservación y la preparación de alimentos."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con un texto de química de bachillerato (regla aproximada de duplicar la velocidad cada 10 °C; catalasa de la papa; papaína)."
+  ],
+  "bloques": [
+    {
+      "id": "que-es-velocidad",
+      "titulo": "Reacciones rápidas y lentas",
+      "resumen": "La velocidad de reacción: cuánto producto se forma en cada unidad de tiempo.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "Algunas reacciones ocurren en un instante, como la pólvora de un volador o el fósforo que se enciende; otras tardan horas, como la fermentación del pan, o años, como el óxido de una reja. La velocidad de reacción dice qué tan rápido se gastan los reactivos o se forman los productos: por ejemplo, cuántos mililitros de gas salen por segundo de una pastilla efervescente. La rama de la química que la estudia se llama cinética química. Conocerla sirve para acelerar las reacciones que nos convienen, como cocinar, fabricar medicamentos o abonos, y para frenar las que nos perjudican, como la descomposición de los alimentos o la corrosión de los metales.",
+        "contexto": [
+          {
+            "titulo": "¿Cómo se mide?",
+            "texto": "Contando el gas que sale, viendo cómo cambia un color, pesando lo que queda o midiendo la concentración de un reactivo cada cierto tiempo."
+          },
+          {
+            "titulo": "Al principio va más rápido",
+            "texto": "Casi todas las reacciones empiezan rápido y se van frenando, porque cada vez quedan menos reactivos para chocar."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Hay reacciones rápidas (un fósforo) y lentas (el óxido).",
+            "La velocidad dice cuánto producto se forma en cada segundo."
+          ],
+          "media": [
+            "Velocidad de reacción = cambio de concentración / tiempo (mol/L·s)."
+          ],
+          "avanzada": [
+            "v = −Δ[reactivo]/Δt = Δ[producto]/Δt."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué el fósforo arde en un segundo y el machete tarda semanas en oxidarse, si las dos son reacciones con oxígeno?",
+          "actividad": "Medir cuánto tarda una pastilla efervescente en desaparecer en agua y graficar el gas o el tiempo.",
+          "errores": [
+            "Confundir la velocidad de una reacción con la cantidad de producto.",
+            "Creer que las reacciones lentas no son reacciones químicas."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Un instante o años",
+          "visual": {
+            "tipo": "escena",
+            "id": "velocidad-reaccion",
+            "fases": [
+              {
+                "id": "rapida",
+                "nombre": "Rápidas",
+                "texto": "El fósforo se enciende en un instante."
+              },
+              {
+                "id": "lenta",
+                "nombre": "Lentas",
+                "texto": "El machete se oxida en semanas."
+              },
+              {
+                "id": "medir",
+                "nombre": "Medir",
+                "texto": "Cuánto producto se forma en cada segundo."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre las señales del cambio químico",
+            "tema": "cambios-materia",
+            "bloque": "senales"
+          }
+        }
+      ],
+      "juego": "rapida-lenta-juego",
+      "preguntas": [
+        {
+          "id": "qm-ci-1",
+          "enunciado": "¿Qué mide la velocidad de reacción?",
+          "opciones": [
+            "Qué tan rápido se gastan los reactivos o se forman los productos",
+            "Cuánto pesan los productos",
+            "La temperatura de la reacción",
+            "El color de los productos"
+          ],
+          "correcta": 0,
+          "explicacion": "Cantidad por unidad de tiempo."
+        },
+        {
+          "id": "qm-ci-2",
+          "enunciado": "¿Cuál es una reacción lenta?",
+          "opciones": [
+            "El óxido de una reja",
+            "La explosión de la pólvora",
+            "Un fósforo que se enciende",
+            "Una pastilla efervescente"
+          ],
+          "correcta": 0,
+          "explicacion": "Tarda meses o años."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "factores",
+      "titulo": "Qué acelera una reacción",
+      "resumen": "Temperatura, superficie, concentración y catalizadores.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "requiere": [
+        "que-es-velocidad"
+      ],
+      "ficha": {
+        "idea": "La velocidad de una reacción se puede cambiar. Con más temperatura casi todas van más rápido: una pastilla efervescente se disuelve antes en agua caliente y la comida se cocina en el fogón. Con más superficie de contacto también: la leña en astillas prende antes que un tronco entero y una pastilla molida burbujea más rápido que una entera. Con más concentración de los reactivos, igual: el fuego se aviva al soplarle aire porque llega más oxígeno, y el vinagre puro reacciona más rápido con el bicarbonato que el vinagre con agua. Por último, un catalizador acelera la reacción sin gastarse: un trozo de papa hace que el agua oxigenada se descomponga en burbujas, porque tiene catalasa, una enzima. Las enzimas son los catalizadores de los seres vivos.",
+        "contexto": [
+          {
+            "titulo": "La regla del 10",
+            "texto": "Para muchas reacciones, subir la temperatura unos 10 °C hace que vayan más o menos el doble de rápido."
+          },
+          {
+            "titulo": "Polvo peligroso",
+            "texto": "En los molinos y las minas, el polvo de harina, de carbón o de azúcar puede explotar: tiene muchísima superficie en contacto con el aire."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Calor, pedacitos pequeños, más concentración y catalizadores aceleran las reacciones."
+          ],
+          "media": [
+            "Factores de la velocidad: temperatura, superficie de contacto, concentración, catalizadores (y naturaleza de los reactivos)."
+          ],
+          "avanzada": [
+            "En los gases, aumentar la presión aumenta la concentración y la velocidad."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué se rajan las astillas para prender el fogón de leña?",
+          "actividad": "Carreras con pastillas efervescentes: agua fría vs. caliente, entera vs. molida; y agua oxigenada con y sin un trozo de papa.",
+          "errores": [
+            "Creer que el catalizador se gasta en la reacción.",
+            "Pensar que agitar es un catalizador."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Cuatro factores",
+          "visual": {
+            "tipo": "escena",
+            "id": "factores-velocidad",
+            "fases": [
+              {
+                "id": "temperatura",
+                "nombre": "Temperatura",
+                "texto": "En caliente, más rápido."
+              },
+              {
+                "id": "superficie",
+                "nombre": "Superficie",
+                "texto": "Molida, más rápido."
+              },
+              {
+                "id": "concentracion",
+                "nombre": "Concentración",
+                "texto": "Más concentrada, más rápido."
+              },
+              {
+                "id": "catalizador",
+                "nombre": "Catalizador",
+                "texto": "La papa acelera sin gastarse."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre las enzimas",
+            "tema": "metabolismo-celular",
+            "bloque": "enzimas"
+          }
+        },
+        {
+          "titulo": "Reactor de colisiones",
+          "visual": {
+            "tipo": "diagrama",
+            "id": "reactor-colisiones"
+          }
+        }
+      ],
+      "diagrama": "reactor-colisiones",
+      "juego": "mas-rapido-juego",
+      "preguntas": [
+        {
+          "id": "qm-ci-3",
+          "enunciado": "¿Por qué la leña en astillas prende más rápido que un tronco?",
+          "opciones": [
+            "Porque tiene más superficie en contacto con el aire",
+            "Porque pesa más",
+            "Porque está más fría",
+            "Porque tiene catalizador"
+          ],
+          "correcta": 0,
+          "explicacion": "Más superficie de contacto."
+        },
+        {
+          "id": "qm-ci-4",
+          "enunciado": "¿Qué es un catalizador?",
+          "opciones": [
+            "Una sustancia que acelera una reacción sin gastarse",
+            "Un reactivo que se gasta muy rápido",
+            "Un producto de la reacción",
+            "Una sustancia que frena siempre las reacciones"
+          ],
+          "correcta": 0,
+          "explicacion": "Como las enzimas."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "colisiones",
+      "titulo": "Teoría de colisiones",
+      "resumen": "Para reaccionar, las partículas deben chocar con energía suficiente y bien orientadas.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "intermedio",
+      "requiere": [
+        "factores"
+      ],
+      "ficha": {
+        "idea": "¿Por qué funcionan esos factores? La teoría de colisiones lo explica: para que dos partículas reaccionen tienen que chocar, y no cualquier choque sirve. Deben chocar con energía suficiente para romper los enlaces viejos, y con la orientación correcta, es decir, por las partes que van a reaccionar. Esos son los choques efectivos, que son solo una pequeña parte de todos los choques. Con esa idea se entienden los factores: a más concentración, más partículas y más choques; a más superficie, más partículas expuestas que pueden chocar; a más temperatura, las partículas van más rápido, chocan más y, sobre todo, con más fuerza, así que más choques alcanzan la energía necesaria.",
+        "contexto": [
+          {
+            "titulo": "¿Cuántos choques?",
+            "texto": "En un gas, cada molécula choca miles de millones de veces por segundo. Si todos los choques sirvieran, todas las reacciones serían explosiones."
+          },
+          {
+            "titulo": "El efecto de la temperatura",
+            "texto": "Calentar no solo aumenta el número de choques: hace que muchos más choques sean lo bastante fuertes. Por eso pesa tanto."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Para reaccionar, las partículas tienen que chocar con fuerza."
+          ],
+          "media": [
+            "Choque efectivo: con energía suficiente y orientación adecuada.",
+            "Más choques efectivos por segundo → reacción más rápida."
+          ],
+          "avanzada": [
+            "La fracción de choques con energía suficiente crece mucho con la temperatura (distribución de Maxwell-Boltzmann)."
+          ]
+        },
+        "docente": {
+          "abrir": "Si las moléculas chocan miles de millones de veces por segundo, ¿por qué no explota todo?",
+          "actividad": "Usar el reactor de colisiones para comparar cuántos choques terminan en reacción a 200 K y a 600 K.",
+          "errores": [
+            "Creer que todo choque produce reacción.",
+            "Pensar que la temperatura solo aumenta el número de choques."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Cuál choque sirve?",
+          "visual": {
+            "tipo": "escena",
+            "id": "colisiones",
+            "fases": [
+              {
+                "id": "debil",
+                "nombre": "Choque débil",
+                "texto": "Rebotan y no pasa nada."
+              },
+              {
+                "id": "orientacion",
+                "nombre": "Mal orientado",
+                "texto": "Chocan por el lado equivocado."
+              },
+              {
+                "id": "efectivo",
+                "nombre": "Choque efectivo",
+                "texto": "Con energía y bien orientado: reaccionan."
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "colision-juego",
+      "preguntas": [
+        {
+          "id": "qm-ci-5",
+          "enunciado": "¿Qué se necesita para que un choque produzca reacción?",
+          "opciones": [
+            "Energía suficiente y la orientación correcta",
+            "Solo que las partículas se toquen",
+            "Que las partículas sean del mismo color",
+            "Que haya luz"
+          ],
+          "correcta": 0,
+          "explicacion": "Es un choque efectivo."
+        },
+        {
+          "id": "qm-ci-6",
+          "enunciado": "Según la teoría de colisiones, ¿por qué más concentración acelera la reacción?",
+          "opciones": [
+            "Porque hay más partículas y más choques",
+            "Porque las partículas son más grandes",
+            "Porque baja la temperatura",
+            "Porque los productos se van"
+          ],
+          "correcta": 0,
+          "explicacion": "Más choques por segundo."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "energia-activacion",
+      "titulo": "Energía de activación",
+      "resumen": "La «colina» de energía que hay que superar; el catalizador la baja.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "avanzado",
+      "requiere": [
+        "colisiones"
+      ],
+      "ficha": {
+        "idea": "La energía mínima que necesita un choque para producir reacción se llama energía de activación (Ea). Se dibuja como una colina en un diagrama de energía: los reactivos tienen que subirla para convertirse en productos. Si la colina es alta, pocos choques la superan y la reacción es lenta; si es baja, muchos y es rápida. Por eso la madera no arde sola aunque esté rodeada de oxígeno: necesita la chispa de un fósforo para superar la colina, y después el calor que libera la reacción mantiene el fuego. Un catalizador abre otro camino con una colina más baja, sin cambiar la energía de los reactivos ni la de los productos. Si los productos quedan más abajo que los reactivos, la reacción libera energía (exotérmica); si quedan más arriba, la absorbe (endotérmica).",
+        "contexto": [
+          {
+            "titulo": "Las enzimas",
+            "texto": "Bajan tanto la energía de activación que reacciones que tardarían años ocurren en milésimas de segundo a 37 °C."
+          },
+          {
+            "titulo": "El convertidor catalítico",
+            "texto": "Los carros llevan platino, paladio y rodio, que ayudan a convertir el monóxido de carbono y otros gases tóxicos en CO₂, N₂ y agua."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Las reacciones necesitan un «empujón» de energía para empezar."
+          ],
+          "media": [
+            "Energía de activación: energía mínima para que un choque produzca reacción.",
+            "El catalizador baja la energía de activación."
+          ],
+          "avanzada": [
+            "El catalizador no cambia ΔH ni el equilibrio: solo hace que se alcance más rápido."
+          ]
+        },
+        "docente": {
+          "abrir": "Si la leña arde con el oxígeno del aire, ¿por qué los árboles no se encienden solos?",
+          "actividad": "Dibujar el diagrama de energía de la combustión de la leña, con y sin fósforo, y el de cocinar un huevo.",
+          "errores": [
+            "Creer que el catalizador hace exotérmica una reacción.",
+            "Confundir la energía de activación con el calor que se libera."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "La colina de energía",
+          "visual": {
+            "tipo": "escena",
+            "id": "energia-activacion",
+            "fases": [
+              {
+                "id": "colina",
+                "nombre": "La colina",
+                "texto": "Hay que superar la energía de activación."
+              },
+              {
+                "id": "catalizador",
+                "nombre": "Con catalizador",
+                "texto": "Un camino más bajito."
+              },
+              {
+                "id": "endo",
+                "nombre": "Endotérmica",
+                "texto": "Los productos quedan con más energía."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre reacciones exotérmicas y endotérmicas",
+            "tema": "reacciones-ecuaciones",
+            "bloque": "energia"
+          }
+        }
+      ],
+      "juego": "activacion-juego",
+      "preguntas": [
+        {
+          "id": "qm-ci-7",
+          "enunciado": "¿Qué hace un catalizador en el diagrama de energía?",
+          "opciones": [
+            "Baja la energía de activación",
+            "Sube la energía de los productos",
+            "Cambia los reactivos",
+            "Vuelve exotérmica la reacción"
+          ],
+          "correcta": 0,
+          "explicacion": "Abre un camino con una colina más baja."
+        },
+        {
+          "id": "qm-ci-8",
+          "enunciado": "¿Por qué hace falta un fósforo para prender la leña?",
+          "opciones": [
+            "Para superar la energía de activación",
+            "Porque la leña no tiene energía",
+            "Para darle oxígeno",
+            "Para que sea endotérmica"
+          ],
+          "correcta": 0,
+          "explicacion": "Después el calor de la reacción mantiene el fuego."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "cocina",
+      "titulo": "Frenar y acelerar en la cocina",
+      "resumen": "Conservar alimentos es frenar reacciones; cocinar y fermentar, acelerarlas.",
+      "anio": 5,
+      "etiqueta": "Paso 5",
+      "nivel": "basico",
+      "requiere": [
+        "factores"
+      ],
+      "ficha": {
+        "idea": "En la cocina se controla la velocidad de las reacciones todo el tiempo. Para que la comida dure se frenan las reacciones que la dañan, muchas de ellas hechas por las enzimas de los microbios: la nevera y el congelador bajan la temperatura; la sal, el azúcar y el secado al sol les quitan el agua a los microbios (así se hacen la carne salada y los bocadillos); el vinagre y el limón cambian la acidez, y empacar al vacío quita el oxígeno. Para cocinar se hace lo contrario: se sube la temperatura, se pica en trozos pequeños (más superficie) o se usan catalizadores biológicos, como la levadura que fermenta la masa del pan o la papaína de la papaya que ablanda la carne.",
+        "contexto": [
+          {
+            "titulo": "El aguacate que se pone negro",
+            "texto": "Una enzima del aguacate reacciona con el oxígeno del aire. El limón lo frena porque esa enzima trabaja mal en un medio ácido."
+          },
+          {
+            "titulo": "Madurar fruta",
+            "texto": "Los bananos maduran más rápido en una bolsa cerrada con un aguacate o una manzana: sueltan etileno, un gas que acelera la maduración."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "La nevera, la sal y el vinagre ayudan a conservar la comida porque frenan reacciones.",
+            "Cocinar, picar y la levadura aceleran reacciones."
+          ],
+          "media": [
+            "Conservar alimentos: bajar la temperatura, quitar el agua o el oxígeno, cambiar la acidez."
+          ],
+          "avanzada": [
+            "Muchos conservantes actúan como inhibidores de enzimas."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué la carne dura más en la nevera, y aún más si está salada?",
+          "actividad": "Comparar durante una semana rodajas de banano en la nevera, al aire, con limón y en bolsa cerrada.",
+          "errores": [
+            "Creer que el frío mata a los microbios (solo los frena).",
+            "Pensar que conservar alimentos no tiene que ver con la química."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Trucos de cocina",
+          "visual": {
+            "tipo": "escena",
+            "id": "conservar-alimentos",
+            "fases": [
+              {
+                "id": "nevera",
+                "nombre": "La nevera",
+                "texto": "El frío frena las reacciones."
+              },
+              {
+                "id": "sal",
+                "nombre": "La sal",
+                "texto": "Sin agua, los microbios van lentísimo."
+              },
+              {
+                "id": "papaya",
+                "nombre": "La papaya",
+                "texto": "Sus enzimas ablandan la carne."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Frenar o acelerar",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "🛑",
+              "titulo": "Frenar",
+              "puntos": [
+                "Nevera y congelador",
+                "Sal, azúcar, secado",
+                "Vinagre, limón, vacío"
+              ]
+            },
+            "der": {
+              "icono": "🚀",
+              "titulo": "Acelerar",
+              "puntos": [
+                "Fuego y olla a presión",
+                "Picar en trozos",
+                "Levadura, papaya"
+              ]
+            }
+          }
+        }
+      ],
+      "juego": "conservar-alimentos-juego",
+      "preguntas": [
+        {
+          "id": "qm-ci-9",
+          "enunciado": "¿Por qué la comida dura más en la nevera?",
+          "opciones": [
+            "Porque el frío frena las reacciones que la dañan",
+            "Porque el frío mata a todos los microbios",
+            "Porque la nevera no tiene oxígeno",
+            "Porque la luz está apagada"
+          ],
+          "correcta": 0,
+          "explicacion": "Menos temperatura, reacciones más lentas."
+        },
+        {
+          "id": "qm-ci-10",
+          "enunciado": "La levadura en la masa del pan funciona como…",
+          "opciones": [
+            "Un catalizador biológico que acelera la fermentación",
+            "Un conservante",
+            "Un solvente",
+            "Un freno de las reacciones"
+          ],
+          "correcta": 0,
+          "explicacion": "Sus enzimas fermentan el azúcar."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}
