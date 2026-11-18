@@ -409,3 +409,9 @@ Hooke usa la reconstrucción de Rita Greer (2004, Free Art License, Wikimedia Co
 - Tema 7 «Biodiversidad» (`ecosistemas/biodiversidad.json`, orden 37, 4 pasos): niveles (genes, especies, ecosistemas), Colombia megadiversa (aves, orquídeas, endémicas), amenazas y conservar (9°; Cueva de los Guácharos en el Huila). Escenas en `EscenasBiodiversidad.tsx`; juegos en `JuegosBiodiversidad.tsx`.
 - Tema 8 «Territorio y saberes» (`ecosistemas/territorio-saberes.json`, orden 38, 4 pasos): el territorio (lugar, relaciones, memoria), leer las señales del año (calendario con dos temporadas de lluvia), chagra/tul/huerta (policultivo) y diálogo de saberes (9°: pedir permiso, escuchar, reconocer, devolver). Contenido general, pensado para que cada docente lo complete con su comunidad. Escenas en `EscenasTerritorio.tsx`; juegos en `JuegosTerritorio.tsx`.
 - Con esto el área 3 tiene sus 8 temas (pendiente: revisión docente).
+
+## Área 4 · Evolución biológica (aprobada el 18 nov)
+- PLAN-AREA-4.md: ruta de 8 temas aprobada.
+- Tema 1 «Historia del pensamiento evolutivo» hecho como muestra: `evolucion/historia-evolucion.json` (orden 41), línea de tiempo con fichas emergentes (misma excepción que las historias de la teoría celular y la genética). Ocho hitos: Linneo (1735), Lamarck (1809), Cuvier (1812, 9°), Lyell (1830, 9°), Beagle (1835), Darwin y Wallace (1859), síntesis moderna (1942, 11°) y equilibrio puntuado (1972, 11°).
+- Escenas en `escenas/EscenasEvolucion.tsx` (`ev-linneo`, `ev-lamarck`, `ev-cuvier`, `ev-lyell`, `ev-beagle`, `ev-seleccion`, `ev-sintesis`, `ev-ritmos`); juegos en `diagramas/JuegosHistoriaEvolucion.tsx`.
+- Pendiente: atajos desde Darwin y Wallace a «Selección natural» (tema 3) y desde Linneo a «Clasificación» (tema 7) cuando existan. Temas 2–8 anunciados en PROXIMOS.

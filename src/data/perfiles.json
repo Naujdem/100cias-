@@ -150,6 +150,12 @@
         "territorio",
         "senales",
         "policultivo"
+      ],
+      "historia-evolucion": [
+        "linneo",
+        "lamarck",
+        "beagle",
+        "darwin-wallace"
       ]
     },
     "nivelDibujo": "basico",
@@ -180,7 +186,8 @@
       "poblaciones": "Tamaño y densidad de una población.",
       "sucesion-ecologica": "Sucesión primaria y secundaria.",
       "biodiversidad": "Qué es la biodiversidad, Colombia megadiversa y sus amenazas.",
-      "territorio-saberes": "Territorio, el ritmo del año y el policultivo."
+      "territorio-saberes": "Territorio, el ritmo del año y el policultivo.",
+      "historia-evolucion": "Cuatro hitos: Linneo, Lamarck, el viaje del Beagle y Darwin y Wallace."
     }
   },
   {
@@ -378,6 +385,14 @@
         "senales",
         "policultivo",
         "dialogo"
+      ],
+      "historia-evolucion": [
+        "linneo",
+        "lamarck",
+        "cuvier",
+        "lyell",
+        "beagle",
+        "darwin-wallace"
       ]
     },
     "nivelDibujo": "intermedio",
@@ -408,7 +423,8 @@
       "poblaciones": "Suma las curvas J y S y el ciclo depredador–presa con simulador.",
       "sucesion-ecologica": "Suma perturbaciones y restauración ecológica.",
       "biodiversidad": "Suma las formas de conservar.",
-      "territorio-saberes": "Suma el diálogo de saberes."
+      "territorio-saberes": "Suma el diálogo de saberes.",
+      "historia-evolucion": "Seis hitos: suma a Cuvier y Lyell."
     }
   },
   {
@@ -627,6 +643,16 @@
         "senales",
         "policultivo",
         "dialogo"
+      ],
+      "historia-evolucion": [
+        "linneo",
+        "lamarck",
+        "cuvier",
+        "lyell",
+        "beagle",
+        "darwin-wallace",
+        "sintesis",
+        "equilibrio-puntuado"
       ]
     },
     "nivelDibujo": "avanzado",
@@ -657,7 +683,8 @@
       "poblaciones": "Los tres pasos, con captura y recaptura.",
       "sucesion-ecologica": "Los tres pasos completos.",
       "biodiversidad": "Los cuatro pasos completos.",
-      "territorio-saberes": "Los cuatro pasos completos."
+      "territorio-saberes": "Los cuatro pasos completos.",
+      "historia-evolucion": "Los ocho hitos: suma la síntesis moderna y el equilibrio puntuado."
     }
   }
 ]

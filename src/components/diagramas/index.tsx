@@ -33,6 +33,7 @@ import SimuladorPoblaciones from './SimuladorPoblaciones.tsx'
 import { DensidadJuego, CrecimientoJuego, DepredadorPresaJuego } from './JuegosPoblaciones.tsx'
 import { SucesionPrimariaJuego, SucesionSecundariaJuego, PerturbacionesJuego } from './JuegosSucesion.tsx'
 import { BiodiversidadNivelesJuego, MegadiversaJuego, AmenazasJuego, ConservarJuego } from './JuegosBiodiversidad.tsx'
+import { LinneoJuego, LamarckJuego, CuvierJuego, LyellJuego, BeagleJuego, DarwinWallaceJuego, SintesisJuego, RitmosJuego } from './JuegosHistoriaEvolucion.tsx'
 import { TerritorioJuego, CalendarioJuego, PolicultivoJuego, DialogoJuego } from './JuegosTerritorio.tsx'
 import { ProductoresJuego, CadenaJuego, RedJuego, PiramideJuego } from './JuegosEnergia.tsx'
 import { BiotecQueJuego, InsulinaJuego, PcrJuego, TransgenicoJuego, EdicionJuego, DebateJuego } from './JuegosBiotec.tsx'
@@ -295,4 +296,12 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'division-celular': DivisionCelular,
   'tejido-planta': () => <TejidosCelulas inicial="planta" />,
   'tejido-animal': () => <TejidosCelulas inicial="animal" />,
+  'linneo-juego': LinneoJuego,
+  'lamarck-juego': LamarckJuego,
+  'cuvier-juego': CuvierJuego,
+  'lyell-juego': LyellJuego,
+  'beagle-juego': BeagleJuego,
+  'darwin-wallace-juego': DarwinWallaceJuego,
+  'sintesis-juego': SintesisJuego,
+  'ritmos-juego': RitmosJuego,
 }
