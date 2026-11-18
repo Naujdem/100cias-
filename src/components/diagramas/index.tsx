@@ -92,6 +92,8 @@ import LaminaOro from './LaminaOro.tsx'
 import ArmaAtomo from './ArmaAtomo.tsx'
 import LlenaOrbitales from './LlenaOrbitales.tsx'
 import TablaPeriodica from './TablaPeriodica.tsx'
+import MapaCalor from './MapaCalor.tsx'
+import { RadioJuego, IonizacionJuego, ElectronegatividadJuego, MetalicoJuego } from './JuegosPeriodicas.tsx'
 import { HistoriaTablaJuego, GrupoPeriodoJuego, MetalJuego, FamiliaJuego, ColombiaElementosJuego } from './JuegosTabla.tsx'
 import { CapasElectronesJuego, MoellerJuego, HundJuego, CuanticosJuego } from './JuegosElectrones.tsx'
 import { ParticulasJuego, NumeroAtomicoJuego, IonJuego, IsotopoJuego } from './JuegosAtomoDentro.tsx'
@@ -472,6 +474,11 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'metal-juego': MetalJuego,
   'familia-juego': FamiliaJuego,
   'colombia-elementos-juego': ColombiaElementosJuego,
+  'mapa-calor': MapaCalor,
+  'radio-juego': RadioJuego,
+  'ionizacion-juego': IonizacionJuego,
+  'electroneg-juego': ElectronegatividadJuego,
+  'metalico-juego': MetalicoJuego,
   'amenaza-vulnerabilidad-juego': AmenazaVulnerabilidadJuego,
   'amenazas-colombia-juego': AmenazasColombiaJuego,
   'armero-juego': ArmeroJuego,
