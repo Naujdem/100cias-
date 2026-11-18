@@ -75,13 +75,38 @@ Grados con las casillas de siempre (6°, 9°, 11°).
    exceso (9°); rendimiento y pureza (11°). Explora: reactivo límite como «receta» (arepas o sánduches → una
    reacción real).
 
-## Áreas 4 y 5 (ruta detallada cuando se empiecen)
+## Área 4 · Gases, soluciones y equilibrio (ruta aprobada el 18 nov 2026)
 
-- **Área 4 · Gases, soluciones y equilibrio:** teoría cinética, leyes de los gases (Boyle, Charles,
-  Gay-Lussac, combinada, Dalton, Avogadro, ideal, Graham), estados líquido y sólido, soluciones y concentración
-  (%m/m, %V/V, %m/V, ppm, M, m, N, fracción molar), coloides, cinética, equilibrio, ácidos y bases, pH,
-  neutralización y titulación. Interactivos: pistón con partículas, laboratorio de soluciones, escala de pH
-  casera.
+Grados con las casillas de siempre (6°, 9°, 11°). Ids ya usados como atajo desde el área 3: `leyes-gases`,
+`equilibrio-quimico`, `acidos-bases`.
+
+1. **Teoría cinética y propiedades de los gases** (`gases-teoria`) — partículas en movimiento; presión, volumen y
+   temperatura; escala Kelvin; unidades de presión (atm, mmHg, kPa); presión atmosférica según la altura (Neiva,
+   Bogotá, Nevado del Huila). Explora: caja de partículas que se aceleran o frenan con la temperatura.
+2. **Leyes de los gases** (`leyes-gases`) — Boyle, Charles, Gay-Lussac y combinada (jeringa, globo, llanta, olla a
+   presión); Avogadro (9°); gas ideal PV = nRT, presiones parciales de Dalton y difusión de Graham (11°).
+   Explora: pistón con partículas (se cambia P, V o T y se ve la respuesta).
+3. **El agua, los líquidos y los sólidos** (`agua-liquidos`) — aquí van a fondo las propiedades del agua (puentes de
+   hidrógeno, calor específico, tensión superficial, el hielo flota); presión de vapor y ebullición (atajo a
+   «hervir en la altura»); sólidos cristalinos y amorfos (9°).
+4. **Soluciones** (`soluciones`) — soluto y solvente; saturada, insaturada y sobresaturada; factores de la
+   solubilidad; curvas de solubilidad (9°); coloides y suspensiones con atajo a Clasificación de la materia.
+   Explora: laboratorio de soluciones (sal o azúcar en agua, con temperatura).
+5. **Concentración de las soluciones** (`concentracion`) — %m/m, %V/V, %m/V y ppm (suero casero, agua de panela,
+   alcohol antiséptico, cloro del agua potable); molaridad, molalidad y diluciones C₁V₁ = C₂V₂ (9°); normalidad y
+   fracción molar (11°). Explora: preparador de soluciones (gramos y volumen → todas las concentraciones).
+6. **Velocidad de reacción** (`cinetica`) — temperatura, concentración, superficie y catalizadores (atajo a las
+   enzimas en Biología); teoría de colisiones (9°); energía de activación (11°). Juego: ¿más rápido o más lento?
+7. **Equilibrio químico** (`equilibrio-quimico`) — reacciones reversibles y equilibrio dinámico (9°); principio de
+   Le Chatelier; constante Kc (11°). Explora: balancín de Le Chatelier.
+8. **Ácidos, bases y pH** (`acidos-bases`) — Arrhenius, escala de pH, indicadores caseros (repollo morado), pH del
+   suelo y encalado; fuertes y débiles (9°); Brønsted-Lowry, neutralización y titulación (11°). Explora: escala de
+   pH casera (limón, vinagre, café, leche, agua, bicarbonato, jabón, cal, soda).
+9. **(Opcional, 11°) Propiedades coligativas** (`coligativas`) — descenso crioscópico, ascenso ebulloscópico y
+   ósmosis (atajo a la ósmosis de Biología).
+
+## Área 5 (ruta detallada cuando se empiece)
+
 - **Área 5 · Química orgánica:** el carbono e hibridación, grupos funcionales, hidrocarburos y nomenclatura,
   aromáticos y halogenuros, oxigenados (alcoholes, fenoles, aldehídos, cetonas, éteres, ácidos carboxílicos,
   ésteres), nitrogenados (aminas, amidas, nitrilos). Interactivos: constructor de cadenas que nombra la
