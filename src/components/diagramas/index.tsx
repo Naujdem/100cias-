@@ -81,6 +81,8 @@ import { ResiduosJuego, LasRJuego, SepararJuego, CompostajeJuego, EconomiaCircul
 import Canecas from './Canecas.tsx'
 import { EsMateriaJuego, QueCienciaJuego, QuimicaCampoJuego, LabSeguroJuego } from './JuegosQueEsQuimica.tsx'
 import { MasaVolumenJuego, FlotaHundeJuego, QuePropiedadJuego, HierveJuego } from './JuegosPropiedades.tsx'
+import { EstadoJuego, CambioEstadoJuego, MesetaJuego } from './JuegosEstados.tsx'
+import ParticulasTemperatura from './ParticulasTemperatura.tsx'
 import { AmenazaVulnerabilidadJuego, AmenazasColombiaJuego, ArmeroJuego, AntesDuranteDespuesJuego, PlanEscolarJuego } from './JuegosRiesgo.tsx'
 import RiesgoVereda from './RiesgoVereda.tsx'
 import { DesarrolloSostenibleJuego, OdsJuego, PraeJuego, ProyectoAulaJuego, ParticipacionJuego } from './JuegosSostenibilidad.tsx'
@@ -420,6 +422,10 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'flota-hunde-juego': FlotaHundeJuego,
   'que-propiedad-juego': QuePropiedadJuego,
   'hierve-juego': HierveJuego,
+  'estado-juego': EstadoJuego,
+  'cambio-estado-juego': CambioEstadoJuego,
+  'meseta-juego': MesetaJuego,
+  'particulas-temperatura': ParticulasTemperatura,
   'amenaza-vulnerabilidad-juego': AmenazaVulnerabilidadJuego,
   'amenazas-colombia-juego': AmenazasColombiaJuego,
   'armero-juego': ArmeroJuego,
