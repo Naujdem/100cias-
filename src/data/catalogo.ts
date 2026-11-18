@@ -48,7 +48,6 @@ export const PROXIMOS: Record<string, { etiqueta: string; nombre: string }[]> = 
   reacciones: [
   ],
   soluciones: [
-    { etiqueta: '4', nombre: 'Soluciones' },
     { etiqueta: '5', nombre: 'Concentración de las soluciones' },
     { etiqueta: '6', nombre: 'Velocidad de reacción' },
     { etiqueta: '7', nombre: 'Equilibrio químico' },
