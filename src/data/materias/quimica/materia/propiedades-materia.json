@@ -1,0 +1,366 @@
+{
+  "id": "propiedades-materia",
+  "materia": "quimica",
+  "area": "materia",
+  "titulo": "Propiedades de la materia",
+  "subtema": "Cómo reconocer y medir los materiales",
+  "orden": 102,
+  "etiqueta": "2",
+  "vistas": ["ruta"],
+  "tituloVista": "Ruta de las propiedades",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Medir la masa y el volumen de un objeto.",
+    "Calcular e interpretar la densidad.",
+    "Reconocer propiedades específicas: solubilidad, viscosidad, dureza, conductividad.",
+    "Relacionar el punto de ebullición con la presión y la altura."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar densidades y puntos de ebullición con una tabla de referencia (p. ej., CRC Handbook) y el plan curricular de Ciencias Naturales 2025."
+  ],
+  "bloques": [
+    {
+      "id": "generales",
+      "titulo": "Masa y volumen",
+      "resumen": "Toda la materia tiene masa y volumen, y se pueden medir.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "Las propiedades generales las tiene toda la materia: masa y volumen. La masa es la cantidad de materia de un cuerpo; se mide con la balanza en gramos (g) o kilogramos (kg). El volumen es el espacio que ocupa; en los líquidos se mide con una probeta o un recipiente graduado en mililitros (mL) o litros (L). El volumen de un sólido irregular, como una piedra, se mide por desplazamiento: se mete en una probeta con agua y se resta el nivel final menos el inicial. Como estas propiedades no sirven para saber qué material es (un kilo de algodón y uno de hierro tienen la misma masa), se usan también las propiedades específicas.",
+        "contexto": [
+          { "titulo": "Masa y peso no son lo mismo", "texto": "La masa no cambia; el peso es la fuerza con que la gravedad atrae esa masa. En la Luna pesarías menos, pero tendrías la misma masa." },
+          { "titulo": "1 mL = 1 cm³", "texto": "Un mililitro ocupa lo mismo que un cubito de un centímetro de lado." }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Masa: cantidad de materia (g, kg). Se mide con balanza.",
+            "Volumen: espacio que ocupa (mL, L, cm³). Se mide con probeta."
+          ],
+          "media": [
+            "Propiedades generales: las tiene toda la materia, no sirven para identificarla.",
+            "Volumen de un sólido irregular: por desplazamiento de agua."
+          ],
+          "avanzada": [
+            "Propiedades extensivas (dependen de la cantidad: masa, volumen) e intensivas (no dependen: densidad, punto de ebullición)."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Qué pesa más: un kilo de algodón o un kilo de hierro?",
+          "actividad": "Medir el volumen de piedras de distinto tamaño por desplazamiento en un vaso medidor de cocina.",
+          "errores": [
+            "Confundir masa con peso.",
+            "Creer que lo más grande siempre tiene más masa."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Qué tiene más masa: un kilo de algodón o un kilo de hierro?",
+            "opciones": ["Los dos igual", "El hierro", "El algodón", "Depende del día"],
+            "correcta": 0,
+            "explicacion": "Los dos tienen 1 kg; el algodón ocupa mucho más volumen."
+          }
+        },
+        {
+          "titulo": "Medir la materia",
+          "visual": {
+            "tipo": "escena",
+            "id": "medir-materia",
+            "fases": [
+              { "id": "balanza", "nombre": "Masa", "texto": "La balanza dice cuánta materia hay." },
+              { "id": "probeta", "nombre": "Volumen", "texto": "La probeta dice cuánto espacio ocupa el líquido." },
+              { "id": "piedra", "nombre": "Desplazamiento", "texto": "El agua que sube es el volumen de la piedra.", "nota": "1 mL = 1 cm³" }
+            ]
+          }
+        },
+        {
+          "titulo": "Extensivas e intensivas",
+          "nivel": "avanzado",
+          "visual": {
+            "tipo": "compara",
+            "izq": { "titulo": "Extensivas", "puntos": ["Dependen de la cantidad", "Masa, volumen"] },
+            "der": { "titulo": "Intensivas", "puntos": ["No dependen de la cantidad", "Densidad, punto de ebullición"] }
+          }
+        }
+      ],
+      "juego": "masa-volumen-juego",
+      "preguntas": [
+        {
+          "id": "qm-pm-1",
+          "enunciado": "¿Con qué instrumento se mide la masa?",
+          "opciones": ["Con la balanza", "Con la probeta", "Con el termómetro", "Con la regla"],
+          "correcta": 0,
+          "explicacion": "La balanza mide masa en gramos o kilogramos."
+        },
+        {
+          "id": "qm-pm-2",
+          "enunciado": "En una probeta hay 40 mL de agua; al meter una piedra sube a 55 mL. ¿Cuál es el volumen de la piedra?",
+          "opciones": ["15 mL", "55 mL", "40 mL", "95 mL"],
+          "correcta": 0,
+          "explicacion": "55 − 40 = 15 mL."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "densidad",
+      "titulo": "Densidad",
+      "resumen": "La densidad dice cuánta masa hay en cada unidad de volumen: decide qué flota y qué se hunde.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "ficha": {
+        "idea": "La densidad es la masa que hay en cada unidad de volumen: densidad = masa ÷ volumen, y se expresa en g/mL o g/cm³. Es una propiedad específica: cada material tiene la suya, sin importar cuánto haya. El agua tiene una densidad de 1 g/mL. Lo que es menos denso que un líquido flota en él, y lo que es más denso se hunde: el aceite (0,9 g/mL) queda encima del agua y la miel (1,4 g/mL) se va al fondo. Por eso un tronco grande flota y una puntilla pequeña se hunde: no importa el tamaño, sino la densidad.",
+        "contexto": [
+          { "titulo": "El hielo flota", "texto": "El agua sólida es menos densa que la líquida: por eso el hielo flota y los lagos se congelan por arriba." },
+          { "titulo": "Ejemplo de cálculo", "texto": "Una piedra de 52 g que desplaza 20 mL tiene una densidad de 52 ÷ 20 = 2,6 g/mL." }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Densidad = masa ÷ volumen.",
+            "Menos denso que el agua flota; más denso se hunde."
+          ],
+          "media": [
+            "Densidad del agua: 1 g/mL.",
+            "La densidad sirve para identificar materiales."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Por qué un tronco enorme flota y una puntilla se hunde?",
+          "actividad": "Hacer una columna de densidades en un vaso transparente con miel, agua con colorante y aceite, y soltar un corcho, una uva y una tuerca.",
+          "errores": [
+            "Creer que lo pesado se hunde y lo liviano flota, sin pensar en el volumen.",
+            "Pensar que un pedazo pequeño de un material tiene menor densidad que uno grande."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Por qué un tronco grande flota y una puntilla se hunde?",
+            "opciones": ["Por su densidad", "Por su tamaño", "Por su color", "Porque la puntilla es más pesada que el tronco"],
+            "correcta": 0,
+            "explicacion": "La madera es menos densa que el agua; el hierro, más."
+          }
+        },
+        {
+          "titulo": "Columna de densidades",
+          "visual": {
+            "tipo": "escena",
+            "id": "columna-densidad",
+            "fases": [
+              { "id": "vacio", "nombre": "El vaso", "texto": "Vamos a echar tres líquidos." },
+              { "id": "liquidos", "nombre": "Tres líquidos", "texto": "Se ordenan solos: el más denso abajo." },
+              { "id": "objetos", "nombre": "Tres objetos", "texto": "Cada uno queda en la capa que su densidad le permite." }
+            ]
+          }
+        },
+        {
+          "titulo": "Calcula la densidad",
+          "nivel": "intermedio",
+          "visual": { "tipo": "cifra", "icono": "🪨", "valor": "52 g ÷ 20 mL = 2,6 g/mL", "texto": "Más que 1 g/mL: la piedra se hunde." }
+        }
+      ],
+      "juego": "flota-hunde-juego",
+      "preguntas": [
+        {
+          "id": "qm-pm-3",
+          "enunciado": "Un objeto tiene 30 g y ocupa 60 mL. ¿Flota o se hunde en agua?",
+          "opciones": ["Flota: su densidad es 0,5 g/mL", "Se hunde: su densidad es 2 g/mL", "Se hunde: tiene mucha masa", "No se puede saber"],
+          "correcta": 0,
+          "explicacion": "30 ÷ 60 = 0,5 g/mL, menos que el agua."
+        },
+        {
+          "id": "qm-pm-4",
+          "enunciado": "¿Por qué el aceite queda encima del agua?",
+          "opciones": ["Porque es menos denso", "Porque es más denso", "Porque tiene más masa", "Porque está más caliente"],
+          "correcta": 0,
+          "explicacion": "El aceite tiene unos 0,9 g/mL y el agua 1 g/mL."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "especificas",
+      "titulo": "Propiedades específicas",
+      "resumen": "Solubilidad, viscosidad, dureza, conductividad y otras sirven para reconocer cada material.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "basico",
+      "ficha": {
+        "idea": "Las propiedades específicas son propias de cada material y sirven para reconocerlo. Algunas se perciben con los sentidos: color, olor, sabor, brillo. Otras se observan con pruebas: la solubilidad (si se disuelve en un líquido, como la sal en el agua), la viscosidad (qué tanto se resiste a fluir, como la miel), la dureza (si raya o se deja rayar), la conductividad (si deja pasar la electricidad o el calor, como el cobre), la maleabilidad (si forma láminas, como el papel aluminio) y la ductilidad (si forma hilos, como el alambre). La densidad y los puntos de fusión y de ebullición también son propiedades específicas.",
+        "contexto": [
+          { "titulo": "Escala de Mohs", "texto": "Ordena la dureza de 1 (talco) a 10 (diamante); la uña tiene cerca de 2,5 y el vidrio, cerca de 5,5." },
+          { "titulo": "Propiedades químicas", "texto": "Otras propiedades solo se ven cuando el material cambia: arder (combustibilidad) u oxidarse. Se estudian en el tema de cambios físicos y químicos." }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Solubilidad: si se disuelve. Viscosidad: si fluye lento.",
+            "Dureza: si raya o se deja rayar. Conductividad: si deja pasar electricidad o calor."
+          ],
+          "media": [
+            "Maleabilidad: forma láminas. Ductilidad: forma hilos.",
+            "Las propiedades específicas identifican a cada material."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "Si les doy tres polvos blancos (sal, azúcar y harina), ¿cómo los distinguen sin probarlos?",
+          "actividad": "Probar la solubilidad de sal, azúcar, harina y arena en agua, y ordenar por viscosidad agua, aceite, miel y champú.",
+          "errores": [
+            "Creer que lo que se disuelve «desaparece»: sigue ahí, mezclado."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Tienes sal, harina y arena. ¿Cuál se disuelve en agua?",
+            "opciones": ["La sal", "La harina", "La arena", "Ninguna"],
+            "correcta": 0,
+            "explicacion": "La sal es soluble en agua; la arena no, y la harina queda turbia."
+          }
+        },
+        {
+          "titulo": "Propiedades que identifican",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "🥄", "titulo": "Solubilidad", "texto": "La sal se disuelve en agua." },
+              { "icono": "🍯", "titulo": "Viscosidad", "texto": "La miel fluye despacio." },
+              { "icono": "💎", "titulo": "Dureza", "texto": "El diamante raya todo." },
+              { "icono": "⚡", "titulo": "Conductividad", "texto": "El cobre conduce la electricidad." },
+              { "icono": "🍫", "titulo": "Maleabilidad", "texto": "El aluminio forma láminas." },
+              { "icono": "🧵", "titulo": "Ductilidad", "texto": "El cobre forma hilos." }
+            ]
+          }
+        }
+      ],
+      "juego": "que-propiedad-juego",
+      "preguntas": [
+        {
+          "id": "qm-pm-5",
+          "enunciado": "El cobre se usa en los cables porque…",
+          "opciones": ["conduce bien la electricidad", "es muy viscoso", "es soluble en agua", "es muy blando"],
+          "correcta": 0,
+          "explicacion": "Es buen conductor y además dúctil: forma hilos."
+        },
+        {
+          "id": "qm-pm-6",
+          "enunciado": "¿Qué propiedad describe que la miel fluya lentamente?",
+          "opciones": ["Viscosidad", "Dureza", "Solubilidad", "Maleabilidad"],
+          "correcta": 0,
+          "explicacion": "La viscosidad es la resistencia a fluir."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "fusion-ebullicion",
+      "titulo": "Puntos de fusión y ebullición",
+      "resumen": "Cada sustancia se funde y hierve a una temperatura propia, que cambia con la presión.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "basico",
+      "ficha": {
+        "idea": "El punto de fusión es la temperatura a la que un sólido se vuelve líquido, y el punto de ebullición, la temperatura a la que un líquido hierve y pasa a gas. Son propiedades específicas: el agua se funde a 0 °C y hierve a 100 °C al nivel del mar; el hierro se funde a 1538 °C. El punto de ebullición depende de la presión del aire: a más altura hay menos aire encima y menos presión, y el agua hierve antes. En Neiva hierve cerca de 98 °C, en Bogotá cerca de 91 °C y en el Nevado del Huila cerca de 83 °C. Por eso en la montaña los fríjoles tardan más en cocinarse, y la olla a presión ayuda: sube la presión y el agua hierve a unos 120 °C.",
+        "contexto": [
+          { "titulo": "Temperatura y presión", "texto": "La temperatura indica qué tan rápido se mueven las partículas (se mide con termómetro, en °C). La presión del aire es el empuje de la atmósfera (se mide con barómetro)." }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Punto de fusión: de sólido a líquido. Punto de ebullición: de líquido a gas.",
+            "El agua se funde a 0 °C y hierve a 100 °C al nivel del mar."
+          ],
+          "media": [
+            "A más altura, menos presión y menor punto de ebullición."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Por qué los fríjoles se cocinan más rápido en Neiva que en La Plata o en Bogotá?",
+          "actividad": "Medir con un termómetro de cocina la temperatura del agua hirviendo en el colegio y compararla con 100 °C.",
+          "errores": [
+            "Creer que el agua siempre hierve a 100 °C.",
+            "Pensar que subir la llama hace hervir el agua a más temperatura (solo hierve más rápido)."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿El agua hierve a 100 °C en todas partes?",
+            "opciones": ["No: depende de la altura", "Sí, siempre", "Solo hierve a 100 °C en la montaña", "Depende de la olla"],
+            "correcta": 0,
+            "explicacion": "Al nivel del mar hierve a 100 °C; más arriba, a menos."
+          }
+        },
+        {
+          "titulo": "Hervir en la montaña",
+          "visual": {
+            "tipo": "escena",
+            "id": "hervir-altura",
+            "fases": [
+              { "id": "mar", "nombre": "Nivel del mar", "texto": "Mucho aire encima: hierve a 100 °C." },
+              { "id": "neiva", "nombre": "Neiva", "texto": "Un poco menos de presión: cerca de 98 °C." },
+              { "id": "bogota", "nombre": "Bogotá", "texto": "Mucha menos presión: cerca de 91 °C." },
+              { "id": "nevado", "nombre": "Nevado del Huila", "texto": "Muy poca presión: cerca de 83 °C." }
+            ]
+          }
+        },
+        {
+          "titulo": "Cada sustancia tiene su punto",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "🧊", "titulo": "Agua", "texto": "Se funde a 0 °C, hierve a 100 °C." },
+              { "icono": "🕯️", "titulo": "Parafina", "texto": "Se funde cerca de 60 °C." },
+              { "icono": "🍫", "titulo": "Chocolate", "texto": "Se funde cerca de 34 °C: en la boca." },
+              { "icono": "🔩", "titulo": "Hierro", "texto": "Se funde a 1538 °C." }
+            ]
+          }
+        },
+        {
+          "titulo": "¿Y cómo cambia de estado?",
+          "visual": { "tipo": "cifra", "icono": "🧊", "valor": "sólido → líquido → gas", "texto": "Los cambios de estado tienen su propio tema." },
+          "atajo": { "texto": "Más sobre esto", "tema": "estados-materia" }
+        }
+      ],
+      "juego": "hierve-juego",
+      "preguntas": [
+        {
+          "id": "qm-pm-7",
+          "enunciado": "¿Por qué el agua hierve a menos temperatura en Bogotá que en Cartagena?",
+          "opciones": ["Porque hay menos presión del aire", "Porque hace más frío", "Porque el agua es distinta", "Porque hay más oxígeno"],
+          "correcta": 0,
+          "explicacion": "A más altura, menos presión y menor punto de ebullición."
+        },
+        {
+          "id": "qm-pm-8",
+          "enunciado": "¿Qué es el punto de fusión?",
+          "opciones": ["La temperatura a la que un sólido se vuelve líquido", "La temperatura a la que un líquido hierve", "La masa de un sólido", "La mezcla de dos sustancias"],
+          "correcta": 0,
+          "explicacion": "El hielo, por ejemplo, se funde a 0 °C."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}
