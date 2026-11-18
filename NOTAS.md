@@ -400,3 +400,4 @@ Hooke usa la reconstrucción de Rita Greer (2004, Free Art License, Wikimedia Co
 ## Área 3 · Relaciones ecosistémicas (aprobada el 17 nov, con el tema 8)
 - PLAN-AREA-3.md: ruta de 8 temas aprobada.
 - Tema 1 «Niveles de organización ecológica» hecho como muestra: `ecosistemas/niveles-ecologicos.json` (orden 31, 3 pasos: qué es la ecología, niveles con zoom del frailejón a la biosfera, hábitat y nicho). Escenas en `escenas/EscenasEcologia.tsx` (incluye dibujos de frailejón, colibrí, venado, oso de anteojos y rana reutilizables); juegos en `diagramas/JuegosEcologia.tsx`.
+- Tema 2 «Factores y ecosistemas de Colombia» (`ecosistemas/factores-ecosistemas.json`, orden 32, 4 pasos): bióticos y abióticos, pisos térmicos (Explora: `pisos-termicos`, control de altitud con lugares del Huila), ecosistemas de Colombia (mapa esquemático con 7 ecosistemas; la Tatacoa como bosque seco) y rango de tolerancia (9°). Escenas en `EscenasEcologia.tsx`; juegos en `JuegosEcologia.tsx`.
