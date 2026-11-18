@@ -21,6 +21,7 @@ import Ambiente from './practicas/Ambiente.tsx'
 import Medicion from './practicas/Medicion.tsx'
 import Densidades from './practicas/Densidades.tsx'
 import Mezclas from './practicas/Mezclas.tsx'
+import ConservacionMasa from './practicas/ConservacionMasa.tsx'
 
 // Laboratorios virtuales (PLAN-LABORATORIOS.md). Las prácticas listas van en PRACTICAS; las demás de la
 // ruta salen como «próximamente».
@@ -54,13 +55,14 @@ const PRACTICAS: Entrada[] = [
   { id: 'medicion', titulo: 'Medición: precisión y exactitud', resumen: 'Lee el menisco sin paralaje y mide 25 mL cinco veces con cuatro instrumentos: ¿cuál es exacto y cuál preciso?', grupo: 'Química', desdeGrado: 6, Juego: Medicion },
   { id: 'densidades', titulo: 'Densidades', resumen: 'Balanza, regla y probeta para hallar la densidad de seis objetos y reconocer su material; luego, la torre de cinco líquidos.', grupo: 'Química', desdeGrado: 6, Juego: Densidades },
   { id: 'mezclas', titulo: 'Mezclas y técnicas de separación', resumen: 'Separa hierro, piedras, arena y sal (el orden importa), agua y aceite, agua de mar y, desde 9°, agua y alcohol. Y cromatografía de tintas.', grupo: 'Química', desdeGrado: 6, Juego: Mezclas },
+  { id: 'conservacion-masa', titulo: 'Conservación de la masa', resumen: 'Vinagre y bicarbonato sobre la balanza en vaso abierto, botella con globo o botella tapada: ¿se pierde masa?', grupo: 'Química', desdeGrado: 6, Juego: ConservacionMasa },
   { id: solucionMolar.id, titulo: solucionMolar.titulo, resumen: solucionMolar.resumen, grupo: 'Química', desdeGrado: solucionMolar.desdeGrado, mesa: solucionMolar },
 ]
 
 const PROXIMAS: { lab: string; items: string[] }[] = [
   {
     lab: 'Química',
-    items: ['Conservación de la masa', 'Ensayo a la llama', 'Tipos de reacción', 'Reactivo límite con globos', 'Gases', 'Dilución y solubilidad', 'Ácidos, bases y pH', 'Titulación ácido-base', 'Velocidad de reacción', 'Saponificación', 'Combustión'],
+    items: ['Ensayo a la llama', 'Tipos de reacción', 'Reactivo límite con globos', 'Gases', 'Dilución y solubilidad', 'Ácidos, bases y pH', 'Titulación ácido-base', 'Velocidad de reacción', 'Saponificación', 'Combustión'],
   },
 ]
 
