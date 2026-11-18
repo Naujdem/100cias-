@@ -933,3 +933,138 @@ export function EscenaMimetismo({ fase }: { fase: string }) {
     </svg>
   )
 }
+
+/* ═══ Tema 5 · Mecanismos de cambio en poblaciones ══════════════════════ */
+
+/** canica de un alelo: A (azul) o a (naranja) */
+function Canica({ x, y, a, visible = true }: { x: number; y: number; a: boolean; visible?: boolean }) {
+  return (
+    <g style={{ transition: suave, opacity: visible ? 1 : 0, transform: `translate(${x}px, ${y}px)` }}>
+      <circle r="9" fill={a ? AZUL : '#e08a3c'} stroke="#fff" strokeWidth="1.5" />
+      <text y="4" textAnchor="middle" fontSize="10" fontWeight="900" fill="#fff">{a ? 'A' : 'a'}</text>
+    </g>
+  )
+}
+
+/* ── el acervo genético como un frasco de canicas ────────────────────── */
+
+const ACERVO = ['poblacion', 'frasco', 'frecuencia', 'cambio']
+const ALELOS_1 = [1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1, 0] // 12 A de 20
+const ALELOS_2 = [1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1] // 17 A de 20
+
+export function EscenaAcervo({ fase }: { fase: string }) {
+  const i = idx(ACERVO, fase)
+  const alelos = i === 3 ? ALELOS_2 : ALELOS_1
+  const enFrasco = i >= 1
+  const nA = alelos.filter(Boolean).length
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label={`Acervo genético: ${fase}`} className="h-full w-full">
+      {fondo('#f4f1ea')}
+      {/* individuos con sus dos alelos */}
+      {Array.from({ length: 10 }, (_, k) => (
+        <g key={k} style={ver(!enFrasco)}>
+          <circle cx={50 + (k % 5) * 75} cy={90 + Math.floor(k / 5) * 90} r="26" fill="#efe6d4" stroke="#c9b48a" strokeWidth="2" />
+          <T x={50 + (k % 5) * 75} y={140 + Math.floor(k / 5) * 90} t={`${alelos[2 * k] ? 'A' : 'a'}${alelos[2 * k + 1] ? 'A' : 'a'}`} s={11} />
+        </g>
+      ))}
+      <g style={ver(enFrasco)}>
+        <path d="M 120 60 h 160 v 20 q 20 10 20 40 v 120 q 0 20 -20 20 h -160 q -20 0 -20 -20 v -120 q 0 -30 20 -40 z" fill="#e8f1f8" stroke="#9db7cc" strokeWidth="3" />
+      </g>
+      {alelos.map((a, k) => {
+        const ind = Math.floor(k / 2)
+        const x = enFrasco ? 135 + (k % 7) * 22 : 40 + (ind % 5) * 75 + (k % 2) * 20
+        const y = enFrasco ? 130 + Math.floor(k / 7) * 26 : 90 + Math.floor(ind / 5) * 90
+        return <Canica key={k} x={x} y={y} a={!!a} />
+      })}
+      <g style={ver(i >= 2)}>
+        <rect x="70" y="250" width="260" height="40" rx="10" fill="#fff" stroke="#d8cfbd" />
+        <T x={200} y={268} t={`A: ${nA} de 20 = ${nA * 5} %   ·   a: ${20 - nA} de 20 = ${(20 - nA) * 5} %`} s={12} />
+        <T x={200} y={284} t={i === 3 ? 'generaciones después: cambió la frecuencia = evolución' : 'frecuencias alélicas'} s={10} peso={600} c={i === 3 ? ROJO : AZUL} />
+      </g>
+      <g style={ver(i === 0)}><T x={200} y={40} t="Una población: cada individuo lleva dos alelos" s={13} /></g>
+      <g style={ver(i === 1)}><T x={200} y={40} t="Todos los alelos juntos: el acervo genético" s={13} /></g>
+    </svg>
+  )
+}
+
+/* ── deriva: cuello de botella y efecto fundador ──────────────────────── */
+
+const DERIVA = ['grande', 'catastrofe', 'pocos', 'recupera']
+const D_POBL = Array.from({ length: 24 }, (_, k) => k % 3 !== 0) // 16 A, 8 a
+const SOBREVIVEN = new Set([1, 4, 7, 10]) // por azar: 4 sobrevivientes, todos A
+
+export function EscenaDeriva({ fase }: { fase: string }) {
+  const i = idx(DERIVA, fase)
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label={`Deriva génica: ${fase}`} className="h-full w-full">
+      {fondo(i === 1 ? '#f6ecec' : '#f4f1ea')}
+      {D_POBL.map((a, k) => {
+        const vive = i === 0 || SOBREVIVEN.has(k) || i === 3
+        const alelo = i === 3 ? true : a
+        return <Canica key={k} x={60 + (k % 8) * 40} y={80 + Math.floor(k / 8) * 50} a={alelo} visible={vive} />
+      })}
+      <g style={ver(i === 1)}><T x={200} y={50} t="🔥 Un incendio mata a la mayoría, al azar" s={14} c={ROJO} /></g>
+      <g style={ver(i === 2)}><T x={200} y={50} t="Por azar, los sobrevivientes solo tienen A" s={13} /></g>
+      <g style={ver(i === 3)}><T x={200} y={50} t="La población crece de nuevo… sin el alelo a" s={13} c={AZUL} /></g>
+      <T x={200} y={260} t={['Población grande: 2 de cada 3 alelos son A', 'No sobrevivieron los «mejores», sino los afortunados', 'Cuello de botella: poca variación', 'La variación perdida no vuelve sola'][i]} s={12} peso={700} />
+    </svg>
+  )
+}
+
+/* ── flujo génico: un corredor une dos poblaciones ───────────────────── */
+
+const FLUJO = ['separadas', 'corredor', 'mezcla']
+
+export function EscenaFlujo({ fase }: { fase: string }) {
+  const i = idx(FLUJO, fase)
+  const izq = [1, 1, 1, 1, 1, 1, 0, 1, 1]
+  const der = [0, 0, 0, 0, 1, 0, 0, 0, 0]
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label={`Flujo génico: ${fase}`} className="h-full w-full">
+      {fondo('#eef1ea')}
+      <ellipse cx="90" cy="140" rx="75" ry="85" fill="#9fc28a" />
+      <ellipse cx="310" cy="140" rx="75" ry="85" fill="#9fc28a" />
+      <rect x="165" y="40" width="70" height="200" fill="#d9cfa0" />
+      <T x={200} y={35} t="potreros" s={10} peso={600} />
+      <rect x="160" y="120" width="80" height="40" fill="#9fc28a" style={{ transition: suave, opacity: i >= 1 ? 1 : 0 }} />
+      <g style={ver(i >= 1)}><T x={200} y={178} t="corredor de bosque" s={10} c={VERDE} /></g>
+      {izq.map((a, k) => <Canica key={`i${k}`} x={i === 2 && k === 0 ? 270 : 60 + (k % 3) * 30} y={i === 2 && k === 0 ? 170 : 110 + Math.floor(k / 3) * 30} a={!!a} />)}
+      {der.map((a, k) => <Canica key={`d${k}`} x={i === 2 && k === 0 ? 90 : 280 + (k % 3) * 30} y={i === 2 && k === 0 ? 200 : 110 + Math.floor(k / 3) * 30} a={!!a} />)}
+      <T x={200} y={270} t={['Aisladas: cada población se vuelve distinta', 'Un corredor permite el paso de individuos', 'Los migrantes llevan alelos: las poblaciones se parecen más'][i]} s={12} />
+    </svg>
+  )
+}
+
+/* ── selección sexual: el gallito de roca ────────────────────────────── */
+
+const SEXUAL = ['machos', 'eligen', 'costo']
+
+function Gallito({ x, y, macho, brillo = 1 }: { x: number; y: number; macho: boolean; brillo?: number }) {
+  const c = macho ? '#f05a1a' : '#9a6a4a'
+  return (
+    <g transform={`translate(${x} ${y}) scale(${macho ? 1 : 0.9})`} style={{ opacity: brillo, transition: suave }}>
+      <ellipse cx="0" cy="10" rx="20" ry="16" fill={c} />
+      {macho && <ellipse cx="-4" cy="14" rx="12" ry="8" fill="#2b2b2b" />}
+      <circle cx="10" cy="-10" r="12" fill={c} />
+      {macho && <path d="M -2 -14 q 14 -20 26 4 q -12 -4 -26 -4 z" fill={c} />}
+      <circle cx="15" cy="-10" r="2" fill="#fff" />
+    </g>
+  )
+}
+
+export function EscenaSexual({ fase }: { fase: string }) {
+  const i = idx(SEXUAL, fase)
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label={`Selección sexual: ${fase}`} className="h-full w-full">
+      {fondo('#eef1ea')}
+      <line x1="30" y1="160" x2="370" y2="160" stroke="#8a6a40" strokeWidth="6" />
+      {[0, 1, 2].map((k) => <Gallito key={k} x={90 + k * 110} y={130} macho brillo={i === 1 ? (k === 1 ? 1 : 0.35) : 1} />)}
+      <g style={ver(i >= 1)}><Gallito x={200} y={230} macho={false} /></g>
+      <g style={ver(i === 1)}><path d="M 200 205 L 200 175" stroke="#888" strokeWidth="2" markerEnd="url(#sx-fl)" /></g>
+      <g style={ver(i === 2)}><T x={330} y={60} t="🦅" s={32} /></g>
+      <T x={200} y={40} t={['Los machos de gallito de roca se reúnen y se exhiben', 'La hembra elige al más vistoso: él deja más hijos', 'Pero el color también llama a los depredadores'][i]} s={12} />
+      <T x={200} y={285} t={['Ave nacional del Perú; vive también en los Andes de Colombia', 'Selección sexual: éxito al conseguir pareja', 'Un equilibrio entre atraer pareja y sobrevivir'][i]} s={10} peso={600} />
+      <Flecha id="sx-fl" />
+    </svg>
+  )
+}

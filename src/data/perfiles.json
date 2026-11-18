@@ -171,6 +171,11 @@
         "morfologicas",
         "conducta",
         "camuflaje"
+      ],
+      "mecanismos-poblaciones": [
+        "poblacion-genes",
+        "deriva",
+        "seleccion-sexual"
       ]
     },
     "nivelDibujo": "basico",
@@ -205,7 +210,8 @@
       "historia-evolucion": "Cuatro hitos: Linneo, Lamarck, el viaje del Beagle y Darwin y Wallace.",
       "evidencias-evolucion": "Fósiles (con la Tatacoa) y anatomía comparada.",
       "seleccion-natural": "Ingredientes, la polilla moteada y la selección artificial (maíz).",
-      "adaptaciones": "Qué es una adaptación, morfológicas (frailejón, colibríes), de conducta y camuflaje."
+      "adaptaciones": "Qué es una adaptación, morfológicas (frailejón, colibríes), de conducta y camuflaje.",
+      "mecanismos-poblaciones": "Versión corta: poblaciones y alelos, el azar (deriva) y la selección sexual."
     }
   },
   {
@@ -430,6 +436,13 @@
         "fisiologicas",
         "conducta",
         "camuflaje"
+      ],
+      "mecanismos-poblaciones": [
+        "poblacion-genes",
+        "mutacion",
+        "deriva",
+        "flujo",
+        "seleccion-sexual"
       ]
     },
     "nivelDibujo": "intermedio",
@@ -464,7 +477,8 @@
       "historia-evolucion": "Seis hitos: suma a Cuvier y Lyell.",
       "evidencias-evolucion": "Suma embriología y biogeografía.",
       "seleccion-natural": "Suma la selección que vemos hoy (antibióticos, plagas, pinzones).",
-      "adaptaciones": "Suma las fisiológicas (cactus, rana dorada)."
+      "adaptaciones": "Suma las fisiológicas (cactus, rana dorada).",
+      "mecanismos-poblaciones": "Los cuatro mecanismos: mutación, deriva, flujo génico y selección sexual."
     }
   },
   {
@@ -714,6 +728,14 @@
         "fisiologicas",
         "conducta",
         "camuflaje"
+      ],
+      "mecanismos-poblaciones": [
+        "poblacion-genes",
+        "mutacion",
+        "deriva",
+        "flujo",
+        "seleccion-sexual",
+        "hardy-weinberg"
       ]
     },
     "nivelDibujo": "avanzado",
@@ -748,7 +770,8 @@
       "historia-evolucion": "Los ocho hitos: suma la síntesis moderna y el equilibrio puntuado.",
       "evidencias-evolucion": "Las cinco evidencias: suma la molecular.",
       "seleccion-natural": "Los cinco pasos: suma los tipos de selección.",
-      "adaptaciones": "Los cinco pasos, con mimetismo mülleriano y aclimatación."
+      "adaptaciones": "Los cinco pasos, con mimetismo mülleriano y aclimatación.",
+      "mecanismos-poblaciones": "Los seis pasos: suma el equilibrio de Hardy-Weinberg."
     }
   }
 ]

@@ -34,7 +34,6 @@ export const PROXIMOS: Record<string, { etiqueta: string; nombre: string }[]> = 
   genetica: [
   ],
   evolucion: [
-    { etiqueta: '5', nombre: 'Mecanismos de cambio en poblaciones' },
     { etiqueta: '6', nombre: 'Especiación' },
     { etiqueta: '7', nombre: 'Clasificación y árbol de la vida' },
     { etiqueta: '8', nombre: 'Historia de la vida en la Tierra' },

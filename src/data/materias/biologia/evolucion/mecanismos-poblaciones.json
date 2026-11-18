@@ -1,0 +1,402 @@
+{
+  "id": "mecanismos-poblaciones",
+  "materia": "biologia",
+  "area": "evolucion",
+  "titulo": "Mecanismos de cambio en poblaciones",
+  "subtema": "Mutación, deriva, flujo génico y selección sexual",
+  "orden": 45,
+  "etiqueta": "5",
+  "vistas": ["ruta"],
+  "tituloVista": "Ruta de los mecanismos",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Definir evolución como cambio de las frecuencias alélicas en una población.",
+    "Explicar la mutación, la deriva génica, el flujo génico y la selección sexual.",
+    "Reconocer las condiciones del equilibrio de Hardy-Weinberg (11°)."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con un texto de genética de poblaciones de bachillerato. El simulador de deriva usa el modelo de Wright-Fisher con 5 poblaciones y 50 generaciones."
+  ],
+  "bloques": [
+    {
+      "id": "poblacion-genes",
+      "titulo": "Poblaciones y alelos",
+      "resumen": "Todos los alelos de una población forman su acervo genético. Evolucionar es que cambien sus frecuencias.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "Una población es un grupo de individuos de la misma especie que viven en un lugar y se reproducen entre sí. Si se juntan todos sus alelos, como canicas en un frasco, se obtiene el acervo genético. La frecuencia de un alelo es la proporción que representa en ese frasco. Desde la genética, la evolución es el cambio de las frecuencias alélicas de una generación a otra. Cuatro mecanismos las cambian: mutación, deriva génica, flujo génico y selección (natural y sexual).",
+        "contexto": [
+          { "titulo": "Por qué la población", "texto": "Un individuo nace y muere con los mismos genes. La población sí puede cambiar con las generaciones." },
+          { "titulo": "Contar canicas", "texto": "Si hay 10 individuos, hay 20 alelos de un gen. Si 12 son A, la frecuencia de A es 12/20 = 60 %." }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Acervo genético: todos los alelos de una población.",
+            "Evolución: cambio de las frecuencias de los alelos con las generaciones."
+          ],
+          "media": ["Mecanismos: mutación, deriva, flujo génico y selección."],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Puede evolucionar una sola persona durante su vida?",
+          "actividad": "Con fríjoles de dos colores en una bolsa, contar frecuencias y simular generaciones sacando al azar.",
+          "errores": ["Pensar que evoluciona el individuo y no la población."],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Un frasco de alelos",
+          "visual": {
+            "tipo": "escena",
+            "id": "ev-acervo",
+            "fases": [
+              { "id": "poblacion", "nombre": "La población", "texto": "Diez individuos; cada uno lleva dos alelos del mismo gen." },
+              { "id": "frasco", "nombre": "El acervo", "texto": "Si juntamos todos los alelos, tenemos el acervo genético de la población." },
+              { "id": "frecuencia", "nombre": "Frecuencias", "texto": "Se cuenta qué parte del total es A y qué parte es a." },
+              { "id": "cambio", "nombre": "Evolución", "texto": "Generaciones después las frecuencias cambiaron: la población evolucionó." }
+            ]
+          },
+          "atajo": { "texto": "Más sobre esto: Genes y alelos", "tema": "herencia-mendeliana", "bloque": "genes-alelos" }
+        },
+        {
+          "titulo": "Cuatro mecanismos",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "🧬", "titulo": "Mutación", "texto": "Crea alelos nuevos." },
+              { "icono": "🎲", "titulo": "Deriva", "texto": "El azar cambia las frecuencias." },
+              { "icono": "🚶", "titulo": "Flujo génico", "texto": "Los migrantes llevan alelos." },
+              { "icono": "🏆", "titulo": "Selección", "texto": "Natural y sexual: favorecen unos alelos." }
+            ]
+          }
+        }
+      ],
+      "juego": "mecanismos-juego",
+      "preguntas": [
+        {
+          "id": "mp-pg-1",
+          "enunciado": "En 10 individuos hay 20 alelos de un gen; 15 son A. ¿Cuál es la frecuencia de A?",
+          "opciones": ["75 %", "15 %", "50 %", "150 %"],
+          "correcta": 0,
+          "explicacion": "15 de 20 = 0,75 = 75 %."
+        },
+        {
+          "id": "mp-pg-2",
+          "enunciado": "Desde la genética, ¿qué es la evolución?",
+          "opciones": ["El cambio de las frecuencias alélicas de una población", "El crecimiento de un individuo", "El aumento del tamaño de una población", "La aparición de individuos más fuertes"],
+          "correcta": 0,
+          "explicacion": "Cambian las proporciones de los alelos de generación en generación."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "mutacion",
+      "titulo": "Mutación: la fuente de lo nuevo",
+      "resumen": "Las mutaciones crean alelos nuevos. Son raras y al azar, pero sin ellas no habría variación sobre la cual actuar.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "intermedio",
+      "ficha": {
+        "idea": "La mutación es el único mecanismo que crea alelos nuevos. Ocurre al azar, no porque el ser vivo la necesite, y la mayoría son neutras o perjudiciales; unas pocas resultan útiles en algún ambiente. Por sí sola cambia las frecuencias muy despacio, pero aporta la materia prima sobre la que actúan la deriva y la selección. En los organismos con reproducción sexual, la meiosis y la fecundación recombinan esos alelos en combinaciones nuevas.",
+        "contexto": [
+          { "titulo": "Al azar, no a pedido", "texto": "Las bacterias resistentes ya existían antes del antibiótico: la mutación no aparece «para» resistir." },
+          { "titulo": "Solo cuentan las heredables", "texto": "Para la evolución importan las mutaciones de las células sexuales, que pasan a los hijos." }
+        ],
+        "cuaderno": {
+          "facil": ["La mutación es la fuente de alelos nuevos."],
+          "media": [
+            "Las mutaciones ocurren al azar, no porque se necesiten.",
+            "Solo se heredan las mutaciones de las células sexuales."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "Si todos los individuos tuvieran los mismos alelos, ¿podría actuar la selección?",
+          "actividad": "Repasar con el Explora de mutaciones del área 2 qué tipos de mutación cambian la proteína.",
+          "errores": ["Creer que las mutaciones aparecen cuando el organismo las necesita."],
+          "minutos": 10
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "De la mutación a la población",
+          "visual": {
+            "tipo": "escena",
+            "id": "ev-sintesis",
+            "fases": [
+              { "id": "mutacion", "nombre": "Aparece un alelo", "texto": "Un error al copiar el ADN crea un alelo nuevo en un individuo." },
+              { "id": "frecuencias", "nombre": "Puede extenderse", "texto": "Si da ventaja (o por azar), se vuelve más común en las generaciones siguientes." }
+            ]
+          },
+          "atajo": { "texto": "Más sobre esto: Mutaciones y variación", "tema": "mutaciones", "bloque": "variacion" }
+        }
+      ],
+      "juego": "mecanismos-juego",
+      "preguntas": [
+        {
+          "id": "mp-mu-1",
+          "enunciado": "¿Cuál es el único mecanismo que crea alelos nuevos?",
+          "opciones": ["La mutación", "La deriva génica", "El flujo génico", "La selección natural"],
+          "correcta": 0,
+          "explicacion": "Los demás cambian las frecuencias de alelos que ya existen."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "deriva",
+      "titulo": "Deriva génica: el azar",
+      "resumen": "En poblaciones pequeñas, el azar puede hacer desaparecer o fijar un alelo, aunque no dé ninguna ventaja.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "La deriva génica es el cambio de las frecuencias alélicas por puro azar: qué individuos se reproducen, qué alelos pasan a los hijos o quién sobrevive a un accidente. Su efecto es mayor cuanto más pequeña es la población. Dos casos importantes: el cuello de botella, cuando una catástrofe reduce mucho la población y la variación que queda depende de la suerte, y el efecto fundador, cuando unos pocos individuos colonizan un lugar nuevo y llevan solo una parte de los alelos.",
+        "contexto": [
+          { "titulo": "Por qué importa en conservación", "texto": "Las especies amenazadas, con pocas poblaciones pequeñas, pierden variación por deriva y quedan con menos recursos para enfrentar enfermedades o cambios." },
+          { "titulo": "Efecto fundador en humanos", "texto": "Comunidades fundadas por pocas familias y aisladas pueden tener enfermedades hereditarias que en otros lugares son raras." }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Deriva génica: cambio de las frecuencias por azar.",
+            "Pesa más en poblaciones pequeñas."
+          ],
+          "media": ["Cuello de botella y efecto fundador son casos de deriva."],
+          "avanzada": ["La deriva puede fijar alelos sin ventaja y eliminar alelos útiles."]
+        },
+        "docente": {
+          "abrir": "Si lanzas una moneda 4 veces, ¿siempre sale 2 caras y 2 sellos? ¿Y si la lanzas 1000 veces?",
+          "actividad": "Con el simulador, comparar por grupos poblaciones de 10 y de 500 y contar cuántas fijaron un alelo.",
+          "errores": ["Creer que en la deriva sobreviven los mejores: sobreviven los afortunados."],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Cuello de botella",
+          "visual": {
+            "tipo": "escena",
+            "id": "ev-deriva",
+            "fases": [
+              { "id": "grande", "nombre": "Población grande", "texto": "Hay alelos A y a, con mucha variación." },
+              { "id": "catastrofe", "nombre": "Catástrofe", "texto": "Un incendio mata a la mayoría, sin importar sus alelos." },
+              { "id": "pocos", "nombre": "Quedan pocos", "texto": "Por azar, los sobrevivientes solo llevan el alelo A." },
+              { "id": "recupera", "nombre": "Se recupera", "texto": "La población vuelve a crecer, pero el alelo a se perdió." }
+            ]
+          }
+        },
+        {
+          "titulo": "Juega con el azar",
+          "visual": { "tipo": "cifra", "icono": "🎲", "valor": "10 vs. 500", "texto": "En el Explora compara cinco poblaciones pequeñas con cinco grandes" },
+          "puntos": ["Teclas 1 a 3 para el tamaño, G para repetir"]
+        }
+      ],
+      "juego": "deriva-juego",
+      "diagrama": "simulador-deriva",
+      "preguntas": [
+        {
+          "id": "mp-de-1",
+          "enunciado": "¿En qué poblaciones tiene más efecto la deriva génica?",
+          "opciones": ["En las pequeñas", "En las grandes", "En las que tienen más mutaciones", "Igual en todas"],
+          "correcta": 0,
+          "explicacion": "Con pocos individuos, el azar mueve mucho las frecuencias, como al lanzar pocas veces una moneda."
+        },
+        {
+          "id": "mp-de-2",
+          "enunciado": "Unas pocas iguanas llegan a una isla y fundan una población nueva. Esto es…",
+          "opciones": ["Efecto fundador", "Flujo génico", "Selección sexual", "Mutación"],
+          "correcta": 0,
+          "explicacion": "La nueva población solo tiene los alelos que traían esos pocos fundadores."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "flujo",
+      "titulo": "Flujo génico",
+      "resumen": "Cuando individuos o polen pasan de una población a otra, llevan sus alelos y las poblaciones se parecen más.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "intermedio",
+      "ficha": {
+        "idea": "El flujo génico es el paso de alelos de una población a otra por la migración de individuos, o de polen y semillas en las plantas. Hace que las poblaciones se parezcan entre sí y les lleva variación nueva. Si el flujo se interrumpe (por un río, una montaña o una carretera), cada población cambia por su lado y con el tiempo pueden volverse muy distintas.",
+        "contexto": [
+          { "titulo": "Corredores biológicos", "texto": "En Colombia se siembran franjas de bosque para unir parches y que animales como el oso de anteojos o los monos puedan cruzar." },
+          { "titulo": "Polen viajero", "texto": "El viento y los polinizadores llevan polen entre cultivos: así se mezclan los genes de variedades vecinas." }
+        ],
+        "cuaderno": {
+          "facil": ["Flujo génico: paso de alelos entre poblaciones por migración."],
+          "media": ["El flujo hace que las poblaciones se parezcan; el aislamiento las separa."],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Qué le pasa a una población de monos si una carretera la deja aislada?",
+          "actividad": "En un mapa de la región, identificar barreras (vías, potreros, ríos) y proponer dónde iría un corredor.",
+          "errores": ["Confundir flujo génico (movimiento de alelos) con migración sin reproducción."],
+          "minutos": 15
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Unir poblaciones",
+          "visual": {
+            "tipo": "escena",
+            "id": "ev-flujo",
+            "fases": [
+              { "id": "separadas", "nombre": "Separadas", "texto": "Dos bosques separados por potreros: cada población tiene alelos distintos." },
+              { "id": "corredor", "nombre": "Corredor", "texto": "Se siembra una franja de bosque que los une." },
+              { "id": "mezcla", "nombre": "Se mezclan", "texto": "Los migrantes llevan sus alelos al otro lado." }
+            ]
+          }
+        }
+      ],
+      "juego": "flujo-juego",
+      "preguntas": [
+        {
+          "id": "mp-fl-1",
+          "enunciado": "¿Qué efecto tiene el flujo génico entre dos poblaciones?",
+          "opciones": ["Las hace más parecidas", "Las hace cada vez más distintas", "Elimina todas las mutaciones", "Reduce el tamaño de ambas"],
+          "correcta": 0,
+          "explicacion": "Los migrantes mezclan los acervos genéticos."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "seleccion-sexual",
+      "titulo": "Selección sexual",
+      "resumen": "Se favorecen los rasgos que ayudan a conseguir pareja, como los colores del gallito de roca o los bailes de los saltarines.",
+      "anio": 5,
+      "etiqueta": "Paso 5",
+      "nivel": "basico",
+      "ficha": {
+        "idea": "La selección sexual es un tipo de selección en el que importa el éxito para conseguir pareja. Puede actuar porque un sexo (casi siempre las hembras) elige, lo que favorece colores, cantos y bailes llamativos, o porque los machos compiten entre sí, lo que favorece astas, tamaño o fuerza. Estos rasgos pueden ser costosos para sobrevivir, porque llaman a los depredadores o gastan energía, pero se mantienen porque dan más hijos.",
+        "contexto": [
+          { "titulo": "Gallito de roca", "texto": "Los machos, de un naranja intenso, se reúnen en un mismo lugar a exhibirse; las hembras, pardas, eligen." },
+          { "titulo": "Saltarines", "texto": "En las selvas de Colombia, pequeños machos hacen bailes, saltos y chasquidos con las alas para atraer a las hembras." },
+          { "titulo": "Machos y hembras distintos", "texto": "Cuando machos y hembras se ven muy diferentes, suele haber selección sexual de por medio." }
+        ],
+        "cuaderno": {
+          "facil": ["Selección sexual: favorece rasgos que ayudan a conseguir pareja."],
+          "media": ["Puede ser por elección de pareja o por competencia entre machos."],
+          "avanzada": ["Los rasgos sexuales pueden ser costosos para sobrevivir."]
+        },
+        "docente": {
+          "abrir": "¿Por qué en muchas aves el macho es colorido y la hembra parda?",
+          "actividad": "Buscar fotos de machos y hembras de aves colombianas y comparar.",
+          "errores": ["Pensar que la selección sexual siempre favorece al más fuerte."],
+          "minutos": 15
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "El gallito de roca",
+          "visual": {
+            "tipo": "escena",
+            "id": "ev-sexual",
+            "fases": [
+              { "id": "machos", "nombre": "Exhibición", "texto": "Los machos se reúnen y muestran sus colores." },
+              { "id": "eligen", "nombre": "La hembra elige", "texto": "La hembra elige al más vistoso, que deja más hijos." },
+              { "id": "costo", "nombre": "El costo", "texto": "El mismo color que atrae parejas atrae depredadores." }
+            ]
+          }
+        }
+      ],
+      "juego": "sexual-juego",
+      "preguntas": [
+        {
+          "id": "mp-se-1",
+          "enunciado": "¿Por qué se mantienen rasgos llamativos aunque atraigan depredadores?",
+          "opciones": ["Porque dan más éxito para conseguir pareja", "Porque ayudan a esconderse", "Porque no tienen ningún costo", "Porque los adquieren en vida"],
+          "correcta": 0,
+          "explicacion": "Si el macho vistoso deja más hijos, sus alelos se vuelven más comunes."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "hardy-weinberg",
+      "titulo": "El equilibrio de Hardy-Weinberg",
+      "resumen": "Si no actúa ningún mecanismo, las frecuencias no cambian: p² + 2pq + q² = 1. Sirve como punto de comparación.",
+      "anio": 6,
+      "etiqueta": "Paso 6",
+      "nivel": "avanzado",
+      "ficha": {
+        "idea": "En 1908 Godfrey Hardy y Wilhelm Weinberg mostraron que, si en una población no actúa ningún mecanismo de cambio, las frecuencias alélicas se mantienen. Si p es la frecuencia del alelo A y q la del alelo a (p + q = 1), los genotipos aparecen en las proporciones p² (AA), 2pq (Aa) y q² (aa). Hacen falta cinco condiciones: población muy grande, sin mutaciones, sin migración, apareamiento al azar y sin selección. Como casi nunca se cumplen todas, el equilibrio sirve para medir si una población está evolucionando.",
+        "contexto": [
+          { "titulo": "Un ejemplo", "texto": "Si el 16 % de la población es aa, q² = 0,16, entonces q = 0,4 y p = 0,6. Los heterocigotos son 2pq = 0,48, es decir, el 48 %." },
+          { "titulo": "Para qué sirve", "texto": "Si las proporciones reales no coinciden con las esperadas, algún mecanismo está actuando." }
+        ],
+        "cuaderno": {
+          "facil": ["Sin mecanismos de cambio, las frecuencias alélicas no cambian."],
+          "media": [],
+          "avanzada": [
+            "p + q = 1 y p² + 2pq + q² = 1.",
+            "Condiciones: población grande, sin mutación, sin migración, apareamiento al azar y sin selección."
+          ]
+        },
+        "docente": {
+          "abrir": "Si un alelo es recesivo, ¿desaparece con el tiempo? (No: Hardy-Weinberg lo explica.)",
+          "actividad": "Resolver tres problemas de frecuencias a partir del porcentaje de individuos recesivos.",
+          "errores": ["Creer que el alelo dominante siempre se vuelve más común.", "Confundir frecuencia de alelos con frecuencia de genotipos."],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "La ecuación",
+          "visual": { "tipo": "cifra", "icono": "⚖️", "valor": "p² + 2pq + q² = 1", "texto": "AA + Aa + aa: las proporciones de genotipos en equilibrio" },
+          "puntos": ["p = frecuencia de A; q = frecuencia de a", "p + q = 1"]
+        },
+        {
+          "titulo": "Cinco condiciones",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "👥", "titulo": "Población grande", "texto": "Sin deriva." },
+              { "icono": "🧬", "titulo": "Sin mutación", "texto": "No aparecen alelos nuevos." },
+              { "icono": "🚫", "titulo": "Sin migración", "texto": "No hay flujo génico." },
+              { "icono": "🎲", "titulo": "Al azar", "texto": "Nadie elige pareja." },
+              { "icono": "⚖️", "titulo": "Sin selección", "texto": "Todos sobreviven igual." }
+            ]
+          }
+        },
+        {
+          "titulo": "Calcula",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "En una población, el 9 % de los individuos es aa. ¿Cuál es la frecuencia del alelo a?",
+            "opciones": ["0,3", "0,09", "0,91", "0,7"],
+            "correcta": 0,
+            "explicacion": "q² = 0,09, así que q = √0,09 = 0,3 (y p = 0,7)."
+          }
+        }
+      ],
+      "juego": "hardy-juego",
+      "preguntas": [
+        {
+          "id": "mp-hw-1",
+          "enunciado": "Si q = 0,4, ¿qué proporción de la población es heterocigota (Aa)?",
+          "opciones": ["0,48", "0,16", "0,36", "0,24"],
+          "correcta": 0,
+          "explicacion": "p = 0,6; 2pq = 2 × 0,6 × 0,4 = 0,48."
+        },
+        {
+          "id": "mp-hw-2",
+          "enunciado": "¿Cuál NO es una condición del equilibrio de Hardy-Weinberg?",
+          "opciones": ["Que haya selección natural", "Población muy grande", "Apareamiento al azar", "Sin migración"],
+          "correcta": 0,
+          "explicacion": "Debe no haber selección: si la hay, las frecuencias cambian."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}
