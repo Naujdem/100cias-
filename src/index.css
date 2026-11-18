@@ -88,3 +88,8 @@ h1, h2, .titulo { font-family: var(--serif); }
   to { opacity: 1; transform: none; }
 }
 
+
+/* Recuadros con fondo claro fijo (resultados, avisos, botones blancos): en modo oscuro su texto debe ser oscuro. */
+.oscuro :is([class*="bg-white"], [class*="bg-[#e"], [class*="bg-[#f"]):not([class*="dark:bg"]) {
+  color: #1d2726;
+}
