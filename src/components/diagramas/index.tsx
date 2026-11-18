@@ -33,7 +33,8 @@ import SimuladorPoblaciones from './SimuladorPoblaciones.tsx'
 import { DensidadJuego, CrecimientoJuego, DepredadorPresaJuego } from './JuegosPoblaciones.tsx'
 import { SucesionPrimariaJuego, SucesionSecundariaJuego, PerturbacionesJuego } from './JuegosSucesion.tsx'
 import { BiodiversidadNivelesJuego, MegadiversaJuego, AmenazasJuego, ConservarJuego } from './JuegosBiodiversidad.tsx'
-import { LinneoJuego, LamarckJuego, CuvierJuego, LyellJuego, BeagleJuego, DarwinWallaceJuego, SintesisJuego, RitmosJuego, FosilJuego, AnatomiaJuego, EmbrionesJuego, BiogeografiaJuego, MolecularJuego, IngredientesJuego, PolillasJuego, ArtificialJuego, ResistenciaJuego, TiposSeleccionJuego, AdaptacionJuego, MorfologicaJuego, FisiologicaJuego, ConductaJuego, MimetismoJuego, MecanismosJuego, DerivaJuego, FlujoJuego, SexualJuego, HardyJuego } from './JuegosHistoriaEvolucion.tsx'
+import { LinneoJuego, LamarckJuego, CuvierJuego, LyellJuego, BeagleJuego, DarwinWallaceJuego, SintesisJuego, RitmosJuego, FosilJuego, AnatomiaJuego, EmbrionesJuego, BiogeografiaJuego, MolecularJuego, IngredientesJuego, PolillasJuego, ArtificialJuego, ResistenciaJuego, TiposSeleccionJuego, AdaptacionJuego, MorfologicaJuego, FisiologicaJuego, ConductaJuego, MimetismoJuego, MecanismosJuego, DerivaJuego, FlujoJuego, SexualJuego, HardyJuego, EspecieJuego, AislamientoJuego, AlopatricaJuego, RadiacionJuego } from './JuegosHistoriaEvolucion.tsx'
+import IstmoPanama from './IstmoPanama.tsx'
 import SimuladorDeriva from './SimuladorDeriva.tsx'
 import ColibriFlores from './ColibriFlores.tsx'
 import SimuladorPolillas from './SimuladorPolillas.tsx'
@@ -332,4 +333,9 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'sexual-juego': SexualJuego,
   'hardy-juego': HardyJuego,
   'simulador-deriva': SimuladorDeriva,
+  'especie-juego': EspecieJuego,
+  'aislamiento-juego': AislamientoJuego,
+  'alopatrica-juego': AlopatricaJuego,
+  'radiacion-juego': RadiacionJuego,
+  'istmo-panama': IstmoPanama,
 }

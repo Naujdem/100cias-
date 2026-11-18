@@ -433,3 +433,64 @@ export function HardyJuego() {
       cierre="En la naturaleza casi siempre actúa algún mecanismo: por eso las poblaciones evolucionan." />
   )
 }
+
+/* ═══ Tema 6 · Especiación ═══ */
+
+export function EspecieJuego() {
+  return (
+    <JuegoDecide titulo="¿Misma especie?" pregunta="¿Son de la misma especie?" instrucciones="Decide si cada pareja es de la misma especie según si pueden tener hijos fértiles." clave="cien:especie-mejor"
+      opciones={[o('si', 'Misma especie', '✅'), o('no', 'Especies distintas', '❌')]}
+      cartas={[
+        c('🐕', 'Un chihuahua y un gran danés', 'si', 'Se ven muy distintos, pero son la misma especie.'),
+        c('🫏', 'Un burro y una yegua (su cría, la mula, es estéril)', 'no', 'Su descendencia no es fértil.'),
+        c('🧍', 'Dos personas de continentes distintos', 'si', 'Todos los humanos somos Homo sapiens.'),
+        c('🦁', 'Un león y un tigre (en la naturaleza no se cruzan)', 'no', 'Solo se han cruzado en cautiverio y sus crías suelen ser estériles.'),
+        c('🐦', 'Dos pinzones de islas distintas que ya no se aparean', 'no', 'Si no se cruzan en la naturaleza, son especies distintas.'),
+      ]}
+      cierre="Lo que define la especie no es el aspecto, sino tener hijos fértiles juntos." />
+  )
+}
+
+export function AislamientoJuego() {
+  return (
+    <JuegoDecide titulo="Barreras reproductivas" pregunta="¿Qué barrera es?" instrucciones="Decide qué tipo de barrera impide que las dos especies tengan hijos fértiles." clave="cien:aislamiento-mejor"
+      opciones={[o('hab', 'De hábitat', '🏞️'), o('tiem', 'De tiempo', '📅'), o('con', 'De conducta', '🎶'), o('post', 'Híbrido estéril', '🚫')]}
+      cartas={[
+        c('🐸', 'Dos ranas cantan canciones distintas y las hembras solo responden a la suya', 'con', 'El cortejo no coincide.'),
+        c('🌸', 'Dos plantas florecen en meses distintos', 'tiem', 'Su polen nunca coincide.'),
+        c('🐍', 'Una serpiente vive en el agua y otra en el bosque seco', 'hab', 'No se encuentran.'),
+        c('🫏', 'El burro y la yegua tienen mulas que no se reproducen', 'post', 'La barrera actúa después de la fecundación.'),
+        c('🐦', 'Dos aves tienen bailes de cortejo diferentes', 'con', 'La hembra no reconoce al macho de la otra especie.'),
+        c('🐞', 'Dos insectos se reproducen uno de día y otro de noche', 'tiem', 'No coinciden en el tiempo.'),
+      ]}
+      cierre="Las barreras antes o después de la fecundación mantienen separadas a las especies." />
+  )
+}
+
+export function AlopatricaJuego() {
+  return (
+    <JuegoDecide titulo="¿Con o sin barrera?" pregunta="¿Alopátrica o simpátrica?" instrucciones="Decide si la especie nueva se formó con una barrera geográfica (alopátrica) o en el mismo lugar (simpátrica)." clave="cien:alopatrica-mejor"
+      opciones={[o('alo', 'Alopátrica', '⛰️'), o('sim', 'Simpátrica', '📍')]}
+      cartas={[
+        c('🦐', 'Camarones separados por el cierre del istmo de Panamá', 'alo', 'Una barrera de tierra separó el Caribe y el Pacífico.'),
+        c('🌾', 'Una planta duplica sus cromosomas y ya no se cruza con las demás', 'sim', 'Poliploidía, en el mismo lugar.'),
+        c('🐒', 'Monos separados por un río que se formó', 'alo', 'El río es la barrera.'),
+        c('🪰', 'Moscas que empiezan a vivir en otro árbol frutal del mismo huerto', 'sim', 'Cambio de hospedero sin barrera geográfica.'),
+        c('🌿', 'Frailejones aislados en páramos separados por valles cálidos', 'alo', 'Los valles funcionan como el mar entre islas.'),
+      ]}
+      cierre="Alopátrica: con barrera geográfica. Simpátrica: en el mismo lugar." />
+  )
+}
+
+export function RadiacionJuego() {
+  return (
+    <JuegoDecide titulo="Radiación adaptativa" pregunta="¿Es cierto?" instrucciones="Decide si cada frase sobre la radiación adaptativa es cierta o falsa." clave="cien:radiacion-mejor" opciones={VF}
+      cartas={[
+        c('🐦', 'Los pinzones de las Galápagos vienen de un antepasado común', 'v', 'Llegó del continente y se diversificó.'),
+        c('🌿', 'En los páramos hay más de cien especies de frailejones', 'v', 'Se diversificaron en pocos millones de años.'),
+        c('🏝️', 'La radiación adaptativa ocurre más en lugares llenos de competidores', 'f', 'Ocurre sobre todo donde hay nichos vacíos.'),
+        c('🦖', 'Tras la extinción de los dinosaurios, los mamíferos se diversificaron', 'v', 'Ocuparon los nichos que quedaron libres.'),
+      ]}
+      cierre="Un antepasado + muchos nichos vacíos = muchas especies nuevas." />
+  )
+}

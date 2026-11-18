@@ -176,6 +176,11 @@
         "poblacion-genes",
         "deriva",
         "seleccion-sexual"
+      ],
+      "especiacion": [
+        "especie",
+        "alopatrica",
+        "radiacion"
       ]
     },
     "nivelDibujo": "basico",
@@ -211,7 +216,8 @@
       "evidencias-evolucion": "Fósiles (con la Tatacoa) y anatomía comparada.",
       "seleccion-natural": "Ingredientes, la polilla moteada y la selección artificial (maíz).",
       "adaptaciones": "Qué es una adaptación, morfológicas (frailejón, colibríes), de conducta y camuflaje.",
-      "mecanismos-poblaciones": "Versión corta: poblaciones y alelos, el azar (deriva) y la selección sexual."
+      "mecanismos-poblaciones": "Versión corta: poblaciones y alelos, el azar (deriva) y la selección sexual.",
+      "especiacion": "Qué es una especie, especiación alopátrica (istmo de Panamá) y radiación adaptativa."
     }
   },
   {
@@ -443,6 +449,12 @@
         "deriva",
         "flujo",
         "seleccion-sexual"
+      ],
+      "especiacion": [
+        "especie",
+        "aislamiento",
+        "alopatrica",
+        "radiacion"
       ]
     },
     "nivelDibujo": "intermedio",
@@ -478,7 +490,8 @@
       "evidencias-evolucion": "Suma embriología y biogeografía.",
       "seleccion-natural": "Suma la selección que vemos hoy (antibióticos, plagas, pinzones).",
       "adaptaciones": "Suma las fisiológicas (cactus, rana dorada).",
-      "mecanismos-poblaciones": "Los cuatro mecanismos: mutación, deriva, flujo génico y selección sexual."
+      "mecanismos-poblaciones": "Los cuatro mecanismos: mutación, deriva, flujo génico y selección sexual.",
+      "especiacion": "Suma las barreras reproductivas."
     }
   },
   {
@@ -736,6 +749,13 @@
         "flujo",
         "seleccion-sexual",
         "hardy-weinberg"
+      ],
+      "especiacion": [
+        "especie",
+        "aislamiento",
+        "alopatrica",
+        "simpatrica",
+        "radiacion"
       ]
     },
     "nivelDibujo": "avanzado",
@@ -771,7 +791,8 @@
       "evidencias-evolucion": "Las cinco evidencias: suma la molecular.",
       "seleccion-natural": "Los cinco pasos: suma los tipos de selección.",
       "adaptaciones": "Los cinco pasos, con mimetismo mülleriano y aclimatación.",
-      "mecanismos-poblaciones": "Los seis pasos: suma el equilibrio de Hardy-Weinberg."
+      "mecanismos-poblaciones": "Los seis pasos: suma el equilibrio de Hardy-Weinberg.",
+      "especiacion": "Los cinco pasos: suma la especiación simpátrica (poliploidía, hibridación)."
     }
   }
 ]

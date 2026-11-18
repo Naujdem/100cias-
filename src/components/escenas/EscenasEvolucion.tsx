@@ -1068,3 +1068,147 @@ export function EscenaSexual({ fase }: { fase: string }) {
     </svg>
   )
 }
+
+/* ═══ Tema 6 · Especiación ═══════════════════════════════════════════════ */
+
+/* ── qué es una especie: caballo, burro y mula ────────────────────────── */
+
+const ESPECIE = ['cruce', 'mula', 'esteril', 'definicion']
+
+export function EscenaEspecie({ fase }: { fase: string }) {
+  const i = idx(ESPECIE, fase)
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label={`Concepto de especie: ${fase}`} className="h-full w-full">
+      {fondo('#f4f1ea')}
+      <g style={{ transition: suave, opacity: i === 3 ? 0.2 : 1 }}>
+        <T x={90} y={90} t="🐴" s={52} />
+        <T x={90} y={120} t="yegua" s={12} />
+        <T x={310} y={90} t="🫏" s={52} />
+        <T x={310} y={120} t="burro" s={12} />
+        <T x={200} y={80} t="+" s={30} />
+        <g style={ver(i >= 1)}>
+          <path d="M 200 100 V 150" stroke="#888" strokeWidth="2.5" markerEnd="url(#es-fl)" />
+          <T x={200} y={200} t="🐴" s={44} />
+          <T x={200} y={228} t="mula" s={13} c={MARRON} />
+        </g>
+        <g style={ver(i === 2)}>
+          <T x={290} y={205} t="✗ sin crías" s={14} c={ROJO} />
+          <T x={200} y={260} t="La mula es estéril: caballo y burro son especies distintas" s={12} />
+        </g>
+      </g>
+      <g style={ver(i === 3, 'none', 'scale(0.9)')}>
+        <rect x="40" y="120" width="320" height="90" rx="14" fill="#fff" stroke="#d8cfbd" strokeWidth="2" />
+        <T x={200} y={150} t="Especie" s={18} c={AZUL} />
+        <T x={200} y={175} t="individuos que pueden cruzarse en la naturaleza" s={11} peso={600} />
+        <T x={200} y={192} t="y tener hijos fértiles" s={11} peso={600} />
+      </g>
+      <Flecha id="es-fl" />
+    </svg>
+  )
+}
+
+/* ── especiación alopátrica: una cordillera divide la población ───────── */
+
+const ALOPATRICA = ['una', 'barrera', 'divergen', 'contacto']
+
+export function EscenaAlopatrica({ fase }: { fase: string }) {
+  const i = idx(ALOPATRICA, fase)
+  const cIzq = i >= 2 ? '#3f6fb8' : '#7a9a5a'
+  const cDer = i >= 2 ? '#c9702f' : '#7a9a5a'
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label={`Especiación alopátrica: ${fase}`} className="h-full w-full">
+      {fondo('#e9efe4')}
+      <rect x="-10" y="200" width="420" height="110" fill="#b8c99a" />
+      {/* montaña que sube y luego se erosiona */}
+      <path d="M 140 200 L 200 40 L 260 200 Z" fill="#8a7a66" style={{ transition: suave, transformOrigin: '200px 200px', transform: i === 0 ? 'scaleY(0)' : i === 3 ? 'scaleY(0.25)' : 'scaleY(1)' }} />
+      <path d="M 180 92 L 200 40 L 220 92 Z" fill="#f2f2f2" style={{ transition: suave, opacity: i === 1 || i === 2 ? 1 : 0 }} />
+      {Array.from({ length: 5 }, (_, k) => (
+        <Ave key={`i${k}`} x={i === 0 ? 60 + k * 60 : 40 + (k % 3) * 35} y={i === 0 ? 180 : 175 - Math.floor(k / 3) * 25} c={i === 0 ? '#7a9a5a' : cIzq} k={1.2} />
+      ))}
+      {Array.from({ length: 5 }, (_, k) => (
+        <g key={`d${k}`} style={{ transition: suave, opacity: i === 0 ? 0 : 1 }}>
+          <Ave x={290 + (k % 3) * 35} y={175 - Math.floor(k / 3) * 25} c={cDer} k={1.2} />
+        </g>
+      ))}
+      <g style={ver(i === 3)}>
+        <Ave x={190} y={185} c={cIzq} k={1.3} /><Ave x={225} y={185} c={cDer} k={1.3} />
+        <T x={208} y={168} t="✗" s={18} c={ROJO} />
+      </g>
+      <T x={200} y={270} t={['Una sola población de aves en un valle', 'Se levanta una cordillera: quedan separadas', 'Cada lado cambia por mutación, deriva y selección', 'Si vuelven a encontrarse, ya no se cruzan: dos especies'][i]} s={12} />
+    </svg>
+  )
+}
+
+/* ── especiación simpátrica por poliploidía ──────────────────────────── */
+
+const POLIPLOIDIA = ['normal', 'error', 'nueva', 'aislada']
+
+function Cromosomas({ x, y, n, c }: { x: number; y: number; n: number; c: string }) {
+  return (
+    <g transform={`translate(${x} ${y})`}>
+      <circle r="34" fill="#fff" stroke="#c9d2dc" strokeWidth="2" />
+      {Array.from({ length: n }, (_, k) => (
+        <rect key={k} x={-24 + (k % 4) * 13} y={-16 + Math.floor(k / 4) * 18} width="7" height="14" rx="3" fill={c} />
+      ))}
+    </g>
+  )
+}
+
+export function EscenaPoliploidia({ fase }: { fase: string }) {
+  const i = idx(POLIPLOIDIA, fase)
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label={`Poliploidía: ${fase}`} className="h-full w-full">
+      {fondo('#f2f0f6')}
+      <Cromosomas x={90} y={110} n={4} c={VERDE} />
+      <T x={90} y={165} t="planta 2n" s={12} />
+      <g style={ver(i >= 1)}>
+        <path d="M 130 110 H 170" stroke="#888" strokeWidth="2.5" markerEnd="url(#po-fl)" />
+        <T x={150} y={100} t="error" s={10} c={ROJO} />
+      </g>
+      <g style={ver(i >= 2)}>
+        <Cromosomas x={220} y={110} n={8} c={AZUL} />
+        <T x={220} y={165} t="planta 4n" s={12} c={AZUL} />
+      </g>
+      <g style={ver(i === 3)}>
+        <T x={310} y={110} t="✗" s={34} c={ROJO} />
+        <T x={310} y={150} t="no tiene hijos fértiles con la 2n" s={10} peso={700} />
+      </g>
+      <T x={200} y={240} t={['Una planta con dos juegos de cromosomas (2n)', 'En la meiosis los cromosomas no se separan', 'Nace una planta con cuatro juegos (4n)', 'Especie nueva en una generación, en el mismo lugar'][i]} s={12} />
+      <T x={200} y={262} t="Así se originaron el trigo, la papa y muchas plantas cultivadas" s={10} peso={600} c={MARRON} />
+      <Flecha id="po-fl" />
+    </svg>
+  )
+}
+
+/* ── radiación adaptativa: un antepasado, muchas especies ─────────────── */
+
+const RADIACION = ['antepasado', 'llegan', 'ramas', 'hoy']
+const RAMAS = [
+  { x: 60, pico: 'M 0 -8 Q 22 0 0 8 Z', t: 'semillas' },
+  { x: 140, pico: 'M 0 -4 L 26 0 L 0 4 Z', t: 'insectos' },
+  { x: 220, pico: 'M 0 -5 Q 26 2 0 5 Z', t: 'cactus' },
+  { x: 300, pico: 'M 0 -3 L 30 2 L 0 3 Z', t: 'larvas' },
+  { x: 360, pico: 'M 0 -6 Q 18 0 0 6 Z', t: 'hojas' },
+]
+
+export function EscenaRadiacion({ fase }: { fase: string }) {
+  const i = idx(RADIACION, fase)
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label={`Radiación adaptativa: ${fase}`} className="h-full w-full">
+      {fondo('#eef1ea')}
+      <g style={{ transition: suave, transform: i >= 2 ? 'translate(0, 70px) scale(0.6)' : 'none', transformOrigin: '200px 200px' }}>
+        <Pinzon x={210} y={200} pico={PICOS[0].d} />
+        <T x={200} y={245} t="antepasado del continente" s={12} />
+      </g>
+      <g style={ver(i === 1)}><T x={200} y={60} t="Llega a unas islas con muchos nichos vacíos" s={13} /></g>
+      {RAMAS.map((r, k) => (
+        <g key={r.t} style={{ transition: suave, opacity: i >= 2 ? (i === 3 || k < 3 ? 1 : 0) : 0 }}>
+          <path d={`M 200 230 Q ${(200 + r.x) / 2} 150 ${r.x} 110`} fill="none" stroke={MARRON} strokeWidth="3" />
+          <g transform={`translate(${r.x} 80) scale(0.6)`}><Pinzon x={0} y={0} pico={r.pico} /></g>
+          <T x={r.x} y={112} t={r.t} s={9} peso={700} />
+        </g>
+      ))}
+      <T x={200} y={285} t={['Una especie de pinzón en el continente', 'Coloniza islas sin competidores', 'Se divide en especies con picos distintos', 'Muchas especies, cada una con su nicho'][i]} s={12} />
+    </svg>
+  )
+}
