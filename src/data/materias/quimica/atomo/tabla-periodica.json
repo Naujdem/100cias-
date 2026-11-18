@@ -1,0 +1,692 @@
+{
+  "id": "tabla-periodica",
+  "materia": "quimica",
+  "area": "atomo",
+  "titulo": "La tabla periódica: historia y estructura",
+  "subtema": "Cómo se ordenan los elementos",
+  "orden": 114,
+  "etiqueta": "4",
+  "vistas": [
+    "ruta"
+  ],
+  "tituloVista": "Ruta de la tabla periódica",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Contar cómo se llegó a la tabla periódica actual.",
+    "Ubicar elementos por grupo, periodo y bloque.",
+    "Diferenciar metales, no metales y metaloides.",
+    "Reconocer las principales familias y elementos presentes en Colombia."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con el plan curricular de Ciencias Naturales 2025 y un texto de química general. A verificar: fechas (Döbereiner 1829, Newlands 1864, Mendeléiev 1869, galio 1875, germanio 1886, Moseley 1913, nombres de 2016), datos de minería en Colombia (Cerro Matoso, Paz de Río, Cerrejón, Muzo, Chivor) y la historia de la «platina del Pinto»."
+  ],
+  "bloques": [
+    {
+      "id": "historia-tabla",
+      "titulo": "Cómo se ordenaron los elementos",
+      "resumen": "De las tríadas de Döbereiner a la tabla de Mendeléiev, que dejó huecos para elementos por descubrir, y al orden por número atómico de Moseley.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "A comienzos del siglo XIX ya se conocían decenas de elementos y los químicos buscaban un orden. Döbereiner (1829) encontró grupos de tres elementos parecidos, las tríadas. Newlands (1864) notó que, al ordenarlos por masa, las propiedades se repetían cada ocho, como las notas musicales. Mendeléiev (1869) ordenó los 63 elementos conocidos por masa, pero puso juntos los de propiedades parecidas aunque tuviera que dejar huecos, y se atrevió a predecir cómo serían los elementos faltantes: el galio (1875) y el germanio (1886) confirmaron sus predicciones. En 1913, Moseley mostró que el orden correcto es por número atómico (protones). Esa es la ley periódica: las propiedades de los elementos se repiten periódicamente según su número atómico.",
+        "contexto": [
+          {
+            "titulo": "La apuesta de Mendeléiev",
+            "texto": "Predijo la masa, la densidad y el color del «eka-silicio». Cuando se descubrió el germanio, sus datos coincidieron casi exactamente."
+          },
+          {
+            "titulo": "Lothar Meyer",
+            "texto": "El alemán Lothar Meyer llegó a una tabla parecida casi al mismo tiempo, pero no hizo predicciones."
+          },
+          {
+            "titulo": "Hoy",
+            "texto": "La tabla tiene 118 elementos; los últimos cuatro se nombraron en 2016."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Mendeléiev ordenó los elementos y dejó huecos para los que faltaban.",
+            "Hoy se ordenan por número atómico."
+          ],
+          "media": [
+            "Tríadas (Döbereiner) y octavas (Newlands) fueron los primeros intentos.",
+            "Ley periódica: las propiedades se repiten según Z."
+          ],
+          "avanzada": [
+            "Moseley corrigió casos como telurio–yodo, que por masa quedaban al revés."
+          ]
+        },
+        "docente": {
+          "abrir": "Si te dieran 63 tarjetas con datos de elementos, ¿cómo las ordenarías?",
+          "actividad": "Juego de Mendeléiev: los estudiantes ordenan tarjetas de elementos con masa y propiedades, a las que se les quitaron dos, y predicen cómo serían las que faltan.",
+          "errores": [
+            "Creer que Mendeléiev ordenó por número atómico.",
+            "Pensar que la tabla se hizo de una vez y no fue cambiando."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Buscando un orden",
+          "visual": {
+            "tipo": "escena",
+            "id": "tp-historia",
+            "fases": [
+              {
+                "id": "triadas",
+                "nombre": "Tríadas",
+                "texto": "Döbereiner: en grupos de tres elementos parecidos, la masa del medio es el promedio.",
+                "nivel": "intermedio"
+              },
+              {
+                "id": "octavas",
+                "nombre": "Octavas",
+                "texto": "Newlands: cada ocho elementos se repiten las propiedades.",
+                "nivel": "intermedio"
+              },
+              {
+                "id": "mendeleiev",
+                "nombre": "Mendeléiev",
+                "texto": "Dejó huecos y predijo elementos que se descubrieron después."
+              },
+              {
+                "id": "moseley",
+                "nombre": "Moseley",
+                "texto": "El orden correcto es por número atómico: la ley periódica."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Por qué la tabla de Mendeléiev convenció a los científicos?",
+            "opciones": [
+              "Porque predijo elementos que luego se descubrieron",
+              "Porque ordenó por número atómico",
+              "Porque tenía 118 elementos",
+              "Porque era la primera lista de elementos"
+            ],
+            "correcta": 0,
+            "explicacion": "El galio y el germanio tenían las propiedades que él había predicho."
+          }
+        }
+      ],
+      "juego": "historia-tabla-juego",
+      "preguntas": [
+        {
+          "id": "qt-hi-1",
+          "enunciado": "¿Qué hizo Mendeléiev con los elementos que todavía no se conocían?",
+          "opciones": [
+            "Les dejó espacios y predijo sus propiedades",
+            "Los ignoró",
+            "Los inventó",
+            "Los puso al final de la tabla"
+          ],
+          "correcta": 0,
+          "explicacion": "El eka-aluminio resultó ser el galio."
+        },
+        {
+          "id": "qt-hi-2",
+          "enunciado": "¿Con qué criterio se ordena la tabla periódica actual?",
+          "opciones": [
+            "Por número atómico",
+            "Por masa atómica",
+            "Por orden alfabético",
+            "Por año de descubrimiento"
+          ],
+          "correcta": 0,
+          "explicacion": "Moseley mostró en 1913 que el orden es por número de protones."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "estructura",
+      "titulo": "Grupos, periodos y bloques",
+      "resumen": "Las filas son periodos (número de niveles) y las columnas, grupos (electrones de valencia); la tabla se divide en bloques s, p, d y f.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "requiere": [
+        "historia-tabla"
+      ],
+      "ficha": {
+        "idea": "La tabla tiene 7 filas horizontales, llamadas periodos, y 18 columnas, llamadas grupos o familias. El número del periodo indica cuántos niveles de electrones tiene el átomo. Los elementos de un mismo grupo tienen la misma cantidad de electrones de valencia y por eso se comportan de forma parecida. Las dos filas que van aparte, abajo, son los lantánidos y los actínidos; se sacan para que la tabla no quede demasiado ancha. Según el último subnivel que se llena, la tabla se divide en bloques: s (grupos 1 y 2), p (13 a 18), d (3 a 12, los de transición) y f (lantánidos y actínidos).",
+        "contexto": [
+          {
+            "titulo": "Del 1 al 18",
+            "texto": "Antes los grupos se numeraban con números romanos y letras (IA, IIA… VIIIA). Hoy la IUPAC recomienda del 1 al 18."
+          },
+          {
+            "titulo": "La configuración da la dirección",
+            "texto": "El sodio termina en 3s¹: periodo 3, bloque s, grupo 1. El cloro termina en 3p⁵: periodo 3, bloque p, grupo 17."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Periodo = fila (7). Grupo = columna (18).",
+            "Mismo grupo → propiedades parecidas."
+          ],
+          "media": [
+            "Periodo = número de niveles; grupo = electrones de valencia (grupos 1, 2 y 13–18).",
+            "Bloques s, p, d y f."
+          ],
+          "avanzada": [
+            "Con la configuración se ubica el elemento: el último nivel da el periodo y el último subnivel, el bloque."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Qué tienen en común los elementos de una misma columna?",
+          "actividad": "Con la tabla interactiva, cada grupo busca tres elementos del mismo grupo y tres del mismo periodo y explica qué comparten.",
+          "errores": [
+            "Confundir grupo (columna) con periodo (fila).",
+            "Pensar que los lantánidos y actínidos no pertenecen a ningún periodo."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Filas y columnas",
+          "visual": {
+            "tipo": "escena",
+            "id": "tp-estructura",
+            "fases": [
+              {
+                "id": "periodos",
+                "nombre": "Periodos",
+                "texto": "Las filas. El número del periodo es el número de niveles con electrones."
+              },
+              {
+                "id": "grupos",
+                "nombre": "Grupos",
+                "texto": "Las columnas. Los del mismo grupo tienen los mismos electrones de valencia."
+              },
+              {
+                "id": "configuracion",
+                "nombre": "Ubicar con la configuración",
+                "texto": "El final de la configuración dice el periodo y el grupo.",
+                "nivel": "intermedio"
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre la configuración electrónica",
+            "tema": "electrones-atomo",
+            "bloque": "configuracion"
+          }
+        },
+        {
+          "titulo": "Explora la tabla",
+          "visual": {
+            "tipo": "diagrama",
+            "id": "tabla-periodica"
+          }
+        },
+        {
+          "titulo": "Cuatro bloques",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🟧",
+                "titulo": "Bloque s",
+                "texto": "Grupos 1 y 2 (y el helio)."
+              },
+              {
+                "icono": "🟦",
+                "titulo": "Bloque p",
+                "texto": "Grupos 13 a 18."
+              },
+              {
+                "icono": "🟨",
+                "titulo": "Bloque d",
+                "texto": "Grupos 3 a 12: transición."
+              },
+              {
+                "icono": "🟩",
+                "titulo": "Bloque f",
+                "texto": "Lantánidos y actínidos."
+              }
+            ]
+          },
+          "nivel": "intermedio"
+        }
+      ],
+      "diagrama": "tabla-periodica",
+      "juego": "grupo-periodo-juego",
+      "preguntas": [
+        {
+          "id": "qt-es-1",
+          "enunciado": "El magnesio está en el periodo 3 y el grupo 2. ¿Qué significa el periodo 3?",
+          "opciones": [
+            "Que tiene 3 niveles de electrones",
+            "Que tiene 3 protones",
+            "Que tiene 3 electrones de valencia",
+            "Que es el tercer elemento"
+          ],
+          "correcta": 0,
+          "explicacion": "El periodo indica el número de niveles ocupados."
+        },
+        {
+          "id": "qt-es-2",
+          "enunciado": "¿Por qué el sodio y el potasio tienen propiedades parecidas?",
+          "opciones": [
+            "Están en el mismo grupo: tienen 1 electrón de valencia",
+            "Están en el mismo periodo",
+            "Tienen la misma masa",
+            "Tienen el mismo número de protones"
+          ],
+          "correcta": 0,
+          "explicacion": "El grupo agrupa elementos con la misma valencia."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "metales",
+      "titulo": "Metales, no metales y metaloides",
+      "resumen": "Los metales (izquierda) brillan, conducen y se deforman; los no metales (derecha) no; los metaloides están en medio.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "basico",
+      "requiere": [
+        "estructura"
+      ],
+      "ficha": {
+        "idea": "La mayoría de los elementos son metales y están a la izquierda y en el centro de la tabla. Los metales tienen brillo, conducen bien el calor y la electricidad, se pueden estirar en hilos (dúctiles) y laminar (maleables), y casi todos son sólidos; el mercurio es líquido. Tienden a ceder electrones. Los no metales están a la derecha: muchos son gases, los sólidos son opacos y quebradizos y casi no conducen; tienden a ganar o compartir electrones. Entre ambos, en una línea en escalera, están los metaloides (boro, silicio, germanio, arsénico, antimonio, telurio), con propiedades intermedias; algunos son semiconductores.",
+        "contexto": [
+          {
+            "titulo": "El hidrógeno, un caso aparte",
+            "texto": "Está en el grupo 1 por su configuración, pero es un no metal gaseoso."
+          },
+          {
+            "titulo": "Semiconductores",
+            "texto": "El silicio conduce más o menos según la temperatura y las impurezas: por eso sirve para chips y paneles solares."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Metales: brillan, conducen, se doblan.",
+            "No metales: muchos son gases; los sólidos se quiebran."
+          ],
+          "media": [
+            "Metaloides: en la escalera, propiedades intermedias.",
+            "Metales ceden electrones; no metales ganan o comparten."
+          ],
+          "avanzada": [
+            "Esta tendencia se relaciona con el carácter metálico (tema 5)."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Qué tienen en común una olla, un cable y un anillo?",
+          "actividad": "Probar con una pila, un bombillo y cables qué materiales del salón conducen: clavo, papel aluminio, lápiz (grafito), borrador, moneda.",
+          "errores": [
+            "Pensar que todos los metales son sólidos.",
+            "Creer que el hidrógeno es un metal porque está en el grupo 1."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Qué elemento es un metal líquido a temperatura ambiente?",
+            "opciones": [
+              "Mercurio",
+              "Bromo",
+              "Agua",
+              "Sodio"
+            ],
+            "correcta": 0,
+            "explicacion": "El bromo también es líquido, pero es un no metal."
+          }
+        },
+        {
+          "titulo": "Tres clases de elementos",
+          "visual": {
+            "tipo": "escena",
+            "id": "tp-metales",
+            "fases": [
+              {
+                "id": "metal",
+                "nombre": "Metales",
+                "texto": "Brillan, conducen, se doblan y se estiran."
+              },
+              {
+                "id": "nometal",
+                "nombre": "No metales",
+                "texto": "Muchos son gases; los sólidos son opacos y quebradizos."
+              },
+              {
+                "id": "metaloide",
+                "nombre": "Metaloides",
+                "texto": "Propiedades intermedias; el silicio es semiconductor."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre el carácter metálico",
+            "tema": "propiedades-periodicas"
+          }
+        }
+      ],
+      "juego": "metal-juego",
+      "preguntas": [
+        {
+          "id": "qt-me-1",
+          "enunciado": "¿Qué propiedad NO es típica de los metales?",
+          "opciones": [
+            "Ser quebradizos",
+            "Tener brillo",
+            "Conducir la electricidad",
+            "Ser maleables"
+          ],
+          "correcta": 0,
+          "explicacion": "Los no metales sólidos son los quebradizos."
+        },
+        {
+          "id": "qt-me-2",
+          "enunciado": "¿Dónde están los metaloides en la tabla?",
+          "opciones": [
+            "En la línea en escalera entre metales y no metales",
+            "En el grupo 1",
+            "Abajo, con los lantánidos",
+            "En el grupo 18"
+          ],
+          "correcta": 0,
+          "explicacion": "B, Si, Ge, As, Sb y Te."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "familias",
+      "titulo": "Familias de la tabla",
+      "resumen": "Alcalinos, alcalinotérreos, halógenos y gases nobles son grupos con nombre propio y comportamientos típicos.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "basico",
+      "requiere": [
+        "estructura"
+      ],
+      "ficha": {
+        "idea": "Algunos grupos tienen nombre propio. Los metales alcalinos (grupo 1: litio, sodio, potasio…) tienen un electrón de valencia y son tan reactivos que se guardan en aceite; con el agua producen hidrógeno y calor. Los alcalinotérreos (grupo 2: berilio, magnesio, calcio…) tienen dos electrones de valencia y forman la cal y los huesos. Los halógenos (grupo 17: flúor, cloro, bromo, yodo) tienen siete y forman sales con los metales. Los gases nobles (grupo 18: helio, neón, argón…) tienen su última capa llena y casi no reaccionan. En el centro están los metales de transición (hierro, cobre, oro), y abajo los lantánidos y actínidos (como el uranio).",
+        "contexto": [
+          {
+            "titulo": "Por qué se parecen",
+            "texto": "Cada familia comparte el número de electrones de valencia: por eso reacciona de modo parecido."
+          },
+          {
+            "titulo": "Del laboratorio a la casa",
+            "texto": "Litio en las baterías, calcio en la cal, cloro en el agua, flúor en la crema dental, neón en los avisos."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Alcalinos (1), alcalinotérreos (2), halógenos (17), gases nobles (18)."
+          ],
+          "media": [
+            "Cada familia tiene la misma cantidad de electrones de valencia.",
+            "Los gases nobles casi no reaccionan: su última capa está llena."
+          ],
+          "avanzada": [
+            "Lantánidos (tierras raras): imanes y pantallas. Actínidos: radiactivos, como el uranio."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué el helio de los globos no explota y el hidrógeno sí?",
+          "actividad": "Cada grupo de estudiantes adopta una familia y prepara un cartel con tres elementos, sus usos y por qué se parecen.",
+          "errores": [
+            "Creer que los gases nobles no existen en compuestos porque no sirven.",
+            "Confundir alcalinos con alcalinotérreos."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Cuatro familias famosas",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "💥",
+                "titulo": "Alcalinos (1)",
+                "texto": "1 e⁻ de valencia; muy reactivos."
+              },
+              {
+                "icono": "🦴",
+                "titulo": "Alcalinotérreos (2)",
+                "texto": "2 e⁻; calcio de huesos y cal."
+              },
+              {
+                "icono": "🧪",
+                "titulo": "Halógenos (17)",
+                "texto": "7 e⁻; forman sales."
+              },
+              {
+                "icono": "🎈",
+                "titulo": "Gases nobles (18)",
+                "texto": "Capa llena; casi no reaccionan."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Extremos de la tabla",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "💥",
+              "titulo": "Grupo 1",
+              "puntos": [
+                "Les sobra 1 electrón",
+                "Lo ceden fácilmente",
+                "Muy reactivos"
+              ]
+            },
+            "der": {
+              "icono": "🎈",
+              "titulo": "Grupo 18",
+              "puntos": [
+                "Capa completa",
+                "No ceden ni ganan",
+                "Casi no reaccionan"
+              ]
+            }
+          }
+        },
+        {
+          "titulo": "Más allá de los cuatro",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🔩",
+                "titulo": "Transición",
+                "texto": "Hierro, cobre, oro, plata: los metales de uso diario."
+              },
+              {
+                "icono": "🧲",
+                "titulo": "Lantánidos",
+                "texto": "Imanes de parlantes y motores eléctricos."
+              },
+              {
+                "icono": "☢️",
+                "titulo": "Actínidos",
+                "texto": "Uranio y plutonio, radiactivos."
+              }
+            ]
+          },
+          "nivel": "intermedio"
+        }
+      ],
+      "juego": "familia-juego",
+      "preguntas": [
+        {
+          "id": "qt-fa-1",
+          "enunciado": "¿Por qué los gases nobles casi no reaccionan?",
+          "opciones": [
+            "Porque tienen su última capa de electrones llena",
+            "Porque son gases",
+            "Porque no tienen electrones",
+            "Porque son muy pesados"
+          ],
+          "correcta": 0,
+          "explicacion": "No necesitan ganar, perder ni compartir electrones."
+        },
+        {
+          "id": "qt-fa-2",
+          "enunciado": "¿Cuántos electrones de valencia tienen los halógenos?",
+          "opciones": [
+            "7",
+            "1",
+            "2",
+            "8"
+          ],
+          "correcta": 0,
+          "explicacion": "Están en el grupo 17: les falta uno para completar 8."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "colombia",
+      "titulo": "Elementos de Colombia",
+      "resumen": "Oro, platino, níquel, carbón, sal y esmeraldas: la tabla periódica también está en el territorio.",
+      "anio": 5,
+      "etiqueta": "Paso 5",
+      "nivel": "basico",
+      "requiere": [
+        "estructura"
+      ],
+      "ficha": {
+        "idea": "Muchos elementos de la tabla se extraen o se usan en Colombia. El oro y el platino salen de los ríos del Chocó y de minas de Antioquia, Bolívar y otros departamentos; el platino, de hecho, llegó a Europa en el siglo XVIII como la «platina del Pinto», de la Nueva Granada. El níquel se extrae en Cerro Matoso (Córdoba) y el hierro en Paz de Río (Boyacá); el carbón, en el Cerrejón (La Guajira) y en el altiplano. La sal de Zipaquirá, Nemocón y Manaure es cloruro de sodio. Las esmeraldas de Muzo y Chivor son un mineral de berilio y aluminio, y su verde se debe a trazas de cromo. La minería trae recursos, pero también impactos en los ríos, los suelos y las comunidades.",
+        "contexto": [
+          {
+            "titulo": "Saberes antiguos",
+            "texto": "Los pueblos precolombinos trabajaron el oro y la tumbaga (oro con cobre) con técnicas como la cera perdida; el Museo del Oro guarda miles de piezas."
+          },
+          {
+            "titulo": "El otro lado",
+            "texto": "La minería ilegal de oro usa mercurio, que contamina los ríos y entra en las cadenas alimentarias."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Colombia tiene oro, platino, níquel, carbón, sal y esmeraldas."
+          ],
+          "media": [
+            "La sal es cloruro de sodio; el verde de la esmeralda viene del cromo.",
+            "La minería trae beneficios e impactos ambientales."
+          ],
+          "avanzada": [
+            "Discutir un caso de minería de la región con varias voces: empresa, comunidad, ambiente."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Qué elementos de la tabla hay en tu casa, tu vereda o tu municipio?",
+          "actividad": "Mapa de Colombia en el tablero: cada estudiante ubica un elemento con una ficha de la tabla y un dato de su extracción o uso.",
+          "errores": [
+            "Pensar que la esmeralda es un elemento.",
+            "Creer que la sal de cocina es solo sodio."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Explora: vista Colombia",
+          "visual": {
+            "tipo": "diagrama",
+            "id": "tabla-periodica"
+          }
+        },
+        {
+          "titulo": "De la tierra a la tabla",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🥇",
+                "titulo": "Oro y platino",
+                "texto": "Ríos del Chocó y minas de Antioquia."
+              },
+              {
+                "icono": "🔩",
+                "titulo": "Níquel y hierro",
+                "texto": "Cerro Matoso y Paz de Río."
+              },
+              {
+                "icono": "⚫",
+                "titulo": "Carbono",
+                "texto": "Carbón del Cerrejón."
+              },
+              {
+                "icono": "🧂",
+                "titulo": "Sodio y cloro",
+                "texto": "Sal de Zipaquirá y Manaure."
+              },
+              {
+                "icono": "💚",
+                "titulo": "Berilio y cromo",
+                "texto": "Las esmeraldas de Muzo y Chivor."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "El costo del oro",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "☠️",
+            "valor": "mercurio en los ríos",
+            "texto": "La minería ilegal de oro contamina el agua y los peces."
+          },
+          "atajo": {
+            "texto": "Más sobre la contaminación por mercurio",
+            "tema": "contaminacion"
+          }
+        }
+      ],
+      "diagrama": "tabla-periodica",
+      "juego": "colombia-elementos-juego",
+      "preguntas": [
+        {
+          "id": "qt-co-1",
+          "enunciado": "¿Qué elemento le da el color verde a la esmeralda colombiana?",
+          "opciones": [
+            "Cromo",
+            "Berilio",
+            "Oro",
+            "Cobre"
+          ],
+          "correcta": 0,
+          "explicacion": "Trazas de cromo dentro del mineral de berilio y aluminio."
+        },
+        {
+          "id": "qt-co-2",
+          "enunciado": "¿De qué elementos está hecha la sal de Zipaquirá?",
+          "opciones": [
+            "Sodio y cloro",
+            "Solo sodio",
+            "Calcio y carbono",
+            "Hierro y níquel"
+          ],
+          "correcta": 0,
+          "explicacion": "Es cloruro de sodio, NaCl."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}
