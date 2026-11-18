@@ -377,3 +377,8 @@ Hooke usa la reconstrucción de Rita Greer (2004, Free Art License, Wikimedia Co
 ## Área 2 · Tema 3 «Replicación del ADN» (17 nov)
 - `replicacion-adn.json` (orden 23, ruta de 5 pasos): para qué se copia (fase S, atajo al ciclo celular), la horquilla (Explora: `arma-helice`), semiconservativa (desde 9°, atajo a Meselson y Stahl), las enzimas (11°: primasa, adelantada/rezagada, Okazaki, ligasa) y errores y corrección (desde 9°, atajo a mutaciones).
 - Escenas en `escenas/EscenasReplicacion.tsx` (`para-que-copiar`, `horquilla`, `modelos-replicacion`, `enzimas-replicacion`, `errores-replicacion`); juegos en `diagramas/JuegosReplicacion.tsx`.
+
+## Área 2 · Tema 4 «Expresión génica» (17 nov)
+- `expresion-genica.json` (orden 24, ruta de 6 pasos): del gen a la proteína, transcripción (Explora: `transcribe` = ArmaHelice en modo ARN), código genético (Explora: `rueda-codones`), traducción, genes encendidos y apagados (desde 9°) e intrones y exones (11°).
+- Tabla del código genético en `src/lib/codigoGenetico.ts` (función `traducir`). Escenas en `escenas/EscenasExpresion.tsx`; juegos en `diagramas/JuegosExpresion.tsx`.
+- La síntesis de proteínas del área 1 queda explicada aquí a fondo.

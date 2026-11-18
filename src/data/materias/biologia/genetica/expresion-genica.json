@@ -1,0 +1,745 @@
+{
+  "id": "expresion-genica",
+  "materia": "biologia",
+  "area": "genetica",
+  "titulo": "Expresión génica",
+  "subtema": "Del gen a la proteína",
+  "orden": 24,
+  "etiqueta": "4",
+  "vistas": [
+    "ruta"
+  ],
+  "tituloVista": "Ruta de la expresión génica",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Explicar el flujo ADN → ARN → proteína.",
+    "Describir la transcripción y la traducción.",
+    "Usar el código genético para traducir un ARNm."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con un texto de genética de bachillerato. Tabla del código genético estándar en src/lib/codigoGenetico.ts."
+  ],
+  "bloques": [
+    {
+      "id": "dogma",
+      "titulo": "Del gen a la proteína",
+      "resumen": "La información fluye del ADN al ARN y del ARN a las proteínas, que hacen casi todo el trabajo de la célula.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "Un gen tiene la instrucción para fabricar una proteína. Primero el gen se copia en ARN mensajero (transcripción, en el núcleo) y luego el ribosoma lee ese ARN y une aminoácidos para formar la proteína (traducción, en el citoplasma). Este flujo ADN → ARN → proteína se conoce como el dogma central de la biología molecular.",
+        "contexto": [
+          {
+            "titulo": "¿Para qué tantas proteínas?",
+            "texto": "Las proteínas son enzimas, forman los músculos, llevan oxígeno (hemoglobina), defienden el cuerpo (anticuerpos) y mucho más."
+          },
+          {
+            "titulo": "Expresión génica",
+            "texto": "Decir que un gen «se expresa» es decir que se está usando: se transcribe y se traduce."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "ADN → ARN → proteína.",
+            "Transcripción: del ADN al ARN (núcleo).",
+            "Traducción: del ARN a la proteína (ribosoma)."
+          ],
+          "media": [
+            "Las proteínas son cadenas de aminoácidos que se pliegan."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Cómo se convierte una instrucción escrita en algo que funciona?",
+          "actividad": "Usar la analogía de una receta guardada en una biblioteca: se fotocopia (ARN) y se cocina en otra parte (ribosoma).",
+          "errores": [
+            "Creer que el ADN se convierte en proteína directamente.",
+            "Pensar que los genes «son» las características."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "ADN → ARN → proteína",
+          "visual": {
+            "tipo": "escena",
+            "id": "dogma",
+            "fases": [
+              {
+                "id": "gen",
+                "nombre": "El gen",
+                "texto": "En el núcleo, un gen del ADN tiene la instrucción para una proteína."
+              },
+              {
+                "id": "arnm",
+                "nombre": "La copia",
+                "texto": "El gen se copia en una molécula de ARN mensajero: es la transcripción."
+              },
+              {
+                "id": "ribosoma",
+                "nombre": "Al ribosoma",
+                "texto": "El ARNm sale del núcleo y llega a un ribosoma, en el citoplasma."
+              },
+              {
+                "id": "proteina",
+                "nombre": "La proteína",
+                "texto": "El ribosoma lee el ARNm y une aminoácidos en el orden indicado: es la traducción. La cadena se pliega y forma la proteína."
+              },
+              {
+                "id": "funcion",
+                "nombre": "Para qué sirve",
+                "texto": "Las proteínas hacen casi todo el trabajo de la célula."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre esto: los ribosomas",
+            "tema": "celula-eucariota",
+            "bloque": "ribosomas"
+          }
+        }
+      ],
+      "juego": "dogma-juego",
+      "preguntas": [
+        {
+          "id": "exp-do-1",
+          "enunciado": "¿Cuál es el orden en que fluye la información genética?",
+          "opciones": [
+            "ADN → ARN → proteína",
+            "Proteína → ARN → ADN",
+            "ARN → ADN → proteína",
+            "ADN → proteína → ARN"
+          ],
+          "correcta": 0,
+          "explicacion": "El gen (ADN) se copia en ARN y el ARN se traduce en proteína."
+        },
+        {
+          "id": "exp-do-2",
+          "enunciado": "¿Dónde ocurre la traducción?",
+          "opciones": [
+            "En los ribosomas, en el citoplasma",
+            "Dentro del núcleo, en el ADN",
+            "En la membrana celular",
+            "En las mitocondrias, siempre"
+          ],
+          "correcta": 0,
+          "explicacion": "El ARNm sale del núcleo y el ribosoma lo traduce."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "transcripcion",
+      "titulo": "La transcripción",
+      "resumen": "La ARN polimerasa abre un gen, lee una hebra y arma una copia de ARN mensajero que sale del núcleo.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "nucleo": true,
+      "requiere": [
+        "dogma"
+      ],
+      "ficha": {
+        "idea": "En la transcripción, la ARN polimerasa abre el ADN en la zona de un gen, usa una de las hebras como molde y va poniendo nucleótidos de ARN complementarios: frente a A pone U, frente a T pone A, frente a G pone C y frente a C pone G. Al terminar, el ARN mensajero se suelta, el ADN se cierra y el ARNm sale del núcleo por un poro.",
+        "contexto": [
+          {
+            "titulo": "Solo un gen",
+            "texto": "A diferencia de la replicación, no se copia todo el ADN: solo el gen que se necesita, y muchas veces."
+          },
+          {
+            "titulo": "Promotor",
+            "texto": "La ARN polimerasa reconoce dónde empieza un gen gracias a una zona llamada promotor."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "La transcripción copia un gen en ARN mensajero.",
+            "La hace la ARN polimerasa, en el núcleo.",
+            "En el ARN, frente a A va U."
+          ],
+          "media": [
+            "Solo una hebra del ADN sirve de molde.",
+            "La ARN polimerasa empieza en el promotor."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿En qué se parece y en qué se diferencia copiar un gen de copiar todo el ADN?",
+          "actividad": "Usar «Transcribe» en parejas: uno dicta la hebra molde y el otro arma el ARN.",
+          "errores": [
+            "Poner T en el ARN.",
+            "Creer que se copian las dos hebras.",
+            "Confundir transcripción con replicación."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Copiar un gen",
+          "visual": {
+            "tipo": "escena",
+            "id": "transcripcion",
+            "fases": [
+              {
+                "id": "gen",
+                "nombre": "El gen",
+                "texto": "Un gen está dentro del ADN, en el núcleo."
+              },
+              {
+                "id": "abre",
+                "nombre": "Se abre",
+                "texto": "La ARN polimerasa se pega al inicio del gen y separa las dos hebras."
+              },
+              {
+                "id": "copia",
+                "nombre": "Se copia",
+                "texto": "Usa una hebra como molde y va armando el ARN: frente a A pone U, frente a T pone A, G con C."
+              },
+              {
+                "id": "suelta",
+                "nombre": "Se suelta",
+                "texto": "Al final del gen, el ARN se suelta y el ADN se vuelve a cerrar."
+              },
+              {
+                "id": "sale",
+                "nombre": "Sale",
+                "texto": "El ARN mensajero sale del núcleo por un poro y va hacia los ribosomas."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Replicación y transcripción",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "📋",
+              "titulo": "Replicación",
+              "puntos": [
+                "Copia todo el ADN",
+                "Hace ADN (con T)",
+                "Antes de dividirse"
+              ]
+            },
+            "der": {
+              "icono": "📨",
+              "titulo": "Transcripción",
+              "puntos": [
+                "Copia un gen",
+                "Hace ARN (con U)",
+                "Cuando se necesita la proteína"
+              ]
+            }
+          }
+        }
+      ],
+      "juego": "transcripcion-juego",
+      "diagrama": "transcribe",
+      "preguntas": [
+        {
+          "id": "exp-tr-1",
+          "enunciado": "Si la hebra molde del ADN dice T A C G, ¿cómo es el ARN?",
+          "opciones": [
+            "A U G C",
+            "A T G C",
+            "T A C G",
+            "U A C G"
+          ],
+          "correcta": 0,
+          "explicacion": "Frente a T va A, frente a A va U, frente a C va G y frente a G va C."
+        },
+        {
+          "id": "exp-tr-2",
+          "enunciado": "¿Qué enzima hace la transcripción?",
+          "opciones": [
+            "La ARN polimerasa",
+            "La ADN polimerasa",
+            "La helicasa",
+            "La ligasa"
+          ],
+          "correcta": 0,
+          "explicacion": "La ARN polimerasa abre el gen y arma el ARN."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "codigo",
+      "titulo": "El código genético",
+      "resumen": "El ARNm se lee de a tres letras: cada codón indica un aminoácido. Hay 64 codones, 20 aminoácidos, un inicio y tres paradas.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "basico",
+      "requiere": [
+        "transcripcion"
+      ],
+      "ficha": {
+        "idea": "El mensaje del ARNm se lee en grupos de tres bases, los codones. Cada codón indica un aminoácido; hay 64 codones y solo 20 aminoácidos, así que varios codones indican el mismo (el código es redundante). AUG marca el inicio (metionina) y UAA, UAG y UGA marcan el final. El código es casi el mismo en todos los seres vivos.",
+        "contexto": [
+          {
+            "titulo": "¿Por qué de a tres?",
+            "texto": "Con 4 letras de a una habría 4 palabras; de a dos, 16; de a tres, 64: suficientes para 20 aminoácidos."
+          },
+          {
+            "titulo": "Universal",
+            "texto": "Una bacteria puede leer un gen humano y fabricar la proteína: así se produce la insulina para personas con diabetes."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Un codón son tres bases del ARNm.",
+            "Cada codón indica un aminoácido.",
+            "AUG es el inicio; UAA, UAG y UGA son de parada."
+          ],
+          "media": [
+            "Hay 64 codones y 20 aminoácidos: el código es redundante."
+          ],
+          "avanzada": [
+            "El código es casi universal en los seres vivos."
+          ]
+        },
+        "docente": {
+          "abrir": "Con un alfabeto de 4 letras, ¿cuántas palabras de 3 letras puedes formar?",
+          "actividad": "Usar la rueda: cada estudiante traduce un ARNm corto y comprueba si llega a un codón de parada.",
+          "errores": [
+            "Leer la rueda de afuera hacia adentro.",
+            "Creer que cada aminoácido tiene un solo codón."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "El ARN tiene 4 letras y hay 20 aminoácidos. ¿Cuántas letras debe tener cada «palabra» como mínimo?",
+            "opciones": [
+              "3: así hay 64 combinaciones",
+              "1: cada letra un aminoácido",
+              "2: así hay 16 combinaciones",
+              "20: una por aminoácido"
+            ],
+            "correcta": 0,
+            "explicacion": "4 × 4 × 4 = 64, suficientes para 20 aminoácidos."
+          }
+        },
+        {
+          "titulo": "Leer de a tres",
+          "visual": {
+            "tipo": "escena",
+            "id": "lectura-codones",
+            "fases": [
+              {
+                "id": "letras",
+                "nombre": "Las letras",
+                "texto": "El ARNm es una fila de bases."
+              },
+              {
+                "id": "tripletes",
+                "nombre": "Los codones",
+                "texto": "Se lee de a tres, sin espacios: cada grupo de tres es un codón."
+              },
+              {
+                "id": "traduce",
+                "nombre": "Los aminoácidos",
+                "texto": "Cada codón indica un aminoácido."
+              },
+              {
+                "id": "inicio-fin",
+                "nombre": "Inicio y fin",
+                "texto": "La lectura empieza en AUG y termina en un codón de parada."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre esto: cómo se descifró",
+            "tema": "historia-genetica",
+            "bloque": "codigo-genetico"
+          }
+        }
+      ],
+      "juego": "codigo-genetico-juego",
+      "diagrama": "rueda-codones",
+      "preguntas": [
+        {
+          "id": "exp-co-1",
+          "enunciado": "¿Qué aminoácido indica el codón AUG?",
+          "opciones": [
+            "Metionina, y marca el inicio",
+            "Ninguno: es de parada",
+            "Fenilalanina",
+            "Glicina"
+          ],
+          "correcta": 0,
+          "explicacion": "AUG es el codón de inicio y codifica metionina."
+        },
+        {
+          "id": "exp-co-2",
+          "enunciado": "¿Por qué se dice que el código genético es redundante?",
+          "opciones": [
+            "Porque varios codones indican el mismo aminoácido",
+            "Porque cada codón tiene dos significados",
+            "Porque se repite igual en cada gen",
+            "Porque tiene más aminoácidos que codones"
+          ],
+          "correcta": 0,
+          "explicacion": "Hay 64 codones para 20 aminoácidos."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "traduccion",
+      "titulo": "La traducción",
+      "resumen": "En el ribosoma, los ARN de transferencia traen los aminoácidos según los codones y se unen en una cadena.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "basico",
+      "nucleo": true,
+      "requiere": [
+        "codigo"
+      ],
+      "ficha": {
+        "idea": "En la traducción, el ribosoma se pega al ARNm y busca el codón de inicio AUG. Los ARN de transferencia (ARNt) traen los aminoácidos: cada uno tiene un anticodón que encaja con un codón. El ribosoma une los aminoácidos y avanza codón por codón hasta llegar a uno de parada; entonces suelta la cadena, que se pliega y forma la proteína.",
+        "contexto": [
+          {
+            "titulo": "Anticodón",
+            "texto": "Es el trío de bases del ARNt que se aparea con el codón: el ARNt con UAC trae metionina al codón AUG."
+          },
+          {
+            "titulo": "Enlace peptídico",
+            "texto": "Es la unión entre dos aminoácidos. Una proteína puede tener cientos de ellos."
+          },
+          {
+            "titulo": "Muy rápido",
+            "texto": "Un ribosoma puede unir varios aminoácidos por segundo, y muchos ribosomas leen el mismo ARNm a la vez."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "La traducción ocurre en el ribosoma.",
+            "El ARNt trae los aminoácidos.",
+            "Termina en un codón de parada."
+          ],
+          "media": [
+            "El anticodón del ARNt encaja con el codón del ARNm.",
+            "Los aminoácidos se unen por enlaces peptídicos."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "Si un ARNm dice AUG UUC GGA UAA, ¿cuántos aminoácidos tendrá la proteína?",
+          "actividad": "Dramatizar: un estudiante es el ribosoma, otros son ARNt con tarjetas de anticodón y aminoácido.",
+          "errores": [
+            "Creer que el codón de parada aporta un aminoácido.",
+            "Confundir codón y anticodón."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "El ribosoma trabajando",
+          "visual": {
+            "tipo": "escena",
+            "id": "traduccion",
+            "fases": [
+              {
+                "id": "llega",
+                "nombre": "El ARNm llega",
+                "texto": "El ARNm llega al citoplasma y se le pega un ribosoma."
+              },
+              {
+                "id": "inicio",
+                "nombre": "Inicio",
+                "texto": "El ribosoma encuentra AUG. Llega el ARNt con el anticodón UAC, que trae metionina."
+              },
+              {
+                "id": "arnt",
+                "nombre": "Otro ARNt",
+                "texto": "En el siguiente codón (UUC) encaja el ARNt con anticodón AAG, que trae fenilalanina."
+              },
+              {
+                "id": "enlace",
+                "nombre": "Se unen",
+                "texto": "El ribosoma une la metionina con la fenilalanina: es el enlace peptídico."
+              },
+              {
+                "id": "avanza",
+                "nombre": "Avanza",
+                "texto": "El ribosoma avanza un codón. El primer ARNt sale y llega el de la glicina (GGA)."
+              },
+              {
+                "id": "fin",
+                "nombre": "Parada",
+                "texto": "Al llegar a un codón de parada no hay ARNt que encaje: la cadena se suelta y se pliega como proteína."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Un ARNm dice AUG UUC GGA UAA. ¿Cuántos aminoácidos tendrá la cadena?",
+            "opciones": [
+              "3",
+              "4",
+              "12",
+              "2"
+            ],
+            "correcta": 0,
+            "explicacion": "AUG, UUC y GGA dan tres aminoácidos; UAA es de parada y no aporta ninguno."
+          }
+        }
+      ],
+      "juego": "traduccion-juego",
+      "preguntas": [
+        {
+          "id": "exp-ta-1",
+          "enunciado": "¿Qué molécula trae los aminoácidos al ribosoma?",
+          "opciones": [
+            "El ARN de transferencia (ARNt)",
+            "El ARN mensajero",
+            "El ADN",
+            "La ARN polimerasa"
+          ],
+          "correcta": 0,
+          "explicacion": "Cada ARNt trae un aminoácido y tiene un anticodón."
+        },
+        {
+          "id": "exp-ta-2",
+          "enunciado": "¿Qué anticodón encaja con el codón AUG?",
+          "opciones": [
+            "UAC",
+            "AUG",
+            "TAC",
+            "GUA"
+          ],
+          "correcta": 0,
+          "explicacion": "A con U, U con A, G con C: UAC."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "regulacion",
+      "titulo": "Genes encendidos y apagados",
+      "resumen": "Todas las células tienen el mismo ADN, pero cada tipo usa genes distintos: por eso una neurona no es un músculo.",
+      "anio": 5,
+      "etiqueta": "Paso 5",
+      "nivel": "intermedio",
+      "requiere": [
+        "traduccion"
+      ],
+      "ficha": {
+        "idea": "Casi todas las células del cuerpo tienen el mismo ADN, pero no usan los mismos genes. Cada tipo de célula enciende algunos y deja apagados otros: la neurona usa genes para comunicarse y la célula de músculo, genes para contraerse. Unas proteínas llamadas factores de transcripción se pegan al promotor de un gen y lo encienden.",
+        "contexto": [
+          {
+            "titulo": "Genes de base",
+            "texto": "Algunos genes están encendidos en casi todas las células, porque fabrican proteínas que todas necesitan."
+          },
+          {
+            "titulo": "Responder al ambiente",
+            "texto": "Los genes también se encienden y apagan según lo que pasa: por ejemplo, ante el frío o una infección."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Todas las células tienen el mismo ADN.",
+            "Cada tipo de célula usa genes distintos."
+          ],
+          "media": [
+            "Un gen encendido se transcribe y se traduce."
+          ],
+          "avanzada": [
+            "Los factores de transcripción encienden genes al pegarse al promotor."
+          ]
+        },
+        "docente": {
+          "abrir": "Si todas tus células tienen el mismo ADN, ¿por qué una neurona no se parece a un glóbulo rojo?",
+          "actividad": "Comparar las tres células de la escena y relacionarlo con la diferenciación del área 1.",
+          "errores": [
+            "Creer que cada célula tiene solo los genes que usa.",
+            "Pensar que los genes apagados se pierden."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Mismo ADN, distinto uso",
+          "visual": {
+            "tipo": "escena",
+            "id": "regulacion",
+            "fases": [
+              {
+                "id": "mismo",
+                "nombre": "Mismo ADN",
+                "texto": "Una neurona, una célula de músculo y una que forma glóbulos rojos tienen el mismo ADN."
+              },
+              {
+                "id": "encendidos",
+                "nombre": "Distintos genes",
+                "texto": "Pero cada una enciende genes distintos, y por eso fabrica proteínas distintas."
+              },
+              {
+                "id": "interruptor",
+                "nombre": "El interruptor",
+                "texto": "Un factor de transcripción se pega al promotor y deja entrar a la ARN polimerasa: el gen se enciende.",
+                "nivel": "avanzado"
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre esto: la diferenciación celular",
+            "tema": "de-la-celula-al-organismo",
+            "bloque": "diferenciacion"
+          }
+        }
+      ],
+      "juego": "regulacion-juego",
+      "preguntas": [
+        {
+          "id": "exp-re-1",
+          "enunciado": "¿Por qué una neurona y una célula de músculo son tan distintas si tienen el mismo ADN?",
+          "opciones": [
+            "Porque usan (encienden) genes distintos",
+            "Porque tienen ADN distinto",
+            "Porque una tiene núcleo y la otra no",
+            "Porque una tiene más cromosomas"
+          ],
+          "correcta": 0,
+          "explicacion": "Lo que cambia es qué genes se expresan."
+        },
+        {
+          "id": "exp-re-2",
+          "enunciado": "¿Qué significa que un gen esté «encendido»?",
+          "opciones": [
+            "Que se transcribe y se fabrica su proteína",
+            "Que está repetido muchas veces",
+            "Que tiene una mutación",
+            "Que se va a copiar en la fase S"
+          ],
+          "correcta": 0,
+          "explicacion": "Expresarse es transcribirse y traducirse."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "procesamiento",
+      "titulo": "Intrones y exones",
+      "resumen": "En los eucariotas el ARN recién copiado se procesa: se cortan los intrones, se unen los exones y se protege el ARN.",
+      "anio": 6,
+      "etiqueta": "Paso 6",
+      "nivel": "avanzado",
+      "requiere": [
+        "transcripcion"
+      ],
+      "ficha": {
+        "idea": "En las células eucariotas, el ARN recién transcrito (pre-ARNm) tiene partes que se usan, los exones, y partes que se cortan, los intrones. Antes de salir del núcleo se cortan los intrones, se unen los exones y se agregan una caperuza en un extremo y una cola de adeninas (poli-A) en el otro. Uniendo los exones de distintas formas, un mismo gen puede dar varias proteínas.",
+        "contexto": [
+          {
+            "titulo": "Procariotas",
+            "texto": "Las bacterias casi no tienen intrones: su ARN se traduce mientras se está transcribiendo."
+          },
+          {
+            "titulo": "Empalme alternativo",
+            "texto": "Gracias a él, unos 20 000 genes humanos dan muchas más proteínas distintas."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Los exones se quedan; los intrones se cortan."
+          ],
+          "media": [
+            "Se agrega una caperuza y una cola poli-A."
+          ],
+          "avanzada": [
+            "Con el empalme alternativo, un gen puede dar varias proteínas."
+          ]
+        },
+        "docente": {
+          "abrir": "Si de una película cortas escenas distintas, ¿obtienes la misma película?",
+          "actividad": "Hacer tiras de papel con exones e intrones, cortar y pegar de dos formas distintas.",
+          "errores": [
+            "Creer que los intrones se traducen.",
+            "Pensar que esto pasa en las bacterias igual que en nosotros."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Cortar y pegar el ARN",
+          "visual": {
+            "tipo": "escena",
+            "id": "splicing",
+            "fases": [
+              {
+                "id": "pre",
+                "nombre": "El pre-ARNm",
+                "texto": "El ARN recién copiado tiene exones (que se usan) e intrones (que no)."
+              },
+              {
+                "id": "corta",
+                "nombre": "Cortar",
+                "texto": "Los intrones se cortan."
+              },
+              {
+                "id": "une",
+                "nombre": "Unir",
+                "texto": "Los exones se unen: queda el ARNm maduro."
+              },
+              {
+                "id": "protege",
+                "nombre": "Proteger",
+                "texto": "Se agrega una caperuza en un extremo y una cola poli-A en el otro."
+              },
+              {
+                "id": "alternativo",
+                "nombre": "Otra forma",
+                "texto": "Si se unen los exones de otra forma, sale otra proteína: es el empalme alternativo."
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "splicing-juego",
+      "preguntas": [
+        {
+          "id": "exp-pr-1",
+          "enunciado": "¿Qué pasa con los intrones del pre-ARNm?",
+          "opciones": [
+            "Se cortan antes de que el ARN salga del núcleo",
+            "Se traducen en el ribosoma",
+            "Se convierten en exones",
+            "Forman la cola poli-A"
+          ],
+          "correcta": 0,
+          "explicacion": "Solo los exones forman el ARNm maduro."
+        },
+        {
+          "id": "exp-pr-2",
+          "enunciado": "¿Qué permite el empalme alternativo?",
+          "opciones": [
+            "Que un mismo gen dé varias proteínas distintas",
+            "Que el ADN se copie más rápido",
+            "Que el ARN tenga T en vez de U",
+            "Que el ribosoma lea de a cuatro letras"
+          ],
+          "correcta": 0,
+          "explicacion": "Al unir los exones de distintas formas salen proteínas distintas."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}
