@@ -1,0 +1,716 @@
+{
+  "id": "agua-liquidos",
+  "materia": "quimica",
+  "area": "soluciones",
+  "titulo": "El agua, los líquidos y los sólidos",
+  "subtema": "Puentes de hidrógeno, propiedades del agua, presión de vapor y sólidos",
+  "orden": 133,
+  "etiqueta": "3",
+  "vistas": [
+    "ruta"
+  ],
+  "tituloVista": "Ruta del agua",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Explicar las propiedades especiales del agua a partir de su polaridad y de los puentes de hidrógeno.",
+    "Relacionar la tensión superficial, el calor específico y la densidad del hielo con situaciones cotidianas.",
+    "Explicar la ebullición con la presión de vapor y la presión del aire.",
+    "Diferenciar sólidos cristalinos y amorfos."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con un texto de química de bachillerato (densidad del hielo 0,92 g/mL; calor específico del agua 4,18 J/(g·°C); calor de vaporización ≈ 2260 J/g; ángulo 104,5°).",
+    "Puntos de ebullición por lugar calculados con la ecuación de Antoine y presiones aproximadas: verificar."
+  ],
+  "bloques": [
+    {
+      "id": "molecula-agua",
+      "titulo": "La molécula de agua",
+      "resumen": "Es polar y sus moléculas se unen con puentes de hidrógeno.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "Una molécula de agua tiene un átomo de oxígeno unido a dos de hidrógeno, en forma de V. El oxígeno jala con más fuerza los electrones que comparte, así que queda con una carga parcial negativa (δ−), y los hidrógenos con una positiva (δ+): el agua es una molécula polar, como un pequeño imán. Por eso el hidrógeno de una molécula se pega al oxígeno de otra: es el puente de hidrógeno, una atracción entre moléculas mucho más débil que un enlace, pero muy abundante. En el agua líquida los puentes se rompen y se forman todo el tiempo. De esa red de puentes salen las propiedades «raras» del agua: hierve a una temperatura alta para una molécula tan pequeña, tiene tensión superficial, le cuesta calentarse y su sólido flota.",
+        "contexto": [
+          {
+            "titulo": "Una molécula pequeña que hierve tarde",
+            "texto": "El metano (CH₄) pesa casi lo mismo que el agua y hierve a −162 °C. Sin puentes de hidrógeno, el agua sería un gas a temperatura ambiente y no habría ríos ni vida."
+          },
+          {
+            "titulo": "Un solo lugar",
+            "texto": "Las fuerzas entre moléculas (London, dipolo-dipolo y puentes de hidrógeno) se explican en Geometría molecular y fuerzas intermoleculares."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "El agua es H₂O: un oxígeno y dos hidrógenos.",
+            "Las moléculas de agua se atraen mucho entre sí."
+          ],
+          "media": [
+            "El agua es polar: δ− en el oxígeno y δ+ en los hidrógenos.",
+            "Puente de hidrógeno: atracción entre el H de una molécula y el O de otra."
+          ],
+          "avanzada": [
+            "Ángulo H–O–H ≈ 104,5°. Cada molécula puede formar hasta cuatro puentes de hidrógeno."
+          ]
+        },
+        "docente": {
+          "abrir": "Si el agua y el metano pesan casi lo mismo, ¿por qué uno es gas y el otro líquido?",
+          "actividad": "Acercar una peinilla frotada con el pelo a un chorrito delgado de agua: el chorro se desvía porque el agua es polar.",
+          "errores": [
+            "Confundir el puente de hidrógeno con el enlace covalente O–H.",
+            "Creer que al hervir el agua se separa en hidrógeno y oxígeno."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "El chorrito y la peinilla",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Frotas una peinilla en el pelo y la acercas a un chorrito delgado de agua. El chorro se dobla hacia la peinilla. ¿Por qué?",
+            "opciones": [
+              "Porque las moléculas de agua tienen un lado positivo y otro negativo",
+              "Porque el agua es magnética",
+              "Porque la peinilla calienta el agua",
+              "Porque el aire empuja el agua"
+            ],
+            "correcta": 0,
+            "explicacion": "El agua es polar: la peinilla cargada atrae sus moléculas."
+          }
+        },
+        {
+          "titulo": "Moléculas que se pegan",
+          "visual": {
+            "tipo": "escena",
+            "id": "agua-puentes",
+            "fases": [
+              {
+                "id": "molecula",
+                "nombre": "La molécula",
+                "texto": "Polar: δ− en el O y δ+ en los H."
+              },
+              {
+                "id": "puentes",
+                "nombre": "Puentes de hidrógeno",
+                "texto": "El H de una se pega al O de otra."
+              },
+              {
+                "id": "liquido",
+                "nombre": "En el líquido",
+                "texto": "Los puentes se rompen y se forman sin parar."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre las fuerzas entre moléculas",
+            "tema": "geometria-fuerzas",
+            "bloque": "fuerzas"
+          }
+        }
+      ],
+      "juego": "enlace-puente-juego",
+      "preguntas": [
+        {
+          "id": "qm-ag-1",
+          "enunciado": "¿Por qué el agua es una molécula polar?",
+          "opciones": [
+            "Porque el oxígeno jala más los electrones que los hidrógenos",
+            "Porque tiene carga eléctrica neta",
+            "Porque es líquida",
+            "Porque tiene tres átomos"
+          ],
+          "correcta": 0,
+          "explicacion": "Queda δ− en el O y δ+ en los H."
+        },
+        {
+          "id": "qm-ag-2",
+          "enunciado": "Cuando el agua hierve, ¿qué se rompe?",
+          "opciones": [
+            "Los puentes de hidrógeno entre moléculas",
+            "Los enlaces entre el O y los H",
+            "Los átomos de oxígeno",
+            "Nada"
+          ],
+          "correcta": 0,
+          "explicacion": "El vapor sigue siendo H₂O."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "tension",
+      "titulo": "Tensión superficial y capilaridad",
+      "resumen": "La superficie del agua es como una tela, y el agua sube por espacios delgados.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "requiere": [
+        "molecula-agua"
+      ],
+      "ficha": {
+        "idea": "Dentro del agua, cada molécula es jalada por sus vecinas en todas las direcciones. Pero las de la superficie solo tienen vecinas a los lados y abajo, así que quedan jaladas hacia adentro: la superficie se comporta como una tela tensa. Esa es la tensión superficial. Por eso las gotas son redondas, el zapatero camina sobre la quebrada y un clip puesto con cuidado no se hunde. El jabón rompe esa tela, y por eso lava: deja que el agua moje. La capilaridad aparece cuando el agua se encuentra con una superficie que la atrae, como el vidrio, el papel o las paredes de los tubitos de las plantas: el agua se pega a las paredes y va subiendo, más cuanto más delgado es el tubo. Así se moja una toalla de papel o sube la humedad por una pared.",
+        "contexto": [
+          {
+            "titulo": "Cohesión y adhesión",
+            "texto": "Cohesión: las moléculas de agua se atraen entre sí. Adhesión: el agua se pega a otras superficies. La tensión superficial viene de la cohesión; la capilaridad, de la adhesión y la cohesión juntas."
+          },
+          {
+            "titulo": "En las plantas",
+            "texto": "El agua sube por el xilema gracias a la capilaridad y, sobre todo, a la transpiración de las hojas, que la va jalando."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "La superficie del agua es como una tela tensa.",
+            "El agua sube por tubos delgados y por el papel: capilaridad."
+          ],
+          "media": [
+            "Tensión superficial: fuerza que hace que la superficie de un líquido se comporte como una membrana elástica."
+          ],
+          "avanzada": [
+            "Los tensoactivos (jabones, detergentes) bajan la tensión superficial."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Cómo puede un insecto caminar sobre el agua si pesa más que ella?",
+          "actividad": "Llenar un vaso hasta el borde y contar cuántas monedas caben antes de que se riegue; luego repetir con una gota de jabón.",
+          "errores": [
+            "Creer que el clip flota por ser liviano (lo sostiene la superficie).",
+            "Pensar que la capilaridad solo pasa en las plantas."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Una tela de agua",
+          "visual": {
+            "tipo": "escena",
+            "id": "tension-superficial",
+            "fases": [
+              {
+                "id": "gota",
+                "nombre": "La gota",
+                "texto": "En la superficie, las moléculas son jaladas hacia adentro."
+              },
+              {
+                "id": "zapatero",
+                "nombre": "El zapatero",
+                "texto": "La superficie lo sostiene."
+              },
+              {
+                "id": "capilaridad",
+                "nombre": "Capilaridad",
+                "texto": "El agua sube por tubos delgados."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre los tejidos de las plantas",
+            "tema": "de-la-celula-al-organismo",
+            "bloque": "tejidos-vegetales"
+          }
+        },
+        {
+          "titulo": "El jabón",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🧼",
+            "valor": "Rompe la tela",
+            "texto": "Con jabón el clip se hunde y el agua moja mejor la ropa."
+          }
+        }
+      ],
+      "juego": "tension-juego",
+      "preguntas": [
+        {
+          "id": "qm-ag-3",
+          "enunciado": "¿Por qué las gotas de agua son redondas?",
+          "opciones": [
+            "Por la tensión superficial",
+            "Por la gravedad",
+            "Por el calor",
+            "Porque el agua es transparente"
+          ],
+          "correcta": 0,
+          "explicacion": "La superficie se encoge lo más posible."
+        },
+        {
+          "id": "qm-ag-4",
+          "enunciado": "¿Cómo se llama la subida del agua por un tubo muy delgado?",
+          "opciones": [
+            "Capilaridad",
+            "Evaporación",
+            "Condensación",
+            "Difusión"
+          ],
+          "correcta": 0,
+          "explicacion": "Más delgado el tubo, más sube."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "calor-especifico",
+      "titulo": "El agua guarda el calor",
+      "resumen": "Le cuesta mucho calentarse y enfriarse: alto calor específico.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "basico",
+      "requiere": [
+        "molecula-agua"
+      ],
+      "ficha": {
+        "idea": "Para subir 1 °C la temperatura de 1 g de agua se necesita una caloría (4,18 J), mucho más que para la arena, el hierro o el aire. Esa cantidad es el calor específico, y el del agua es de los más altos que existen: buena parte de la energía se gasta en romper puentes de hidrógeno en lugar de acelerar las moléculas. Por eso una olla con agua tarda en calentarse en el mismo fogón donde una sartén vacía quema en un minuto. El mar se calienta y se enfría despacio y suaviza el clima de la costa, mientras que en un desierto como la Tatacoa los días son muy calientes y las noches frescas. Además, evaporar agua gasta muchísima energía: cuando el sudor se evapora se lleva calor del cuerpo, y así nos refrescamos.",
+        "contexto": [
+          {
+            "titulo": "Nuestro cuerpo",
+            "texto": "Somos más o menos 60 % agua: eso ayuda a que la temperatura del cuerpo no cambie de golpe."
+          },
+          {
+            "titulo": "El radiador",
+            "texto": "Los motores se enfrían con agua porque absorbe mucho calor sin calentarse demasiado."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Al agua le cuesta calentarse y enfriarse.",
+            "El sudor nos refresca al evaporarse."
+          ],
+          "media": [
+            "Calor específico del agua: 1 cal/(g·°C) = 4,18 J/(g·°C), mucho más alto que el de la arena o los metales."
+          ],
+          "avanzada": [
+            "Q = m·c·ΔT. Calor de vaporización del agua ≈ 2260 J/g."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué en la playa la arena quema y el agua está fresca, si les da el mismo sol?",
+          "actividad": "Poner al sol dos vasos iguales, uno con agua y otro con arena, y medir la temperatura cada 10 minutos.",
+          "errores": [
+            "Confundir calor con temperatura.",
+            "Creer que el agua se calienta lento porque es transparente."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Mismo fuego, distinto resultado",
+          "visual": {
+            "tipo": "escena",
+            "id": "calor-especifico",
+            "fases": [
+              {
+                "id": "fogon",
+                "nombre": "El fogón",
+                "texto": "La sartén vacía quema; el agua sigue tibia."
+              },
+              {
+                "id": "costa",
+                "nombre": "La costa",
+                "texto": "El mar suaviza el clima."
+              },
+              {
+                "id": "sudor",
+                "nombre": "El sudor",
+                "texto": "Al evaporarse se lleva el calor."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "¿Cuánto cuesta calentar?",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🔥",
+            "valor": "1 cal/(g·°C)",
+            "texto": "Para subir 1 °C un gramo de agua. La arena necesita unas cinco veces menos."
+          }
+        }
+      ],
+      "juego": "calor-agua-juego",
+      "preguntas": [
+        {
+          "id": "qm-ag-5",
+          "enunciado": "¿Por qué el mar está fresco cuando la arena quema?",
+          "opciones": [
+            "Porque el agua tiene un calor específico alto",
+            "Porque el mar está a la sombra",
+            "Porque la arena es oscura",
+            "Porque el agua refleja todo el sol"
+          ],
+          "correcta": 0,
+          "explicacion": "Al agua le cuesta calentarse."
+        },
+        {
+          "id": "qm-ag-6",
+          "enunciado": "¿Por qué sudar nos refresca?",
+          "opciones": [
+            "Porque al evaporarse el agua se lleva calor del cuerpo",
+            "Porque el sudor está frío",
+            "Porque el sudor tapa los poros",
+            "Porque el agua es transparente"
+          ],
+          "correcta": 0,
+          "explicacion": "Evaporar agua gasta mucha energía."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "hielo",
+      "titulo": "El hielo flota",
+      "resumen": "Al congelarse, el agua se expande y queda menos densa.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "basico",
+      "requiere": [
+        "molecula-agua"
+      ],
+      "ficha": {
+        "idea": "En casi todas las sustancias el sólido es más denso que el líquido y se hunde en él. El agua es la gran excepción. Al congelarse, los puentes de hidrógeno ordenan las moléculas en anillos de seis con huecos en el medio, así que el hielo ocupa más espacio que el agua líquida: su densidad es de unos 0,92 g/mL frente a 1,00 g/mL. Por eso el hielo flota, una botella de vidrio llena de agua se revienta en el congelador y el agua que se congela en las grietas de las rocas del páramo las va partiendo. En los lagos de las zonas frías, el hielo se queda arriba como una tapa que aísla, el agua de abajo queda a unos 4 °C y los peces sobreviven el invierno.",
+        "contexto": [
+          {
+            "titulo": "4 °C",
+            "texto": "El agua líquida es más densa a unos 4 °C. Por eso esa es la temperatura del fondo de un lago congelado."
+          },
+          {
+            "titulo": "La meteorización",
+            "texto": "El hielo que se forma en las grietas de las rocas, noche tras noche, las fractura: así empieza la formación del suelo en la alta montaña."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "El hielo flota porque es menos denso que el agua.",
+            "El agua se expande al congelarse."
+          ],
+          "media": [
+            "Densidad del hielo ≈ 0,92 g/mL; la del agua líquida ≈ 1,00 g/mL.",
+            "El agua tiene su densidad máxima a unos 4 °C."
+          ],
+          "avanzada": [
+            "En el hielo cada molécula forma cuatro puentes de hidrógeno y queda una red hexagonal abierta."
+          ]
+        },
+        "docente": {
+          "abrir": "Si casi todos los sólidos se hunden en su propio líquido, ¿por qué el hielo flota?",
+          "actividad": "Marcar el nivel de agua en un vaso plástico, congelarlo y comparar el nivel del hielo.",
+          "errores": [
+            "Creer que el hielo flota porque tiene aire adentro.",
+            "Pensar que todos los sólidos flotan en su líquido."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Un sólido que flota",
+          "visual": {
+            "tipo": "escena",
+            "id": "hielo-flota",
+            "fases": [
+              {
+                "id": "liquido",
+                "nombre": "Agua líquida",
+                "texto": "Moléculas apretadas: 1,00 g/mL."
+              },
+              {
+                "id": "hielo",
+                "nombre": "Hielo",
+                "texto": "Anillos con huecos: 0,92 g/mL."
+              },
+              {
+                "id": "lago",
+                "nombre": "El lago",
+                "texto": "Se congela por arriba y la vida sigue debajo."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre la densidad",
+            "tema": "propiedades-materia",
+            "bloque": "densidad"
+          }
+        }
+      ],
+      "juego": "hielo-juego",
+      "preguntas": [
+        {
+          "id": "qm-ag-7",
+          "enunciado": "¿Por qué el hielo flota en el agua?",
+          "opciones": [
+            "Porque es menos denso que el agua líquida",
+            "Porque tiene aire atrapado",
+            "Porque está más frío",
+            "Porque es más liviano que una gota"
+          ],
+          "correcta": 0,
+          "explicacion": "Sus moléculas quedan más separadas."
+        },
+        {
+          "id": "qm-ag-8",
+          "enunciado": "¿Por qué una botella llena de agua se revienta en el congelador?",
+          "opciones": [
+            "Porque el agua se expande al congelarse",
+            "Porque el vidrio se encoge",
+            "Porque el agua se vuelve gas",
+            "Porque entra aire"
+          ],
+          "correcta": 0,
+          "explicacion": "El hielo ocupa más espacio."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "presion-vapor",
+      "titulo": "Presión de vapor y ebullición",
+      "resumen": "Un líquido hierve cuando su presión de vapor iguala la del aire.",
+      "anio": 5,
+      "etiqueta": "Paso 5",
+      "nivel": "intermedio",
+      "requiere": [
+        "calor-especifico"
+      ],
+      "ficha": {
+        "idea": "En la superficie de un líquido algunas moléculas van tan rápido que escapan al aire: es la evaporación, que ocurre a cualquier temperatura. En un frasco cerrado, las moléculas que escapan y las que regresan llegan a un equilibrio, y el vapor hace una presión: la presión de vapor. Cuanto más caliente el líquido, más moléculas escapan y mayor es su presión de vapor. Un líquido hierve cuando su presión de vapor iguala la presión que tiene encima: entonces se forman burbujas de vapor dentro del líquido, no solo en la superficie. Por eso el punto de ebullición depende del lugar: a nivel del mar el agua hierve a 100 °C, en Bogotá a unos 92 °C y en la olla a presión a unos 120 °C. Los líquidos con fuerzas entre moléculas más débiles, como el alcohol, tienen más presión de vapor, se evaporan más rápido y hierven antes.",
+        "contexto": [
+          {
+            "titulo": "Volátil",
+            "texto": "Se dice de un líquido con presión de vapor alta, como la gasolina, el alcohol o la acetona: se evapora rápido y su olor se siente enseguida."
+          },
+          {
+            "titulo": "Mientras hierve",
+            "texto": "Aunque se suba el fuego, el agua que hierve no se calienta más: la energía se gasta en convertirla en vapor."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "En la montaña el agua hierve a menos de 100 °C."
+          ],
+          "media": [
+            "Evaporación: en la superficie, a cualquier temperatura. Ebullición: en todo el líquido, a una temperatura fija.",
+            "Un líquido hierve cuando su presión de vapor = presión externa."
+          ],
+          "avanzada": [
+            "La curva de presión de vapor crece de forma exponencial con la temperatura (ecuación de Clausius-Clapeyron)."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué en Bogotá los fríjoles se demoran más en cocinarse que en Neiva?",
+          "actividad": "Usar el Explora de la olla para comparar el punto de ebullición en los cuatro lugares y hacer una tabla.",
+          "errores": [
+            "Creer que el agua que hierve más fuerte está más caliente.",
+            "Confundir evaporación con ebullición."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "El vapor que empuja",
+          "visual": {
+            "tipo": "escena",
+            "id": "presion-vapor",
+            "fases": [
+              {
+                "id": "frasco",
+                "nombre": "Frasco cerrado",
+                "texto": "Unas moléculas escapan y otras vuelven."
+              },
+              {
+                "id": "calentar",
+                "nombre": "Al calentar",
+                "texto": "Más vapor, más presión de vapor."
+              },
+              {
+                "id": "hervir",
+                "nombre": "Hierve",
+                "texto": "Presión de vapor = presión del aire."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre hervir en la altura",
+            "tema": "propiedades-materia",
+            "bloque": "fusion-ebullicion"
+          }
+        },
+        {
+          "titulo": "¿Dónde hierve antes?",
+          "visual": {
+            "tipo": "diagrama",
+            "id": "olla-ebullicion"
+          }
+        }
+      ],
+      "diagrama": "olla-ebullicion",
+      "juego": "ebullicion-juego",
+      "preguntas": [
+        {
+          "id": "qm-ag-9",
+          "enunciado": "¿Cuándo hierve un líquido?",
+          "opciones": [
+            "Cuando su presión de vapor iguala la presión que tiene encima",
+            "Siempre a 100 °C",
+            "Cuando se evapora la mitad",
+            "Cuando aparecen burbujas de aire"
+          ],
+          "correcta": 0,
+          "explicacion": "Por eso el punto de ebullición depende de la altura."
+        },
+        {
+          "id": "qm-ag-10",
+          "enunciado": "¿Por qué la olla a presión cocina más rápido?",
+          "opciones": [
+            "Porque el agua hierve a más de 100 °C adentro",
+            "Porque hierve a menos temperatura",
+            "Porque el vapor tiene sal",
+            "Porque gasta menos gas"
+          ],
+          "correcta": 0,
+          "explicacion": "Más presión encima, más alta la temperatura de ebullición."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "solidos",
+      "titulo": "Sólidos cristalinos y amorfos",
+      "resumen": "Ordenados o desordenados: la sal frente al vidrio.",
+      "anio": 6,
+      "etiqueta": "Paso 6",
+      "nivel": "intermedio",
+      "requiere": [
+        "hielo"
+      ],
+      "ficha": {
+        "idea": "En un sólido las partículas están muy juntas y solo vibran en su sitio. Hay dos maneras de acomodarse. En los sólidos cristalinos las partículas forman un patrón ordenado que se repite en todas las direcciones, como una cuadrícula en tres dimensiones: la sal, el azúcar, el hielo, el cuarzo, las esmeraldas y los metales. Por eso forman cristales con caras planas y se funden a una temperatura fija. En los sólidos amorfos las partículas quedan desordenadas, como si fueran un líquido que se quedó quieto: el vidrio, los plásticos, la cera y el caucho. No forman caras planas y, al calentarlos, se van ablandando poco a poco. Una misma sustancia puede quedar de las dos formas: el azúcar es cristalino, pero si se funde y se enfría rápido queda caramelo, que es amorfo.",
+        "contexto": [
+          {
+            "titulo": "Las esmeraldas de Colombia",
+            "texto": "Son cristales de berilo con un poquito de cromo, que les da el color verde. Crecen muy despacio dentro de la roca."
+          },
+          {
+            "titulo": "Tipos de cristales",
+            "texto": "Iónicos (sal: duros y frágiles), covalentes (cuarzo, diamante: muy duros), moleculares (hielo, azúcar: se funden fácil) y metálicos (conducen la electricidad)."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Hay sólidos ordenados (cristales, como la sal) y desordenados (como el vidrio)."
+          ],
+          "media": [
+            "Cristalino: partículas ordenadas; se funde a una temperatura fija (sal, hielo).",
+            "Amorfo: partículas desordenadas; se ablanda poco a poco (vidrio, plástico)."
+          ],
+          "avanzada": [
+            "Los cristales se clasifican en iónicos, covalentes, moleculares y metálicos según las partículas y las fuerzas que los unen."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Qué diferencia hay entre un grano de azúcar y un caramelo, si los dos son azúcar?",
+          "actividad": "Observar con lupa granos de sal y de azúcar, un pedazo de vidrio y uno de plástico; dibujar lo que se ve.",
+          "errores": [
+            "Creer que el vidrio es un cristal porque es transparente.",
+            "Pensar que todos los sólidos tienen forma de cristal."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Orden y desorden",
+          "visual": {
+            "tipo": "escena",
+            "id": "solidos",
+            "fases": [
+              {
+                "id": "cristalino",
+                "nombre": "Cristalino",
+                "texto": "Orden que se repite."
+              },
+              {
+                "id": "amorfo",
+                "nombre": "Amorfo",
+                "texto": "Sin orden."
+              },
+              {
+                "id": "fundir",
+                "nombre": "Al calentar",
+                "texto": "El cristal se funde de golpe; el amorfo se ablanda."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre el enlace iónico y el cristal de sal",
+            "tema": "enlace-quimico",
+            "bloque": "ionico"
+          }
+        },
+        {
+          "titulo": "Tipos de cristales",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🧂",
+                "titulo": "Iónicos",
+                "texto": "Sal: duros y frágiles."
+              },
+              {
+                "icono": "💎",
+                "titulo": "Covalentes",
+                "texto": "Cuarzo, diamante: muy duros."
+              },
+              {
+                "icono": "🧊",
+                "titulo": "Moleculares",
+                "texto": "Hielo, azúcar."
+              },
+              {
+                "icono": "🔩",
+                "titulo": "Metálicos",
+                "texto": "Conducen la electricidad."
+              }
+            ]
+          },
+          "nivel": "avanzado"
+        }
+      ],
+      "juego": "solido-juego",
+      "preguntas": [
+        {
+          "id": "qm-ag-11",
+          "enunciado": "¿Cuál es un sólido amorfo?",
+          "opciones": [
+            "El vidrio",
+            "La sal",
+            "El hielo",
+            "El cuarzo"
+          ],
+          "correcta": 0,
+          "explicacion": "Sus partículas no tienen orden."
+        },
+        {
+          "id": "qm-ag-12",
+          "enunciado": "¿Qué caracteriza a un sólido cristalino?",
+          "opciones": [
+            "Sus partículas están ordenadas y se funde a una temperatura fija",
+            "Se ablanda poco a poco",
+            "Es siempre transparente",
+            "No tiene partículas"
+          ],
+          "correcta": 0,
+          "explicacion": "Como la sal o el hielo."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}

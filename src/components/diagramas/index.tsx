@@ -111,6 +111,8 @@ import { MasaCambiaJuego, ProporcionAguaJuego, CualLeyJuego } from './JuegosLeye
 import ConvertidorMol from './ConvertidorMol.tsx'
 import CajaGas from './CajaGas.tsx'
 import PistonGas from './PistonGas.tsx'
+import OllaEbullicion from './OllaEbullicion.tsx'
+import { EnlacePuenteJuego, TensionJuego, CalorAguaJuego, HieloJuego, EbullicionJuego, SolidoJuego } from './JuegosAguaLiquidos.tsx'
 import { BoyleJuego, CharlesJuego, GayLussacJuego, CualLeyGasJuego, AvogadroJuego, GasIdealJuego } from './JuegosLeyesGases.tsx'
 import { PropiedadGasJuego, VariableGasJuego, KelvinJuego, UnidadesPresionJuego, AlturaPresionJuego } from './JuegosGases.tsx'
 import { UnidadContarJuego, MasaMolarJuego, ConversionJuego, EmpiricaJuego } from './JuegosMol.tsx'
@@ -566,6 +568,13 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'cual-ley-gas-juego': CualLeyGasJuego,
   'avogadro-juego': AvogadroJuego,
   'gas-ideal-juego': GasIdealJuego,
+  'olla-ebullicion': OllaEbullicion,
+  'enlace-puente-juego': EnlacePuenteJuego,
+  'tension-juego': TensionJuego,
+  'calor-agua-juego': CalorAguaJuego,
+  'hielo-juego': HieloJuego,
+  'ebullicion-juego': EbullicionJuego,
+  'solido-juego': SolidoJuego,
   'tipos-radiacion-juego': TiposRadiacionJuego,
   'vida-media-juego': VidaMediaJuego,
   'usos-nucleares-juego': UsosNuclearesJuego,
