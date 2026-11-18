@@ -10,7 +10,8 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
       includeAssets: ['icon.svg'],
-      workbox: { globPatterns: ['**/*.{js,css,html,ico,png,svg,jpg,jpeg,webp}'] },
+      // El JS pasó de 2 MiB (18 nov 2026): se sube el límite para que siga funcionando sin internet.
+      workbox: { globPatterns: ['**/*.{js,css,html,ico,png,svg,jpg,jpeg,webp}'], maximumFileSizeToCacheInBytes: 6 * 1024 * 1024 },
       manifest: {
         name: '100cias',
         short_name: '100cias',

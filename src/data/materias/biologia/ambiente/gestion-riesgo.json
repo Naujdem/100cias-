@@ -1,0 +1,453 @@
+{
+  "id": "gestion-riesgo",
+  "materia": "biologia",
+  "area": "ambiente",
+  "titulo": "Gestión del riesgo",
+  "subtema": "Los desastres no son naturales",
+  "orden": 58,
+  "etiqueta": "8",
+  "vistas": ["ruta"],
+  "tituloVista": "Ruta del riesgo",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Diferenciar amenaza, vulnerabilidad y riesgo.",
+    "Reconocer las amenazas más comunes en Colombia y en el Huila.",
+    "Analizar la tragedia de Armero y sus lecciones.",
+    "Saber qué hacer antes, durante y después de una emergencia.",
+    "Participar en el plan escolar de gestión del riesgo."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con la UNGRD (Ley 1523 de 2012), el Servicio Geológico Colombiano (volcanes y sismos) y la guía de planes escolares de gestión del riesgo."
+  ],
+  "bloques": [
+    {
+      "id": "amenaza-vulnerabilidad",
+      "titulo": "Amenaza, vulnerabilidad y riesgo",
+      "resumen": "El riesgo aparece cuando una amenaza puede afectar a personas o bienes vulnerables. Se reduce actuando sobre la vulnerabilidad.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "Una amenaza es un fenómeno que puede causar daño: un sismo, una creciente, un deslizamiento, una erupción. La vulnerabilidad es qué tan expuestos y frágiles estamos: una casa en la orilla del río, una construcción sin columnas, una comunidad que no sabe qué hacer. El riesgo es la posibilidad de que la amenaza cause daños, y depende de las dos: sin personas en la orilla, la creciente no es un desastre. Por eso se dice que los desastres no son naturales: la amenaza puede ser natural, pero el desastre depende de cómo y dónde vivimos. La gestión del riesgo consiste en conocerlo, reducirlo y estar preparados para responder.",
+        "contexto": [
+          {
+            "titulo": "La misma lluvia",
+            "texto": "Un aguacero fuerte puede no hacer daño en una ladera con bosque y causar un deslizamiento en otra deforestada y llena de casas."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Amenaza: lo que puede causar daño.",
+            "Vulnerabilidad: qué tan expuestos y frágiles estamos.",
+            "Riesgo: la posibilidad de daño; depende de las dos."
+          ],
+          "media": [
+            "Los desastres no son naturales: dependen de cómo vivimos.",
+            "Gestionar el riesgo: conocerlo, reducirlo y prepararse."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "Si un río crece en un lugar donde nadie vive, ¿hubo un desastre?",
+          "actividad": "Dibujar en grupo un mapa de la vereda con las amenazas y los lugares más vulnerables.",
+          "errores": [
+            "Llamar «desastre natural» a lo que en gran parte depende de decisiones humanas."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Si un río crece donde nadie vive, ¿hay un desastre?",
+            "opciones": ["No: hay amenaza, pero nada vulnerable", "Sí, siempre", "Solo si llueve de noche", "Solo si el río es grande"],
+            "correcta": 0,
+            "explicacion": "El desastre aparece cuando la amenaza encuentra personas o bienes vulnerables."
+          }
+        },
+        {
+          "titulo": "Las piezas del riesgo",
+          "visual": {
+            "tipo": "escena",
+            "id": "riesgo",
+            "fases": [
+              { "id": "amenaza", "nombre": "Amenaza", "texto": "El río puede crecer con las lluvias fuertes." },
+              { "id": "vulnerabilidad", "nombre": "Vulnerabilidad", "texto": "Una casa construida en la orilla, sin protección." },
+              { "id": "riesgo", "nombre": "Riesgo", "texto": "Amenaza + vulnerabilidad: puede haber un desastre." },
+              { "id": "reducir", "nombre": "Reducir el riesgo", "texto": "Vivir lejos de la orilla y cuidar el bosque: el río crece, pero no hay desastre." }
+            ]
+          }
+        }
+      ],
+      "juego": "amenaza-vulnerabilidad-juego",
+      "diagrama": "riesgo-vereda",
+      "preguntas": [
+        {
+          "id": "am-ri-1",
+          "enunciado": "¿Cuál es un ejemplo de vulnerabilidad?",
+          "opciones": [
+            "Una casa construida en la orilla de un río",
+            "Un volcán activo",
+            "Un aguacero fuerte",
+            "Un sismo"
+          ],
+          "correcta": 0,
+          "explicacion": "Las otras son amenazas."
+        },
+        {
+          "id": "am-ri-2",
+          "enunciado": "¿Por qué se dice que los desastres no son naturales?",
+          "opciones": [
+            "Porque dependen de dónde y cómo vivimos",
+            "Porque las personas causan los sismos",
+            "Porque los volcanes no existen",
+            "Porque nunca llueve tan fuerte"
+          ],
+          "correcta": 0,
+          "explicacion": "La amenaza puede ser natural; el desastre no."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "amenazas-colombia",
+      "titulo": "Amenazas en Colombia",
+      "resumen": "Sismos, volcanes, inundaciones, deslizamientos, avenidas torrenciales e incendios forestales: Colombia tiene muchas amenazas, y el Huila casi todas.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "requiere": ["amenaza-vulnerabilidad"],
+      "ficha": {
+        "idea": "Colombia está donde chocan varias placas tectónicas, y por eso tiene sismos y volcanes activos. Sus montañas jóvenes y lluviosas producen deslizamientos y avenidas torrenciales, crecientes súbitas que bajan por las quebradas arrastrando lodo, piedras y troncos, como la de Mocoa en 2017. En las temporadas de lluvia y con La Niña hay inundaciones; con El Niño, incendios forestales. El Huila conoce varias: el sismo de Páez de 1994 provocó avalanchas en la cuenca del río Páez que afectaron al Huila y al Cauca; el volcán Nevado del Huila está activo y tuvo erupciones en 2007 y 2008; y hay laderas inestables e incendios en temporada seca.",
+        "contexto": [
+          {
+            "titulo": "El volcán vigilado",
+            "texto": "El Servicio Geológico Colombiano vigila día y noche el Nevado del Huila y publica su nivel de actividad con colores: verde, amarillo, naranja o rojo."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Amenazas en Colombia: sismos, volcanes, inundaciones, deslizamientos e incendios."
+          ],
+          "media": [
+            "Avenida torrencial: creciente súbita con lodo, piedras y troncos.",
+            "El Nevado del Huila es un volcán activo."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Qué amenazas tiene nuestra vereda? ¿Cuál ha pasado de verdad?",
+          "actividad": "Entrevistar a los mayores sobre emergencias que recuerden (sismos, crecientes, incendios) y ubicarlas en un mapa.",
+          "errores": [
+            "Creer que las avenidas torrenciales solo pasan en ríos grandes; muchas ocurren en quebradas pequeñas."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Un país de muchas amenazas",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "🌋", "titulo": "Volcanes", "texto": "Nevado del Huila, Ruiz, Galeras." },
+              { "icono": "🫨", "titulo": "Sismos", "texto": "Choque de placas tectónicas." },
+              { "icono": "⛰️", "titulo": "Deslizamientos", "texto": "Laderas empinadas y lluviosas." },
+              { "icono": "🌊", "titulo": "Avenidas torrenciales", "texto": "Crecientes súbitas con lodo y rocas." },
+              { "icono": "🏘️", "titulo": "Inundaciones", "texto": "Temporadas de lluvia y La Niña." },
+              { "icono": "🔥", "titulo": "Incendios", "texto": "Temporada seca y El Niño." }
+            ]
+          }
+        },
+        {
+          "titulo": "Semáforo del volcán",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "🟢", "titulo": "Verde", "texto": "Volcán activo, estable." },
+              { "icono": "🟡", "titulo": "Amarillo", "texto": "Cambios en su actividad." },
+              { "icono": "🟠", "titulo": "Naranja", "texto": "Probable erupción en días o semanas." },
+              { "icono": "🔴", "titulo": "Rojo", "texto": "Erupción inminente o en curso." }
+            ]
+          }
+        }
+      ],
+      "juego": "amenazas-colombia-juego",
+      "preguntas": [
+        {
+          "id": "am-ri-3",
+          "enunciado": "¿Qué es una avenida torrencial?",
+          "opciones": [
+            "Una creciente súbita con lodo, piedras y troncos",
+            "Una calle muy ancha",
+            "Un sismo fuerte",
+            "Una lluvia suave y larga"
+          ],
+          "correcta": 0,
+          "explicacion": "Como la de Mocoa en 2017."
+        },
+        {
+          "id": "am-ri-4",
+          "enunciado": "¿Por qué Colombia tiene sismos y volcanes?",
+          "opciones": [
+            "Porque está donde chocan placas tectónicas",
+            "Porque llueve mucho",
+            "Porque tiene dos océanos",
+            "Porque está en el ecuador"
+          ],
+          "correcta": 0,
+          "explicacion": "Las placas se mueven y se hunden unas bajo otras."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "armero",
+      "titulo": "La lección de Armero",
+      "resumen": "En 1985 el lodo del Nevado del Ruiz sepultó a Armero. Había estudios y advertencias, pero no se actuó a tiempo.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "intermedio",
+      "requiere": ["amenazas-colombia"],
+      "ficha": {
+        "idea": "El 13 de noviembre de 1985 el volcán Nevado del Ruiz hizo una erupción pequeña, pero su calor derritió parte del glaciar. El agua se mezcló con ceniza y rocas y formó lahares, flujos de lodo que bajaron por los ríos a gran velocidad. Horas después, el lahar del río Lagunilla llegó a Armero, en el Tolima, y sepultó la ciudad: murieron unas 23.000 personas. El volcán llevaba meses dando señales y en octubre se había publicado un mapa de amenaza que mostraba a Armero en peligro, pero las advertencias no llegaron a tiempo ni se ordenó la evacuación. Armero cambió a Colombia: en 1988 nació el sistema nacional de prevención y atención de desastres, que hoy coordina la UNGRD, y se fortaleció la vigilancia de los volcanes.",
+        "contexto": [
+          {
+            "titulo": "Lahar",
+            "texto": "Un lahar es un río de lodo volcánico: puede viajar decenas de kilómetros por los cauces y moverse más rápido que una persona corriendo."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "En 1985 un flujo de lodo del Nevado del Ruiz sepultó a Armero."
+          ],
+          "media": [
+            "Lahar: flujo de lodo volcánico que baja por los ríos.",
+            "Había advertencias, pero no se evacuó a tiempo."
+          ],
+          "avanzada": [
+            "Después de Armero se creó el sistema nacional de gestión del riesgo (hoy la UNGRD)."
+          ]
+        },
+        "docente": {
+          "abrir": "Si el volcán estaba a casi 50 km, ¿cómo pudo llegar el desastre hasta Armero?",
+          "actividad": "Analizar en grupo qué falló en cada eslabón (ciencia, autoridades, comunicación, comunidad) y qué se haría distinto hoy.",
+          "errores": [
+            "Pensar que la tragedia fue inevitable: el riesgo se conocía."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "El lodo que bajó del volcán",
+          "visual": {
+            "tipo": "escena",
+            "id": "armero",
+            "fases": [
+              { "id": "erupcion", "nombre": "Erupción", "texto": "Una erupción pequeña derrite parte del glaciar del Ruiz." },
+              { "id": "lahar", "nombre": "Lahar", "texto": "Agua, ceniza y rocas forman un río de lodo que baja por el cauce." },
+              { "id": "armero", "nombre": "Armero", "texto": "Horas después, el lodo llega a la ciudad y la sepulta." },
+              { "id": "leccion", "nombre": "La lección", "texto": "Había un mapa de amenaza: faltó actuar a tiempo." }
+            ]
+          }
+        }
+      ],
+      "juego": "armero-juego",
+      "preguntas": [
+        {
+          "id": "am-ri-5",
+          "enunciado": "¿Qué destruyó a Armero en 1985?",
+          "opciones": [
+            "Un lahar, flujo de lodo volcánico",
+            "La lava del volcán",
+            "Un terremoto",
+            "Un huracán"
+          ],
+          "correcta": 0,
+          "explicacion": "El lodo bajó por el río Lagunilla."
+        },
+        {
+          "id": "am-ri-6",
+          "enunciado": "¿Cuál es la principal lección de Armero?",
+          "opciones": [
+            "Conocer el riesgo no basta: hay que comunicarlo y actuar a tiempo",
+            "Los volcanes no se pueden estudiar",
+            "No hay que vivir en Colombia",
+            "Los lahares solo ocurren de día"
+          ],
+          "correcta": 0,
+          "explicacion": "Había un mapa de amenaza, pero no se evacuó."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "antes-durante-despues",
+      "titulo": "Antes, durante y después",
+      "resumen": "Prepararse antes, protegerse durante y actuar con calma después: así se salvan vidas.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "basico",
+      "requiere": ["amenaza-vulnerabilidad"],
+      "ficha": {
+        "idea": "Antes de una emergencia: conocer las amenazas del lugar, hacer un plan familiar (rutas, punto de encuentro, a quién llamar), tener lista una mochila de emergencia con agua, comida, linterna, radio, botiquín, documentos y medicamentos, y no construir en zonas de riesgo. Durante un sismo: agacharse, cubrirse y sujetarse bajo una mesa firme o junto a una columna, lejos de ventanas, y no correr por las escaleras. Ante una creciente o un lahar: subir a lo alto, lejos del cauce, sin cruzar ríos ni quebradas. Durante un incendio forestal: alejarse en sentido contrario al viento. Después: revisar si hay heridos, no regresar a casas dañadas hasta que lo autoricen, informarse por la radio y seguir las indicaciones de los organismos de socorro.",
+        "contexto": [
+          {
+            "titulo": "Línea de emergencias",
+            "texto": "En Colombia el número único de emergencias es el 123."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Sismo: agacharse, cubrirse y sujetarse.",
+            "Creciente: subir a lo alto, lejos del río.",
+            "Línea de emergencias: 123."
+          ],
+          "media": [
+            "Mochila de emergencia: agua, comida, linterna, radio, botiquín y documentos.",
+            "Plan familiar: rutas, punto de encuentro y contactos."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "Si ahora mismo temblara, ¿qué harían en este salón?",
+          "actividad": "Armar en clase una lista de la mochila de emergencia familiar y que cada estudiante la complete en casa.",
+          "errores": [
+            "Correr por escaleras o salir corriendo durante el sismo; lo seguro es protegerse y salir cuando pare."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "En tres momentos",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "🎒", "titulo": "Antes", "texto": "Plan familiar y mochila lista." },
+              { "icono": "🫨", "titulo": "Durante", "texto": "Protegerse; ante crecientes, subir a lo alto." },
+              { "icono": "📻", "titulo": "Después", "texto": "Ayudar, informarse y no volver a casas dañadas." }
+            ]
+          }
+        },
+        {
+          "titulo": "Si tiembla",
+          "visual": { "tipo": "cifra", "icono": "🫨", "valor": "Agáchate · cúbrete · sujétate", "texto": "y sal con calma cuando pare de temblar." }
+        }
+      ],
+      "juego": "antes-durante-despues-juego",
+      "preguntas": [
+        {
+          "id": "am-ri-7",
+          "enunciado": "¿Qué se debe hacer durante un sismo?",
+          "opciones": [
+            "Agacharse, cubrirse y sujetarse",
+            "Correr por las escaleras",
+            "Pararse junto a una ventana",
+            "Usar el ascensor"
+          ],
+          "correcta": 0,
+          "explicacion": "Se sale con calma cuando para de temblar."
+        },
+        {
+          "id": "am-ri-8",
+          "enunciado": "Si viene una creciente de la quebrada, lo más seguro es…",
+          "opciones": [
+            "Subir a un lugar alto, lejos del cauce",
+            "Cruzar la quebrada rápido",
+            "Quedarse a mirar desde la orilla",
+            "Esconderse en el sótano"
+          ],
+          "correcta": 0,
+          "explicacion": "El agua y el lodo bajan muy rápido."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "plan-escolar",
+      "titulo": "El plan escolar de gestión del riesgo",
+      "resumen": "Cada colegio debe tener su plan: conocer sus riesgos, señalizar rutas, organizar brigadas y hacer simulacros.",
+      "anio": 5,
+      "etiqueta": "Paso 5",
+      "nivel": "basico",
+      "requiere": ["antes-durante-despues"],
+      "ficha": {
+        "idea": "El plan escolar de gestión del riesgo organiza a la comunidad educativa para prevenir y responder a las emergencias. Incluye identificar las amenazas del colegio y sus alrededores, señalizar las rutas de evacuación y el punto de encuentro, conformar brigadas (primeros auxilios, evacuación, contra incendios) con docentes y estudiantes, tener un botiquín y una alarma conocida por todos, y hacer simulacros varias veces al año. En un simulacro se practica todo: la alarma, la salida en orden por la ruta, sin correr ni devolverse, el conteo en el punto de encuentro para saber si falta alguien, y la evaluación de lo que salió bien y lo que hay que mejorar.",
+        "contexto": [
+          {
+            "titulo": "No correr, no gritar, no empujar",
+            "texto": "Son las tres reglas de oro de una evacuación en orden."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Ruta de evacuación y punto de encuentro.",
+            "En la evacuación: no correr, no gritar, no empujar."
+          ],
+          "media": [
+            "Brigadas: primeros auxilios, evacuación, contra incendios.",
+            "Simulacro: practicar y evaluar el plan."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Saben cuál es la ruta de evacuación de este salón y dónde está el punto de encuentro?",
+          "actividad": "Hacer un simulacro con cronómetro y, después, una evaluación con los estudiantes para mejorar el plan.",
+          "errores": [
+            "Devolverse por la mochila o el celular durante una evacuación."
+          ],
+          "minutos": 40
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "El simulacro",
+          "visual": {
+            "tipo": "escena",
+            "id": "evacuacion",
+            "fases": [
+              { "id": "alarma", "nombre": "Alarma", "texto": "Suena la alarma que todos conocen." },
+              { "id": "salida", "nombre": "Salida", "texto": "Por la ruta señalizada: no correr, no gritar, no empujar." },
+              { "id": "encuentro", "nombre": "Punto de encuentro", "texto": "Un lugar abierto y seguro, lejos de muros y árboles." },
+              { "id": "conteo", "nombre": "Conteo", "texto": "Cada docente cuenta a su grupo: ¿falta alguien?" }
+            ]
+          }
+        }
+      ],
+      "juego": "plan-escolar-juego",
+      "preguntas": [
+        {
+          "id": "am-ri-9",
+          "enunciado": "¿Para qué sirve el conteo en el punto de encuentro?",
+          "opciones": [
+            "Para saber si falta alguien",
+            "Para pasar lista de asistencia",
+            "Para elegir la brigada",
+            "Para ver quién llegó primero"
+          ],
+          "correcta": 0,
+          "explicacion": "Si falta alguien, los brigadistas lo buscan."
+        },
+        {
+          "id": "am-ri-10",
+          "enunciado": "Durante una evacuación, ¿qué NO se debe hacer?",
+          "opciones": [
+            "Devolverse por la mochila",
+            "Seguir la ruta señalizada",
+            "Caminar rápido sin correr",
+            "Hacer caso al docente"
+          ],
+          "correcta": 0,
+          "explicacion": "Devolverse pone en riesgo la vida."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}
