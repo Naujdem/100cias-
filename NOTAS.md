@@ -391,3 +391,8 @@ Hooke usa la reconstrucción de Rita Greer (2004, Free Art License, Wikimedia Co
 ## Área 2 · Tema 7 «Mutaciones y variación» (17 nov)
 - `mutaciones.json` (orden 27, ruta de 6 pasos): qué es (somática/germinal), puntuales (Explora: `muta-gen`, cambiar/quitar/agregar bases y ver la proteína y el tipo de mutación), efectos (9°, anemia falciforme), número de cromosomas (9°, no disyunción y trisomía 21), estructura de cromosomas (11°) y variación.
 - Escenas en `escenas/EscenasMutaciones.tsx`; juegos en `diagramas/JuegosMutaciones.tsx`.
+
+## Área 2 · Tema 8 «Biotecnología» (17 nov) — área 2 completa
+- `biotecnologia.json` (orden 28, ruta de 6 pasos): qué es (tradicional y moderna), ADN recombinante (9°, insulina), PCR (9°, Explora: `pcr-ciclos`), transgénicos (maíz Bt, contexto Colombia), CRISPR (9°, terapias 2023) y el debate (beneficios y preocupaciones, voces distintas).
+- Escenas en `escenas/EscenasBiotec.tsx`; juegos en `diagramas/JuegosBiotec.tsx`.
+- Con esto los 8 temas del área 2 tienen contenido; PROXIMOS de genética queda vacío. Todo en borrador para la revisión docente.

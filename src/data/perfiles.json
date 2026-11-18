@@ -108,6 +108,11 @@
         "que-es",
         "puntuales",
         "variacion"
+      ],
+      "biotecnologia": [
+        "que-es",
+        "transgenicos",
+        "etica"
       ]
     },
     "nivelDibujo": "basico",
@@ -129,7 +134,8 @@
       "replicacion-adn": "Para qué se copia el ADN y la horquilla de replicación.",
       "expresion-genica": "Del gen a la proteína: transcripción, código genético y traducción.",
       "herencia-no-mendeliana": "Dominancia incompleta y grupos sanguíneos.",
-      "mutaciones": "Qué es una mutación, mutaciones puntuales y de dónde sale la variación."
+      "mutaciones": "Qué es una mutación, mutaciones puntuales y de dónde sale la variación.",
+      "biotecnologia": "Qué es la biotecnología, los transgénicos y el debate."
     }
   },
   {
@@ -275,6 +281,14 @@
         "efectos",
         "numericas",
         "variacion"
+      ],
+      "biotecnologia": [
+        "que-es",
+        "adn-recombinante",
+        "pcr",
+        "transgenicos",
+        "crispr",
+        "etica"
       ]
     },
     "nivelDibujo": "intermedio",
@@ -296,7 +310,8 @@
       "replicacion-adn": "Suma la replicación semiconservativa y los errores de copia.",
       "expresion-genica": "Suma los genes encendidos y apagados.",
       "herencia-no-mendeliana": "Suma codominancia, herencia ligada al sexo y genealogías.",
-      "mutaciones": "Suma los efectos (anemia falciforme) y los cambios en el número de cromosomas."
+      "mutaciones": "Suma los efectos (anemia falciforme) y los cambios en el número de cromosomas.",
+      "biotecnologia": "Suma el ADN recombinante, la PCR y CRISPR."
     }
   },
   {
@@ -463,6 +478,14 @@
         "numericas",
         "cromosomicas",
         "variacion"
+      ],
+      "biotecnologia": [
+        "que-es",
+        "adn-recombinante",
+        "pcr",
+        "transgenicos",
+        "crispr",
+        "etica"
       ]
     },
     "nivelDibujo": "avanzado",
@@ -484,7 +507,8 @@
       "replicacion-adn": "Los cinco pasos, con las enzimas y los fragmentos de Okazaki.",
       "expresion-genica": "Los seis pasos, con intrones, exones y empalme alternativo.",
       "herencia-no-mendeliana": "Los seis pasos, con la herencia poligénica y el ambiente.",
-      "mutaciones": "Los seis pasos, con las mutaciones cromosómicas estructurales."
+      "mutaciones": "Los seis pasos, con las mutaciones cromosómicas estructurales.",
+      "biotecnologia": "Los seis pasos completos."
     }
   }
 ]

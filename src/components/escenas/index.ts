@@ -18,6 +18,7 @@ import { EscenaParaQueCopiar, EscenaHorquilla, EscenaModelos, EscenaEnzimas, Esc
 import { EscenaDogma, EscenaTranscripcion, EscenaLecturaCodones, EscenaTraduccion, EscenaRegulacion, EscenaSplicing } from './EscenasExpresion.tsx'
 import { EscenaIncompleta, EscenaCodominancia, EscenaAbo, EscenaLigada, EscenaGenealogia, EscenaPoligenica } from './EscenasNoMendel.tsx'
 import { EscenaQueEsMutacion, EscenaPuntuales, EscenaFalciforme, EscenaNoDisyuncion, EscenaCromosomicas, EscenaVariacion } from './EscenasMutaciones.tsx'
+import { EscenaBiotecQue, EscenaInsulina, EscenaPcr, EscenaTransgenico, EscenaEdicion, EscenaDebate } from './EscenasBiotec.tsx'
 
 /** Escenas vivas: un dibujo que se transforma según la fase (`fase` = id de la fase en el JSON). */
 export const ESCENAS: Record<string, ComponentType<{ fase: string }>> = {
@@ -84,6 +85,12 @@ export const ESCENAS: Record<string, ComponentType<{ fase: string }>> = {
   'no-disyuncion': EscenaNoDisyuncion,
   cromosomicas: EscenaCromosomicas,
   variacion: EscenaVariacion,
+  'biotec-que': EscenaBiotecQue,
+  insulina: EscenaInsulina,
+  pcr: EscenaPcr,
+  transgenico: EscenaTransgenico,
+  edicion: EscenaEdicion,
+  debate: EscenaDebate,
   'optico-electronico': EscenaOpticoElectronico,
   'celula-animal': EscenaZoomCelula,
   'celula-vegetal': ({ fase }) => EscenaZoomCelula({ fase, vegetal: true }),

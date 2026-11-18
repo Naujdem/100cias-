@@ -1,0 +1,712 @@
+{
+  "id": "biotecnologia",
+  "materia": "biologia",
+  "area": "genetica",
+  "titulo": "Biotecnología",
+  "subtema": "Usar y cambiar los genes",
+  "orden": 28,
+  "etiqueta": "8",
+  "vistas": [
+    "ruta"
+  ],
+  "tituloVista": "Ruta de la biotecnología",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Distinguir biotecnología tradicional y moderna.",
+    "Explicar el ADN recombinante, la PCR, los transgénicos y CRISPR.",
+    "Argumentar sobre beneficios y preocupaciones de la biotecnología."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con un texto de bachillerato. A verificar: insulina recombinante (1982), PCR (Mullis, 1983, Nobel 1993), terapias CRISPR aprobadas (2023), siembra de algodón y maíz transgénicos en Colombia desde comienzos de los 2000, resguardos declarados territorios libres de transgénicos."
+  ],
+  "bloques": [
+    {
+      "id": "que-es",
+      "titulo": "¿Qué es la biotecnología?",
+      "resumen": "Usar seres vivos para obtener productos: desde el pan y la chicha hasta cambiar genes a propósito.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "La biotecnología es el uso de seres vivos o de sus partes para obtener productos o resolver problemas. La tradicional se usa desde hace miles de años: la levadura para el pan, las bacterias para el yogur, la fermentación para la chicha, los cruces para mejorar semillas y animales. La moderna, o ingeniería genética, cambia el ADN a propósito: corta, copia, pasa o edita genes.",
+        "contexto": [
+          {
+            "titulo": "Saberes ancestrales",
+            "texto": "Los pueblos indígenas y campesinos han seleccionado durante siglos maíces, papas y fríjoles de muchas variedades: también es biotecnología tradicional."
+          },
+          {
+            "titulo": "Fermentar",
+            "texto": "En la fermentación, levaduras o bacterias transforman los azúcares y producen gas, alcohol o ácidos."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Biotecnología: usar seres vivos para obtener productos.",
+            "Tradicional: pan, yogur, chicha, cruces.",
+            "Moderna: ingeniería genética."
+          ],
+          "media": [],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Qué alimentos de tu casa se hacen con ayuda de seres vivos?",
+          "actividad": "Hacer una masa con levadura y otra sin ella y comparar después de una hora.",
+          "errores": [
+            "Creer que la biotecnología es solo de laboratorio.",
+            "Pensar que todo lo biotecnológico es transgénico."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "De la chicha a los genes",
+          "visual": {
+            "tipo": "escena",
+            "id": "biotec-que",
+            "fases": [
+              {
+                "id": "tradicional",
+                "nombre": "Desde hace miles de años",
+                "texto": "Pan, yogur, queso, chicha y la selección de semillas y animales: todo eso es biotecnología."
+              },
+              {
+                "id": "microbios",
+                "nombre": "Los microbios trabajan",
+                "texto": "La levadura come azúcar y suelta gas: por eso la masa del pan se infla."
+              },
+              {
+                "id": "moderna",
+                "nombre": "Biotecnología moderna",
+                "texto": "Hoy también se puede cambiar el ADN de un ser vivo a propósito: es la ingeniería genética."
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "biotec-que-juego",
+      "preguntas": [
+        {
+          "id": "bt-qe-1",
+          "enunciado": "¿Cuál es un ejemplo de biotecnología tradicional?",
+          "opciones": [
+            "Hacer pan con levadura",
+            "Pasar un gen humano a una bacteria",
+            "Editar un gen con CRISPR",
+            "Copiar ADN con PCR"
+          ],
+          "correcta": 0,
+          "explicacion": "La levadura es un ser vivo que se usa tal como es."
+        },
+        {
+          "id": "bt-qe-2",
+          "enunciado": "¿Qué hace la ingeniería genética?",
+          "opciones": [
+            "Cambia el ADN de un ser vivo a propósito",
+            "Cruza plantas de la misma especie",
+            "Fermenta alimentos",
+            "Cuenta los cromosomas"
+          ],
+          "correcta": 0,
+          "explicacion": "Corta, copia, pasa o edita genes."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "adn-recombinante",
+      "titulo": "ADN recombinante",
+      "resumen": "Con enzimas se corta un gen humano y se pega en el ADN de una bacteria, que fabrica la proteína: así se produce insulina.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "intermedio",
+      "requiere": [
+        "que-es"
+      ],
+      "ficha": {
+        "idea": "Para obtener ADN recombinante se corta un gen con una enzima de restricción, se pega con la ligasa dentro de un plásmido (un pequeño ADN circular de bacteria) y se mete el plásmido en una bacteria. Como el código genético es universal, la bacteria lee el gen y fabrica la proteína. Así se produce, desde 1982, la insulina humana para las personas con diabetes.",
+        "contexto": [
+          {
+            "titulo": "Enzimas de restricción",
+            "texto": "Las bacterias las usan para cortar el ADN de los virus. Cada una reconoce una secuencia corta, como GAATTC."
+          },
+          {
+            "titulo": "Antes",
+            "texto": "Antes, la insulina se sacaba del páncreas de vacas y cerdos."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "El ADN recombinante combina ADN de dos orígenes."
+          ],
+          "media": [
+            "Se corta con enzimas de restricción y se pega con ligasa en un plásmido.",
+            "Las bacterias fabrican la proteína: por ejemplo, insulina."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Cómo convencerías a una bacteria de que fabrique una proteína humana?",
+          "actividad": "Con tiras de papel, cortar un «gen» y pegarlo en un círculo (plásmido).",
+          "errores": [
+            "Creer que la bacteria se vuelve humana.",
+            "Pensar que el gen se fabrica desde cero."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Bacterias que fabrican insulina",
+          "visual": {
+            "tipo": "escena",
+            "id": "insulina",
+            "fases": [
+              {
+                "id": "gen",
+                "nombre": "El gen",
+                "texto": "Se busca el gen humano de la insulina."
+              },
+              {
+                "id": "cortar",
+                "nombre": "Cortar",
+                "texto": "Una enzima de restricción lo corta en sitios exactos."
+              },
+              {
+                "id": "plasmido",
+                "nombre": "Pegar",
+                "texto": "La ligasa lo pega dentro de un plásmido: es ADN recombinante."
+              },
+              {
+                "id": "bacteria",
+                "nombre": "Entrar",
+                "texto": "El plásmido se mete en una bacteria."
+              },
+              {
+                "id": "multiplicar",
+                "nombre": "Multiplicar",
+                "texto": "Las bacterias se dividen y cada una lleva el gen."
+              },
+              {
+                "id": "insulina",
+                "nombre": "Fabricar",
+                "texto": "Las bacterias fabrican insulina humana, que se purifica para las personas con diabetes."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre esto: el código genético",
+            "tema": "expresion-genica",
+            "bloque": "codigo"
+          }
+        }
+      ],
+      "juego": "insulina-juego",
+      "preguntas": [
+        {
+          "id": "bt-ar-1",
+          "enunciado": "¿Para qué sirve una enzima de restricción?",
+          "opciones": [
+            "Para cortar el ADN en un sitio exacto",
+            "Para pegar dos trozos de ADN",
+            "Para copiar el ADN muchas veces",
+            "Para leer el ARN"
+          ],
+          "correcta": 0,
+          "explicacion": "Reconoce una secuencia corta y corta ahí."
+        },
+        {
+          "id": "bt-ar-2",
+          "enunciado": "¿Por qué una bacteria puede fabricar una proteína humana?",
+          "opciones": [
+            "Porque el código genético es casi universal",
+            "Porque la bacteria es humana",
+            "Porque la insulina es un azúcar",
+            "Porque las bacterias no tienen ADN"
+          ],
+          "correcta": 0,
+          "explicacion": "La bacteria lee el gen humano con el mismo código."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "pcr",
+      "titulo": "PCR: copiar ADN",
+      "resumen": "Con calor y una polimerasa resistente se duplica un tramo de ADN en cada ciclo: en 30 ciclos hay más de mil millones de copias.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "intermedio",
+      "requiere": [
+        "que-es"
+      ],
+      "ficha": {
+        "idea": "La PCR (reacción en cadena de la polimerasa) copia un tramo de ADN muchas veces. Cada ciclo tiene tres pasos: calentar para separar las hebras, enfriar para que se peguen los cebadores y entibiar para que una polimerasa resistente al calor copie. Cada ciclo duplica el ADN: tras unos 30 ciclos hay más de mil millones de copias.",
+        "contexto": [
+          {
+            "titulo": "Usos",
+            "texto": "Diagnosticar infecciones (como la COVID-19), identificar personas en investigaciones, pruebas de paternidad y estudios de ADN antiguo."
+          },
+          {
+            "titulo": "Kary Mullis",
+            "texto": "La inventó en 1983 y recibió el Nobel de Química en 1993."
+          },
+          {
+            "titulo": "Una polimerasa termal",
+            "texto": "Viene de Thermus aquaticus, una bacteria de aguas termales que soporta el calor."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "La PCR hace muchas copias de un tramo de ADN."
+          ],
+          "media": [
+            "Cada ciclo: calentar, enfriar, entibiar.",
+            "Cada ciclo duplica el ADN."
+          ],
+          "avanzada": [
+            "Usa una polimerasa resistente al calor."
+          ]
+        },
+        "docente": {
+          "abrir": "Si cada ciclo duplica una copia, ¿cuántas hay después de 10 ciclos?",
+          "actividad": "Usar «Ciclos de PCR» y calcular 2ⁿ antes de avanzar.",
+          "errores": [
+            "Creer que la PCR fabrica ADN nuevo de la nada.",
+            "Sumar en vez de duplicar."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Copiar y copiar",
+          "visual": {
+            "tipo": "escena",
+            "id": "pcr",
+            "fases": [
+              {
+                "id": "separar",
+                "nombre": "Calentar",
+                "texto": "A unos 95 °C las dos hebras del ADN se separan."
+              },
+              {
+                "id": "cebadores",
+                "nombre": "Enfriar",
+                "texto": "A unos 55 °C se pegan los cebadores, que marcan el tramo a copiar."
+              },
+              {
+                "id": "copiar",
+                "nombre": "Entibiar",
+                "texto": "A unos 72 °C, una polimerasa resistente al calor copia cada hebra."
+              },
+              {
+                "id": "ciclos",
+                "nombre": "Repetir",
+                "texto": "Cada ciclo duplica las copias: 1, 2, 4, 8, 16… tras 30 ciclos, más de mil millones."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre esto: la replicación",
+            "tema": "replicacion-adn",
+            "bloque": "horquilla"
+          }
+        }
+      ],
+      "juego": "pcr-juego",
+      "diagrama": "pcr-ciclos",
+      "preguntas": [
+        {
+          "id": "bt-pc-1",
+          "enunciado": "¿Para qué sirve la PCR?",
+          "opciones": [
+            "Para hacer muchas copias de un tramo de ADN",
+            "Para cortar el ADN",
+            "Para traducir el ARN",
+            "Para contar cromosomas"
+          ],
+          "correcta": 0,
+          "explicacion": "Multiplica un tramo de ADN hasta tener suficiente para analizarlo."
+        },
+        {
+          "id": "bt-pc-2",
+          "enunciado": "Si empiezas con una copia, ¿cuántas hay después de 5 ciclos?",
+          "opciones": [
+            "32",
+            "5",
+            "10",
+            "25"
+          ],
+          "correcta": 0,
+          "explicacion": "2 × 2 × 2 × 2 × 2 = 32."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "transgenicos",
+      "titulo": "Transgénicos",
+      "resumen": "Un organismo con un gen de otra especie: maíz con un gen de bacteria que resiste orugas.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "basico",
+      "requiere": [
+        "que-es"
+      ],
+      "ficha": {
+        "idea": "Un organismo transgénico tiene en su ADN un gen de otra especie, puesto en el laboratorio. Por ejemplo, el maíz Bt lleva un gen de la bacteria Bacillus thuringiensis que fabrica una proteína tóxica para algunas orugas; así se usan menos insecticidas. Otros ejemplos son el arroz dorado, con provitamina A, y las bacterias que fabrican insulina. Su uso genera debate.",
+        "contexto": [
+          {
+            "titulo": "En Colombia",
+            "texto": "Desde comienzos de los años 2000 se siembran algodón y maíz transgénicos, y algunos resguardos indígenas se han declarado territorios libres de transgénicos para proteger sus semillas nativas."
+          },
+          {
+            "titulo": "No es lo mismo que un cruce",
+            "texto": "Un cruce mezcla genes de la misma especie; un transgénico recibe un gen de otra especie."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Un transgénico tiene un gen de otra especie.",
+            "Ejemplo: maíz Bt."
+          ],
+          "media": [
+            "Se usan menos insecticidas, pero hay debate sobre sus efectos."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Has escuchado hablar de transgénicos? ¿Qué se dice de ellos?",
+          "actividad": "Comparar un maíz criollo y uno transgénico: cómo se obtuvieron y qué preocupa a cada grupo.",
+          "errores": [
+            "Creer que todo alimento modificado por cruces es transgénico.",
+            "Pensar que comer un transgénico cambia el ADN de quien lo come."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Maíz contra orugas",
+          "visual": {
+            "tipo": "escena",
+            "id": "transgenico",
+            "fases": [
+              {
+                "id": "problema",
+                "nombre": "El problema",
+                "texto": "Una oruga se come el maíz y los agricultores usan insecticidas."
+              },
+              {
+                "id": "gen-bt",
+                "nombre": "Un gen útil",
+                "texto": "La bacteria Bt tiene un gen que fabrica una proteína tóxica para esa oruga."
+              },
+              {
+                "id": "planta",
+                "nombre": "El transgénico",
+                "texto": "Ese gen se pasa al ADN del maíz."
+              },
+              {
+                "id": "resultado",
+                "nombre": "El resultado",
+                "texto": "La oruga que come ese maíz se muere y se usan menos insecticidas. Pero también hay preocupaciones."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Cruce o transgénico",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "🌽",
+              "titulo": "Cruce tradicional",
+              "puntos": [
+                "Misma especie",
+                "Mezcla muchos genes",
+                "Lleva generaciones"
+              ]
+            },
+            "der": {
+              "icono": "🧬",
+              "titulo": "Transgénico",
+              "puntos": [
+                "Gen de otra especie",
+                "Un gen elegido",
+                "En el laboratorio"
+              ]
+            }
+          }
+        }
+      ],
+      "juego": "transgenico-juego",
+      "preguntas": [
+        {
+          "id": "bt-tr-1",
+          "enunciado": "¿Qué es un organismo transgénico?",
+          "opciones": [
+            "Uno que tiene un gen de otra especie",
+            "Uno obtenido por cruces de la misma especie",
+            "Uno que tiene una mutación natural",
+            "Uno que no tiene ADN"
+          ],
+          "correcta": 0,
+          "explicacion": "El gen se pone en el laboratorio."
+        },
+        {
+          "id": "bt-tr-2",
+          "enunciado": "¿Por qué el maíz Bt resiste a algunas orugas?",
+          "opciones": [
+            "Porque fabrica una proteína de bacteria tóxica para ellas",
+            "Porque tiene hojas más duras",
+            "Porque lo rocían con más insecticida",
+            "Porque crece más rápido"
+          ],
+          "correcta": 0,
+          "explicacion": "El gen viene de Bacillus thuringiensis."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "crispr",
+      "titulo": "Editar genes con CRISPR",
+      "resumen": "Una guía de ARN lleva a Cas9 al gen, lo corta y la célula lo repara: ya hay terapias para la anemia falciforme.",
+      "anio": 5,
+      "etiqueta": "Paso 5",
+      "nivel": "intermedio",
+      "requiere": [
+        "que-es"
+      ],
+      "ficha": {
+        "idea": "Con CRISPR-Cas9 se puede editar un gen en un lugar exacto. Una guía de ARN, complementaria al gen, lleva a la proteína Cas9 hasta él; Cas9 corta las dos hebras y la célula repara el corte. Al reparar, el gen se puede desactivar, cambiar o corregir. Desde 2023 hay terapias aprobadas para la anemia falciforme que editan células de la médula del propio paciente.",
+        "contexto": [
+          {
+            "titulo": "Barato y preciso",
+            "texto": "Antes, cambiar un gen tomaba años; con CRISPR, semanas."
+          },
+          {
+            "titulo": "Un límite",
+            "texto": "En 2018 un investigador editó embriones humanos y fue condenado: casi todos los países lo prohíben."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "CRISPR permite editar genes en un sitio exacto."
+          ],
+          "media": [
+            "Guía de ARN + Cas9: buscar, cortar y reparar."
+          ],
+          "avanzada": [
+            "Ya hay terapias aprobadas; editar embriones está prohibido en casi todo el mundo."
+          ]
+        },
+        "docente": {
+          "abrir": "Si pudieras corregir un error en un texto sin reescribirlo todo, ¿cómo lo harías?",
+          "actividad": "Comparar CRISPR con «buscar y reemplazar» en un procesador de texto, y discutir los límites de la analogía.",
+          "errores": [
+            "Creer que CRISPR cambia todas las células del cuerpo a la vez.",
+            "Pensar que ya se usa para «diseñar» personas."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Buscar, cortar, reparar",
+          "visual": {
+            "tipo": "escena",
+            "id": "edicion",
+            "fases": [
+              {
+                "id": "guia",
+                "nombre": "Buscar",
+                "texto": "Una guía de ARN lleva a Cas9 hasta el gen que se quiere cambiar."
+              },
+              {
+                "id": "corta",
+                "nombre": "Cortar",
+                "texto": "Cas9 corta las dos hebras del ADN."
+              },
+              {
+                "id": "repara",
+                "nombre": "Reparar",
+                "texto": "La célula repara el corte; así el gen se corrige o se desactiva."
+              },
+              {
+                "id": "terapia",
+                "nombre": "Terapias",
+                "texto": "Desde 2023 hay tratamientos aprobados para la anemia falciforme y la talasemia."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre esto: cómo se descubrió",
+            "tema": "historia-genetica",
+            "bloque": "crispr"
+          }
+        }
+      ],
+      "juego": "edicion-juego",
+      "preguntas": [
+        {
+          "id": "bt-cr-1",
+          "enunciado": "¿Qué hace la guía de ARN en CRISPR?",
+          "opciones": [
+            "Lleva a Cas9 al gen que se quiere editar",
+            "Corta el ADN",
+            "Copia el ADN muchas veces",
+            "Repara el corte"
+          ],
+          "correcta": 0,
+          "explicacion": "Es complementaria al gen y lo encuentra."
+        },
+        {
+          "id": "bt-cr-2",
+          "enunciado": "¿Para qué enfermedad hay una terapia CRISPR aprobada desde 2023?",
+          "opciones": [
+            "La anemia falciforme",
+            "La gripe",
+            "La diabetes tipo 2",
+            "El daltonismo"
+          ],
+          "correcta": 0,
+          "explicacion": "Se editan células de la médula del paciente."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "etica",
+      "titulo": "El debate",
+      "resumen": "La biotecnología trae beneficios y preocupaciones; decidir bien exige evidencia y escuchar a todos los afectados.",
+      "anio": 6,
+      "etiqueta": "Paso 6",
+      "nivel": "basico",
+      "requiere": [
+        "que-es"
+      ],
+      "ficha": {
+        "idea": "La biotecnología ha dado medicinas, vacunas, diagnósticos y cultivos más resistentes, pero también plantea preguntas: qué efectos tienen los cultivos transgénicos en el ambiente, quién es dueño de las semillas patentadas, cómo proteger los maíces nativos y hasta dónde se puede editar el ADN humano. Para decidir hace falta evidencia científica y escuchar a quienes se ven afectados: agricultores, comunidades, pacientes y científicos.",
+        "contexto": [
+          {
+            "titulo": "Bioseguridad",
+            "texto": "Antes de sembrar o vender un transgénico, los países exigen estudios de riesgo para la salud y el ambiente."
+          },
+          {
+            "titulo": "Semillas propias",
+            "texto": "Muchas comunidades indígenas y campesinas defienden el derecho a guardar e intercambiar sus semillas."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "La biotecnología tiene beneficios y preocupaciones.",
+            "Las decisiones necesitan evidencia y diálogo."
+          ],
+          "media": [],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Quién debería decidir si se siembra un transgénico en una región?",
+          "actividad": "Debate por roles: agricultor, empresa, comunidad indígena, consumidor y científico; cada uno presenta su punto de vista con argumentos.",
+          "errores": [
+            "Creer que hay una única respuesta correcta para todos los casos.",
+            "Confundir opinión con evidencia."
+          ],
+          "minutos": 40
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Pesar los argumentos",
+          "visual": {
+            "tipo": "escena",
+            "id": "debate",
+            "fases": [
+              {
+                "id": "balanza",
+                "nombre": "La pregunta",
+                "texto": "¿Cómo decidir sobre una tecnología tan poderosa?"
+              },
+              {
+                "id": "beneficios",
+                "nombre": "Beneficios",
+                "texto": "Medicinas como la insulina, diagnósticos con PCR, cultivos que resisten plagas."
+              },
+              {
+                "id": "preocupaciones",
+                "nombre": "Preocupaciones",
+                "texto": "Efectos en el ambiente, semillas patentadas, mezcla con maíces nativos, edición de embriones."
+              },
+              {
+                "id": "decidir",
+                "nombre": "Decidir",
+                "texto": "Con evidencia y escuchando a todos los afectados."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Distintas voces",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🔬",
+                "titulo": "Científicos",
+                "texto": "Aportan evidencia y miden riesgos."
+              },
+              {
+                "icono": "🧑‍🌾",
+                "titulo": "Agricultores",
+                "texto": "Viven las ventajas y los costos en el campo."
+              },
+              {
+                "icono": "🪶",
+                "titulo": "Comunidades",
+                "texto": "Defienden sus semillas y territorios."
+              },
+              {
+                "icono": "🏥",
+                "titulo": "Pacientes",
+                "texto": "Esperan nuevos tratamientos."
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "debate-juego",
+      "preguntas": [
+        {
+          "id": "bt-et-1",
+          "enunciado": "¿Cuál es una preocupación que se plantea sobre los cultivos transgénicos?",
+          "opciones": [
+            "Que su polen llegue a variedades nativas",
+            "Que fabrican insulina",
+            "Que sirven para diagnosticar infecciones",
+            "Que usan levadura"
+          ],
+          "correcta": 0,
+          "explicacion": "Es una preocupación de comunidades que conservan semillas propias."
+        },
+        {
+          "id": "bt-et-2",
+          "enunciado": "¿Qué hace falta para tomar buenas decisiones sobre biotecnología?",
+          "opciones": [
+            "Evidencia científica y escuchar a los afectados",
+            "Solo la opinión de las empresas",
+            "Prohibir toda investigación",
+            "Seguir lo que diga la mayoría en redes"
+          ],
+          "correcta": 0,
+          "explicacion": "Decisiones informadas y con participación."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}
