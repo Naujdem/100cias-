@@ -298,3 +298,154 @@ export function EscenaChadwick({ fase }: { fase: string }) {
     </svg>
   )
 }
+
+/* ── Tema 2: el átomo por dentro ──────────────────────────────────────── */
+
+const PART = ['atomo', 'nucleo', 'electrones', 'masa']
+const NUC_C: [number, number, boolean][] = [[-9, -9, true], [9, -9, false], [-9, 9, false], [9, 9, true], [0, -16, true], [0, 16, false], [-17, 0, true], [17, 0, false], [0, 0, true], [-6, 4, false], [6, -3, true], [5, 6, false]]
+
+/** Átomo de carbono-12: 6 protones, 6 neutrones, 6 electrones (2 + 4). */
+export function EscenaParticulas({ fase }: { fase: string }) {
+  const i = idx(PART, fase)
+  const zoomN = i === 1
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label={`Partículas del átomo: ${fase}`} className="h-full w-full">
+      {fondo('#eef3f7')}
+      <g style={ver(i !== 3)}>
+        <g style={{ transition: suave, transform: zoomN ? 'translate(200px, 140px) scale(3.2)' : 'translate(200px, 140px) scale(1)' }}>
+          {NUC_C.map(([x, y, p], k) => <circle key={k} cx={x} cy={y} r="7" fill={p ? ROJO : GRIS} stroke="#fff" strokeWidth="1" />)}
+        </g>
+        <g style={ver(!zoomN)}>
+          <circle cx="200" cy="140" r="55" fill="none" stroke="#9bb0c6" strokeWidth="2" />
+          <circle cx="200" cy="140" r="100" fill="none" stroke="#9bb0c6" strokeWidth="2" />
+          {[[200, 85], [200, 195], [100, 140], [300, 140], [271, 69], [129, 211]].map(([x, y], k) => (
+            <g key={k} style={ver(i >= 2 || i === 0)}><circle cx={x} cy={y} r="7" fill={AZUL} /><T x={x} y={y + 4} t="−" c="#fff" s={11} /></g>
+          ))}
+        </g>
+        <g style={ver(zoomN)}>
+          <T x={95} y={60} t="● protón (+)" c={ROJO} s={13} />
+          <T x={305} y={60} t="● neutrón (sin carga)" c={GRIS} s={13} />
+        </g>
+        <T x={200} y={278} t={['Un átomo de carbono', 'El núcleo: 6 protones y 6 neutrones', 'Alrededor: 6 electrones (−)', ''][i]} s={14} />
+      </g>
+      <g style={ver(i === 3)}>
+        <line x1="60" y1="170" x2="340" y2="170" stroke={TINTA} strokeWidth="4" />
+        <path d="M 200 170 L 186 205 L 214 205 Z" fill={TINTA} />
+        <circle cx="110" cy="150" r="18" fill={ROJO} /><T x={110} y={115} t="1 protón" s={12} />
+        {Array.from({ length: 12 }, (_, k) => <circle key={k} cx={255 + (k % 6) * 12} cy={160 - Math.floor(k / 6) * 12} r="5" fill={AZUL} />)}
+        <T x={290} y={115} t="1800 electrones" s={12} />
+        <T x={290} y={190} t="(dibujo a escala reducida)" s={9} peso={600} />
+        <T x={200} y={245} t="Un protón pesa casi como 1800 electrones:" s={13} />
+        <T x={200} y={265} t="la masa del átomo está en el núcleo" s={13} c={ROJO} />
+      </g>
+    </svg>
+  )
+}
+
+const NUMS = ['z', 'a', 'notacion']
+
+export function EscenaNumeros({ fase }: { fase: string }) {
+  const i = idx(NUMS, fase)
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label={`Números del átomo: ${fase}`} className="h-full w-full">
+      {fondo('#f4f0e8')}
+      <g style={mover(i === 2 ? 70 : 110, 120)}>
+        {NUC_C.map(([x, y, p], k) => <circle key={k} cx={x} cy={y} r="7" fill={p ? ROJO : GRIS} stroke="#fff" strokeWidth="1" opacity={i === 0 && !p ? 0.25 : 1} />)}
+      </g>
+      <g style={ver(i === 0)}>
+        <T x={270} y={100} t="Z = número de protones" s={15} c={ROJO} />
+        <T x={270} y={125} t="Z = 6 → carbono" s={14} />
+        <T x={270} y={160} t="Z es la cédula del elemento:" s={12} peso={600} />
+        <T x={270} y={178} t="si cambia, cambia el elemento" s={12} peso={600} />
+      </g>
+      <g style={ver(i === 1)}>
+        <T x={270} y={100} t="A = protones + neutrones" s={15} />
+        <T x={270} y={125} t="A = 6 + 6 = 12" s={14} />
+        <T x={270} y={160} t="neutrones = A − Z" s={14} c={GRIS} />
+        <T x={270} y={185} t="12 − 6 = 6" s={13} peso={600} />
+      </g>
+      <g style={ver(i === 2)}>
+        <text x="215" y="150" textAnchor="end" fontSize="26" fontWeight="800" fill={TINTA}>12</text>
+        <text x="215" y="190" textAnchor="end" fontSize="26" fontWeight="800" fill={ROJO}>6</text>
+        <text x="222" y="180" fontSize="64" fontWeight="800" fill={AZUL}>C</text>
+        <T x={300} y={130} t="← A (arriba)" s={12} />
+        <T x={300} y={195} t="← Z (abajo)" s={12} c={ROJO} />
+        <T x={200} y={260} t="Se lee «carbono-12»" s={14} />
+      </g>
+    </svg>
+  )
+}
+
+const IONES = ['neutros', 'cede', 'iones']
+
+export function EscenaIones({ fase }: { fase: string }) {
+  const i = idx(IONES, fase)
+  const pasa = i >= 1
+  const capa = (cx: number, n: number, r: number, c: string, o = 0) =>
+    Array.from({ length: n }, (_, k) => {
+      const a = (k / n) * Math.PI * 2 + o
+      return <circle key={`${cx}-${r}-${k}`} cx={cx + r * Math.cos(a)} cy={140 + r * Math.sin(a)} r="4.5" fill={c} />
+    })
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label={`Iones: ${fase}`} className="h-full w-full">
+      {fondo('#f1f4ee')}
+      {[[110, 'Na', 11], [290, 'Cl', 17]].map(([x, s, z]) => (
+        <g key={s as string}>
+          <circle cx={x as number} cy="140" r="16" fill={ROJO} />
+          <T x={x as number} y={145} t={s as string} c="#fff" s={12} />
+          {[32, 52, 72].map((r) => <circle key={r} cx={x as number} cy="140" r={r} fill="none" stroke="#c9d2dc" />)}
+          <T x={x as number} y={40} t={`${z} protones`} s={11} peso={600} />
+        </g>
+      ))}
+      {capa(110, 2, 32, AZUL)}{capa(110, 8, 52, AZUL)}
+      {capa(290, 2, 32, AZUL)}{capa(290, 8, 52, AZUL)}{capa(290, 7, 72, AZUL, 0.3)}
+      <g style={mover(pasa ? 218 : 182, 140)}><circle cx="0" cy="0" r="5.5" fill={ORO} stroke={TINTA} /></g>
+      <g style={ver(i === 0)}>
+        <T x={200} y={250} t="Átomos neutros: tantos electrones como protones" s={13} />
+        <T x={110} y={235} t="11 e⁻" s={11} c={AZUL} /><T x={290} y={235} t="17 e⁻" s={11} c={AZUL} />
+      </g>
+      <g style={ver(i === 1)}><T x={200} y={250} t="El sodio cede un electrón; el cloro lo recibe" s={13} /></g>
+      <g style={ver(i === 2)}>
+        <T x={110} y={235} t="Na⁺ · catión" s={14} c={ROJO} />
+        <T x={110} y={255} t="11 p, 10 e⁻ → carga +1" s={11} peso={600} />
+        <T x={290} y={235} t="Cl⁻ · anión" s={14} c={AZUL} />
+        <T x={290} y={255} t="17 p, 18 e⁻ → carga −1" s={11} peso={600} />
+        <T x={200} y={285} t="Los protones no cambian: sigue siendo el mismo elemento" s={12} />
+      </g>
+    </svg>
+  )
+}
+
+const ISOS = ['protio', 'deuterio', 'tritio', 'carbono']
+
+export function EscenaIsotopos({ fase }: { fase: string }) {
+  const i = idx(ISOS, fase)
+  const nn = [0, 1, 2][Math.min(i, 2)]
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label={`Isótopos: ${fase}`} className="h-full w-full">
+      {fondo(i === 3 ? '#f4efe6' : '#eef3f7')}
+      <g style={ver(i < 3)}>
+        <circle cx="200" cy="130" r="80" fill="none" stroke="#9bb0c6" strokeWidth="2" />
+        <circle cx="280" cy="130" r="7" fill={AZUL} />
+        <circle cx="200" cy="130" r="9" fill={ROJO} />
+        <circle cx="185" cy="122" r="9" fill={GRIS} style={ver(nn >= 1, 'none', 'scale(0)')} />
+        <circle cx="214" cy="140" r="9" fill={GRIS} style={ver(nn >= 2, 'none', 'scale(0)')} />
+        <T x={200} y={240} t={['Hidrógeno-1 (protio): 1 p, 0 n', 'Hidrógeno-2 (deuterio): 1 p, 1 n', 'Hidrógeno-3 (tritio): 1 p, 2 n', ''][i]} s={14} />
+        <T x={200} y={262} t={['El más común: 99,98 % del hidrógeno', 'Más pesado; forma el «agua pesada»', 'Inestable: es radiactivo', ''][i]} s={12} peso={600} />
+        <T x={200} y={30} t="Mismo elemento (1 protón), distinta masa" s={13} c={ROJO} />
+      </g>
+      <g style={ver(i === 3)}>
+        <rect x="40" y="70" width="140" height="110" rx="12" fill="#fff" stroke="#c9d2dc" />
+        <T x={110} y={100} t="carbono-12" s={15} />
+        <T x={110} y={125} t="6 p · 6 n" s={13} peso={600} />
+        <T x={110} y={155} t="estable · ≈ 99 %" s={12} c="#4f8a3c" />
+        <rect x="220" y="70" width="140" height="110" rx="12" fill="#fff" stroke={ORO} strokeWidth="2" />
+        <T x={290} y={100} t="carbono-14" s={15} />
+        <T x={290} y={125} t="6 p · 8 n" s={13} peso={600} />
+        <T x={290} y={155} t="radiactivo" s={12} c={ROJO} />
+        <T x={200} y={225} t="Los seres vivos tienen un poco de carbono-14;" s={13} />
+        <T x={200} y={245} t="al morir se va perdiendo: sirve para fechar restos" s={13} />
+      </g>
+    </svg>
+  )
+}

@@ -1,0 +1,614 @@
+{
+  "id": "atomo-por-dentro",
+  "materia": "quimica",
+  "area": "atomo",
+  "titulo": "El átomo por dentro",
+  "subtema": "Partículas, números, iones e isótopos",
+  "orden": 112,
+  "etiqueta": "2",
+  "vistas": [
+    "ruta"
+  ],
+  "tituloVista": "Ruta del átomo",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Describir las partículas del átomo: carga, masa y ubicación.",
+    "Calcular protones, neutrones y electrones a partir de Z y A.",
+    "Diferenciar átomos neutros, cationes y aniones.",
+    "Explicar qué son los isótopos y algunos de sus usos."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con el plan curricular de Ciencias Naturales 2025 y un texto de química general. A verificar: masas de las partículas, abundancias (protio 99,98 %, carbono-12 ≈ 99 %, cloro-35 ≈ 76 %), límite de datación del carbono-14 (≈ 50 000 años) y la tabla de isótopos estables del Explora."
+  ],
+  "bloques": [
+    {
+      "id": "particulas",
+      "titulo": "Protones, neutrones y electrones",
+      "resumen": "El átomo tiene un núcleo con protones (+) y neutrones (sin carga), y electrones (−) alrededor.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "Todo átomo tiene dos zonas. En el centro está el núcleo, con protones, que tienen carga positiva, y neutrones, que no tienen carga. Alrededor del núcleo se mueven los electrones, con carga negativa. Protones y neutrones tienen casi la misma masa; el electrón es unas 1800 veces más liviano, así que casi toda la masa del átomo está en el núcleo. Un átomo es neutro cuando tiene tantos electrones como protones.",
+        "contexto": [
+          {
+            "titulo": "Cómo se descubrieron",
+            "texto": "Electrón (Thomson, 1897), núcleo (Rutherford, 1911), neutrón (Chadwick, 1932): la historia está en el tema 1."
+          },
+          {
+            "titulo": "Unidad de masa",
+            "texto": "Como son tan pequeños, se usa la unidad de masa atómica (u): un protón o un neutrón pesan casi 1 u."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Núcleo: protones (+) y neutrones (sin carga).",
+            "Alrededor: electrones (−)."
+          ],
+          "media": [
+            "El electrón es unas 1800 veces más liviano que el protón.",
+            "Átomo neutro: protones = electrones."
+          ],
+          "avanzada": [
+            "Masas aproximadas: protón ≈ 1,0073 u; neutrón ≈ 1,0087 u; electrón ≈ 0,00055 u."
+          ]
+        },
+        "docente": {
+          "abrir": "Si el átomo es neutro, ¿cómo puede tener partículas con carga?",
+          "actividad": "Modelo con plastilina: bolitas rojas (protones), grises (neutrones) y azules (electrones) para armar un átomo de carbono.",
+          "errores": [
+            "Pensar que el neutrón es negativo.",
+            "Poner los electrones dentro del núcleo."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Dónde está casi toda la masa de un átomo?",
+            "opciones": [
+              "En el núcleo",
+              "En los electrones",
+              "Repartida por igual",
+              "En el espacio vacío"
+            ],
+            "correcta": 0,
+            "explicacion": "Protones y neutrones son mucho más pesados que los electrones."
+          }
+        },
+        {
+          "titulo": "Un átomo por dentro",
+          "visual": {
+            "tipo": "escena",
+            "id": "at-particulas",
+            "fases": [
+              {
+                "id": "atomo",
+                "nombre": "El átomo",
+                "texto": "Un átomo de carbono: núcleo en el centro y electrones alrededor."
+              },
+              {
+                "id": "nucleo",
+                "nombre": "El núcleo",
+                "texto": "Seis protones (+) y seis neutrones (sin carga), apretados en el centro."
+              },
+              {
+                "id": "electrones",
+                "nombre": "Los electrones",
+                "texto": "Seis electrones (−) alrededor: el átomo queda neutro."
+              },
+              {
+                "id": "masa",
+                "nombre": "¿Quién pesa más?",
+                "texto": "Un protón pesa casi como 1800 electrones."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre cómo se descubrieron",
+            "tema": "modelos-atomicos",
+            "bloque": "chadwick"
+          }
+        },
+        {
+          "titulo": "Las tres partículas",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🔴",
+                "titulo": "Protón",
+                "texto": "Carga +1 · masa ≈ 1 u · en el núcleo"
+              },
+              {
+                "icono": "⚪",
+                "titulo": "Neutrón",
+                "texto": "Sin carga · masa ≈ 1 u · en el núcleo"
+              },
+              {
+                "icono": "🔵",
+                "titulo": "Electrón",
+                "texto": "Carga −1 · masa ≈ 0 u · alrededor"
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "particulas-juego",
+      "preguntas": [
+        {
+          "id": "qa-pa-1",
+          "enunciado": "¿Qué partícula del átomo no tiene carga?",
+          "opciones": [
+            "El neutrón",
+            "El protón",
+            "El electrón",
+            "El núcleo"
+          ],
+          "correcta": 0,
+          "explicacion": "El neutrón es neutro."
+        },
+        {
+          "id": "qa-pa-2",
+          "enunciado": "Un átomo neutro tiene 9 protones. ¿Cuántos electrones tiene?",
+          "opciones": [
+            "9",
+            "0",
+            "18",
+            "Depende de los neutrones"
+          ],
+          "correcta": 0,
+          "explicacion": "En un átomo neutro, electrones = protones."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "numeros",
+      "titulo": "Número atómico y número de masa",
+      "resumen": "Z (protones) dice qué elemento es; A (protones + neutrones) dice cuánto pesa el núcleo.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "requiere": [
+        "particulas"
+      ],
+      "ficha": {
+        "idea": "El número atómico, Z, es la cantidad de protones. Es como la cédula del elemento: todos los átomos de carbono tienen 6 protones, y si un átomo tiene 7, ya es nitrógeno. El número de masa, A, es la suma de protones y neutrones. De ahí se sacan los neutrones: neutrones = A − Z. Se escribe con el símbolo del elemento, A arriba y Z abajo, a la izquierda: ¹²₆C, que se lee «carbono-12».",
+        "contexto": [
+          {
+            "titulo": "En la tabla periódica",
+            "texto": "Los elementos están ordenados por su número atómico: H es 1, He es 2, Li es 3… (tema 4)."
+          },
+          {
+            "titulo": "Una receta para no perderse",
+            "texto": "Protones = Z · Electrones = Z (si es neutro) · Neutrones = A − Z."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Z = número de protones; decide el elemento.",
+            "A = protones + neutrones."
+          ],
+          "media": [
+            "Neutrones = A − Z.",
+            "Notación: A arriba, Z abajo, a la izquierda del símbolo."
+          ],
+          "avanzada": [
+            "A es un número entero; la masa atómica de la tabla (con decimales) es un promedio de isótopos (paso 4)."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Qué pasaría si a un átomo de oro le quitáramos un protón?",
+          "actividad": "Tarjetas con notaciones (¹⁶₈O, ²³₁₁Na, ³⁵₁₇Cl…) para completar una tabla de protones, neutrones y electrones.",
+          "errores": [
+            "Confundir A con Z.",
+            "Calcular los neutrones como A + Z."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Dos números",
+          "visual": {
+            "tipo": "escena",
+            "id": "at-numeros",
+            "fases": [
+              {
+                "id": "z",
+                "nombre": "Número atómico (Z)",
+                "texto": "Z cuenta los protones. Con 6 protones es carbono."
+              },
+              {
+                "id": "a",
+                "nombre": "Número de masa (A)",
+                "texto": "A suma protones y neutrones: 6 + 6 = 12."
+              },
+              {
+                "id": "notacion",
+                "nombre": "Cómo se escribe",
+                "texto": "A arriba y Z abajo, a la izquierda del símbolo: carbono-12."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Arma tu átomo",
+          "visual": {
+            "tipo": "diagrama",
+            "id": "arma-atomo"
+          }
+        },
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Un átomo tiene A = 23 y Z = 11. ¿Cuántos neutrones tiene?",
+            "opciones": [
+              "12",
+              "11",
+              "23",
+              "34"
+            ],
+            "correcta": 0,
+            "explicacion": "Neutrones = A − Z = 23 − 11 = 12. Es el sodio."
+          }
+        }
+      ],
+      "diagrama": "arma-atomo",
+      "juego": "numero-atomico-juego",
+      "preguntas": [
+        {
+          "id": "qa-nu-1",
+          "enunciado": "¿Qué indica el número atómico (Z)?",
+          "opciones": [
+            "El número de protones",
+            "El número de neutrones",
+            "Protones más neutrones",
+            "La masa del átomo en gramos"
+          ],
+          "correcta": 0,
+          "explicacion": "Z cuenta los protones y define el elemento."
+        },
+        {
+          "id": "qa-nu-2",
+          "enunciado": "El fósforo-31 tiene Z = 15. ¿Cuántos neutrones tiene?",
+          "opciones": [
+            "16",
+            "15",
+            "31",
+            "46"
+          ],
+          "correcta": 0,
+          "explicacion": "31 − 15 = 16."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "iones",
+      "titulo": "Iones: cuando cambian los electrones",
+      "resumen": "Si un átomo pierde electrones queda positivo (catión); si los gana, negativo (anión).",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "basico",
+      "requiere": [
+        "numeros"
+      ],
+      "ficha": {
+        "idea": "Los protones están bien guardados en el núcleo, pero los electrones de afuera se pueden ganar o perder. Si un átomo pierde electrones, le sobran cargas positivas y se vuelve un catión: el sodio que pierde uno es Na⁺. Si gana electrones, le sobran negativas y se vuelve un anión: el cloro que gana uno es Cl⁻. Como el número de protones no cambia, sigue siendo el mismo elemento. La carga se calcula así: carga = protones − electrones.",
+        "contexto": [
+          {
+            "titulo": "En la sal de cocina",
+            "texto": "La sal está hecha de iones Na⁺ y Cl⁻ que se atraen; cómo se unen se ve en el tema 6 (enlace químico)."
+          },
+          {
+            "titulo": "En el cuerpo",
+            "texto": "Iones como el sodio, el potasio y el calcio llevan las señales de los nervios y forman los huesos."
+          },
+          {
+            "titulo": "En el suelo",
+            "texto": "Las plantas toman nutrientes como iones: potasio (K⁺), calcio (Ca²⁺), nitrato (NO₃⁻)."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Catión: perdió electrones, carga +.",
+            "Anión: ganó electrones, carga −."
+          ],
+          "media": [
+            "Carga = protones − electrones.",
+            "Un ion sigue siendo el mismo elemento."
+          ],
+          "avanzada": [
+            "La carga se escribe arriba a la derecha: Ca²⁺, S²⁻."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué un catión es positivo si lo que hizo fue perder algo?",
+          "actividad": "Juego de roles: estudiantes como electrones que pasan de un «sodio» a un «cloro»; el grupo calcula la carga de cada uno.",
+          "errores": [
+            "Pensar que el catión ganó protones.",
+            "Creer que al volverse ion cambia de elemento."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Si un átomo pierde un electrón, ¿qué carga queda?",
+            "opciones": [
+              "+1",
+              "−1",
+              "0",
+              "Depende del elemento"
+            ],
+            "correcta": 0,
+            "explicacion": "Queda con un protón más que electrones."
+          }
+        },
+        {
+          "titulo": "Ganar y perder",
+          "visual": {
+            "tipo": "escena",
+            "id": "at-iones",
+            "fases": [
+              {
+                "id": "neutros",
+                "nombre": "Átomos neutros",
+                "texto": "Sodio (11 e⁻) y cloro (17 e⁻), cada uno con tantos electrones como protones."
+              },
+              {
+                "id": "cede",
+                "nombre": "Pasa un electrón",
+                "texto": "El sodio cede su electrón de afuera y el cloro lo recibe."
+              },
+              {
+                "id": "iones",
+                "nombre": "Dos iones",
+                "texto": "Na⁺ (catión) y Cl⁻ (anión): cargas opuestas que se atraen."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre el enlace iónico",
+            "tema": "enlace-quimico"
+          }
+        },
+        {
+          "titulo": "Iones que conoces",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🧂",
+                "titulo": "Na⁺ y Cl⁻",
+                "texto": "La sal de cocina."
+              },
+              {
+                "icono": "🦴",
+                "titulo": "Ca²⁺",
+                "texto": "Huesos y dientes; la cal del suelo."
+              },
+              {
+                "icono": "🍌",
+                "titulo": "K⁺",
+                "texto": "Plátano y abonos; los nervios."
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "ion-juego",
+      "preguntas": [
+        {
+          "id": "qa-io-1",
+          "enunciado": "El magnesio (12 protones) forma el ion Mg²⁺. ¿Cuántos electrones tiene?",
+          "opciones": [
+            "10",
+            "12",
+            "14",
+            "2"
+          ],
+          "correcta": 0,
+          "explicacion": "Carga +2: perdió dos electrones, 12 − 2 = 10."
+        },
+        {
+          "id": "qa-io-2",
+          "enunciado": "¿Qué es un anión?",
+          "opciones": [
+            "Un ion con carga negativa porque ganó electrones",
+            "Un ion positivo",
+            "Un átomo con más protones",
+            "Un átomo sin neutrones"
+          ],
+          "correcta": 0,
+          "explicacion": "Ganó electrones: tiene más − que +."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "isotopos",
+      "titulo": "Isótopos",
+      "resumen": "Átomos del mismo elemento con distinto número de neutrones: mismo Z, distinto A.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "intermedio",
+      "requiere": [
+        "numeros"
+      ],
+      "ficha": {
+        "idea": "Los isótopos son átomos de un mismo elemento (mismo número de protones) con distinto número de neutrones, y por eso con distinto número de masa. El hidrógeno tiene tres: protio (sin neutrones), deuterio (1 neutrón) y tritio (2 neutrones). Se comportan igual en las reacciones químicas porque tienen los mismos electrones, pero pesan distinto, y algunos son inestables: su núcleo se rompe y emite radiación (son radiactivos). La masa atómica que aparece en la tabla periódica es el promedio de los isótopos de cada elemento según su abundancia; por eso tiene decimales.",
+        "contexto": [
+          {
+            "titulo": "El reloj de los fósiles",
+            "texto": "El carbono-14 es radiactivo. Los seres vivos lo toman mientras viven y, al morir, se va perdiendo a un ritmo fijo: midiendo lo que queda se calcula la edad de restos de hasta unos 50 000 años."
+          },
+          {
+            "titulo": "En la medicina",
+            "texto": "Isótopos como el yodo-131 o el tecnecio-99m se usan para ver órganos por dentro y tratar enfermedades."
+          },
+          {
+            "titulo": "Por qué el cloro pesa 35,45",
+            "texto": "Es una mezcla de cloro-35 (≈ 76 %) y cloro-37 (≈ 24 %)."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Isótopos: mismo elemento, distinta cantidad de neutrones."
+          ],
+          "media": [
+            "Mismo Z, distinto A.",
+            "Algunos isótopos son radiactivos, como el carbono-14."
+          ],
+          "avanzada": [
+            "Masa atómica = promedio ponderado: Cl ≈ 0,76 × 35 + 0,24 × 37 ≈ 35,5."
+          ]
+        },
+        "docente": {
+          "abrir": "Si dos átomos tienen distinta masa, ¿pueden ser del mismo elemento?",
+          "actividad": "Con frijoles de dos tamaños, calcular la «masa promedio» de una bolsa mezclada (modelo de la masa atómica, 11°).",
+          "errores": [
+            "Confundir isótopo con ion.",
+            "Pensar que todos los isótopos son radiactivos."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Tres hidrógenos",
+          "visual": {
+            "tipo": "escena",
+            "id": "at-isotopos",
+            "fases": [
+              {
+                "id": "protio",
+                "nombre": "Protio",
+                "texto": "Un protón, ningún neutrón: el hidrógeno más común."
+              },
+              {
+                "id": "deuterio",
+                "nombre": "Deuterio",
+                "texto": "Un protón y un neutrón: el mismo elemento, más pesado."
+              },
+              {
+                "id": "tritio",
+                "nombre": "Tritio",
+                "texto": "Un protón y dos neutrones: es inestable."
+              },
+              {
+                "id": "carbono",
+                "nombre": "Carbono-12 y carbono-14",
+                "texto": "El carbono-14 es radiactivo y sirve para fechar restos."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre los fósiles",
+            "tema": "evidencias-evolucion",
+            "bloque": "fosiles"
+          }
+        },
+        {
+          "titulo": "Isótopo o ion",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "titulo": "Isótopo",
+              "puntos": [
+                "Cambian los neutrones",
+                "Cambia la masa (A)",
+                "La carga no cambia"
+              ]
+            },
+            "der": {
+              "titulo": "Ion",
+              "puntos": [
+                "Cambian los electrones",
+                "La masa casi no cambia",
+                "Cambia la carga"
+              ]
+            }
+          }
+        },
+        {
+          "titulo": "¿Por qué 35,45?",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "⚖️",
+            "valor": "Cl = 35,45 u",
+            "texto": "Promedio de cloro-35 (≈ 76 %) y cloro-37 (≈ 24 %)."
+          },
+          "nivel": "avanzado"
+        },
+        {
+          "titulo": "Radiactividad",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "☢️",
+                "titulo": "Núcleos inestables",
+                "texto": "Algunos isótopos se rompen y emiten radiación."
+              },
+              {
+                "icono": "🦴",
+                "titulo": "Datación",
+                "texto": "El carbono-14 fecha restos de hasta ≈ 50 000 años."
+              },
+              {
+                "icono": "🏥",
+                "titulo": "Medicina",
+                "texto": "Imágenes y tratamientos con isótopos."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre la radiactividad",
+            "tema": "radiactividad"
+          },
+          "nivel": "avanzado"
+        }
+      ],
+      "juego": "isotopo-juego",
+      "preguntas": [
+        {
+          "id": "qa-is-1",
+          "enunciado": "¿En qué se diferencian el carbono-12 y el carbono-14?",
+          "opciones": [
+            "En el número de neutrones",
+            "En el número de protones",
+            "En el número de electrones del átomo neutro",
+            "En que uno no es carbono"
+          ],
+          "correcta": 0,
+          "explicacion": "Ambos tienen 6 protones; 6 y 8 neutrones."
+        },
+        {
+          "id": "qa-is-2",
+          "enunciado": "¿Por qué la masa atómica del cloro tiene decimales (35,45)?",
+          "opciones": [
+            "Es el promedio de sus isótopos según su abundancia",
+            "Porque los protones pesan decimales",
+            "Por un error de medición",
+            "Porque el cloro es un gas"
+          ],
+          "correcta": 0,
+          "explicacion": "Mezcla de cloro-35 y cloro-37."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}

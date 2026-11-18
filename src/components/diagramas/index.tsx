@@ -89,6 +89,8 @@ import ArbolMateria from './ArbolMateria.tsx'
 import { SepararHeteroJuego, SepararHomoJuego, CafeSeparaJuego } from './JuegosSeparacion.tsx'
 import { DemocritoJuego, DaltonJuego, ThomsonJuego, RutherfordJuego, BohrJuego, NubeJuego, ChadwickJuego } from './JuegosModelosAtomicos.tsx'
 import LaminaOro from './LaminaOro.tsx'
+import ArmaAtomo from './ArmaAtomo.tsx'
+import { ParticulasJuego, NumeroAtomicoJuego, IonJuego, IsotopoJuego } from './JuegosAtomoDentro.tsx'
 import { AmenazaVulnerabilidadJuego, AmenazasColombiaJuego, ArmeroJuego, AntesDuranteDespuesJuego, PlanEscolarJuego } from './JuegosRiesgo.tsx'
 import RiesgoVereda from './RiesgoVereda.tsx'
 import { DesarrolloSostenibleJuego, OdsJuego, PraeJuego, ProyectoAulaJuego, ParticipacionJuego } from './JuegosSostenibilidad.tsx'
@@ -450,6 +452,11 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'nube-juego': NubeJuego,
   'chadwick-juego': ChadwickJuego,
   'lamina-oro': LaminaOro,
+  'arma-atomo': ArmaAtomo,
+  'particulas-juego': ParticulasJuego,
+  'numero-atomico-juego': NumeroAtomicoJuego,
+  'ion-juego': IonJuego,
+  'isotopo-juego': IsotopoJuego,
   'amenaza-vulnerabilidad-juego': AmenazaVulnerabilidadJuego,
   'amenazas-colombia-juego': AmenazasColombiaJuego,
   'armero-juego': ArmeroJuego,
