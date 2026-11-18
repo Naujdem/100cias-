@@ -1,0 +1,694 @@
+{
+  "id": "herencia-no-mendeliana",
+  "materia": "biologia",
+  "area": "genetica",
+  "titulo": "Herencia no mendeliana",
+  "subtema": "Más allá de las arvejas",
+  "orden": 26,
+  "etiqueta": "6",
+  "vistas": [
+    "ruta"
+  ],
+  "tituloVista": "Ruta de la herencia no mendeliana",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Distinguir dominancia completa, incompleta y codominancia.",
+    "Explicar los grupos sanguíneos y la herencia ligada al X.",
+    "Leer genealogías y reconocer la herencia poligénica."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con un texto de genética de bachillerato. A verificar: ejemplos (dondiego de noche, ganado ruano, hortensias) y Landsteiner (1901, Nobel 1930)."
+  ],
+  "bloques": [
+    {
+      "id": "incompleta",
+      "titulo": "Dominancia incompleta",
+      "resumen": "Cuando ningún alelo domina del todo, el heterocigoto muestra un intermedio: flor roja × blanca = rosada.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "En los experimentos de Mendel un alelo dominaba por completo al otro. Pero no siempre es así: en el dondiego de noche, una planta roja (RR) cruzada con una blanca (BB) da hijas rosadas (RB). Ningún alelo domina del todo y el heterocigoto muestra un fenotipo intermedio. En la F2 vuelven a salir rojas y blancas, en proporción 1 : 2 : 1.",
+        "contexto": [
+          {
+            "titulo": "No es mezcla",
+            "texto": "Si los alelos se mezclaran como pintura, el blanco no volvería a aparecer. Que vuelva demuestra que siguen separados."
+          },
+          {
+            "titulo": "Otros ejemplos",
+            "texto": "La boca de dragón y la forma del pelo en humanos (liso, ondulado, crespo) siguen este patrón."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "En la dominancia incompleta el heterocigoto muestra un intermedio.",
+            "Rojo (RR) × blanco (BB) → rosado (RB)."
+          ],
+          "media": [
+            "En la F2 la proporción es 1 : 2 : 1."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "Si cruzas una flor roja con una blanca, ¿qué esperarías?",
+          "actividad": "Predecir la F1 y la F2 en el cuadro de Punnett antes de mostrarlo.",
+          "errores": [
+            "Creer que los alelos se mezclan como pintura.",
+            "Esperar la proporción 3 : 1 de Mendel."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Cruzas una flor roja con una blanca y todas las hijas salen rosadas. ¿Qué pasará al cruzar dos rosadas?",
+            "opciones": [
+              "Saldrán rojas, rosadas y blancas",
+              "Todas saldrán rosadas",
+              "Todas saldrán rojas",
+              "Saldrán de un color nuevo"
+            ],
+            "correcta": 0,
+            "explicacion": "Cada rosada es RB: al cruzarlas aparecen RR, RB y BB."
+          }
+        },
+        {
+          "titulo": "Ni rojo ni blanco",
+          "visual": {
+            "tipo": "escena",
+            "id": "incompleta",
+            "fases": [
+              {
+                "id": "padres",
+                "nombre": "Los padres",
+                "texto": "Una flor roja (RR) y una blanca (BB) del dondiego de noche."
+              },
+              {
+                "id": "f1",
+                "nombre": "Las hijas",
+                "texto": "Todas las hijas son RB y salen rosadas: ningún alelo domina del todo."
+              },
+              {
+                "id": "f2",
+                "nombre": "Las nietas",
+                "texto": "Al cruzar dos rosadas salen 1 roja, 2 rosadas y 1 blanca."
+              },
+              {
+                "id": "no-mezcla",
+                "nombre": "No es mezcla",
+                "texto": "El blanco vuelve a aparecer: los alelos nunca se mezclaron."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre esto: la herencia mendeliana",
+            "tema": "herencia-mendeliana"
+          }
+        }
+      ],
+      "juego": "incompleta-juego",
+      "diagrama": "punnett-incompleta",
+      "preguntas": [
+        {
+          "id": "nm-in-1",
+          "enunciado": "¿Qué color tendrán las hijas de una flor roja (RR) y una blanca (BB) con dominancia incompleta?",
+          "opciones": [
+            "Rosadas",
+            "Rojas",
+            "Blancas",
+            "Mitad rojas y mitad blancas"
+          ],
+          "correcta": 0,
+          "explicacion": "Todas son RB y muestran un intermedio."
+        },
+        {
+          "id": "nm-in-2",
+          "enunciado": "¿Qué proporción sale en la F2 con dominancia incompleta?",
+          "opciones": [
+            "1 : 2 : 1",
+            "3 : 1",
+            "9 : 3 : 3 : 1",
+            "1 : 1"
+          ],
+          "correcta": 0,
+          "explicacion": "1 RR (roja) : 2 RB (rosadas) : 1 BB (blanca)."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "codominancia",
+      "titulo": "Codominancia",
+      "resumen": "Los dos alelos se expresan completos a la vez: la vaca ruana tiene pelos rojos y pelos blancos.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "intermedio",
+      "requiere": [
+        "incompleta"
+      ],
+      "ficha": {
+        "idea": "En la codominancia los dos alelos del heterocigoto se expresan por completo y a la vez, sin formar un intermedio. En algunas razas de ganado, un toro rojo y una vaca blanca tienen crías «ruanas»: no son rosadas, sino que tienen pelos rojos y pelos blancos mezclados. El grupo sanguíneo AB es otro ejemplo.",
+        "contexto": [
+          {
+            "titulo": "Incompleta o codominancia",
+            "texto": "En la incompleta se ve algo intermedio (rosado); en la codominancia se ven los dos rasgos completos (rojo y blanco)."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "En la codominancia se expresan los dos alelos a la vez."
+          ],
+          "media": [
+            "Ejemplos: ganado ruano y grupo sanguíneo AB."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿En qué se diferencia una vaca ruana de una flor rosada?",
+          "actividad": "Comparar con lupa una imagen de pelaje ruano y una flor rosada.",
+          "errores": [
+            "Confundir codominancia con dominancia incompleta."
+          ],
+          "minutos": 15
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Los dos a la vez",
+          "visual": {
+            "tipo": "escena",
+            "id": "codominancia",
+            "fases": [
+              {
+                "id": "padres",
+                "nombre": "Los padres",
+                "texto": "Un animal de pelo rojo y otro de pelo blanco."
+              },
+              {
+                "id": "cria",
+                "nombre": "La cría",
+                "texto": "La cría es ruana: de lejos parece rosada, pero no lo es."
+              },
+              {
+                "id": "zoom",
+                "nombre": "De cerca",
+                "texto": "Tiene pelos rojos y pelos blancos: cada alelo se expresa completo."
+              },
+              {
+                "id": "sangre",
+                "nombre": "En la sangre",
+                "texto": "El grupo AB también es codominancia: el glóbulo rojo tiene las marcas A y B."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Incompleta o codominancia",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "🌸",
+              "titulo": "Incompleta",
+              "puntos": [
+                "Un intermedio",
+                "Rojo + blanco = rosado"
+              ]
+            },
+            "der": {
+              "icono": "🐄",
+              "titulo": "Codominancia",
+              "puntos": [
+                "Los dos completos",
+                "Pelos rojos y pelos blancos"
+              ]
+            }
+          }
+        }
+      ],
+      "juego": "codominancia-juego",
+      "preguntas": [
+        {
+          "id": "nm-co-1",
+          "enunciado": "¿Qué caracteriza a la codominancia?",
+          "opciones": [
+            "Los dos alelos se expresan completos a la vez",
+            "Un alelo tapa al otro",
+            "Se forma un color intermedio",
+            "Ningún alelo se expresa"
+          ],
+          "correcta": 0,
+          "explicacion": "Por eso la vaca ruana tiene pelos de los dos colores."
+        },
+        {
+          "id": "nm-co-2",
+          "enunciado": "¿Cuál es un ejemplo de codominancia en humanos?",
+          "opciones": [
+            "El grupo sanguíneo AB",
+            "El grupo sanguíneo O",
+            "El daltonismo",
+            "La estatura"
+          ],
+          "correcta": 0,
+          "explicacion": "En el AB se expresan las marcas A y B."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "grupos-sanguineos",
+      "titulo": "Grupos sanguíneos",
+      "resumen": "Un gen con tres alelos (Iᴬ, Iᴮ, i) da seis genotipos y cuatro grupos: A, B, AB y O.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "basico",
+      "ficha": {
+        "idea": "El grupo sanguíneo depende de un gen con tres alelos (alelos múltiples): Iᴬ pone la marca A en los glóbulos rojos, Iᴮ la marca B e i ninguna. Cada persona tiene dos alelos. Iᴬ e Iᴮ son codominantes y los dos dominan sobre i. Así hay seis genotipos y cuatro grupos: A, B, AB y O.",
+        "contexto": [
+          {
+            "titulo": "¿Por qué importa?",
+            "texto": "En una transfusión, el cuerpo ataca los glóbulos con marcas que no tiene. Por eso hay que conocer el grupo."
+          },
+          {
+            "titulo": "El factor Rh",
+            "texto": "Es otro gen: quien tiene la proteína Rh es «positivo» (+) y quien no, «negativo» (−). Por eso se dice O+, A−, etc."
+          },
+          {
+            "titulo": "Karl Landsteiner",
+            "texto": "Descubrió los grupos A, B y O en 1901; recibió el Nobel en 1930."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Hay cuatro grupos: A, B, AB y O.",
+            "Dependen de un gen con tres alelos: Iᴬ, Iᴮ e i."
+          ],
+          "media": [
+            "Iᴬ e Iᴮ son codominantes; los dos dominan sobre i."
+          ],
+          "avanzada": [
+            "El factor Rh depende de otro gen."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Sabes tu grupo sanguíneo? ¿Y el de tus padres?",
+          "actividad": "Con el cuadro de Punnett, probar qué grupos pueden tener los hijos de distintas parejas.",
+          "errores": [
+            "Creer que hay solo dos alelos.",
+            "Pensar que el grupo O es dominante."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "A, B, AB y O",
+          "visual": {
+            "tipo": "escena",
+            "id": "abo",
+            "fases": [
+              {
+                "id": "marcas",
+                "nombre": "Las marcas",
+                "texto": "Los glóbulos rojos pueden tener marcas A, marcas B, las dos o ninguna."
+              },
+              {
+                "id": "alelos",
+                "nombre": "Tres alelos",
+                "texto": "Un solo gen con tres alelos: Iᴬ, Iᴮ e i. Cada persona tiene dos."
+              },
+              {
+                "id": "genotipos",
+                "nombre": "Seis genotipos",
+                "texto": "IᴬIᴬ e Iᴬi dan A; IᴮIᴮ e Iᴮi dan B; IᴬIᴮ da AB; ii da O."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Una madre es del grupo A (Iᴬi) y un padre del grupo B (Iᴮi). ¿Puede tener un hijo del grupo O?",
+            "opciones": [
+              "Sí, si cada uno le pasa el alelo i",
+              "No, porque ninguno de los dos es O",
+              "Solo si es niña",
+              "No, el O es dominante"
+            ],
+            "correcta": 0,
+            "explicacion": "Si los dos pasan i, el hijo es ii: grupo O (1 de 4 posibilidades)."
+          }
+        }
+      ],
+      "juego": "sangre-juego",
+      "diagrama": "punnett-sangre",
+      "preguntas": [
+        {
+          "id": "nm-gs-1",
+          "enunciado": "¿Qué genotipo tiene una persona del grupo O?",
+          "opciones": [
+            "ii",
+            "IᴬIᴮ",
+            "Iᴬi",
+            "IᴮIᴮ"
+          ],
+          "correcta": 0,
+          "explicacion": "Solo con dos alelos i no hay marcas A ni B."
+        },
+        {
+          "id": "nm-gs-2",
+          "enunciado": "¿Cuántos alelos tiene el gen del grupo sanguíneo ABO?",
+          "opciones": [
+            "Tres: Iᴬ, Iᴮ e i",
+            "Dos: A y B",
+            "Cuatro: A, B, AB y O",
+            "Uno solo"
+          ],
+          "correcta": 0,
+          "explicacion": "Son alelos múltiples, aunque cada persona tiene solo dos."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "ligada-sexo",
+      "titulo": "Herencia ligada al sexo",
+      "resumen": "Los genes del cromosoma X se heredan distinto en hombres y mujeres: por eso el daltonismo es más común en hombres.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "intermedio",
+      "requiere": [
+        "incompleta"
+      ],
+      "ficha": {
+        "idea": "Algunos genes están en el cromosoma X. Las mujeres (XX) tienen dos copias de esos genes y los hombres (XY), solo una, porque el Y no los tiene. Por eso, si un hombre recibe un alelo recesivo en su X, como el del daltonismo, lo manifiesta. Una mujer portadora (XᴰXᵈ) ve bien, pero puede pasárselo a sus hijos.",
+        "contexto": [
+          {
+            "titulo": "Daltonismo y hemofilia",
+            "texto": "Son dos rasgos ligados al X. La hemofilia afectó a varias familias reales europeas en el siglo XIX."
+          },
+          {
+            "titulo": "De madre a hijo",
+            "texto": "Un hijo varón recibe su X de la madre y su Y del padre."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Algunos genes están en el cromosoma X.",
+            "Los hombres tienen un solo X: muestran el rasgo con un solo alelo recesivo."
+          ],
+          "media": [
+            "Una mujer portadora (XᴰXᵈ) no tiene el rasgo pero puede pasarlo."
+          ],
+          "avanzada": [
+            "El daltonismo y la hemofilia son ligados al X."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué crees que hay más hombres daltónicos que mujeres?",
+          "actividad": "Usar el cuadro de Punnett con una madre portadora y un padre que ve bien.",
+          "errores": [
+            "Creer que los hijos varones heredan el X del padre.",
+            "Pensar que las portadoras son daltónicas."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Un solo X",
+          "visual": {
+            "tipo": "escena",
+            "id": "ligada",
+            "fases": [
+              {
+                "id": "cromosomas",
+                "nombre": "XX y XY",
+                "texto": "Las mujeres tienen dos cromosomas X; los hombres, un X y un Y, más pequeño."
+              },
+              {
+                "id": "gen-x",
+                "nombre": "Un gen en el X",
+                "texto": "El gen de la visión de colores está en el X. El hombre tiene un solo alelo: si es d, es daltónico."
+              },
+              {
+                "id": "padres",
+                "nombre": "Una familia",
+                "texto": "La madre es portadora (XᴰXᵈ) y el padre ve bien (XᴰY)."
+              },
+              {
+                "id": "hijos",
+                "nombre": "Los hijos",
+                "texto": "La mitad de los hijos varones puede ser daltónica; ninguna hija lo es, pero la mitad puede ser portadora."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre esto: las moscas de Morgan",
+            "tema": "historia-genetica",
+            "bloque": "morgan"
+          }
+        }
+      ],
+      "juego": "ligada-juego",
+      "diagrama": "punnett-ligado",
+      "preguntas": [
+        {
+          "id": "nm-li-1",
+          "enunciado": "¿Por qué el daltonismo es más común en hombres?",
+          "opciones": [
+            "Porque tienen un solo cromosoma X",
+            "Porque el gen está en el cromosoma Y",
+            "Porque es un alelo dominante",
+            "Porque lo heredan solo del padre"
+          ],
+          "correcta": 0,
+          "explicacion": "Con un solo X, un alelo recesivo basta para que se manifieste."
+        },
+        {
+          "id": "nm-li-2",
+          "enunciado": "Una madre portadora (XᴰXᵈ) y un padre que ve bien (XᴰY). ¿Qué probabilidad tiene un hijo varón de ser daltónico?",
+          "opciones": [
+            "50 %",
+            "0 %",
+            "25 %",
+            "100 %"
+          ],
+          "correcta": 0,
+          "explicacion": "El hijo recibe Y del padre y uno de los dos X de la madre: Xᴰ o Xᵈ."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "genealogias",
+      "titulo": "Genealogías",
+      "resumen": "Un árbol familiar con símbolos permite seguir un rasgo por generaciones y saber cómo se hereda.",
+      "anio": 5,
+      "etiqueta": "Paso 5",
+      "nivel": "intermedio",
+      "requiere": [
+        "incompleta"
+      ],
+      "ficha": {
+        "idea": "Una genealogía (o pedigrí) es un árbol familiar con símbolos: el cuadrado es un hombre, el círculo una mujer, el relleno indica que tiene el rasgo y el medio relleno, que es portador. Las generaciones se numeran con números romanos. Si un rasgo aparece en un hijo de padres que no lo tienen, es recesivo y los padres son portadores.",
+        "contexto": [
+          {
+            "titulo": "Para qué sirven",
+            "texto": "Los médicos genetistas las usan para calcular el riesgo de que un hijo herede una enfermedad."
+          },
+          {
+            "titulo": "Dominante o recesivo",
+            "texto": "Un rasgo dominante aparece en todas las generaciones; uno recesivo puede «saltar» generaciones."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Cuadrado = hombre; círculo = mujer.",
+            "Relleno = tiene el rasgo; medio relleno = portador."
+          ],
+          "media": [
+            "Si salta generaciones, el rasgo es recesivo."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Cómo dibujarías tu familia para seguir un rasgo, como los hoyuelos?",
+          "actividad": "Cada estudiante dibuja la genealogía de un rasgo visible en su familia.",
+          "errores": [
+            "Confundir los símbolos de hombre y mujer.",
+            "Creer que un rasgo que no se ve no está en la familia."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Leer un árbol familiar",
+          "visual": {
+            "tipo": "escena",
+            "id": "genealogia",
+            "fases": [
+              {
+                "id": "simbolos",
+                "nombre": "Los símbolos",
+                "texto": "Cuadrado, hombre; círculo, mujer; relleno, afectado; medio relleno, portador."
+              },
+              {
+                "id": "familia",
+                "nombre": "Tres generaciones",
+                "texto": "Abuelos (I), sus hijos (II) y sus nietos (III)."
+              },
+              {
+                "id": "afectado",
+                "nombre": "Una sorpresa",
+                "texto": "Nace una niña afectada de padres que no tienen el rasgo: el rasgo es recesivo."
+              },
+              {
+                "id": "portadores",
+                "nombre": "Los portadores",
+                "texto": "Sus padres son portadores (Aa), y el alelo venía de uno de los abuelos."
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "genealogia-juego",
+      "preguntas": [
+        {
+          "id": "nm-ge-1",
+          "enunciado": "En una genealogía, ¿qué representa un círculo relleno?",
+          "opciones": [
+            "Una mujer que tiene el rasgo",
+            "Un hombre que tiene el rasgo",
+            "Una mujer portadora",
+            "Un hombre sano"
+          ],
+          "correcta": 0,
+          "explicacion": "Círculo = mujer; relleno = tiene el rasgo."
+        },
+        {
+          "id": "nm-ge-2",
+          "enunciado": "Si dos padres sin el rasgo tienen un hijo con el rasgo, ¿qué se concluye?",
+          "opciones": [
+            "El rasgo es recesivo y los padres son portadores",
+            "El rasgo es dominante",
+            "El rasgo no es hereditario",
+            "El hijo fue adoptado"
+          ],
+          "correcta": 0,
+          "explicacion": "Cada padre tenía un alelo recesivo oculto (Aa)."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "poligenica",
+      "titulo": "Muchos genes y el ambiente",
+      "resumen": "La estatura o el color de la piel dependen de muchos genes y del ambiente, y forman una curva de campana.",
+      "anio": 6,
+      "etiqueta": "Paso 6",
+      "nivel": "avanzado",
+      "requiere": [
+        "incompleta"
+      ],
+      "ficha": {
+        "idea": "Muchos rasgos no dependen de un solo gen sino de muchos (herencia poligénica), como la estatura o el color de la piel. Cada gen suma un poco, así que en vez de pocas clases aparece una variación continua con forma de campana. Además, el ambiente influye: la alimentación en la estatura o la acidez del suelo en el color de las hortensias. Fenotipo = genotipo + ambiente.",
+        "contexto": [
+          {
+            "titulo": "Cientos de genes",
+            "texto": "Para la estatura humana se conocen cientos de variantes génicas, cada una con un efecto pequeño."
+          },
+          {
+            "titulo": "Gemelos",
+            "texto": "Los gemelos idénticos tienen el mismo ADN, pero pueden diferir en peso o estatura por el ambiente."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Algunos rasgos dependen de muchos genes."
+          ],
+          "media": [
+            "Forman una variación continua (curva de campana)."
+          ],
+          "avanzada": [
+            "El ambiente también influye: fenotipo = genotipo + ambiente."
+          ]
+        },
+        "docente": {
+          "abrir": "Si mides la estatura de todo el curso, ¿qué forma tendrá la gráfica?",
+          "actividad": "Medir la estatura del grupo y hacer un histograma.",
+          "errores": [
+            "Creer que cada rasgo depende de un solo gen.",
+            "Pensar que el ambiente no influye en los rasgos heredados."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "De pocas clases a una campana",
+          "visual": {
+            "tipo": "escena",
+            "id": "poligenica",
+            "fases": [
+              {
+                "id": "un-gen",
+                "nombre": "Un gen",
+                "texto": "Con un gen y dos alelos (dominancia incompleta) hay 3 clases."
+              },
+              {
+                "id": "dos-genes",
+                "nombre": "Dos genes",
+                "texto": "Con dos genes que suman, ya hay 5 clases."
+              },
+              {
+                "id": "muchos",
+                "nombre": "Muchos genes",
+                "texto": "Con muchos genes, las clases se juntan en una curva de campana: la mayoría en el medio."
+              },
+              {
+                "id": "ambiente",
+                "nombre": "El ambiente",
+                "texto": "Las hortensias con los mismos genes salen azules en suelo ácido y rosadas en suelo alcalino."
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "poligenica-juego",
+      "preguntas": [
+        {
+          "id": "nm-po-1",
+          "enunciado": "¿Por qué la estatura humana forma una curva de campana?",
+          "opciones": [
+            "Porque depende de muchos genes y del ambiente",
+            "Porque depende de un solo gen dominante",
+            "Porque es un rasgo ligado al X",
+            "Porque no se hereda"
+          ],
+          "correcta": 0,
+          "explicacion": "Muchos genes con efectos pequeños dan una variación continua."
+        },
+        {
+          "id": "nm-po-2",
+          "enunciado": "¿Qué significa «fenotipo = genotipo + ambiente»?",
+          "opciones": [
+            "Que lo que se ve depende de los genes y de las condiciones",
+            "Que el ambiente cambia el ADN",
+            "Que los genes no influyen",
+            "Que el fenotipo se hereda directamente"
+          ],
+          "correcta": 0,
+          "explicacion": "Los mismos genes pueden dar rasgos distintos en ambientes distintos."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}

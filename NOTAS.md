@@ -382,3 +382,8 @@ Hooke usa la reconstrucción de Rita Greer (2004, Free Art License, Wikimedia Co
 - `expresion-genica.json` (orden 24, ruta de 6 pasos): del gen a la proteína, transcripción (Explora: `transcribe` = ArmaHelice en modo ARN), código genético (Explora: `rueda-codones`), traducción, genes encendidos y apagados (desde 9°) e intrones y exones (11°).
 - Tabla del código genético en `src/lib/codigoGenetico.ts` (función `traducir`). Escenas en `escenas/EscenasExpresion.tsx`; juegos en `diagramas/JuegosExpresion.tsx`.
 - La síntesis de proteínas del área 1 queda explicada aquí a fondo.
+
+## Área 2 · Tema 6 «Herencia no mendeliana» (17 nov)
+- `herencia-no-mendeliana.json` (orden 26, ruta de 6 pasos): dominancia incompleta, codominancia (9°), grupos sanguíneos, ligada al sexo (9°), genealogías (9°) y poligénica + ambiente (11°).
+- Explora: `PunnettNoMendel` con tres modos (`punnett-incompleta`, `punnett-sangre`, `punnett-ligado`). Escenas en `escenas/EscenasNoMendel.tsx`; juegos en `diagramas/JuegosNoMendel.tsx`.
+- Los alelos se escriben con letras volteadas de Unicode (Iᴬ, Xᵈ): revisar que se vean bien en el computador del aula.
