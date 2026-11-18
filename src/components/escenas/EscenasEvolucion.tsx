@@ -1212,3 +1212,160 @@ export function EscenaRadiacion({ fase }: { fase: string }) {
     </svg>
   )
 }
+
+/* ═══ Tema 7 · Clasificación y árbol de la vida ═════════════════════════ */
+
+/* ── categorías anidadas, del dominio a la especie ───────────────────── */
+
+const CATEGORIAS = ['dominio', 'reino', 'clase', 'orden', 'familia', 'especie']
+const CAJAS_TAX = [
+  { n: 'Dominio Eukarya', e: '🍄🌿🐟🐦🐸🐻🐆🐕' },
+  { n: 'Reino Animalia', e: '🐟🐦🐸🐻🐆🐕' },
+  { n: 'Clase Mammalia', e: '🐻🐆🐕🧍' },
+  { n: 'Orden Carnivora', e: '🐻🐆🐕' },
+  { n: 'Familia Ursidae', e: '🐻🐻‍❄️' },
+  { n: 'Tremarctos ornatus', e: '🐻' },
+]
+
+export function EscenaCategorias({ fase }: { fase: string }) {
+  const i = idx(CATEGORIAS, fase)
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label={`Categorías taxonómicas: ${fase}`} className="h-full w-full">
+      {fondo('#f4f1ea')}
+      {CAJAS_TAX.map((c, k) => {
+        const m = k * 22
+        const activa = k === i
+        return (
+          <g key={c.n} style={{ transition: suave, opacity: k <= i ? 1 : 0.12 }}>
+            <rect x={10 + m} y={10 + m * 0.8} width={380 - 2 * m} height={230 - 1.6 * m} rx="12"
+              fill={activa ? '#fff' : 'none'} stroke={activa ? AZUL : '#c9bfa8'} strokeWidth={activa ? 3 : 1.5} />
+            <text x={20 + m} y={28 + m * 0.8} fontSize="10" fontWeight="800" fill={activa ? AZUL : '#8a826f'} fontStyle={k === 5 ? 'italic' : 'normal'}>{c.n}</text>
+          </g>
+        )
+      })}
+      <text x="200" y="175" textAnchor="middle" fontSize={i === 5 ? 50 : 26} style={{ transition: suave }}>{CAJAS_TAX[i].e}</text>
+      <T x={200} y={268} t={['Dominio: el grupo más amplio', 'Reino: todos los animales', 'Clase: los mamíferos', 'Orden: los carnívoros', 'Familia: los osos', 'Especie: el oso de anteojos'][i]} s={13} />
+      <T x={200} y={288} t="cada nivel cabe dentro del anterior" s={10} peso={600} />
+    </svg>
+  )
+}
+
+/* ── tres dominios ───────────────────────────────────────────────────── */
+
+const DOMINIOS = ['raiz', 'tres', 'reinos']
+
+export function EscenaDominios({ fase }: { fase: string }) {
+  const i = idx(DOMINIOS, fase)
+  const ramas = [
+    { x: 70, n: 'Bacteria', c: '#4f8a3c', e: '🦠' },
+    { x: 200, n: 'Archaea', c: '#c9702f', e: '♨️' },
+    { x: 330, n: 'Eukarya', c: AZUL, e: '🧫' },
+  ]
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label={`Tres dominios: ${fase}`} className="h-full w-full">
+      {fondo('#f2f0f6')}
+      <circle cx="200" cy="260" r="10" fill={MARRON} />
+      <T x={200} y={290} t="antepasado común de toda la vida" s={10} peso={700} />
+      {ramas.map((r, k) => (
+        <g key={r.n} style={{ transition: suave, opacity: i >= 1 ? 1 : 0 }}>
+          <path d={`M 200 255 Q ${(200 + r.x) / 2} 200 ${r.x} 120`} fill="none" stroke={r.c} strokeWidth="5" />
+          <T x={r.x} y={105} t={r.n} c={r.c} s={14} />
+          <T x={r.x} y={80} t={r.e} s={20} />
+          {k === 2 && i === 1 && <T x={r.x} y={135} t="células con núcleo" s={9} peso={600} />}
+          {k < 2 && i >= 1 && <T x={r.x} y={135} t="sin núcleo" s={9} peso={600} />}
+        </g>
+      ))}
+      <g style={ver(i === 2)}>
+        {[['🐻', 'Animales'], ['🌿', 'Plantas'], ['🍄', 'Hongos'], ['🦠', 'Protistas']].map(([e, n], k) => (
+          <g key={n}>
+            <path d={`M 330 120 L ${270 + k * 40} 50`} stroke={AZUL} strokeWidth="2" />
+            <T x={270 + k * 40} y={42} t={e} s={16} />
+            <T x={270 + k * 40} y={20} t={n} s={8} />
+          </g>
+        ))}
+      </g>
+      <g style={ver(i === 0)}><T x={200} y={150} t="Todo empezó en un solo tronco" s={14} /></g>
+    </svg>
+  )
+}
+
+/* ── armar un cladograma con caracteres compartidos ──────────────────── */
+
+const CLADO = ['grupos', 'vertebras', 'patas', 'pelo', 'leer']
+const CLADO_SP = [
+  { n: 'Lanceta', e: '🪱' }, { n: 'Pez', e: '🐟' }, { n: 'Rana', e: '🐸' }, { n: 'Lagarto', e: '🦎' }, { n: 'Oso', e: '🐻' },
+]
+const CARACTERES = [
+  { n: 'columna vertebral', desde: 1 },
+  { n: 'cuatro patas', desde: 2 },
+  { n: 'huevo con cáscara', desde: 3 },
+  { n: 'pelo', desde: 4 },
+]
+
+export function EscenaCladograma({ fase }: { fase: string }) {
+  const i = idx(CLADO, fase)
+  const visibles = [0, 1, 2, 4, 4][i]
+  const X0 = 40
+  const Y0 = 250
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label={`Cladograma: ${fase}`} className="h-full w-full">
+      {fondo('#f4f1ea')}
+      {/* tronco diagonal */}
+      <line x1={X0} y1={Y0} x2={340} y2={50} stroke={MARRON} strokeWidth="4" />
+      {CLADO_SP.map((s, k) => {
+        const nx = X0 + (k + 0.5) * 60
+        const ny = Y0 - (k + 0.5) * 40
+        return (
+          <g key={s.n}>
+            <line x1={nx} y1={ny} x2={nx} y2={40} stroke={MARRON} strokeWidth="3" style={{ opacity: k === 4 ? 0 : 1 }} />
+            <T x={k === 4 ? 345 : nx} y={30} t={s.e} s={20} />
+            <T x={k === 4 ? 345 : nx} y={12} t={s.n} s={9} />
+          </g>
+        )
+      })}
+      {CARACTERES.map((c, k) => {
+        const x = X0 + (k + 1) * 60 - 4
+        const y = Y0 - (k + 1) * 40 + 12
+        return (
+          <g key={c.n} style={{ transition: suave, opacity: k < visibles ? 1 : 0 }}>
+            <line x1={x - 8} y1={y - 8} x2={x + 8} y2={y + 8} stroke={ROJO} strokeWidth="3" />
+            <text x={x + 12} y={y + 12} fontSize="10" fontWeight="800" fill={ROJO}>{c.n}</text>
+          </g>
+        )
+      })}
+      <g style={ver(i === 4)}>
+        <circle cx={X0 + 3.5 * 60} cy={Y0 - 3.5 * 40} r="8" fill="none" stroke={AZUL} strokeWidth="3" />
+        <T x={300} y={260} t="El oso es más pariente del lagarto" s={11} c={AZUL} />
+        <T x={300} y={276} t="que de la rana: antepasado más reciente" s={11} c={AZUL} />
+      </g>
+      <g style={ver(i < 4)}>
+        <T x={300} y={268} t={['Cinco animales, ¿cómo se agrupan?', 'Todos menos la lanceta tienen columna', 'Desde la rana: cuatro patas', 'Huevo con cáscara y, luego, pelo', ''][i]} s={11} />
+      </g>
+    </svg>
+  )
+}
+
+/* ── el árbol de la vida: alejarse de la hoja a la raíz ──────────────── */
+
+const ARBOL = ['hoja', 'primates', 'animales', 'raiz']
+
+export function EscenaArbolVida({ fase }: { fase: string }) {
+  const i = idx(ARBOL, fase)
+  const zoom = ['translate(-790px, 58px) scale(3)', 'translate(-400px, 10px) scale(2)', 'translate(-125px, -26px) scale(1.3)', 'none'][i]
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label={`Árbol de la vida: ${fase}`} className="h-full w-full">
+      {fondo('#eef1ea')}
+      <g style={{ transition: 'transform 1.4s cubic-bezier(.45,.05,.25,1)', transform: zoom, transformOrigin: '0 0' }}>
+        <path d="M 200 290 V 200 M 200 200 Q 120 160 70 90 M 200 200 Q 230 150 250 120 M 250 120 Q 270 80 300 60 M 250 120 Q 230 90 220 60 M 300 60 Q 310 40 330 30 M 300 60 Q 290 40 285 25" fill="none" stroke={MARRON} strokeWidth="4" />
+        <T x={70} y={80} t="🦠" s={14} />
+        <T x={220} y={52} t="🍄" s={12} />
+        <T x={330} y={24} t="🧍" s={10} />
+        <T x={285} y={20} t="🐒" s={10} />
+        <T x={300} y={70} t="•" s={14} c={ROJO} />
+      </g>
+      <rect x="20" y="250" width="360" height="42" rx="10" fill="#ffffffdd" />
+      <T x={200} y={268} t={['Nosotros: una hoja del árbol', 'Humanos y monos: un antepasado común (punto rojo)', 'Todos los animales y hongos: una rama mayor', 'Toda la vida: un solo árbol con una raíz común'][i]} s={12} />
+      <T x={200} y={284} t={['', 'no venimos de los monos actuales: somos primos', 'los hongos son más parientes nuestros que de las plantas', 'LUCA: el último antepasado común universal'][i]} s={10} peso={600} c={AZUL} />
+    </svg>
+  )
+}

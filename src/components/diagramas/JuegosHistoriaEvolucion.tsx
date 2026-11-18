@@ -494,3 +494,66 @@ export function RadiacionJuego() {
       cierre="Un antepasado + muchos nichos vacíos = muchas especies nuevas." />
   )
 }
+
+/* ═══ Tema 7 · Clasificación y árbol de la vida ═══ */
+
+export function CategoriasJuego() {
+  return (
+    <JuegoDecide titulo="¿Qué categoría es?" pregunta="¿A qué nivel corresponde?" instrucciones="Decide a qué categoría taxonómica corresponde cada nombre." clave="cien:categorias-mejor"
+      opciones={[o('reino', 'Reino', '👑'), o('clase', 'Clase', '🏫'), o('familia', 'Familia', '🏠'), o('especie', 'Especie', '🔹')]}
+      cartas={[
+        c('🐻', 'Animalia', 'reino', 'El reino de los animales.'),
+        c('🐦', 'Aves', 'clase', 'La clase de las aves.'),
+        c('🐆', 'Felidae', 'familia', 'Las familias de animales terminan en -idae.'),
+        c('🧍', 'Homo sapiens', 'especie', 'Nombre de dos palabras: especie.'),
+        c('🍄', 'Fungi', 'reino', 'El reino de los hongos.'),
+        c('🐸', 'Amphibia', 'clase', 'La clase de los anfibios.'),
+        c('🌿', 'Asteraceae', 'familia', 'Las familias de plantas terminan en -aceae.'),
+      ]}
+      cierre="Dominio, reino, filo, clase, orden, familia, género y especie." />
+  )
+}
+
+export function DominiosJuego() {
+  return (
+    <JuegoDecide titulo="Tres dominios" pregunta="¿En qué dominio va?" instrucciones="Decide a qué dominio pertenece cada ser vivo." clave="cien:dominios-mejor"
+      opciones={[o('bac', 'Bacteria', '🦠'), o('arq', 'Archaea', '♨️'), o('euk', 'Eukarya', '🧫')]}
+      cartas={[
+        c('🍄', 'Un champiñón', 'euk', 'Los hongos tienen células con núcleo.'),
+        c('🦠', 'La bacteria del yogur', 'bac', 'Sin núcleo: dominio Bacteria.'),
+        c('♨️', 'Un microbio de las aguas termales hirvientes', 'arq', 'Muchas arqueas viven en ambientes extremos.'),
+        c('🌿', 'Un frailejón', 'euk', 'Las plantas son eucariotas.'),
+        c('🦠', 'La bacteria que causa la tuberculosis', 'bac', 'Es una bacteria.'),
+        c('🧫', 'Una ameba', 'euk', 'Es un protista: tiene núcleo.'),
+      ]}
+      cierre="Bacteria y Archaea no tienen núcleo; Eukarya sí." />
+  )
+}
+
+export function CladogramaJuego() {
+  return (
+    <JuegoDecide titulo="¿Quién es más pariente?" pregunta="¿Más pariente de cuál?" instrucciones="Usa el cladograma (lanceta, pez, rana, lagarto, oso) y elige al pariente más cercano." clave="cien:cladograma-mejor"
+      opciones={[o('a', 'El primero', '1️⃣'), o('b', 'El segundo', '2️⃣')]}
+      cartas={[
+        c('🐻', 'El oso: ¿del lagarto o del pez?', 'a', 'Oso y lagarto comparten el huevo con cáscara (amnios).'),
+        c('🐸', 'La rana: ¿de la lanceta o del oso?', 'b', 'Rana y oso comparten columna y cuatro patas.'),
+        c('🐟', 'El pez: ¿de la lanceta o de la rana?', 'b', 'Pez y rana comparten la columna vertebral.'),
+        c('🦎', 'El lagarto: ¿del oso o de la rana?', 'a', 'Comparten un antepasado más reciente.'),
+      ]}
+      cierre="Más caracteres compartidos = antepasado común más reciente." />
+  )
+}
+
+export function ArbolVidaJuego() {
+  return (
+    <JuegoDecide titulo="El árbol de la vida" pregunta="¿Es cierto?" instrucciones="Decide si cada frase sobre el parentesco de los seres vivos es cierta o falsa." clave="cien:arbol-vida-mejor" opciones={VF}
+      cartas={[
+        c('🐒', 'Los humanos venimos de los chimpancés actuales', 'f', 'Compartimos un antepasado común: somos primos.'),
+        c('🐦', 'Las aves son descendientes de dinosaurios', 'v', 'Son el único grupo de dinosaurios que sobrevivió.'),
+        c('🍄', 'Los hongos son más parientes de los animales que de las plantas', 'v', 'Comparten un antepasado común más reciente.'),
+        c('🌳', 'Todos los seres vivos tienen un antepasado común', 'v', 'Lo indican el ADN y el código genético compartidos.'),
+        c('🐋', 'Las ballenas son más parientes de los tiburones que de las vacas', 'f', 'Las ballenas son mamíferos, parientes de los hipopótamos y las vacas.'),
+      ]}
+      cierre="Todos somos ramas del mismo árbol." />
+  )
+}
