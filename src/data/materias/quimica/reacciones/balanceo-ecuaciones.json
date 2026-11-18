@@ -1,0 +1,495 @@
+{
+  "id": "balanceo-ecuaciones",
+  "materia": "quimica",
+  "area": "reacciones",
+  "titulo": "Balanceo de ecuaciones",
+  "subtema": "Conservación de los átomos, tanteo y redox",
+  "orden": 125,
+  "etiqueta": "5",
+  "vistas": [
+    "ruta"
+  ],
+  "tituloVista": "Ruta del balanceo",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Explicar por qué una ecuación debe estar balanceada.",
+    "Balancear ecuaciones por tanteo cambiando solo los coeficientes.",
+    "Identificar oxidación, reducción, agente oxidante y agente reductor.",
+    "Balancear reacciones redox sencillas igualando los electrones ganados y perdidos."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con un texto de química de bachillerato (método de tanteo, definiciones de oxidación, reducción y agentes, balanceo por cambio en el estado de oxidación)."
+  ],
+  "bloques": [
+    {
+      "id": "por-que",
+      "titulo": "¿Por qué balancear?",
+      "resumen": "Los átomos no se crean ni se destruyen: debe haber los mismos de cada elemento a los dos lados.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "En una reacción los átomos solo se reorganizan: no aparecen ni desaparecen. Por eso la masa total se conserva, como demostró Lavoisier. Una ecuación está balanceada cuando a cada lado de la flecha hay el mismo número de átomos de cada elemento. La ecuación H₂ + O₂ → H₂O no lo está: a la izquierda hay 2 oxígenos y a la derecha solo 1. Para arreglarla se ponen coeficientes delante de las fórmulas: 2 H₂ + O₂ → 2 H₂O. Ahora hay 4 hidrógenos y 2 oxígenos a cada lado. Los subíndices nunca se cambian, porque cambiarían la sustancia: H₂O₂ ya no es agua, es agua oxigenada.",
+        "contexto": [
+          {
+            "titulo": "Como una receta",
+            "texto": "Si una receta de arepas lleva 2 tazas de harina, no pueden salir arepas con 3 tazas: lo que sale es lo que entra, reorganizado."
+          },
+          {
+            "titulo": "Contar átomos",
+            "texto": "El coeficiente multiplica toda la fórmula: 2 H₂O tiene 2 × 2 = 4 hidrógenos y 2 × 1 = 2 oxígenos."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Balancear: mismos átomos de cada elemento a los dos lados."
+          ],
+          "media": [
+            "Solo se cambian los coeficientes; los subíndices no se tocan."
+          ],
+          "avanzada": [
+            "Átomos de un elemento = coeficiente × subíndice, sumado en todas las fórmulas de ese lado."
+          ]
+        },
+        "docente": {
+          "abrir": "Si quemo un papel en un frasco cerrado, ¿pesa lo mismo antes y después?",
+          "actividad": "Con bolitas de plastilina, armar H₂ + O₂ → H₂O y descubrir que sobra un oxígeno; agregar moléculas completas hasta que no sobre nada.",
+          "errores": [
+            "Cambiar H₂O por H₂O₂ para «cuadrar» los oxígenos.",
+            "Olvidar multiplicar el coeficiente por todos los átomos de la fórmula."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Sobra algo?",
+          "visual": {
+            "tipo": "escena",
+            "id": "ba-conservacion",
+            "fases": [
+              {
+                "id": "sin",
+                "nombre": "Sin balancear",
+                "texto": "H₂ + O₂ → H₂O: sobra un oxígeno."
+              },
+              {
+                "id": "con",
+                "nombre": "Balanceada",
+                "texto": "2 H₂ + O₂ → 2 H₂O: 4 H y 2 O a cada lado."
+              },
+              {
+                "id": "subindice",
+                "nombre": "¡No toques el subíndice!",
+                "texto": "H₂O₂ es otra sustancia: el agua oxigenada."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre la ley de Lavoisier",
+            "tema": "leyes-ponderales"
+          }
+        }
+      ],
+      "juego": "balanceada-juego",
+      "preguntas": [
+        {
+          "id": "qb-pq-1",
+          "enunciado": "¿Por qué hay que balancear una ecuación?",
+          "opciones": [
+            "Porque los átomos no se crean ni se destruyen",
+            "Para que se vea más ordenada",
+            "Porque los productos pesan más",
+            "Para cambiar las sustancias"
+          ],
+          "correcta": 0,
+          "explicacion": "La masa se conserva."
+        },
+        {
+          "id": "qb-pq-2",
+          "enunciado": "¿Cuántos hidrógenos hay en 3 H₂O?",
+          "opciones": [
+            "6",
+            "3",
+            "2",
+            "5"
+          ],
+          "correcta": 0,
+          "explicacion": "3 × 2 = 6."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "tanteo",
+      "titulo": "Balanceo por tanteo",
+      "resumen": "Se cuentan los átomos y se ajustan coeficientes: primero metales, luego no metales y al final H y O.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "intermedio",
+      "requiere": [
+        "por-que"
+      ],
+      "ficha": {
+        "idea": "El tanteo consiste en probar coeficientes hasta que todo cuadre, con un orden que ayuda: 1) contar los átomos de cada elemento a cada lado; 2) igualar primero los metales, luego los no metales y dejar el hidrógeno y el oxígeno para el final; 3) volver a contar todo; 4) si los coeficientes se pueden simplificar, simplificar. Ejemplo con el gas de la estufa: CH₄ + O₂ → CO₂ + H₂O. El carbono ya está (1 y 1). Hidrógeno: 4 a la izquierda, 2 a la derecha → 2 H₂O. Oxígeno: ahora hay 2 + 2 = 4 a la derecha → 2 O₂. Resultado: CH₄ + 2 O₂ → CO₂ + 2 H₂O.",
+        "contexto": [
+          {
+            "titulo": "¿Por qué el oxígeno al final?",
+            "texto": "Porque suele aparecer en varias fórmulas a la vez; si se ajusta primero, se desarregla cada vez que se cambia otra cosa."
+          },
+          {
+            "titulo": "Con paciencia",
+            "texto": "Si un coeficiente cambia algo que ya estaba listo, no pasa nada: se vuelve a contar. Así funciona el tanteo."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Contar, ajustar coeficientes, volver a contar."
+          ],
+          "media": [
+            "Orden: metales → no metales → hidrógeno → oxígeno."
+          ],
+          "avanzada": [
+            "Usar los coeficientes enteros más pequeños posibles."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Cuántas moléculas de oxígeno necesita una de metano para quemarse?",
+          "actividad": "Balancear en parejas con la balanza de ecuaciones: uno ajusta los coeficientes y el otro cuenta los átomos en voz alta.",
+          "errores": [
+            "Empezar por el oxígeno.",
+            "Dejar coeficientes que se pueden simplificar (4 H₂ + 2 O₂ → 4 H₂O)."
+          ],
+          "minutos": 40
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "El tanteo paso a paso",
+          "visual": {
+            "tipo": "escena",
+            "id": "ba-tanteo",
+            "fases": [
+              {
+                "id": "contar",
+                "nombre": "Contar",
+                "texto": "CH₄ + O₂ → CO₂ + H₂O: C 1–1, H 4–2, O 2–3."
+              },
+              {
+                "id": "hidrogeno",
+                "nombre": "Hidrógeno",
+                "texto": "Faltan H a la derecha: 2 H₂O."
+              },
+              {
+                "id": "oxigeno",
+                "nombre": "Oxígeno",
+                "texto": "Ahora hay 4 O a la derecha: 2 O₂."
+              },
+              {
+                "id": "revisar",
+                "nombre": "Revisar",
+                "texto": "C 1–1, H 4–4, O 4–4. ¡Balanceada!"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "La balanza de ecuaciones",
+          "visual": {
+            "tipo": "diagrama",
+            "id": "balanza-ecuaciones"
+          }
+        },
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "N₂ + __ H₂ → 2 NH₃ (amoníaco, para abonos). ¿Qué coeficiente falta?",
+            "opciones": [
+              "3",
+              "2",
+              "6",
+              "1"
+            ],
+            "correcta": 0,
+            "explicacion": "2 NH₃ tiene 6 H; 3 H₂ también."
+          }
+        }
+      ],
+      "diagrama": "balanza-ecuaciones",
+      "juego": "coeficiente-juego",
+      "preguntas": [
+        {
+          "id": "qb-ta-1",
+          "enunciado": "¿Cuál es la ecuación balanceada de la formación del agua?",
+          "opciones": [
+            "2 H₂ + O₂ → 2 H₂O",
+            "H₂ + O₂ → H₂O₂",
+            "H₂ + O₂ → H₂O",
+            "H₄ + O₂ → 2 H₂O"
+          ],
+          "correcta": 0,
+          "explicacion": "4 H y 2 O a cada lado."
+        },
+        {
+          "id": "qb-ta-2",
+          "enunciado": "En el tanteo, ¿qué elementos conviene dejar para el final?",
+          "opciones": [
+            "El hidrógeno y el oxígeno",
+            "Los metales",
+            "Los no metales",
+            "El carbono"
+          ],
+          "correcta": 0,
+          "explicacion": "Suelen aparecer en varias fórmulas."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "redox",
+      "titulo": "Oxidación y reducción",
+      "resumen": "Oxidarse es perder electrones (el estado sube); reducirse es ganarlos (el estado baja).",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "avanzado",
+      "requiere": [
+        "tanteo"
+      ],
+      "ficha": {
+        "idea": "En muchas reacciones unos átomos pasan electrones a otros: son las reacciones redox (reducción-oxidación). Un átomo se oxida cuando pierde electrones, y su estado de oxidación sube. Un átomo se reduce cuando gana electrones, y su estado baja. Las dos cosas pasan siempre juntas: los electrones que pierde uno los gana otro. En el clavo dentro del sulfato de cobre, Fe + CuSO₄ → FeSO₄ + Cu, el hierro pasa de 0 a +2 (se oxida, pierde 2 e⁻) y el cobre pasa de +2 a 0 (se reduce, gana 2 e⁻). El que se reduce es el agente oxidante, porque hace que el otro se oxide (aquí el Cu²⁺); el que se oxida es el agente reductor (el Fe).",
+        "contexto": [
+          {
+            "titulo": "Un truco",
+            "texto": "«OP-RG»: Oxidación Pierde, Reducción Gana. Y los agentes van al revés: el oxidante se reduce."
+          },
+          {
+            "titulo": "Redox en todas partes",
+            "texto": "La combustión, la oxidación del machete, las pilas, la respiración y la fotosíntesis son reacciones redox."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Oxidación: pierde electrones, el estado sube."
+          ],
+          "media": [
+            "Reducción: gana electrones, el estado baja."
+          ],
+          "avanzada": [
+            "Agente oxidante: se reduce. Agente reductor: se oxida."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Qué le pasa al clavo cuando se cubre de cobre?",
+          "actividad": "Escribir los estados de oxidación sobre cada átomo en cinco reacciones y marcar con flechas cuál sube y cuál baja.",
+          "errores": [
+            "Pensar que reducirse es perder (por la palabra «reducir»).",
+            "Confundir el agente oxidante con la sustancia que se oxida."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "El clavo y el cobre",
+          "visual": {
+            "tipo": "escena",
+            "id": "ba-redox",
+            "fases": [
+              {
+                "id": "estados",
+                "nombre": "Los estados",
+                "texto": "Fe 0 y Cu +2 antes; Fe +2 y Cu 0 después."
+              },
+              {
+                "id": "electrones",
+                "nombre": "Los electrones",
+                "texto": "El hierro le pasa 2 electrones al cobre."
+              },
+              {
+                "id": "agentes",
+                "nombre": "Los agentes",
+                "texto": "El Fe se oxida (agente reductor); el Cu²⁺ se reduce (agente oxidante)."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre los estados de oxidación",
+            "tema": "estados-oxidacion",
+            "bloque": "calculo"
+          }
+        },
+        {
+          "titulo": "OP-RG",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "⬆️",
+              "titulo": "Oxidación",
+              "puntos": [
+                "Pierde electrones",
+                "El estado sube",
+                "Es el agente reductor"
+              ]
+            },
+            "der": {
+              "icono": "⬇️",
+              "titulo": "Reducción",
+              "puntos": [
+                "Gana electrones",
+                "El estado baja",
+                "Es el agente oxidante"
+              ]
+            }
+          }
+        }
+      ],
+      "juego": "oxida-reduce-juego",
+      "preguntas": [
+        {
+          "id": "qb-rx-1",
+          "enunciado": "Si el estado de oxidación de un átomo pasa de 0 a +3, ¿qué le pasó?",
+          "opciones": [
+            "Se oxidó: perdió 3 electrones",
+            "Se redujo: ganó 3 electrones",
+            "Ganó 3 protones",
+            "No cambió"
+          ],
+          "correcta": 0,
+          "explicacion": "El estado sube cuando pierde electrones."
+        },
+        {
+          "id": "qb-rx-2",
+          "enunciado": "En Fe + CuSO₄ → FeSO₄ + Cu, ¿cuál es el agente oxidante?",
+          "opciones": [
+            "El Cu²⁺ (del CuSO₄)",
+            "El Fe",
+            "El SO₄²⁻",
+            "El FeSO₄"
+          ],
+          "correcta": 0,
+          "explicacion": "Se reduce y hace que el hierro se oxide."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "balanceo-redox",
+      "titulo": "Balanceo redox",
+      "resumen": "Se igualan los electrones perdidos y ganados, y luego se termina por tanteo.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "avanzado",
+      "requiere": [
+        "redox"
+      ],
+      "ficha": {
+        "idea": "Las ecuaciones redox se pueden balancear igualando los electrones: los que pierde el que se oxida deben ser los mismos que gana el que se reduce. Ejemplo, el alto horno que saca hierro del mineral: Fe₂O₃ + CO → Fe + CO₂. 1) Estados: el Fe pasa de +3 a 0 (gana 3 e⁻ por átomo, y hay 2 átomos: 6 e⁻); el C pasa de +2 a +4 (pierde 2 e⁻). 2) Igualar: 6 ganados = 2 × 3 perdidos, así que hacen falta 3 CO. 3) Poner los coeficientes y terminar por tanteo: Fe₂O₃ + 3 CO → 2 Fe + 3 CO₂. 4) Revisar: Fe 2–2, C 3–3, O 6–6.",
+        "contexto": [
+          {
+            "titulo": "El alto horno",
+            "texto": "Así se obtiene el hierro del mineral, por ejemplo en Paz del Río (Boyacá): el monóxido de carbono que sale del carbón le quita el oxígeno al óxido de hierro."
+          },
+          {
+            "titulo": "Métodos más largos",
+            "texto": "En la universidad se usa el método del ion-electrón, que separa la oxidación y la reducción en dos semirreacciones."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Electrones perdidos = electrones ganados."
+          ],
+          "media": [
+            "Calcular cuánto cambia el estado de cada átomo y multiplicar por el número de átomos."
+          ],
+          "avanzada": [
+            "Cruzar los electrones como coeficientes, poner los coeficientes y terminar por tanteo."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Cómo se saca el hierro de una piedra rojiza?",
+          "actividad": "Balancear tres reacciones redox sencillas en grupo y comprobarlas en la balanza de ecuaciones.",
+          "errores": [
+            "Olvidar multiplicar los electrones por el número de átomos (el 2 del Fe₂O₃).",
+            "No revisar al final los elementos que no cambiaron de estado."
+          ],
+          "minutos": 40
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "El alto horno en cuatro pasos",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "1️⃣",
+                "titulo": "Estados",
+                "texto": "Fe +3 → 0; C +2 → +4"
+              },
+              {
+                "icono": "2️⃣",
+                "titulo": "Electrones",
+                "texto": "Fe₂ gana 6; C pierde 2"
+              },
+              {
+                "icono": "3️⃣",
+                "titulo": "Igualar",
+                "texto": "6 = 2 × 3 → 3 CO"
+              },
+              {
+                "icono": "4️⃣",
+                "titulo": "Tanteo y revisar",
+                "texto": "Fe₂O₃ + 3 CO → 2 Fe + 3 CO₂"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "En Zn + Cu²⁺ → Zn²⁺ + Cu, ¿cuántos electrones pasan del zinc al cobre?",
+            "opciones": [
+              "2",
+              "1",
+              "4",
+              "0"
+            ],
+            "correcta": 0,
+            "explicacion": "El Zn sube de 0 a +2 y el Cu baja de +2 a 0."
+          }
+        }
+      ],
+      "preguntas": [
+        {
+          "id": "qb-br-1",
+          "enunciado": "En el balanceo redox, ¿qué debe ser igual?",
+          "opciones": [
+            "Los electrones perdidos y los ganados",
+            "Los protones a cada lado",
+            "Los estados de oxidación",
+            "Los subíndices"
+          ],
+          "correcta": 0,
+          "explicacion": "Lo que pierde uno lo gana el otro."
+        },
+        {
+          "id": "qb-br-2",
+          "enunciado": "¿Cuál es la ecuación balanceada del alto horno?",
+          "opciones": [
+            "Fe₂O₃ + 3 CO → 2 Fe + 3 CO₂",
+            "Fe₂O₃ + CO → Fe + CO₂",
+            "Fe₂O₃ + 2 CO → 2 Fe + 2 CO₂",
+            "2 Fe₂O₃ + CO → 4 Fe + CO₂"
+          ],
+          "correcta": 0,
+          "explicacion": "Fe 2–2, C 3–3, O 6–6."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}
