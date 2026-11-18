@@ -1,0 +1,366 @@
+{
+  "id": "adaptaciones",
+  "materia": "biologia",
+  "area": "evolucion",
+  "titulo": "Adaptaciones",
+  "subtema": "Forma, funcionamiento y conducta al servicio de la vida",
+  "orden": 44,
+  "etiqueta": "4",
+  "vistas": ["ruta"],
+  "tituloVista": "Ruta de las adaptaciones",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Definir adaptación y diferenciarla de un cambio en la vida del individuo.",
+    "Clasificar adaptaciones en morfológicas, fisiológicas y de conducta.",
+    "Explicar el camuflaje, la coloración de advertencia y el mimetismo con ejemplos de Colombia."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con un texto de biología y guías de fauna colombiana. A verificar: datos del colibrí pico de espada (Ensifera ensifera), rana dorada (Phyllobates terribilis, Cauca), metabolismo CAM en cactus, aves migratorias boreales en Colombia (≈ 150–200 especies), guácharo (ecolocalización)."
+  ],
+  "bloques": [
+    {
+      "id": "que-es",
+      "titulo": "¿Qué es una adaptación?",
+      "resumen": "Una característica heredada que ayuda a sobrevivir y reproducirse en un ambiente. Es el resultado de la selección natural.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "Una adaptación es una característica heredada (de forma, de funcionamiento o de conducta) que aumenta la probabilidad de sobrevivir y reproducirse en un ambiente determinado. Las adaptaciones no aparecen porque el ser vivo las necesite: son el resultado de la selección natural, que durante muchas generaciones favoreció las variaciones útiles. No hay que confundirlas con los ajustes que hace un individuo en su vida, como broncearse.",
+        "contexto": [
+          { "titulo": "Útil aquí, inútil allá", "texto": "El pelaje grueso ayuda en el páramo, pero en la selva caliente sería una carga. Una adaptación siempre es «para» un ambiente." },
+          { "titulo": "Nada es perfecto", "texto": "Las adaptaciones son soluciones de compromiso: la cola del pavo real atrae parejas, pero también depredadores." },
+          { "titulo": "Aclimatación no es adaptación", "texto": "Si subes al páramo, tu cuerpo produce más glóbulos rojos en unas semanas. Es un ajuste tuyo: tus hijos no lo heredan." }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Adaptación: rasgo heredado que ayuda a sobrevivir y reproducirse en un ambiente.",
+            "Las adaptaciones son resultado de la selección natural."
+          ],
+          "media": ["Hay adaptaciones morfológicas, fisiológicas y de conducta."],
+          "avanzada": ["La aclimatación es un ajuste del individuo y no se hereda."]
+        },
+        "docente": {
+          "abrir": "Si soltáramos un oso de anteojos en el desierto de la Tatacoa, ¿qué problemas tendría?",
+          "actividad": "Por grupos, inventar un animal para un ecosistema de Colombia y justificar cada rasgo.",
+          "errores": ["Creer que el ser vivo se adapta porque «quiere» o «lo necesita».", "Llamar adaptación a cualquier cambio en la vida de un individuo."],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Cada uno en su lugar",
+          "visual": {
+            "tipo": "escena",
+            "id": "ev-adaptacion",
+            "fases": [
+              { "id": "pregunta", "nombre": "Dos ambientes", "texto": "Un mamífero del páramo y uno de la selva. ¿Por qué son tan distintos?" },
+              { "id": "paramo", "nombre": "Páramo", "texto": "Frío y viento: el pelaje grueso conserva el calor." },
+              { "id": "selva", "nombre": "Selva", "texto": "Calor y humedad: pelaje corto y orejas que ayudan a soltar calor." },
+              { "id": "idea", "nombre": "Adaptación", "texto": "Cada rasgo heredado encaja con su ambiente: son adaptaciones moldeadas por la selección natural." }
+            ]
+          },
+          "atajo": { "texto": "Más sobre esto: Selección natural", "tema": "seleccion-natural", "bloque": "ingredientes" }
+        },
+        {
+          "titulo": "Tres tipos de adaptación",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "📐", "titulo": "Morfológicas", "texto": "La forma: picos, pelos, hojas." },
+              { "icono": "⚙️", "titulo": "Fisiológicas", "texto": "El funcionamiento: venenos, ahorro de agua." },
+              { "icono": "🏃", "titulo": "De conducta", "texto": "El comportamiento: migrar, cortejar, cazar de noche." }
+            ]
+          }
+        }
+      ],
+      "juego": "adaptacion-juego",
+      "preguntas": [
+        {
+          "id": "ad-qe-1",
+          "enunciado": "¿Cuál de estos es una adaptación?",
+          "opciones": ["El pelaje grueso heredado del oso de anteojos", "El bronceado de una persona en la playa", "Los músculos de un deportista", "Una cicatriz en la pata de un perro"],
+          "correcta": 0,
+          "explicacion": "Las adaptaciones se heredan; los demás son cambios en la vida del individuo."
+        },
+        {
+          "id": "ad-qe-2",
+          "enunciado": "¿Cómo se originan las adaptaciones?",
+          "opciones": ["Por selección natural a lo largo de muchas generaciones", "Porque el individuo las necesita", "Porque el ambiente las fabrica en cada individuo", "De un día para otro"],
+          "correcta": 0,
+          "explicacion": "La selección favorece las variaciones útiles que ya existen en la población."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "morfologicas",
+      "titulo": "Adaptaciones morfológicas",
+      "resumen": "Formas y estructuras del cuerpo: los pelos y la roseta del frailejón, los picos de los colibríes, las patas palmeadas.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "Las adaptaciones morfológicas tienen que ver con la forma y la estructura del cuerpo. El frailejón, que vive en páramos con heladas casi cada noche, tiene hojas en roseta que se cierran de noche, pelos que funcionan como abrigo y filtro solar, y hojas secas pegadas al tallo que lo protegen del frío. Los colibríes tienen picos de formas distintas que encajan con las flores de las que se alimentan; el colibrí pico de espada de los Andes tiene el pico más largo que su cuerpo.",
+        "contexto": [
+          { "titulo": "Frailejones y agua", "texto": "Los frailejones atrapan el agua de la niebla y ayudan a que el páramo funcione como una esponja que alimenta ríos." },
+          { "titulo": "Picos y flores", "texto": "Flores y colibríes se adaptaron unos a otros: la flor larga solo la alcanza el pico largo, que a cambio la poliniza." },
+          { "titulo": "Más ejemplos", "texto": "Patas palmeadas de patos, cuerpo en torpedo de los delfines, hojas convertidas en espinas en los cactus." }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Las adaptaciones morfológicas son de forma y estructura.",
+            "El frailejón tiene pelos, roseta y hojas secas que lo protegen del frío."
+          ],
+          "media": ["Los picos de los colibríes encajan con la forma de las flores."],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Por qué crees que las hojas del frailejón son peludas?",
+          "actividad": "Con el Explora, probar cada colibrí en cada flor y anotar cuál encaja.",
+          "errores": ["Pensar que el colibrí estiró el pico para alcanzar la flor (idea de Lamarck)."],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "El frailejón",
+          "visual": {
+            "tipo": "escena",
+            "id": "ev-frailejon",
+            "fases": [
+              { "id": "planta", "nombre": "En el páramo", "texto": "Vive a más de 3000 m: de día sol fuerte, de noche heladas." },
+              { "id": "roseta", "nombre": "Roseta", "texto": "Las hojas forman una roseta que se cierra de noche y protege el centro." },
+              { "id": "pelos", "nombre": "Pelos", "texto": "Una capa de pelos blancos abriga como una cobija y refleja el sol." },
+              { "id": "abrigo", "nombre": "Hojas secas", "texto": "Las hojas viejas no se caen: quedan pegadas al tallo como un abrigo." },
+              { "id": "agua", "nombre": "Agua", "texto": "Guarda agua en su tallo y capta la de la niebla." }
+            ]
+          }
+        },
+        {
+          "titulo": "Picos para cada flor",
+          "visual": { "tipo": "cifra", "icono": "🐦", "valor": "Más largo que su cuerpo", "texto": "el pico del colibrí pico de espada, de los bosques altos de los Andes" },
+          "puntos": ["En el Explora: prueba cada pico en cada flor"]
+        }
+      ],
+      "juego": "morfologica-juego",
+      "diagrama": "colibri-flores",
+      "preguntas": [
+        {
+          "id": "ad-mo-1",
+          "enunciado": "¿Para qué le sirven al frailejón las hojas secas pegadas al tallo?",
+          "opciones": ["Lo abrigan del frío", "Atraen polinizadores", "Le dan comida a los osos", "Hacen fotosíntesis de noche"],
+          "correcta": 0,
+          "explicacion": "Funcionan como un abrigo contra las heladas del páramo."
+        },
+        {
+          "id": "ad-mo-2",
+          "enunciado": "¿Por qué el colibrí pico de espada tiene el pico tan largo?",
+          "opciones": ["Porque la selección favoreció a los que alcanzaban flores muy largas", "Porque lo estiró para alcanzar las flores", "Porque así vuela más rápido", "Porque le sirve para pelear"],
+          "correcta": 0,
+          "explicacion": "Los de pico más largo aprovechaban flores que otros no alcanzaban."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "fisiologicas",
+      "titulo": "Adaptaciones fisiológicas",
+      "resumen": "Formas de funcionar por dentro: el cactus que abre sus estomas de noche, el veneno de la rana dorada, la hibernación.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "intermedio",
+      "ficha": {
+        "idea": "Las adaptaciones fisiológicas tienen que ver con el funcionamiento del cuerpo. Muchos cactus, como los de la Tatacoa, abren sus estomas de noche, cuando hace fresco, para tomar el dióxido de carbono sin perder tanta agua; de día los cierran y lo usan en la fotosíntesis. La rana dorada del Pacífico colombiano produce en su piel uno de los venenos más potentes que se conocen. Otros animales hibernan o soportan el frío o la falta de agua gracias a cómo funciona su cuerpo.",
+        "contexto": [
+          { "titulo": "La rana dorada", "texto": "Phyllobates terribilis vive en un área pequeña del Cauca. Comunidades emberá usaban su veneno en los dardos de cerbatana." },
+          { "titulo": "El veneno viene de la comida", "texto": "En cautiverio, sin los insectos que come en la selva, la rana deja de ser venenosa." },
+          { "titulo": "Ahorrar agua", "texto": "Las plantas del desierto tienen estomas que se abren de noche, hojas convertidas en espinas y tallos que guardan agua." }
+        ],
+        "cuaderno": {
+          "facil": ["Las adaptaciones fisiológicas son del funcionamiento del cuerpo."],
+          "media": [
+            "Los cactus abren los estomas de noche para perder menos agua.",
+            "La rana dorada produce un veneno potente en su piel."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "Si el cactus cierra sus estomas de día, ¿cómo consigue el CO₂ para la fotosíntesis?",
+          "actividad": "Comparar una planta de la Tatacoa con una del jardín del colegio: hojas, tallo y dónde guardan agua.",
+          "errores": ["Confundir adaptación fisiológica con morfológica: una es cómo funciona, la otra cómo es."],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "El cactus que respira de noche",
+          "visual": {
+            "tipo": "escena",
+            "id": "ev-cactus",
+            "fases": [
+              { "id": "dia", "nombre": "De día", "texto": "Con calor y sol, los estomas se cierran: así no se escapa el agua." },
+              { "id": "noche", "nombre": "De noche", "texto": "Con el fresco se abren y toman el CO₂, que guardan para usarlo de día." }
+            ]
+          },
+          "atajo": { "texto": "Más sobre esto: Fotosíntesis", "tema": "metabolismo-celular", "bloque": "fotosintesis" }
+        },
+        {
+          "titulo": "Venenos y frío",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "🐸", "titulo": "Rana dorada", "texto": "Veneno muy potente en la piel." },
+              { "icono": "🐻", "titulo": "Hibernación", "texto": "Bajan la temperatura y el ritmo del corazón para ahorrar energía." },
+              { "icono": "🦙", "titulo": "Altura", "texto": "Las vicuñas y llamas de los Andes captan oxígeno con facilidad." }
+            ]
+          }
+        }
+      ],
+      "juego": "fisiologica-juego",
+      "preguntas": [
+        {
+          "id": "ad-fi-1",
+          "enunciado": "¿Por qué muchos cactus abren sus estomas de noche?",
+          "opciones": ["Para perder menos agua", "Porque de noche hay más luz", "Para dormir", "Para atraer murciélagos"],
+          "correcta": 0,
+          "explicacion": "De noche hace más fresco y se evapora menos agua por los estomas abiertos."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "conducta",
+      "titulo": "Adaptaciones de conducta",
+      "resumen": "Comportamientos heredados que ayudan a sobrevivir: la migración de aves a Colombia, el guácharo nocturno, las arrieras que cultivan hongos.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "basico",
+      "ficha": {
+        "idea": "Las adaptaciones de conducta son comportamientos que ayudan a sobrevivir y reproducirse. Cientos de especies de aves de Norteamérica viajan cada año a Colombia para pasar el invierno, donde encuentran insectos y frutos. El guácharo sale de las cuevas solo de noche y se orienta en la oscuridad con chasquidos. Las hormigas arrieras cortan hojas para cultivar el hongo del que se alimentan. También son conductas adaptativas el cortejo, el cuidado de las crías y la vida en grupo.",
+        "contexto": [
+          { "titulo": "Colombia, destino de migratorias", "texto": "Reinitas, golondrinas y halcones llegan cada año. Por eso conservar los bosques de aquí también protege aves del norte." },
+          { "titulo": "El guácharo del Huila", "texto": "Da nombre al Parque Nacional Cueva de los Guácharos. Se alimenta de frutos de palma y dispersa sus semillas." },
+          { "titulo": "Agricultoras desde hace millones de años", "texto": "Las arrieras cultivan su hongo desde mucho antes de que existieran los humanos." }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Las adaptaciones de conducta son comportamientos que ayudan a sobrevivir.",
+            "Muchas aves del norte migran a Colombia cada año."
+          ],
+          "media": ["El guácharo es nocturno y se orienta con sonidos."],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Has visto aves que solo aparecen en ciertos meses del año?",
+          "actividad": "Llevar un registro de las aves que se ven en el colegio entre octubre y abril.",
+          "errores": ["Creer que toda conducta es aprendida: muchas son heredadas, como la migración."],
+          "minutos": 15
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Viajeras del norte",
+          "visual": {
+            "tipo": "escena",
+            "id": "ev-migracion",
+            "fases": [
+              { "id": "verano", "nombre": "Verano en el norte", "texto": "Crían en Norteamérica, donde hay mucha comida en verano." },
+              { "id": "otono", "nombre": "Parten", "texto": "Los días se acortan y el frío se acerca: emprenden el viaje." },
+              { "id": "colombia", "nombre": "En Colombia", "texto": "Pasan aquí los meses de invierno del norte." },
+              { "id": "regreso", "nombre": "Regreso", "texto": "En primavera vuelven a criar al norte." }
+            ]
+          }
+        },
+        {
+          "titulo": "Más conductas",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "🦇", "titulo": "Guácharo", "texto": "Nocturno; se orienta con chasquidos en las cuevas." },
+              { "icono": "🐜", "titulo": "Hormiga arriera", "texto": "Corta hojas para cultivar su hongo." },
+              { "icono": "💃", "titulo": "Cortejo", "texto": "Bailes y cantos para atraer pareja." }
+            ]
+          }
+        }
+      ],
+      "juego": "conducta-juego",
+      "preguntas": [
+        {
+          "id": "ad-co-1",
+          "enunciado": "¿Qué tipo de adaptación es la migración de las aves?",
+          "opciones": ["De conducta", "Morfológica", "Fisiológica", "No es una adaptación"],
+          "correcta": 0,
+          "explicacion": "Es un comportamiento que les permite encontrar alimento todo el año."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "camuflaje",
+      "titulo": "Camuflaje, advertencia y mimetismo",
+      "resumen": "Unos se esconden, otros avisan con colores que son peligrosos y otros imitan a los peligrosos sin serlo.",
+      "anio": 5,
+      "etiqueta": "Paso 5",
+      "nivel": "basico",
+      "ficha": {
+        "idea": "Para no ser comidos, muchos seres vivos usan el color y la forma. Con el camuflaje se confunden con el fondo, como el insecto hoja. Con la coloración de advertencia avisan que son peligrosos, como la rana dorada o las avispas. Con el mimetismo, una especie inofensiva imita a una peligrosa, como las falsas corales que imitan a las corales venenosas: los depredadores que aprendieron a evitar a la peligrosa también evitan a la imitadora.",
+        "contexto": [
+          { "titulo": "Cuidado con la regla del rojo y amarillo", "texto": "En Colombia hay corales con muchos patrones de anillos: ninguna regla de colores sirve para distinguirlas. Toda serpiente con anillos se trata como venenosa." },
+          { "titulo": "Mariposas que se imitan", "texto": "Varias mariposas Heliconius, todas de mal sabor, se parecen entre sí: así los depredadores aprenden más rápido a evitarlas." },
+          { "titulo": "Ojos falsos", "texto": "Algunas mariposas búho tienen en las alas manchas como ojos grandes que asustan a las aves." }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Camuflaje: confundirse con el fondo.",
+            "Coloración de advertencia: colores vivos que avisan peligro."
+          ],
+          "media": ["Mimetismo: una especie inofensiva imita a una peligrosa."],
+          "avanzada": ["Si varias especies peligrosas se parecen entre sí, los depredadores aprenden más rápido a evitarlas."]
+        },
+        "docente": {
+          "abrir": "Si fueras un ave, ¿te comerías una rana amarilla brillante? ¿Por qué?",
+          "actividad": "Esconder figuras de papel de distintos colores en el patio y contar cuáles encuentran primero.",
+          "errores": ["Creer que se puede distinguir una coral verdadera por sus colores: es peligroso."],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "No me comas",
+          "visual": {
+            "tipo": "escena",
+            "id": "ev-mimetismo",
+            "fases": [
+              { "id": "camuflaje", "nombre": "Camuflaje", "texto": "El insecto hoja se confunde entre las hojas." },
+              { "id": "advertencia", "nombre": "Advertencia", "texto": "La rana dorada no se esconde: sus colores avisan que es venenosa." },
+              { "id": "imitadora", "nombre": "Mimetismo", "texto": "La falsa coral, inofensiva, tiene colores parecidos a los de la coral venenosa." },
+              { "id": "aprende", "nombre": "El engaño funciona", "texto": "El depredador que aprendió a evitar la coral también evita a la imitadora.", "nota": "Nunca toques una serpiente con anillos: no se distinguen a simple vista." }
+            ]
+          }
+        }
+      ],
+      "juego": "mimetismo-juego",
+      "preguntas": [
+        {
+          "id": "ad-ca-1",
+          "enunciado": "La falsa coral es inofensiva pero tiene colores parecidos a la coral venenosa. Esto es…",
+          "opciones": ["Mimetismo", "Camuflaje", "Hibernación", "Migración"],
+          "correcta": 0,
+          "explicacion": "Imita a una especie peligrosa para que los depredadores la eviten."
+        },
+        {
+          "id": "ad-ca-2",
+          "enunciado": "¿Por qué la rana dorada tiene colores tan llamativos?",
+          "opciones": ["Para avisar a los depredadores que es venenosa", "Para esconderse entre las hojas", "Para atraer a sus presas", "Porque no tiene depredadores en ningún momento de su vida"],
+          "correcta": 0,
+          "explicacion": "Es coloración de advertencia."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}

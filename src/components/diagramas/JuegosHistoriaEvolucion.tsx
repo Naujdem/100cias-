@@ -278,3 +278,82 @@ export function TiposSeleccionJuego() {
       cierre="Direccional: un extremo. Estabilizadora: el promedio. Disruptiva: los dos extremos." />
   )
 }
+
+/* ═══ Tema 4 · Adaptaciones ═══ */
+
+export function AdaptacionJuego() {
+  return (
+    <JuegoDecide titulo="¿Adaptación o no?" pregunta="¿Es una adaptación?" instrucciones="Decide si cada caso es una adaptación (heredada) o un cambio que ocurre en la vida de un individuo." clave="cien:adaptacion-mejor"
+      opciones={[o('si', 'Adaptación', '🧬'), o('no', 'Cambio en vida', '🔄')]}
+      cartas={[
+        c('🌿', 'Los pelos blancos de las hojas del frailejón', 'si', 'Se heredan y lo protegen del frío y del sol.'),
+        c('🏖️', 'Una persona que se broncea en la playa', 'no', 'Es una respuesta del cuerpo, no se hereda.'),
+        c('🐦', 'El pico largo del colibrí pico de espada', 'si', 'Heredado; le permite alcanzar flores muy largas.'),
+        c('🏋️', 'Un atleta que aumenta su capacidad pulmonar', 'no', 'Lo gana con entrenamiento; sus hijos no lo heredan.'),
+        c('🐻', 'El pelaje grueso del oso de anteojos en el páramo', 'si', 'Rasgo heredado que conserva el calor.'),
+      ]}
+      cierre="Una adaptación se hereda; lo que se gana en vida no." />
+  )
+}
+
+export function MorfologicaJuego() {
+  return (
+    <JuegoDecide titulo="¿Para qué sirve?" pregunta="¿Qué ventaja da?" instrucciones="Decide para qué le sirve a cada ser vivo su estructura." clave="cien:morfologica-mejor"
+      opciones={[o('frio', 'Aguantar el frío', '❄️'), o('comer', 'Conseguir alimento', '🍽️'), o('mover', 'Moverse', '🏊')]}
+      cartas={[
+        c('🌿', 'Hojas secas que cubren el tallo del frailejón', 'frio', 'Funcionan como abrigo.'),
+        c('🐦', 'Pico largo y delgado del colibrí', 'comer', 'Alcanza el néctar en el fondo de la flor.'),
+        c('🦆', 'Patas palmeadas del pato', 'mover', 'Remos para nadar.'),
+        c('🐻', 'Pelaje grueso del oso de anteojos', 'frio', 'Conserva el calor en el páramo.'),
+        c('🐜', 'Mandíbulas fuertes de la hormiga arriera', 'comer', 'Corta hojas para cultivar su hongo.'),
+        c('🐬', 'Cuerpo en forma de torpedo del delfín', 'mover', 'Corta el agua con poca resistencia.'),
+      ]}
+      cierre="La forma de cada estructura encaja con su función en el ambiente." />
+  )
+}
+
+export function FisiologicaJuego() {
+  return (
+    <JuegoDecide titulo="Por dentro" pregunta="¿Es cierto?" instrucciones="Decide si cada frase sobre adaptaciones fisiológicas es cierta o falsa." clave="cien:fisiologica-mejor" opciones={VF}
+      cartas={[
+        c('🌵', 'Los cactus abren sus estomas de noche para perder menos agua', 'v', 'De día, con calor, los mantienen cerrados.'),
+        c('🐸', 'La rana dorada produce un veneno muy potente en su piel', 'v', 'Se considera de los animales más venenosos.'),
+        c('🐪', 'Los camellos guardan agua en la joroba', 'f', 'La joroba guarda grasa; ahorran agua de otras formas.'),
+        c('🐻‍❄️', 'Algunos animales hibernan para ahorrar energía en invierno', 'v', 'Bajan su temperatura y su ritmo cardíaco.'),
+        c('🌿', 'Las plantas del páramo dejan de hacer fotosíntesis por el frío', 'f', 'Siguen haciéndola; tienen adaptaciones para el frío.'),
+      ]}
+      cierre="Las adaptaciones fisiológicas cambian cómo funciona el cuerpo por dentro." />
+  )
+}
+
+export function ConductaJuego() {
+  return (
+    <JuegoDecide titulo="¿Qué tipo de adaptación?" pregunta="¿Forma, función o conducta?" instrucciones="Decide si cada adaptación es morfológica (forma), fisiológica (funcionamiento) o de conducta (comportamiento)." clave="cien:tipo-adaptacion-mejor"
+      opciones={[o('mor', 'Morfológica', '📐'), o('fis', 'Fisiológica', '⚙️'), o('con', 'De conducta', '🏃')]}
+      cartas={[
+        c('🐦', 'Aves que viajan del norte a Colombia cada año', 'con', 'La migración es un comportamiento.'),
+        c('🦇', 'El guácharo sale de la cueva solo de noche', 'con', 'Evita depredadores y busca frutos de noche.'),
+        c('🐦', 'El pico de espada del colibrí', 'mor', 'Es una forma del cuerpo.'),
+        c('🐸', 'El veneno de la rana dorada', 'fis', 'Es una sustancia que su cuerpo produce.'),
+        c('🐜', 'Las arrieras cultivan un hongo con las hojas que cortan', 'con', 'Es un comportamiento de la colonia.'),
+        c('🌵', 'El cactus abre los estomas de noche', 'fis', 'Es su forma de funcionar.'),
+      ]}
+      cierre="Forma (morfológica), funcionamiento (fisiológica) y comportamiento (conducta)." />
+  )
+}
+
+export function MimetismoJuego() {
+  return (
+    <JuegoDecide titulo="Esconderse o avisar" pregunta="¿Qué estrategia usa?" instrucciones="Decide si cada ser vivo se esconde, avisa que es peligroso o imita a otro." clave="cien:mimetismo-mejor"
+      opciones={[o('cam', 'Camuflaje', '🍃'), o('adv', 'Advertencia', '⚠️'), o('imi', 'Imita a otro', '🎭')]}
+      cartas={[
+        c('🍃', 'Un insecto con forma y color de hoja', 'cam', 'Se confunde con el fondo.'),
+        c('🐸', 'Rana dorada amarilla brillante y venenosa', 'adv', 'Sus colores avisan del peligro.'),
+        c('🐍', 'Falsa coral inofensiva con anillos rojos, negros y amarillos', 'imi', 'Imita a la coral venenosa.'),
+        c('🦋', 'Polilla con manchas como ojos grandes en las alas', 'imi', 'Parece la cara de un animal más grande.'),
+        c('🦎', 'Lagartija del mismo color que la corteza', 'cam', 'Pasa desapercibida.'),
+        c('🐝', 'Avispa con rayas amarillas y negras', 'adv', 'Avisa que pica.'),
+      ]}
+      cierre="Esconderse, avisar o engañar: tres formas de no ser comido." />
+  )
+}

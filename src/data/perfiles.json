@@ -165,6 +165,12 @@
         "ingredientes",
         "polillas",
         "artificial"
+      ],
+      "adaptaciones": [
+        "que-es",
+        "morfologicas",
+        "conducta",
+        "camuflaje"
       ]
     },
     "nivelDibujo": "basico",
@@ -198,7 +204,8 @@
       "territorio-saberes": "Territorio, el ritmo del año y el policultivo.",
       "historia-evolucion": "Cuatro hitos: Linneo, Lamarck, el viaje del Beagle y Darwin y Wallace.",
       "evidencias-evolucion": "Fósiles (con la Tatacoa) y anatomía comparada.",
-      "seleccion-natural": "Ingredientes, la polilla moteada y la selección artificial (maíz)."
+      "seleccion-natural": "Ingredientes, la polilla moteada y la selección artificial (maíz).",
+      "adaptaciones": "Qué es una adaptación, morfológicas (frailejón, colibríes), de conducta y camuflaje."
     }
   },
   {
@@ -416,6 +423,13 @@
         "polillas",
         "artificial",
         "hoy"
+      ],
+      "adaptaciones": [
+        "que-es",
+        "morfologicas",
+        "fisiologicas",
+        "conducta",
+        "camuflaje"
       ]
     },
     "nivelDibujo": "intermedio",
@@ -449,7 +463,8 @@
       "territorio-saberes": "Suma el diálogo de saberes.",
       "historia-evolucion": "Seis hitos: suma a Cuvier y Lyell.",
       "evidencias-evolucion": "Suma embriología y biogeografía.",
-      "seleccion-natural": "Suma la selección que vemos hoy (antibióticos, plagas, pinzones)."
+      "seleccion-natural": "Suma la selección que vemos hoy (antibióticos, plagas, pinzones).",
+      "adaptaciones": "Suma las fisiológicas (cactus, rana dorada)."
     }
   },
   {
@@ -692,6 +707,13 @@
         "artificial",
         "hoy",
         "tipos"
+      ],
+      "adaptaciones": [
+        "que-es",
+        "morfologicas",
+        "fisiologicas",
+        "conducta",
+        "camuflaje"
       ]
     },
     "nivelDibujo": "avanzado",
@@ -725,7 +747,8 @@
       "territorio-saberes": "Los cuatro pasos completos.",
       "historia-evolucion": "Los ocho hitos: suma la síntesis moderna y el equilibrio puntuado.",
       "evidencias-evolucion": "Las cinco evidencias: suma la molecular.",
-      "seleccion-natural": "Los cinco pasos: suma los tipos de selección."
+      "seleccion-natural": "Los cinco pasos: suma los tipos de selección.",
+      "adaptaciones": "Los cinco pasos, con mimetismo mülleriano y aclimatación."
     }
   }
 ]
