@@ -33,7 +33,5 @@ export const PROXIMOS: Record<string, { etiqueta: string; nombre: string }[]> = 
   celular: [],
   genetica: [
   ],
-  evolucion: [
-    { etiqueta: '8', nombre: 'Historia de la vida en la Tierra' },
-  ],
+  evolucion: [],
 }

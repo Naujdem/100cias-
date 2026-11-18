@@ -2,11 +2,11 @@
 
 Aprobado por JuanMed el 18 nov 2026. Mismo método de las áreas 2 y 3: una lección por tema siguiendo
 NORMA-LECCIONES.md (ruta de pasos, escenas vivas, Explora, Juega, Comprueba, casillas por grado, «cada idea en
-un solo lugar»). Ejemplos de Colombia siempre que se pueda. El tema 1 se construyó como muestra.
+un solo lugar»). Ejemplos de Colombia siempre que se pueda. **Los 8 temas están construidos (18 nov 2026), pendientes de revisión docente.**
 
 ## Ruta de temas
 
-1. **Historia del pensamiento evolutivo** *(hecho como muestra)* — línea de tiempo con fichas emergentes:
+1. **Historia del pensamiento evolutivo** — línea de tiempo con fichas emergentes:
    Linneo y el fijismo, Lamarck, Cuvier, Lyell, el viaje del Beagle, Darwin y Wallace, la síntesis moderna y
    el equilibrio puntuado.
 2. **Evidencias de la evolución** — fósiles y estratos (la Tatacoa y sus fósiles del Mioceno), anatomía comparada

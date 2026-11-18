@@ -1,0 +1,392 @@
+{
+  "id": "historia-vida",
+  "materia": "biologia",
+  "area": "evolucion",
+  "titulo": "Historia de la vida en la Tierra",
+  "subtema": "4600 millones de años en un calendario",
+  "orden": 48,
+  "etiqueta": "8",
+  "vistas": ["ruta"],
+  "tituloVista": "Ruta de la historia de la vida",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Dimensionar el tiempo geológico con la analogía del calendario.",
+    "Ordenar los grandes hitos de la historia de la vida.",
+    "Explicar las extinciones masivas y reconocer fósiles de Colombia."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con una escala de tiempo geológico actual (Comisión Internacional de Estratigrafía). Fechas aproximadas: primeras células ≈ 3800 Ma, Gran Oxidación ≈ 2400 Ma, eucariotas ≈ 1800 Ma, Cámbrico 538,8 Ma, Pérmico-Triásico 252 Ma, Cretácico-Paleógeno 66 Ma, Titanoboa ≈ 58–60 Ma, Kronosaurus boyacensis ≈ 120 Ma, Homo sapiens ≈ 300 000 años, El Abra/Tibitó ≈ 12 000–13 000 años."
+  ],
+  "bloques": [
+    {
+      "id": "tiempo-geologico",
+      "titulo": "El tiempo profundo",
+      "resumen": "Si la historia de la Tierra fuera un año, los dinosaurios aparecerían a mediados de diciembre y los humanos en los últimos minutos del 31.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "La Tierra tiene unos 4600 millones de años, una cifra difícil de imaginar. Los geólogos dividen ese tiempo en eones y eras: el Precámbrico (casi el 90 % de la historia, con vida solo microscópica la mayor parte del tiempo), el Paleozoico (vida antigua), el Mesozoico (la era de los dinosaurios) y el Cenozoico (la era de los mamíferos). Si toda la historia cupiera en un año, la vida aparecería en marzo, los animales a mediados de noviembre y los humanos en los últimos minutos del 31 de diciembre.",
+        "contexto": [
+          { "titulo": "Cómo se sabe la edad", "texto": "Algunos elementos de las rocas se transforman en otros a un ritmo constante, como un reloj de arena: midiendo cuánto queda se calcula la edad (datación radiométrica)." },
+          { "titulo": "Ma", "texto": "Ma significa millones de años atrás. 66 Ma = hace 66 millones de años." }
+        ],
+        "cuaderno": {
+          "facil": [
+            "La Tierra tiene unos 4600 millones de años.",
+            "Eras: Paleozoico, Mesozoico (dinosaurios) y Cenozoico (mamíferos)."
+          ],
+          "media": ["La mayor parte de la historia, la vida fue solo microscópica."],
+          "avanzada": ["La edad de las rocas se mide por datación radiométrica."]
+        },
+        "docente": {
+          "abrir": "Si la historia de la Tierra fuera un año, ¿en qué mes crees que aparecieron los dinosaurios? ¿Y los humanos?",
+          "actividad": "Hacer en el piso del salón una cinta de 46 m (1 m = 100 Ma) y ubicar los hechos del calendario.",
+          "errores": ["Creer que los humanos y los dinosaurios convivieron.", "Pensar que la vida compleja existió desde el principio."],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Si la historia de la Tierra fuera un año, ¿cuándo aparecería Homo sapiens?",
+            "opciones": ["En los últimos minutos del 31 de diciembre", "En junio", "En octubre", "En la primera semana de enero"],
+            "correcta": 0,
+            "explicacion": "Unos 300 000 años en 4600 millones equivalen a poco más de media hora del año."
+          }
+        },
+        {
+          "titulo": "Un año para la Tierra",
+          "visual": { "tipo": "cifra", "icono": "📅", "valor": "4600 Ma = 1 año", "texto": "En el Explora recorre los hechos y mira su fecha en el calendario" },
+          "puntos": ["Teclas A y D para moverte"],
+          "atajo": { "texto": "Más sobre esto: Lyell y el tiempo profundo", "tema": "historia-evolucion", "bloque": "lyell" }
+        }
+      ],
+      "juego": "orden-historia-juego",
+      "diagrama": "calendario-tierra",
+      "preguntas": [
+        {
+          "id": "hv-tg-1",
+          "enunciado": "¿Cuántos años tiene aproximadamente la Tierra?",
+          "opciones": ["4600 millones", "6000", "66 millones", "13 800 millones"],
+          "correcta": 0,
+          "explicacion": "13 800 millones es la edad del universo; 66 millones, la extinción de los dinosaurios."
+        },
+        {
+          "id": "hv-tg-2",
+          "enunciado": "¿Qué era se conoce como la era de los dinosaurios?",
+          "opciones": ["Mesozoico", "Cenozoico", "Paleozoico", "Precámbrico"],
+          "correcta": 0,
+          "explicacion": "El Mesozoico va de hace 252 a 66 millones de años."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "primeras-celulas",
+      "titulo": "Las primeras células y el oxígeno",
+      "resumen": "Durante casi 3000 millones de años la vida fue microscópica. Las cianobacterias llenaron el aire de oxígeno y aparecieron las células con núcleo.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "ficha": {
+        "idea": "Las primeras células aparecieron en el mar hace unos 3800 millones de años. Algunas, las cianobacterias, hacían fotosíntesis y formaban rocas en capas llamadas estromatolitos. El oxígeno que liberaban fue llenando el mar y el aire hace unos 2400 millones de años (la Gran Oxidación), lo que permitió la respiración aerobia. Hace unos 1800 millones de años aparecieron las células eucariotas, con núcleo, en parte gracias a la endosimbiosis. Los primeros animales llegaron mucho después.",
+        "contexto": [
+          { "titulo": "Estromatolitos vivos", "texto": "Todavía se forman en algunos lugares, como Shark Bay, en Australia: son como fósiles vivientes." },
+          { "titulo": "Un aire envenenado", "texto": "Para muchos microbios de entonces el oxígeno era tóxico: la Gran Oxidación provocó también extinciones." }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Las primeras células aparecieron hace unos 3800 millones de años.",
+            "Las cianobacterias llenaron el aire de oxígeno."
+          ],
+          "media": ["Las células con núcleo aparecieron hace unos 1800 millones de años."],
+          "avanzada": ["La Gran Oxidación ocurrió hace unos 2400 millones de años."]
+        },
+        "docente": {
+          "abrir": "¿De dónde salió el oxígeno que respiramos?",
+          "actividad": "Ubicar estos hitos en la cinta del tiempo del paso anterior.",
+          "errores": ["Creer que la Tierra siempre tuvo oxígeno."],
+          "minutos": 15
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Un planeta de microbios",
+          "visual": {
+            "tipo": "escena",
+            "id": "ev-oxigeno",
+            "fases": [
+              { "id": "tierra-joven", "nombre": "Tierra joven", "texto": "Volcanes, meteoritos y una atmósfera sin oxígeno." },
+              { "id": "celulas", "nombre": "Primeras células", "texto": "En el mar aparecen las primeras células, sin núcleo." },
+              { "id": "estromatolitos", "nombre": "Estromatolitos", "texto": "Las cianobacterias hacen fotosíntesis y forman rocas en capas." },
+              { "id": "oxigeno", "nombre": "Oxígeno", "texto": "El oxígeno se acumula en el aire: la Gran Oxidación." },
+              { "id": "eucariotas", "nombre": "Células con núcleo", "texto": "Aparecen las eucariotas, que darán origen a algas, hongos, plantas y animales." }
+            ]
+          },
+          "atajo": { "texto": "Más sobre esto: Endosimbiosis", "tema": "teoria-celular", "bloque": "endosimbiosis" }
+        }
+      ],
+      "juego": "orden-historia-juego",
+      "preguntas": [
+        {
+          "id": "hv-pc-1",
+          "enunciado": "¿Qué organismos llenaron de oxígeno la atmósfera?",
+          "opciones": ["Las cianobacterias", "Los dinosaurios", "Los hongos", "Los primeros humanos"],
+          "correcta": 0,
+          "explicacion": "Con su fotosíntesis liberaron oxígeno durante cientos de millones de años."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "tierra-firme",
+      "titulo": "Explosión cámbrica y conquista de la tierra",
+      "resumen": "Hace 538 millones de años aparecieron casi todos los grandes grupos de animales. Luego plantas, insectos y vertebrados salieron del agua.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "intermedio",
+      "ficha": {
+        "idea": "Al comienzo del Cámbrico, hace unos 538 millones de años, aparecieron en relativamente poco tiempo casi todos los grandes grupos de animales: es la explosión cámbrica. La vida siguió en el mar hasta que las plantas colonizaron la tierra hace unos 470 millones de años, seguidas por insectos y otros artrópodos. Hace unos 375 millones de años algunos peces con aletas carnosas dieron origen a los tetrápodos, los primeros vertebrados con patas, y más tarde el huevo con cáscara permitió a los reptiles reproducirse lejos del agua.",
+        "contexto": [
+          { "titulo": "Tiktaalik", "texto": "Un fósil de hace unos 375 millones de años con escamas y branquias de pez, pero con cuello y aletas con huesos de pata." },
+          { "titulo": "Los primeros bosques", "texto": "Los restos de los grandes bosques del Carbonífero formaron buena parte del carbón que hoy se explota." }
+        ],
+        "cuaderno": {
+          "facil": ["Explosión cámbrica: aparecen casi todos los grupos de animales."],
+          "media": [
+            "Las plantas colonizaron la tierra antes que los vertebrados.",
+            "Los tetrápodos vienen de peces con aletas carnosas."
+          ],
+          "avanzada": ["El huevo con cáscara permitió reproducirse lejos del agua."]
+        },
+        "docente": {
+          "abrir": "¿Qué problemas tendría un pez que quisiera vivir fuera del agua?",
+          "actividad": "Listar en grupos los retos de vivir en tierra (secarse, sostenerse, respirar) y las adaptaciones que los resolvieron.",
+          "errores": ["Creer que un pez «decidió» salir del agua."],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Del mar a la tierra",
+          "visual": {
+            "tipo": "escena",
+            "id": "ev-tierra-firme",
+            "fases": [
+              { "id": "cambrico", "nombre": "Cámbrico", "texto": "El mar se llena de animales con conchas, patas articuladas y ojos." },
+              { "id": "plantas", "nombre": "Plantas", "texto": "Las plantas cubren la tierra; detrás llegan los insectos." },
+              { "id": "tetrapodos", "nombre": "Tetrápodos", "texto": "Peces con aletas carnosas dan origen a los primeros animales con patas." },
+              { "id": "huevo", "nombre": "Huevo con cáscara", "texto": "Los reptiles ya pueden poner huevos lejos del agua." }
+            ]
+          },
+          "atajo": { "texto": "Más sobre esto: Cladogramas", "tema": "clasificacion", "bloque": "cladogramas" }
+        }
+      ],
+      "juego": "orden-historia-juego",
+      "preguntas": [
+        {
+          "id": "hv-tf-1",
+          "enunciado": "¿Qué llegó primero a tierra firme?",
+          "opciones": ["Las plantas", "Los dinosaurios", "Los mamíferos", "Los tetrápodos"],
+          "correcta": 0,
+          "explicacion": "Las plantas (≈ 470 Ma) prepararon el terreno para los animales."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "extinciones",
+      "titulo": "Extinciones masivas",
+      "resumen": "Cinco veces desapareció una gran parte de las especies. La más famosa acabó con los dinosaurios; hoy podríamos estar en la sexta.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "En la historia de la vida hubo cinco extinciones masivas, en las que desapareció una gran parte de las especies en poco tiempo geológico. La peor fue la del final del Pérmico, hace 252 millones de años, ligada a enormes erupciones volcánicas. La más conocida, hace 66 millones de años, coincidió con la caída de un asteroide en Chicxulub (México): desaparecieron los dinosaurios, salvo las aves. Después de cada una, los sobrevivientes ocuparon los nichos vacíos y se diversificaron. Muchos científicos consideran que hoy ocurre una sexta extinción causada por los humanos.",
+        "contexto": [
+          { "titulo": "La oportunidad de los mamíferos", "texto": "Tras la desaparición de los dinosaurios, los mamíferos, que eran pequeños, se diversificaron y ocuparon sus nichos." },
+          { "titulo": "La sexta", "texto": "La pérdida de hábitat, la cacería, las especies invasoras, la contaminación y el cambio climático aceleran hoy las extinciones." }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Hubo cinco extinciones masivas.",
+            "Hace 66 millones de años se extinguieron los dinosaurios, menos las aves."
+          ],
+          "media": ["La peor extinción fue la del Pérmico (252 Ma)."],
+          "avanzada": ["Tras cada extinción hubo radiaciones adaptativas."]
+        },
+        "docente": {
+          "abrir": "Si los dinosaurios no se hubieran extinguido, ¿existiríamos nosotros?",
+          "actividad": "Investigar una especie colombiana en peligro y qué la amenaza.",
+          "errores": ["Creer que todos los dinosaurios se extinguieron.", "Pensar que las extinciones solo ocurrieron en el pasado."],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Cinco golpes a la vida",
+          "visual": {
+            "tipo": "escena",
+            "id": "ev-extinciones",
+            "fases": [
+              { "id": "curva", "nombre": "Cinco caídas", "texto": "La diversidad de la vida creció con el tiempo, pero cayó en picada cinco veces." },
+              { "id": "permico", "nombre": "Pérmico", "texto": "Hace 252 millones de años: la peor de todas, ligada a erupciones gigantes." },
+              { "id": "kpg", "nombre": "Cretácico", "texto": "Hace 66 millones de años: el asteroide de Chicxulub." },
+              { "id": "sexta", "nombre": "¿La sexta?", "texto": "Hoy las especies desaparecen mucho más rápido de lo normal por causas humanas." }
+            ]
+          },
+          "atajo": { "texto": "Más sobre esto: Amenazas a la biodiversidad", "tema": "biodiversidad", "bloque": "amenazas" }
+        },
+        {
+          "titulo": "Después del asteroide",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Qué grupo de dinosaurios sobrevivió a la extinción de hace 66 millones de años?",
+            "opciones": ["Las aves", "Los tiranosaurios", "Los pterosaurios", "Ninguno"],
+            "correcta": 0,
+            "explicacion": "Las aves son dinosaurios. Los pterosaurios, aunque volaban, no eran dinosaurios y se extinguieron."
+          },
+          "atajo": { "texto": "Más sobre esto: Radiación adaptativa", "tema": "especiacion", "bloque": "radiacion" }
+        }
+      ],
+      "juego": "extinciones-juego",
+      "preguntas": [
+        {
+          "id": "hv-ex-1",
+          "enunciado": "¿Qué ocurrió hace 66 millones de años?",
+          "opciones": ["La extinción de los dinosaurios no avianos", "La aparición de la vida", "La aparición de los humanos", "La formación de la Tierra"],
+          "correcta": 0,
+          "explicacion": "Coincidió con el impacto de un asteroide en Chicxulub."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "fosiles-colombia",
+      "titulo": "Fósiles de Colombia",
+      "resumen": "Kronosaurus en el antiguo mar de Boyacá, Titanoboa en las selvas del Cerrejón y la fauna de La Venta en la Tatacoa.",
+      "anio": 5,
+      "etiqueta": "Paso 5",
+      "nivel": "basico",
+      "ficha": {
+        "idea": "Colombia guarda ventanas a distintos momentos de la historia de la vida. En Villa de Leyva (Boyacá) hay fósiles de un mar del Cretácico, de hace unos 120 millones de años, como el reptil marino Kronosaurus boyacensis y muchas amonitas. En las minas del Cerrejón (La Guajira) se encontró Titanoboa, la serpiente más grande conocida, de unos 13 metros, que vivió en una selva caliente hace unos 60 millones de años, poco después de la extinción de los dinosaurios. Y en La Venta, en la Tatacoa (Huila), hay una fauna de hace unos 13 millones de años con caimanes gigantes, tortugas, perezosos y primates.",
+        "contexto": [
+          { "titulo": "El campesino y el fósil", "texto": "El Kronosaurus de Villa de Leyva lo encontraron campesinos de la zona en 1977; hoy se exhibe en el lugar donde apareció." },
+          { "titulo": "Un clima más caliente", "texto": "Por el tamaño de Titanoboa, que necesitaba calor, se estima que la selva del Paleoceno era más caliente que las selvas actuales." }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Villa de Leyva: fósiles de un mar del Cretácico (Kronosaurus).",
+            "Cerrejón: Titanoboa, la serpiente más grande conocida.",
+            "Tatacoa: fauna de La Venta, del Mioceno."
+          ],
+          "media": [],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Sabías que en Boyacá hubo un mar con reptiles gigantes?",
+          "actividad": "Si es posible, salida al Museo de Historia Natural de La Tatacoa en Villavieja o revisión de fotos de sus colecciones.",
+          "errores": ["Creer que Kronosaurus y Titanoboa eran dinosaurios."],
+          "minutos": 15
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Tres ventanas al pasado",
+          "visual": {
+            "tipo": "escena",
+            "id": "ev-fosiles-colombia",
+            "fases": [
+              { "id": "mapa", "nombre": "El mapa", "texto": "Tres lugares de Colombia con fósiles famosos." },
+              { "id": "kronosaurus", "nombre": "Villa de Leyva", "texto": "Hace unos 120 millones de años Boyacá era un mar con reptiles gigantes." },
+              { "id": "titanoboa", "nombre": "Cerrejón", "texto": "Hace unos 60 millones de años, una selva con la serpiente más grande conocida." },
+              { "id": "laventa", "nombre": "La Tatacoa", "texto": "Hace unos 13 millones de años, ríos con caimanes gigantes y monos." }
+            ]
+          },
+          "atajo": { "texto": "Más sobre esto: Los fósiles", "tema": "evidencias-evolucion", "bloque": "fosiles" }
+        }
+      ],
+      "juego": "fosiles-colombia-juego",
+      "preguntas": [
+        {
+          "id": "hv-fc-1",
+          "enunciado": "¿Qué nos dicen los fósiles marinos de Villa de Leyva?",
+          "opciones": ["Que esa región estuvo cubierta por el mar", "Que los peces vivían en las montañas", "Que alguien los llevó allí", "Que el mar llega hoy a Boyacá"],
+          "correcta": 0,
+          "explicacion": "Las rocas se formaron en el fondo de un mar y luego se levantaron con los Andes."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "evolucion-humana",
+      "titulo": "Evolución humana",
+      "resumen": "No es una escalera sino un arbusto: varias especies humanas convivieron. Homo sapiens apareció en África hace unos 300 000 años y llegó a Colombia hace más de 12 000.",
+      "anio": 6,
+      "etiqueta": "Paso 6",
+      "nivel": "intermedio",
+      "ficha": {
+        "idea": "El linaje humano se separó del de los chimpancés hace unos 6 o 7 millones de años en África. Desde entonces hubo muchas especies de homininos: los australopitecos, que ya caminaban erguidos; Homo habilis, que hacía herramientas de piedra; Homo erectus, que salió de África y usó el fuego; los neandertales, y nosotros, Homo sapiens, que aparecimos en África hace unos 300 000 años. No fue una escalera: a menudo varias especies vivían al mismo tiempo. Homo sapiens llegó a América hace al menos 15 000 años y a la sabana de Bogotá hace más de 12 000.",
+        "contexto": [
+          { "titulo": "Lucy", "texto": "Un esqueleto de Australopithecus afarensis de hace unos 3,2 millones de años, encontrado en Etiopía en 1974." },
+          { "titulo": "Primos neandertales", "texto": "Convivieron con Homo sapiens en Europa y Asia; muchas personas actuales tienen un poco de ADN neandertal." },
+          { "titulo": "Los primeros en Colombia", "texto": "Los abrigos rocosos de El Abra y el sitio de Tibitó, en Cundinamarca, muestran grupos de cazadores y recolectores de hace más de 12 000 años." }
+        ],
+        "cuaderno": {
+          "facil": ["Humanos y chimpancés comparten un antepasado de hace unos 6 o 7 millones de años."],
+          "media": [
+            "Homo sapiens apareció en África hace unos 300 000 años.",
+            "Varias especies humanas vivieron al mismo tiempo."
+          ],
+          "avanzada": ["Hay grupos humanos en Colombia desde hace más de 12 000 años."]
+        },
+        "docente": {
+          "abrir": "¿Por qué crees que la imagen del mono que se va enderezando hasta ser humano es incorrecta?",
+          "actividad": "Ubicar en la cinta del tiempo del paso 1 las especies de homininos y ver cuánto se traslapan.",
+          "errores": ["Creer que venimos de los monos actuales.", "Imaginar la evolución humana como una línea recta."],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Un arbusto, no una escalera",
+          "visual": {
+            "tipo": "escena",
+            "id": "ev-homininos",
+            "fases": [
+              { "id": "escalera", "nombre": "La escalera falsa", "texto": "La famosa imagen del mono que se endereza hasta ser humano no es correcta." },
+              { "id": "arbusto", "nombre": "El arbusto", "texto": "Hubo muchas especies, y varias vivieron al mismo tiempo." },
+              { "id": "sapiens", "nombre": "Homo sapiens", "texto": "Hoy solo queda una rama: la nuestra, aparecida en África hace unos 300 000 años." },
+              { "id": "america", "nombre": "Llegada a Colombia", "texto": "Hace más de 12 000 años ya había grupos humanos en la sabana de Bogotá." }
+            ]
+          },
+          "atajo": { "texto": "Más sobre esto: Un solo árbol de la vida", "tema": "clasificacion", "bloque": "ancestro-comun" }
+        }
+      ],
+      "juego": "humanos-juego",
+      "preguntas": [
+        {
+          "id": "hv-eh-1",
+          "enunciado": "¿Dónde apareció Homo sapiens?",
+          "opciones": ["En África", "En América", "En Europa", "En Australia"],
+          "correcta": 0,
+          "explicacion": "Hace unos 300 000 años; desde allí se extendió por el mundo."
+        },
+        {
+          "id": "hv-eh-2",
+          "enunciado": "¿Por qué se dice que la evolución humana es un arbusto?",
+          "opciones": ["Porque hubo varias especies, algunas al mismo tiempo", "Porque los humanos vivían en los árboles", "Porque cada especie se transformó en la siguiente en línea recta", "Porque solo hubo una especie"],
+          "correcta": 0,
+          "explicacion": "Muchas ramas se extinguieron; la de Homo sapiens es la única que queda."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}

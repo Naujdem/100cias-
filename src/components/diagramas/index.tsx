@@ -33,7 +33,8 @@ import SimuladorPoblaciones from './SimuladorPoblaciones.tsx'
 import { DensidadJuego, CrecimientoJuego, DepredadorPresaJuego } from './JuegosPoblaciones.tsx'
 import { SucesionPrimariaJuego, SucesionSecundariaJuego, PerturbacionesJuego } from './JuegosSucesion.tsx'
 import { BiodiversidadNivelesJuego, MegadiversaJuego, AmenazasJuego, ConservarJuego } from './JuegosBiodiversidad.tsx'
-import { LinneoJuego, LamarckJuego, CuvierJuego, LyellJuego, BeagleJuego, DarwinWallaceJuego, SintesisJuego, RitmosJuego, FosilJuego, AnatomiaJuego, EmbrionesJuego, BiogeografiaJuego, MolecularJuego, IngredientesJuego, PolillasJuego, ArtificialJuego, ResistenciaJuego, TiposSeleccionJuego, AdaptacionJuego, MorfologicaJuego, FisiologicaJuego, ConductaJuego, MimetismoJuego, MecanismosJuego, DerivaJuego, FlujoJuego, SexualJuego, HardyJuego, EspecieJuego, AislamientoJuego, AlopatricaJuego, RadiacionJuego, CategoriasJuego, DominiosJuego, CladogramaJuego, ArbolVidaJuego } from './JuegosHistoriaEvolucion.tsx'
+import { LinneoJuego, LamarckJuego, CuvierJuego, LyellJuego, BeagleJuego, DarwinWallaceJuego, SintesisJuego, RitmosJuego, FosilJuego, AnatomiaJuego, EmbrionesJuego, BiogeografiaJuego, MolecularJuego, IngredientesJuego, PolillasJuego, ArtificialJuego, ResistenciaJuego, TiposSeleccionJuego, AdaptacionJuego, MorfologicaJuego, FisiologicaJuego, ConductaJuego, MimetismoJuego, MecanismosJuego, DerivaJuego, FlujoJuego, SexualJuego, HardyJuego, EspecieJuego, AislamientoJuego, AlopatricaJuego, RadiacionJuego, CategoriasJuego, DominiosJuego, CladogramaJuego, ArbolVidaJuego, OrdenHistoriaJuego, ExtincionesJuego, FosilesColombiaJuego, HumanosJuego } from './JuegosHistoriaEvolucion.tsx'
+import CalendarioTierra from './CalendarioTierra.tsx'
 import Clasificador from './Clasificador.tsx'
 import IstmoPanama from './IstmoPanama.tsx'
 import SimuladorDeriva from './SimuladorDeriva.tsx'
@@ -344,4 +345,9 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'cladograma-juego': CladogramaJuego,
   'arbol-vida-juego': ArbolVidaJuego,
   clasificador: Clasificador,
+  'orden-historia-juego': OrdenHistoriaJuego,
+  'extinciones-juego': ExtincionesJuego,
+  'fosiles-colombia-juego': FosilesColombiaJuego,
+  'humanos-juego': HumanosJuego,
+  'calendario-tierra': CalendarioTierra,
 }

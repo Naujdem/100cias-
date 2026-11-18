@@ -186,6 +186,12 @@
         "taxonomia",
         "dominios",
         "ancestro-comun"
+      ],
+      "historia-vida": [
+        "tiempo-geologico",
+        "primeras-celulas",
+        "extinciones",
+        "fosiles-colombia"
       ]
     },
     "nivelDibujo": "basico",
@@ -223,7 +229,8 @@
       "adaptaciones": "Qué es una adaptación, morfológicas (frailejón, colibríes), de conducta y camuflaje.",
       "mecanismos-poblaciones": "Versión corta: poblaciones y alelos, el azar (deriva) y la selección sexual.",
       "especiacion": "Qué es una especie, especiación alopátrica (istmo de Panamá) y radiación adaptativa.",
-      "clasificacion": "Categorías y nombre científico, dominios y reinos, y un solo árbol de la vida."
+      "clasificacion": "Categorías y nombre científico, dominios y reinos, y un solo árbol de la vida.",
+      "historia-vida": "Calendario de la Tierra, primeras células, extinciones y fósiles de Colombia."
     }
   },
   {
@@ -467,6 +474,14 @@
         "dominios",
         "cladogramas",
         "ancestro-comun"
+      ],
+      "historia-vida": [
+        "tiempo-geologico",
+        "primeras-celulas",
+        "tierra-firme",
+        "extinciones",
+        "fosiles-colombia",
+        "evolucion-humana"
       ]
     },
     "nivelDibujo": "intermedio",
@@ -504,7 +519,8 @@
       "adaptaciones": "Suma las fisiológicas (cactus, rana dorada).",
       "mecanismos-poblaciones": "Los cuatro mecanismos: mutación, deriva, flujo génico y selección sexual.",
       "especiacion": "Suma las barreras reproductivas.",
-      "clasificacion": "Suma la lectura de cladogramas."
+      "clasificacion": "Suma la lectura de cladogramas.",
+      "historia-vida": "Los seis pasos: suma la conquista de la tierra y la evolución humana."
     }
   },
   {
@@ -775,6 +791,14 @@
         "dominios",
         "cladogramas",
         "ancestro-comun"
+      ],
+      "historia-vida": [
+        "tiempo-geologico",
+        "primeras-celulas",
+        "tierra-firme",
+        "extinciones",
+        "fosiles-colombia",
+        "evolucion-humana"
       ]
     },
     "nivelDibujo": "avanzado",
@@ -812,7 +836,8 @@
       "adaptaciones": "Los cinco pasos, con mimetismo mülleriano y aclimatación.",
       "mecanismos-poblaciones": "Los seis pasos: suma el equilibrio de Hardy-Weinberg.",
       "especiacion": "Los cinco pasos: suma la especiación simpátrica (poliploidía, hibridación).",
-      "clasificacion": "Los cuatro pasos, con Woese, LUCA y lectura de nodos."
+      "clasificacion": "Los cuatro pasos, con Woese, LUCA y lectura de nodos.",
+      "historia-vida": "Los seis pasos, con datación radiométrica y Gran Oxidación."
     }
   }
 ]
