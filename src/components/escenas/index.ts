@@ -45,6 +45,7 @@ import { EscenaNomMapa, EscenaNomCruce, EscenaNomHidroxido } from './EscenasNome
 import { EscenaHidracido, EscenaOxacido, EscenaAniones, EscenaSal } from './EscenasAcidosSales.tsx'
 import { EscenaEcuacion, EscenaTiposReaccion, EscenaCombustion } from './EscenasReacciones.tsx'
 import { EscenaConservacion, EscenaTanteo, EscenaRedox } from './EscenasBalanceo.tsx'
+import { EscenaLavoisier, EscenaProust, EscenaDalton as EscenaDaltonLeyes } from './EscenasLeyes.tsx'
 import { EscenaIntra, EscenaPolaridad, EscenaFuerzas, EscenaSoluble } from './EscenasFuerzas.tsx'
 import { EscenaOcteto, EscenaIonico, EscenaCovalente, EscenaEnlaceMetalico } from './EscenasEnlace.tsx'
 import { EscenaHistoriaTabla, EscenaEstructuraTabla, EscenaMetales, EscenaRadio, EscenaIonizacion, EscenaElectronegatividad, EscenaCaracterMetalico } from './EscenasTabla.tsx'
@@ -273,6 +274,9 @@ export const ESCENAS: Record<string, ComponentType<{ fase: string }>> = {
   'ba-conservacion': EscenaConservacion,
   'ba-tanteo': EscenaTanteo,
   'ba-redox': EscenaRedox,
+  'lp-lavoisier': EscenaLavoisier,
+  'lp-proust': EscenaProust,
+  'lp-dalton': EscenaDaltonLeyes,
   compostaje: EscenaCompostaje,
   riesgo: EscenaRiesgo,
   armero: EscenaArmero,
