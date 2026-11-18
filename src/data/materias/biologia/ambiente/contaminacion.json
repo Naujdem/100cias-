@@ -1,0 +1,495 @@
+{
+  "id": "contaminacion",
+  "materia": "biologia",
+  "area": "ambiente",
+  "titulo": "Contaminación",
+  "subtema": "Lo que le sobra al ambiente",
+  "orden": 55,
+  "etiqueta": "5",
+  "vistas": ["ruta"],
+  "tituloVista": "Ruta de la contaminación",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Definir contaminación y reconocer sus tipos y fuentes.",
+    "Explicar cómo se contaminan el agua, el aire y el suelo.",
+    "Describir la bioacumulación del mercurio en la cadena trófica.",
+    "Explicar la eutrofización.",
+    "Proponer acciones para reducir la contaminación."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con el IDEAM, el Ministerio de Ambiente y la OMS (calidad del aire). Los tiempos de degradación de los residuos son aproximados y varían según las condiciones."
+  ],
+  "bloques": [
+    {
+      "id": "que-es-contaminacion",
+      "titulo": "Qué es la contaminación",
+      "resumen": "Contaminar es introducir en el ambiente sustancias o energía en cantidades que dañan a los seres vivos.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "La contaminación es la presencia en el ambiente de sustancias, residuos o formas de energía en cantidades que dañan la salud de las personas, a otros seres vivos o a los ecosistemas. Lo que contamina se llama contaminante: puede ser químico (pesticidas, mercurio, humo), biológico (microorganismos de las aguas negras) o físico (ruido, calor, luz, plástico). Según dónde ocurre, se habla de contaminación del agua, del aire y del suelo. Muchas sustancias son naturales, como el nitrógeno o el fósforo; el problema es la cantidad y el lugar.",
+        "contexto": [
+          {
+            "titulo": "La dosis importa",
+            "texto": "El abono en el cultivo ayuda a las plantas; el mismo abono en exceso, arrastrado a la quebrada, la contamina."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Contaminación: sustancias o energía que dañan el ambiente.",
+            "Puede ser del agua, del aire o del suelo."
+          ],
+          "media": [
+            "Contaminantes químicos, biológicos y físicos.",
+            "Muchas veces el problema es la cantidad."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿El ruido de un picó a todo volumen es contaminación?",
+          "actividad": "Recorrer el colegio y la vereda haciendo un inventario de fuentes de contaminación: qué contaminan y quién las produce.",
+          "errores": [
+            "Creer que solo contamina lo artificial; lo natural en exceso también."
+          ],
+          "minutos": 15
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿El ruido muy fuerte es una forma de contaminación?",
+            "opciones": ["Sí, es contaminación física", "No, solo contaminan las sustancias", "Solo si es de noche", "Solo en las ciudades"],
+            "correcta": 0,
+            "explicacion": "El ruido, el calor y la luz en exceso también dañan a los seres vivos."
+          }
+        },
+        {
+          "titulo": "Tres tipos de contaminantes",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "🧪", "titulo": "Químicos", "texto": "Pesticidas, mercurio, humo." },
+              { "icono": "🦠", "titulo": "Biológicos", "texto": "Microorganismos de las aguas negras." },
+              { "icono": "🔊", "titulo": "Físicos", "texto": "Ruido, calor, luz y plástico." }
+            ]
+          }
+        }
+      ],
+      "juego": "que-es-contaminacion-juego",
+      "preguntas": [
+        {
+          "id": "am-co-1",
+          "enunciado": "¿Qué es un contaminante?",
+          "opciones": [
+            "Una sustancia o energía que daña el ambiente en cierta cantidad",
+            "Cualquier sustancia química",
+            "Solo la basura",
+            "Un ser vivo que vive en el río"
+          ],
+          "correcta": 0,
+          "explicacion": "Lo que importa es la cantidad y el lugar."
+        },
+        {
+          "id": "am-co-2",
+          "enunciado": "Los microorganismos de las aguas negras son un contaminante…",
+          "opciones": ["Biológico", "Físico", "Químico", "Sonoro"],
+          "correcta": 0,
+          "explicacion": "Pueden causar enfermedades como la diarrea."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "agua-contaminada",
+      "titulo": "Contaminación del agua",
+      "resumen": "Aguas negras, residuos del café, agroquímicos y minería ensucian los ríos y les quitan el oxígeno que necesitan los peces.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "requiere": ["que-es-contaminacion"],
+      "ficha": {
+        "idea": "Los ríos y quebradas reciben lo que se vierte en su cuenca. Las aguas negras de las casas sin tratamiento traen materia orgánica y microorganismos; las aguas mieles del beneficio del café, materia orgánica; los cultivos, restos de abonos y pesticidas; la minería, barro y metales. Cuando hay mucha materia orgánica, las bacterias que la descomponen gastan el oxígeno del agua y los peces se ahogan. Los bioindicadores ayudan a saber si un río está sano: larvas de efímeras y plecópteros solo viven en agua limpia y con oxígeno; en agua muy contaminada solo sobreviven lombrices y larvas resistentes.",
+        "contexto": [
+          {
+            "titulo": "Planta de tratamiento",
+            "texto": "Una PTAR limpia las aguas negras del pueblo antes de devolverlas al río; muchos municipios todavía no tienen una que funcione bien."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Aguas negras, residuos del café, agroquímicos y minería contaminan el agua.",
+            "Mucha materia orgánica le quita el oxígeno al agua."
+          ],
+          "media": [
+            "Bioindicadores: seres vivos que muestran si el agua está limpia.",
+            "PTAR: planta que trata las aguas residuales."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Cómo sabrían si la quebrada está limpia sin un laboratorio?",
+          "actividad": "Muestrear con un colador las piedras de la quebrada en dos puntos (arriba y abajo de las casas) y contar los macroinvertebrados.",
+          "errores": [
+            "Creer que el agua transparente siempre está limpia."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Quién vive aquí?",
+          "visual": {
+            "tipo": "compara",
+            "izq": { "icono": "🪰", "titulo": "Agua limpia", "puntos": ["Larvas de efímeras", "Plecópteros", "Mucho oxígeno"] },
+            "der": { "icono": "🪱", "titulo": "Agua contaminada", "puntos": ["Lombrices rojas", "Larvas de mosquito", "Poco oxígeno"] }
+          }
+        }
+      ],
+      "juego": "agua-contaminada-juego",
+      "diagrama": "rio-contaminado",
+      "preguntas": [
+        {
+          "id": "am-co-3",
+          "enunciado": "¿Por qué mucha materia orgánica en el río hace que mueran los peces?",
+          "opciones": [
+            "Las bacterias que la descomponen gastan el oxígeno del agua",
+            "Porque la materia orgánica es venenosa",
+            "Porque calienta el agua hasta hervir",
+            "Porque los peces se la comen toda"
+          ],
+          "correcta": 0,
+          "explicacion": "Los peces se quedan sin oxígeno disuelto."
+        },
+        {
+          "id": "am-co-4",
+          "enunciado": "Encontrar larvas de efímeras en la quebrada indica que…",
+          "opciones": ["El agua está limpia", "El agua está muy contaminada", "Hay mercurio", "El río se va a secar"],
+          "correcta": 0,
+          "explicacion": "Son bioindicadores de agua limpia."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "aire-contaminado",
+      "titulo": "Contaminación del aire",
+      "resumen": "Humo de vehículos, fábricas, quemas y fogones de leña llena el aire de gases y partículas que dañan los pulmones.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "basico",
+      "requiere": ["que-es-contaminacion"],
+      "ficha": {
+        "idea": "El aire se contamina sobre todo al quemar: gasolina y diésel en los vehículos, carbón en las industrias, rastrojos en las quemas agrícolas y leña en los fogones. El humo trae gases como el monóxido de carbono y partículas muy finas, llamadas PM2.5, que entran hasta el fondo de los pulmones y causan enfermedades respiratorias y del corazón. En el campo, el humo del fogón de leña dentro de la casa es uno de los mayores riesgos, sobre todo para las mujeres y los niños que pasan más tiempo en la cocina. Algunos gases, como el dióxido de azufre, forman lluvia ácida que daña plantas, suelos y construcciones.",
+        "contexto": [
+          {
+            "titulo": "Estufas ecoeficientes",
+            "texto": "Las estufas de leña con chimenea sacan el humo de la cocina y gastan menos leña."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "El aire se contamina sobre todo al quemar cosas.",
+            "El humo daña los pulmones."
+          ],
+          "media": [
+            "Partículas PM2.5: tan finas que llegan al fondo de los pulmones.",
+            "El humo del fogón dentro de la casa también contamina."
+          ],
+          "avanzada": [
+            "Lluvia ácida: los gases de azufre y nitrógeno se mezclan con el agua de las nubes."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Dónde respiran más humo: en una calle de Neiva o en una cocina con fogón de leña?",
+          "actividad": "Poner un algodón o un papel blanco untado de vaselina en varios sitios durante una semana y comparar cuánta partícula se pega.",
+          "errores": [
+            "Pensar que en el campo no hay contaminación del aire."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Lo que respiramos",
+          "visual": {
+            "tipo": "escena",
+            "id": "aire-contaminado",
+            "fases": [
+              { "id": "fuentes", "nombre": "Fuentes", "texto": "Vehículos, fábricas y quemas sueltan humo." },
+              { "id": "particulas", "nombre": "Partículas", "texto": "Las PM2.5 son tan finas que llegan al fondo de los pulmones." },
+              { "id": "cocina", "nombre": "La cocina", "texto": "El fogón de leña sin chimenea llena la casa de humo." },
+              { "id": "acida", "nombre": "Lluvia ácida", "texto": "Gases de azufre y nitrógeno se vuelven ácidos en las nubes.", "nivel": "intermedio" }
+            ]
+          }
+        }
+      ],
+      "juego": "aire-contaminado-juego",
+      "preguntas": [
+        {
+          "id": "am-co-5",
+          "enunciado": "¿Qué son las partículas PM2.5?",
+          "opciones": [
+            "Partículas muy finas del humo que entran a los pulmones",
+            "Gotas de lluvia",
+            "Granos de polen grandes",
+            "Un tipo de gas de invernadero"
+          ],
+          "correcta": 0,
+          "explicacion": "Causan enfermedades respiratorias y del corazón."
+        },
+        {
+          "id": "am-co-6",
+          "enunciado": "¿Qué ayuda a reducir el humo dentro de una casa con fogón de leña?",
+          "opciones": ["Una estufa con chimenea", "Cerrar las ventanas", "Usar leña mojada", "Cocinar más tiempo"],
+          "correcta": 0,
+          "explicacion": "Saca el humo y gasta menos leña."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "mercurio",
+      "titulo": "Mercurio y bioacumulación",
+      "resumen": "El mercurio de la minería de oro se acumula en los seres vivos y se concentra cada vez más al subir por la cadena alimentaria.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "intermedio",
+      "requiere": ["agua-contaminada"],
+      "ficha": {
+        "idea": "En la minería de oro artesanal e ilegal se usa mercurio para separar el oro, y gran parte termina en los ríos y en el aire. En el agua, algunas bacterias lo transforman en metilmercurio, una forma muy tóxica que los seres vivos absorben pero no pueden eliminar: se acumula en su cuerpo (bioacumulación). Cada consumidor come muchas presas, así que la concentración aumenta en cada eslabón de la cadena (biomagnificación): el plancton tiene poco, los peces pequeños más, y los peces grandes depredadores, como el bagre, mucho más. Las personas que comen esos peces con frecuencia se intoxican; el mercurio daña el sistema nervioso, sobre todo de los bebés en gestación. Colombia prohibió el uso de mercurio en la minería desde 2018.",
+        "contexto": [
+          {
+            "titulo": "Ríos con mercurio",
+            "texto": "En ríos del Chocó, Antioquia, el sur de Bolívar y la Amazonía se ha encontrado mercurio en peces y en personas de comunidades ribereñas."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "El mercurio de la minería de oro contamina los ríos."
+          ],
+          "media": [
+            "Bioacumulación: la sustancia se queda en el cuerpo.",
+            "Biomagnificación: aumenta en cada eslabón de la cadena."
+          ],
+          "avanzada": [
+            "Las bacterias del agua lo convierten en metilmercurio, más tóxico."
+          ]
+        },
+        "docente": {
+          "abrir": "Si el agua tiene un poquito de mercurio, ¿por qué el bagre tiene tanto?",
+          "actividad": "Simular la biomagnificación con fichas: cada «pez pequeño» recoge las fichas de 10 «plancton», y cada «pez grande» las de 5 peces pequeños.",
+          "errores": [
+            "Creer que el pez elimina el mercurio como elimina otros desechos."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Sube por la cadena",
+          "visual": {
+            "tipo": "escena",
+            "id": "biomagnificacion",
+            "fases": [
+              { "id": "agua", "nombre": "Agua", "texto": "Un poquito de mercurio en el agua y el barro." },
+              { "id": "plancton", "nombre": "Plancton", "texto": "Las algas y animales diminutos lo absorben." },
+              { "id": "pez-pequeno", "nombre": "Pez pequeño", "texto": "Come mucho plancton: acumula más." },
+              { "id": "pez-grande", "nombre": "Pez grande", "texto": "El bagre come muchos peces: acumula muchísimo." },
+              { "id": "persona", "nombre": "Persona", "texto": "Quien come esos peces seguido se intoxica." }
+            ]
+          },
+          "atajo": { "texto": "Más sobre esto: cadenas tróficas", "tema": "flujo-energia", "bloque": "cadenas" }
+        }
+      ],
+      "juego": "mercurio-juego",
+      "preguntas": [
+        {
+          "id": "am-co-7",
+          "enunciado": "¿Qué es la biomagnificación?",
+          "opciones": [
+            "El aumento de una sustancia tóxica en cada eslabón de la cadena",
+            "El crecimiento de los peces grandes",
+            "La desaparición del mercurio en el agua",
+            "La reproducción del plancton"
+          ],
+          "correcta": 0,
+          "explicacion": "Por eso los depredadores tienen más mercurio."
+        },
+        {
+          "id": "am-co-8",
+          "enunciado": "¿Quién acumula más mercurio en un río contaminado?",
+          "opciones": ["Un pez depredador grande", "El plancton", "Un pez pequeño", "Las algas"],
+          "correcta": 0,
+          "explicacion": "Está arriba en la cadena."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "eutrofizacion",
+      "titulo": "Eutrofización",
+      "resumen": "El exceso de nitrógeno y fósforo hace crecer demasiadas algas; al morir, su descomposición acaba con el oxígeno del agua.",
+      "anio": 5,
+      "etiqueta": "Paso 5",
+      "nivel": "avanzado",
+      "requiere": ["agua-contaminada"],
+      "ficha": {
+        "idea": "La eutrofización es el enriquecimiento excesivo de un cuerpo de agua con nutrientes, sobre todo nitrógeno y fósforo, que llegan de fertilizantes, detergentes y aguas negras. Con tanto alimento, las algas y plantas acuáticas crecen sin control y cubren la superficie: el agua se pone verde y la luz no llega al fondo. Cuando las algas mueren, las bacterias que las descomponen gastan el oxígeno disuelto, y los peces y otros animales mueren. Se forman zonas muertas. Pasa en lagunas, embalses y ciénagas, y se previene usando menos fertilizante, detergentes sin fosfatos y tratando las aguas residuales.",
+        "contexto": [
+          {
+            "titulo": "El buchón",
+            "texto": "El buchón de agua que cubre embalses y ciénagas crece sin control cuando el agua tiene demasiados nutrientes."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Eutrofización: exceso de nutrientes en el agua."
+          ],
+          "media": [
+            "Crecen demasiadas algas y el agua se pone verde."
+          ],
+          "avanzada": [
+            "La descomposición de las algas muertas gasta el oxígeno: zonas muertas.",
+            "Fuentes: fertilizantes, detergentes y aguas negras."
+          ]
+        },
+        "docente": {
+          "abrir": "Si los nutrientes son buenos para las plantas, ¿por qué dañan un lago?",
+          "actividad": "Dos frascos con agua de charca al sol, a uno se le añade una pizca de fertilizante: observar durante dos semanas.",
+          "errores": [
+            "Creer que más algas significa un lago más sano."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Demasiado alimento",
+          "visual": {
+            "tipo": "escena",
+            "id": "eutrofizacion",
+            "fases": [
+              { "id": "sano", "nombre": "Lago sano", "texto": "Pocas algas, luz hasta el fondo y oxígeno para los peces." },
+              { "id": "nutrientes", "nombre": "Llegan nutrientes", "texto": "Fertilizantes, detergentes y aguas negras traen nitrógeno y fósforo." },
+              { "id": "algas", "nombre": "Explosión de algas", "texto": "Las algas cubren la superficie y tapan la luz." },
+              { "id": "sin-oxigeno", "nombre": "Sin oxígeno", "texto": "Las algas mueren, las bacterias gastan el oxígeno y los peces mueren." }
+            ]
+          },
+          "atajo": { "texto": "Más sobre esto: ciclo del nitrógeno", "tema": "ciclos-biogeoquimicos", "bloque": "ciclo-nitrogeno" }
+        }
+      ],
+      "juego": "eutrofizacion-juego",
+      "preguntas": [
+        {
+          "id": "am-co-9",
+          "enunciado": "¿Qué causa la eutrofización?",
+          "opciones": [
+            "El exceso de nitrógeno y fósforo en el agua",
+            "La falta de algas",
+            "El frío del agua",
+            "El mercurio"
+          ],
+          "correcta": 0,
+          "explicacion": "Vienen de fertilizantes, detergentes y aguas negras."
+        },
+        {
+          "id": "am-co-10",
+          "enunciado": "¿Por qué mueren los peces en un lago eutrofizado?",
+          "opciones": [
+            "Porque la descomposición de las algas gasta el oxígeno",
+            "Porque las algas se los comen",
+            "Porque el agua se vuelve salada",
+            "Porque hay demasiada luz"
+          ],
+          "correcta": 0,
+          "explicacion": "Se forman zonas muertas."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "plasticos-suelo",
+      "titulo": "Plásticos y suelo",
+      "resumen": "El plástico tarda cientos de años en degradarse y se rompe en microplásticos; los agroquímicos y la basura contaminan el suelo.",
+      "anio": 6,
+      "etiqueta": "Paso 6",
+      "nivel": "basico",
+      "requiere": ["que-es-contaminacion"],
+      "ficha": {
+        "idea": "El plástico es útil y barato, pero casi no se degrada: una bolsa o una botella pueden durar cientos de años. Con el sol y el roce se parte en pedazos diminutos, los microplásticos, que ya se encuentran en ríos, mares, suelos, en los animales e incluso en el cuerpo humano. Muchos animales confunden el plástico con comida. El suelo también se contamina: con basura enterrada o quemada, aceites, pilas y con el mal uso de agroquímicos, cuyos envases vacíos nunca deben tirarse a la quebrada ni reutilizarse para guardar agua o comida. Reducir el plástico de un solo uso es la mejor forma de evitar que llegue al ambiente.",
+        "contexto": [
+          {
+            "titulo": "Envases de agroquímicos",
+            "texto": "Los envases vacíos de agroquímicos se lavan tres veces, se perforan y se entregan a los puntos de recolección."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "El plástico tarda cientos de años en degradarse.",
+            "No se deben tirar envases de agroquímicos a la quebrada."
+          ],
+          "media": [
+            "Microplásticos: pedacitos de plástico que ya están en todas partes."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "La botella que se tiró hoy, ¿hasta cuándo va a estar ahí?",
+          "actividad": "Recoger durante una semana todo el plástico de un solo uso del salón, pesarlo y proponer cómo reducirlo.",
+          "errores": [
+            "Creer que quemar el plástico lo hace desaparecer; contamina el aire."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Cuánto tarda en degradarse?",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "🍌", "titulo": "Cáscara de banano", "texto": "Unas semanas." },
+              { "icono": "📰", "titulo": "Periódico", "texto": "Unos meses." },
+              { "icono": "🥫", "titulo": "Lata", "texto": "Decenas de años." },
+              { "icono": "🛍️", "titulo": "Bolsa plástica", "texto": "Cientos de años." },
+              { "icono": "🍾", "titulo": "Botella de vidrio", "texto": "Miles de años." }
+            ]
+          }
+        }
+      ],
+      "juego": "plasticos-juego",
+      "preguntas": [
+        {
+          "id": "am-co-11",
+          "enunciado": "¿Qué son los microplásticos?",
+          "opciones": [
+            "Pedazos diminutos en que se parte el plástico",
+            "Plásticos que se degradan en un día",
+            "Bacterias que comen plástico",
+            "Bolsas de papel"
+          ],
+          "correcta": 0,
+          "explicacion": "Ya se encuentran en ríos, mares, suelos y seres vivos."
+        },
+        {
+          "id": "am-co-12",
+          "enunciado": "¿Qué se debe hacer con un envase vacío de agroquímico?",
+          "opciones": [
+            "Lavarlo tres veces, perforarlo y entregarlo a un punto de recolección",
+            "Usarlo para guardar agua",
+            "Tirarlo a la quebrada",
+            "Quemarlo en el patio"
+          ],
+          "correcta": 0,
+          "explicacion": "Así no contamina el agua ni el suelo."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}
