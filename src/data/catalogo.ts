@@ -42,7 +42,6 @@ export const PROXIMOS: Record<string, { etiqueta: string; nombre: string }[]> = 
   ],
   evolucion: [],
   materia: [
-    { etiqueta: '3', nombre: 'Estados y cambios de estado' },
     { etiqueta: '4', nombre: 'Cambios físicos y químicos' },
     { etiqueta: '5', nombre: 'Clasificación de la materia' },
     { etiqueta: '6', nombre: 'Separación de mezclas' },

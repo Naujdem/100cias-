@@ -1,0 +1,281 @@
+{
+  "id": "estados-materia",
+  "materia": "quimica",
+  "area": "materia",
+  "titulo": "Estados y cambios de estado",
+  "subtema": "Sólido, líquido y gas, vistos desde las partículas",
+  "orden": 103,
+  "etiqueta": "3",
+  "vistas": ["ruta"],
+  "tituloVista": "Ruta de los estados",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Explicar los estados de la materia con el modelo de partículas.",
+    "Nombrar los cambios de estado y dar ejemplos cotidianos.",
+    "Interpretar la curva de calentamiento del agua."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con el plan curricular de Ciencias Naturales 2025 y un texto de química general (estados de agregación, curva de calentamiento)."
+  ],
+  "bloques": [
+    {
+      "id": "particulas",
+      "titulo": "El modelo de partículas",
+      "resumen": "La materia está hecha de partículas que se mueven; cómo se ordenan decide si es sólido, líquido o gas.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "Toda la materia está formada por partículas diminutas que nunca se quedan quietas. Entre ellas hay fuerzas de atracción que las mantienen unidas. En un sólido, las partículas están muy juntas y ordenadas, y solo vibran en su sitio: por eso tiene forma y volumen fijos. En un líquido siguen juntas, pero pueden deslizarse unas sobre otras: tiene volumen fijo y toma la forma del recipiente. En un gas, las partículas están muy separadas y se mueven rápido en todas direcciones: no tiene forma ni volumen fijos y ocupa todo el recipiente, por eso se puede comprimir. La temperatura mide qué tan rápido se mueven las partículas: al calentar, se mueven más y se separan.",
+        "contexto": [
+          { "titulo": "El plasma", "texto": "Es un gas tan caliente que sus átomos pierden electrones y conduce la electricidad: está en el Sol, los rayos y los avisos de neón." }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Sólido: forma y volumen fijos. Líquido: volumen fijo, toma la forma del recipiente. Gas: ni forma ni volumen fijos.",
+            "Al calentar, las partículas se mueven más rápido."
+          ],
+          "media": [
+            "Las fuerzas de atracción son fuertes en el sólido y muy débiles en el gas.",
+            "Plasma: gas muy caliente con partículas cargadas."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Por qué podemos meter mucho aire en una llanta, pero no podemos comprimir el agua?",
+          "actividad": "Representar con los estudiantes los tres estados: quietos tomados de los brazos (sólido), juntos caminando despacio (líquido) y corriendo por todo el salón (gas).",
+          "errores": [
+            "Creer que las partículas del sólido están quietas.",
+            "Pensar que entre las partículas de un gas hay aire."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Por qué el aire se puede comprimir en una llanta y el agua no?",
+            "opciones": ["Las partículas del gas están muy separadas", "El aire es más liviano", "El agua es más fría", "La llanta es elástica"],
+            "correcta": 0,
+            "explicacion": "Entre las partículas de un gas hay mucho espacio vacío."
+          }
+        },
+        {
+          "titulo": "Mueve la temperatura",
+          "visual": { "tipo": "diagrama", "id": "particulas-temperatura" }
+        },
+        {
+          "titulo": "Tres estados",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "🧊", "titulo": "Sólido", "texto": "Juntas, ordenadas, solo vibran." },
+              { "icono": "💧", "titulo": "Líquido", "texto": "Juntas, pero se deslizan." },
+              { "icono": "☁️", "titulo": "Gas", "texto": "Separadas y muy rápidas." }
+            ]
+          }
+        },
+        {
+          "titulo": "Un cuarto estado: el plasma",
+          "nivel": "intermedio",
+          "visual": { "tipo": "cifra", "icono": "⚡", "valor": "Plasma", "texto": "Gas muy caliente que conduce la electricidad: el Sol y los rayos." }
+        }
+      ],
+      "diagrama": "particulas-temperatura",
+      "juego": "estado-juego",
+      "preguntas": [
+        {
+          "id": "qm-em-1",
+          "enunciado": "¿Cómo están las partículas en un sólido?",
+          "opciones": ["Juntas, ordenadas y vibrando en su sitio", "Muy separadas y rápidas", "Quietas por completo", "Juntas y deslizándose"],
+          "correcta": 0,
+          "explicacion": "Por eso el sólido tiene forma propia."
+        },
+        {
+          "id": "qm-em-2",
+          "enunciado": "¿Qué estado toma la forma del recipiente pero mantiene su volumen?",
+          "opciones": ["Líquido", "Sólido", "Gas", "Ninguno"],
+          "correcta": 0,
+          "explicacion": "El gas también toma la forma, pero cambia su volumen."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "cambios",
+      "titulo": "Los cambios de estado",
+      "resumen": "Al ganar o perder calor, la materia pasa de un estado a otro sin dejar de ser la misma sustancia.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "ficha": {
+        "idea": "Cuando una sustancia gana o pierde calor puede cambiar de estado, pero sigue siendo la misma sustancia: el hielo, el agua y el vapor son agua. Con calor ocurren la fusión (de sólido a líquido, como el hielo que se derrite), la evaporación (de líquido a gas, como la ropa que se seca) y la sublimación (de sólido a gas sin pasar por líquido, como la naftalina). Al perder calor ocurren la solidificación (de líquido a sólido), la condensación (de gas a líquido, como el vidrio empañado) y la sublimación inversa o deposición (de gas a sólido, como la escarcha). La evaporación ocurre en la superficie a cualquier temperatura; la ebullición ocurre en todo el líquido y a una temperatura fija.",
+        "contexto": [
+          { "titulo": "En el trapiche", "texto": "El guarapo se hierve para evaporar el agua; la miel espesa se vierte en moldes y se solidifica como panela." }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Con calor: fusión y evaporación. Al enfriar: solidificación y condensación.",
+            "En un cambio de estado la sustancia sigue siendo la misma."
+          ],
+          "media": [
+            "Sublimación: de sólido a gas. Deposición: de gas a sólido.",
+            "Evaporación (en la superficie) y ebullición (en todo el líquido)."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿De dónde salen las gotas que aparecen por fuera de un vaso con hielo?",
+          "actividad": "Poner hielo en un vaso seco y observar la condensación por fuera; tapar una olla con agua caliente y ver las gotas en la tapa.",
+          "errores": [
+            "Creer que las gotas del vaso frío «salen» de adentro.",
+            "Pensar que el vapor que se ve al hervir es un gas (son gotitas ya condensadas)."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿De dónde salen las gotas por fuera de un vaso con hielo?",
+            "opciones": ["Del vapor de agua del aire, que se condensa", "Del agua que se filtra por el vidrio", "Del hielo que suda", "Del vidrio que se derrite"],
+            "correcta": 0,
+            "explicacion": "El aire tiene vapor; al tocar el vaso frío se vuelve líquido."
+          }
+        },
+        {
+          "titulo": "De un estado a otro",
+          "visual": {
+            "tipo": "escena",
+            "id": "ciclo-estados",
+            "fases": [
+              { "id": "fusion", "nombre": "Fusión", "texto": "De sólido a líquido, ganando calor." },
+              { "id": "solidificacion", "nombre": "Solidificación", "texto": "De líquido a sólido, perdiendo calor." },
+              { "id": "evaporacion", "nombre": "Evaporación", "texto": "De líquido a gas, ganando calor." },
+              { "id": "condensacion", "nombre": "Condensación", "texto": "De gas a líquido, perdiendo calor." },
+              { "id": "sublimacion", "nombre": "Sublimación", "texto": "De sólido a gas sin pasar por líquido.", "nivel": "intermedio" },
+              { "id": "deposicion", "nombre": "Deposición", "texto": "De gas a sólido: la escarcha.", "nivel": "intermedio" }
+            ]
+          }
+        },
+        {
+          "titulo": "Evaporar no es hervir",
+          "nivel": "intermedio",
+          "visual": {
+            "tipo": "compara",
+            "izq": { "icono": "👕", "titulo": "Evaporación", "puntos": ["Solo en la superficie", "A cualquier temperatura"] },
+            "der": { "icono": "♨️", "titulo": "Ebullición", "puntos": ["En todo el líquido, con burbujas", "A una temperatura fija"] }
+          }
+        },
+        {
+          "titulo": "El agua viaja por el planeta",
+          "visual": { "tipo": "cifra", "icono": "🌧️", "valor": "evaporación → condensación → lluvia", "texto": "Los cambios de estado mueven el ciclo del agua." },
+          "atajo": { "texto": "Más sobre esto", "tema": "ciclos-biogeoquimicos" }
+        }
+      ],
+      "juego": "cambio-estado-juego",
+      "preguntas": [
+        {
+          "id": "qm-em-3",
+          "enunciado": "La ropa mojada se seca al sol. ¿Qué cambio de estado ocurre?",
+          "opciones": ["Evaporación", "Condensación", "Fusión", "Solidificación"],
+          "correcta": 0,
+          "explicacion": "El agua líquida pasa a vapor."
+        },
+        {
+          "id": "qm-em-4",
+          "enunciado": "Cuando el hielo se derrite, ¿qué sustancia se obtiene?",
+          "opciones": ["La misma: agua", "Una sustancia nueva", "Oxígeno", "Vapor"],
+          "correcta": 0,
+          "explicacion": "Un cambio de estado no forma sustancias nuevas."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "curva",
+      "titulo": "La curva de calentamiento",
+      "resumen": "Mientras una sustancia cambia de estado, su temperatura no sube aunque se siga calentando.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "avanzado",
+      "ficha": {
+        "idea": "Si se calienta hielo a −20 °C con una llama constante y se mide la temperatura, se obtiene la curva de calentamiento. Primero la temperatura del hielo sube hasta 0 °C. Luego se queda en 0 °C mientras el hielo se funde, aunque se siga calentando: ese calor (calor latente de fusión) se usa en separar las partículas, no en moverlas más rápido. Cuando todo es líquido, la temperatura vuelve a subir hasta 100 °C, y se queda ahí mientras el agua hierve (calor latente de vaporización). Después, el vapor se sigue calentando. Las partes planas de la gráfica se llaman mesetas y marcan los puntos de fusión y de ebullición. Al enfriar ocurre lo contrario: la curva de enfriamiento.",
+        "contexto": [
+          { "titulo": "Por qué el vapor quema más", "texto": "Al condensarse sobre la piel, el vapor libera todo el calor latente que ganó al evaporarse: por eso una quemadura con vapor a 100 °C es peor que con agua a 100 °C." }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Durante un cambio de estado la temperatura se mantiene constante."
+          ],
+          "media": [
+            "Las partes planas de la curva se llaman mesetas."
+          ],
+          "avanzada": [
+            "Calor latente: calor que se usa en el cambio de estado sin subir la temperatura.",
+            "Las mesetas de la curva marcan el punto de fusión y el de ebullición."
+          ]
+        },
+        "docente": {
+          "abrir": "Si subimos la llama a una olla que ya hierve, ¿el agua se pone más caliente?",
+          "actividad": "Medir cada minuto la temperatura de hielo picado que se calienta en una olla hasta hervir, y graficar los datos.",
+          "errores": [
+            "Creer que subir la llama sube la temperatura del agua que hierve.",
+            "Pensar que en las mesetas no se está dando calor."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Si subes la llama a una olla que ya hierve, ¿qué pasa con la temperatura del agua?",
+            "opciones": ["Se queda igual; solo hierve más rápido", "Sube a 150 °C", "Baja", "Sube un poco cada minuto"],
+            "correcta": 0,
+            "explicacion": "Mientras hierve, la temperatura no cambia."
+          }
+        },
+        {
+          "titulo": "Curva de calentamiento del agua",
+          "visual": {
+            "tipo": "escena",
+            "id": "curva-calentamiento",
+            "fases": [
+              { "id": "hielo", "nombre": "Hielo", "texto": "La temperatura sube de −20 °C a 0 °C." },
+              { "id": "fusion", "nombre": "Fusión", "texto": "Meseta a 0 °C: hielo y agua juntos." },
+              { "id": "agua", "nombre": "Agua", "texto": "La temperatura sube de 0 °C a 100 °C." },
+              { "id": "ebullicion", "nombre": "Ebullición", "texto": "Meseta a 100 °C: agua y vapor juntos." },
+              { "id": "vapor", "nombre": "Vapor", "texto": "El gas sigue calentándose." }
+            ]
+          }
+        }
+      ],
+      "juego": "meseta-juego",
+      "preguntas": [
+        {
+          "id": "qm-em-5",
+          "enunciado": "En la curva de calentamiento del agua, ¿qué pasa en la meseta de 0 °C?",
+          "opciones": ["El hielo se funde y la temperatura no cambia", "El agua hierve", "La temperatura sube rápido", "El vapor se condensa"],
+          "correcta": 0,
+          "explicacion": "El calor se usa en el cambio de estado."
+        },
+        {
+          "id": "qm-em-6",
+          "enunciado": "¿Qué es el calor latente?",
+          "opciones": ["El calor que se usa en un cambio de estado sin subir la temperatura", "El calor del sol", "La temperatura más alta de la curva", "El calor que se pierde en el aire"],
+          "correcta": 0,
+          "explicacion": "Por eso aparecen las mesetas."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}
