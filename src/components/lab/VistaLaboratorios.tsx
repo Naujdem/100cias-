@@ -7,6 +7,7 @@ import type { Nivel, Practica } from './Mesa.tsx'
 import solucionMolar from './practicas/solucionMolar.tsx'
 import Seguridad from './practicas/Seguridad.tsx'
 import Material from './practicas/Material.tsx'
+import Microscopio from './practicas/Microscopio.tsx'
 
 // Laboratorios virtuales (PLAN-LABORATORIOS.md). Las prácticas listas van en PRACTICAS; las demás de la
 // ruta salen como «próximamente».
@@ -26,6 +27,7 @@ interface Entrada {
 const PRACTICAS: Entrada[] = [
   { id: 'seguridad', titulo: 'Práctica cero: seguridad en el laboratorio', resumen: 'Vístete, reconoce los pictogramas, decide qué está bien y a dónde va cada residuo.', grupo: 'Para empezar', desdeGrado: 6, Juego: Seguridad },
   { id: 'material', titulo: 'Reconoce tu material', resumen: 'Cada instrumento con su uso, su cuidado y su versión casera; luego, ¿qué es? y ¿cuál uso?', grupo: 'Para empezar', desdeGrado: 6, Juego: Material },
+  { id: 'microscopio', titulo: 'El microscopio', resumen: 'Sus partes, cómo enfocar sin romper la lámina y el reto de ver células a 400x.', grupo: 'Biología', desdeGrado: 6, Juego: Microscopio },
   { id: solucionMolar.id, titulo: solucionMolar.titulo, resumen: solucionMolar.resumen, grupo: 'Química', desdeGrado: solucionMolar.desdeGrado, mesa: solucionMolar },
 ]
 
@@ -36,7 +38,7 @@ const PROXIMAS: { lab: string; items: string[] }[] = [
   },
   {
     lab: 'Biología',
-    items: ['El microscopio', 'Montaje húmedo', 'Tinciones', 'Ósmosis', 'Biomoléculas', 'Enzimas', 'Fotosíntesis', 'Fermentación', 'Extracción de ADN', 'Microbiología', 'Calidad del agua y del suelo'],
+    items: ['Montaje húmedo', 'Tinciones', 'Ósmosis', 'Biomoléculas', 'Enzimas', 'Fotosíntesis', 'Fermentación', 'Extracción de ADN', 'Microbiología', 'Calidad del agua y del suelo'],
   },
 ]
 
