@@ -1,0 +1,617 @@
+{
+  "id": "soluciones",
+  "materia": "quimica",
+  "area": "soluciones",
+  "titulo": "Soluciones",
+  "subtema": "Soluto y solvente, saturación, factores de la solubilidad, curvas y coloides",
+  "orden": 134,
+  "etiqueta": "4",
+  "vistas": [
+    "ruta"
+  ],
+  "tituloVista": "Ruta de las soluciones",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Identificar el soluto y el solvente de una solución y explicar cómo se disuelve una sustancia.",
+    "Diferenciar soluciones insaturadas, saturadas y sobresaturadas.",
+    "Explicar los factores que influyen en la solubilidad.",
+    "Leer curvas de solubilidad y diferenciar soluciones, coloides y suspensiones."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con un texto de química de bachillerato (solubilidades en 100 g de agua: NaCl ≈ 36 g a 20 °C; sacarosa ≈ 204 g a 20 °C; KNO₃ 13,3 g a 0 °C y 246 g a 100 °C)."
+  ],
+  "bloques": [
+    {
+      "id": "soluto-solvente",
+      "titulo": "Soluto y solvente",
+      "resumen": "Una solución es una mezcla homogénea: el soluto se reparte en el solvente.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "Una solución es una mezcla homogénea: se ve igual en todas sus partes y no se pueden distinguir sus componentes, ni siquiera con un microscopio. Tiene dos partes: el solvente, que es el que está en mayor cantidad y disuelve, y el soluto, que se disuelve en él. En el agua de panela, el agua es el solvente y la panela el soluto. Cuando la sal se disuelve, las moléculas de agua rodean cada ion de sodio y de cloro y los van separando del cristal, hasta que quedan repartidos por todo el líquido. El agua disuelve tantas sustancias que la llaman solvente universal: disuelve bien las sustancias iónicas y polares, como la sal, el azúcar o el alcohol, pero no las apolares, como el aceite o la gasolina. Por eso se dice que «lo semejante disuelve a lo semejante». Las soluciones no son solo líquidas: el aire es una solución de gases y el bronce, una solución de metales.",
+        "contexto": [
+          {
+            "titulo": "Soluciones de todo tipo",
+            "texto": "Gas en gas: el aire. Gas en líquido: la gaseosa (CO₂ en agua). Sólido en líquido: el suero. Líquido en líquido: el alcohol antiséptico. Sólido en sólido: el bronce (cobre y estaño) y el oro de 18 quilates."
+          },
+          {
+            "titulo": "¿Y el aceite?",
+            "texto": "Para quitar grasa se usa jabón: una parte de su molécula se une al agua y la otra a la grasa."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Solución: mezcla homogénea.",
+            "Solvente: el que disuelve (casi siempre el agua). Soluto: lo que se disuelve."
+          ],
+          "media": [
+            "El agua es un solvente polar: disuelve sustancias iónicas y polares. «Lo semejante disuelve a lo semejante»."
+          ],
+          "avanzada": [
+            "Al disolverse un sólido iónico, sus iones quedan hidratados (rodeados de moléculas de agua)."
+          ]
+        },
+        "docente": {
+          "abrir": "Si echas sal en agua y deja de verse, ¿desapareció?",
+          "actividad": "Disolver sal, azúcar, aceite, arena y alcohol en vasos con agua y clasificarlos.",
+          "errores": [
+            "Creer que el soluto desaparece al disolverse (se puede recuperar evaporando el agua).",
+            "Confundir disolver con derretir."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Desapareció?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Echas una cucharada de sal en un vaso de agua, revuelves y ya no se ve. ¿Qué pasó con la sal?",
+            "opciones": [
+              "Sigue ahí, repartida en partículas muy pequeñas",
+              "Desapareció",
+              "Se convirtió en agua",
+              "Se evaporó"
+            ],
+            "correcta": 0,
+            "explicacion": "Si pruebas el agua está salada, y si la evaporas, la sal vuelve a aparecer."
+          }
+        },
+        {
+          "titulo": "Cómo se disuelve la sal",
+          "visual": {
+            "tipo": "escena",
+            "id": "disolver",
+            "fases": [
+              {
+                "id": "cristal",
+                "nombre": "El grano",
+                "texto": "Iones Na⁺ y Cl⁻ ordenados."
+              },
+              {
+                "id": "rodean",
+                "nombre": "El agua jala",
+                "texto": "Las moléculas de agua rodean cada ion."
+              },
+              {
+                "id": "solucion",
+                "nombre": "La solución",
+                "texto": "Los iones quedan repartidos por todo el líquido."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre la molécula de agua",
+            "tema": "agua-liquidos",
+            "bloque": "molecula-agua"
+          }
+        },
+        {
+          "titulo": "Soluciones de todo tipo",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🌬️",
+                "titulo": "Aire",
+                "texto": "Gases en gas."
+              },
+              {
+                "icono": "🥤",
+                "titulo": "Gaseosa",
+                "texto": "Gas en líquido."
+              },
+              {
+                "icono": "🟫",
+                "titulo": "Agua de panela",
+                "texto": "Sólido en líquido."
+              },
+              {
+                "icono": "🔔",
+                "titulo": "Bronce",
+                "texto": "Sólido en sólido."
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "se-disuelve-juego",
+      "preguntas": [
+        {
+          "id": "qm-so-1",
+          "enunciado": "En el agua de panela, ¿cuál es el solvente?",
+          "opciones": [
+            "El agua",
+            "La panela",
+            "El azúcar",
+            "El limón"
+          ],
+          "correcta": 0,
+          "explicacion": "El solvente es el que está en mayor cantidad y disuelve."
+        },
+        {
+          "id": "qm-so-2",
+          "enunciado": "¿Por qué el aceite no se disuelve en agua?",
+          "opciones": [
+            "Porque es apolar y el agua es polar",
+            "Porque es más pesado",
+            "Porque es amarillo",
+            "Porque está caliente"
+          ],
+          "correcta": 0,
+          "explicacion": "Lo semejante disuelve a lo semejante."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "saturacion",
+      "titulo": "¿Cuánto cabe?",
+      "resumen": "Insaturada, saturada y sobresaturada: la solubilidad tiene un límite.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "requiere": [
+        "soluto-solvente"
+      ],
+      "ficha": {
+        "idea": "En una cantidad de agua no cabe una cantidad ilimitada de soluto. La solubilidad es la cantidad máxima de soluto que se disuelve en una cantidad de solvente a una temperatura dada: a 20 °C, en 100 g de agua caben unos 36 g de sal y unos 200 g de azúcar. Si la solución tiene menos soluto que ese máximo está insaturada: le cabe más. Si llegó al máximo está saturada: lo que se eche de más queda en el fondo. Y hay un caso raro: si se disuelve mucho soluto en caliente y luego se enfría con cuidado, sin que nada la toque, puede quedar con más soluto del que debería. Es una solución sobresaturada, muy inestable: basta un cristalito o un golpe para que el exceso cristalice de golpe. Así se forman los cristales de la miel vieja y los de los dulces.",
+        "contexto": [
+          {
+            "titulo": "Cristales de azúcar",
+            "texto": "Para hacer cristales en casa se prepara agua con todo el azúcar que quepa en caliente, se deja enfriar y se cuelga un hilo: el azúcar cristaliza en el hilo durante varios días."
+          },
+          {
+            "titulo": "El mar",
+            "texto": "El agua de mar tiene unos 35 g de sales por litro, muy lejos de saturarse. En las salinas de Manaure (La Guajira) el sol evapora el agua hasta que la sal cristaliza."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Insaturada: le cabe más soluto.",
+            "Saturada: ya no cabe más; sobra en el fondo.",
+            "Sobresaturada: tiene más de lo que cabe y cristaliza al tocarla."
+          ],
+          "media": [
+            "Solubilidad: máximo de soluto que se disuelve en una cantidad de solvente a una temperatura dada (g por 100 g de agua)."
+          ],
+          "avanzada": [
+            "Una solución sobresaturada es metaestable: un cristal semilla inicia la cristalización."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Cuánta azúcar se le puede echar a un vaso de limonada? ¿Hay un límite?",
+          "actividad": "Agregar cucharaditas de sal a un vaso de agua, revolviendo, hasta que quede sal en el fondo; repetir con agua tibia.",
+          "errores": [
+            "Creer que revolver más hace caber más soluto.",
+            "Confundir solución concentrada con saturada."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Tres estados",
+          "visual": {
+            "tipo": "escena",
+            "id": "saturacion",
+            "fases": [
+              {
+                "id": "insaturada",
+                "nombre": "Insaturada",
+                "texto": "Cabe más soluto."
+              },
+              {
+                "id": "saturada",
+                "nombre": "Saturada",
+                "texto": "No cabe más: queda en el fondo."
+              },
+              {
+                "id": "sobresaturada",
+                "nombre": "Sobresaturada",
+                "texto": "Más de lo que cabe: cristaliza al tocarla."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Laboratorio de soluciones",
+          "visual": {
+            "tipo": "diagrama",
+            "id": "lab-soluciones"
+          }
+        }
+      ],
+      "diagrama": "lab-soluciones",
+      "juego": "saturacion-juego",
+      "preguntas": [
+        {
+          "id": "qm-so-3",
+          "enunciado": "Una limonada tiene azúcar en el fondo que no se disuelve por más que se revuelva. ¿Cómo está?",
+          "opciones": [
+            "Saturada",
+            "Insaturada",
+            "Sobresaturada",
+            "Diluida"
+          ],
+          "correcta": 0,
+          "explicacion": "Llegó al límite de solubilidad."
+        },
+        {
+          "id": "qm-so-4",
+          "enunciado": "¿Qué pasa si a una solución sobresaturada le echas un cristalito?",
+          "opciones": [
+            "El exceso de soluto cristaliza",
+            "Se disuelve el cristalito",
+            "Nada",
+            "Se evapora"
+          ],
+          "correcta": 0,
+          "explicacion": "Es muy inestable."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "factores",
+      "titulo": "¿Qué ayuda a disolver?",
+      "resumen": "Tamaño, agitación, temperatura y presión.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "basico",
+      "requiere": [
+        "saturacion"
+      ],
+      "ficha": {
+        "idea": "Algunos factores hacen que un soluto se disuelva más rápido, y otros cambian cuánto se puede disolver. Más rápido: moler o rallar el soluto (más superficie en contacto con el agua, como la panela rallada) y agitar (se lleva agua nueva a los granos, como al revolver el tinto). Más cantidad: la temperatura, porque casi todos los sólidos se disuelven más en agua caliente; y en los gases, la presión: a más presión, más gas disuelto. Por eso la gaseosa se embotella con presión, y al destaparla el gas se escapa en burbujas. También importa qué soluto y qué solvente son: lo semejante disuelve a lo semejante.",
+        "contexto": [
+          {
+            "titulo": "Los gases son al revés",
+            "texto": "Con el calor, los gases se disuelven menos: una gaseosa caliente pierde el gas más rápido, y el agua tibia de un estanque tiene menos oxígeno para los peces."
+          },
+          {
+            "titulo": "Los buzos",
+            "texto": "Bajo el agua, con mucha presión, la sangre disuelve más nitrógeno. Si el buzo sube muy rápido, el gas forma burbujas en el cuerpo."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Rallar y revolver ayudan a disolver más rápido.",
+            "En agua caliente se disuelve más azúcar."
+          ],
+          "media": [
+            "Factores de la velocidad de disolución: tamaño de partícula y agitación. Factores de la solubilidad: temperatura, presión (gases) y naturaleza del soluto y del solvente."
+          ],
+          "avanzada": [
+            "Ley de Henry: la solubilidad de un gas es proporcional a su presión parcial."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Cómo harías agua de panela lo más rápido posible?",
+          "actividad": "Carrera de disolución: panela en bloque vs. rallada, agua fría vs. caliente, con y sin revolver.",
+          "errores": [
+            "Creer que revolver aumenta la solubilidad (solo acelera).",
+            "Pensar que los gases, como los sólidos, se disuelven más en caliente."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Cuatro factores",
+          "visual": {
+            "tipo": "escena",
+            "id": "factores-solubilidad",
+            "fases": [
+              {
+                "id": "tamano",
+                "nombre": "Tamaño",
+                "texto": "Rallada se disuelve más rápido."
+              },
+              {
+                "id": "agitar",
+                "nombre": "Agitación",
+                "texto": "Revolver acelera."
+              },
+              {
+                "id": "temperatura",
+                "nombre": "Temperatura",
+                "texto": "En caliente cabe más sólido."
+              },
+              {
+                "id": "presion",
+                "nombre": "Presión",
+                "texto": "Más presión, más gas disuelto."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "¿Más rápido o más cantidad?",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "⏩",
+              "titulo": "Más rápido",
+              "puntos": [
+                "Rallar o moler",
+                "Agitar"
+              ]
+            },
+            "der": {
+              "icono": "📈",
+              "titulo": "Más cantidad",
+              "puntos": [
+                "Temperatura",
+                "Presión (gases)"
+              ]
+            }
+          }
+        }
+      ],
+      "juego": "factores-solubilidad-juego",
+      "preguntas": [
+        {
+          "id": "qm-so-5",
+          "enunciado": "¿Por qué se ralla la panela?",
+          "opciones": [
+            "Para que tenga más superficie y se disuelva más rápido",
+            "Para que sea más dulce",
+            "Para que pese menos",
+            "Para que el agua hierva"
+          ],
+          "correcta": 0,
+          "explicacion": "Más superficie en contacto con el agua."
+        },
+        {
+          "id": "qm-so-6",
+          "enunciado": "¿Por qué la gaseosa hace burbujas al destaparla?",
+          "opciones": [
+            "Porque baja la presión y el gas disuelto se escapa",
+            "Porque se calienta",
+            "Porque se agita sola",
+            "Porque le entra aire"
+          ],
+          "correcta": 0,
+          "explicacion": "A menos presión, menos gas disuelto."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "curvas",
+      "titulo": "Curvas de solubilidad",
+      "resumen": "Una gráfica dice cuánto cabe a cada temperatura.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "intermedio",
+      "requiere": [
+        "factores"
+      ],
+      "ficha": {
+        "idea": "La curva de solubilidad muestra, para cada temperatura, cuántos gramos de un soluto caben en 100 g de agua. Con ella se responde rápido si una solución está saturada: un punto sobre la curva es una solución saturada; uno por debajo, insaturada; uno por encima, sobresaturada (o con soluto en el fondo). Cada sustancia tiene su curva. La de la sal es casi plana: a 0 °C caben unos 36 g y a 100 °C unos 39 g. La del nitrato de potasio, un abono, sube mucho: 13 g a 0 °C y 246 g a 100 °C. Por eso, si una solución caliente de nitrato de potasio se enfría, se forman cristales: así se purifican las sustancias (cristalización). Los gases tienen curvas que bajan: se disuelven menos cuanto más caliente está el agua.",
+        "contexto": [
+          {
+            "titulo": "Cristalizar para purificar",
+            "texto": "Se disuelve una sustancia impura en agua caliente y se deja enfriar: cristaliza la sustancia y las impurezas, que están en poca cantidad, quedan disueltas."
+          },
+          {
+            "titulo": "Cuánto se cristaliza",
+            "texto": "Si 100 g de agua con 110 g de KNO₃ a 60 °C se enfrían a 20 °C, solo caben 32 g: cristalizan unos 78 g."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Hay gráficas que dicen cuánto soluto cabe a cada temperatura."
+          ],
+          "media": [
+            "Curva de solubilidad: sobre la curva, saturada; debajo, insaturada.",
+            "Casi todos los sólidos: la curva sube. Los gases: la curva baja."
+          ],
+          "avanzada": [
+            "Cristalización fraccionada: separar sustancias por la diferencia en su solubilidad."
+          ]
+        },
+        "docente": {
+          "abrir": "Si enfrías agua caliente con mucho nitrato de potasio disuelto, ¿qué esperas ver?",
+          "actividad": "Leer la curva del KNO₃ y calcular cuánto cristaliza al enfriar de 60 °C a 20 °C; comprobarlo en el laboratorio virtual.",
+          "errores": [
+            "Leer mal los ejes (g por 100 g de agua).",
+            "Creer que todas las sustancias aumentan igual su solubilidad con la temperatura."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Leer la curva",
+          "visual": {
+            "tipo": "escena",
+            "id": "curvas-solubilidad",
+            "fases": [
+              {
+                "id": "leer",
+                "nombre": "Leer",
+                "texto": "A 20 °C caben unos 36 g de sal."
+              },
+              {
+                "id": "nitrato",
+                "nombre": "Nitrato de potasio",
+                "texto": "Su curva sube muchísimo."
+              },
+              {
+                "id": "gases",
+                "nombre": "Gases",
+                "texto": "Se disuelven menos en caliente."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Cristalizar",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "💎",
+            "valor": "≈ 78 g",
+            "texto": "de KNO₃ cristalizan al enfriar de 60 °C a 20 °C una solución saturada en 100 g de agua."
+          },
+          "nivel": "avanzado"
+        }
+      ],
+      "juego": "curva-juego",
+      "preguntas": [
+        {
+          "id": "qm-so-7",
+          "enunciado": "Según la curva, a 40 °C caben 64 g de KNO₃ en 100 g de agua. Si hay 40 g disueltos, la solución está…",
+          "opciones": [
+            "Insaturada",
+            "Saturada",
+            "Sobresaturada",
+            "Concentrada al máximo"
+          ],
+          "correcta": 0,
+          "explicacion": "Está por debajo de la curva."
+        },
+        {
+          "id": "qm-so-8",
+          "enunciado": "¿Qué pasa con el oxígeno disuelto en un río cuando el agua se calienta?",
+          "opciones": [
+            "Disminuye",
+            "Aumenta",
+            "No cambia",
+            "Se vuelve sólido"
+          ],
+          "correcta": 0,
+          "explicacion": "Los gases son menos solubles en caliente."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "coloides",
+      "titulo": "Soluciones, coloides y suspensiones",
+      "resumen": "Lo que cambia es el tamaño de las partículas.",
+      "anio": 5,
+      "etiqueta": "Paso 5",
+      "nivel": "intermedio",
+      "requiere": [
+        "soluto-solvente"
+      ],
+      "ficha": {
+        "idea": "No todas las mezclas de un líquido con otra cosa son soluciones. La diferencia está en el tamaño de las partículas repartidas. En una solución son del tamaño de moléculas o iones: no se ven, la mezcla es transparente, no se separa en reposo y pasa por cualquier filtro. En una suspensión son grandes, como granos de tierra: la mezcla es turbia y en reposo se asienta, por eso los jarabes dicen «agítese antes de usar». En medio están los coloides, como la leche, la gelatina, la mayonesa o la niebla: sus partículas no se asientan, pero son lo bastante grandes para desviar la luz, y por eso un rayo de luz se ve al atravesarlos (efecto Tyndall).",
+        "contexto": [
+          {
+            "titulo": "Un solo lugar",
+            "texto": "La clasificación de las mezclas y el efecto Tyndall se ven en Clasificación de la materia; aquí se comparan por el tamaño de las partículas."
+          },
+          {
+            "titulo": "Tamaños",
+            "texto": "Solución: menos de 1 nm. Coloide: de 1 a 1000 nm. Suspensión: más de 1000 nm (1 µm)."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Solución: transparente. Coloide: turbio, no se asienta. Suspensión: se asienta."
+          ],
+          "media": [
+            "La diferencia entre solución, coloide y suspensión es el tamaño de las partículas."
+          ],
+          "avanzada": [
+            "Tamaños: solución < 1 nm; coloide 1–1000 nm; suspensión > 1000 nm."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué los jarabes dicen «agítese antes de usar» y el suero no?",
+          "actividad": "Pasar el haz de una linterna por agua con sal, agua con unas gotas de leche y agua con tierra.",
+          "errores": [
+            "Creer que todo lo transparente es puro.",
+            "Pensar que la leche es una solución."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Tres mezclas",
+          "visual": {
+            "tipo": "escena",
+            "id": "tipos-mezcla",
+            "fases": [
+              {
+                "id": "tres",
+                "nombre": "Los tamaños",
+                "texto": "Pequeñas, medianas y grandes."
+              },
+              {
+                "id": "luz",
+                "nombre": "Con luz",
+                "texto": "En el coloide se ve el haz."
+              },
+              {
+                "id": "reposo",
+                "nombre": "En reposo",
+                "texto": "Solo la suspensión se asienta."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre las mezclas y el efecto Tyndall",
+            "tema": "clasificacion-materia",
+            "bloque": "mezclas"
+          }
+        }
+      ],
+      "juego": "coloide-juego",
+      "preguntas": [
+        {
+          "id": "qm-so-9",
+          "enunciado": "¿Qué mezcla se asienta si se deja en reposo?",
+          "opciones": [
+            "Una suspensión",
+            "Una solución",
+            "Un coloide",
+            "Ninguna"
+          ],
+          "correcta": 0,
+          "explicacion": "Sus partículas son grandes."
+        },
+        {
+          "id": "qm-so-10",
+          "enunciado": "¿Qué tipo de mezcla es la leche?",
+          "opciones": [
+            "Un coloide",
+            "Una solución",
+            "Una suspensión",
+            "Una sustancia pura"
+          ],
+          "correcta": 0,
+          "explicacion": "Tiene gotitas de grasa que no se asientan."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}

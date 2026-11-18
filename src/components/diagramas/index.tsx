@@ -112,6 +112,8 @@ import ConvertidorMol from './ConvertidorMol.tsx'
 import CajaGas from './CajaGas.tsx'
 import PistonGas from './PistonGas.tsx'
 import OllaEbullicion from './OllaEbullicion.tsx'
+import LabSoluciones from './LabSoluciones.tsx'
+import { SeDisuelveJuego, SaturacionJuego, FactoresSolubilidadJuego, CurvaJuego, ColoideJuego } from './JuegosSoluciones.tsx'
 import { EnlacePuenteJuego, TensionJuego, CalorAguaJuego, HieloJuego, EbullicionJuego, SolidoJuego } from './JuegosAguaLiquidos.tsx'
 import { BoyleJuego, CharlesJuego, GayLussacJuego, CualLeyGasJuego, AvogadroJuego, GasIdealJuego } from './JuegosLeyesGases.tsx'
 import { PropiedadGasJuego, VariableGasJuego, KelvinJuego, UnidadesPresionJuego, AlturaPresionJuego } from './JuegosGases.tsx'
@@ -575,6 +577,12 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'hielo-juego': HieloJuego,
   'ebullicion-juego': EbullicionJuego,
   'solido-juego': SolidoJuego,
+  'lab-soluciones': LabSoluciones,
+  'se-disuelve-juego': SeDisuelveJuego,
+  'saturacion-juego': SaturacionJuego,
+  'factores-solubilidad-juego': FactoresSolubilidadJuego,
+  'curva-juego': CurvaJuego,
+  'coloide-juego': ColoideJuego,
   'tipos-radiacion-juego': TiposRadiacionJuego,
   'vida-media-juego': VidaMediaJuego,
   'usos-nucleares-juego': UsosNuclearesJuego,

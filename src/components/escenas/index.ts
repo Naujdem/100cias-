@@ -49,6 +49,7 @@ import { EscenaLavoisier, EscenaProust, EscenaDalton as EscenaDaltonLeyes } from
 import { EscenaGasParticulas, EscenaGasVariables, EscenaKelvin, EscenaTorricelli, EscenaPresionAltura } from './EscenasGases.tsx'
 import { EscenaBoyle, EscenaCharles, EscenaGayLussac, EscenaAvogadro, EscenaDaltonGraham } from './EscenasLeyesGases.tsx'
 import { EscenaAguaPuentes, EscenaTensionSuperficial, EscenaCalorEspecifico, EscenaHieloFlota, EscenaPresionVapor, EscenaSolidos } from './EscenasAgua2.tsx'
+import { EscenaDisolver, EscenaSaturacion, EscenaFactoresSolubilidad, EscenaCurvasSolubilidad, EscenaTiposMezcla } from './EscenasSoluciones.tsx'
 import { EscenaMolContar, EscenaMasaMolar, EscenaCaminoMol } from './EscenasMol.tsx'
 import { EscenaReceta, EscenaMasaMasa, EscenaLimite } from './EscenasEstequiometria.tsx'
 import { EscenaIntra, EscenaPolaridad, EscenaFuerzas, EscenaSoluble } from './EscenasFuerzas.tsx'
@@ -304,6 +305,11 @@ export const ESCENAS: Record<string, ComponentType<{ fase: string }>> = {
   'hielo-flota': EscenaHieloFlota,
   'presion-vapor': EscenaPresionVapor,
   solidos: EscenaSolidos,
+  disolver: EscenaDisolver,
+  saturacion: EscenaSaturacion,
+  'factores-solubilidad': EscenaFactoresSolubilidad,
+  'curvas-solubilidad': EscenaCurvasSolubilidad,
+  'tipos-mezcla': EscenaTiposMezcla,
   compostaje: EscenaCompostaje,
   riesgo: EscenaRiesgo,
   armero: EscenaArmero,
