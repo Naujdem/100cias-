@@ -95,6 +95,8 @@ import TablaPeriodica from './TablaPeriodica.tsx'
 import MapaCalor from './MapaCalor.tsx'
 import ArmaLewis from './ArmaLewis.tsx'
 import GeometriaVsepr from './GeometriaVsepr.tsx'
+import VidaMedia from './VidaMedia.tsx'
+import { TiposRadiacionJuego, VidaMediaJuego, UsosNuclearesJuego, ProteccionJuego } from './JuegosRadiactividad.tsx'
 import { IntraInterJuego, GeometriaJuego, MoleculaPolarJuego, FuerzaJuego, DisuelveJuego } from './JuegosFuerzas.tsx'
 import { OctetoJuego, TipoEnlaceJuego, PolarJuego, LewisJuego } from './JuegosEnlace.tsx'
 import { RadioJuego, IonizacionJuego, ElectronegatividadJuego, MetalicoJuego } from './JuegosPeriodicas.tsx'
@@ -494,6 +496,11 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'molecula-polar-juego': MoleculaPolarJuego,
   'fuerza-juego': FuerzaJuego,
   'disuelve-juego': DisuelveJuego,
+  'vida-media': VidaMedia,
+  'tipos-radiacion-juego': TiposRadiacionJuego,
+  'vida-media-juego': VidaMediaJuego,
+  'usos-nucleares-juego': UsosNuclearesJuego,
+  'proteccion-juego': ProteccionJuego,
   'amenaza-vulnerabilidad-juego': AmenazaVulnerabilidadJuego,
   'amenazas-colombia-juego': AmenazasColombiaJuego,
   'armero-juego': ArmeroJuego,

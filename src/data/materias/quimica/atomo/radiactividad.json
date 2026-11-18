@@ -1,0 +1,594 @@
+{
+  "id": "radiactividad",
+  "materia": "quimica",
+  "area": "atomo",
+  "titulo": "Radiactividad",
+  "subtema": "Núcleos inestables, vida media y usos (opcional, 11°)",
+  "orden": 118,
+  "etiqueta": "8",
+  "vistas": [
+    "ruta"
+  ],
+  "tituloVista": "Ruta de la radiactividad",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Contar cómo se descubrió la radiactividad.",
+    "Diferenciar la radiación alfa, beta y gamma y escribir ecuaciones nucleares sencillas.",
+    "Calcular cuánto queda de un isótopo con su vida media.",
+    "Reconocer usos y riesgos de la radiactividad y las reglas de protección."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con un texto de química o física de bachillerato. A verificar: fechas (Becquerel 1896, polonio y radio 1898, Nobel 1903 y 1911, Chernóbil 1986, Goiânia 1987), vidas medias (C-14 5730 años, I-131 ≈ 8 días, U-238 ≈ 4500 millones de años), el reactor IAN-R1 en Bogotá y el límite de datación del carbono-14."
+  ],
+  "bloques": [
+    {
+      "id": "descubrimiento",
+      "titulo": "El descubrimiento de la radiactividad",
+      "resumen": "Becquerel notó que el uranio velaba placas fotográficas en la oscuridad; los Curie hallaron el polonio y el radio.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "avanzado",
+      "nucleo": true,
+      "ficha": {
+        "idea": "En 1896, Henri Becquerel guardó sales de uranio sobre una placa fotográfica envuelta en papel negro. Al revelarla, la encontró velada, aunque no le había dado la luz: el uranio emitía por sí solo una radiación invisible capaz de atravesar el papel. Marie y Pierre Curie estudiaron el fenómeno, al que Marie llamó radiactividad, y en 1898 descubrieron dos elementos mucho más radiactivos que el uranio: el polonio y el radio. La radiactividad es la emisión espontánea de radiación por parte de núcleos inestables, que se transforman en otros más estables.",
+        "contexto": [
+          {
+            "titulo": "Marie Curie",
+            "texto": "Fue la primera mujer en ganar un premio Nobel y la única persona premiada en dos ciencias distintas: Física (1903) y Química (1911)."
+          },
+          {
+            "titulo": "Un precio alto",
+            "texto": "Los Curie trabajaban sin protección; Marie murió en 1934 de una enfermedad de la médula ósea probablemente causada por la radiación. Sus cuadernos todavía son radiactivos."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "La radiactividad es la emisión de radiación de núcleos inestables."
+          ],
+          "media": [
+            "Becquerel (1896): uranio. Los Curie (1898): polonio y radio."
+          ],
+          "avanzada": [
+            "Es un fenómeno del núcleo, no de los electrones: no depende de si el átomo está en un compuesto."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Cómo puede una piedra velar una foto sin luz?",
+          "actividad": "Lectura corta sobre Marie Curie y discusión: ¿qué riesgos corrían los científicos que no conocían los peligros de lo que estudiaban?",
+          "errores": [
+            "Confundir radiactividad con la radiación del celular o el wifi.",
+            "Pensar que la radiactividad la inventaron los humanos."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Una placa velada",
+          "visual": {
+            "tipo": "escena",
+            "id": "ra-descubrimiento",
+            "fases": [
+              {
+                "id": "cajon",
+                "nombre": "El cajón de Becquerel",
+                "texto": "Sales de uranio sobre una placa fotográfica envuelta en papel negro."
+              },
+              {
+                "id": "placa",
+                "nombre": "La placa velada",
+                "texto": "Sin luz, la placa se manchó: el uranio emitía algo invisible."
+              },
+              {
+                "id": "curie",
+                "nombre": "Los Curie",
+                "texto": "Descubrieron el polonio y el radio, mucho más radiactivos."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre los isótopos",
+            "tema": "atomo-por-dentro",
+            "bloque": "isotopos"
+          }
+        }
+      ],
+      "preguntas": [
+        {
+          "id": "qr-de-1",
+          "enunciado": "¿Qué observó Becquerel en 1896?",
+          "opciones": [
+            "Que las sales de uranio velaban una placa fotográfica sin luz",
+            "Que el uranio brillaba en la oscuridad",
+            "Que el radio era un metal",
+            "Que el átomo tenía núcleo"
+          ],
+          "correcta": 0,
+          "explicacion": "Una radiación invisible atravesaba el papel."
+        },
+        {
+          "id": "qr-de-2",
+          "enunciado": "¿Qué elementos descubrieron Marie y Pierre Curie?",
+          "opciones": [
+            "Polonio y radio",
+            "Uranio y torio",
+            "Helio y neón",
+            "Carbono y nitrógeno"
+          ],
+          "correcta": 0,
+          "explicacion": "El polonio lleva el nombre de Polonia, el país natal de Marie."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "tipos",
+      "titulo": "Alfa, beta y gamma",
+      "resumen": "Los núcleos inestables emiten partículas alfa (núcleos de helio), beta (electrones) o rayos gamma (energía).",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "avanzado",
+      "requiere": [
+        "descubrimiento"
+      ],
+      "ficha": {
+        "idea": "Hay tres tipos principales de radiación. La alfa (α) es un núcleo de helio, con 2 protones y 2 neutrones: es pesada, recorre pocos centímetros en el aire y la detiene una hoja de papel; el núcleo que la emite pierde 2 en Z y 4 en A (²³⁸U → ²³⁴Th + α). La beta (β) es un electrón que sale del núcleo cuando un neutrón se convierte en protón: Z aumenta en 1 y A no cambia (¹⁴C → ¹⁴N + β); la frenan unos milímetros de aluminio. La gamma (γ) es radiación electromagnética muy energética, sin masa ni carga: no cambia el elemento, es la más penetrante y hace falta plomo o concreto grueso para frenarla.",
+        "contexto": [
+          {
+            "titulo": "Transmutación",
+            "texto": "Al emitir alfa o beta, el núcleo se convierte en otro elemento: el viejo sueño de los alquimistas, pero en el núcleo."
+          },
+          {
+            "titulo": "Las ecuaciones se balancean",
+            "texto": "La suma de los números de masa (arriba) y de los números atómicos (abajo) debe ser igual a ambos lados."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Alfa: núcleo de helio. Beta: electrón. Gamma: energía."
+          ],
+          "media": [
+            "Penetración: α (papel) < β (aluminio) < γ (plomo)."
+          ],
+          "avanzada": [
+            "Alfa: Z − 2, A − 4. Beta: Z + 1, A igual. Gamma: no cambia Z ni A."
+          ]
+        },
+        "docente": {
+          "abrir": "Si un núcleo pierde 2 protones, ¿sigue siendo el mismo elemento?",
+          "actividad": "Completar ecuaciones nucleares sencillas (desintegración alfa del radio-226, beta del cobalto-60) balanceando A y Z.",
+          "errores": [
+            "Pensar que la beta es un electrón de la nube y no del núcleo.",
+            "Creer que la gamma es una partícula con masa."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Tres radiaciones",
+          "visual": {
+            "tipo": "escena",
+            "id": "ra-tipos",
+            "fases": [
+              {
+                "id": "alfa",
+                "nombre": "Alfa",
+                "texto": "Un núcleo de helio: el uranio-238 se vuelve torio-234."
+              },
+              {
+                "id": "beta",
+                "nombre": "Beta",
+                "texto": "Un electrón del núcleo: el carbono-14 se vuelve nitrógeno-14."
+              },
+              {
+                "id": "gamma",
+                "nombre": "Gamma",
+                "texto": "Energía pura: no cambia el elemento."
+              },
+              {
+                "id": "barreras",
+                "nombre": "¿Qué las frena?",
+                "texto": "Papel, aluminio y plomo."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "El radio-226 (Z = 88) emite una partícula alfa. ¿Qué número atómico tiene el núcleo que queda?",
+            "opciones": [
+              "86",
+              "88",
+              "90",
+              "84"
+            ],
+            "correcta": 0,
+            "explicacion": "Pierde 2 protones: 88 − 2 = 86, el radón."
+          }
+        }
+      ],
+      "juego": "tipos-radiacion-juego",
+      "preguntas": [
+        {
+          "id": "qr-ti-1",
+          "enunciado": "¿Qué radiación es la más penetrante?",
+          "opciones": [
+            "Gamma",
+            "Alfa",
+            "Beta",
+            "Todas igual"
+          ],
+          "correcta": 0,
+          "explicacion": "Hace falta plomo o concreto para frenarla."
+        },
+        {
+          "id": "qr-ti-2",
+          "enunciado": "¿Qué le pasa al número atómico en una desintegración beta?",
+          "opciones": [
+            "Aumenta en 1",
+            "Disminuye en 2",
+            "No cambia",
+            "Disminuye en 1"
+          ],
+          "correcta": 0,
+          "explicacion": "Un neutrón se convierte en protón."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "vida-media",
+      "titulo": "Vida media",
+      "resumen": "Es el tiempo en que se desintegra la mitad de los núcleos radiactivos de una muestra.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "avanzado",
+      "requiere": [
+        "tipos"
+      ],
+      "ficha": {
+        "idea": "No se puede saber cuándo se va a desintegrar un núcleo en particular: es al azar. Pero en una muestra con muchísimos núcleos se cumple una regla: después de cierto tiempo, llamado vida media (o periodo de semidesintegración), queda la mitad; después de otra vida media, la mitad de la mitad, y así sucesivamente. Cada isótopo tiene su vida media: el yodo-131, 8 días; el carbono-14, 5730 años; el uranio-238, unos 4500 millones de años. La fracción que queda después de n vidas medias es (½)ⁿ.",
+        "contexto": [
+          {
+            "titulo": "Como palomitas de maíz",
+            "texto": "No se sabe qué grano va a reventar primero, pero sí cuánto tarda la olla en reventar la mitad."
+          },
+          {
+            "titulo": "Nunca llega a cero",
+            "texto": "En teoría siempre queda algo; en la práctica, después de unas 10 vidas medias queda menos del 0,1 %."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Vida media: tiempo en que queda la mitad."
+          ],
+          "media": [
+            "Cada isótopo tiene su vida media.",
+            "Después de n vidas medias queda (½)ⁿ."
+          ],
+          "avanzada": [
+            "Masa que queda = masa inicial × (½)ⁿ, con n = tiempo ÷ vida media."
+          ]
+        },
+        "docente": {
+          "abrir": "Si tienes 100 monedas, las lanzas y retiras las que caen en cara, ¿cuántas quedan después de cada ronda?",
+          "actividad": "Simulación con monedas o fríjoles pintados de un lado: lanzar, retirar los «desintegrados», contar y graficar ronda a ronda; comparar con el Explora.",
+          "errores": [
+            "Creer que después de dos vidas medias ya no queda nada.",
+            "Pensar que la vida media es la vida de un solo átomo."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Simula la vida media",
+          "visual": {
+            "tipo": "diagrama",
+            "id": "vida-media"
+          }
+        },
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Tienes 80 g de yodo-131 (vida media de 8 días). ¿Cuánto queda después de 24 días?",
+            "opciones": [
+              "10 g",
+              "40 g",
+              "20 g",
+              "0 g"
+            ],
+            "correcta": 0,
+            "explicacion": "24 ÷ 8 = 3 vidas medias: 80 → 40 → 20 → 10."
+          }
+        }
+      ],
+      "diagrama": "vida-media",
+      "juego": "vida-media-juego",
+      "preguntas": [
+        {
+          "id": "qr-vm-1",
+          "enunciado": "¿Qué es la vida media de un isótopo radiactivo?",
+          "opciones": [
+            "El tiempo en que se desintegra la mitad de los núcleos",
+            "El tiempo que vive un átomo",
+            "La mitad de su masa atómica",
+            "El tiempo para que desaparezca por completo"
+          ],
+          "correcta": 0,
+          "explicacion": "Después de cada vida media queda la mitad."
+        },
+        {
+          "id": "qr-vm-2",
+          "enunciado": "¿Qué fracción de carbono-14 queda después de 3 vidas medias?",
+          "opciones": [
+            "⅛",
+            "⅓",
+            "¼",
+            "½"
+          ],
+          "correcta": 0,
+          "explicacion": "(½)³ = ⅛."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "usos",
+      "titulo": "Usos de la radiactividad",
+      "resumen": "Datación con carbono-14, medicina nuclear, centrales nucleares (fisión) e industria.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "avanzado",
+      "requiere": [
+        "vida-media"
+      ],
+      "ficha": {
+        "idea": "La radiactividad tiene muchos usos. En la datación, el carbono-14 permite calcular la edad de restos de seres vivos de hasta unos 50 000 años: mientras viven toman carbono-14 del ambiente y, al morir, se va desintegrando a un ritmo fijo; el uranio-238 sirve para fechar rocas de miles de millones de años. En medicina, isótopos como el tecnecio-99m permiten ver órganos por dentro, el yodo-131 trata enfermedades de la tiroides y la radioterapia destruye células de cáncer. En las centrales nucleares, un neutrón parte un núcleo de uranio-235 en dos (fisión), se libera muchísima energía y salen neutrones que parten otros núcleos: una reacción en cadena que, controlada, produce electricidad. En la industria se usa para esterilizar material médico, conservar alimentos y revisar soldaduras.",
+        "contexto": [
+          {
+            "titulo": "En Colombia",
+            "texto": "Hay un reactor nuclear de investigación en Bogotá (el IAN-R1) y la medicina nuclear se usa en hospitales del país."
+          },
+          {
+            "titulo": "Fusión",
+            "texto": "En el Sol, núcleos de hidrógeno se unen (fusión) y forman helio: así brillan las estrellas."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "La radiactividad se usa en medicina, datación y energía."
+          ],
+          "media": [
+            "Carbono-14: edad de restos de seres vivos (hasta ≈ 50 000 años).",
+            "Fisión: un núcleo grande se parte y libera energía."
+          ],
+          "avanzada": [
+            "Reacción en cadena; diferencia entre fisión (reactores) y fusión (estrellas)."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Cómo saben los científicos la edad de una momia o de un fósil?",
+          "actividad": "Calcular edades con carbono-14: si un hueso conserva ¼ del carbono-14 original, ¿cuántos años tiene? (2 vidas medias ≈ 11 460 años).",
+          "errores": [
+            "Creer que los alimentos irradiados quedan radiactivos.",
+            "Pensar que con carbono-14 se fechan los dinosaurios (son demasiado antiguos)."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Fisión nuclear",
+          "visual": {
+            "tipo": "escena",
+            "id": "ra-fision",
+            "fases": [
+              {
+                "id": "neutron",
+                "nombre": "El neutrón",
+                "texto": "Un neutrón golpea un núcleo de uranio-235."
+              },
+              {
+                "id": "rompe",
+                "nombre": "Se parte",
+                "texto": "Se divide en dos núcleos, suelta energía y más neutrones."
+              },
+              {
+                "id": "cadena",
+                "nombre": "En cadena",
+                "texto": "Cada neutrón parte otro núcleo: reacción en cadena."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Para qué sirve",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🦴",
+                "titulo": "Datación",
+                "texto": "Carbono-14 para restos; uranio para rocas."
+              },
+              {
+                "icono": "🏥",
+                "titulo": "Medicina",
+                "texto": "Imágenes, yodo-131 y radioterapia."
+              },
+              {
+                "icono": "⚡",
+                "titulo": "Energía",
+                "texto": "Centrales nucleares por fisión."
+              },
+              {
+                "icono": "🍓",
+                "titulo": "Industria",
+                "texto": "Esterilizar y conservar alimentos."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre los fósiles",
+            "tema": "evidencias-evolucion",
+            "bloque": "fosiles"
+          }
+        }
+      ],
+      "juego": "usos-nucleares-juego",
+      "preguntas": [
+        {
+          "id": "qr-us-1",
+          "enunciado": "¿Por qué el carbono-14 no sirve para fechar fósiles de dinosaurio?",
+          "opciones": [
+            "Tienen millones de años y ya no queda carbono-14 medible",
+            "Los dinosaurios no tenían carbono",
+            "El carbono-14 solo está en las rocas",
+            "Porque son muy grandes"
+          ],
+          "correcta": 0,
+          "explicacion": "Después de unas 10 vidas medias (≈ 57 000 años) casi no queda."
+        },
+        {
+          "id": "qr-us-2",
+          "enunciado": "¿Qué ocurre en la fisión nuclear?",
+          "opciones": [
+            "Un núcleo pesado se parte en dos y libera energía",
+            "Dos núcleos livianos se unen",
+            "Un electrón salta de nivel",
+            "Se forma un enlace iónico"
+          ],
+          "correcta": 0,
+          "explicacion": "Así funcionan las centrales nucleares."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "riesgos",
+      "titulo": "Riesgos y protección",
+      "resumen": "La radiación puede dañar las células; se protege uno con menos tiempo, más distancia y blindaje.",
+      "anio": 5,
+      "etiqueta": "Paso 5",
+      "nivel": "avanzado",
+      "requiere": [
+        "tipos"
+      ],
+      "ficha": {
+        "idea": "La radiación de alta energía puede dañar las células y el ADN: en dosis altas causa quemaduras y enfermedad por radiación, y a largo plazo aumenta el riesgo de cáncer. El peligro depende del tipo de radiación, la dosis y si la fuente está fuera o dentro del cuerpo: la alfa no atraviesa la piel, pero es muy dañina si se inhala o se traga. Para protegerse se siguen tres reglas: menos tiempo cerca de la fuente, más distancia y más blindaje. El símbolo del trébol amarillo y negro avisa que hay material radiactivo. Accidentes como el de Chernóbil (Ucrania, 1986) y el de Goiânia (Brasil, 1987), donde unas personas abrieron una fuente de cesio-137 de un equipo médico abandonado, muestran la importancia de manejar bien estos materiales. También hay radiación natural de fondo: rocas, el gas radón, los rayos cósmicos e incluso el potasio-40 de los alimentos.",
+        "contexto": [
+          {
+            "titulo": "Dosis",
+            "texto": "Se mide en sieverts (Sv). Una radiografía de tórax da una dosis muy pequeña comparada con la radiación natural de un año."
+          },
+          {
+            "titulo": "Radiactivo ≠ irradiado",
+            "texto": "Un alimento o un paciente que recibe radiación no se vuelve radiactivo; sí lo es quien tiene la fuente dentro."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Tiempo, distancia y blindaje.",
+            "El trébol ☢️ avisa que hay material radiactivo."
+          ],
+          "media": [
+            "La radiación puede dañar el ADN.",
+            "Existe una radiación natural de fondo."
+          ],
+          "avanzada": [
+            "Goiânia (1987) y Chernóbil (1986).",
+            "Dosis en sieverts; alfa peligrosa si entra al cuerpo."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué el técnico de rayos X sale del cuarto cuando toma la radiografía?",
+          "actividad": "Analizar el caso de Goiânia: qué pasó, qué errores se cometieron y qué deberían saber todas las personas sobre el símbolo ☢️.",
+          "errores": [
+            "Pensar que toda radiación es igual de peligrosa.",
+            "Creer que la radiación de fondo natural no existe."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Tres reglas",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "⏱️",
+                "titulo": "Tiempo",
+                "texto": "Menos tiempo cerca de la fuente."
+              },
+              {
+                "icono": "📏",
+                "titulo": "Distancia",
+                "texto": "Lejos, la dosis baja muy rápido."
+              },
+              {
+                "icono": "🧱",
+                "titulo": "Blindaje",
+                "texto": "Plomo, concreto o agua entre la fuente y tú."
+              },
+              {
+                "icono": "☢️",
+                "titulo": "El trébol",
+                "texto": "Si lo ves, no toques nada y avisa."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Un alimento que fue irradiado para conservarlo, ¿queda radiactivo?",
+            "opciones": [
+              "No",
+              "Sí, para siempre",
+              "Sí, por 8 días",
+              "Solo si es fruta"
+            ],
+            "correcta": 0,
+            "explicacion": "La radiación mata los microbios pero no deja el alimento radiactivo."
+          }
+        }
+      ],
+      "juego": "proteccion-juego",
+      "preguntas": [
+        {
+          "id": "qr-ri-1",
+          "enunciado": "¿Cuáles son las tres reglas de protección contra la radiación?",
+          "opciones": [
+            "Tiempo, distancia y blindaje",
+            "Agua, sal y luz",
+            "Calor, frío y presión",
+            "Correr, gritar y esconderse"
+          ],
+          "correcta": 0,
+          "explicacion": "Menos tiempo, más distancia, más blindaje."
+        },
+        {
+          "id": "qr-ri-2",
+          "enunciado": "¿Por qué la radiación alfa es peligrosa si se inhala, aunque no atraviese la piel?",
+          "opciones": [
+            "Porque dentro del cuerpo daña directamente las células cercanas",
+            "Porque se convierte en gamma",
+            "Porque es un gas",
+            "No es peligrosa"
+          ],
+          "correcta": 0,
+          "explicacion": "Por eso el radón y el polonio son peligrosos al respirarse o tragarse."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}

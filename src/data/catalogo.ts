@@ -44,6 +44,5 @@ export const PROXIMOS: Record<string, { etiqueta: string; nombre: string }[]> = 
   materia: [
   ],
   atomo: [
-    { etiqueta: '8', nombre: 'Radiactividad (opcional, 11°)' },
   ],
 }
