@@ -1,0 +1,343 @@
+{
+  "id": "especiacion",
+  "materia": "biologia",
+  "area": "evolucion",
+  "titulo": "Especiación",
+  "subtema": "Cómo nace una especie nueva",
+  "orden": 46,
+  "etiqueta": "6",
+  "vistas": ["ruta"],
+  "tituloVista": "Ruta de la especiación",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Explicar el concepto biológico de especie y sus límites.",
+    "Describir las barreras reproductivas y los tipos de especiación.",
+    "Reconocer la radiación adaptativa en ejemplos de Colombia y las Galápagos."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con un texto de biología. A verificar: cierre del istmo de Panamá (≈ 3 millones de años), camarones Alpheus del Caribe y el Pacífico, número de especies de frailejones (más de 100, subtribu Espeletiinae), origen híbrido de Heliconius heurippa, ≈ 18 especies de pinzones de Darwin."
+  ],
+  "bloques": [
+    {
+      "id": "especie",
+      "titulo": "¿Qué es una especie?",
+      "resumen": "Un grupo de individuos que pueden cruzarse en la naturaleza y tener hijos fértiles. El caballo y el burro tienen mulas estériles: son especies distintas.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "Según el concepto biológico de especie, propuesto por Ernst Mayr, una especie es un grupo de poblaciones cuyos individuos pueden cruzarse en la naturaleza y tener descendencia fértil, y que están aislados reproductivamente de otros grupos. El aspecto no basta: un chihuahua y un gran danés son la misma especie, mientras que dos aves casi idénticas pueden ser especies distintas si no se cruzan. La especiación es el proceso por el que una especie da origen a otras.",
+        "contexto": [
+          { "titulo": "La mula", "texto": "El cruce de yegua y burro produce mulas, fuertes pero estériles. Por eso caballo y burro son especies distintas." },
+          { "titulo": "Los límites del concepto", "texto": "No sirve para las bacterias, que no se reproducen sexualmente, ni para los fósiles. En esos casos se usan la forma o el ADN." }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Especie: individuos que se cruzan y tienen hijos fértiles.",
+            "La mula es estéril: caballo y burro son especies distintas."
+          ],
+          "media": ["Especiación: formación de especies nuevas."],
+          "avanzada": ["El concepto biológico no sirve para bacterias ni fósiles."]
+        },
+        "docente": {
+          "abrir": "Un chihuahua y un gran danés son muy distintos. ¿Son de la misma especie? ¿Por qué?",
+          "actividad": "Discutir casos (perros, mula, ligre) y construir entre todos la definición de especie.",
+          "errores": ["Creer que dos animales parecidos siempre son de la misma especie."],
+          "minutos": 15
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Caballo, burro y mula",
+          "visual": {
+            "tipo": "escena",
+            "id": "ev-especie",
+            "fases": [
+              { "id": "cruce", "nombre": "El cruce", "texto": "Una yegua y un burro pueden tener una cría." },
+              { "id": "mula", "nombre": "La mula", "texto": "Nace una mula: fuerte y resistente." },
+              { "id": "esteril", "nombre": "Estéril", "texto": "Pero la mula no puede tener crías." },
+              { "id": "definicion", "nombre": "Especie", "texto": "Especie: individuos que se cruzan en la naturaleza y tienen hijos fértiles." }
+            ]
+          }
+        }
+      ],
+      "juego": "especie-juego",
+      "preguntas": [
+        {
+          "id": "es-es-1",
+          "enunciado": "¿Por qué el caballo y el burro son especies distintas?",
+          "opciones": ["Porque sus crías, las mulas, son estériles", "Porque tienen distinto color", "Porque viven en lugares distintos", "Porque uno es más grande"],
+          "correcta": 0,
+          "explicacion": "Pueden cruzarse, pero no tienen descendencia fértil."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "aislamiento",
+      "titulo": "Barreras reproductivas",
+      "resumen": "Lo que impide que dos especies tengan hijos fértiles: vivir en lugares distintos, reproducirse en épocas distintas, cortejos diferentes o híbridos estériles.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "intermedio",
+      "ficha": {
+        "idea": "Las especies se mantienen separadas por barreras reproductivas. Las precigóticas impiden la fecundación: de hábitat (viven en lugares distintos), temporales (se reproducen en épocas distintas), de conducta (cortejos, cantos o colores diferentes), mecánicas (órganos que no encajan) y gaméticas (el óvulo no reconoce al espermatozoide). Las postcigóticas actúan después: el híbrido no se desarrolla o es estéril, como la mula.",
+        "contexto": [
+          { "titulo": "El canto de las ranas", "texto": "En una misma charca pueden vivir varias especies de ranas: cada hembra solo responde al canto de su especie." },
+          { "titulo": "Flores y horarios", "texto": "Dos plantas parientes que florecen en meses distintos nunca intercambian polen." }
+        ],
+        "cuaderno": {
+          "facil": ["Las barreras reproductivas mantienen separadas a las especies."],
+          "media": [
+            "Precigóticas: de hábitat, temporales, de conducta, mecánicas y gaméticas.",
+            "Postcigóticas: el híbrido no se desarrolla o es estéril."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "Si dos especies de ranas viven en la misma charca, ¿por qué no se mezclan?",
+          "actividad": "Escuchar grabaciones de cantos de ranas colombianas y notar las diferencias.",
+          "errores": ["Pensar que la única barrera es la distancia."],
+          "minutos": 15
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Antes de la fecundación",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "🏞️", "titulo": "De hábitat", "texto": "Viven en lugares distintos." },
+              { "icono": "📅", "titulo": "Temporal", "texto": "Se reproducen en épocas distintas." },
+              { "icono": "🎶", "titulo": "De conducta", "texto": "Cantos y cortejos diferentes." },
+              { "icono": "🔑", "titulo": "Mecánica", "texto": "Los órganos no encajan." },
+              { "icono": "🧫", "titulo": "Gamética", "texto": "Óvulo y espermatozoide no se reconocen." }
+            ]
+          }
+        },
+        {
+          "titulo": "Después de la fecundación",
+          "visual": {
+            "tipo": "compara",
+            "izq": { "icono": "🥚", "titulo": "Híbrido inviable", "puntos": ["El embrión no se desarrolla", "Muere antes de nacer"] },
+            "der": { "icono": "🫏", "titulo": "Híbrido estéril", "puntos": ["Nace y vive", "No puede reproducirse (mula)"] }
+          }
+        }
+      ],
+      "juego": "aislamiento-juego",
+      "preguntas": [
+        {
+          "id": "es-ai-1",
+          "enunciado": "Dos especies de ranas viven en la misma charca, pero las hembras solo responden al canto de su especie. ¿Qué barrera es?",
+          "opciones": ["De conducta", "De hábitat", "Temporal", "Híbrido estéril"],
+          "correcta": 0,
+          "explicacion": "El cortejo (el canto) es distinto: es una barrera de conducta."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "alopatrica",
+      "titulo": "Especiación alopátrica",
+      "resumen": "Una barrera geográfica separa una población; cada parte cambia por su lado hasta convertirse en especies distintas.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "La especiación alopátrica es la más común. Una barrera geográfica (una cordillera, un río, un brazo de mar) divide una población en dos. Sin flujo génico entre ellas, cada parte cambia por su cuenta por mutación, deriva y selección. Si pasa suficiente tiempo, aunque la barrera desaparezca ya no podrán tener hijos fértiles juntas: son dos especies.",
+        "contexto": [
+          { "titulo": "El istmo de Panamá", "texto": "Hace unos 3 millones de años se cerró y separó los camarones del Caribe y del Pacífico. Hoy las parejas de cada lado casi no se aparean." },
+          { "titulo": "Los Andes", "texto": "El levantamiento de las cordilleras separó poblaciones de aves, ranas y plantas a cada lado: por eso Colombia tiene tantas especies." },
+          { "titulo": "Islas en el cielo", "texto": "Los páramos están separados por valles cálidos: los frailejones de cada páramo quedaron aislados." }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Alopátrica: una barrera geográfica separa la población.",
+            "Cada parte cambia por su lado hasta formar especies distintas."
+          ],
+          "media": ["El istmo de Panamá separó especies del Caribe y del Pacífico."],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Cómo crees que influyeron las tres cordilleras en la cantidad de especies de Colombia?",
+          "actividad": "Con el Explora del istmo, describir qué pasó con los camarones y con los animales terrestres.",
+          "errores": ["Creer que la barrera transforma a los animales: solo los separa; el cambio viene de los mecanismos."],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Una cordillera en medio",
+          "visual": {
+            "tipo": "escena",
+            "id": "ev-alopatrica",
+            "fases": [
+              { "id": "una", "nombre": "Una población", "texto": "Aves de una sola especie viven en un valle." },
+              { "id": "barrera", "nombre": "La barrera", "texto": "Se levanta una cordillera y divide la población en dos." },
+              { "id": "divergen", "nombre": "Cambian", "texto": "Sin flujo génico, cada lado cambia por mutación, deriva y selección." },
+              { "id": "contacto", "nombre": "Dos especies", "texto": "Si se encuentran de nuevo, ya no se cruzan: hay dos especies." }
+            ]
+          },
+          "atajo": { "texto": "Más sobre esto: Flujo génico", "tema": "mecanismos-poblaciones", "bloque": "flujo" }
+        },
+        {
+          "titulo": "El istmo de Panamá",
+          "visual": { "tipo": "cifra", "icono": "🦐", "valor": "≈ 3 millones de años", "texto": "desde que el istmo separó el Caribe y el Pacífico" },
+          "puntos": ["En el Explora: mueve el tiempo y míralo cerrarse"]
+        }
+      ],
+      "juego": "alopatrica-juego",
+      "diagrama": "istmo-panama",
+      "preguntas": [
+        {
+          "id": "es-al-1",
+          "enunciado": "¿Qué inicia la especiación alopátrica?",
+          "opciones": ["Una barrera geográfica que separa la población", "Un error en la meiosis", "Un cambio de alimento en el mismo lugar", "La llegada de un depredador"],
+          "correcta": 0,
+          "explicacion": "Allo = otro, patria = lugar: las poblaciones quedan en lugares distintos."
+        },
+        {
+          "id": "es-al-2",
+          "enunciado": "Además de separar camarones, ¿qué permitió el istmo de Panamá?",
+          "opciones": ["Que animales terrestres pasaran entre Norte y Sudamérica", "Que el Caribe y el Pacífico se unieran", "Que se formaran los Andes", "Que se extinguieran los camarones"],
+          "correcta": 0,
+          "explicacion": "Fue un puente: perezosos y armadillos fueron al norte; felinos, osos y venados llegaron al sur."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "simpatrica",
+      "titulo": "Especiación simpátrica",
+      "resumen": "Especies nuevas en el mismo lugar, sin barrera geográfica: por duplicación de cromosomas en plantas, por cambio de alimento o por hibridación.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "avanzado",
+      "ficha": {
+        "idea": "En la especiación simpátrica la especie nueva aparece en el mismo lugar que la original. En las plantas es común por poliploidía: un error en la meiosis duplica los juegos de cromosomas y la planta nueva no puede tener hijos fértiles con las originales; así se forma una especie en una sola generación. En animales puede ocurrir cuando un grupo cambia de alimento o de hospedero, o por selección disruptiva. También hay especies que nacen de la hibridación de otras dos.",
+        "contexto": [
+          { "titulo": "Plantas poliploides", "texto": "El trigo, la papa, el algodón y muchas otras plantas cultivadas son poliploides." },
+          { "titulo": "Una mariposa de Colombia", "texto": "Heliconius heurippa, de los Andes orientales, se originó por la hibridación de dos especies de Heliconius y hoy no se cruza con ninguna de ellas." },
+          { "titulo": "Moscas y frutos", "texto": "En Norteamérica, unas moscas que ponían huevos en espinos empezaron a usar manzanos y se están separando en dos grupos." }
+        ],
+        "cuaderno": {
+          "facil": ["Simpátrica: especie nueva en el mismo lugar, sin barrera geográfica."],
+          "media": ["En plantas ocurre por poliploidía (duplicación de los cromosomas)."],
+          "avanzada": ["También puede ocurrir por cambio de hospedero o por hibridación."]
+        },
+        "docente": {
+          "abrir": "¿Puede nacer una especie nueva en una sola generación?",
+          "actividad": "Comparar con dibujos el número de juegos de cromosomas de una planta 2n y una 4n.",
+          "errores": ["Creer que la especiación siempre tarda millones de años."],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Poliploidía",
+          "visual": {
+            "tipo": "escena",
+            "id": "ev-poliploidia",
+            "fases": [
+              { "id": "normal", "nombre": "Planta 2n", "texto": "Una planta normal tiene dos juegos de cromosomas." },
+              { "id": "error", "nombre": "El error", "texto": "En la meiosis los cromosomas no se separan." },
+              { "id": "nueva", "nombre": "Planta 4n", "texto": "Nace una planta con cuatro juegos." },
+              { "id": "aislada", "nombre": "Especie nueva", "texto": "No tiene hijos fértiles con las 2n: es una especie nueva." }
+            ]
+          },
+          "atajo": { "texto": "Más sobre esto: Número de cromosomas", "tema": "mutaciones", "bloque": "numericas" }
+        },
+        {
+          "titulo": "Selección disruptiva",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "En una isla solo hay semillas muy pequeñas y muy grandes. ¿Qué podría pasar con los pinzones con el tiempo?",
+            "opciones": ["Formar dos grupos que podrían volverse especies", "Volverse todos de pico mediano", "Extinguirse de inmediato", "No cambiar nunca"],
+            "correcta": 0,
+            "explicacion": "La selección disruptiva favorece los dos extremos y puede iniciar una especiación simpátrica."
+          },
+          "atajo": { "texto": "Más sobre esto: Tipos de selección", "tema": "seleccion-natural", "bloque": "tipos" }
+        }
+      ],
+      "juego": "alopatrica-juego",
+      "preguntas": [
+        {
+          "id": "es-si-1",
+          "enunciado": "¿Qué es la poliploidía?",
+          "opciones": ["Tener más de dos juegos completos de cromosomas", "Tener un solo cromosoma", "Perder un gen", "Cruzar dos especies de animales"],
+          "correcta": 0,
+          "explicacion": "Una planta 4n tiene cuatro juegos de cromosomas."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "radiacion",
+      "titulo": "Radiación adaptativa",
+      "resumen": "Un antepasado da origen a muchas especies, cada una adaptada a un nicho distinto: los pinzones de Darwin, los frailejones de los páramos.",
+      "anio": 5,
+      "etiqueta": "Paso 5",
+      "nivel": "basico",
+      "ficha": {
+        "idea": "La radiación adaptativa es la formación rápida de muchas especies a partir de un antepasado común, cada una adaptada a un modo de vida diferente. Ocurre sobre todo cuando hay muchos nichos libres: al llegar a islas nuevas, al formarse ambientes nuevos o después de una extinción masiva. Los pinzones de las Galápagos son el ejemplo clásico; en Colombia, los frailejones se diversificaron en más de cien especies a medida que se formaron los páramos.",
+        "contexto": [
+          { "titulo": "Los pinzones de Darwin", "texto": "Unas 18 especies vienen de un antepasado que llegó de Sudamérica hace unos 2 millones de años." },
+          { "titulo": "Los frailejones", "texto": "Los páramos son ambientes jóvenes: los frailejones los colonizaron y en pocos millones de años formaron más de cien especies." },
+          { "titulo": "Después de los dinosaurios", "texto": "Tras su extinción, hace unos 66 millones de años, los mamíferos ocuparon los nichos vacíos y se diversificaron." }
+        ],
+        "cuaderno": {
+          "facil": ["Radiación adaptativa: un antepasado da origen a muchas especies adaptadas a nichos distintos."],
+          "media": ["Ocurre cuando hay muchos nichos libres: islas, ambientes nuevos o tras extinciones."],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "Si unas pocas aves llegan a unas islas vacías, ¿qué podría pasar en millones de años?",
+          "actividad": "Dibujar un árbol con el antepasado de los pinzones y las especies actuales según su alimento.",
+          "errores": ["Creer que cada especie de pinzón llegó por separado desde el continente."],
+          "minutos": 15
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "De uno a muchos",
+          "visual": {
+            "tipo": "escena",
+            "id": "ev-radiacion",
+            "fases": [
+              { "id": "antepasado", "nombre": "El antepasado", "texto": "Una especie de pinzón vive en el continente." },
+              { "id": "llegan", "nombre": "Llegan a las islas", "texto": "Unos pocos colonizan islas con muchos nichos vacíos." },
+              { "id": "ramas", "nombre": "Se ramifican", "texto": "Cada grupo se adapta a un alimento distinto." },
+              { "id": "hoy", "nombre": "Hoy", "texto": "Muchas especies, cada una con su pico y su nicho." }
+            ]
+          },
+          "atajo": { "texto": "Más sobre esto: El viaje del Beagle", "tema": "historia-evolucion", "bloque": "beagle" }
+        },
+        {
+          "titulo": "Radiaciones de Colombia",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "🌿", "titulo": "Frailejones", "texto": "Más de cien especies en los páramos." },
+              { "icono": "🦋", "titulo": "Heliconius", "texto": "Mariposas con muchos patrones de color." },
+              { "icono": "🐸", "titulo": "Ranas de lluvia", "texto": "Cientos de especies en los Andes." }
+            ]
+          }
+        }
+      ],
+      "juego": "radiacion-juego",
+      "preguntas": [
+        {
+          "id": "es-ra-1",
+          "enunciado": "¿Cuándo es más probable una radiación adaptativa?",
+          "opciones": ["Cuando hay muchos nichos libres", "Cuando hay muchos competidores", "Cuando la población es muy grande y no se mueve", "Nunca en la naturaleza"],
+          "correcta": 0,
+          "explicacion": "Islas nuevas, ambientes nuevos o la extinción de otros grupos dejan nichos libres."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}
