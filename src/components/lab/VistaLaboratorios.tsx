@@ -6,6 +6,7 @@ import Mesa from './Mesa.tsx'
 import type { Nivel, Practica } from './Mesa.tsx'
 import solucionMolar from './practicas/solucionMolar.tsx'
 import Seguridad from './practicas/Seguridad.tsx'
+import Material from './practicas/Material.tsx'
 
 // Laboratorios virtuales (PLAN-LABORATORIOS.md). Las prácticas listas van en PRACTICAS; las demás de la
 // ruta salen como «próximamente».
@@ -24,11 +25,11 @@ interface Entrada {
 
 const PRACTICAS: Entrada[] = [
   { id: 'seguridad', titulo: 'Práctica cero: seguridad en el laboratorio', resumen: 'Vístete, reconoce los pictogramas, decide qué está bien y a dónde va cada residuo.', grupo: 'Para empezar', desdeGrado: 6, Juego: Seguridad },
+  { id: 'material', titulo: 'Reconoce tu material', resumen: 'Cada instrumento con su uso, su cuidado y su versión casera; luego, ¿qué es? y ¿cuál uso?', grupo: 'Para empezar', desdeGrado: 6, Juego: Material },
   { id: solucionMolar.id, titulo: solucionMolar.titulo, resumen: solucionMolar.resumen, grupo: 'Química', desdeGrado: solucionMolar.desdeGrado, mesa: solucionMolar },
 ]
 
 const PROXIMAS: { lab: string; items: string[] }[] = [
-  { lab: 'Para empezar', items: ['Reconoce tu material'] },
   {
     lab: 'Química',
     items: ['Medición: precisión y exactitud', 'Densidades', 'Mezclas y técnicas de separación', 'Conservación de la masa', 'Ensayo a la llama', 'Tipos de reacción', 'Reactivo límite con globos', 'Gases', 'Dilución y solubilidad', 'Ácidos, bases y pH', 'Titulación ácido-base', 'Velocidad de reacción', 'Saponificación', 'Combustión'],
