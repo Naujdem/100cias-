@@ -1,0 +1,604 @@
+{
+  "id": "estados-oxidacion",
+  "materia": "quimica",
+  "area": "reacciones",
+  "titulo": "Estados de oxidación",
+  "subtema": "Qué son, reglas y cálculo en compuestos e iones",
+  "orden": 121,
+  "etiqueta": "1",
+  "vistas": [
+    "ruta"
+  ],
+  "tituloVista": "Ruta de los estados de oxidación",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Explicar qué es el estado de oxidación de un átomo dentro de un compuesto.",
+    "Aplicar las reglas para asignar estados de oxidación.",
+    "Calcular el estado de oxidación desconocido en compuestos e iones.",
+    "Reconocer elementos con varios estados de oxidación como base de la nomenclatura."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con un texto de química de bachillerato (reglas de asignación, excepciones de peróxidos e hidruros, estados comunes por grupo)."
+  ],
+  "bloques": [
+    {
+      "id": "idea",
+      "titulo": "¿Qué es el estado de oxidación?",
+      "resumen": "Es la carga que tendría un átomo si todos sus enlaces fueran iónicos: cuenta los electrones que «gana» o «pierde».",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "El estado de oxidación (o número de oxidación) es la carga que tendría un átomo si los electrones de cada enlace se los quedara por completo el átomo más electronegativo. En el NaCl la cuenta coincide con la carga real: el sodio cede un electrón (+1) y el cloro lo recibe (−1). En el agua no hay iones, pero el oxígeno jala con más fuerza los electrones que comparte con cada hidrógeno; contando «como si» se los quedara, el oxígeno queda con −2 y cada hidrógeno con +1. Es una carga de contabilidad: sirve para nombrar compuestos y seguir los electrones en las reacciones. En un compuesto neutro, los estados de oxidación suman cero.",
+        "contexto": [
+          {
+            "titulo": "¿Por qué «oxidación»?",
+            "texto": "Al principio, oxidarse era combinarse con oxígeno, como el hierro que se oxida. Como el oxígeno le quita electrones al hierro, la palabra pasó a significar perder electrones."
+          },
+          {
+            "titulo": "Cómo se escribe",
+            "texto": "Primero el signo y luego el número (+2, −3). La carga de un ion se escribe al revés: Fe²⁺, O²⁻."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Estado de oxidación: la carga que tendría un átomo si «ganara» o «perdiera» del todo los electrones de sus enlaces."
+          ],
+          "media": [
+            "Positivo: el átomo «pierde» electrones. Negativo: los «gana». En un compuesto neutro, la suma es cero."
+          ],
+          "avanzada": [
+            "Los electrones de cada enlace se le cuentan al átomo más electronegativo; entre átomos iguales se reparten por igual."
+          ]
+        },
+        "docente": {
+          "abrir": "Si el agua no tiene carga, ¿pueden sus átomos tener carga?",
+          "actividad": "Con fichas de colores (electrones), repartir los electrones de NaCl y de H₂O «como si» el más electronegativo se los quedara todos, y contar cuántos ganó o perdió cada átomo.",
+          "errores": [
+            "Pensar que en el agua hay iones H⁺ y O²⁻ de verdad.",
+            "Confundir el estado de oxidación con el número de electrones de valencia."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Una carga escondida",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "El agua (H₂O) no tiene carga. ¿Qué crees que pasa con los electrones entre el oxígeno y los hidrógenos?",
+            "opciones": [
+              "El oxígeno los jala más hacia él",
+              "Se reparten exactamente igual",
+              "Los hidrógenos se los quedan",
+              "No hay electrones en el enlace"
+            ],
+            "correcta": 0,
+            "explicacion": "El oxígeno es más electronegativo: jala los electrones compartidos."
+          }
+        },
+        {
+          "titulo": "Contar «como si» fuera iónico",
+          "visual": {
+            "tipo": "escena",
+            "id": "ox-idea",
+            "fases": [
+              {
+                "id": "ionico",
+                "nombre": "En el NaCl",
+                "texto": "El sodio cede su electrón y el cloro lo recibe: Na +1, Cl −1."
+              },
+              {
+                "id": "covalente",
+                "nombre": "En el agua",
+                "texto": "El oxígeno jala los electrones de los dos enlaces: se le cuentan a él.",
+                "marcas": [
+                  {
+                    "x": 200,
+                    "y": 110,
+                    "texto": "El oxígeno es más electronegativo que el hidrógeno (3,4 contra 2,2)."
+                  }
+                ]
+              },
+              {
+                "id": "suma",
+                "nombre": "La cuenta da cero",
+                "texto": "H +1, H +1, O −2: la suma es 0 porque el agua es neutra."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre la electronegatividad",
+            "tema": "propiedades-periodicas",
+            "bloque": "electronegatividad"
+          }
+        },
+        {
+          "titulo": "Carga real y carga de cuenta",
+          "nivel": "intermedio",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "⚡",
+              "titulo": "Carga de un ion",
+              "puntos": [
+                "Existe de verdad",
+                "Na⁺, Cl⁻ en la sal",
+                "Se escribe 2+, 3−"
+              ]
+            },
+            "der": {
+              "icono": "🧮",
+              "titulo": "Estado de oxidación",
+              "puntos": [
+                "Es una cuenta",
+                "Sirve en cualquier compuesto",
+                "Se escribe +2, −3"
+              ]
+            }
+          }
+        }
+      ],
+      "juego": "oxidacion-signo-juego",
+      "preguntas": [
+        {
+          "id": "qo-id-1",
+          "enunciado": "En el NaCl, ¿cuál es el estado de oxidación del sodio?",
+          "opciones": [
+            "+1",
+            "−1",
+            "0",
+            "+2"
+          ],
+          "correcta": 0,
+          "explicacion": "El sodio cede un electrón."
+        },
+        {
+          "id": "qo-id-2",
+          "enunciado": "¿Cuánto suman los estados de oxidación en un compuesto neutro?",
+          "opciones": [
+            "Cero",
+            "Uno",
+            "Ocho",
+            "Depende del compuesto"
+          ],
+          "correcta": 0,
+          "explicacion": "Las cargas «de cuenta» se compensan."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "reglas",
+      "titulo": "Reglas para asignarlos",
+      "resumen": "Elemento libre 0, oxígeno −2, hidrógeno +1, alcalinos +1, alcalinotérreos +2 y la suma igual a la carga.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "intermedio",
+      "requiere": [
+        "idea"
+      ],
+      "ficha": {
+        "idea": "No hace falta repartir electrones cada vez: hay reglas. 1) Un elemento libre (Fe, O₂, N₂) tiene 0. 2) Un ion de un solo átomo tiene su carga (Na⁺ es +1, S²⁻ es −2). 3) El oxígeno casi siempre es −2. 4) El hidrógeno casi siempre es +1. 5) Los metales alcalinos (grupo 1) son +1, los alcalinotérreos (grupo 2) +2 y el flúor −1. 6) La suma de todos los estados es 0 en un compuesto y es igual a la carga en un ion poliatómico. Las excepciones: en los peróxidos (H₂O₂) el oxígeno es −1 y en los hidruros metálicos (NaH) el hidrógeno es −1. La tabla periódica ayuda: los no metales del grupo 17 suelen ser −1, los del 16 −2 y los del 15 −3 cuando son el más electronegativo; los metales de transición tienen varios estados.",
+        "contexto": [
+          {
+            "titulo": "El orden importa",
+            "texto": "Si dos reglas chocan, manda la que va primero: en el NaH manda «el sodio es +1», y por eso el hidrógeno queda en −1."
+          },
+          {
+            "titulo": "El flúor siempre gana",
+            "texto": "Es el elemento más electronegativo: en todos sus compuestos es −1. Por eso en el OF₂ el oxígeno queda en +2."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Elemento libre: 0. Oxígeno: −2. Hidrógeno: +1."
+          ],
+          "media": [
+            "Grupo 1: +1. Grupo 2: +2. Flúor: −1. La suma da 0 (o la carga del ion)."
+          ],
+          "avanzada": [
+            "Peróxidos: O = −1. Hidruros metálicos: H = −1. Metales de transición: varios estados (Fe +2/+3, Cu +1/+2)."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Qué número le darías a un átomo que no está unido a nadie distinto de él?",
+          "actividad": "Tarjetas de reglas en la pared: los estudiantes, en grupos, asignan estados a 10 fórmulas y dicen qué regla usaron.",
+          "errores": [
+            "Poner −2 al oxígeno del O₂ (es elemento libre: 0).",
+            "Multiplicar mal por el subíndice al sumar."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Seis reglas",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "⚪",
+                "titulo": "Elemento libre",
+                "texto": "Fe, O₂, N₂: 0"
+              },
+              {
+                "icono": "⚡",
+                "titulo": "Ion de un átomo",
+                "texto": "Su carga: Na⁺ +1, S²⁻ −2"
+              },
+              {
+                "icono": "🔴",
+                "titulo": "Oxígeno",
+                "texto": "Casi siempre −2"
+              },
+              {
+                "icono": "⚪",
+                "titulo": "Hidrógeno",
+                "texto": "Casi siempre +1"
+              },
+              {
+                "icono": "🧂",
+                "titulo": "Grupos 1 y 2",
+                "texto": "+1 y +2; flúor −1"
+              },
+              {
+                "icono": "⚖️",
+                "titulo": "La suma",
+                "texto": "0 en compuestos, la carga en iones"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "La tabla ayuda",
+          "visual": {
+            "tipo": "escena",
+            "id": "ox-tabla",
+            "fases": [
+              {
+                "id": "grupos",
+                "nombre": "Por grupos",
+                "texto": "Los grupos principales tienen estados que se repiten."
+              },
+              {
+                "id": "transicion",
+                "nombre": "Metales de transición",
+                "texto": "Hierro, cobre y otros tienen más de un estado.",
+                "nivel": "intermedio"
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre la tabla periódica",
+            "tema": "tabla-periodica",
+            "bloque": "estructura"
+          }
+        },
+        {
+          "titulo": "Las excepciones",
+          "nivel": "avanzado",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "🫧",
+              "titulo": "Peróxidos",
+              "puntos": [
+                "H₂O₂ (agua oxigenada)",
+                "O–O unidos entre sí",
+                "Oxígeno: −1"
+              ]
+            },
+            "der": {
+              "icono": "🧪",
+              "titulo": "Hidruros metálicos",
+              "puntos": [
+                "NaH, CaH₂",
+                "El metal manda",
+                "Hidrógeno: −1"
+              ]
+            }
+          }
+        }
+      ],
+      "juego": "reglas-oxidacion-juego",
+      "preguntas": [
+        {
+          "id": "qo-re-1",
+          "enunciado": "¿Qué estado de oxidación tiene el oxígeno en la molécula O₂?",
+          "opciones": [
+            "0",
+            "−2",
+            "+2",
+            "−1"
+          ],
+          "correcta": 0,
+          "explicacion": "Es un elemento libre."
+        },
+        {
+          "id": "qo-re-2",
+          "enunciado": "¿Qué estado tiene el calcio (grupo 2) en sus compuestos?",
+          "opciones": [
+            "+2",
+            "+1",
+            "−2",
+            "0"
+          ],
+          "correcta": 0,
+          "explicacion": "Los alcalinotérreos son +2."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "calculo",
+      "titulo": "Calcular el número desconocido",
+      "resumen": "Se suman los estados conocidos (multiplicados por el subíndice) y se despeja el que falta para que la suma dé cero.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "intermedio",
+      "requiere": [
+        "reglas"
+      ],
+      "ficha": {
+        "idea": "Cuando en un compuesto hay un átomo sin regla (como el azufre del H₂SO₄), se despeja. Paso 1: escribir el estado de los que tienen regla: H +1, O −2. Paso 2: multiplicar por el subíndice: 2 × (+1) = +2 y 4 × (−2) = −8. Paso 3: plantear que todo suma cero: +2 + x − 8 = 0. Paso 4: despejar: x = +6. Si el átomo desconocido tiene subíndice, se divide al final: en el Fe₂O₃, 2x − 6 = 0, así que x = +3.",
+        "contexto": [
+          {
+            "titulo": "Un mismo elemento, muchos números",
+            "texto": "El azufre es −2 en el H₂S, +4 en el SO₂ y +6 en el H₂SO₄. Por eso hay que calcularlo en cada compuesto."
+          },
+          {
+            "titulo": "Revisa el resultado",
+            "texto": "Un estado no puede pasar del número del grupo: el azufre (grupo 16) llega como máximo a +6. Si te da +9, algo salió mal."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Se suman los conocidos y se busca el número que hace que todo dé cero."
+          ],
+          "media": [
+            "Multiplicar cada estado por su subíndice; plantear la suma = 0 y despejar x."
+          ],
+          "avanzada": [
+            "Si el desconocido tiene subíndice n: n·x + (suma de los demás) = 0 → x = −(suma)/n."
+          ]
+        },
+        "docente": {
+          "abrir": "El azufre aparece en el H₂S y en el H₂SO₄. ¿Tendrá el mismo número en los dos?",
+          "actividad": "Resolver en el tablero cinco compuestos con el método de los cuatro pasos; luego, en parejas, inventar uno y pasárselo al compañero.",
+          "errores": [
+            "Olvidar multiplicar por el subíndice.",
+            "Olvidar dividir por el subíndice del átomo desconocido.",
+            "Poner el signo después del número."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Despejar paso a paso",
+          "visual": {
+            "tipo": "escena",
+            "id": "ox-calculo",
+            "fases": [
+              {
+                "id": "formula",
+                "nombre": "La fórmula",
+                "texto": "H₂SO₄: el azufre no tiene regla."
+              },
+              {
+                "id": "conocidos",
+                "nombre": "Los conocidos",
+                "texto": "H: 2 × (+1) = +2. O: 4 × (−2) = −8."
+              },
+              {
+                "id": "despeja",
+                "nombre": "Despejar",
+                "texto": "+2 + x − 8 = 0, así que x = +6."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Calculadora de oxidación",
+          "visual": {
+            "tipo": "diagrama",
+            "id": "calculadora-oxidacion"
+          }
+        },
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Cuál es el estado de oxidación del hierro en el Fe₂O₃ (óxido del machete)?",
+            "opciones": [
+              "+3",
+              "+6",
+              "+2",
+              "−3"
+            ],
+            "correcta": 0,
+            "explicacion": "2x + 3 × (−2) = 0 → 2x = 6 → x = +3."
+          }
+        }
+      ],
+      "diagrama": "calculadora-oxidacion",
+      "juego": "calcula-oxidacion-juego",
+      "preguntas": [
+        {
+          "id": "qo-ca-1",
+          "enunciado": "¿Cuál es el estado de oxidación del nitrógeno en el HNO₃?",
+          "opciones": [
+            "+5",
+            "+3",
+            "−3",
+            "+6"
+          ],
+          "correcta": 0,
+          "explicacion": "+1 + x + 3 × (−2) = 0 → x = +5."
+        },
+        {
+          "id": "qo-ca-2",
+          "enunciado": "¿Cuál es el estado de oxidación del carbono en el CO₂?",
+          "opciones": [
+            "+4",
+            "−4",
+            "+2",
+            "0"
+          ],
+          "correcta": 0,
+          "explicacion": "x + 2 × (−2) = 0 → x = +4."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "iones",
+      "titulo": "Iones y estados variables",
+      "resumen": "En un ion poliatómico la suma da su carga; algunos elementos tienen varios estados, y eso se nota en el nombre.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "intermedio",
+      "requiere": [
+        "calculo"
+      ],
+      "ficha": {
+        "idea": "En un ion poliatómico la suma no da cero sino la carga del ion. En el sulfato (SO₄²⁻): x + 4 × (−2) = −2, así que el azufre es +6. En el amonio (NH₄⁺): x + 4 × (+1) = +1, así que el nitrógeno es −3. Muchos elementos, sobre todo los metales de transición, tienen más de un estado: el hierro es +2 en el FeO y +3 en el Fe₂O₃; el cobre, +1 o +2. Por eso el nombre de un compuesto debe decir cuál estado usa: óxido de hierro (II) u óxido de hierro (III); en el sistema tradicional, -oso para el menor (ferroso) e -ico para el mayor (férrico). Ese es el puente hacia la nomenclatura.",
+        "contexto": [
+          {
+            "titulo": "Iones del campo",
+            "texto": "El nitrato (NO₃⁻) y el fosfato (PO₄³⁻) vienen en los abonos; el carbonato (CO₃²⁻), en la cal agrícola que se le echa al suelo ácido."
+          },
+          {
+            "titulo": "Oxidación y reducción",
+            "texto": "Si en una reacción el estado de un átomo sube, se oxidó (perdió electrones); si baja, se redujo (los ganó). Se estudia a fondo en el balanceo redox."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "En un ion, los estados suman la carga del ion."
+          ],
+          "media": [
+            "SO₄²⁻: S = +6. NH₄⁺: N = −3. Fe: +2 (ferroso) o +3 (férrico)."
+          ],
+          "avanzada": [
+            "Oxidación: el estado sube (pierde e⁻). Reducción: el estado baja (gana e⁻)."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué hay dos «óxidos de hierro» con colores distintos?",
+          "actividad": "Mirar etiquetas de abonos (NPK) y cal agrícola y encontrar los iones nitrato, fosfato y carbonato; calcular el estado del elemento central de cada uno.",
+          "errores": [
+            "Igualar la suma a cero en un ion.",
+            "Pensar que un elemento tiene un único estado de oxidación."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Cuando hay carga",
+          "visual": {
+            "tipo": "escena",
+            "id": "ox-ion",
+            "fases": [
+              {
+                "id": "sulfato",
+                "nombre": "Sulfato",
+                "texto": "SO₄²⁻: x + 4 × (−2) = −2 → S = +6."
+              },
+              {
+                "id": "amonio",
+                "nombre": "Amonio",
+                "texto": "NH₄⁺: x + 4 × (+1) = +1 → N = −3."
+              },
+              {
+                "id": "hierro",
+                "nombre": "Dos hierros",
+                "texto": "FeO (+2, ferroso) y Fe₂O₃ (+3, férrico)."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre los nombres -oso e -ico",
+            "tema": "oxidos-hidroxidos"
+          }
+        },
+        {
+          "titulo": "Sube o baja",
+          "nivel": "avanzado",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "⬆️",
+              "titulo": "Oxidación",
+              "puntos": [
+                "El estado sube",
+                "Pierde electrones",
+                "Fe → Fe³⁺"
+              ]
+            },
+            "der": {
+              "icono": "⬇️",
+              "titulo": "Reducción",
+              "puntos": [
+                "El estado baja",
+                "Gana electrones",
+                "Cl₂ → Cl⁻"
+              ]
+            }
+          },
+          "atajo": {
+            "texto": "Más sobre el balanceo redox",
+            "tema": "balanceo-ecuaciones"
+          }
+        },
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Cuál es el estado del fósforo en el fosfato (PO₄³⁻), que viene en los abonos?",
+            "opciones": [
+              "+5",
+              "+8",
+              "+3",
+              "−3"
+            ],
+            "correcta": 0,
+            "explicacion": "x + 4 × (−2) = −3 → x = +5."
+          }
+        }
+      ],
+      "juego": "ion-oxidacion-juego",
+      "preguntas": [
+        {
+          "id": "qo-io-1",
+          "enunciado": "En un ion poliatómico, ¿a qué es igual la suma de los estados de oxidación?",
+          "opciones": [
+            "A la carga del ion",
+            "A cero",
+            "Al número de átomos",
+            "A ocho"
+          ],
+          "correcta": 0,
+          "explicacion": "Por eso en el SO₄²⁻ la suma da −2."
+        },
+        {
+          "id": "qo-io-2",
+          "enunciado": "¿Qué estado tiene el hierro en un compuesto «férrico»?",
+          "opciones": [
+            "+3",
+            "+2",
+            "0",
+            "+1"
+          ],
+          "correcta": 0,
+          "explicacion": "-ico indica el estado mayor."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}
