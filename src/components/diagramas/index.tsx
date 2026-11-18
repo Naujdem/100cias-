@@ -97,6 +97,8 @@ import ArmaLewis from './ArmaLewis.tsx'
 import GeometriaVsepr from './GeometriaVsepr.tsx'
 import VidaMedia from './VidaMedia.tsx'
 import { TiposRadiacionJuego, VidaMediaJuego, UsosNuclearesJuego, ProteccionJuego } from './JuegosRadiactividad.tsx'
+import CalculadoraOxidacion from './CalculadoraOxidacion.tsx'
+import { OxidacionSignoJuego, ReglasOxidacionJuego, CalculaOxidacionJuego, IonOxidacionJuego } from './JuegosOxidacion.tsx'
 import { IntraInterJuego, GeometriaJuego, MoleculaPolarJuego, FuerzaJuego, DisuelveJuego } from './JuegosFuerzas.tsx'
 import { OctetoJuego, TipoEnlaceJuego, PolarJuego, LewisJuego } from './JuegosEnlace.tsx'
 import { RadioJuego, IonizacionJuego, ElectronegatividadJuego, MetalicoJuego } from './JuegosPeriodicas.tsx'
@@ -497,6 +499,11 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'fuerza-juego': FuerzaJuego,
   'disuelve-juego': DisuelveJuego,
   'vida-media': VidaMedia,
+  'calculadora-oxidacion': CalculadoraOxidacion,
+  'oxidacion-signo-juego': OxidacionSignoJuego,
+  'reglas-oxidacion-juego': ReglasOxidacionJuego,
+  'calcula-oxidacion-juego': CalculaOxidacionJuego,
+  'ion-oxidacion-juego': IonOxidacionJuego,
   'tipos-radiacion-juego': TiposRadiacionJuego,
   'vida-media-juego': VidaMediaJuego,
   'usos-nucleares-juego': UsosNuclearesJuego,

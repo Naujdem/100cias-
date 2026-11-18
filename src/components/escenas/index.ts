@@ -40,6 +40,7 @@ import { EscenaPapelCambios, EscenaSenalesQuimicas, EscenaMacheteOxido } from '.
 import { EscenaParticulasClasificacion } from './EscenasClasificacion.tsx'
 import { EscenaSepararMezclas } from './EscenasSeparacion.tsx'
 import { EscenaDescubrimiento, EscenaTiposRadiacion, EscenaFision } from './EscenasRadiactividad.tsx'
+import { EscenaOxIdea, EscenaOxTabla, EscenaOxCalculo, EscenaOxIon } from './EscenasOxidacion.tsx'
 import { EscenaIntra, EscenaPolaridad, EscenaFuerzas, EscenaSoluble } from './EscenasFuerzas.tsx'
 import { EscenaOcteto, EscenaIonico, EscenaCovalente, EscenaEnlaceMetalico } from './EscenasEnlace.tsx'
 import { EscenaHistoriaTabla, EscenaEstructuraTabla, EscenaMetales, EscenaRadio, EscenaIonizacion, EscenaElectronegatividad, EscenaCaracterMetalico } from './EscenasTabla.tsx'
@@ -251,6 +252,10 @@ export const ESCENAS: Record<string, ComponentType<{ fase: string }>> = {
   'ra-descubrimiento': EscenaDescubrimiento,
   'ra-tipos': EscenaTiposRadiacion,
   'ra-fision': EscenaFision,
+  'ox-idea': EscenaOxIdea,
+  'ox-tabla': EscenaOxTabla,
+  'ox-calculo': EscenaOxCalculo,
+  'ox-ion': EscenaOxIon,
   compostaje: EscenaCompostaje,
   riesgo: EscenaRiesgo,
   armero: EscenaArmero,
