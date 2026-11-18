@@ -86,6 +86,7 @@ import ParticulasTemperatura from './ParticulasTemperatura.tsx'
 import { FisicoQuimicoJuego, SenalJuego as SenalQuimicaJuego, PropiedadFQJuego } from './JuegosCambios.tsx'
 import { ElementoCompuestoJuego, HomoHeteroJuego, DondeVaJuego } from './JuegosClasificacion.tsx'
 import ArbolMateria from './ArbolMateria.tsx'
+import { SepararHeteroJuego, SepararHomoJuego, CafeSeparaJuego } from './JuegosSeparacion.tsx'
 import { AmenazaVulnerabilidadJuego, AmenazasColombiaJuego, ArmeroJuego, AntesDuranteDespuesJuego, PlanEscolarJuego } from './JuegosRiesgo.tsx'
 import RiesgoVereda from './RiesgoVereda.tsx'
 import { DesarrolloSostenibleJuego, OdsJuego, PraeJuego, ProyectoAulaJuego, ParticipacionJuego } from './JuegosSostenibilidad.tsx'
@@ -436,6 +437,9 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'homo-hetero-juego': HomoHeteroJuego,
   'donde-va-juego': DondeVaJuego,
   'arbol-materia': ArbolMateria,
+  'separar-hetero-juego': SepararHeteroJuego,
+  'separar-homo-juego': SepararHomoJuego,
+  'cafe-separa-juego': CafeSeparaJuego,
   'amenaza-vulnerabilidad-juego': AmenazaVulnerabilidadJuego,
   'amenazas-colombia-juego': AmenazasColombiaJuego,
   'armero-juego': ArmeroJuego,

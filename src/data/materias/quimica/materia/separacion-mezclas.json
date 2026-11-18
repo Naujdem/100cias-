@@ -1,0 +1,262 @@
+{
+  "id": "separacion-mezclas",
+  "materia": "quimica",
+  "area": "materia",
+  "titulo": "Separación de mezclas",
+  "subtema": "Métodos físicos para recuperar cada sustancia",
+  "orden": 106,
+  "etiqueta": "6",
+  "vistas": ["ruta"],
+  "tituloVista": "Ruta de la separación",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Elegir un método para separar mezclas heterogéneas.",
+    "Elegir un método para separar mezclas homogéneas.",
+    "Reconocer los métodos de separación en el beneficio del café."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con el plan curricular de Ciencias Naturales 2025 y, para el beneficio del café, con las guías de Cenicafé."
+  ],
+  "bloques": [
+    {
+      "id": "heterogeneas",
+      "titulo": "Separar mezclas heterogéneas",
+      "resumen": "Tamizar, filtrar, decantar e imantar aprovechan diferencias de tamaño, estado, densidad o magnetismo.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "Como en una mezcla las sustancias no están unidas químicamente, se pueden separar con métodos físicos que aprovechan alguna diferencia entre ellas. En las mezclas heterogéneas se usan: el tamizado, para sólidos de distinto tamaño (la zaranda que separa la arena de las piedras); la filtración, para un sólido que no se disuelve en un líquido (el colador del tinto o el papel filtro); la decantación, para líquidos que no se mezclan, como el agua y el aceite, o para un sólido que se asienta en el fondo; y la imantación, para separar un metal como el hierro con un imán. Para elegir el método, hay que preguntarse en qué se diferencian las sustancias.",
+        "contexto": [
+          { "titulo": "Centrifugación", "texto": "Acelera la decantación haciendo girar la mezcla muy rápido: así se separa la sangre en el laboratorio clínico o la crema de la leche." }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Tamizado: distinto tamaño. Filtración: sólido en un líquido.",
+            "Decantación: líquidos que no se mezclan. Imantación: hierro con imán."
+          ],
+          "media": [
+            "Cada método aprovecha una diferencia de propiedades entre las sustancias."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "Si se riega sal con arena en el piso, ¿cómo recuperamos la sal?",
+          "actividad": "Por grupos, separar una mezcla de arena, piedritas, puntillas y sal: zaranda, imán, agua, filtro y evaporación al sol.",
+          "errores": [
+            "Querer separar la sal disuelta con un filtro."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Qué usas para separar el tinto del café molido?",
+            "opciones": ["Un colador (filtración)", "Un imán", "Una zaranda de obra", "Esperar a que se evapore"],
+            "correcta": 0,
+            "explicacion": "El filtro deja pasar el líquido y retiene el sólido."
+          }
+        },
+        {
+          "titulo": "Cuatro métodos",
+          "visual": {
+            "tipo": "escena",
+            "id": "separar-mezclas",
+            "fases": [
+              { "id": "tamizado", "nombre": "Tamizado", "texto": "La malla deja pasar lo pequeño." },
+              { "id": "filtracion", "nombre": "Filtración", "texto": "El filtro retiene el sólido." },
+              { "id": "decantacion", "nombre": "Decantación", "texto": "Lo más denso queda abajo." },
+              { "id": "imantacion", "nombre": "Imantación", "texto": "El imán atrae el hierro." }
+            ]
+          }
+        }
+      ],
+      "juego": "separar-hetero-juego",
+      "preguntas": [
+        {
+          "id": "qm-sm-1",
+          "enunciado": "¿Qué método separa el agua del aceite?",
+          "opciones": ["Decantación", "Imantación", "Tamizado", "Cromatografía"],
+          "correcta": 0,
+          "explicacion": "No se mezclan y el aceite queda arriba."
+        },
+        {
+          "id": "qm-sm-2",
+          "enunciado": "¿Qué propiedad aprovecha el tamizado?",
+          "opciones": ["El tamaño de las partículas", "El color", "El punto de ebullición", "El magnetismo"],
+          "correcta": 0,
+          "explicacion": "La malla deja pasar solo lo pequeño."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "homogeneas",
+      "titulo": "Separar mezclas homogéneas",
+      "resumen": "Evaporar, destilar y hacer cromatografía separan sustancias que no se ven por separado.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "ficha": {
+        "idea": "En una mezcla homogénea las sustancias no se distinguen, así que un filtro no sirve. La evaporación separa un sólido disuelto en un líquido: se calienta o se deja al sol, el agua se va como vapor y queda el sólido, como en las salinas de Manaure o al hacer panela. La destilación separa líquidos con distinto punto de ebullición, o un líquido de lo que tiene disuelto: se calienta la mezcla, el que hierve primero se vuelve vapor, pasa por un tubo frío, se condensa y se recoge aparte. Así se obtiene el agua destilada o el alcohol en un alambique. La cromatografía separa sustancias que viajan a distinta velocidad por un papel o una columna: la tinta negra de un marcador se abre en varios colores.",
+        "contexto": [
+          { "titulo": "Cristalización", "texto": "Si el agua se evapora despacio, el sólido forma cristales ordenados: así se obtiene sal o azúcar en cristales grandes." }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Evaporación: separa un sólido disuelto (sal del agua)."
+          ],
+          "media": [
+            "Destilación: separa líquidos por su punto de ebullición.",
+            "Cromatografía: separa sustancias por su velocidad en un papel."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Cómo sacan la sal del mar en La Guajira?",
+          "actividad": "Cromatografía con tiza o papel filtro, alcohol y marcadores negros de distintas marcas; evaporar agua con sal en un plato al sol.",
+          "errores": [
+            "Creer que al evaporar el agua salada la sal también se va.",
+            "Confundir destilación con evaporación: en la destilación se recoge el vapor."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Sirve un filtro para separar la sal del agua salada?",
+            "opciones": ["No: la sal está disuelta y pasa el filtro", "Sí, siempre", "Sí, si es papel grueso", "Solo con agua fría"],
+            "correcta": 0,
+            "explicacion": "Hay que evaporar el agua."
+          }
+        },
+        {
+          "titulo": "Métodos para lo que no se ve",
+          "visual": {
+            "tipo": "escena",
+            "id": "separar-mezclas",
+            "fases": [
+              { "id": "evaporacion", "nombre": "Evaporación", "texto": "Se va el agua, queda la sal." },
+              { "id": "destilacion", "nombre": "Destilación", "texto": "Se recoge el vapor ya condensado." , "nivel": "intermedio" },
+              { "id": "cromatografia", "nombre": "Cromatografía", "texto": "Cada color sube a su ritmo.", "nivel": "intermedio" }
+            ]
+          }
+        },
+        {
+          "titulo": "Evaporar no es destilar",
+          "nivel": "intermedio",
+          "visual": {
+            "tipo": "compara",
+            "izq": { "icono": "♨️", "titulo": "Evaporación", "puntos": ["Se pierde el líquido", "Se recupera el sólido"] },
+            "der": { "icono": "⚗️", "titulo": "Destilación", "puntos": ["Se recoge el líquido condensado", "Se recuperan las dos partes"] }
+          }
+        }
+      ],
+      "juego": "separar-homo-juego",
+      "preguntas": [
+        {
+          "id": "qm-sm-3",
+          "enunciado": "¿Qué método se usa en las salinas para obtener sal?",
+          "opciones": ["Evaporación", "Imantación", "Tamizado", "Decantación"],
+          "correcta": 0,
+          "explicacion": "El sol evapora el agua de mar y queda la sal."
+        },
+        {
+          "id": "qm-sm-4",
+          "enunciado": "¿Qué propiedad aprovecha la destilación?",
+          "opciones": ["El punto de ebullición", "El tamaño", "El color", "El magnetismo"],
+          "correcta": 0,
+          "explicacion": "Hierve primero el que tiene el punto de ebullición más bajo."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "beneficio-cafe",
+      "titulo": "Separar en el beneficio del café",
+      "resumen": "En la finca cafetera se separan mezclas por densidad, tamaño y evaporación.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "basico",
+      "ficha": {
+        "idea": "El beneficio del café es una cadena de separaciones. Al echar las cerezas recién cogidas en un tanque con agua, las vanas, secas o brocadas flotan porque son menos densas, y se retiran: es una separación por densidad. En la despulpadora se separa la pulpa del grano, y la zaranda deja pasar los granos limpios y retiene los que aún tienen pulpa: separación por tamaño. Después de fermentar, al lavar el grano se retiran otra vez los que flotan. Por último, en el secado al sol o en marquesina el agua del grano se evapora hasta que queda con la humedad adecuada para guardarlo. Así, los métodos del laboratorio son los mismos que se usan en la finca.",
+        "contexto": [
+          { "titulo": "Agua y pulpa", "texto": "Las aguas del lavado (aguas mieles) y la pulpa contaminan las quebradas si se botan sin tratar; la pulpa sirve para compost." }
+        ],
+        "cuaderno": {
+          "facil": [
+            "En el beneficio se separa por densidad (flotar), por tamaño (zaranda) y por evaporación (secado)."
+          ],
+          "media": [
+            "Los granos que flotan son menos densos y suelen ser de menor calidad."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Por qué en la finca se echan las cerezas al agua antes de despulpar?",
+          "actividad": "Con cerezas o granos de café, hacer la prueba de flotación y contar cuántos flotan; relacionarlo con la densidad.",
+          "errores": [
+            "Pensar que el secado es un cambio químico: es una evaporación."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Al echar las cerezas al tanque, algunas flotan. ¿Por qué?",
+            "opciones": ["Son menos densas: están vanas o brocadas", "Están más maduras", "Son más pesadas", "Tienen más pulpa"],
+            "correcta": 0,
+            "explicacion": "Los granos sanos y llenos se hunden."
+          }
+        },
+        {
+          "titulo": "El beneficio, paso a paso",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "🪣", "titulo": "Tanque", "texto": "Flotan las vanas: densidad." },
+              { "icono": "⚙️", "titulo": "Despulpado", "texto": "Se quita la pulpa." },
+              { "icono": "🕸️", "titulo": "Zaranda", "texto": "Pasa el grano limpio: tamaño." },
+              { "icono": "🚿", "titulo": "Lavado", "texto": "Se retira el flote: densidad." },
+              { "icono": "☀️", "titulo": "Secado", "texto": "El agua se evapora." }
+            ]
+          }
+        },
+        {
+          "titulo": "La química del café",
+          "visual": { "tipo": "cifra", "icono": "☕", "valor": "fermentación y tostión", "texto": "Esos pasos sí son cambios químicos." },
+          "atajo": { "texto": "Más sobre esto", "tema": "que-es-quimica", "bloque": "campo" }
+        }
+      ],
+      "juego": "cafe-separa-juego",
+      "preguntas": [
+        {
+          "id": "qm-sm-5",
+          "enunciado": "Separar las cerezas vanas porque flotan es un método que aprovecha…",
+          "opciones": ["La densidad", "El color", "El magnetismo", "La solubilidad"],
+          "correcta": 0,
+          "explicacion": "Lo menos denso flota."
+        },
+        {
+          "id": "qm-sm-6",
+          "enunciado": "¿Qué método de separación ocurre al secar el café?",
+          "opciones": ["Evaporación", "Filtración", "Imantación", "Cromatografía"],
+          "correcta": 0,
+          "explicacion": "El agua del grano pasa al aire como vapor."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}
