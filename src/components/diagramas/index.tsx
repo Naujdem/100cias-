@@ -65,6 +65,8 @@ import GenotipoFenotipo from './GenotipoFenotipo.tsx'
 import { DosCaracteres, CuatroGametos } from './Dihibrido.tsx'
 import { MetodoMendelJuego, DominanteJuego, GenotipoJuego, ProporcionJuego, PuroHibridoJuego, GametosJuego, ProbabilidadJuego } from './JuegosMendel.tsx'
 import { ComparadorProEu, ComparadorAnimalVegetal, ExploradorBacterias, GaleriaEspecializadas } from './TiposCelulas.tsx'
+import { MateriaReciclaJuego, CicloAguaJuego, CicloCarbonoJuego, CicloNitrogenoJuego, CiclosRepasoJuego } from './JuegosCiclos.tsx'
+import ViajeCarbono from './ViajeCarbono.tsx'
 
 /** Registro de diagramas interactivos. La clave es el valor de `bloque.diagrama`. */
 export const DIAGRAMAS: Record<string, ComponentType> = {
@@ -350,4 +352,10 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'fosiles-colombia-juego': FosilesColombiaJuego,
   'humanos-juego': HumanosJuego,
   'calendario-tierra': CalendarioTierra,
+  'materia-recicla-juego': MateriaReciclaJuego,
+  'ciclo-agua-juego': CicloAguaJuego,
+  'ciclo-carbono-juego': CicloCarbonoJuego,
+  'ciclo-nitrogeno-juego': CicloNitrogenoJuego,
+  'ciclos-repaso-juego': CiclosRepasoJuego,
+  'viaje-carbono': ViajeCarbono,
 }

@@ -27,6 +27,7 @@ import { EscenaSucesionPrimaria, EscenaSucesionSecundaria, EscenaPerturbaciones 
 import { EscenaBiodiversidadNiveles, EscenaMegadiversa, EscenaAmenazas, EscenaConservar } from './EscenasBiodiversidad.tsx'
 import { EscenaLinneo, EscenaLamarck, EscenaCuvier, EscenaLyell, EscenaBeagle, EscenaSeleccion, EscenaSintesis, EscenaRitmos, EscenaFosil, EscenaAnatomia, EscenaEmbriones, EscenaIslas, EscenaMolecular, EscenaPolillas, EscenaMaiz, EscenaResistencia, EscenaTiposSeleccion, EscenaAdaptacion, EscenaFrailejon, EscenaCactus, EscenaMigracion, EscenaMimetismo, EscenaAcervo, EscenaDeriva, EscenaFlujo, EscenaSexual, EscenaEspecie, EscenaAlopatrica, EscenaPoliploidia, EscenaRadiacion, EscenaCategorias, EscenaDominios, EscenaCladograma, EscenaArbolVida, EscenaOxigeno, EscenaTierraFirme, EscenaExtinciones, EscenaFosilesColombia, EscenaHomininos } from './EscenasEvolucion.tsx'
 import { EscenaTerritorio, EscenaCalendario, EscenaPolicultivo, EscenaDialogo } from './EscenasTerritorio.tsx'
+import { EscenaCicloAgua, EscenaCicloCarbono, EscenaCicloNitrogeno, EscenaCicloFosforo } from './EscenasCiclos.tsx'
 
 /** Escenas vivas: un dibujo que se transforma según la fase (`fase` = id de la fase en el JSON). */
 export const ESCENAS: Record<string, ComponentType<{ fase: string }>> = {
@@ -168,4 +169,8 @@ export const ESCENAS: Record<string, ComponentType<{ fase: string }>> = {
   'ev-extinciones': EscenaExtinciones,
   'ev-fosiles-colombia': EscenaFosilesColombia,
   'ev-homininos': EscenaHomininos,
+  'ciclo-agua': EscenaCicloAgua,
+  'ciclo-carbono': EscenaCicloCarbono,
+  'ciclo-nitrogeno': EscenaCicloNitrogeno,
+  'ciclo-fosforo': EscenaCicloFosforo,
 }
