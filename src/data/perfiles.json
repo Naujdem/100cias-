@@ -181,6 +181,11 @@
         "especie",
         "alopatrica",
         "radiacion"
+      ],
+      "clasificacion": [
+        "taxonomia",
+        "dominios",
+        "ancestro-comun"
       ]
     },
     "nivelDibujo": "basico",
@@ -217,7 +222,8 @@
       "seleccion-natural": "Ingredientes, la polilla moteada y la selección artificial (maíz).",
       "adaptaciones": "Qué es una adaptación, morfológicas (frailejón, colibríes), de conducta y camuflaje.",
       "mecanismos-poblaciones": "Versión corta: poblaciones y alelos, el azar (deriva) y la selección sexual.",
-      "especiacion": "Qué es una especie, especiación alopátrica (istmo de Panamá) y radiación adaptativa."
+      "especiacion": "Qué es una especie, especiación alopátrica (istmo de Panamá) y radiación adaptativa.",
+      "clasificacion": "Categorías y nombre científico, dominios y reinos, y un solo árbol de la vida."
     }
   },
   {
@@ -455,6 +461,12 @@
         "aislamiento",
         "alopatrica",
         "radiacion"
+      ],
+      "clasificacion": [
+        "taxonomia",
+        "dominios",
+        "cladogramas",
+        "ancestro-comun"
       ]
     },
     "nivelDibujo": "intermedio",
@@ -491,7 +503,8 @@
       "seleccion-natural": "Suma la selección que vemos hoy (antibióticos, plagas, pinzones).",
       "adaptaciones": "Suma las fisiológicas (cactus, rana dorada).",
       "mecanismos-poblaciones": "Los cuatro mecanismos: mutación, deriva, flujo génico y selección sexual.",
-      "especiacion": "Suma las barreras reproductivas."
+      "especiacion": "Suma las barreras reproductivas.",
+      "clasificacion": "Suma la lectura de cladogramas."
     }
   },
   {
@@ -756,6 +769,12 @@
         "alopatrica",
         "simpatrica",
         "radiacion"
+      ],
+      "clasificacion": [
+        "taxonomia",
+        "dominios",
+        "cladogramas",
+        "ancestro-comun"
       ]
     },
     "nivelDibujo": "avanzado",
@@ -792,7 +811,8 @@
       "seleccion-natural": "Los cinco pasos: suma los tipos de selección.",
       "adaptaciones": "Los cinco pasos, con mimetismo mülleriano y aclimatación.",
       "mecanismos-poblaciones": "Los seis pasos: suma el equilibrio de Hardy-Weinberg.",
-      "especiacion": "Los cinco pasos: suma la especiación simpátrica (poliploidía, hibridación)."
+      "especiacion": "Los cinco pasos: suma la especiación simpátrica (poliploidía, hibridación).",
+      "clasificacion": "Los cuatro pasos, con Woese, LUCA y lectura de nodos."
     }
   }
 ]

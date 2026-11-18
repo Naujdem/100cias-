@@ -1,0 +1,281 @@
+{
+  "id": "clasificacion",
+  "materia": "biologia",
+  "area": "evolucion",
+  "titulo": "Clasificación y árbol de la vida",
+  "subtema": "De Linneo a los cladogramas",
+  "orden": 47,
+  "etiqueta": "7",
+  "vistas": ["ruta"],
+  "tituloVista": "Ruta de la clasificación",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Usar las categorías taxonómicas y el nombre científico.",
+    "Describir los tres dominios y los reinos de los seres vivos.",
+    "Leer cladogramas para comparar el parentesco entre especies."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con un texto de biología. La clasificación de los ejemplos sigue el uso actual (por ejemplo, Pseudomonadota para E. coli, Tracheophyta para las plantas vasculares); algunos textos escolares usan nombres anteriores (Proteobacteria, Magnoliophyta)."
+  ],
+  "bloques": [
+    {
+      "id": "taxonomia",
+      "titulo": "Categorías taxonómicas",
+      "resumen": "Los seres vivos se agrupan en categorías cada vez más amplias: especie, género, familia, orden, clase, filo, reino y dominio.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "La taxonomía clasifica a los seres vivos en categorías anidadas, como cajas dentro de cajas: especie, género, familia, orden, clase, filo, reino y dominio. Cada nivel agrupa a los anteriores. El nombre científico, propuesto por Linneo, tiene dos palabras: el género (con mayúscula) y la especie, y se escribe en cursiva. Hoy la clasificación busca reflejar el parentesco evolutivo: los seres vivos de un mismo grupo comparten un antepasado común.",
+        "contexto": [
+          { "titulo": "Por qué en latín", "texto": "Así un científico de Japón y uno de Colombia saben que hablan del mismo animal, aunque en cada región tenga otro nombre común." },
+          { "titulo": "Un nombre común, muchos animales", "texto": "«Tigrillo» puede nombrar a varios felinos distintos según la región; Leopardus pardalis nombra a uno solo, el ocelote." }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Categorías: dominio, reino, filo, clase, orden, familia, género y especie.",
+            "El nombre científico tiene género y especie, en cursiva."
+          ],
+          "media": ["Los grupos de la clasificación reflejan el parentesco evolutivo."],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Cómo ordenarías todos los animales que conoces en grupos y subgrupos?",
+          "actividad": "Con el Explora, comparar parejas de seres vivos y anotar hasta qué nivel comparten la clasificación.",
+          "errores": ["Escribir el nombre científico sin cursiva o con la especie en mayúscula."],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Cajas dentro de cajas",
+          "visual": {
+            "tipo": "escena",
+            "id": "ev-categorias",
+            "fases": [
+              { "id": "dominio", "nombre": "Dominio", "texto": "Eukarya: todos los seres con células con núcleo." },
+              { "id": "reino", "nombre": "Reino", "texto": "Animalia: todos los animales." },
+              { "id": "clase", "nombre": "Clase", "texto": "Mammalia: los mamíferos." },
+              { "id": "orden", "nombre": "Orden", "texto": "Carnivora: osos, felinos, perros." },
+              { "id": "familia", "nombre": "Familia", "texto": "Ursidae: los osos." },
+              { "id": "especie", "nombre": "Especie", "texto": "Tremarctos ornatus: el oso de anteojos, el único oso de Sudamérica." }
+            ]
+          },
+          "atajo": { "texto": "Más sobre esto: Linneo", "tema": "historia-evolucion", "bloque": "linneo" }
+        },
+        {
+          "titulo": "Compara dos seres vivos",
+          "visual": { "tipo": "cifra", "icono": "🔎", "valor": "8 niveles", "texto": "En el Explora elige dos seres vivos y mira hasta dónde comparten su clasificación" },
+          "puntos": ["Teclas 1 a 9 y Q a O"]
+        }
+      ],
+      "juego": "categorias-juego",
+      "diagrama": "clasificador",
+      "preguntas": [
+        {
+          "id": "cl-ta-1",
+          "enunciado": "¿Cuál es el orden correcto, de la más amplia a la más específica?",
+          "opciones": ["Reino, clase, familia, especie", "Especie, reino, familia, clase", "Familia, reino, especie, clase", "Clase, especie, reino, familia"],
+          "correcta": 0,
+          "explicacion": "Dominio > reino > filo > clase > orden > familia > género > especie."
+        },
+        {
+          "id": "cl-ta-2",
+          "enunciado": "¿Cómo se escribe correctamente el nombre científico del jaguar?",
+          "opciones": ["Panthera onca, en cursiva", "panthera Onca", "PANTHERA ONCA", "Panthera Onca, sin cursiva"],
+          "correcta": 0,
+          "explicacion": "Género con mayúscula, especie con minúscula y todo en cursiva."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "dominios",
+      "titulo": "Dominios y reinos",
+      "resumen": "La vida se divide en tres dominios: Bacteria, Archaea y Eukarya. Dentro de Eukarya están los animales, las plantas, los hongos y los protistas.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "ficha": {
+        "idea": "Comparando el ARN de los ribosomas, Carl Woese descubrió en 1977 que los microbios sin núcleo forman dos grupos muy distintos. Hoy la vida se divide en tres dominios: Bacteria y Archaea (procariotas, sin núcleo) y Eukarya (eucariotas, con núcleo). Las arqueas se parecen a las bacterias por fuera, pero en varios rasgos moleculares son más parecidas a los eucariotas. Dentro de Eukarya se reconocen los reinos animal, vegetal, de los hongos y los protistas, un grupo muy variado.",
+        "contexto": [
+          { "titulo": "Arqueas extremas", "texto": "Muchas viven en aguas termales, salinas o sin oxígeno; también hay arqueas en el suelo y en nuestro intestino." },
+          { "titulo": "Los hongos no son plantas", "texto": "No hacen fotosíntesis, tienen quitina como los insectos y son más parientes de los animales que de las plantas." },
+          { "titulo": "Protistas", "texto": "Agrupa a eucariotas que no son animales, plantas ni hongos: amebas, algas, el parásito de la malaria. No es un grupo natural." }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Tres dominios: Bacteria, Archaea y Eukarya.",
+            "Reinos de Eukarya: animales, plantas, hongos y protistas."
+          ],
+          "media": ["Bacteria y Archaea no tienen núcleo; Eukarya sí."],
+          "avanzada": ["Woese propuso los tres dominios comparando el ARN ribosomal."]
+        },
+        "docente": {
+          "abrir": "¿Un champiñón es una planta? ¿Por qué sí o por qué no?",
+          "actividad": "Clasificar una lista de seres vivos de la vereda en dominio y reino.",
+          "errores": ["Creer que los hongos son plantas.", "Pensar que todas las arqueas son bacterias."],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Tres dominios",
+          "visual": {
+            "tipo": "escena",
+            "id": "ev-dominios",
+            "fases": [
+              { "id": "raiz", "nombre": "Un origen", "texto": "Toda la vida viene de un antepasado común." },
+              { "id": "tres", "nombre": "Tres ramas", "texto": "Bacteria y Archaea, sin núcleo; Eukarya, con núcleo." },
+              { "id": "reinos", "nombre": "Los reinos", "texto": "Dentro de Eukarya: animales, plantas, hongos y protistas." }
+            ]
+          },
+          "atajo": { "texto": "Más sobre esto: Bacterias y arqueas", "tema": "tipos-de-celulas", "bloque": "bacterias-arqueas" }
+        }
+      ],
+      "juego": "dominios-juego",
+      "preguntas": [
+        {
+          "id": "cl-do-1",
+          "enunciado": "¿Qué tienen en común los dominios Bacteria y Archaea?",
+          "opciones": ["Sus células no tienen núcleo", "Hacen todos fotosíntesis", "Son pluricelulares", "Viven solo en aguas termales"],
+          "correcta": 0,
+          "explicacion": "Ambos son procariotas, aunque son muy distintos a nivel molecular."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "cladogramas",
+      "titulo": "Cladogramas",
+      "resumen": "Diagramas ramificados que agrupan especies por los caracteres que comparten. Muestran quién es más pariente de quién.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "intermedio",
+      "nucleo": true,
+      "ficha": {
+        "idea": "Un cladograma es un diagrama en forma de árbol que agrupa a las especies según los caracteres nuevos que comparten, heredados de un antepasado común (caracteres derivados). Cada nodo, donde se separan dos ramas, representa a un antepasado común. Dos especies son más parientes cuanto más reciente es el nodo que las une. Por ejemplo, el oso y el lagarto comparten el huevo con cáscara (amnios), que la rana no tiene: el oso es más pariente del lagarto que de la rana.",
+        "contexto": [
+          { "titulo": "Cómo leerlo", "texto": "No importa el orden de las puntas: importa dónde se unen las ramas. Girar una rama no cambia el parentesco." },
+          { "titulo": "Datos de hoy", "texto": "Los cladogramas modernos combinan caracteres del cuerpo y secuencias de ADN." }
+        ],
+        "cuaderno": {
+          "facil": ["Un cladograma muestra el parentesco entre especies."],
+          "media": [
+            "Cada nodo es un antepasado común.",
+            "Se agrupan por caracteres derivados compartidos."
+          ],
+          "avanzada": ["El parentesco se lee por los nodos, no por el orden de las puntas."]
+        },
+        "docente": {
+          "abrir": "¿El oso es más pariente de la rana o del lagarto?",
+          "actividad": "Con una tabla de caracteres (columna, patas, huevo con cáscara, pelo), construir en grupos el cladograma de cinco animales.",
+          "errores": ["Leer el cladograma de izquierda a derecha como si fuera una escalera de «inferior» a «superior»."],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Armar un cladograma",
+          "visual": {
+            "tipo": "escena",
+            "id": "ev-cladograma",
+            "fases": [
+              { "id": "grupos", "nombre": "Cinco animales", "texto": "Lanceta, pez, rana, lagarto y oso." },
+              { "id": "vertebras", "nombre": "Columna", "texto": "Todos menos la lanceta tienen columna vertebral." },
+              { "id": "patas", "nombre": "Cuatro patas", "texto": "Rana, lagarto y oso tienen cuatro patas." },
+              { "id": "pelo", "nombre": "Huevo y pelo", "texto": "Lagarto y oso tienen huevo con cáscara (o su versión interna); solo el oso tiene pelo." },
+              { "id": "leer", "nombre": "Leerlo", "texto": "El nodo que une al oso con el lagarto es más reciente que el que lo une con la rana." }
+            ]
+          }
+        },
+        {
+          "titulo": "No es una escalera",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "En un cladograma, ¿el pez es «menos evolucionado» que el oso?",
+            "opciones": ["No: ambos han evolucionado el mismo tiempo desde su antepasado común", "Sí: está más abajo", "Sí: es más antiguo", "Solo si vive en el agua"],
+            "correcta": 0,
+            "explicacion": "Todas las especies actuales son puntas del árbol con la misma historia de tiempo; solo siguieron caminos distintos."
+          }
+        }
+      ],
+      "juego": "cladograma-juego",
+      "preguntas": [
+        {
+          "id": "cl-cl-1",
+          "enunciado": "¿Qué representa un nodo en un cladograma?",
+          "opciones": ["Un antepasado común", "Una especie actual", "Una extinción", "Un carácter perdido"],
+          "correcta": 0,
+          "explicacion": "Es el punto donde un linaje se divide en dos."
+        },
+        {
+          "id": "cl-cl-2",
+          "enunciado": "La rana y el oso tienen cuatro patas; el pez no. ¿Qué se concluye?",
+          "opciones": ["Rana y oso comparten un antepasado más reciente que con el pez", "El pez es más pariente del oso", "La rana desciende del oso", "No se puede concluir nada"],
+          "correcta": 0,
+          "explicacion": "Las cuatro patas son un carácter derivado que heredaron de un antepasado común."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "ancestro-comun",
+      "titulo": "Un solo árbol de la vida",
+      "resumen": "Todos los seres vivos están emparentados. No venimos de los monos actuales: somos primos, con un antepasado común.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "basico",
+      "ficha": {
+        "idea": "Si se siguen las ramas del árbol de la vida hacia atrás, todas se unen en un antepasado común universal, llamado LUCA, que vivió hace más de 3500 millones de años. Por eso todos los seres vivos comparten el ADN, el código genético y muchas proteínas. Una consecuencia importante: ninguna especie actual es antepasada de otra especie actual. Los humanos no venimos de los chimpancés: compartimos con ellos un antepasado que vivió hace unos 6 o 7 millones de años. Y las aves son el único grupo de dinosaurios que sobrevivió.",
+        "contexto": [
+          { "titulo": "Darwin y su árbol", "texto": "En 1837 Darwin dibujó en su cuaderno un pequeño árbol ramificado y escribió encima «I think» («Creo que»)." },
+          { "titulo": "Parientes inesperados", "texto": "Los hongos son más parientes de los animales que de las plantas; las ballenas, de los hipopótamos." }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Todos los seres vivos tienen un antepasado común.",
+            "Los humanos no venimos de los chimpancés: compartimos un antepasado."
+          ],
+          "media": ["Las aves descienden de dinosaurios."],
+          "avanzada": ["LUCA: último antepasado común universal, hace más de 3500 millones de años."]
+        },
+        "docente": {
+          "abrir": "Si venimos de los monos, ¿por qué todavía hay monos?",
+          "actividad": "Dibujar el árbol de la familia de cada estudiante y compararlo con el árbol de la vida: primos y antepasados.",
+          "errores": ["Creer que los humanos descienden de los monos actuales.", "Pensar en la evolución como una escalera hacia el ser humano."],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "De la hoja a la raíz",
+          "visual": {
+            "tipo": "escena",
+            "id": "ev-arbol-vida",
+            "fases": [
+              { "id": "hoja", "nombre": "Nosotros", "texto": "Somos una hoja de un árbol enorme." },
+              { "id": "primates", "nombre": "Primates", "texto": "Humanos y chimpancés comparten un antepasado: somos primos." },
+              { "id": "animales", "nombre": "Animales y hongos", "texto": "Más atrás, nos unimos con los demás animales y con los hongos." },
+              { "id": "raiz", "nombre": "La raíz", "texto": "Toda la vida comparte un antepasado: LUCA." }
+            ]
+          },
+          "atajo": { "texto": "Más sobre esto: Evidencia molecular", "tema": "evidencias-evolucion", "bloque": "molecular" }
+        }
+      ],
+      "juego": "arbol-vida-juego",
+      "preguntas": [
+        {
+          "id": "cl-ac-1",
+          "enunciado": "¿Cuál es la relación entre humanos y chimpancés?",
+          "opciones": ["Compartimos un antepasado común: somos primos", "Los humanos venimos de los chimpancés actuales", "Los chimpancés vienen de los humanos", "No tenemos ningún parentesco"],
+          "correcta": 0,
+          "explicacion": "Ninguna especie actual es antepasada de otra especie actual."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}
