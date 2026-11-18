@@ -39,7 +39,7 @@ import { EscenaCicloEstados, EscenaCurvaCalentamiento } from './EscenasEstados.t
 import { EscenaPapelCambios, EscenaSenalesQuimicas, EscenaMacheteOxido } from './EscenasCambios.tsx'
 import { EscenaParticulasClasificacion } from './EscenasClasificacion.tsx'
 import { EscenaSepararMezclas } from './EscenasSeparacion.tsx'
-import { EscenaDemocrito, EscenaDalton, EscenaThomson, EscenaRutherford, EscenaBohr, EscenaNube, EscenaChadwick } from './EscenasAtomo.tsx'
+import { EscenaDemocrito, EscenaDalton, EscenaThomson, EscenaRutherford, EscenaBohr, EscenaNube, EscenaChadwick, EscenaParticulas, EscenaNumeros, EscenaIones, EscenaIsotopos } from './EscenasAtomo.tsx'
 import { EscenaRiesgo, EscenaArmero, EscenaEvacuacion } from './EscenasRiesgo.tsx'
 import { EscenaProyectoAula } from './EscenasSostenibilidad.tsx'
 import { EscenaCicloAgua, EscenaCicloCarbono, EscenaCicloNitrogeno, EscenaCicloFosforo } from './EscenasCiclos.tsx'
@@ -221,6 +221,10 @@ export const ESCENAS: Record<string, ComponentType<{ fase: string }>> = {
   'at-bohr': EscenaBohr,
   'at-nube': EscenaNube,
   'at-chadwick': EscenaChadwick,
+  'at-particulas': EscenaParticulas,
+  'at-numeros': EscenaNumeros,
+  'at-iones': EscenaIones,
+  'at-isotopos': EscenaIsotopos,
   compostaje: EscenaCompostaje,
   riesgo: EscenaRiesgo,
   armero: EscenaArmero,
