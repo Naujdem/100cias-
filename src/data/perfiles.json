@@ -118,6 +118,11 @@
         "que-es-ecologia",
         "niveles",
         "habitat-nicho"
+      ],
+      "factores-ecosistemas": [
+        "bioticos-abioticos",
+        "pisos-termicos",
+        "ecosistemas-colombia"
       ]
     },
     "nivelDibujo": "basico",
@@ -141,7 +146,8 @@
       "herencia-no-mendeliana": "Dominancia incompleta y grupos sanguíneos.",
       "mutaciones": "Qué es una mutación, mutaciones puntuales y de dónde sale la variación.",
       "biotecnologia": "Qué es la biotecnología, los transgénicos y el debate.",
-      "niveles-ecologicos": "Qué es la ecología, los niveles y hábitat y nicho."
+      "niveles-ecologicos": "Qué es la ecología, los niveles y hábitat y nicho.",
+      "factores-ecosistemas": "Factores, pisos térmicos y ecosistemas de Colombia."
     }
   },
   {
@@ -300,6 +306,12 @@
         "que-es-ecologia",
         "niveles",
         "habitat-nicho"
+      ],
+      "factores-ecosistemas": [
+        "bioticos-abioticos",
+        "pisos-termicos",
+        "ecosistemas-colombia",
+        "tolerancia"
       ]
     },
     "nivelDibujo": "intermedio",
@@ -323,7 +335,8 @@
       "herencia-no-mendeliana": "Suma codominancia, herencia ligada al sexo y genealogías.",
       "mutaciones": "Suma los efectos (anemia falciforme) y los cambios en el número de cromosomas.",
       "biotecnologia": "Suma el ADN recombinante, la PCR y CRISPR.",
-      "niveles-ecologicos": "Los tres pasos, con el bioma y la competencia."
+      "niveles-ecologicos": "Los tres pasos, con el bioma y la competencia.",
+      "factores-ecosistemas": "Suma el rango de tolerancia y el factor limitante."
     }
   },
   {
@@ -503,6 +516,12 @@
         "que-es-ecologia",
         "niveles",
         "habitat-nicho"
+      ],
+      "factores-ecosistemas": [
+        "bioticos-abioticos",
+        "pisos-termicos",
+        "ecosistemas-colombia",
+        "tolerancia"
       ]
     },
     "nivelDibujo": "avanzado",
@@ -526,7 +545,8 @@
       "herencia-no-mendeliana": "Los seis pasos, con la herencia poligénica y el ambiente.",
       "mutaciones": "Los seis pasos, con las mutaciones cromosómicas estructurales.",
       "biotecnologia": "Los seis pasos completos.",
-      "niveles-ecologicos": "Los tres pasos, con el bioma y la competencia."
+      "niveles-ecologicos": "Los tres pasos, con el bioma y la competencia.",
+      "factores-ecosistemas": "Los cuatro pasos completos."
     }
   }
 ]

@@ -11,6 +11,7 @@ const AZUL = '#3f6fb8'
 const MOR = '#8a5aa8'
 const TIERRA = '#8a6a42'
 const TINTA = '#3a3a3a'
+const ROJO = '#c43c3c'
 
 function Texto({ x, y, t, c = TINTA, s = 12, peso = 800 }: { x: number; y: number; t: string; c?: string; s?: number; peso?: number }) {
   return <text x={x} y={y} textAnchor="middle" fontSize={s} fontWeight={peso} fill={c}>{t}</text>
@@ -221,6 +222,167 @@ export function EscenaHabitatNicho({ fase }: { fase: string }) {
       <g style={ver(i === 2)}><Texto x={200} y={36} t="Nicho del carpintero: come insectos de la corteza" c={TINTA} s={12} /><Texto x={200} y={56} t="y hace huecos que usan otros animales" s={11} peso={600} /></g>
       <g style={ver(i === 3)}><Texto x={200} y={36} t="El hábitat es la «dirección»;" s={13} /><Texto x={200} y={56} t="el nicho es la «profesión»" c={MOR} s={13} /></g>
       <g style={ver(i === 4)}><Texto x={200} y={36} t="Dos especies con el mismo nicho compiten:" s={12} /><Texto x={200} y={56} t="una gana o se reparten el recurso" c={MOR} s={12} /></g>
+    </svg>
+  )
+}
+
+/* ── Tema 2 · Factores bióticos y abióticos ───────────────────────────── */
+
+const FAC = ['paisaje', 'bioticos', 'abioticos', 'juntos']
+
+function Marca({ x, y, t, c }: { x: number; y: number; t: string; c: string }) {
+  return (
+    <g>
+      <rect x={x - t.length * 3.3 - 8} y={y - 12} width={t.length * 6.6 + 16} height="20" rx="10" fill={c} />
+      <Texto x={x} y={y + 2} t={t} c="#fff" s={10} />
+    </g>
+  )
+}
+
+export function EscenaFactores({ fase }: { fase: string }) {
+  const i = Math.max(0, FAC.indexOf(fase))
+  const bio = i === 1 || i === 3
+  const abio = i === 2 || i === 3
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label={`Factores bióticos y abióticos: ${fase}`} className="h-full w-full">
+      {fondo('#e9eef2')}
+      <circle cx="340" cy="56" r="22" fill="#f2c94c" />
+      <Suelo />
+      <ellipse cx="290" cy="250" rx="70" ry="16" fill="#7fb0d8" />
+      <rect x="-10" y="282" width="420" height="22" fill={TIERRA} />
+      <Frailejon x={90} y={245} k={0.8} /><Frailejon x={150} y={238} k={0.6} />
+      <Venado x={210} y={252} k={0.8} /><Colibri x={150} y={110} k={1.2} />
+      <g style={ver(i === 0)}><Texto x={170} y={40} t="Un páramo: ¿qué hay en él?" s={13} /></g>
+      <g style={ver(bio)}>
+        <Marca x={90} y={140} t="planta" c={VERDE} /><Marca x={210} y={214} t="animal" c={VERDE} /><Marca x={150} y={84} t="ave" c={VERDE} />
+        <Marca x={60} y={276} t="hongos y bacterias" c={VERDE} />
+      </g>
+      <g style={ver(abio)}>
+        <Marca x={340} y={96} t="luz" c={AZUL} /><Marca x={290} y={250} t="agua" c={AZUL} /><Marca x={330} y={294} t="suelo" c={AZUL} />
+        <Marca x={250} y={60} t="temperatura" c={AZUL} /><Marca x={250} y={150} t="aire" c={AZUL} />
+      </g>
+      <rect x="10" y="10" width="190" height="40" rx="10" fill="#fff" opacity="0.9" style={{ transition: 'opacity 0.6s', opacity: i === 0 ? 0 : 0.9 }} />
+      <g style={ver(i === 1)}><text x="20" y="35" fontSize="12" fontWeight="900" fill={VERDE}>Bióticos: los seres vivos</text></g>
+      <g style={ver(i === 2)}><text x="20" y="35" fontSize="12" fontWeight="900" fill={AZUL}>Abióticos: lo que no está vivo</text></g>
+      <g style={ver(i === 3)}><text x="20" y="35" fontSize="12" fontWeight="900" fill={TINTA}>Todos se afectan entre sí</text></g>
+    </svg>
+  )
+}
+
+/* ── Tema 2 · Pisos térmicos ──────────────────────────────────────────── */
+
+export const PISOS = [
+  { id: 'calido', nombre: 'Cálido', desde: 0, hasta: 1000, t: 'más de 24 °C', ej: 'cacao, plátano, arroz', c: '#e8b25a' },
+  { id: 'templado', nombre: 'Templado', desde: 1000, hasta: 2000, t: '18 a 24 °C', ej: 'café, caña', c: '#a8c46a' },
+  { id: 'frio', nombre: 'Frío', desde: 2000, hasta: 3000, t: '12 a 18 °C', ej: 'papa, fresa, bosque de niebla', c: '#6aa888' },
+  { id: 'paramo', nombre: 'Páramo', desde: 3000, hasta: 4700, t: '2 a 12 °C', ej: 'frailejones, lagunas', c: '#a9b89a' },
+  { id: 'nival', nombre: 'Nival', desde: 4700, hasta: 5800, t: 'menos de 2 °C', ej: 'nieve y glaciares', c: '#eef2f6' },
+]
+const PIS = ['subir', ...PISOS.map((p) => p.id)]
+
+export function EscenaPisos({ fase }: { fase: string }) {
+  const i = Math.max(0, PIS.indexOf(fase))
+  const yDe = (m: number) => 270 - (m / 5800) * 230
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label={`Pisos térmicos: ${fase}`} className="h-full w-full">
+      {fondo('#eef3f8')}
+      <defs><clipPath id="pt-monte"><path d="M 60 270 L 220 40 L 310 150 L 390 270 Z" /></clipPath></defs>
+      <g clipPath="url(#pt-monte)">
+        {PISOS.map((p, k) => (
+          <rect key={p.id} x="0" y={yDe(p.hasta)} width="400" height={yDe(p.desde) - yDe(p.hasta)} fill={p.c}
+            style={{ transition: 'opacity 0.6s', opacity: i === 0 || i === k + 1 ? 1 : 0.45 }} />
+        ))}
+      </g>
+      <path d="M 60 270 L 220 40 L 310 150 L 390 270" fill="none" stroke="#6a7a6a" strokeWidth="2" />
+      {[0, 1000, 2000, 3000, 4000, 5000].map((m) => <g key={m}><line x1="44" x2="52" y1={yDe(m)} y2={yDe(m)} stroke="#888" /><text x="40" y={yDe(m) + 4} textAnchor="end" fontSize="9" fill={TINTA}>{m}</text></g>)}
+      <text x="40" y="26" textAnchor="end" fontSize="9" fontWeight="700" fill={TINTA}>m</text>
+      <g style={ver(i === 0)}><Texto x={300} y={60} t="Al subir una montaña," s={12} /><Texto x={300} y={76} t="la temperatura baja" s={12} /><Texto x={300} y={92} t="≈ 0,6 °C cada 100 m" c={ROJO} s={11} /></g>
+      {PISOS.map((p, k) => (
+        <g key={p.id} style={ver(i === k + 1)}>
+          <line x1="56" x2="250" y1={(yDe(p.desde) + yDe(p.hasta)) / 2} y2={(yDe(p.desde) + yDe(p.hasta)) / 2} stroke={TINTA} strokeDasharray="4 3" />
+          <rect x="236" y="34" width="156" height="70" rx="10" fill="#fff" opacity="0.95" />
+          <Texto x={314} y={54} t={`Piso ${p.nombre.toLowerCase()}`} s={13} />
+          <Texto x={314} y={70} t={`${p.desde}–${p.hasta} m · ${p.t}`} s={9} peso={600} />
+          <Texto x={314} y={90} t={p.ej} c={VERDE} s={10} />
+        </g>
+      ))}
+    </svg>
+  )
+}
+
+/* ── Tema 2 · Ecosistemas de Colombia (mapa esquemático) ──────────────── */
+
+const ECOS = [
+  { id: 'paramo', nombre: 'Páramo', x: 150, y: 140, c: '#a9b89a', texto: 'Alta montaña andina: frío, niebla y frailejones. Fábrica de agua.' },
+  { id: 'selva', nombre: 'Selva húmeda', x: 200, y: 220, c: '#2f7a46', texto: 'Amazonía y Chocó: lluvia todo el año y la mayor diversidad.' },
+  { id: 'bosque-seco', nombre: 'Bosque seco', x: 135, y: 170, c: '#c9a46a', texto: 'Valles cálidos como el del Magdalena. La Tatacoa (Huila) es bosque seco muy degradado.' },
+  { id: 'sabana', nombre: 'Sabana', x: 240, y: 150, c: '#d9c86a', texto: 'Llanos de la Orinoquía: pastos, temporada de lluvias y de sequía.' },
+  { id: 'manglar', nombre: 'Manglar', x: 82, y: 150, c: '#5a8a6a', texto: 'Costas del Pacífico y del Caribe: árboles que viven en agua salada.' },
+  { id: 'desierto', nombre: 'Desierto', x: 190, y: 40, c: '#e8c48a', texto: 'La Guajira: muy poca lluvia, cactus y arbustos espinosos.' },
+  { id: 'arrecife', nombre: 'Arrecife de coral', x: 100, y: 50, c: '#e07a8a', texto: 'San Andrés y las islas del Rosario: corales en aguas cálidas y claras.' },
+]
+const ECO = ['mapa', ...ECOS.map((e) => e.id)]
+
+export function EscenaEcosistemasColombia({ fase }: { fase: string }) {
+  const i = Math.max(0, ECO.indexOf(fase))
+  const sel = i > 0 ? ECOS[i - 1] : null
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label={`Ecosistemas de Colombia: ${sel?.nombre ?? 'mapa'}`} className="h-full w-full">
+      {fondo('#e6f0f6')}
+      <path d="M 120 40 L 200 20 L 230 60 L 220 100 L 280 110 L 300 150 L 290 190 L 250 200 L 240 270 L 210 280 L 190 230 L 150 220 L 120 200 L 100 170 L 70 160 L 80 120 L 100 90 Z" fill="#f4efe2" stroke="#9a8a6a" strokeWidth="2.5" />
+      <path d="M 120 190 L 140 150 L 150 110 L 170 70" stroke="#b5a07a" strokeWidth="10" strokeLinecap="round" opacity="0.5" />
+      <Texto x={70} y={290} t="mapa esquemático, no a escala" s={8} peso={600} />
+      {ECOS.map((e, k) => (
+        <g key={e.id}>
+          <circle cx={e.x} cy={e.y} r={sel?.id === e.id ? 16 : 10} fill={e.c} stroke="#fff" strokeWidth="2.5" style={{ transition: 'r 0.4s', opacity: !sel || sel.id === e.id ? 1 : 0.35 }} />
+          <text x={e.x} y={e.y + 4} textAnchor="middle" fontSize="9" fontWeight="900" fill="#fff" style={{ opacity: !sel || sel.id === e.id ? 1 : 0.35 }}>{k + 1}</text>
+        </g>
+      ))}
+      <g style={ver(i === 0)}>
+        <rect x="290" y="20" width="104" height="170" rx="10" fill="#fff" opacity="0.92" />
+        {ECOS.map((e, k) => <text key={e.id} x="300" y={40 + k * 21} fontSize="10" fontWeight="700" fill={TINTA}>{k + 1}. {e.nombre}</text>)}
+      </g>
+      {sel && (
+        <g>
+          <rect x="250" y="210" width="144" height="80" rx="10" fill="#fff" opacity="0.95" />
+          <text x="260" y="230" fontSize="13" fontWeight="900" fill={sel.c === '#eef2f6' ? TINTA : sel.c}>{sel.nombre}</text>
+          <foreignObject x="258" y="236" width="132" height="54">
+            <div style={{ fontSize: 9, lineHeight: 1.25, fontWeight: 600, color: TINTA }}>{sel.texto}</div>
+          </foreignObject>
+        </g>
+      )}
+    </svg>
+  )
+}
+
+/* ── Tema 2 · Rango de tolerancia (9°–11°) ────────────────────────────── */
+
+const TOL = ['curva', 'optimo', 'estres', 'limite']
+
+export function EscenaTolerancia({ fase }: { fase: string }) {
+  const i = Math.max(0, TOL.indexOf(fase))
+  const pts = Array.from({ length: 61 }, (_, k) => {
+    const x = 40 + k * 5.33
+    const y = 240 - 170 * Math.exp(-(((k - 30) / 11) ** 2))
+    return `${x.toFixed(1)},${y.toFixed(1)}`
+  }).join(' ')
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label={`Rango de tolerancia: ${fase}`} className="h-full w-full">
+      {fondo('#f3f2ee')}
+      <rect x="40" y="60" width="72" height="180" fill="#f3c9c9" style={{ transition: 'opacity 0.6s', opacity: i >= 3 ? 0.9 : 0.2 }} />
+      <rect x="288" y="60" width="72" height="180" fill="#f3c9c9" style={{ transition: 'opacity 0.6s', opacity: i >= 3 ? 0.9 : 0.2 }} />
+      <rect x="112" y="60" width="56" height="180" fill="#f6e3b0" style={{ transition: 'opacity 0.6s', opacity: i >= 2 ? 0.9 : 0.2 }} />
+      <rect x="232" y="60" width="56" height="180" fill="#f6e3b0" style={{ transition: 'opacity 0.6s', opacity: i >= 2 ? 0.9 : 0.2 }} />
+      <rect x="168" y="60" width="64" height="180" fill="#cfe8c9" style={{ transition: 'opacity 0.6s', opacity: i >= 1 ? 0.9 : 0.2 }} />
+      <polyline points={pts} fill="none" stroke={VERDE} strokeWidth="4" />
+      <line x1="40" y1="240" x2="360" y2="240" stroke={TINTA} strokeWidth="2" />
+      <line x1="40" y1="240" x2="40" y2="50" stroke={TINTA} strokeWidth="2" />
+      <Texto x={200} y={262} t="temperatura (u otro factor) →" s={10} peso={600} />
+      <text x="30" y="150" fontSize="10" fontWeight="600" fill={TINTA} transform="rotate(-90 30 150)" textAnchor="middle">cuántos individuos</text>
+      <Texto x={200} y={30} t={['Cada especie tolera un rango de condiciones', 'Zona óptima: viven y se reproducen mejor', 'Zonas de estrés: sobreviven con dificultad', 'Fuera del rango: no sobreviven'][i]} s={12} />
+      <g style={ver(i === 1)}><Texto x={200} y={80} t="óptimo" c={VERDE} s={12} /></g>
+      <g style={ver(i === 2)}><Texto x={140} y={80} t="estrés" c="#b07a00" s={11} /><Texto x={260} y={80} t="estrés" c="#b07a00" s={11} /></g>
+      <g style={ver(i === 3)}><Texto x={76} y={80} t="límite" c={ROJO} s={11} /><Texto x={324} y={80} t="límite" c={ROJO} s={11} /><Texto x={200} y={286} t="El factor que más se aleja del óptimo es el factor limitante" c={MOR} s={11} /></g>
     </svg>
   )
 }

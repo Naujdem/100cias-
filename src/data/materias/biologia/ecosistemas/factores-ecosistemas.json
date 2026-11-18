@@ -1,0 +1,457 @@
+{
+  "id": "factores-ecosistemas",
+  "materia": "biologia",
+  "area": "ecosistemas",
+  "titulo": "Factores y ecosistemas de Colombia",
+  "subtema": "Lo vivo, lo no vivo y la altitud",
+  "orden": 32,
+  "etiqueta": "2",
+  "vistas": [
+    "ruta"
+  ],
+  "tituloVista": "Ruta de los ecosistemas",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Distinguir factores bióticos y abióticos.",
+    "Explicar los pisos térmicos.",
+    "Reconocer los principales ecosistemas de Colombia."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con un texto de ciencias naturales y fuentes del IDEAM / Instituto Humboldt. A verificar: límites de los pisos térmicos, altitudes de Neiva, Pitalito, páramo de Las Papas y Nevado del Huila, Tatacoa como bosque seco."
+  ],
+  "bloques": [
+    {
+      "id": "bioticos-abioticos",
+      "titulo": "Factores bióticos y abióticos",
+      "resumen": "Un ecosistema tiene seres vivos (bióticos) y condiciones sin vida (abióticos) que se afectan entre sí.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "En un ecosistema hay factores bióticos, que son los seres vivos (plantas, animales, hongos, bacterias), y factores abióticos, que son las condiciones sin vida: la luz, el agua, la temperatura, el aire, el suelo y la altitud. Unos afectan a otros: la temperatura decide qué plantas crecen, y las plantas, a su vez, protegen el suelo y guardan agua.",
+        "contexto": [
+          {
+            "titulo": "Una relación de doble vía",
+            "texto": "El frailejón depende del frío y la niebla, pero también ayuda a guardar el agua del páramo, que luego baja a los ríos."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Bióticos: los seres vivos.",
+            "Abióticos: luz, agua, temperatura, aire, suelo."
+          ],
+          "media": [
+            "Los factores bióticos y abióticos se afectan entre sí."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "Si mañana el páramo fuera 10 °C más caliente, ¿qué cambiaría?",
+          "actividad": "Salir al patio y hacer una lista de factores bióticos y abióticos.",
+          "errores": [
+            "Pensar que lo abiótico no importa para los seres vivos.",
+            "Clasificar los restos de seres vivos (hojas secas) como abióticos sin discutirlo."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Lo vivo y lo no vivo",
+          "visual": {
+            "tipo": "escena",
+            "id": "factores",
+            "fases": [
+              {
+                "id": "paisaje",
+                "nombre": "Un páramo",
+                "texto": "¿Qué hay en este páramo?"
+              },
+              {
+                "id": "bioticos",
+                "nombre": "Bióticos",
+                "texto": "Los seres vivos: plantas, animales, aves, hongos y bacterias."
+              },
+              {
+                "id": "abioticos",
+                "nombre": "Abióticos",
+                "texto": "Lo que no está vivo: luz, agua, temperatura, aire y suelo."
+              },
+              {
+                "id": "juntos",
+                "nombre": "Juntos",
+                "texto": "Unos afectan a otros: el frío decide qué plantas viven y las plantas guardan el agua."
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "factores-juego",
+      "preguntas": [
+        {
+          "id": "ec-fa-1",
+          "enunciado": "¿Cuál es un factor abiótico?",
+          "opciones": [
+            "La temperatura",
+            "Los hongos",
+            "Los colibríes",
+            "Las bacterias"
+          ],
+          "correcta": 0,
+          "explicacion": "No está vivo, pero afecta a los seres vivos."
+        },
+        {
+          "id": "ec-fa-2",
+          "enunciado": "¿Qué forman juntos los factores bióticos y abióticos?",
+          "opciones": [
+            "Un ecosistema",
+            "Una población",
+            "Una célula",
+            "Un individuo"
+          ],
+          "correcta": 0,
+          "explicacion": "Ecosistema = seres vivos + entorno sin vida."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "pisos-termicos",
+      "titulo": "Pisos térmicos",
+      "resumen": "En las montañas la temperatura baja al subir: cálido, templado, frío, páramo y nival, cada uno con sus seres vivos.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "requiere": [
+        "bioticos-abioticos"
+      ],
+      "ficha": {
+        "idea": "En Colombia, cerca del ecuador, el clima depende sobre todo de la altitud: al subir una montaña la temperatura baja unos 0,6 °C cada 100 metros. Por eso hay pisos térmicos: cálido (hasta unos 1000 m), templado (1000–2000 m), frío (2000–3000 m), páramo (3000–4700 m) y nival (por encima de unos 4700 m). Cada piso tiene sus propios seres vivos y cultivos.",
+        "contexto": [
+          {
+            "titulo": "En el Huila",
+            "texto": "En un mismo departamento hay casi todos los pisos: Neiva en tierra caliente, Pitalito en clima templado y el Nevado del Huila con nieves."
+          },
+          {
+            "titulo": "El Macizo Colombiano",
+            "texto": "En el páramo de Las Papas nace el río Magdalena, en la laguna de la Magdalena."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Al subir, la temperatura baja.",
+            "Pisos: cálido, templado, frío, páramo y nival."
+          ],
+          "media": [
+            "Baja unos 0,6 °C cada 100 m."
+          ],
+          "avanzada": [
+            "Cada piso tiene seres vivos y cultivos propios."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué en Neiva hace calor y en el Nevado del Huila hay nieve, si están tan cerca?",
+          "actividad": "Usar el control de altitud con lugares del Huila y anotar la temperatura de cada uno.",
+          "errores": [
+            "Creer que el clima depende solo de la latitud.",
+            "Pensar que los pisos térmicos son estaciones del año."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Subir la montaña",
+          "visual": {
+            "tipo": "escena",
+            "id": "pisos",
+            "fases": [
+              {
+                "id": "subir",
+                "nombre": "Al subir",
+                "texto": "Al subir una montaña la temperatura baja unos 0,6 °C cada 100 metros."
+              },
+              {
+                "id": "calido",
+                "nombre": "Cálido",
+                "texto": "Hasta unos 1000 m: más de 24 °C. Cacao, plátano, arroz."
+              },
+              {
+                "id": "templado",
+                "nombre": "Templado",
+                "texto": "De 1000 a 2000 m: 18 a 24 °C. Café."
+              },
+              {
+                "id": "frio",
+                "nombre": "Frío",
+                "texto": "De 2000 a 3000 m: 12 a 18 °C. Papa y bosques de niebla."
+              },
+              {
+                "id": "paramo",
+                "nombre": "Páramo",
+                "texto": "De 3000 a 4700 m: muy frío, con frailejones y lagunas."
+              },
+              {
+                "id": "nival",
+                "nombre": "Nival",
+                "texto": "Por encima de unos 4700 m: nieve y glaciares."
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "pisos-juego",
+      "diagrama": "pisos-termicos",
+      "preguntas": [
+        {
+          "id": "ec-pt-1",
+          "enunciado": "¿Qué pasa con la temperatura al subir una montaña?",
+          "opciones": [
+            "Baja, unos 0,6 °C cada 100 m",
+            "Sube, porque se está más cerca del sol",
+            "No cambia",
+            "Baja solo de noche"
+          ],
+          "correcta": 0,
+          "explicacion": "Por eso hay pisos térmicos."
+        },
+        {
+          "id": "ec-pt-2",
+          "enunciado": "¿En qué piso térmico se cultiva tradicionalmente el café?",
+          "opciones": [
+            "Templado",
+            "Cálido",
+            "Páramo",
+            "Nival"
+          ],
+          "correcta": 0,
+          "explicacion": "Entre unos 1000 y 2000 m."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "ecosistemas-colombia",
+      "titulo": "Ecosistemas de Colombia",
+      "resumen": "Páramo, selva húmeda, bosque seco, sabana, manglar, desierto y arrecife: Colombia tiene casi todos los ecosistemas del trópico.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "basico",
+      "requiere": [
+        "pisos-termicos"
+      ],
+      "ficha": {
+        "idea": "Por sus montañas, sus dos mares y su posición en el trópico, Colombia tiene una gran variedad de ecosistemas: páramos en la alta montaña, selvas húmedas en la Amazonía y el Chocó, bosques secos en los valles cálidos, sabanas en la Orinoquía, manglares en las costas, desierto en La Guajira y arrecifes de coral en el Caribe.",
+        "contexto": [
+          {
+            "titulo": "La Tatacoa",
+            "texto": "El «desierto» de la Tatacoa, en el Huila, es en realidad un bosque seco tropical muy degradado: llueve poco y el suelo se erosionó."
+          },
+          {
+            "titulo": "Bosque seco en peligro",
+            "texto": "Es uno de los ecosistemas más amenazados del país: queda una pequeña parte de lo que hubo."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Colombia tiene páramos, selvas, bosques secos, sabanas, manglares, desiertos y arrecifes."
+          ],
+          "media": [
+            "Su variedad se debe a las montañas, los dos mares y el trópico."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Qué ecosistemas has visitado o hay cerca de tu colegio?",
+          "actividad": "Ubicar en un mapa real de Colombia los ecosistemas de la escena y el del municipio.",
+          "errores": [
+            "Creer que la Tatacoa es un desierto como el Sahara.",
+            "Pensar que la selva es un solo ecosistema igual en todas partes."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Un país de muchos ecosistemas",
+          "visual": {
+            "tipo": "escena",
+            "id": "ecosistemas-colombia",
+            "fases": [
+              {
+                "id": "mapa",
+                "nombre": "El mapa",
+                "texto": "Colombia tiene casi todos los ecosistemas del trópico."
+              },
+              {
+                "id": "paramo",
+                "nombre": "Páramo",
+                "texto": "Alta montaña andina: frío, niebla y frailejones. Es una fábrica de agua."
+              },
+              {
+                "id": "selva",
+                "nombre": "Selva húmeda",
+                "texto": "Amazonía y Chocó: lluvia casi todo el año y muchísimas especies."
+              },
+              {
+                "id": "bosque-seco",
+                "nombre": "Bosque seco",
+                "texto": "Valles cálidos como el del Magdalena. La Tatacoa, en el Huila, es un bosque seco muy degradado."
+              },
+              {
+                "id": "sabana",
+                "nombre": "Sabana",
+                "texto": "Los Llanos de la Orinoquía: pastos, temporada de lluvias y de sequía."
+              },
+              {
+                "id": "manglar",
+                "nombre": "Manglar",
+                "texto": "Costas del Pacífico y del Caribe: árboles que viven en agua salada."
+              },
+              {
+                "id": "desierto",
+                "nombre": "Desierto",
+                "texto": "La Guajira: muy poca lluvia, cactus y arbustos espinosos.",
+                "nivel": "intermedio"
+              },
+              {
+                "id": "arrecife",
+                "nombre": "Arrecife de coral",
+                "texto": "San Andrés y las islas del Rosario: corales en aguas cálidas y claras.",
+                "nivel": "intermedio"
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "ecosistemas-co-juego",
+      "preguntas": [
+        {
+          "id": "ec-ec-1",
+          "enunciado": "¿Qué ecosistema es la Tatacoa, en el Huila?",
+          "opciones": [
+            "Un bosque seco tropical muy degradado",
+            "Un páramo",
+            "Un manglar",
+            "Una selva húmeda"
+          ],
+          "correcta": 0,
+          "explicacion": "Parece desierto, pero es bosque seco erosionado."
+        },
+        {
+          "id": "ec-ec-2",
+          "enunciado": "¿Por qué Colombia tiene tantos ecosistemas?",
+          "opciones": [
+            "Por sus montañas, sus dos mares y su ubicación en el trópico",
+            "Porque tiene cuatro estaciones",
+            "Porque está lejos del ecuador",
+            "Porque no tiene montañas"
+          ],
+          "correcta": 0,
+          "explicacion": "La altitud y los mares crean condiciones muy distintas."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "tolerancia",
+      "titulo": "Rango de tolerancia",
+      "resumen": "Cada especie vive solo en un rango de condiciones; el factor más alejado del óptimo la limita.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "intermedio",
+      "requiere": [
+        "bioticos-abioticos"
+      ],
+      "ficha": {
+        "idea": "Cada especie puede vivir solo dentro de un rango de condiciones de temperatura, agua, luz o sal: su rango de tolerancia. En la zona óptima vive y se reproduce mejor; en los extremos sobrevive con dificultad (estrés), y fuera del rango muere. El factor que más se aleja del óptimo es el factor limitante: decide cuántos individuos puede haber.",
+        "contexto": [
+          {
+            "titulo": "Especies sensibles",
+            "texto": "Las especies con rangos estrechos, como muchas ranas de páramo, son las primeras en desaparecer cuando el clima cambia."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Cada especie tiene un rango de tolerancia."
+          ],
+          "media": [
+            "Zona óptima, zonas de estrés y límites."
+          ],
+          "avanzada": [
+            "El factor limitante es el que más se aleja del óptimo."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué no crecen frailejones en Neiva ni cacao en el páramo?",
+          "actividad": "Graficar cuántas semillas de fríjol germinan con distintas cantidades de agua.",
+          "errores": [
+            "Creer que más de un factor (más agua, más luz) siempre es mejor."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Ni mucho ni poco",
+          "visual": {
+            "tipo": "escena",
+            "id": "tolerancia",
+            "fases": [
+              {
+                "id": "curva",
+                "nombre": "El rango",
+                "texto": "Cada especie tolera un rango de condiciones."
+              },
+              {
+                "id": "optimo",
+                "nombre": "Óptimo",
+                "texto": "En el centro viven y se reproducen mejor."
+              },
+              {
+                "id": "estres",
+                "nombre": "Estrés",
+                "texto": "Hacia los extremos sobreviven con dificultad."
+              },
+              {
+                "id": "limite",
+                "nombre": "Límites",
+                "texto": "Fuera del rango no sobreviven. El factor que más se aleja del óptimo es el limitante."
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "tolerancia-juego",
+      "preguntas": [
+        {
+          "id": "ec-to-1",
+          "enunciado": "¿Qué es el factor limitante?",
+          "opciones": [
+            "El factor que más se aleja del óptimo y limita a la población",
+            "El factor que siempre sobra",
+            "Un ser vivo que se come a otros",
+            "La temperatura del mar"
+          ],
+          "correcta": 0,
+          "explicacion": "Es el que decide cuántos individuos puede haber."
+        },
+        {
+          "id": "ec-to-2",
+          "enunciado": "¿Dónde hay más individuos de una especie?",
+          "opciones": [
+            "En la zona óptima de su rango",
+            "En los límites de su rango",
+            "Fuera de su rango",
+            "En cualquier parte por igual"
+          ],
+          "correcta": 0,
+          "explicacion": "Allí las condiciones son las mejores."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}
