@@ -387,3 +387,7 @@ Hooke usa la reconstrucción de Rita Greer (2004, Free Art License, Wikimedia Co
 - `herencia-no-mendeliana.json` (orden 26, ruta de 6 pasos): dominancia incompleta, codominancia (9°), grupos sanguíneos, ligada al sexo (9°), genealogías (9°) y poligénica + ambiente (11°).
 - Explora: `PunnettNoMendel` con tres modos (`punnett-incompleta`, `punnett-sangre`, `punnett-ligado`). Escenas en `escenas/EscenasNoMendel.tsx`; juegos en `diagramas/JuegosNoMendel.tsx`.
 - Los alelos se escriben con letras volteadas de Unicode (Iᴬ, Xᵈ): revisar que se vean bien en el computador del aula.
+
+## Área 2 · Tema 7 «Mutaciones y variación» (17 nov)
+- `mutaciones.json` (orden 27, ruta de 6 pasos): qué es (somática/germinal), puntuales (Explora: `muta-gen`, cambiar/quitar/agregar bases y ver la proteína y el tipo de mutación), efectos (9°, anemia falciforme), número de cromosomas (9°, no disyunción y trisomía 21), estructura de cromosomas (11°) y variación.
+- Escenas en `escenas/EscenasMutaciones.tsx`; juegos en `diagramas/JuegosMutaciones.tsx`.

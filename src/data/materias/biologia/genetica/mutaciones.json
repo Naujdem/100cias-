@@ -1,0 +1,671 @@
+{
+  "id": "mutaciones",
+  "materia": "biologia",
+  "area": "genetica",
+  "titulo": "Mutaciones y variación",
+  "subtema": "Cuando el ADN cambia",
+  "orden": 27,
+  "etiqueta": "7",
+  "vistas": [
+    "ruta"
+  ],
+  "tituloVista": "Ruta de las mutaciones",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Explicar qué es una mutación, sus causas y si se hereda.",
+    "Clasificar mutaciones puntuales, cromosómicas y numéricas.",
+    "Relacionar mutaciones y variación con la evolución."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con un texto de genética de bachillerato. A verificar: anemia falciforme (GAG→GTG, Glu→Val, 146 aminoácidos de la cadena beta), más de 8 millones de combinaciones de gametos (2^23)."
+  ],
+  "bloques": [
+    {
+      "id": "que-es",
+      "titulo": "¿Qué es una mutación?",
+      "resumen": "Una mutación es un cambio en el ADN. Puede venir de errores de copia o de mutágenos; solo las germinales pasan a los hijos.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "Una mutación es un cambio en la secuencia del ADN. Puede ocurrir por errores de copia que la célula no corrigió o por agentes externos llamados mutágenos, como la radiación ultravioleta, los rayos X o sustancias del humo del tabaco. Si ocurre en una célula del cuerpo (somática) afecta solo a esa persona; si ocurre en un óvulo o un espermatozoide (germinal), puede pasar a los hijos.",
+        "contexto": [
+          {
+            "titulo": "Protegerse",
+            "texto": "El protector solar y evitar el humo del tabaco reducen las mutaciones en las células de la piel y los pulmones."
+          },
+          {
+            "titulo": "Cáncer",
+            "texto": "Varias mutaciones somáticas acumuladas pueden hacer que una célula se divida sin control."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Una mutación es un cambio en el ADN.",
+            "Pueden deberse a errores de copia o a mutágenos."
+          ],
+          "media": [
+            "Somática: en el cuerpo, no se hereda. Germinal: en los gametos, se hereda."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Qué crees que hace el sol en las células de la piel?",
+          "actividad": "Clasificar ejemplos de mutágenos de la vida diaria y discutir cómo protegerse.",
+          "errores": [
+            "Creer que todas las mutaciones se heredan.",
+            "Pensar que las mutaciones dan «poderes»."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Un cambio en el ADN",
+          "visual": {
+            "tipo": "escena",
+            "id": "que-es-mutacion",
+            "fases": [
+              {
+                "id": "secuencia",
+                "nombre": "El ADN",
+                "texto": "Un tramo de ADN con su orden de bases."
+              },
+              {
+                "id": "cambio",
+                "nombre": "Una mutación",
+                "texto": "Una base cambió: G por T. Eso es una mutación."
+              },
+              {
+                "id": "causas",
+                "nombre": "Las causas",
+                "texto": "Errores de copia que se escapan, radiación (luz UV, rayos X), algunas sustancias como las del tabaco y algunos virus."
+              },
+              {
+                "id": "somatica",
+                "nombre": "Somática",
+                "texto": "Si ocurre en una célula del cuerpo, como la piel, afecta solo a esa persona."
+              },
+              {
+                "id": "germinal",
+                "nombre": "Germinal",
+                "texto": "Si ocurre en un óvulo o un espermatozoide, el hijo la tendrá en todas sus células."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre esto: errores de copia",
+            "tema": "replicacion-adn",
+            "bloque": "errores"
+          }
+        }
+      ],
+      "juego": "que-es-mutacion-juego",
+      "preguntas": [
+        {
+          "id": "mu-qe-1",
+          "enunciado": "¿Qué es una mutación?",
+          "opciones": [
+            "Un cambio en la secuencia del ADN",
+            "Una enfermedad contagiosa",
+            "Un tipo de célula del cuerpo",
+            "La copia normal del ADN"
+          ],
+          "correcta": 0,
+          "explicacion": "Es cualquier cambio en el orden de las bases del ADN."
+        },
+        {
+          "id": "mu-qe-2",
+          "enunciado": "¿Qué mutaciones pueden pasar a los hijos?",
+          "opciones": [
+            "Las que ocurren en óvulos o espermatozoides",
+            "Las que ocurren en la piel",
+            "Las que causa el sol",
+            "Ninguna mutación se hereda"
+          ],
+          "correcta": 0,
+          "explicacion": "Solo las germinales están en los gametos."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "puntuales",
+      "titulo": "Mutaciones puntuales",
+      "resumen": "Cambiar, quitar o agregar una base: algunas no cambian nada y otras cambian toda la proteína.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "requiere": [
+        "que-es"
+      ],
+      "ficha": {
+        "idea": "Las mutaciones puntuales afectan una o pocas bases. En una sustitución cambia una base: puede no cambiar el aminoácido (silenciosa), cambiar uno (de cambio de sentido) o crear una parada antes de tiempo (sin sentido). Si se quita (deleción) o se agrega (inserción) una base, todo lo que sigue se lee corrido: es un corrimiento del marco de lectura y la proteína queda muy distinta.",
+        "contexto": [
+          {
+            "titulo": "Como una frase",
+            "texto": "Si en «SOL PAN MAR LUZ» cambias una letra, cambia una palabra; si quitas una, todo lo que sigue pierde sentido."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Mutación puntual: cambia, se pierde o se agrega una base."
+          ],
+          "media": [
+            "Sustitución: silenciosa, de cambio de sentido o sin sentido.",
+            "Deleción o inserción: corrimiento del marco de lectura."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "Si a una frase le quitas una letra, ¿qué pasa con las palabras siguientes?",
+          "actividad": "Usar «Muta el gen» para encontrar un ejemplo de cada tipo de mutación.",
+          "errores": [
+            "Creer que toda mutación cambia la proteína.",
+            "Pensar que quitar una base solo cambia un aminoácido."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Una letra puede cambiarlo todo",
+          "visual": {
+            "tipo": "escena",
+            "id": "puntuales",
+            "fases": [
+              {
+                "id": "original",
+                "nombre": "La frase",
+                "texto": "Imagina que el gen se lee en palabras de tres letras."
+              },
+              {
+                "id": "sustitucion",
+                "nombre": "Sustitución",
+                "texto": "Cambia una letra: cambia una palabra (un aminoácido) o, a veces, ninguna."
+              },
+              {
+                "id": "delecion",
+                "nombre": "Deleción",
+                "texto": "Se pierde una letra: todo lo que sigue se lee corrido."
+              },
+              {
+                "id": "insercion",
+                "nombre": "Inserción",
+                "texto": "Se agrega una letra: también se corre la lectura."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre esto: el código genético",
+            "tema": "expresion-genica",
+            "bloque": "codigo"
+          }
+        }
+      ],
+      "juego": "puntuales-juego",
+      "diagrama": "muta-gen",
+      "preguntas": [
+        {
+          "id": "mu-pu-1",
+          "enunciado": "¿Qué es una mutación silenciosa?",
+          "opciones": [
+            "Un cambio de base que no cambia el aminoácido",
+            "Una mutación que no se puede ver con microscopio",
+            "La pérdida de un cromosoma",
+            "Un cambio que detiene la proteína"
+          ],
+          "correcta": 0,
+          "explicacion": "Como el código es redundante, el nuevo codón dice el mismo aminoácido."
+        },
+        {
+          "id": "mu-pu-2",
+          "enunciado": "¿Por qué una deleción de una base suele ser grave?",
+          "opciones": [
+            "Porque corre el marco de lectura de todo lo que sigue",
+            "Porque elimina todo el cromosoma",
+            "Porque cambia el ADN en ARN",
+            "Porque siempre es germinal"
+          ],
+          "correcta": 0,
+          "explicacion": "Todos los codones siguientes cambian."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "efectos",
+      "titulo": "Efectos de las mutaciones",
+      "resumen": "Las mutaciones pueden ser neutras, dañinas o útiles, y eso depende del ambiente: el caso de la anemia falciforme.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "intermedio",
+      "requiere": [
+        "puntuales"
+      ],
+      "ficha": {
+        "idea": "La mayoría de las mutaciones son neutras; algunas son dañinas y unas pocas resultan útiles. Que sea útil o dañina depende del ambiente. En la anemia falciforme, un solo cambio de base en el gen de la hemoglobina cambia un aminoácido (ácido glutámico por valina); los glóbulos rojos toman forma de hoz y se rompen. Pero tener un solo alelo con esa mutación protege contra la malaria.",
+        "contexto": [
+          {
+            "titulo": "Una mutación útil",
+            "texto": "En pueblos que criaban ganado se volvió común una mutación que permite digerir la leche en la adultez."
+          },
+          {
+            "titulo": "Resistencia",
+            "texto": "Las bacterias con mutaciones que resisten un antibiótico sobreviven y se multiplican: por eso hay que usarlos bien."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Las mutaciones pueden ser neutras, dañinas o útiles."
+          ],
+          "media": [
+            "La anemia falciforme se debe a un solo cambio de base.",
+            "Un alelo de la falciforme protege contra la malaria."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Puede algo dañino ser útil en otro lugar?",
+          "actividad": "Comparar la frecuencia de la anemia falciforme en zonas con y sin malaria.",
+          "errores": [
+            "Creer que toda mutación es dañina.",
+            "Pensar que la mutación aparece para proteger contra la malaria."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Una base, un glóbulo en forma de hoz",
+          "visual": {
+            "tipo": "escena",
+            "id": "falciforme",
+            "fases": [
+              {
+                "id": "codon",
+                "nombre": "Una base",
+                "texto": "En el gen de la hemoglobina, GAG cambia a GTG."
+              },
+              {
+                "id": "aminoacido",
+                "nombre": "Un aminoácido",
+                "texto": "El ácido glutámico (Glu) cambia por valina (Val): uno de 146."
+              },
+              {
+                "id": "hemoglobina",
+                "nombre": "Se pegan",
+                "texto": "Las hemoglobinas cambiadas se pegan entre sí y forman fibras."
+              },
+              {
+                "id": "globulo",
+                "nombre": "En forma de hoz",
+                "texto": "El glóbulo rojo se deforma, se atasca en los vasos y se rompe fácil."
+              },
+              {
+                "id": "malaria",
+                "nombre": "Según el ambiente",
+                "texto": "Tener un solo alelo con la mutación protege contra la malaria: por eso es más común donde hay malaria."
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "efectos-juego",
+      "preguntas": [
+        {
+          "id": "mu-ef-1",
+          "enunciado": "¿Qué causa la anemia falciforme?",
+          "opciones": [
+            "El cambio de una base en el gen de la hemoglobina",
+            "La falta de hierro en la comida",
+            "Un cromosoma de más",
+            "Un virus de la sangre"
+          ],
+          "correcta": 0,
+          "explicacion": "GAG → GTG cambia un aminoácido de la hemoglobina."
+        },
+        {
+          "id": "mu-ef-2",
+          "enunciado": "¿Por qué la mutación de la anemia falciforme es más común en zonas con malaria?",
+          "opciones": [
+            "Porque un solo alelo protege contra la malaria",
+            "Porque la malaria causa la mutación",
+            "Porque se contagia con el mosquito",
+            "Porque allí no hay hemoglobina"
+          ],
+          "correcta": 0,
+          "explicacion": "Los portadores sobreviven mejor a la malaria y pasan el alelo."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "numericas",
+      "titulo": "Cambios en el número de cromosomas",
+      "resumen": "Si un par no se separa en la meiosis, se forman gametos con un cromosoma de más o de menos: así se origina la trisomía 21.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "intermedio",
+      "requiere": [
+        "que-es"
+      ],
+      "ficha": {
+        "idea": "A veces, en la meiosis, un par de cromosomas no se separa (no disyunción). Se forman gametos con un cromosoma de más o de menos. Si uno con un cromosoma de más es fecundado, el embrión tiene tres copias de ese cromosoma: una trisomía. La trisomía del cromosoma 21 da lugar al síndrome de Down. En las plantas, tener muchos juegos completos de cromosomas (poliploidía) es común: el trigo y la fresa son poliploides.",
+        "contexto": [
+          {
+            "titulo": "Otros ejemplos",
+            "texto": "El síndrome de Turner (un solo X) y el de Klinefelter (XXY) son cambios en los cromosomas sexuales."
+          },
+          {
+            "titulo": "Personas, no síndromes",
+            "texto": "Las personas con síndrome de Down estudian, trabajan y participan en su comunidad; el apoyo temprano marca una gran diferencia."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Algunas mutaciones cambian el número de cromosomas."
+          ],
+          "media": [
+            "La no disyunción en la meiosis produce gametos con un cromosoma de más o de menos.",
+            "Tres cromosomas 21: síndrome de Down."
+          ],
+          "avanzada": [
+            "La poliploidía es común en plantas cultivadas."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Qué pasaría si en la meiosis un par de cromosomas no se separara?",
+          "actividad": "Simular la meiosis con cromosomas de papel y provocar una no disyunción.",
+          "errores": [
+            "Creer que el síndrome de Down se contagia.",
+            "Usar lenguaje que reduce a la persona a su condición."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Un par que no se separa",
+          "visual": {
+            "tipo": "escena",
+            "id": "no-disyuncion",
+            "fases": [
+              {
+                "id": "normal",
+                "nombre": "Lo normal",
+                "texto": "En la meiosis, los dos cromosomas de cada par se separan: uno a cada gameto."
+              },
+              {
+                "id": "no-disyuncion",
+                "nombre": "No disyunción",
+                "texto": "A veces un par no se separa y los dos van al mismo lado."
+              },
+              {
+                "id": "gametos",
+                "nombre": "Gametos distintos",
+                "texto": "Queda un gameto sin ese cromosoma y otro con dos copias."
+              },
+              {
+                "id": "trisomia",
+                "nombre": "Trisomía 21",
+                "texto": "Si el gameto con dos copias del 21 es fecundado, el embrión tiene tres: 47 cromosomas, síndrome de Down."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre esto: la meiosis",
+            "tema": "meiosis",
+            "bloque": "meiosis-i"
+          }
+        }
+      ],
+      "juego": "numericas-juego",
+      "preguntas": [
+        {
+          "id": "mu-nu-1",
+          "enunciado": "¿Cuántos cromosomas tiene una persona con síndrome de Down?",
+          "opciones": [
+            "47, con tres cromosomas 21",
+            "46, como todos",
+            "45, le falta el 21",
+            "92, el doble"
+          ],
+          "correcta": 0,
+          "explicacion": "Tiene una copia de más del cromosoma 21."
+        },
+        {
+          "id": "mu-nu-2",
+          "enunciado": "¿Qué es la no disyunción?",
+          "opciones": [
+            "Que un par de cromosomas no se separe en la meiosis",
+            "Que el ADN no se copie en la fase S",
+            "Que un gen cambie una base",
+            "Que dos cromosomas se fusionen"
+          ],
+          "correcta": 0,
+          "explicacion": "Produce gametos con un cromosoma de más o de menos."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "cromosomicas",
+      "titulo": "Cambios en la estructura de los cromosomas",
+      "resumen": "Un trozo de cromosoma puede perderse, repetirse, voltearse o cambiarse de lugar.",
+      "anio": 5,
+      "etiqueta": "Paso 5",
+      "nivel": "avanzado",
+      "requiere": [
+        "que-es"
+      ],
+      "ficha": {
+        "idea": "Algunas mutaciones afectan trozos grandes de un cromosoma, con muchos genes. En una deleción se pierde un trozo; en una duplicación, un trozo se repite; en una inversión, un trozo se da la vuelta, y en una translocación, dos cromosomas intercambian trozos. Suelen ocurrir por roturas del ADN que se reparan mal.",
+        "contexto": [
+          {
+            "titulo": "Duplicaciones y evolución",
+            "texto": "Cuando un gen se duplica, una copia puede seguir con su función y la otra cambiar: así aparecieron genes nuevos, como los de la visión de colores."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Las mutaciones cromosómicas afectan trozos grandes de un cromosoma."
+          ],
+          "media": [
+            "Deleción, duplicación, inversión y translocación."
+          ],
+          "avanzada": [
+            "Las duplicaciones permiten que aparezcan genes nuevos."
+          ]
+        },
+        "docente": {
+          "abrir": "Si cortas una tira de papel con letras y la pegas mal, ¿qué formas puede tomar?",
+          "actividad": "Recortar tiras A-B-C-D-E-F y representar los cuatro tipos.",
+          "errores": [
+            "Confundir inversión con translocación."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Trozos que se mueven",
+          "visual": {
+            "tipo": "escena",
+            "id": "cromosomicas",
+            "fases": [
+              {
+                "id": "original",
+                "nombre": "El original",
+                "texto": "Un cromosoma con sus trozos en orden: A-B-C-D-E-F."
+              },
+              {
+                "id": "delecion",
+                "nombre": "Deleción",
+                "texto": "Se pierde un trozo: A-B-D-E-F."
+              },
+              {
+                "id": "duplicacion",
+                "nombre": "Duplicación",
+                "texto": "Un trozo se repite: A-B-C-C-D-E-F."
+              },
+              {
+                "id": "inversion",
+                "nombre": "Inversión",
+                "texto": "Un trozo se da la vuelta: A-B-E-D-C-F."
+              },
+              {
+                "id": "translocacion",
+                "nombre": "Translocación",
+                "texto": "Dos cromosomas distintos intercambian trozos."
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "cromosomicas-juego",
+      "preguntas": [
+        {
+          "id": "mu-cr-1",
+          "enunciado": "Un cromosoma A-B-C-D-E-F queda A-B-E-D-C-F. ¿Qué mutación es?",
+          "opciones": [
+            "Inversión",
+            "Deleción",
+            "Duplicación",
+            "Translocación"
+          ],
+          "correcta": 0,
+          "explicacion": "El trozo C-D-E se dio la vuelta."
+        },
+        {
+          "id": "mu-cr-2",
+          "enunciado": "¿Qué es una translocación?",
+          "opciones": [
+            "El intercambio de trozos entre cromosomas distintos",
+            "La pérdida de un trozo de cromosoma",
+            "La repetición de un trozo",
+            "Un cromosoma de más"
+          ],
+          "correcta": 0,
+          "explicacion": "Un trozo pasa a otro cromosoma que no es su pareja."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "variacion",
+      "titulo": "De dónde sale la variación",
+      "resumen": "Mutación, recombinación y fecundación hacen que cada ser vivo sea único: es la materia prima de la evolución.",
+      "anio": 6,
+      "etiqueta": "Paso 6",
+      "nivel": "basico",
+      "requiere": [
+        "que-es"
+      ],
+      "ficha": {
+        "idea": "Los hijos de los mismos padres son distintos entre sí. La variación tiene tres fuentes: las mutaciones, que crean alelos nuevos; la recombinación en la meiosis, que mezcla los alelos de los cromosomas; y la fecundación, que junta un óvulo y un espermatozoide al azar. Esa variación es la materia prima de la evolución: la selección natural favorece los rasgos que ayudan a sobrevivir.",
+        "contexto": [
+          {
+            "titulo": "Solo la mutación crea",
+            "texto": "La recombinación y la fecundación barajan lo que ya existe; solo la mutación crea alelos nuevos."
+          },
+          {
+            "titulo": "Combinaciones",
+            "texto": "Solo por cómo se reparten los 23 pares de cromosomas, una persona puede formar más de 8 millones de gametos distintos."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "La variación hace que cada ser vivo sea único.",
+            "Sus fuentes son la mutación, la recombinación y la fecundación."
+          ],
+          "media": [
+            "Solo la mutación crea alelos nuevos."
+          ],
+          "avanzada": [
+            "La variación es la materia prima de la evolución."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué los hermanos no son idénticos (salvo los gemelos idénticos)?",
+          "actividad": "Lanzar monedas para simular cómo se reparten los alelos y comparar «hermanos».",
+          "errores": [
+            "Creer que las mutaciones aparecen porque el organismo las necesita."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Todos distintos",
+          "visual": {
+            "tipo": "escena",
+            "id": "variacion",
+            "fases": [
+              {
+                "id": "familia",
+                "nombre": "Hermanos distintos",
+                "texto": "Los hijos de los mismos padres son distintos. ¿Por qué?"
+              },
+              {
+                "id": "mutacion",
+                "nombre": "Mutaciones",
+                "texto": "Crean alelos nuevos, que antes no existían."
+              },
+              {
+                "id": "recombinacion",
+                "nombre": "Recombinación",
+                "texto": "En la meiosis, los cromosomas de cada par intercambian trozos y se reparten al azar."
+              },
+              {
+                "id": "fecundacion",
+                "nombre": "Fecundación",
+                "texto": "Cualquier óvulo puede unirse con cualquier espermatozoide."
+              },
+              {
+                "id": "evolucion",
+                "nombre": "Evolución",
+                "texto": "Sobre esa variación actúa la selección natural."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre esto: la variedad en la meiosis",
+            "tema": "meiosis",
+            "bloque": "variedad"
+          }
+        }
+      ],
+      "juego": "variacion-juego",
+      "preguntas": [
+        {
+          "id": "mu-va-1",
+          "enunciado": "¿Cuál es la única fuente de variación que crea alelos nuevos?",
+          "opciones": [
+            "La mutación",
+            "La recombinación",
+            "La fecundación",
+            "La mitosis"
+          ],
+          "correcta": 0,
+          "explicacion": "Las otras combinan alelos que ya existen."
+        },
+        {
+          "id": "mu-va-2",
+          "enunciado": "¿Por qué es importante la variación para la evolución?",
+          "opciones": [
+            "Porque la selección natural actúa sobre las diferencias",
+            "Porque hace que todos sean iguales",
+            "Porque evita las mutaciones",
+            "Porque cambia el ADN a voluntad"
+          ],
+          "correcta": 0,
+          "explicacion": "Sin diferencias no habría nada que seleccionar."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}
