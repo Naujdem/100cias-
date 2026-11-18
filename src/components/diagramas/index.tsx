@@ -117,6 +117,8 @@ import PreparadorSoluciones from './PreparadorSoluciones.tsx'
 import ReactorColisiones from './ReactorColisiones.tsx'
 import BalancinChatelier from './BalancinChatelier.tsx'
 import EscalaPh from './EscalaPh.tsx'
+import CalculadoraColigativa from './CalculadoraColigativa.tsx'
+import { ColigativaJuego, CrioscopiaJuego, OsmosisJuego } from './JuegosColigativas.tsx'
 import { AcidoOBaseJuego, PhJuego, IndicadorJuego, SueloPhJuego, FuerteDebilJuego, BronstedJuego } from './JuegosAcidosBases.tsx'
 import { ReversibleJuego, EquilibrioJuego, ChatelierJuego, KcJuego, EquilibrioVidaJuego } from './JuegosEquilibrio.tsx'
 import { RapidaLentaJuego, MasRapidoJuego, ColisionJuego, ActivacionJuego, ConservarAlimentosJuego } from './JuegosCinetica.tsx'
@@ -617,6 +619,10 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'suelo-ph-juego': SueloPhJuego,
   'fuerte-debil-juego': FuerteDebilJuego,
   'bronsted-juego': BronstedJuego,
+  'calculadora-coligativa': CalculadoraColigativa,
+  'coligativa-juego': ColigativaJuego,
+  'crioscopia-juego': CrioscopiaJuego,
+  'osmosis-quimica-juego': OsmosisJuego,
   'tipos-radiacion-juego': TiposRadiacionJuego,
   'vida-media-juego': VidaMediaJuego,
   'usos-nucleares-juego': UsosNuclearesJuego,
