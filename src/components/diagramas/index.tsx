@@ -103,6 +103,7 @@ import FormadorOxidos from './FormadorOxidos.tsx'
 import { FuncionesJuego, FormulaOxidosJuego, SistemaNombreJuego, HidroxidosJuego } from './JuegosNomenclatura.tsx'
 import FabricaCompuestos from './FabricaCompuestos.tsx'
 import { HidracidosJuego, OsoIcoJuego, AnionesJuego, SalesJuego } from './JuegosAcidosSales.tsx'
+import { PartesEcuacionJuego, SintesisDescomposicionJuego, DesplazamientoJuego, TiposReaccionJuego, ExoEndoJuego } from './JuegosReacciones.tsx'
 import { IntraInterJuego, GeometriaJuego, MoleculaPolarJuego, FuerzaJuego, DisuelveJuego } from './JuegosFuerzas.tsx'
 import { OctetoJuego, TipoEnlaceJuego, PolarJuego, LewisJuego } from './JuegosEnlace.tsx'
 import { RadioJuego, IonizacionJuego, ElectronegatividadJuego, MetalicoJuego } from './JuegosPeriodicas.tsx'
@@ -518,6 +519,11 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'oso-ico-juego': OsoIcoJuego,
   'aniones-juego': AnionesJuego,
   'sales-juego': SalesJuego,
+  'partes-ecuacion-juego': PartesEcuacionJuego,
+  'sintesis-descomposicion-juego': SintesisDescomposicionJuego,
+  'desplazamiento-juego': DesplazamientoJuego,
+  'tipos-reaccion-juego': TiposReaccionJuego,
+  'exo-endo-juego': ExoEndoJuego,
   'tipos-radiacion-juego': TiposRadiacionJuego,
   'vida-media-juego': VidaMediaJuego,
   'usos-nucleares-juego': UsosNuclearesJuego,

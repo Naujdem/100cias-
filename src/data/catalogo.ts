@@ -46,7 +46,6 @@ export const PROXIMOS: Record<string, { etiqueta: string; nombre: string }[]> = 
   atomo: [
   ],
   reacciones: [
-    { etiqueta: '4', nombre: 'Reacciones y ecuaciones químicas' },
     { etiqueta: '5', nombre: 'Balanceo de ecuaciones' },
     { etiqueta: '6', nombre: 'Leyes ponderales' },
     { etiqueta: '7', nombre: 'El mol' },

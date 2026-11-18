@@ -1,0 +1,661 @@
+{
+  "id": "reacciones-ecuaciones",
+  "materia": "quimica",
+  "area": "reacciones",
+  "titulo": "Reacciones y ecuaciones químicas",
+  "subtema": "Cómo se escribe una reacción y qué tipos hay",
+  "orden": 124,
+  "etiqueta": "4",
+  "vistas": [
+    "ruta"
+  ],
+  "tituloVista": "Ruta de las reacciones químicas",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Identificar las partes de una ecuación química.",
+    "Clasificar reacciones en síntesis, descomposición, desplazamiento simple y doble, combustión y neutralización.",
+    "Reconocer reacciones químicas en la cocina, el campo y los seres vivos.",
+    "Diferenciar reacciones exotérmicas y endotérmicas."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con un texto de química de bachillerato (clasificación de reacciones, símbolos de estado, ejemplos de calcinación de la caliza, clavo en sulfato de cobre y precipitado de cloruro de plata)."
+  ],
+  "bloques": [
+    {
+      "id": "ecuacion",
+      "titulo": "La ecuación química",
+      "resumen": "Reactivos → productos, con coeficientes, subíndices y estados.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "Una reacción química transforma unas sustancias, los reactivos, en otras nuevas, los productos: los átomos no desaparecen, se reorganizan rompiendo y formando enlaces. La ecuación química es la manera de escribirla: los reactivos a la izquierda, una flecha que se lee «produce» y los productos a la derecha, separados por signos +. Ejemplo, el gas de la estufa: CH₄ + 2 O₂ → CO₂ + 2 H₂O. Los subíndices (el 4 de CH₄) dicen cuántos átomos hay en cada molécula y no se pueden cambiar; los coeficientes (el 2 de 2 O₂) dicen cuántas moléculas participan. Entre paréntesis se indica el estado: (s) sólido, (l) líquido, (g) gas y (ac) disuelto en agua. Sobre la flecha puede ir Δ si hace falta calor.",
+        "contexto": [
+          {
+            "titulo": "Una receta",
+            "texto": "Una ecuación es como una receta: dice qué ingredientes se usan, en qué cantidades y qué sale."
+          },
+          {
+            "titulo": "Ida y vuelta",
+            "texto": "Algunas reacciones pueden ir en los dos sentidos; se escriben con una doble flecha (⇌) y se estudian en el equilibrio químico."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Reactivos → productos. Los átomos se reorganizan, no desaparecen."
+          ],
+          "media": [
+            "Coeficiente: cuántas moléculas (2 H₂O). Subíndice: cuántos átomos en la molécula (H₂O)."
+          ],
+          "avanzada": [
+            "Estados: (s), (l), (g), (ac). Δ: calor. ⇌: reacción reversible."
+          ]
+        },
+        "docente": {
+          "abrir": "Cuando se quema la leña, ¿a dónde se va la madera?",
+          "actividad": "Con plastilina de colores, armar CH₄ y dos O₂, desarmarlos y armar CO₂ y dos H₂O sin que sobre ni falte una bolita.",
+          "errores": [
+            "Cambiar subíndices para «arreglar» la ecuación.",
+            "Leer el coeficiente como si multiplicara solo al primer átomo."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿A dónde se va la leña?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Cuando la leña se quema, queda muy poca ceniza. ¿Qué crees que pasó con la mayor parte de la madera?",
+            "opciones": [
+              "Se convirtió en gases (CO₂ y vapor de agua) que se fueron al aire",
+              "Desapareció",
+              "Se volvió energía pura",
+              "Se hundió en el suelo"
+            ],
+            "correcta": 0,
+            "explicacion": "La materia no desaparece: se transforma en otras sustancias."
+          }
+        },
+        {
+          "titulo": "Las partes de la ecuación",
+          "visual": {
+            "tipo": "escena",
+            "id": "re-ecuacion",
+            "fases": [
+              {
+                "id": "reactivos",
+                "nombre": "Reactivos",
+                "texto": "Lo que entra: metano y oxígeno."
+              },
+              {
+                "id": "productos",
+                "nombre": "Productos",
+                "texto": "Lo que sale: dióxido de carbono y agua."
+              },
+              {
+                "id": "numeros",
+                "nombre": "Coeficientes y subíndices",
+                "texto": "El número grande cuenta moléculas; el pequeño, átomos."
+              },
+              {
+                "id": "estados",
+                "nombre": "Estados",
+                "texto": "(g) gas, (l) líquido, (s) sólido, (ac) en agua.",
+                "nivel": "intermedio"
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre las señales de un cambio químico",
+            "tema": "cambios-materia",
+            "bloque": "senales"
+          }
+        }
+      ],
+      "juego": "partes-ecuacion-juego",
+      "preguntas": [
+        {
+          "id": "qe-ec-1",
+          "enunciado": "En una ecuación química, ¿dónde se escriben los reactivos?",
+          "opciones": [
+            "A la izquierda de la flecha",
+            "A la derecha de la flecha",
+            "Encima de la flecha",
+            "Entre paréntesis"
+          ],
+          "correcta": 0,
+          "explicacion": "La flecha se lee «produce»."
+        },
+        {
+          "id": "qe-ec-2",
+          "enunciado": "En 3 H₂O, ¿qué indica el 3?",
+          "opciones": [
+            "Que hay tres moléculas de agua",
+            "Que el agua tiene tres hidrógenos",
+            "Que hay tres oxígenos por molécula",
+            "Que el agua está en estado 3"
+          ],
+          "correcta": 0,
+          "explicacion": "Es un coeficiente."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "sintesis-descomposicion",
+      "titulo": "Síntesis y descomposición",
+      "resumen": "Síntesis: varias sustancias forman una. Descomposición: una se rompe en varias.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "requiere": [
+        "ecuacion"
+      ],
+      "ficha": {
+        "idea": "En una reacción de síntesis (o combinación), dos o más sustancias se unen para formar una sola: A + B → AB. Ejemplos: el hierro con el oxígeno forma óxido (4 Fe + 3 O₂ → 2 Fe₂O₃) y la cal viva con agua forma cal apagada (CaO + H₂O → Ca(OH)₂). La descomposición es lo contrario: una sustancia se rompe en dos o más, AB → A + B, casi siempre con calor, luz o electricidad. Ejemplos: al calentar la piedra caliza se obtiene cal viva (CaCO₃ → CaO + CO₂, la calcinación de los hornos de cal) y la electricidad separa el agua en hidrógeno y oxígeno (2 H₂O → 2 H₂ + O₂).",
+        "contexto": [
+          {
+            "titulo": "Hornos de cal",
+            "texto": "En varias regiones de Colombia se calcina piedra caliza en hornos para obtener cal viva, que luego se apaga con agua para encalar suelos y construir."
+          },
+          {
+            "titulo": "El agua oxigenada",
+            "texto": "Con la luz se descompone sola: 2 H₂O₂ → 2 H₂O + O₂. Por eso se guarda en frasco oscuro."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Síntesis: A + B → AB. Descomposición: AB → A + B."
+          ],
+          "media": [
+            "Calcinación de la caliza: CaCO₃ → CaO + CO₂."
+          ],
+          "avanzada": [
+            "Electrólisis del agua: 2 H₂O → 2 H₂ + O₂ (con corriente eléctrica)."
+          ]
+        },
+        "docente": {
+          "abrir": "¿De dónde sale la cal que se le echa al suelo?",
+          "actividad": "Electrólisis del agua con una pila de 9 V, dos minas de lápiz y agua con sal: observar las burbujas en cada electrodo.",
+          "errores": [
+            "Pensar que en la descomposición la sustancia «se acaba» sin dar productos."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Unir y separar",
+          "visual": {
+            "tipo": "escena",
+            "id": "re-tipos",
+            "fases": [
+              {
+                "id": "sintesis",
+                "nombre": "Síntesis",
+                "texto": "A + B → AB: dos sustancias forman una."
+              },
+              {
+                "id": "descomposicion",
+                "nombre": "Descomposición",
+                "texto": "AB → A + B: una sustancia se rompe en varias."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Del horno de cal al suelo",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🔥",
+                "titulo": "Descomposición",
+                "texto": "CaCO₃ → CaO + CO₂ (horno)"
+              },
+              {
+                "icono": "💧",
+                "titulo": "Síntesis",
+                "texto": "CaO + H₂O → Ca(OH)₂ (cal apagada)"
+              },
+              {
+                "icono": "🌱",
+                "titulo": "Al suelo",
+                "texto": "Sube el pH de los suelos ácidos"
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre la cal y los hidróxidos",
+            "tema": "oxidos-hidroxidos",
+            "bloque": "hidroxidos"
+          }
+        }
+      ],
+      "juego": "sintesis-descomposicion-juego",
+      "preguntas": [
+        {
+          "id": "qe-sd-1",
+          "enunciado": "¿Qué tipo de reacción es CaCO₃ → CaO + CO₂?",
+          "opciones": [
+            "Descomposición",
+            "Síntesis",
+            "Desplazamiento simple",
+            "Combustión"
+          ],
+          "correcta": 0,
+          "explicacion": "Una sustancia se rompe en dos."
+        },
+        {
+          "id": "qe-sd-2",
+          "enunciado": "¿Cuál es la forma general de una síntesis?",
+          "opciones": [
+            "A + B → AB",
+            "AB → A + B",
+            "A + BC → AC + B",
+            "AB + CD → AD + CB"
+          ],
+          "correcta": 0,
+          "explicacion": "Varias sustancias forman una."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "desplazamiento",
+      "titulo": "Desplazamiento simple y doble",
+      "resumen": "Un elemento saca a otro de su compuesto, o dos compuestos intercambian sus parejas.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "intermedio",
+      "requiere": [
+        "sintesis-descomposicion"
+      ],
+      "ficha": {
+        "idea": "En el desplazamiento simple, un elemento reemplaza a otro dentro de un compuesto: A + BC → AC + B. Si se mete un clavo de hierro en una solución azul de sulfato de cobre, el hierro saca al cobre, que se pega rojizo al clavo: Fe + CuSO₄ → FeSO₄ + Cu. El zinc en ácido clorhídrico saca al hidrógeno: Zn + 2 HCl → ZnCl₂ + H₂. Solo ocurre si el elemento que entra es más activo que el que sale. En el doble desplazamiento, dos compuestos intercambian sus iones: AB + CD → AD + CB. Por ejemplo, AgNO₃ + NaCl → AgCl + NaNO₃, donde el cloruro de plata aparece como un sólido blanco (precipitado). La neutralización es un doble desplazamiento.",
+        "contexto": [
+          {
+            "titulo": "La serie de actividad",
+            "texto": "Los metales se ordenan de más a menos activos: K > Na > Ca > Mg > Al > Zn > Fe > Pb > H > Cu > Ag > Au. Uno puede desplazar a los que están a su derecha; por eso el oro no reacciona casi con nada."
+          },
+          {
+            "titulo": "Pareja de baile",
+            "texto": "El doble desplazamiento es como un baile en el que dos parejas cambian de compañero."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Simple: A + BC → AC + B. Doble: AB + CD → AD + CB."
+          ],
+          "media": [
+            "Fe + CuSO₄ → FeSO₄ + Cu (el clavo se cubre de cobre)."
+          ],
+          "avanzada": [
+            "El simple solo ocurre si A es más activo que B (serie de actividad)."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Cómo puede un clavo volverse color cobre?",
+          "actividad": "Clavo limpio en una solución de sulfato de cobre (el que se usa en el caldo bordelés) durante 15 minutos; observar el clavo y el color de la solución.",
+          "errores": [
+            "Confundir el doble desplazamiento con dos reacciones simples.",
+            "Creer que cualquier metal desplaza a cualquier otro."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Sacar o intercambiar",
+          "visual": {
+            "tipo": "escena",
+            "id": "re-tipos",
+            "fases": [
+              {
+                "id": "simple",
+                "nombre": "Desplazamiento simple",
+                "texto": "A + BC → AC + B: un elemento saca a otro."
+              },
+              {
+                "id": "doble",
+                "nombre": "Doble desplazamiento",
+                "texto": "AB + CD → AD + CB: se intercambian las parejas."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "El clavo cobrizo",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🔩",
+            "valor": "Fe + CuSO₄ → FeSO₄ + Cu",
+            "texto": "El hierro es más activo que el cobre y lo saca de la solución."
+          }
+        },
+        {
+          "titulo": "¿Qué crees?",
+          "nivel": "avanzado",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Si metes un anillo de oro en ácido clorhídrico, ¿qué pasa?",
+            "opciones": [
+              "Nada: el oro es menos activo que el hidrógeno",
+              "El oro desplaza al hidrógeno",
+              "Se forma cloruro de oro y burbujas",
+              "El ácido se vuelve base"
+            ],
+            "correcta": 0,
+            "explicacion": "El oro está al final de la serie de actividad."
+          }
+        }
+      ],
+      "juego": "desplazamiento-juego",
+      "preguntas": [
+        {
+          "id": "qe-de-1",
+          "enunciado": "¿Qué tipo de reacción es Zn + 2 HCl → ZnCl₂ + H₂?",
+          "opciones": [
+            "Desplazamiento simple",
+            "Doble desplazamiento",
+            "Síntesis",
+            "Descomposición"
+          ],
+          "correcta": 0,
+          "explicacion": "El zinc saca al hidrógeno."
+        },
+        {
+          "id": "qe-de-2",
+          "enunciado": "¿Qué es un precipitado?",
+          "opciones": [
+            "Un sólido que se forma en una solución",
+            "Un gas que burbujea",
+            "Un líquido que se evapora",
+            "Un ácido fuerte"
+          ],
+          "correcta": 0,
+          "explicacion": "Como el AgCl blanco."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "combustion",
+      "titulo": "Combustión y neutralización",
+      "resumen": "Combustión: un combustible con oxígeno da CO₂, agua y energía. Neutralización: ácido + base → sal + agua.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "basico",
+      "requiere": [
+        "ecuacion"
+      ],
+      "ficha": {
+        "idea": "La combustión es la reacción de un combustible con oxígeno que libera energía como calor y luz. Si el combustible tiene carbono e hidrógeno (leña, gas, gasolina, velas) y hay suficiente oxígeno, los productos son dióxido de carbono y agua: C₃H₈ + 5 O₂ → 3 CO₂ + 4 H₂O (el gas propano de la pipeta). Si falta oxígeno, la combustión es incompleta y produce monóxido de carbono (CO), un gas tóxico sin olor, y hollín. La neutralización es la reacción de un ácido con una base (hidróxido) que produce una sal y agua: HCl + NaOH → NaCl + H₂O. En la vida, la respiración celular es una «combustión lenta» de la glucosa dentro de las células.",
+        "contexto": [
+          {
+            "titulo": "Cuidado con el fogón cerrado",
+            "texto": "Un fogón de leña o un calentador de gas en un cuarto sin ventilación produce monóxido de carbono, que puede intoxicar y matar. Siempre hay que ventilar."
+          },
+          {
+            "titulo": "Neutralizar en la casa",
+            "texto": "El antiácido (una base) neutraliza el exceso de ácido del estómago; la cal neutraliza la acidez del suelo."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Combustión: combustible + oxígeno → CO₂ + agua + energía."
+          ],
+          "media": [
+            "Incompleta (poco oxígeno): CO tóxico y hollín. Neutralización: ácido + base → sal + agua."
+          ],
+          "avanzada": [
+            "Respiración: C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O + energía."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué una llama azul es mejor que una amarilla?",
+          "actividad": "Vela encendida tapada con un vaso: medir cuánto dura y ver el hollín cuando se acaba el oxígeno.",
+          "errores": [
+            "Pensar que el fuego es una sustancia.",
+            "Creer que el CO y el CO₂ son lo mismo."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "El fogón",
+          "visual": {
+            "tipo": "escena",
+            "id": "re-combustion",
+            "fases": [
+              {
+                "id": "completa",
+                "nombre": "Combustión completa",
+                "texto": "Suficiente oxígeno: llama azul, CO₂ y agua."
+              },
+              {
+                "id": "incompleta",
+                "nombre": "Combustión incompleta",
+                "texto": "Poco oxígeno: llama amarilla, hollín y CO tóxico.",
+                "nivel": "intermedio",
+                "marcas": [
+                  {
+                    "x": 200,
+                    "y": 70,
+                    "texto": "El monóxido de carbono no tiene olor ni color: por eso hay que ventilar la cocina."
+                  }
+                ]
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre la respiración celular",
+            "tema": "metabolismo-celular",
+            "bloque": "respiracion-fermentacion"
+          }
+        },
+        {
+          "titulo": "Ácido + base",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "⚖️",
+            "valor": "HCl + NaOH → NaCl + H₂O",
+            "texto": "La neutralización da una sal y agua."
+          },
+          "atajo": {
+            "texto": "Más sobre las sales",
+            "tema": "acidos-sales",
+            "bloque": "sales"
+          }
+        },
+        {
+          "titulo": "Seis tipos de reacción",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🔗",
+                "titulo": "Síntesis",
+                "texto": "A + B → AB"
+              },
+              {
+                "icono": "💥",
+                "titulo": "Descomposición",
+                "texto": "AB → A + B"
+              },
+              {
+                "icono": "🔁",
+                "titulo": "Desplazamiento simple",
+                "texto": "A + BC → AC + B"
+              },
+              {
+                "icono": "💃",
+                "titulo": "Doble desplazamiento",
+                "texto": "AB + CD → AD + CB"
+              },
+              {
+                "icono": "🔥",
+                "titulo": "Combustión",
+                "texto": "combustible + O₂ → CO₂ + H₂O"
+              },
+              {
+                "icono": "⚖️",
+                "titulo": "Neutralización",
+                "texto": "ácido + base → sal + agua"
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "tipos-reaccion-juego",
+      "preguntas": [
+        {
+          "id": "qe-co-1",
+          "enunciado": "¿Qué productos da la combustión completa de un combustible con carbono e hidrógeno?",
+          "opciones": [
+            "Dióxido de carbono y agua",
+            "Monóxido de carbono y hollín",
+            "Oxígeno e hidrógeno",
+            "Sal y agua"
+          ],
+          "correcta": 0,
+          "explicacion": "Con suficiente oxígeno."
+        },
+        {
+          "id": "qe-co-2",
+          "enunciado": "¿Qué se forma en una neutralización?",
+          "opciones": [
+            "Una sal y agua",
+            "Un óxido y oxígeno",
+            "Un ácido más fuerte",
+            "Dióxido de carbono"
+          ],
+          "correcta": 0,
+          "explicacion": "Ácido + base → sal + agua."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "energia",
+      "titulo": "Reacciones y energía",
+      "resumen": "Exotérmicas: liberan calor (combustión, cal viva). Endotérmicas: lo absorben (fotosíntesis, cocinar).",
+      "anio": 5,
+      "etiqueta": "Paso 5",
+      "nivel": "intermedio",
+      "requiere": [
+        "combustion"
+      ],
+      "ficha": {
+        "idea": "Toda reacción química intercambia energía con el entorno. Las reacciones exotérmicas liberan energía, casi siempre como calor: la combustión, la respiración, la cal viva con agua o la oxidación del hierro (lenta). Las endotérmicas absorben energía: la fotosíntesis usa la luz del Sol (6 CO₂ + 6 H₂O + luz → C₆H₁₂O₆ + 6 O₂), la descomposición de la caliza necesita el calor del horno y cocinar un huevo exige calor. Las compresas frías instantáneas se enfrían porque en ellas ocurre un proceso endotérmico. La fotosíntesis y la respiración son casi la reacción inversa una de la otra.",
+        "contexto": [
+          {
+            "titulo": "Romper y formar",
+            "texto": "Romper enlaces cuesta energía y formar enlaces la libera. Si se libera más de la que se gasta, la reacción es exotérmica."
+          },
+          {
+            "titulo": "La chispa inicial",
+            "texto": "Incluso las exotérmicas necesitan un empujón para empezar (un fósforo para el gas): es la energía de activación."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Exotérmica: libera calor. Endotérmica: absorbe calor o luz."
+          ],
+          "media": [
+            "Combustión y respiración: exotérmicas. Fotosíntesis: endotérmica."
+          ],
+          "avanzada": [
+            "Energía de activación: el empujón inicial que necesita toda reacción."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué la cal viva se calienta con agua y la compresa fría se enfría?",
+          "actividad": "Tocar (con cuidado) un vaso con cal viva y agua y otro con bicarbonato y vinagre; anotar si se calientan o se enfrían.",
+          "errores": [
+            "Pensar que endotérmica significa que no necesita energía.",
+            "Creer que la reacción exotérmica no necesita un empujón para empezar."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Da o quita calor?",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "🔥",
+              "titulo": "Exotérmica",
+              "puntos": [
+                "Libera energía",
+                "Combustión, respiración",
+                "Cal viva + agua"
+              ]
+            },
+            "der": {
+              "icono": "❄️",
+              "titulo": "Endotérmica",
+              "puntos": [
+                "Absorbe energía",
+                "Fotosíntesis (luz)",
+                "Calcinar la caliza, cocinar"
+              ]
+            }
+          },
+          "atajo": {
+            "texto": "Más sobre la fotosíntesis",
+            "tema": "metabolismo-celular",
+            "bloque": "fotosintesis"
+          }
+        },
+        {
+          "titulo": "Ida y vuelta",
+          "nivel": "avanzado",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "⇌",
+            "valor": "N₂ + 3 H₂ ⇌ 2 NH₃",
+            "texto": "Algunas reacciones van en los dos sentidos: se estudian en el equilibrio químico."
+          },
+          "atajo": {
+            "texto": "Más sobre el equilibrio químico",
+            "tema": "equilibrio-quimico"
+          }
+        }
+      ],
+      "juego": "exo-endo-juego",
+      "preguntas": [
+        {
+          "id": "qe-en-1",
+          "enunciado": "¿Qué tipo de reacción es la fotosíntesis, en cuanto a energía?",
+          "opciones": [
+            "Endotérmica: absorbe la luz del Sol",
+            "Exotérmica: libera calor",
+            "No intercambia energía",
+            "Nuclear"
+          ],
+          "correcta": 0,
+          "explicacion": "Guarda la energía de la luz en la glucosa."
+        },
+        {
+          "id": "qe-en-2",
+          "enunciado": "¿Cuál de estas reacciones es exotérmica?",
+          "opciones": [
+            "La combustión del gas propano",
+            "La calcinación de la caliza",
+            "La fotosíntesis",
+            "Cocinar un huevo"
+          ],
+          "correcta": 0,
+          "explicacion": "Libera calor y luz."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}
