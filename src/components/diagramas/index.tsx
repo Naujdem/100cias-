@@ -113,6 +113,8 @@ import CajaGas from './CajaGas.tsx'
 import PistonGas from './PistonGas.tsx'
 import OllaEbullicion from './OllaEbullicion.tsx'
 import LabSoluciones from './LabSoluciones.tsx'
+import PreparadorSoluciones from './PreparadorSoluciones.tsx'
+import { ConcentradaJuego, PorcentajeJuego, PpmJuego, MolaridadJuego, DilucionJuego, NormalidadJuego } from './JuegosConcentracion.tsx'
 import { SeDisuelveJuego, SaturacionJuego, FactoresSolubilidadJuego, CurvaJuego, ColoideJuego } from './JuegosSoluciones.tsx'
 import { EnlacePuenteJuego, TensionJuego, CalorAguaJuego, HieloJuego, EbullicionJuego, SolidoJuego } from './JuegosAguaLiquidos.tsx'
 import { BoyleJuego, CharlesJuego, GayLussacJuego, CualLeyGasJuego, AvogadroJuego, GasIdealJuego } from './JuegosLeyesGases.tsx'
@@ -583,6 +585,13 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'factores-solubilidad-juego': FactoresSolubilidadJuego,
   'curva-juego': CurvaJuego,
   'coloide-juego': ColoideJuego,
+  'preparador-soluciones': PreparadorSoluciones,
+  'concentrada-juego': ConcentradaJuego,
+  'porcentaje-juego': PorcentajeJuego,
+  'ppm-juego': PpmJuego,
+  'molaridad-juego': MolaridadJuego,
+  'dilucion-juego': DilucionJuego,
+  'normalidad-juego': NormalidadJuego,
   'tipos-radiacion-juego': TiposRadiacionJuego,
   'vida-media-juego': VidaMediaJuego,
   'usos-nucleares-juego': UsosNuclearesJuego,
