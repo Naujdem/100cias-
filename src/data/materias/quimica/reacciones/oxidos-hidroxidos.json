@@ -1,0 +1,668 @@
+{
+  "id": "oxidos-hidroxidos",
+  "materia": "quimica",
+  "area": "reacciones",
+  "titulo": "Nomenclatura: óxidos e hidróxidos",
+  "subtema": "Funciones químicas, cómo se forman y cómo se nombran",
+  "orden": 122,
+  "etiqueta": "2",
+  "vistas": [
+    "ruta"
+  ],
+  "tituloVista": "Ruta de óxidos e hidróxidos",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Reconocer las funciones químicas inorgánicas y cómo se relacionan.",
+    "Escribir la fórmula de un óxido cruzando los estados de oxidación.",
+    "Nombrar óxidos e hidróxidos en los sistemas sistemático, stock y tradicional.",
+    "Relacionar óxidos e hidróxidos con usos cotidianos y del campo."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con un texto de química de bachillerato y las recomendaciones IUPAC (nombres sistemáticos con prefijos, sistema stock, terminaciones tradicionales; nombres comunes como cal viva, cal apagada, leche de magnesia)."
+  ],
+  "bloques": [
+    {
+      "id": "funciones",
+      "titulo": "Las funciones químicas",
+      "resumen": "Óxidos, hidróxidos, ácidos y sales: familias de compuestos que se forman unas de otras.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "Una función química es un grupo de compuestos con un comportamiento parecido. Las cuatro grandes funciones inorgánicas se forman unas de otras. Un metal con oxígeno forma un óxido básico (CaO, la cal viva); si ese óxido se mezcla con agua, forma un hidróxido o base (Ca(OH)₂, la cal apagada). Un no metal con oxígeno forma un óxido ácido (CO₂, SO₃), que con agua forma un oxácido (H₂CO₃, H₂SO₄). Y cuando un hidróxido reacciona con un ácido se forma una sal y agua. Conocer este mapa ayuda a saber qué es un compuesto con solo mirar su fórmula.",
+        "contexto": [
+          {
+            "titulo": "El grupo funcional",
+            "texto": "Cada función tiene una parte que la delata: el oxígeno (O²⁻) en los óxidos, el grupo OH⁻ en los hidróxidos y el hidrógeno al comienzo de la fórmula en los ácidos."
+          },
+          {
+            "titulo": "Básico y ácido",
+            "texto": "Se les dice así porque al echarlos en agua forman bases o ácidos. Por eso la cal, un óxido básico, sirve para corregir suelos ácidos."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Metal + oxígeno → óxido básico. No metal + oxígeno → óxido ácido."
+          ],
+          "media": [
+            "Óxido básico + agua → hidróxido. Óxido ácido + agua → oxácido. Hidróxido + ácido → sal + agua."
+          ],
+          "avanzada": [
+            "Hidrácidos (HCl, H₂S) y sales binarias (NaCl) no llevan oxígeno: se ven en el tema siguiente."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Qué tienen en común la cal que se le echa al suelo y la soda cáustica?",
+          "actividad": "Armar en el tablero el mapa de funciones con tarjetas de fórmulas reales (CaO, CO₂, NaOH, H₂SO₄, NaCl) y ubicar cada una.",
+          "errores": [
+            "Pensar que todo compuesto con oxígeno es un óxido (el NaOH es un hidróxido).",
+            "Confundir óxido ácido con ácido."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Familias de compuestos",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "El agricultor echa cal al suelo y el panadero usa bicarbonato. ¿Crees que todos los compuestos químicos se nombran al azar?",
+            "opciones": [
+              "No: se agrupan en familias con reglas para nombrarlos",
+              "Sí: cada nombre se inventa",
+              "Solo tienen nombre los compuestos orgánicos",
+              "Solo se nombran por su color"
+            ],
+            "correcta": 0,
+            "explicacion": "Las funciones químicas y la nomenclatura permiten nombrar millones de compuestos."
+          }
+        },
+        {
+          "titulo": "El mapa de las funciones",
+          "visual": {
+            "tipo": "escena",
+            "id": "nom-mapa",
+            "fases": [
+              {
+                "id": "metal",
+                "nombre": "El camino del metal",
+                "texto": "Metal + oxígeno → óxido básico; + agua → hidróxido."
+              },
+              {
+                "id": "nometal",
+                "nombre": "El camino del no metal",
+                "texto": "No metal + oxígeno → óxido ácido; + agua → oxácido."
+              },
+              {
+                "id": "sal",
+                "nombre": "Se encuentran",
+                "texto": "Hidróxido + ácido → sal + agua."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre ácidos y sales",
+            "tema": "acidos-sales"
+          }
+        }
+      ],
+      "juego": "funciones-juego",
+      "preguntas": [
+        {
+          "id": "qn-fu-1",
+          "enunciado": "¿Qué se forma cuando un metal se combina con oxígeno?",
+          "opciones": [
+            "Un óxido básico",
+            "Un óxido ácido",
+            "Un hidróxido",
+            "Una sal"
+          ],
+          "correcta": 0,
+          "explicacion": "Ej.: calcio + oxígeno → CaO."
+        },
+        {
+          "id": "qn-fu-2",
+          "enunciado": "¿Qué se forma cuando un óxido ácido reacciona con agua?",
+          "opciones": [
+            "Un oxácido",
+            "Un hidróxido",
+            "Una sal",
+            "Un óxido básico"
+          ],
+          "correcta": 0,
+          "explicacion": "CO₂ + H₂O → H₂CO₃."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "oxidos",
+      "titulo": "Formular óxidos",
+      "resumen": "Se cruzan los estados de oxidación del elemento y del oxígeno como subíndices, y se simplifica.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "intermedio",
+      "requiere": [
+        "funciones"
+      ],
+      "ficha": {
+        "idea": "Un óxido tiene un elemento y oxígeno (−2). Para escribir su fórmula se escriben los dos símbolos, el elemento primero, y se cruzan los estados de oxidación sin el signo: el del elemento pasa como subíndice del oxígeno y el 2 del oxígeno pasa como subíndice del elemento. Hierro +3 y oxígeno −2 dan Fe₂O₃. Si se puede, se simplifica: calcio +2 y oxígeno −2 darían Ca₂O₂, que se simplifica a CaO. El subíndice 1 no se escribe. Comprueba siempre que las cargas sumen cero: 2 × (+3) + 3 × (−2) = 0.",
+        "contexto": [
+          {
+            "titulo": "Óxidos en la finca",
+            "texto": "El óxido de hierro (III) es el óxido rojo del machete y le da color a los suelos rojos; el CO₂ sale al quemar leña; la cal viva (CaO) se usa para encalar."
+          },
+          {
+            "titulo": "No metales también",
+            "texto": "Con los no metales se cruza igual: azufre +6 → S₂O₆ → SO₃; nitrógeno +5 → N₂O₅ (no se simplifica)."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Elemento primero, oxígeno después."
+          ],
+          "media": [
+            "Cruzar los estados como subíndices y simplificar: Fe³⁺ + O²⁻ → Fe₂O₃; Ca²⁺ + O²⁻ → CaO."
+          ],
+          "avanzada": [
+            "Comprobar: (subíndice × estado) del elemento + (subíndice × −2) = 0."
+          ]
+        },
+        "docente": {
+          "abrir": "Si el hierro es +3 y el oxígeno −2, ¿cuántos de cada uno hacen falta para que todo dé cero?",
+          "actividad": "Fichas recortadas con cargas (Fe³⁺, O²⁻, Ca²⁺…) que se juntan hasta que la carga total sea cero; luego se escribe la fórmula.",
+          "errores": [
+            "Dejar los signos al cruzar.",
+            "Simplificar cuando no se puede (N₂O₅ no se simplifica).",
+            "Escribir el oxígeno primero."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Cruzar las cargas",
+          "visual": {
+            "tipo": "escena",
+            "id": "nom-cruce",
+            "fases": [
+              {
+                "id": "cargas",
+                "nombre": "Los estados",
+                "texto": "Hierro +3, oxígeno −2."
+              },
+              {
+                "id": "cruce",
+                "nombre": "Se cruzan",
+                "texto": "El 3 baja al oxígeno y el 2 al hierro: Fe₂O₃."
+              },
+              {
+                "id": "simplifica",
+                "nombre": "Simplificar",
+                "texto": "Calcio +2 y oxígeno −2: Ca₂O₂ → CaO."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre los estados de oxidación",
+            "tema": "estados-oxidacion",
+            "bloque": "reglas"
+          }
+        },
+        {
+          "titulo": "Fábrica de óxidos",
+          "visual": {
+            "tipo": "diagrama",
+            "id": "formador-oxidos"
+          }
+        },
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "El aluminio es +3. ¿Cuál es la fórmula de su óxido?",
+            "opciones": [
+              "Al₂O₃",
+              "AlO₃",
+              "Al₃O₂",
+              "AlO"
+            ],
+            "correcta": 0,
+            "explicacion": "El 3 del aluminio pasa al oxígeno y el 2 del oxígeno al aluminio."
+          }
+        }
+      ],
+      "diagrama": "formador-oxidos",
+      "juego": "formula-oxidos-juego",
+      "preguntas": [
+        {
+          "id": "qn-ox-1",
+          "enunciado": "¿Cuál es la fórmula del óxido de sodio (Na +1)?",
+          "opciones": [
+            "Na₂O",
+            "NaO₂",
+            "NaO",
+            "Na₂O₂"
+          ],
+          "correcta": 0,
+          "explicacion": "Na⁺ y O²⁻: hacen falta dos sodios."
+        },
+        {
+          "id": "qn-ox-2",
+          "enunciado": "¿Por qué el óxido de calcio se escribe CaO y no Ca₂O₂?",
+          "opciones": [
+            "Porque los subíndices se simplifican",
+            "Porque el calcio es +1",
+            "Porque el oxígeno es −1",
+            "Porque así lo dice la tabla"
+          ],
+          "correcta": 0,
+          "explicacion": "2 y 2 se dividen entre 2."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "sistemas",
+      "titulo": "Los tres sistemas de nombres",
+      "resumen": "Sistemático (prefijos), stock (números romanos) y tradicional (-oso e -ico).",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "intermedio",
+      "requiere": [
+        "oxidos"
+      ],
+      "ficha": {
+        "idea": "Un mismo óxido puede nombrarse de tres maneras. En el sistema sistemático (IUPAC) se cuentan los átomos con prefijos: mono, di, tri, tetra, penta, hexa, hepta. El Fe₂O₃ es trióxido de dihierro; el CO₂, dióxido de carbono. En el sistema stock se dice «óxido de» y el elemento, con su estado de oxidación en números romanos entre paréntesis, solo si tiene más de uno: óxido de hierro (III), pero óxido de sodio. En el sistema tradicional, si el elemento tiene dos estados, el menor termina en -oso y el mayor en -ico: óxido ferroso (Fe +2) y óxido férrico (Fe +3). Para los no metales con cuatro estados (como el cloro) se añaden hipo-…-oso para el menor y per-…-ico para el mayor, y a sus óxidos antes se les decía anhídridos.",
+        "contexto": [
+          {
+            "titulo": "Raíces latinas",
+            "texto": "Algunos elementos usan su nombre en latín: hierro → ferr- (ferrum), cobre → cupr- (cuprum), plomo → plumb- (plumbum), azufre → sulfur-."
+          },
+          {
+            "titulo": "¿Cuál usar?",
+            "texto": "La IUPAC recomienda el sistemático y el stock; el tradicional sigue en etiquetas y en el lenguaje del comercio y el campo, por eso conviene conocer los tres."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Sistemático: prefijos (dióxido de carbono). Stock: números romanos (óxido de hierro (III))."
+          ],
+          "media": [
+            "Tradicional: -oso el menor, -ico el mayor (ferroso, férrico)."
+          ],
+          "avanzada": [
+            "Cuatro estados: hipo-…-oso < -oso < -ico < per-…-ico (Cl₂O, Cl₂O₃, Cl₂O₅, Cl₂O₇)."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué una persona puede tener nombre, apodo y cédula? Los compuestos también.",
+          "actividad": "Tabla de tres columnas en el cuaderno: diez óxidos nombrados en los tres sistemas; en parejas se corrigen.",
+          "errores": [
+            "Poner número romano a elementos de un solo estado (óxido de sodio (I)).",
+            "Confundir el número romano con el subíndice.",
+            "Usar -oso e -ico cuando el elemento tiene un solo estado."
+          ],
+          "minutos": 35
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Un compuesto, tres nombres",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🔢",
+                "titulo": "Sistemático",
+                "texto": "Fe₂O₃: trióxido de dihierro"
+              },
+              {
+                "icono": "🏛️",
+                "titulo": "Stock",
+                "texto": "Fe₂O₃: óxido de hierro (III)"
+              },
+              {
+                "icono": "📜",
+                "titulo": "Tradicional",
+                "texto": "Fe₂O₃: óxido férrico"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Los prefijos",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🔢",
+            "valor": "mono · di · tri · tetra · penta · hexa · hepta",
+            "texto": "CO: monóxido de carbono. N₂O₅: pentóxido de dinitrógeno."
+          }
+        },
+        {
+          "titulo": "-oso e -ico",
+          "nivel": "intermedio",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "⬇️",
+              "titulo": "-oso (estado menor)",
+              "puntos": [
+                "FeO: óxido ferroso",
+                "Cu₂O: óxido cuproso",
+                "SO₂: anhídrido sulfuroso"
+              ]
+            },
+            "der": {
+              "icono": "⬆️",
+              "titulo": "-ico (estado mayor)",
+              "puntos": [
+                "Fe₂O₃: óxido férrico",
+                "CuO: óxido cúprico",
+                "SO₃: anhídrido sulfúrico"
+              ]
+            }
+          }
+        },
+        {
+          "titulo": "Cuatro estados: hipo y per",
+          "nivel": "avanzado",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "1️⃣",
+                "titulo": "Cl₂O (+1)",
+                "texto": "anhídrido hipocloroso"
+              },
+              {
+                "icono": "3️⃣",
+                "titulo": "Cl₂O₃ (+3)",
+                "texto": "anhídrido cloroso"
+              },
+              {
+                "icono": "5️⃣",
+                "titulo": "Cl₂O₅ (+5)",
+                "texto": "anhídrido clórico"
+              },
+              {
+                "icono": "7️⃣",
+                "titulo": "Cl₂O₇ (+7)",
+                "texto": "anhídrido perclórico"
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "sistema-nombre-juego",
+      "preguntas": [
+        {
+          "id": "qn-si-1",
+          "enunciado": "¿Cuál es el nombre stock del CuO (cobre +2)?",
+          "opciones": [
+            "Óxido de cobre (II)",
+            "Monóxido de cobre",
+            "Óxido cuproso",
+            "Óxido de cobre (I)"
+          ],
+          "correcta": 0,
+          "explicacion": "El número romano es el estado de oxidación."
+        },
+        {
+          "id": "qn-si-2",
+          "enunciado": "En el sistema tradicional, ¿qué indica la terminación -oso?",
+          "opciones": [
+            "El estado de oxidación menor",
+            "El estado mayor",
+            "Que el compuesto es un ácido",
+            "Que tiene oxígeno"
+          ],
+          "correcta": 0,
+          "explicacion": "Ferroso es Fe +2; férrico, Fe +3."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "hidroxidos",
+      "titulo": "Hidróxidos",
+      "resumen": "Un óxido básico con agua forma un hidróxido: un metal unido a grupos OH⁻.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "intermedio",
+      "requiere": [
+        "oxidos"
+      ],
+      "ficha": {
+        "idea": "Los hidróxidos (o bases) se forman cuando un óxido básico reacciona con agua: CaO + H₂O → Ca(OH)₂. Tienen un metal unido a uno o varios grupos hidroxilo, OH⁻, que tiene carga −1. Para formularlos se pone tantos OH como el estado de oxidación del metal: Na⁺ → NaOH, Ca²⁺ → Ca(OH)₂, Fe³⁺ → Fe(OH)₃; si hay más de un OH se encierra entre paréntesis. Se nombran igual que los óxidos cambiando «óxido» por «hidróxido»: hidróxido de hierro (III) (stock), trihidróxido de hierro (sistemático), hidróxido férrico (tradicional). Son resbalosos al tacto, amargos y vuelven fucsia la fenolftaleína; los fuertes, como la soda cáustica, queman la piel.",
+        "contexto": [
+          {
+            "titulo": "Hidróxidos de la casa y el campo",
+            "texto": "NaOH: soda cáustica, para destapar cañerías y hacer jabón. Ca(OH)₂: cal apagada, para encalar y en la nixtamalización del maíz. Mg(OH)₂ y Al(OH)₃: antiácidos como la leche de magnesia."
+          },
+          {
+            "titulo": "Cuidado con la cal viva",
+            "texto": "Al echarle agua a la cal viva se calienta mucho: la reacción libera calor. Se manipula con guantes y gafas."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Óxido básico + agua → hidróxido (metal + OH)."
+          ],
+          "media": [
+            "Tantos OH como el estado del metal: NaOH, Ca(OH)₂, Fe(OH)₃."
+          ],
+          "avanzada": [
+            "Nombres: hidróxido de hierro (III) = trihidróxido de hierro = hidróxido férrico."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué la cal viva «hierve» cuando le echan agua?",
+          "actividad": "Demostración: agua con un poco de cal y unas gotas de fenolftaleína (o extracto de repollo morado); comparar con agua sola.",
+          "errores": [
+            "Olvidar el paréntesis: CaOH₂ en vez de Ca(OH)₂.",
+            "Pensar que el H del OH hace que sea un ácido."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "De la cal viva a la cal apagada",
+          "visual": {
+            "tipo": "escena",
+            "id": "nom-hidroxido",
+            "fases": [
+              {
+                "id": "calviva",
+                "nombre": "Cal viva",
+                "texto": "CaO: óxido de calcio, un óxido básico."
+              },
+              {
+                "id": "agua",
+                "nombre": "Se le echa agua",
+                "texto": "CaO + H₂O → Ca(OH)₂ y se calienta.",
+                "marcas": [
+                  {
+                    "x": 200,
+                    "y": 120,
+                    "texto": "La reacción libera calor: hay que manipularla con guantes y gafas."
+                  }
+                ]
+              },
+              {
+                "id": "indicador",
+                "nombre": "Es una base",
+                "texto": "La fenolftaleína se pone fucsia."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Tantos OH como la carga",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🧼",
+                "titulo": "NaOH",
+                "texto": "hidróxido de sodio (soda cáustica)"
+              },
+              {
+                "icono": "🌾",
+                "titulo": "Ca(OH)₂",
+                "texto": "hidróxido de calcio (cal apagada)"
+              },
+              {
+                "icono": "🥛",
+                "titulo": "Mg(OH)₂",
+                "texto": "hidróxido de magnesio (antiácido)"
+              },
+              {
+                "icono": "🟤",
+                "titulo": "Fe(OH)₃",
+                "texto": "hidróxido de hierro (III), férrico"
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre ácidos, bases y pH",
+            "tema": "acidos-bases"
+          }
+        }
+      ],
+      "juego": "hidroxidos-juego",
+      "preguntas": [
+        {
+          "id": "qn-hi-1",
+          "enunciado": "¿Qué grupo tienen todos los hidróxidos?",
+          "opciones": [
+            "OH⁻",
+            "H⁺",
+            "O²⁻",
+            "H₂O"
+          ],
+          "correcta": 0,
+          "explicacion": "El grupo hidroxilo, de carga −1."
+        },
+        {
+          "id": "qn-hi-2",
+          "enunciado": "¿Cuál es la fórmula del hidróxido de aluminio (Al +3)?",
+          "opciones": [
+            "Al(OH)₃",
+            "AlOH₃",
+            "Al₃OH",
+            "AlOH"
+          ],
+          "correcta": 0,
+          "explicacion": "Tres OH y paréntesis."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "peroxidos",
+      "titulo": "Peróxidos",
+      "resumen": "Óxidos con un enlace oxígeno-oxígeno (O₂²⁻), donde el oxígeno es −1; no se simplifican.",
+      "anio": 5,
+      "etiqueta": "Paso 5",
+      "nivel": "avanzado",
+      "requiere": [
+        "sistemas"
+      ],
+      "ficha": {
+        "idea": "Los peróxidos tienen dos oxígenos unidos entre sí, el grupo peróxido O₂²⁻, en el que cada oxígeno es −1. Por eso no se simplifican: el peróxido de hidrógeno es H₂O₂ (no HO) y el peróxido de sodio, Na₂O₂. Se nombran con la palabra «peróxido»: peróxido de hidrógeno, peróxido de calcio (CaO₂). El enlace O–O es débil, así que se rompen con facilidad y liberan oxígeno: por eso el agua oxigenada burbujea en una herida y sirve para desinfectar y blanquear.",
+        "contexto": [
+          {
+            "titulo": "¿Por qué burbujea?",
+            "texto": "Una enzima de la sangre y de los tejidos, la catalasa, descompone el H₂O₂ en agua y oxígeno: 2 H₂O₂ → 2 H₂O + O₂."
+          },
+          {
+            "titulo": "Se guarda en frasco oscuro",
+            "texto": "La luz también lo descompone; por eso el agua oxigenada viene en frascos opacos."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Peróxido: O–O unidos; el oxígeno es −1."
+          ],
+          "media": [
+            "H₂O₂ y Na₂O₂ no se simplifican."
+          ],
+          "avanzada": [
+            "2 H₂O₂ → 2 H₂O + O₂ (la catalasa acelera la reacción)."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué el agua oxigenada hace espuma en una herida pero no en la piel sana?",
+          "actividad": "Echar agua oxigenada sobre un trozo de papa o hígado crudo y observar las burbujas (catalasa).",
+          "errores": [
+            "Simplificar H₂O₂ a HO.",
+            "Poner −2 al oxígeno del peróxido."
+          ],
+          "minutos": 15
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Óxido o peróxido",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "💧",
+              "titulo": "Óxido",
+              "puntos": [
+                "H₂O, Na₂O",
+                "Oxígeno −2",
+                "Se simplifica"
+              ]
+            },
+            "der": {
+              "icono": "🫧",
+              "titulo": "Peróxido",
+              "puntos": [
+                "H₂O₂, Na₂O₂",
+                "O–O: cada uno −1",
+                "No se simplifica"
+              ]
+            }
+          },
+          "atajo": {
+            "texto": "Más sobre las excepciones",
+            "tema": "estados-oxidacion",
+            "bloque": "reglas"
+          }
+        }
+      ],
+      "preguntas": [
+        {
+          "id": "qn-pe-1",
+          "enunciado": "¿Qué estado de oxidación tiene el oxígeno en el H₂O₂?",
+          "opciones": [
+            "−1",
+            "−2",
+            "0",
+            "+1"
+          ],
+          "correcta": 0,
+          "explicacion": "Es un peróxido: O₂²⁻."
+        },
+        {
+          "id": "qn-pe-2",
+          "enunciado": "¿Por qué el H₂O₂ no se simplifica a HO?",
+          "opciones": [
+            "Porque el grupo peróxido O₂²⁻ va siempre junto",
+            "Porque el hidrógeno es −1",
+            "Porque es un hidróxido",
+            "Porque no tiene oxígeno"
+          ],
+          "correcta": 0,
+          "explicacion": "Los dos oxígenos están unidos entre sí."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}
