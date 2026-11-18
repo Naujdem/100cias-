@@ -47,6 +47,7 @@ import { EscenaEcuacion, EscenaTiposReaccion, EscenaCombustion } from './Escenas
 import { EscenaConservacion, EscenaTanteo, EscenaRedox } from './EscenasBalanceo.tsx'
 import { EscenaLavoisier, EscenaProust, EscenaDalton as EscenaDaltonLeyes } from './EscenasLeyes.tsx'
 import { EscenaMolContar, EscenaMasaMolar, EscenaCaminoMol } from './EscenasMol.tsx'
+import { EscenaReceta, EscenaMasaMasa, EscenaLimite } from './EscenasEstequiometria.tsx'
 import { EscenaIntra, EscenaPolaridad, EscenaFuerzas, EscenaSoluble } from './EscenasFuerzas.tsx'
 import { EscenaOcteto, EscenaIonico, EscenaCovalente, EscenaEnlaceMetalico } from './EscenasEnlace.tsx'
 import { EscenaHistoriaTabla, EscenaEstructuraTabla, EscenaMetales, EscenaRadio, EscenaIonizacion, EscenaElectronegatividad, EscenaCaracterMetalico } from './EscenasTabla.tsx'
@@ -281,6 +282,9 @@ export const ESCENAS: Record<string, ComponentType<{ fase: string }>> = {
   'mol-contar': EscenaMolContar,
   'mol-masa-molar': EscenaMasaMolar,
   'mol-camino': EscenaCaminoMol,
+  'es-receta': EscenaReceta,
+  'es-masa': EscenaMasaMasa,
+  'es-limite': EscenaLimite,
   compostaje: EscenaCompostaje,
   riesgo: EscenaRiesgo,
   armero: EscenaArmero,
