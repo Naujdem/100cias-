@@ -37,6 +37,7 @@ import { EscenaMateriaZoom, EscenaCafeQuimica } from './EscenasQueEsQuimica.tsx'
 import { EscenaMedirMateria, EscenaColumnaDensidad, EscenaHervirAltura } from './EscenasPropiedades.tsx'
 import { EscenaCicloEstados, EscenaCurvaCalentamiento } from './EscenasEstados.tsx'
 import { EscenaPapelCambios, EscenaSenalesQuimicas, EscenaMacheteOxido } from './EscenasCambios.tsx'
+import { EscenaParticulasClasificacion } from './EscenasClasificacion.tsx'
 import { EscenaRiesgo, EscenaArmero, EscenaEvacuacion } from './EscenasRiesgo.tsx'
 import { EscenaProyectoAula } from './EscenasSostenibilidad.tsx'
 import { EscenaCicloAgua, EscenaCicloCarbono, EscenaCicloNitrogeno, EscenaCicloFosforo } from './EscenasCiclos.tsx'
@@ -209,6 +210,7 @@ export const ESCENAS: Record<string, ComponentType<{ fase: string }>> = {
   'papel-cambios': EscenaPapelCambios,
   'senales-quimicas': EscenaSenalesQuimicas,
   'machete-oxido': EscenaMacheteOxido,
+  'particulas-clasificacion': EscenaParticulasClasificacion,
   compostaje: EscenaCompostaje,
   riesgo: EscenaRiesgo,
   armero: EscenaArmero,
