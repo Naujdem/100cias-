@@ -1,0 +1,451 @@
+{
+  "id": "flujo-energia",
+  "materia": "biologia",
+  "area": "ecosistemas",
+  "titulo": "Flujo de energía",
+  "subtema": "Quién come a quién",
+  "orden": 33,
+  "etiqueta": "3",
+  "vistas": [
+    "ruta"
+  ],
+  "tituloVista": "Ruta de la energía",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Diferenciar productores, consumidores y descomponedores.",
+    "Construir y leer cadenas y redes tróficas.",
+    "Explicar la pirámide de energía y la regla del 10 %."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con un texto de ciencias naturales. La regla del 10 % es una aproximación (varía entre ecosistemas)."
+  ],
+  "bloques": [
+    {
+      "id": "productores-consumidores",
+      "titulo": "Productores, consumidores y descomponedores",
+      "resumen": "La energía entra por los productores, pasa a los consumidores y los descomponedores reciclan la materia.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "Casi toda la energía de los ecosistemas viene del sol. Los productores (plantas, algas) la captan con la fotosíntesis y fabrican su alimento. Los consumidores comen a otros seres vivos: los herbívoros comen plantas (consumidores primarios), los carnívoros comen animales (secundarios o más) y los omnívoros comen de todo. Los descomponedores (hongos y bacterias) deshacen la materia muerta y devuelven los nutrientes al suelo.",
+        "contexto": [
+          {
+            "titulo": "Omnívoros",
+            "texto": "El oso de anteojos come sobre todo plantas y frutos, pero a veces también animales: es omnívoro."
+          },
+          {
+            "titulo": "La energía no se recicla",
+            "texto": "La materia da vueltas gracias a los descomponedores, pero la energía se va perdiendo como calor: por eso siempre hace falta el sol."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Productores: hacen fotosíntesis.",
+            "Consumidores: herbívoros, carnívoros, omnívoros.",
+            "Descomponedores: hongos y bacterias."
+          ],
+          "media": [
+            "La materia se recicla; la energía no."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿De dónde viene la energía de lo que almorzaste hoy?",
+          "actividad": "Rastrear un alimento del almuerzo hasta el sol.",
+          "errores": [
+            "Creer que las plantas toman su alimento del suelo.",
+            "Olvidar a los descomponedores."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Quién come qué?",
+          "visual": {
+            "tipo": "escena",
+            "id": "productores",
+            "fases": [
+              {
+                "id": "sol",
+                "nombre": "El sol",
+                "texto": "Casi toda la energía de los ecosistemas viene del sol."
+              },
+              {
+                "id": "productores",
+                "nombre": "Productores",
+                "texto": "Las plantas captan la luz y fabrican su alimento (fotosíntesis)."
+              },
+              {
+                "id": "herbivoros",
+                "nombre": "Herbívoros",
+                "texto": "El chigüiro come pasto: es un consumidor primario."
+              },
+              {
+                "id": "carnivoros",
+                "nombre": "Carnívoros",
+                "texto": "El jaguar caza al chigüiro: es un consumidor secundario."
+              },
+              {
+                "id": "descomponedores",
+                "nombre": "Descomponedores",
+                "texto": "Hongos y bacterias deshacen la materia muerta y devuelven nutrientes al suelo."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre esto: la fotosíntesis",
+            "tema": "metabolismo-celular",
+            "bloque": "fotosintesis"
+          }
+        }
+      ],
+      "juego": "productores-juego",
+      "preguntas": [
+        {
+          "id": "ec-pc-1",
+          "enunciado": "¿Qué hacen los productores?",
+          "opciones": [
+            "Fabrican su alimento con la energía del sol",
+            "Comen a otros animales",
+            "Descomponen la materia muerta",
+            "Solo comen plantas"
+          ],
+          "correcta": 0,
+          "explicacion": "Lo hacen por fotosíntesis."
+        },
+        {
+          "id": "ec-pc-2",
+          "enunciado": "¿Cuál es el papel de los hongos y bacterias descomponedores?",
+          "opciones": [
+            "Devolver los nutrientes al suelo",
+            "Fabricar energía con el sol",
+            "Cazar herbívoros",
+            "Producir oxígeno"
+          ],
+          "correcta": 0,
+          "explicacion": "Reciclan la materia muerta."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "cadenas",
+      "titulo": "Cadenas tróficas",
+      "resumen": "Una cadena muestra quién se come a quién; las flechas indican hacia dónde va la energía.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "nucleo": true,
+      "requiere": [
+        "productores-consumidores"
+      ],
+      "ficha": {
+        "idea": "Una cadena trófica muestra en orden quién se come a quién: hierba → saltamontes → rana → serpiente → águila. Las flechas van hacia quien come, porque muestran hacia dónde fluye la energía. Cada eslabón es un nivel trófico: productor, consumidor primario, secundario, terciario… Las cadenas rara vez tienen más de cuatro o cinco eslabones.",
+        "contexto": [
+          {
+            "titulo": "Cuidado con la flecha",
+            "texto": "«Hierba → saltamontes» se lee «la hierba es comida por el saltamontes» o «la energía pasa de la hierba al saltamontes»."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Cadena trófica: quién se come a quién.",
+            "La flecha apunta a quien come."
+          ],
+          "media": [
+            "Cada eslabón es un nivel trófico."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "Si dibujas una flecha del ratón al zorro, ¿qué significa?",
+          "actividad": "Armar cadenas con tarjetas de seres vivos de la región.",
+          "errores": [
+            "Dibujar la flecha al revés (de quien come a quien es comido)."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Eslabón por eslabón",
+          "visual": {
+            "tipo": "escena",
+            "id": "cadena",
+            "fases": [
+              {
+                "id": "eslabones",
+                "nombre": "Los eslabones",
+                "texto": "Hierba, saltamontes, rana, serpiente y águila."
+              },
+              {
+                "id": "flechas",
+                "nombre": "Las flechas",
+                "texto": "La flecha va hacia quien come: así fluye la energía."
+              },
+              {
+                "id": "niveles",
+                "nombre": "Niveles tróficos",
+                "texto": "Productor, consumidor primario, secundario, terciario y cuaternario."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "En «hierba → saltamontes → rana», ¿qué indica la flecha?",
+            "opciones": [
+              "Hacia dónde pasa la energía",
+              "Quién es más grande",
+              "Quién vive más tiempo",
+              "Hacia dónde camina cada animal"
+            ],
+            "correcta": 0,
+            "explicacion": "La energía pasa de la hierba al saltamontes y de él a la rana."
+          }
+        }
+      ],
+      "juego": "cadena-juego",
+      "preguntas": [
+        {
+          "id": "ec-ca-1",
+          "enunciado": "En la cadena hierba → saltamontes → rana → serpiente, ¿qué es la rana?",
+          "opciones": [
+            "Consumidor secundario",
+            "Productor",
+            "Consumidor primario",
+            "Descomponedor"
+          ],
+          "correcta": 0,
+          "explicacion": "Come al herbívoro."
+        },
+        {
+          "id": "ec-ca-2",
+          "enunciado": "¿Hacia dónde apuntan las flechas de una cadena trófica?",
+          "opciones": [
+            "Hacia el ser vivo que come",
+            "Hacia el ser vivo que es comido",
+            "Hacia el sol",
+            "Hacia el suelo"
+          ],
+          "correcta": 0,
+          "explicacion": "Siguen el camino de la energía."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "redes",
+      "titulo": "Redes tróficas",
+      "resumen": "En la naturaleza las cadenas se cruzan y forman redes: si una especie desaparece, afecta a muchas otras.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "basico",
+      "requiere": [
+        "cadenas"
+      ],
+      "ficha": {
+        "idea": "En un ecosistema real cada ser vivo come varias cosas y es comido por varios: las cadenas se cruzan y forman una red trófica. Por eso, si una especie desaparece, el efecto se extiende: sus depredadores pierden alimento y sus presas, al principio, aumentan. Una red con muchas conexiones resiste mejor los cambios.",
+        "contexto": [
+          {
+            "titulo": "Especies clave",
+            "texto": "Algunas especies sostienen a muchas otras: si faltan, la red cambia mucho. Los grandes depredadores, como el jaguar, mantienen el equilibrio."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Una red trófica son muchas cadenas cruzadas."
+          ],
+          "media": [
+            "Si una especie desaparece, afecta a muchas otras."
+          ],
+          "avanzada": [
+            "Más conexiones = red más estable."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Qué pasaría en tu región si desaparecieran las abejas?",
+          "actividad": "Usar la red interactiva: quitar especies y predecir antes qué pasará.",
+          "errores": [
+            "Pensar que quitar un depredador siempre es bueno para el ecosistema."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Si en un bosque cazan a todos los zorros, ¿qué pasará primero con los ratones?",
+            "opciones": [
+              "Aumentarán",
+              "Disminuirán",
+              "No cambiarán",
+              "Se volverán carnívoros"
+            ],
+            "correcta": 0,
+            "explicacion": "Pierden un depredador; luego eso afecta a las plantas que comen."
+          }
+        },
+        {
+          "titulo": "Todo está conectado",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🕸️",
+                "titulo": "Red",
+                "texto": "Cada especie come y es comida por varias."
+              },
+              {
+                "icono": "➖",
+                "titulo": "Si una falta",
+                "texto": "Sus depredadores pierden comida."
+              },
+              {
+                "icono": "➕",
+                "titulo": "Y sus presas",
+                "texto": "Al principio aumentan."
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "red-juego",
+      "diagrama": "red-trofica",
+      "preguntas": [
+        {
+          "id": "ec-re-1",
+          "enunciado": "¿Qué es una red trófica?",
+          "opciones": [
+            "Un conjunto de cadenas tróficas conectadas",
+            "Una sola cadena muy larga",
+            "El lugar donde vive un ser vivo",
+            "Un grupo de la misma especie"
+          ],
+          "correcta": 0,
+          "explicacion": "Muestra todas las relaciones de alimentación."
+        },
+        {
+          "id": "ec-re-2",
+          "enunciado": "¿Por qué una red con muchas conexiones resiste mejor los cambios?",
+          "opciones": [
+            "Porque si falta un alimento hay otros",
+            "Porque tiene menos especies",
+            "Porque no tiene depredadores",
+            "Porque no necesita productores"
+          ],
+          "correcta": 0,
+          "explicacion": "Hay caminos alternativos para la energía."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "piramides",
+      "titulo": "Pirámides de energía",
+      "resumen": "De un nivel al siguiente pasa solo cerca del 10 % de la energía: por eso las cadenas son cortas.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "intermedio",
+      "requiere": [
+        "cadenas"
+      ],
+      "ficha": {
+        "idea": "Cada ser vivo gasta la mayor parte de la energía que consigue en moverse, respirar y mantenerse caliente, y esa energía se pierde como calor. Al siguiente nivel trófico pasa solo cerca del 10 %. Si los productores captan 10 000 unidades, los herbívoros reciben unas 1000, los carnívoros 100 y los superdepredadores 10. Por eso la energía forma una pirámide y hay muchos menos jaguares que chigüiros.",
+        "contexto": [
+          {
+            "titulo": "Comer más abajo",
+            "texto": "Un terreno alimenta a más personas si se siembran alimentos vegetales que si se usa para criar ganado, porque se pierde menos energía."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "La energía disminuye de un nivel a otro."
+          ],
+          "media": [
+            "Pasa cerca del 10 % al nivel siguiente."
+          ],
+          "avanzada": [
+            "Por eso las cadenas tienen pocos eslabones."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué hay muchos más chigüiros que jaguares en los Llanos?",
+          "actividad": "Construir la pirámide con bloques: 10 000, 1000, 100 y 10.",
+          "errores": [
+            "Creer que la energía se recicla como la materia.",
+            "Pensar que el 90 % «desaparece» en vez de transformarse en calor."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Cada vez menos",
+          "visual": {
+            "tipo": "escena",
+            "id": "piramide",
+            "fases": [
+              {
+                "id": "base",
+                "nombre": "La base",
+                "texto": "Los productores captan la energía del sol: 10 000 unidades."
+              },
+              {
+                "id": "pasa",
+                "nombre": "El 10 %",
+                "texto": "A los herbívoros pasa solo cerca del 10 %: 1000 unidades."
+              },
+              {
+                "id": "pierde",
+                "nombre": "El resto",
+                "texto": "El resto se gasta en vivir y se pierde como calor."
+              },
+              {
+                "id": "corta",
+                "nombre": "Cadenas cortas",
+                "texto": "Arriba llega tan poca energía que hay pocos superdepredadores."
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "piramide-juego",
+      "preguntas": [
+        {
+          "id": "ec-pi-1",
+          "enunciado": "Si los productores tienen 10 000 unidades de energía, ¿cuánta reciben los carnívoros (dos niveles arriba)?",
+          "opciones": [
+            "Unas 100",
+            "Unas 1000",
+            "Unas 10 000",
+            "Unas 10"
+          ],
+          "correcta": 0,
+          "explicacion": "10 000 → 1000 → 100."
+        },
+        {
+          "id": "ec-pi-2",
+          "enunciado": "¿Por qué las cadenas tróficas tienen pocos eslabones?",
+          "opciones": [
+            "Porque en cada nivel se pierde casi toda la energía",
+            "Porque los animales se cansan de comer",
+            "Porque no hay suficientes productores",
+            "Porque los descomponedores se la comen toda"
+          ],
+          "correcta": 0,
+          "explicacion": "Arriba ya no queda energía para más niveles."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}
