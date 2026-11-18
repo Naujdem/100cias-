@@ -71,6 +71,8 @@ import { AguaPlanetaJuego, CuencaJuego, FabricasAguaJuego, HuellaHidricaJuego } 
 import MaquetaCuenca from './MaquetaCuenca.tsx'
 import { QueEsSueloJuego, HorizontesJuego, ErosionJuego, DeforestacionJuego, ConservarSueloJuego } from './JuegosSuelo.tsx'
 import PerfilSuelo from './PerfilSuelo.tsx'
+import { TiempoClimaJuego, InvernaderoJuego, CambioClimaticoJuego, NinoNinaJuego, MitigarAdaptarJuego } from './JuegosClima.tsx'
+import SimuladorCo2 from './SimuladorCo2.tsx'
 
 /** Registro de diagramas interactivos. La clave es el valor de `bloque.diagrama`. */
 export const DIAGRAMAS: Record<string, ComponentType> = {
@@ -373,4 +375,10 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'deforestacion-juego': DeforestacionJuego,
   'conservar-suelo-juego': ConservarSueloJuego,
   'perfil-suelo': PerfilSuelo,
+  'tiempo-clima-juego': TiempoClimaJuego,
+  'invernadero-juego': InvernaderoJuego,
+  'cambio-climatico-juego': CambioClimaticoJuego,
+  'nino-nina-juego': NinoNinaJuego,
+  'mitigar-adaptar-juego': MitigarAdaptarJuego,
+  'simulador-co2': SimuladorCo2,
 }

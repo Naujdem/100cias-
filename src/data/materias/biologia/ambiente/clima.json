@@ -1,0 +1,441 @@
+{
+  "id": "clima",
+  "materia": "biologia",
+  "area": "ambiente",
+  "titulo": "Clima y cambio climático",
+  "subtema": "Un planeta que se calienta",
+  "orden": 54,
+  "etiqueta": "4",
+  "vistas": ["ruta"],
+  "tituloVista": "Ruta del clima",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Diferenciar el tiempo atmosférico y el clima.",
+    "Explicar el efecto invernadero natural y su aumento.",
+    "Reconocer evidencias y causas del cambio climático, en el mundo y en Colombia.",
+    "Diferenciar El Niño y La Niña del cambio climático.",
+    "Proponer acciones de mitigación y adaptación."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar cifras con el IPCC (AR6), la NOAA (CO₂ de Mauna Loa) y el IDEAM (glaciares de Colombia). El simulador usa una sensibilidad climática de 3 °C por cada vez que se duplica el CO₂, valor central del IPCC."
+  ],
+  "bloques": [
+    {
+      "id": "tiempo-clima",
+      "titulo": "Tiempo y clima",
+      "resumen": "El tiempo es cómo está la atmósfera hoy; el clima es lo que pasa normalmente en un lugar durante muchos años.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "El tiempo atmosférico es el estado de la atmósfera en un momento y lugar: si hoy llueve, hace sol o hace frío. Cambia de una hora a otra. El clima es el comportamiento promedio del tiempo en un lugar durante muchos años, por lo general 30: la temperatura media, cuánto llueve y en qué meses. En Colombia el clima depende sobre todo de la altitud (los pisos térmicos) y en muchas regiones andinas hay dos temporadas de lluvia y dos secas en el año. Un día frío no desmiente el calentamiento del planeta: el cambio climático se mide en el clima, no en un día.",
+        "contexto": [
+          {
+            "titulo": "Lo que dice el abuelo",
+            "texto": "Cuando los mayores dicen que «ya no llueve como antes» en ciertos meses, hablan del clima: de lo que pasaba normalmente durante años."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Tiempo: cómo está la atmósfera ahora.",
+            "Clima: lo normal en un lugar durante muchos años."
+          ],
+          "media": [
+            "El clima se calcula con promedios de unos 30 años.",
+            "En Colombia el clima depende mucho de la altitud."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "Si mañana hace frío en Neiva, ¿quiere decir que Neiva tiene clima frío?",
+          "actividad": "Registrar el tiempo durante dos semanas (lluvia, nubes, temperatura) y compararlo con los promedios del clima del municipio.",
+          "errores": [
+            "Usar «clima» para hablar del tiempo de un día («hoy el clima está feo»)."
+          ],
+          "minutos": 15
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "«Hoy está lloviendo en Tarqui». ¿Eso habla del tiempo o del clima?",
+            "opciones": ["Del tiempo", "Del clima", "De los dos", "De ninguno"],
+            "correcta": 0,
+            "explicacion": "Es el estado de la atmósfera hoy. El clima sería lo que pasa normalmente durante años."
+          }
+        },
+        {
+          "titulo": "Hoy y siempre",
+          "visual": {
+            "tipo": "compara",
+            "izq": { "icono": "🌦️", "titulo": "Tiempo", "puntos": ["Ahora o hoy", "Cambia en horas", "«Hoy llueve»"] },
+            "der": { "icono": "📅", "titulo": "Clima", "puntos": ["Promedio de unos 30 años", "Cambia muy despacio", "«En abril suele llover»"] }
+          },
+          "atajo": { "texto": "Más sobre esto: pisos térmicos", "tema": "factores-ecosistemas", "bloque": "pisos-termicos" }
+        }
+      ],
+      "juego": "tiempo-clima-juego",
+      "preguntas": [
+        {
+          "id": "am-cl-1",
+          "enunciado": "¿Qué es el clima?",
+          "opciones": [
+            "El comportamiento promedio del tiempo durante muchos años",
+            "Si hoy llueve o hace sol",
+            "La temperatura de una hora",
+            "El pronóstico de mañana"
+          ],
+          "correcta": 0,
+          "explicacion": "Se calcula con promedios de unos 30 años."
+        },
+        {
+          "id": "am-cl-2",
+          "enunciado": "Un día muy frío, ¿demuestra que el planeta no se está calentando?",
+          "opciones": [
+            "No, porque el calentamiento se mide en el clima de muchos años",
+            "Sí, porque el frío es lo contrario del calor",
+            "Sí, si el día es en diciembre",
+            "No, porque los días fríos no existen"
+          ],
+          "correcta": 0,
+          "explicacion": "Un día es tiempo, no clima."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "invernadero",
+      "titulo": "El efecto invernadero",
+      "resumen": "Algunos gases de la atmósfera retienen parte del calor que suelta la Tierra. Sin ellos haría mucho frío; con demasiados, el planeta se calienta.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "requiere": ["tiempo-clima"],
+      "ficha": {
+        "idea": "La luz del Sol atraviesa la atmósfera y calienta el suelo y los océanos. La Tierra caliente suelta ese calor como radiación infrarroja, que no vemos. Algunos gases de la atmósfera, los gases de efecto invernadero, absorben parte de ese calor y lo devuelven hacia abajo, como una cobija. Los principales son el vapor de agua, el dióxido de carbono (CO₂), el metano (CH₄) y el óxido nitroso. Este efecto es natural y necesario: sin él la temperatura media de la Tierra sería de unos −18 °C, y no los 15 °C que permiten la vida. El problema es que las actividades humanas han aumentado la cantidad de estos gases, y la cobija se volvió más gruesa.",
+        "contexto": [
+          {
+            "titulo": "Como un carro al sol",
+            "texto": "Un carro cerrado al sol se calienta por dentro: la luz entra por los vidrios, pero el calor no sale con facilidad."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Los gases de efecto invernadero retienen calor, como una cobija.",
+            "Sin ellos la Tierra sería muy fría."
+          ],
+          "media": [
+            "Gases principales: vapor de agua, CO₂, metano y óxido nitroso.",
+            "Con más gases, la Tierra retiene más calor."
+          ],
+          "avanzada": [
+            "La Tierra devuelve el calor como radiación infrarroja, que los gases absorben."
+          ]
+        },
+        "docente": {
+          "abrir": "Si el efecto invernadero es malo, ¿por qué sin él no podríamos vivir?",
+          "actividad": "Dos frascos con termómetro al sol, uno tapado con plástico: medir la temperatura cada 5 minutos.",
+          "errores": [
+            "Confundir el efecto invernadero con el hueco de la capa de ozono: son problemas distintos."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "La cobija del planeta",
+          "visual": {
+            "tipo": "escena",
+            "id": "invernadero",
+            "fases": [
+              { "id": "luz", "nombre": "Llega la luz", "texto": "La luz del Sol atraviesa la atmósfera." },
+              { "id": "calienta", "nombre": "Se calienta la Tierra", "texto": "El suelo y el mar absorben la luz y se calientan." },
+              { "id": "infrarrojo", "nombre": "Sale el calor", "texto": "La Tierra suelta calor como radiación infrarroja." },
+              { "id": "retienen", "nombre": "Los gases lo retienen", "texto": "Los gases de invernadero devuelven parte del calor hacia abajo." },
+              { "id": "mas-gases", "nombre": "Más gases", "texto": "Con más gases, sale menos calor y la Tierra se calienta." }
+            ]
+          },
+          "atajo": { "texto": "Más sobre esto: ciclo del carbono", "tema": "ciclos-biogeoquimicos", "bloque": "ciclo-carbono" }
+        },
+        {
+          "titulo": "Sin la cobija",
+          "visual": { "tipo": "cifra", "icono": "🥶", "valor": "−18 °C", "texto": "sería la temperatura media de la Tierra sin efecto invernadero. Con él es de unos 15 °C." }
+        }
+      ],
+      "juego": "invernadero-juego",
+      "diagrama": "simulador-co2",
+      "preguntas": [
+        {
+          "id": "am-cl-3",
+          "enunciado": "¿Qué hacen los gases de efecto invernadero?",
+          "opciones": [
+            "Retienen parte del calor que suelta la Tierra",
+            "Bloquean toda la luz del Sol",
+            "Enfrían el planeta",
+            "Producen oxígeno"
+          ],
+          "correcta": 0,
+          "explicacion": "Funcionan como una cobija."
+        },
+        {
+          "id": "am-cl-4",
+          "enunciado": "¿Cuál de estos es un gas de efecto invernadero?",
+          "opciones": ["El metano", "El oxígeno", "El nitrógeno del aire", "El helio"],
+          "correcta": 0,
+          "explicacion": "Lo producen, entre otros, el ganado y los arrozales."
+        },
+        {
+          "id": "am-cl-5",
+          "enunciado": "Sin efecto invernadero, la Tierra…",
+          "opciones": ["Sería mucho más fría", "Sería igual", "Sería mucho más caliente", "No tendría estaciones"],
+          "correcta": 0,
+          "explicacion": "Unos −18 °C de temperatura media."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "cambio-climatico",
+      "titulo": "El cambio climático",
+      "resumen": "Desde la Revolución Industrial el CO₂ del aire subió de 280 a más de 420 partes por millón y el planeta se ha calentado más de 1 °C.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "basico",
+      "requiere": ["invernadero"],
+      "ficha": {
+        "idea": "Desde mediados del siglo XIX las personas queman carbón, petróleo y gas, talan bosques y crían cada vez más ganado. Por eso el CO₂ del aire pasó de unas 280 partes por millón a más de 420, un nivel que no había en cientos de miles de años, y la temperatura media del planeta ha subido más de 1 °C. Las evidencias son muchas: glaciares que se derriten, el nivel del mar que sube, olas de calor y lluvias más extremas, especies que suben por las montañas buscando frío. Colombia ha perdido cerca del 90 % de sus glaciares desde 1850; hoy solo quedan seis nevados, entre ellos el Nevado del Huila. La gran mayoría de los científicos coincide en que este calentamiento lo causan las actividades humanas.",
+        "contexto": [
+          {
+            "titulo": "Los nevados que quedan",
+            "texto": "Sierra Nevada de Santa Marta, Sierra Nevada del Cocuy, Ruiz, Santa Isabel, Tolima y Huila: los seis nevados de Colombia, todos retrocediendo."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Cambio climático: el clima del planeta cambia por el calentamiento.",
+            "Lo causan sobre todo la quema de combustibles fósiles y la tala."
+          ],
+          "media": [
+            "El CO₂ pasó de 280 a más de 420 partes por millón.",
+            "Evidencias: glaciares que se derriten, mar que sube, eventos extremos."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Por qué los nevados de Colombia se están quedando sin nieve?",
+          "actividad": "Comparar fotos antiguas y recientes del Nevado del Huila o del Ruiz y calcular cuánto ha retrocedido el hielo.",
+          "errores": [
+            "Pensar que el cambio climático es solo que «hace más calor»; también cambian las lluvias y los extremos."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Nevados que se van",
+          "visual": {
+            "tipo": "escena",
+            "id": "glaciares",
+            "fases": [
+              { "id": "1850", "nombre": "1850", "texto": "Colombia tenía unos 14 nevados con glaciares." },
+              { "id": "hoy", "nombre": "Hoy", "texto": "Quedan seis, y han perdido cerca del 90 % del hielo." },
+              { "id": "futuro", "nombre": "En unas décadas", "texto": "Si sigue el calentamiento, podrían desaparecer casi todos." }
+            ]
+          }
+        },
+        {
+          "titulo": "¿Por qué aumentan los gases?",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "🚗", "titulo": "Combustibles fósiles", "texto": "Transporte, industria y electricidad." },
+              { "icono": "🪓", "titulo": "Deforestación", "texto": "En Colombia, una de las causas principales." },
+              { "icono": "🐄", "titulo": "Ganadería", "texto": "Las vacas producen metano al digerir." },
+              { "icono": "🗑️", "titulo": "Basura", "texto": "Los botaderos sueltan metano." }
+            ]
+          }
+        }
+      ],
+      "juego": "cambio-climatico-juego",
+      "preguntas": [
+        {
+          "id": "am-cl-6",
+          "enunciado": "¿Cuál es la principal causa del cambio climático actual?",
+          "opciones": [
+            "Los gases que emiten las actividades humanas",
+            "Que el Sol está más cerca",
+            "El hueco de la capa de ozono",
+            "Los volcanes"
+          ],
+          "correcta": 0,
+          "explicacion": "Sobre todo la quema de combustibles fósiles y la tala."
+        },
+        {
+          "id": "am-cl-7",
+          "enunciado": "¿Qué evidencia del cambio climático se ve en Colombia?",
+          "opciones": [
+            "Los glaciares de los nevados se derriten",
+            "Aparecen nuevos nevados",
+            "El mar Caribe se volvió dulce",
+            "Ya no existen las temporadas de lluvia"
+          ],
+          "correcta": 0,
+          "explicacion": "Quedan seis nevados, todos retrocediendo."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "nino-nina",
+      "titulo": "El Niño y La Niña",
+      "resumen": "Cambios naturales en la temperatura del océano Pacífico que traen sequías o lluvias fuertes a Colombia durante meses.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "intermedio",
+      "requiere": ["cambio-climatico"],
+      "ficha": {
+        "idea": "El Niño y La Niña son las dos caras de un fenómeno natural del océano Pacífico tropical. Cada pocos años el agua del Pacífico se calienta más de lo normal (El Niño) o se enfría (La Niña), y eso cambia las lluvias en buena parte del mundo. En Colombia, El Niño suele traer menos lluvias y más calor: sequías, incendios forestales, ríos bajos y racionamientos de agua y energía. La Niña suele traer más lluvias: inundaciones, crecientes y deslizamientos, como en 2010–2011. No son lo mismo que el cambio climático: existían desde mucho antes, pero con un planeta más caliente sus efectos pueden ser más fuertes.",
+        "contexto": [
+          {
+            "titulo": "El nombre",
+            "texto": "Los pescadores de Perú notaban que el agua del mar se calentaba cerca de Navidad, y lo llamaron El Niño por el Niño Dios."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "El Niño: en Colombia, menos lluvia y más calor.",
+            "La Niña: en Colombia, más lluvia."
+          ],
+          "media": [
+            "Los causa la temperatura del océano Pacífico.",
+            "Son naturales, pero el cambio climático puede hacerlos más fuertes."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Recuerdan algún año de mucha sequía o de muchas inundaciones? ¿Qué pasó?",
+          "actividad": "Preguntar en casa qué recuerdan del invierno de 2010–2011 o de las sequías recientes y armar una línea del tiempo de la vereda.",
+          "errores": [
+            "Creer que El Niño y La Niña son lo mismo que el cambio climático."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Lo que pasa en el Pacífico",
+          "visual": {
+            "tipo": "escena",
+            "id": "enos",
+            "fases": [
+              { "id": "normal", "nombre": "Normal", "texto": "El Pacífico tiene su temperatura de siempre y llueve lo normal." },
+              { "id": "nino", "nombre": "El Niño", "texto": "El Pacífico se calienta: en Colombia, sequía y calor." },
+              { "id": "nina", "nombre": "La Niña", "texto": "El Pacífico se enfría: en Colombia, más lluvias." }
+            ]
+          }
+        }
+      ],
+      "juego": "nino-nina-juego",
+      "preguntas": [
+        {
+          "id": "am-cl-8",
+          "enunciado": "¿Qué suele traer El Niño a Colombia?",
+          "opciones": ["Menos lluvias y más calor", "Más lluvias e inundaciones", "Nieve en las ciudades", "Huracanes en los Andes"],
+          "correcta": 0,
+          "explicacion": "Sequías, incendios y ríos bajos."
+        },
+        {
+          "id": "am-cl-9",
+          "enunciado": "¿En qué se diferencian El Niño y La Niña del cambio climático?",
+          "opciones": [
+            "Son fenómenos naturales que van y vienen cada pocos años",
+            "Los causan solo las personas",
+            "Son lo mismo con otro nombre",
+            "Solo ocurren en el Caribe"
+          ],
+          "correcta": 0,
+          "explicacion": "El calentamiento puede hacerlos más fuertes."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "mitigar-adaptar",
+      "titulo": "Mitigar y adaptarse",
+      "resumen": "Mitigar es emitir menos gases; adaptarse es prepararse para los cambios que ya vienen.",
+      "anio": 5,
+      "etiqueta": "Paso 5",
+      "nivel": "basico",
+      "requiere": ["cambio-climatico"],
+      "ficha": {
+        "idea": "Frente al cambio climático hay dos tipos de acciones. Mitigar es atacar la causa: emitir menos gases de efecto invernadero o sacarlos del aire. Por ejemplo, usar energías limpias, frenar la deforestación, restaurar bosques y páramos, usar menos el carro y desperdiciar menos comida. Adaptarse es prepararse para los cambios que ya están ocurriendo: recoger agua lluvia, sembrar variedades que resistan la sequía, proteger los nacimientos, no construir en zonas inundables. Las dos son necesarias. En Colombia la mayor parte de las emisiones viene del uso de la tierra (deforestación y ganadería), por eso frenar la tala es una de las acciones que más ayudan.",
+        "contexto": [
+          {
+            "titulo": "Café que sube",
+            "texto": "Con el calentamiento, las zonas buenas para el café suben por la montaña; los caficultores se adaptan con sombrío y variedades más resistentes."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Mitigar: emitir menos gases.",
+            "Adaptarse: prepararse para los cambios."
+          ],
+          "media": [
+            "En Colombia, frenar la deforestación es clave para mitigar."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Qué puede hacer una vereda frente a un problema de todo el planeta?",
+          "actividad": "Hacer dos listas en el tablero, «mitigar» y «adaptarse», con acciones posibles en el colegio y en la vereda.",
+          "errores": [
+            "Pensar que solo cuentan las acciones individuales; también importan las decisiones de gobiernos y empresas."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Dos caminos",
+          "visual": {
+            "tipo": "compara",
+            "izq": { "icono": "🌱", "titulo": "Mitigar", "puntos": ["Energías limpias", "Frenar la tala", "Restaurar bosques", "Menos carro y desperdicio"] },
+            "der": { "icono": "☂️", "titulo": "Adaptarse", "puntos": ["Recoger agua lluvia", "Cultivos resistentes", "Proteger nacimientos", "No construir en riesgo"] }
+          }
+        }
+      ],
+      "juego": "mitigar-adaptar-juego",
+      "preguntas": [
+        {
+          "id": "am-cl-10",
+          "enunciado": "¿Cuál es una acción de mitigación?",
+          "opciones": [
+            "Frenar la deforestación",
+            "Construir un tanque para recoger agua lluvia",
+            "Sembrar una variedad resistente a la sequía",
+            "Hacer un plan de evacuación"
+          ],
+          "correcta": 0,
+          "explicacion": "Mitigar es emitir menos gases."
+        },
+        {
+          "id": "am-cl-11",
+          "enunciado": "¿De dónde viene la mayor parte de las emisiones de Colombia?",
+          "opciones": [
+            "Del uso de la tierra: deforestación y ganadería",
+            "De los aviones",
+            "De las fábricas de ropa",
+            "De los celulares"
+          ],
+          "correcta": 0,
+          "explicacion": "Por eso frenar la tala ayuda tanto."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}
