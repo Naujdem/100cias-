@@ -49,4 +49,15 @@ export const PROXIMOS: Record<string, { etiqueta: string; nombre: string }[]> = 
   ],
   soluciones: [
   ],
+  organica: [
+    { etiqueta: '1', nombre: 'El carbono y sus compuestos' },
+    { etiqueta: '2', nombre: 'Grupos funcionales: el mapa' },
+    { etiqueta: '3', nombre: 'Alcanos' },
+    { etiqueta: '4', nombre: 'Alquenos y alquinos' },
+    { etiqueta: '5', nombre: 'Aromáticos y halogenuros' },
+    { etiqueta: '6', nombre: 'Alcoholes, fenoles y éteres' },
+    { etiqueta: '7', nombre: 'Aldehídos, cetonas, ácidos y ésteres' },
+    { etiqueta: '8', nombre: 'Compuestos nitrogenados' },
+    { etiqueta: '9', nombre: 'Petróleo, plásticos y biocombustibles (opcional)' },
+  ],
 }

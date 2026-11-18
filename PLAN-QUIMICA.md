@@ -105,12 +105,37 @@ Grados con las casillas de siempre (6°, 9°, 11°). Ids ya usados como atajo de
 9. **(Opcional, 11°) Propiedades coligativas** (`coligativas`) — descenso crioscópico, ascenso ebulloscópico y
    ósmosis (atajo a la ósmosis de Biología).
 
-## Área 5 (ruta detallada cuando se empiece)
+## Área 5 · Química orgánica (ruta aprobada el 18 nov 2026)
 
-- **Área 5 · Química orgánica:** el carbono e hibridación, grupos funcionales, hidrocarburos y nomenclatura,
-  aromáticos y halogenuros, oxigenados (alcoholes, fenoles, aldehídos, cetonas, éteres, ácidos carboxílicos,
-  ésteres), nitrogenados (aminas, amidas, nitrilos). Interactivos: constructor de cadenas que nombra la
-  molécula, juego de reconocer grupos funcionales.
+Grados con las casillas de siempre: en 6° ideas básicas y ejemplos de la vida diaria; nomenclatura sobre todo desde
+9°; isomería, hibridación y reacciones en 11°. Respecto al plan inicial se separaron los hidrocarburos en dos temas
+y los oxigenados en dos. Las biomoléculas no se repiten: se enlazan con Biología.
+
+1. **El carbono y sus compuestos** (`carbono`) — qué es orgánico; Wöhler y la urea; los 4 enlaces del carbono,
+   cadenas y enlaces sencillo, doble y triple; fórmulas molecular, desarrollada, semidesarrollada y de esqueleto (9°);
+   hibridación sp³, sp², sp (11°). Explora: armador de moléculas con bolas y palos (avisa si un carbono no tiene 4
+   enlaces).
+2. **Grupos funcionales: el mapa** (`grupos-funcionales`) — mapa general del área (como Niveles de organización):
+   qué es un grupo funcional y tabla de los principales; cada uno va a fondo en su tema. Explora: detector de grupos
+   en moléculas conocidas (vainillina, aspirina, cafeína, ácido acético). Juego de reconocer grupos funcionales.
+3. **Alcanos** (`alcanos`) — metano del biogás, propano y butano del cilindro, gasolina; prefijos met-, et-, prop-,
+   but-…; ramificaciones (9°); isómeros estructurales (11°); combustión con atajo a Reacciones. Explora: constructor
+   de cadenas que nombra la molécula.
+4. **Alquenos y alquinos** (`alquenos-alquinos`) — etileno que madura la fruta (atajo a la cocina de Velocidad de
+   reacción), acetileno de la soldadura; nombres con -eno e -ino y posición del enlace (9°); isomería cis-trans y
+   reacciones de adición (11°); polietileno con atajo a Residuos y consumo.
+5. **Aromáticos y halogenuros** (`aromaticos`, desde 9°) — benceno y el sueño de Kekulé, naftalina, olores;
+   halogenuros: cloroformo, CFC y la capa de ozono.
+6. **Alcoholes, fenoles y éteres** (`alcoholes`) — etanol de la fermentación del guarapo, alcohol antiséptico,
+   metanol peligroso, glicerina; nombres con -ol (9°); alcoholes primarios, secundarios y terciarios (11°); fenoles
+   y éteres (9°).
+7. **Aldehídos, cetonas, ácidos y ésteres** (`carbonilos`) — formol, acetona del quitaesmalte, vinagre (ácido
+   acético), ésteres y olores de las frutas; esterificación y saponificación (11°). Explora: fábrica de olores
+   (ácido + alcohol → éster y su aroma).
+8. **Compuestos nitrogenados** (`nitrogenados`) — aminas (la cafeína y otros alcaloides), amidas (la urea del
+   abono, el enlace peptídico con atajo a las proteínas de Biología), nitrilos (11°).
+9. **(Opcional, 9°–11°) Petróleo, plásticos y biocombustibles** (`petroleo`) — refinería de Barrancabermeja,
+   etanol de caña, biodiésel de palma, plásticos y polímeros. Explora: torre de destilación del petróleo.
 
 ## Conexiones con Biología (sin repetir)
 
