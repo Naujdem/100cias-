@@ -1,0 +1,379 @@
+{
+  "id": "que-es-quimica",
+  "materia": "quimica",
+  "area": "materia",
+  "titulo": "¿Qué es la química?",
+  "subtema": "La ciencia de la materia y sus cambios",
+  "orden": 101,
+  "etiqueta": "1",
+  "vistas": ["ruta"],
+  "tituloVista": "Ruta de la química",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Explicar qué estudia la química y qué es la materia.",
+    "Reconocer la química en la cocina, la salud y el hogar.",
+    "Identificar usos de la química en el campo y en el café.",
+    "Aplicar normas básicas de seguridad en el laboratorio."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con los Estándares Básicos de Competencias en Ciencias Naturales (MEN) y el plan curricular de Ciencias Naturales 2025; pictogramas según el Sistema Globalmente Armonizado (SGA)."
+  ],
+  "bloques": [
+    {
+      "id": "que-estudia",
+      "titulo": "¿Qué estudia la química?",
+      "resumen": "La química estudia la materia: de qué está hecha, cómo es y cómo se transforma.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "La química es la ciencia que estudia la materia: de qué están hechas las cosas, qué propiedades tienen y cómo se transforman en otras. Materia es todo lo que tiene masa y ocupa un lugar en el espacio: el agua, el aire, una piedra, nuestro cuerpo. La luz, el sonido y el calor no son materia, son formas de energía. Si miramos la materia cada vez más de cerca, encontramos moléculas, y cada molécula está formada por átomos. Los átomos se separan y se vuelven a unir de otra forma en los cambios químicos: así se cocina un alimento, se oxida un machete o se quema la leña.",
+        "contexto": [
+          { "titulo": "Una ciencia central", "texto": "La química conecta con la biología (las reacciones de la célula), la física (la energía) y la medicina (los fármacos)." },
+          { "titulo": "De la alquimia a la química", "texto": "Los alquimistas buscaban convertir metales en oro; sus técnicas (destilar, filtrar, calentar) pasaron a la química moderna." }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Química: ciencia que estudia la materia y sus cambios.",
+            "Materia: todo lo que tiene masa y ocupa espacio."
+          ],
+          "media": [
+            "La materia está formada por moléculas, y las moléculas por átomos.",
+            "Ramas: general, inorgánica, orgánica, bioquímica y analítica."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿El aire es materia? ¿Cómo lo podríamos demostrar?",
+          "actividad": "Inflar un globo y pesarlo en una balanza casera antes y después para mostrar que el aire tiene masa.",
+          "errores": [
+            "Creer que el aire o los gases no son materia.",
+            "Pensar que la química es solo «sustancias peligrosas» o de laboratorio."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Cuál de estas cosas NO es materia?",
+            "opciones": ["La luz del sol", "El aire", "El agua", "Una piedra"],
+            "correcta": 0,
+            "explicacion": "La luz es energía; las demás tienen masa y ocupan espacio."
+          }
+        },
+        {
+          "titulo": "La materia de cerca",
+          "visual": {
+            "tipo": "escena",
+            "id": "materia-zoom",
+            "fases": [
+              { "id": "taza", "nombre": "La taza", "texto": "Algo que vemos y tocamos: es materia." },
+              { "id": "gota", "nombre": "La gota", "texto": "Aunque sea pequeña, sigue teniendo masa." },
+              { "id": "moleculas", "nombre": "Moléculas", "texto": "Agua y azúcar mezcladas, siempre en movimiento." },
+              { "id": "atomos", "nombre": "Átomos", "texto": "Cada molécula de agua tiene dos hidrógenos y un oxígeno.", "nota": "Los átomos se estudian a fondo en el área 2." }
+            ]
+          }
+        },
+        {
+          "titulo": "Las ramas de la química",
+          "nivel": "intermedio",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "⚗️", "titulo": "General", "texto": "Las leyes y conceptos básicos." },
+              { "icono": "🪨", "titulo": "Inorgánica", "texto": "Minerales, sales, metales." },
+              { "icono": "🛢️", "titulo": "Orgánica", "texto": "Los compuestos del carbono." },
+              { "icono": "🧬", "titulo": "Bioquímica", "texto": "La química de los seres vivos." },
+              { "icono": "🔬", "titulo": "Analítica", "texto": "Qué hay en una muestra y cuánto." }
+            ]
+          }
+        },
+        {
+          "titulo": "¿Cómo es la materia?",
+          "visual": { "tipo": "cifra", "icono": "⚖️", "valor": "masa · volumen · densidad", "texto": "Cada material tiene sus propiedades." },
+          "atajo": { "texto": "Más sobre esto", "tema": "propiedades-materia" }
+        }
+      ],
+      "juego": "es-materia-juego",
+      "preguntas": [
+        {
+          "id": "qm-qq-1",
+          "enunciado": "¿Qué estudia la química?",
+          "opciones": ["La materia y sus transformaciones", "Solo los seres vivos", "El movimiento de los planetas", "La historia de la Tierra"],
+          "correcta": 0,
+          "explicacion": "De qué están hechas las cosas y cómo cambian."
+        },
+        {
+          "id": "qm-qq-2",
+          "enunciado": "¿Qué es la materia?",
+          "opciones": ["Todo lo que tiene masa y ocupa espacio", "Solo lo que es sólido", "Todo lo que se puede ver", "Solo lo que hay en un laboratorio"],
+          "correcta": 0,
+          "explicacion": "El aire no se ve y también es materia."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "vida-diaria",
+      "titulo": "La química en la vida diaria",
+      "resumen": "Cocinar, lavar, curarse y respirar son procesos químicos.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "ficha": {
+        "idea": "La química no está solo en los laboratorios: está en la cocina cuando se fríe una arepa, se cuaja la leche o se fermenta la chicha; en el baño, cuando el jabón quita la grasa; en la salud, porque los medicamentos son sustancias químicas que actúan en el cuerpo; y dentro de nosotros, porque digerir los alimentos y respirar son reacciones químicas. También hay química en los combustibles, los plásticos, la ropa y los celulares. Conocerla ayuda a usar los productos con cuidado y a tomar buenas decisiones.",
+        "contexto": [
+          { "titulo": "¿Natural o químico?", "texto": "Todo es químico, también lo natural: el agua es H₂O. Lo que importa es la sustancia y la dosis, no si es «natural»." }
+        ],
+        "cuaderno": {
+          "facil": [
+            "La química está en la cocina, el aseo, la salud y el cuerpo."
+          ],
+          "media": [
+            "Todo lo que existe está hecho de sustancias químicas, también lo natural."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "Nombren tres cosas que hicieron hoy en las que hubo química.",
+          "actividad": "Recorrer la cocina de la casa y anotar cinco productos con su uso y una sustancia de su etiqueta.",
+          "errores": [
+            "Creer que «químico» es lo contrario de «natural»."
+          ],
+          "minutos": 15
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Al freír una arepa, ¿hay química?",
+            "opciones": ["Sí: cambian sus sustancias", "No, solo se calienta", "Solo si tiene sal", "Solo en el laboratorio"],
+            "correcta": 0,
+            "explicacion": "El dorado y el olor salen de sustancias nuevas que forma el calor."
+          }
+        },
+        {
+          "titulo": "Química en todas partes",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "🍳", "titulo": "Cocina", "texto": "Freír, hornear, fermentar, cuajar." },
+              { "icono": "🧼", "titulo": "Aseo", "texto": "Jabón, champú, blanqueador." },
+              { "icono": "💊", "titulo": "Salud", "texto": "Medicamentos y vacunas." },
+              { "icono": "🫁", "titulo": "Tu cuerpo", "texto": "Digestión y respiración." },
+              { "icono": "📱", "titulo": "Objetos", "texto": "Plásticos, metales, baterías." }
+            ]
+          }
+        },
+        {
+          "titulo": "Todo es química",
+          "visual": { "tipo": "cifra", "icono": "💧", "valor": "H₂O", "texto": "El agua también es una sustancia química." },
+          "puntos": ["Lo que importa es la sustancia y la dosis."]
+        }
+      ],
+      "juego": "que-ciencia-juego",
+      "preguntas": [
+        {
+          "id": "qm-qq-3",
+          "enunciado": "¿Cuál de estos es un proceso químico de tu cuerpo?",
+          "opciones": ["La digestión de los alimentos", "Caminar", "Escuchar música", "Crecer el pelo por el viento"],
+          "correcta": 0,
+          "explicacion": "Las enzimas transforman los alimentos en otras sustancias."
+        },
+        {
+          "id": "qm-qq-4",
+          "enunciado": "¿Qué afirmación es correcta?",
+          "opciones": ["Todo lo natural también está hecho de sustancias químicas", "Lo natural no tiene química", "Solo los venenos son químicos", "El agua no es una sustancia química"],
+          "correcta": 0,
+          "explicacion": "Natural y químico no son opuestos."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "campo",
+      "titulo": "La química en el campo",
+      "resumen": "Del suelo al café, el trabajo de la finca está lleno de química.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "basico",
+      "ficha": {
+        "idea": "En la finca, la química está en todas partes. Las plantas toman del suelo nutrientes como el nitrógeno (N), el fósforo (P) y el potasio (K); los abonos, químicos u orgánicos como la gallinaza y el compost, los reponen. Muchos suelos del Huila son ácidos, y la cal los corrige. Los fungicidas y plaguicidas controlan plagas y enfermedades como la roya, pero mal usados contaminan el agua y afectan la salud. El café es un buen ejemplo: en la fermentación, los microbios transforman los azúcares del mucílago; en el secado el grano pierde agua; en la tostión el calor crea cientos de sustancias de aroma y sabor; y al preparar la bebida, el agua caliente disuelve esas sustancias.",
+        "contexto": [
+          { "titulo": "Leer la etiqueta", "texto": "Los agroquímicos traen una banda de color según su toxicidad y la dosis que se debe usar; hay que respetarla y usar protección." }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Los abonos aportan nutrientes; la cal corrige los suelos ácidos.",
+            "El café cambia químicamente al fermentar y al tostar."
+          ],
+          "media": [
+            "N, P y K: nitrógeno, fósforo y potasio, los nutrientes principales.",
+            "Los agroquímicos mal usados contaminan el agua y el suelo."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Por qué el café verde no huele a café, y el tostado sí?",
+          "actividad": "Llevar granos de café verde y tostado: compararlos por color, olor, dureza y masa.",
+          "errores": [
+            "Creer que más abono siempre es mejor."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Por qué el café verde no huele a café?",
+            "opciones": ["Las sustancias del aroma se forman al tostarlo", "Porque está sucio", "Porque le falta agua", "Porque no está maduro"],
+            "correcta": 0,
+            "explicacion": "El calor de la tostión crea las sustancias del aroma."
+          }
+        },
+        {
+          "titulo": "La química del café",
+          "visual": {
+            "tipo": "escena",
+            "id": "cafe-quimica",
+            "fases": [
+              { "id": "cereza", "nombre": "Cosecha", "texto": "Se recoge la cereza madura." },
+              { "id": "fermentacion", "nombre": "Fermentación", "texto": "Los microbios transforman los azúcares del mucílago." },
+              { "id": "secado", "nombre": "Secado", "texto": "El grano pierde agua al sol." },
+              { "id": "tostion", "nombre": "Tostión", "texto": "El calor forma sustancias nuevas de olor y sabor." },
+              { "id": "taza", "nombre": "La taza", "texto": "El agua caliente disuelve esas sustancias." }
+            ]
+          }
+        },
+        {
+          "titulo": "Lo que necesita el suelo",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "🌱", "titulo": "Abono", "texto": "Repone nitrógeno, fósforo y potasio." },
+              { "icono": "🪨", "titulo": "Cal", "texto": "Corrige los suelos ácidos." },
+              { "icono": "🐛", "titulo": "Control de plagas", "texto": "Con la dosis justa y protección." }
+            ]
+          }
+        }
+      ],
+      "juego": "quimica-campo-juego",
+      "preguntas": [
+        {
+          "id": "qm-qq-5",
+          "enunciado": "¿Para qué se echa cal a un suelo ácido?",
+          "opciones": ["Para corregir la acidez", "Para matar la roya", "Para que no llueva", "Para secar el café"],
+          "correcta": 0,
+          "explicacion": "La cal es básica y neutraliza la acidez del suelo."
+        },
+        {
+          "id": "qm-qq-6",
+          "enunciado": "¿En qué etapa del café se forman las sustancias del aroma?",
+          "opciones": ["En la tostión", "En la cosecha", "En el secado", "En la siembra"],
+          "correcta": 0,
+          "explicacion": "El calor transforma las sustancias del grano."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "laboratorio",
+      "titulo": "Cómo trabaja la química",
+      "resumen": "La química se aprende observando y experimentando, siempre con seguridad.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "basico",
+      "ficha": {
+        "idea": "La química es una ciencia experimental: se hace una pregunta, se propone una hipótesis, se diseña un experimento, se observa y se mide, y se sacan conclusiones. Para experimentar sin riesgo hay normas: usar bata y gafas, no comer ni beber, no oler ni probar los reactivos, leer siempre la etiqueta, apuntar los tubos que se calientan hacia la pared y saber dónde están el extintor y la salida. Las etiquetas traen pictogramas de peligro: una llama (inflamable), una calavera (tóxico), una mano que se corroe (corrosivo), una explosión (explosivo) y un árbol con un pez muerto (peligro para el ambiente).",
+        "contexto": [
+          { "titulo": "Pictogramas del SGA", "texto": "Son rombos rojos con un dibujo negro y son iguales en todo el mundo; también aparecen en productos de la casa como el blanqueador." }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Normas: bata, gafas, no comer, leer la etiqueta.",
+            "Pictogramas: inflamable, tóxico, corrosivo, explosivo."
+          ],
+          "media": [
+            "Pasos del trabajo científico: pregunta, hipótesis, experimento, observación y conclusión."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Qué productos de la casa traen un rombo rojo en la etiqueta?",
+          "actividad": "Buscar pictogramas en envases de la casa (blanqueador, gasolina, insecticida) y hacer un afiche de seguridad.",
+          "errores": [
+            "Pensar que los productos de la casa no son peligrosos.",
+            "Mezclar productos de limpieza (blanqueador con amoníaco produce gases tóxicos)."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Cómo se huele un reactivo en el laboratorio?",
+            "opciones": ["Abanicando el olor con la mano, de lejos", "Acercando la nariz al frasco", "No se puede oler nada", "Probándolo"],
+            "correcta": 0,
+            "explicacion": "Así se evita respirar mucho vapor de golpe."
+          }
+        },
+        {
+          "titulo": "Lee los pictogramas",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "🔥", "titulo": "Inflamable", "texto": "Arde con facilidad: lejos del fuego." },
+              { "icono": "☠️", "titulo": "Tóxico", "texto": "Puede envenenar en poca cantidad." },
+              { "icono": "🫗", "titulo": "Corrosivo", "texto": "Quema la piel y daña metales." },
+              { "icono": "💥", "titulo": "Explosivo", "texto": "Puede estallar con golpes o calor." },
+              { "icono": "🐟", "titulo": "Peligro para el ambiente", "texto": "Daña a los seres del agua." }
+            ]
+          }
+        },
+        {
+          "titulo": "Así se investiga",
+          "nivel": "intermedio",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "❓", "titulo": "Pregunta" },
+              { "icono": "💡", "titulo": "Hipótesis" },
+              { "icono": "🧪", "titulo": "Experimento" },
+              { "icono": "👀", "titulo": "Observación y medida" },
+              { "icono": "📝", "titulo": "Conclusión" }
+            ]
+          }
+        }
+      ],
+      "juego": "lab-seguro-juego",
+      "preguntas": [
+        {
+          "id": "qm-qq-7",
+          "enunciado": "¿Qué indica un pictograma con una llama?",
+          "opciones": ["Que la sustancia es inflamable", "Que está caliente", "Que es comestible", "Que es corrosiva"],
+          "correcta": 0,
+          "explicacion": "Hay que mantenerla lejos del fuego."
+        },
+        {
+          "id": "qm-qq-8",
+          "enunciado": "¿Cuál es una norma de seguridad en el laboratorio?",
+          "opciones": ["No comer ni beber", "Probar los reactivos", "Guardar ácidos en botellas de gaseosa", "Trabajar sin gafas"],
+          "correcta": 0,
+          "explicacion": "Los alimentos se pueden contaminar con los reactivos."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}

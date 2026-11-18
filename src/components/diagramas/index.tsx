@@ -79,6 +79,7 @@ import { RecursosJuego, HidroelectricaJuego, RepresasJuego, FuentesEnergiaJuego,
 import MezclaElectrica from './MezclaElectrica.tsx'
 import { ResiduosJuego, LasRJuego, SepararJuego, CompostajeJuego, EconomiaCircularJuego } from './JuegosResiduos.tsx'
 import Canecas from './Canecas.tsx'
+import { EsMateriaJuego, QueCienciaJuego, QuimicaCampoJuego, LabSeguroJuego } from './JuegosQueEsQuimica.tsx'
 import { AmenazaVulnerabilidadJuego, AmenazasColombiaJuego, ArmeroJuego, AntesDuranteDespuesJuego, PlanEscolarJuego } from './JuegosRiesgo.tsx'
 import RiesgoVereda from './RiesgoVereda.tsx'
 import { DesarrolloSostenibleJuego, OdsJuego, PraeJuego, ProyectoAulaJuego, ParticipacionJuego } from './JuegosSostenibilidad.tsx'
@@ -410,6 +411,10 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'compostaje-juego': CompostajeJuego,
   'economia-circular-juego': EconomiaCircularJuego,
   canecas: Canecas,
+  'es-materia-juego': EsMateriaJuego,
+  'que-ciencia-juego': QueCienciaJuego,
+  'quimica-campo-juego': QuimicaCampoJuego,
+  'lab-seguro-juego': LabSeguroJuego,
   'amenaza-vulnerabilidad-juego': AmenazaVulnerabilidadJuego,
   'amenazas-colombia-juego': AmenazasColombiaJuego,
   'armero-juego': ArmeroJuego,

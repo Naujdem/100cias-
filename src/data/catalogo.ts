@@ -26,6 +26,13 @@ export const UNIDADES: Record<string, Unidad[]> = {
     { id: 'evolucion', nombre: 'Evolución biológica', texto: 'Cómo cambian las especies con el tiempo.' },
     { id: 'ambiente', nombre: 'Dinámicas ambientales', texto: 'Ciclos, recursos y cuidado del ambiente.' },
   ],
+  quimica: [
+    { id: 'materia', nombre: 'La materia y sus cambios', texto: 'Qué es la materia, sus propiedades, estados y mezclas.' },
+    { id: 'atomo', nombre: 'Átomo, tabla periódica y enlace', texto: 'De qué están hechos los elementos y cómo se unen.' },
+    { id: 'reacciones', nombre: 'Compuestos y reacciones', texto: 'Nomenclatura, ecuaciones y estequiometría.' },
+    { id: 'soluciones', nombre: 'Gases, soluciones y equilibrio', texto: 'Gases, concentraciones, ácidos, bases y pH.' },
+    { id: 'organica', nombre: 'Química orgánica', texto: 'El carbono y sus compuestos.' },
+  ],
 }
 
 /** Temas anunciados que aún no tienen contenido, por unidad. */
@@ -34,4 +41,11 @@ export const PROXIMOS: Record<string, { etiqueta: string; nombre: string }[]> = 
   genetica: [
   ],
   evolucion: [],
+  materia: [
+    { etiqueta: '2', nombre: 'Propiedades de la materia' },
+    { etiqueta: '3', nombre: 'Estados y cambios de estado' },
+    { etiqueta: '4', nombre: 'Cambios físicos y químicos' },
+    { etiqueta: '5', nombre: 'Clasificación de la materia' },
+    { etiqueta: '6', nombre: 'Separación de mezclas' },
+  ],
 }

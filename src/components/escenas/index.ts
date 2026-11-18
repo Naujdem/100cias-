@@ -33,6 +33,7 @@ import { EscenaInvernadero, EscenaGlaciares, EscenaEnos } from './EscenasClima.t
 import { EscenaAireContaminado, EscenaBiomagnificacion, EscenaEutrofizacion } from './EscenasContaminacion.tsx'
 import { EscenaHidroelectrica } from './EscenasEnergia2.tsx'
 import { EscenaViajeBasura, EscenaCompostaje } from './EscenasResiduos.tsx'
+import { EscenaMateriaZoom, EscenaCafeQuimica } from './EscenasQueEsQuimica.tsx'
 import { EscenaRiesgo, EscenaArmero, EscenaEvacuacion } from './EscenasRiesgo.tsx'
 import { EscenaProyectoAula } from './EscenasSostenibilidad.tsx'
 import { EscenaCicloAgua, EscenaCicloCarbono, EscenaCicloNitrogeno, EscenaCicloFosforo } from './EscenasCiclos.tsx'
@@ -195,6 +196,8 @@ export const ESCENAS: Record<string, ComponentType<{ fase: string }>> = {
   eutrofizacion: EscenaEutrofizacion,
   hidroelectrica: EscenaHidroelectrica,
   'viaje-basura': EscenaViajeBasura,
+  'materia-zoom': EscenaMateriaZoom,
+  'cafe-quimica': EscenaCafeQuimica,
   compostaje: EscenaCompostaje,
   riesgo: EscenaRiesgo,
   armero: EscenaArmero,
