@@ -59,6 +59,7 @@ iguales, y cuando uno pida otra forma, se hace y se anota aquí abajo, en «Exce
 - **Historia de la genética (línea de tiempo)**: igual que la teoría celular, con fichas emergentes; cada hito
   tiene su escena y su juego dentro de la ficha.
 - **Historia del pensamiento evolutivo (línea de tiempo)**: igual que la historia de la genética.
+- **Historia de los modelos atómicos (Química, línea de tiempo)**: igual que la historia de la genética.
 - **Niveles de organización (mapa general)**: sus fichas de nivel son paradas cortas del mapa y no llevan juego
   propio; el juego «¿En qué nivel está?» (`niveles-juego`) va una sola vez, en la ficha Organismo, y repasa todos
   los niveles.
