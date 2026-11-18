@@ -19,6 +19,7 @@ import ADN from './practicas/ADN.tsx'
 import Microbiologia from './practicas/Microbiologia.tsx'
 import Ambiente from './practicas/Ambiente.tsx'
 import Medicion from './practicas/Medicion.tsx'
+import Densidades from './practicas/Densidades.tsx'
 
 // Laboratorios virtuales (PLAN-LABORATORIOS.md). Las prácticas listas van en PRACTICAS; las demás de la
 // ruta salen como «próximamente».
@@ -50,13 +51,14 @@ const PRACTICAS: Entrada[] = [
   { id: 'microbiologia', titulo: 'Microbiología', resumen: 'Técnica aséptica, siembra con control, colonias día a día y conteo; discos y halos de inhibición.', grupo: 'Biología', desdeGrado: 6, Juego: Microbiologia },
   { id: 'agua-suelo', titulo: 'Calidad del agua y del suelo (opcional)', resumen: 'Muestras de la vereda: pH, turbidez, oxígeno, bioindicadores, textura, infiltración y lombrices. Para el PRAE.', grupo: 'Biología', desdeGrado: 6, Juego: Ambiente },
   { id: 'medicion', titulo: 'Medición: precisión y exactitud', resumen: 'Lee el menisco sin paralaje y mide 25 mL cinco veces con cuatro instrumentos: ¿cuál es exacto y cuál preciso?', grupo: 'Química', desdeGrado: 6, Juego: Medicion },
+  { id: 'densidades', titulo: 'Densidades', resumen: 'Balanza, regla y probeta para hallar la densidad de seis objetos y reconocer su material; luego, la torre de cinco líquidos.', grupo: 'Química', desdeGrado: 6, Juego: Densidades },
   { id: solucionMolar.id, titulo: solucionMolar.titulo, resumen: solucionMolar.resumen, grupo: 'Química', desdeGrado: solucionMolar.desdeGrado, mesa: solucionMolar },
 ]
 
 const PROXIMAS: { lab: string; items: string[] }[] = [
   {
     lab: 'Química',
-    items: ['Densidades', 'Mezclas y técnicas de separación', 'Conservación de la masa', 'Ensayo a la llama', 'Tipos de reacción', 'Reactivo límite con globos', 'Gases', 'Dilución y solubilidad', 'Ácidos, bases y pH', 'Titulación ácido-base', 'Velocidad de reacción', 'Saponificación', 'Combustión'],
+    items: ['Mezclas y técnicas de separación', 'Conservación de la masa', 'Ensayo a la llama', 'Tipos de reacción', 'Reactivo límite con globos', 'Gases', 'Dilución y solubilidad', 'Ácidos, bases y pH', 'Titulación ácido-base', 'Velocidad de reacción', 'Saponificación', 'Combustión'],
   },
 ]
 
