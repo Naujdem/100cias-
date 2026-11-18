@@ -1,0 +1,696 @@
+{
+  "id": "leyes-gases",
+  "materia": "quimica",
+  "area": "soluciones",
+  "titulo": "Leyes de los gases",
+  "subtema": "Boyle, Charles, Gay-Lussac, la ley combinada, Avogadro y el gas ideal",
+  "orden": 132,
+  "etiqueta": "2",
+  "vistas": [
+    "ruta"
+  ],
+  "tituloVista": "Ruta de las leyes de los gases",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Describir cómo cambian la presión, el volumen y la temperatura de un gas cuando una de ellas se mantiene constante.",
+    "Resolver problemas con las leyes de Boyle, Charles, Gay-Lussac y la ley combinada.",
+    "Relacionar el volumen de un gas con su cantidad en moles (Avogadro).",
+    "Usar la ecuación del gas ideal y las leyes de Dalton y Graham."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con un texto de química de bachillerato (fechas de Boyle 1662, Charles ~1787, Gay-Lussac ~1802, Avogadro 1811; R = 0,082 atm·L/(mol·K); volumen molar 22,4 L a 0 °C y 1 atm)."
+  ],
+  "bloques": [
+    {
+      "id": "boyle",
+      "titulo": "Ley de Boyle: presión y volumen",
+      "resumen": "Si se aprieta un gas, su presión sube: P × V = constante.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "En 1662, Robert Boyle encerró aire en un tubo y le fue echando mercurio para apretarlo. Encontró que, si la temperatura no cambia, al reducir el volumen del gas a la mitad su presión se duplica, y al reducirlo a un tercio se triplica. Presión y volumen son inversamente proporcionales: su producto se mantiene igual, P × V = constante, o P₁·V₁ = P₂·V₂. Con partículas se entiende fácil: en menos espacio, las mismas partículas chocan más veces contra las paredes. Así funcionan la jeringa, la bomba de la bicicleta y hasta la respiración: cuando el diafragma baja, los pulmones se agrandan, la presión adentro baja y el aire entra.",
+        "contexto": [
+          {
+            "titulo": "Robert Boyle",
+            "texto": "Fue un químico irlandés del siglo XVII; se le considera uno de los fundadores de la química moderna. Es el mismo Boyle con quien trabajó Robert Hooke."
+          },
+          {
+            "titulo": "Ejemplo",
+            "texto": "4 L de aire a 1 atm se comprimen hasta 1 L: P₂ = (1 atm × 4 L) / 1 L = 4 atm."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Si se aprieta un gas (menos volumen), su presión sube."
+          ],
+          "media": [
+            "Boyle: P₁·V₁ = P₂·V₂ (temperatura constante)."
+          ],
+          "avanzada": [
+            "La gráfica P contra V es una hipérbola; P contra 1/V es una recta."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué el aire de una jeringa tapada empuja de vuelta cuando la aprietas?",
+          "actividad": "Jeringa tapada con marcas de volumen y pesas o libros sobre el émbolo: anotar volumen contra número de libros.",
+          "errores": [
+            "Pensar que al comprimir el gas hay más partículas.",
+            "Olvidar que la ley solo vale si la temperatura no cambia."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "La jeringa tapada",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Tapas con el dedo una jeringa llena de aire y empujas el émbolo. ¿Qué sientes?",
+            "opciones": [
+              "Que el aire empuja cada vez más fuerte",
+              "Que el aire se sale",
+              "Que no pasa nada",
+              "Que el émbolo se va solo hacia adentro"
+            ],
+            "correcta": 0,
+            "explicacion": "Menos volumen, más presión: esa es la ley de Boyle."
+          }
+        },
+        {
+          "titulo": "Menos espacio, más presión",
+          "visual": {
+            "tipo": "escena",
+            "id": "ley-boyle",
+            "fases": [
+              {
+                "id": "libre",
+                "nombre": "40 mL",
+                "texto": "Sin empujar: 1 atm."
+              },
+              {
+                "id": "mitad",
+                "nombre": "20 mL",
+                "texto": "La mitad del volumen: 2 atm."
+              },
+              {
+                "id": "cuarto",
+                "nombre": "10 mL",
+                "texto": "Un cuarto: 4 atm."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Juega con el pistón",
+          "visual": {
+            "tipo": "diagrama",
+            "id": "piston-gas"
+          }
+        }
+      ],
+      "diagrama": "piston-gas",
+      "juego": "boyle-juego",
+      "preguntas": [
+        {
+          "id": "qm-lg-1",
+          "enunciado": "A temperatura constante, si el volumen de un gas se reduce a la mitad, su presión…",
+          "opciones": [
+            "Se duplica",
+            "Se reduce a la mitad",
+            "No cambia",
+            "Se vuelve cero"
+          ],
+          "correcta": 0,
+          "explicacion": "P × V se mantiene."
+        },
+        {
+          "id": "qm-lg-2",
+          "enunciado": "6 L de gas a 1 atm se comprimen a 2 L. ¿Cuál es la nueva presión?",
+          "opciones": [
+            "3 atm",
+            "2 atm",
+            "12 atm",
+            "1/3 atm"
+          ],
+          "correcta": 0,
+          "explicacion": "1 × 6 = P₂ × 2 → P₂ = 3 atm."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "charles",
+      "titulo": "Ley de Charles: volumen y temperatura",
+      "resumen": "Si se calienta un gas, se expande: V / T = constante.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "requiere": [
+        "boyle"
+      ],
+      "ficha": {
+        "idea": "Jacques Charles, un físico francés aficionado a los globos, observó hacia 1787 que, si la presión no cambia, un gas se expande al calentarlo y se contrae al enfriarlo. Volumen y temperatura (en kelvin) son directamente proporcionales: si la temperatura absoluta se duplica, el volumen también. Se escribe V / T = constante, o V₁/T₁ = V₂/T₂. Con partículas: al calentarse van más rápido, chocan más fuerte y empujan las paredes elásticas hacia afuera hasta que la presión vuelve a ser la de afuera. Por eso un globo se arruga en la nevera, un balón se pone duro al sol y un globo aerostático sube: el aire caliente se expande, queda menos denso y flota en el aire frío.",
+        "contexto": [
+          {
+            "titulo": "Globos de verdad",
+            "texto": "En 1783 Charles subió en el primer globo de hidrógeno, pocos días después del primer vuelo en globo de aire caliente."
+          },
+          {
+            "titulo": "Ejemplo",
+            "texto": "Un globo de 2 L a 300 K se calienta a 330 K: V₂ = 2 L × 330 / 300 = 2,2 L."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Si se calienta un gas, se expande; si se enfría, se encoge."
+          ],
+          "media": [
+            "Charles: V₁/T₁ = V₂/T₂ (presión constante; T en kelvin)."
+          ],
+          "avanzada": [
+            "Extrapolando la recta V contra T hasta V = 0 se llega a −273 °C: así se predijo el cero absoluto."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué los globos de las fiestas amanecen arrugados?",
+          "actividad": "Globo sobre una botella vacía: meter la botella en agua caliente y luego en agua con hielo.",
+          "errores": [
+            "Usar grados Celsius en la fórmula.",
+            "Pensar que el gas «sube» porque el calor sube."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "El globo y la temperatura",
+          "visual": {
+            "tipo": "escena",
+            "id": "ley-charles",
+            "fases": [
+              {
+                "id": "nevera",
+                "nombre": "En la nevera",
+                "texto": "El globo se encoge."
+              },
+              {
+                "id": "ambiente",
+                "nombre": "A temperatura ambiente",
+                "texto": "Tamaño normal."
+              },
+              {
+                "id": "sol",
+                "nombre": "Al sol",
+                "texto": "El globo se agranda."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre la escala Kelvin",
+            "tema": "gases-teoria",
+            "bloque": "kelvin"
+          }
+        },
+        {
+          "titulo": "El globo aerostático",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🎈",
+            "valor": "V / T = constante",
+            "texto": "El aire caliente se expande, queda menos denso y el globo sube."
+          }
+        }
+      ],
+      "juego": "charles-juego",
+      "preguntas": [
+        {
+          "id": "qm-lg-3",
+          "enunciado": "A presión constante, si un gas se calienta, su volumen…",
+          "opciones": [
+            "Aumenta",
+            "Disminuye",
+            "No cambia",
+            "Se vuelve cero"
+          ],
+          "correcta": 0,
+          "explicacion": "Ley de Charles."
+        },
+        {
+          "id": "qm-lg-4",
+          "enunciado": "Un gas ocupa 3 L a 300 K. ¿Qué volumen ocupa a 600 K (misma presión)?",
+          "opciones": [
+            "6 L",
+            "1,5 L",
+            "3 L",
+            "9 L"
+          ],
+          "correcta": 0,
+          "explicacion": "La temperatura absoluta se duplicó."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "gay-lussac",
+      "titulo": "Ley de Gay-Lussac: presión y temperatura",
+      "resumen": "En un recipiente rígido, más temperatura es más presión: P / T = constante.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "basico",
+      "requiere": [
+        "boyle"
+      ],
+      "ficha": {
+        "idea": "Joseph Louis Gay-Lussac estudió, hacia 1802, qué le pasa a un gas encerrado en un recipiente que no se puede estirar. Si el volumen no cambia, la presión del gas es directamente proporcional a su temperatura en kelvin: P / T = constante, o P₁/T₁ = P₂/T₂. Las partículas, al calentarse, chocan más rápido y más fuerte contra unas paredes que no ceden. Así funciona la olla a presión: el vapor encerrado aumenta su presión y su temperatura, y la comida se cocina más rápido; la válvula deja salir el exceso. Por la misma razón nunca se calienta un aerosol ni se deja un cilindro de gas al sol: la presión puede romper el envase.",
+        "contexto": [
+          {
+            "titulo": "Seguridad",
+            "texto": "Los aerosoles traen la advertencia «no exponer a temperaturas mayores de 50 °C». No se queman ni se perforan, aunque parezcan vacíos."
+          },
+          {
+            "titulo": "Ejemplo",
+            "texto": "Una llanta a 2 atm y 290 K se calienta al sol hasta 319 K: P₂ = 2 atm × 319 / 290 = 2,2 atm."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "En un recipiente cerrado y rígido, si sube la temperatura, sube la presión."
+          ],
+          "media": [
+            "Gay-Lussac: P₁/T₁ = P₂/T₂ (volumen constante; T en kelvin)."
+          ],
+          "avanzada": [
+            "La olla a presión llega a unos 2 atm, y el agua hierve dentro a unos 120 °C."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué silba la olla a presión?",
+          "actividad": "Discutir las etiquetas de advertencia de un aerosol y de un cilindro de gas.",
+          "errores": [
+            "Creer que la presión sube porque entra más gas.",
+            "Usar grados Celsius en la fórmula."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "La olla a presión",
+          "visual": {
+            "tipo": "escena",
+            "id": "ley-gay-lussac",
+            "fases": [
+              {
+                "id": "fria",
+                "nombre": "Fría",
+                "texto": "Olla cerrada y fría."
+              },
+              {
+                "id": "calentando",
+                "nombre": "Calentando",
+                "texto": "La presión sube."
+              },
+              {
+                "id": "silba",
+                "nombre": "Silba",
+                "texto": "La válvula deja salir el vapor."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Peligro",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Por qué un aerosol dice «no exponer al calor» aunque esté casi vacío?",
+            "opciones": [
+              "Porque al calentarse sube la presión del gas que queda y puede explotar",
+              "Porque el gas se congela",
+              "Porque pierde el olor",
+              "Porque se derrite el plástico de la tapa"
+            ],
+            "correcta": 0,
+            "explicacion": "Lata rígida: volumen constante, la presión sube con la temperatura."
+          }
+        }
+      ],
+      "juego": "gay-lussac-juego",
+      "preguntas": [
+        {
+          "id": "qm-lg-5",
+          "enunciado": "En un recipiente rígido, si la temperatura de un gas sube, su presión…",
+          "opciones": [
+            "Aumenta",
+            "Disminuye",
+            "No cambia",
+            "Se vuelve cero"
+          ],
+          "correcta": 0,
+          "explicacion": "Ley de Gay-Lussac."
+        },
+        {
+          "id": "qm-lg-6",
+          "enunciado": "¿Por qué no se deben calentar los aerosoles?",
+          "opciones": [
+            "Porque la presión del gas aumenta y la lata puede explotar",
+            "Porque el gas se vuelve líquido",
+            "Porque se gasta más rápido",
+            "Porque cambia de color"
+          ],
+          "correcta": 0,
+          "explicacion": "P / T = constante."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "combinada",
+      "titulo": "Ley combinada de los gases",
+      "resumen": "Las tres leyes en una: P·V / T = constante.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "intermedio",
+      "requiere": [
+        "charles",
+        "gay-lussac"
+      ],
+      "ficha": {
+        "idea": "Boyle, Charles y Gay-Lussac describen casos en los que una variable se queda quieta. En la vida real a veces cambian las tres: el aire de un globo que sube a la montaña cambia de presión y de temperatura a la vez. Para eso sirve la ley combinada: P₁·V₁ / T₁ = P₂·V₂ / T₂, siempre con la temperatura en kelvin y con la misma cantidad de gas. Si una de las tres no cambia, se tacha a los dos lados y aparece la ley de siempre: con T fija queda Boyle; con P fija, Charles; con V fijo, Gay-Lussac.",
+        "contexto": [
+          {
+            "titulo": "Ejemplo",
+            "texto": "Un globo tiene 5 L en Neiva (720 mmHg, 303 K). En el páramo (500 mmHg, 278 K): V₂ = 5 × (720/500) × (278/303) ≈ 6,6 L."
+          },
+          {
+            "titulo": "Cómo resolver",
+            "texto": "1) Pasar las temperaturas a kelvin. 2) Usar las mismas unidades de P y V a los dos lados. 3) Despejar."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Cuando cambian a la vez la presión, el volumen y la temperatura se usa la ley combinada."
+          ],
+          "media": [
+            "P₁·V₁ / T₁ = P₂·V₂ / T₂ (T en kelvin, misma cantidad de gas)."
+          ],
+          "avanzada": [
+            "Las tres leyes son casos de la ley combinada."
+          ]
+        },
+        "docente": {
+          "abrir": "Si subes un globo de Neiva al páramo, ¿crece por la presión o se encoge por el frío? ¿Cuál gana?",
+          "actividad": "Resolver en grupos el globo de Neiva al páramo y comparar con la escena.",
+          "errores": [
+            "Mezclar mmHg y atm en la misma ecuación.",
+            "Olvidar pasar a kelvin."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Las tres leyes",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "💉",
+                "titulo": "Boyle (T fija)",
+                "texto": "P₁V₁ = P₂V₂"
+              },
+              {
+                "icono": "🎈",
+                "titulo": "Charles (P fija)",
+                "texto": "V₁/T₁ = V₂/T₂"
+              },
+              {
+                "icono": "🍲",
+                "titulo": "Gay-Lussac (V fijo)",
+                "texto": "P₁/T₁ = P₂/T₂"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Todas juntas",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🧮",
+            "valor": "P₁V₁ / T₁ = P₂V₂ / T₂",
+            "texto": "Si una variable no cambia, se tacha y sale una de las tres leyes."
+          }
+        }
+      ],
+      "juego": "cual-ley-gas-juego",
+      "preguntas": [
+        {
+          "id": "qm-lg-7",
+          "enunciado": "En la ley combinada, ¿en qué unidad va la temperatura?",
+          "opciones": [
+            "Kelvin",
+            "Grados Celsius",
+            "Grados Fahrenheit",
+            "Da igual"
+          ],
+          "correcta": 0,
+          "explicacion": "Siempre en kelvin."
+        },
+        {
+          "id": "qm-lg-8",
+          "enunciado": "Si en la ley combinada la presión no cambia, ¿qué ley queda?",
+          "opciones": [
+            "Charles",
+            "Boyle",
+            "Gay-Lussac",
+            "Avogadro"
+          ],
+          "correcta": 0,
+          "explicacion": "V₁/T₁ = V₂/T₂."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "avogadro",
+      "titulo": "Ley de Avogadro",
+      "resumen": "Más gas, más volumen: volúmenes iguales tienen el mismo número de partículas.",
+      "anio": 5,
+      "etiqueta": "Paso 5",
+      "nivel": "intermedio",
+      "requiere": [
+        "combinada"
+      ],
+      "ficha": {
+        "idea": "En 1811, Amedeo Avogadro propuso que volúmenes iguales de cualquier gas, a la misma presión y temperatura, contienen el mismo número de partículas. No importa si es hidrógeno, oxígeno o dióxido de carbono: como las partículas están tan separadas, su tamaño casi no cuenta. Por eso, a P y T constantes, el volumen es proporcional a la cantidad de gas en moles: V / n = constante. Si soplas el doble de aire en un globo, ocupa el doble. Un mol de cualquier gas ideal ocupa 22,4 L a 0 °C y 1 atm (las llamadas condiciones normales); a 25 °C y 1 atm, unos 24,5 L.",
+        "contexto": [
+          {
+            "titulo": "De dónde salió el mol",
+            "texto": "La idea de Avogadro permitió luego contar partículas pesando gases; el número de Avogadro se nombró en su honor."
+          },
+          {
+            "titulo": "Más gas en la llanta",
+            "texto": "Al inflar una llanta se le agregan moles de aire; como la llanta casi no crece, lo que sube es la presión."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Más gas (más partículas) ocupa más volumen."
+          ],
+          "media": [
+            "Avogadro: V₁/n₁ = V₂/n₂ (P y T constantes)."
+          ],
+          "avanzada": [
+            "Volumen molar: 22,4 L/mol a 0 °C y 1 atm."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Un globo con helio y uno con aire, del mismo tamaño, tienen el mismo número de partículas?",
+          "actividad": "Inflar globos con 1, 2 y 3 soplidos iguales y medir su contorno.",
+          "errores": [
+            "Pensar que un gas más pesado ocupa más volumen por mol.",
+            "Usar 22,4 L/mol en cualquier condición."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Contar con globos",
+          "visual": {
+            "tipo": "escena",
+            "id": "ley-avogadro",
+            "fases": [
+              {
+                "id": "uno",
+                "nombre": "1 mol",
+                "texto": "Un globo con 1 mol de aire."
+              },
+              {
+                "id": "dos",
+                "nombre": "2 mol",
+                "texto": "El doble de gas, el doble de volumen."
+              },
+              {
+                "id": "iguales",
+                "nombre": "Cualquier gas",
+                "texto": "Mismo volumen, mismo número de partículas."
+              },
+              {
+                "id": "molar",
+                "nombre": "22,4 L",
+                "texto": "El volumen molar en condiciones normales.",
+                "nivel": "avanzado"
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre el mol",
+            "tema": "el-mol",
+            "bloque": "que-es-mol"
+          }
+        }
+      ],
+      "juego": "avogadro-juego",
+      "preguntas": [
+        {
+          "id": "qm-lg-9",
+          "enunciado": "A la misma P y T, 1 mol de helio y 1 mol de oxígeno ocupan…",
+          "opciones": [
+            "El mismo volumen",
+            "Más el oxígeno",
+            "Más el helio",
+            "No se puede saber"
+          ],
+          "correcta": 0,
+          "explicacion": "Ley de Avogadro."
+        },
+        {
+          "id": "qm-lg-10",
+          "enunciado": "Si a P y T constantes se duplican los moles de un gas, su volumen…",
+          "opciones": [
+            "Se duplica",
+            "Se reduce a la mitad",
+            "No cambia",
+            "Se cuadruplica"
+          ],
+          "correcta": 0,
+          "explicacion": "V / n = constante."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "gas-ideal",
+      "titulo": "Gas ideal, Dalton y Graham",
+      "resumen": "PV = nRT, presiones parciales y difusión.",
+      "anio": 6,
+      "etiqueta": "Paso 6",
+      "nivel": "avanzado",
+      "requiere": [
+        "avogadro"
+      ],
+      "ficha": {
+        "idea": "Juntando las leyes de Boyle, Charles, Gay-Lussac y Avogadro sale una sola ecuación para el gas ideal: PV = nRT, donde R es la constante de los gases, 0,082 atm·L/(mol·K). Con ella se calcula cualquier variable si se conocen las otras tres. Dos leyes más completan el cuadro. La de Dalton de las presiones parciales dice que en una mezcla cada gas empuja como si estuviera solo, y la presión total es la suma: en el aire, el oxígeno es el 21 %, así que en Bogotá su presión parcial es de unos 118 mmHg, frente a 160 a nivel del mar; por eso allí se respira menos oxígeno. La ley de Graham dice que un gas se difunde más rápido cuanto más liviano es: la velocidad es inversamente proporcional a la raíz de la masa molar. El helio se escapa del globo más rápido que el aire, y el amoníaco gana la carrera al ácido clorhídrico en un tubo.",
+        "contexto": [
+          {
+            "titulo": "Valores de R",
+            "texto": "R = 0,082 atm·L/(mol·K) = 8,314 J/(mol·K) = 62,4 mmHg·L/(mol·K)."
+          },
+          {
+            "titulo": "Gases reales",
+            "texto": "A presiones muy altas o temperaturas muy bajas los gases reales se apartan de PV = nRT, porque sus partículas sí ocupan espacio y sí se atraen."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Un gas se describe con una sola ecuación que une P, V, T y la cantidad de gas."
+          ],
+          "media": [
+            "En una mezcla, cada gas aporta su parte de la presión (Dalton).",
+            "Los gases livianos se difunden más rápido (Graham)."
+          ],
+          "avanzada": [
+            "PV = nRT, R = 0,082 atm·L/(mol·K).",
+            "Dalton: P total = P₁ + P₂ + …; Pᵢ = fracción molar × P total.",
+            "Graham: v₁/v₂ = √(M₂/M₁)."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué los alpinistas llevan oxígeno embotellado si en la montaña el aire también tiene 21 % de oxígeno?",
+          "actividad": "Calcular la presión parcial del oxígeno a nivel del mar, en Neiva, en Bogotá y en el Nevado del Huila con los datos del tema 1.",
+          "errores": [
+            "Usar R = 0,082 con presiones en mmHg.",
+            "Creer que la fracción de oxígeno del aire baja en la montaña (lo que baja es la presión total)."
+          ],
+          "minutos": 35
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Una sola ecuación",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🧮",
+            "valor": "PV = nRT",
+            "texto": "R = 0,082 atm·L/(mol·K). Temperatura en kelvin."
+          }
+        },
+        {
+          "titulo": "Mezclas y carreras",
+          "visual": {
+            "tipo": "escena",
+            "id": "dalton-graham",
+            "fases": [
+              {
+                "id": "dalton",
+                "nombre": "Dalton",
+                "texto": "Cada gas aporta su presión parcial."
+              },
+              {
+                "id": "graham",
+                "nombre": "Graham",
+                "texto": "El gas más liviano se difunde más rápido."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre la presión y la altura",
+            "tema": "gases-teoria",
+            "bloque": "altura"
+          }
+        }
+      ],
+      "juego": "gas-ideal-juego",
+      "preguntas": [
+        {
+          "id": "qm-lg-11",
+          "enunciado": "¿Cuántos moles hay en 24,6 L de gas a 1 atm y 300 K?",
+          "opciones": [
+            "1 mol",
+            "2 mol",
+            "0,5 mol",
+            "24,6 mol"
+          ],
+          "correcta": 0,
+          "explicacion": "n = PV / RT = 24,6 / (0,082 × 300) = 1."
+        },
+        {
+          "id": "qm-lg-12",
+          "enunciado": "¿Cuál se difunde más rápido?",
+          "opciones": [
+            "Hidrógeno, H₂",
+            "Oxígeno, O₂",
+            "Dióxido de carbono, CO₂",
+            "Cloro, Cl₂"
+          ],
+          "correcta": 0,
+          "explicacion": "Es el más liviano."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}
