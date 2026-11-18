@@ -1,0 +1,418 @@
+{
+  "id": "biodiversidad",
+  "materia": "biologia",
+  "area": "ecosistemas",
+  "titulo": "Biodiversidad",
+  "subtema": "La variedad de la vida",
+  "orden": 37,
+  "etiqueta": "7",
+  "vistas": [
+    "ruta"
+  ],
+  "tituloVista": "Ruta de la biodiversidad",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Definir la biodiversidad en sus tres niveles.",
+    "Explicar por qué Colombia es megadiversa.",
+    "Reconocer amenazas y acciones de conservación."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con el SiB Colombia y el Instituto Humboldt. A verificar: más de 1900 especies de aves, más de 4000 orquídeas, más de 60 áreas de Parques Nacionales, Cueva de los Guácharos como primer parque (1960)."
+  ],
+  "bloques": [
+    {
+      "id": "que-es-biodiversidad",
+      "titulo": "¿Qué es la biodiversidad?",
+      "resumen": "La variedad de la vida en tres niveles: genes, especies y ecosistemas.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "La biodiversidad es la variedad de la vida. Se mide en tres niveles: la diversidad genética (las diferencias dentro de una especie, como las muchas variedades de maíz o de papa), la diversidad de especies (cuántos tipos de seres vivos hay) y la diversidad de ecosistemas (cuántos tipos de lugares distintos, como páramos, selvas y manglares).",
+        "contexto": [
+          {
+            "titulo": "Por qué importa",
+            "texto": "La biodiversidad da alimento, agua limpia, medicinas, polinización y suelos fértiles; también es parte de la cultura de los pueblos."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Biodiversidad: variedad de la vida.",
+            "Tres niveles: genes, especies y ecosistemas."
+          ],
+          "media": [],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Cuántas variedades de maíz, fríjol o papa conocen en sus familias?",
+          "actividad": "Inventariar las especies de plantas y animales que se ven en el colegio en 15 minutos.",
+          "errores": [
+            "Creer que biodiversidad es solo el número de especies."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Tres niveles",
+          "visual": {
+            "tipo": "escena",
+            "id": "biodiversidad-niveles",
+            "fases": [
+              {
+                "id": "genes",
+                "nombre": "Genética",
+                "texto": "La misma especie con muchas variedades: los maíces criollos."
+              },
+              {
+                "id": "especies",
+                "nombre": "Especies",
+                "texto": "Muchos tipos distintos de seres vivos."
+              },
+              {
+                "id": "ecosistemas",
+                "nombre": "Ecosistemas",
+                "texto": "Muchos tipos de lugares, cada uno con sus especies."
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "biodiv-niveles-juego",
+      "preguntas": [
+        {
+          "id": "ec-bq-1",
+          "enunciado": "Las muchas variedades de papa de los Andes son un ejemplo de…",
+          "opciones": [
+            "diversidad genética",
+            "diversidad de ecosistemas",
+            "una especie invasora",
+            "una cadena trófica"
+          ],
+          "correcta": 0,
+          "explicacion": "Son la misma especie con muchas variedades."
+        },
+        {
+          "id": "ec-bq-2",
+          "enunciado": "¿Cuáles son los tres niveles de la biodiversidad?",
+          "opciones": [
+            "Genes, especies y ecosistemas",
+            "Células, tejidos y órganos",
+            "Productores, consumidores y descomponedores",
+            "Individuo, población y comunidad"
+          ],
+          "correcta": 0,
+          "explicacion": "Variedad dentro de las especies, entre especies y entre lugares."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "megadiversa",
+      "titulo": "Colombia megadiversa",
+      "resumen": "Trópico, cordilleras y dos océanos: Colombia es el país con más aves y orquídeas del mundo.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "requiere": [
+        "que-es-biodiversidad"
+      ],
+      "ficha": {
+        "idea": "Colombia es uno de los países megadiversos del mundo: con muy poco territorio tiene una parte enorme de las especies del planeta. Es el primer país en aves (más de 1900 especies) y en orquídeas (más de 4000), y está entre los primeros en anfibios, mariposas y plantas. Se debe a su ubicación en el trópico, a sus tres cordilleras con todos los pisos térmicos y a sus dos océanos. Muchas especies son endémicas: solo viven aquí.",
+        "contexto": [
+          {
+            "titulo": "Endémicas",
+            "texto": "Una especie endémica solo vive en un lugar del mundo: si desaparece de allí, se extingue."
+          },
+          {
+            "titulo": "Contar especies",
+            "texto": "Cada año se describen especies nuevas en Colombia; muchas las registran comunidades y aficionados con fotografías."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Colombia es megadiversa.",
+            "Primer país en aves y orquídeas."
+          ],
+          "media": [
+            "Se debe al trópico, las cordilleras y los dos océanos."
+          ],
+          "avanzada": [
+            "Las especies endémicas solo viven en un lugar."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Qué aves has visto cerca de tu casa? ¿Sabes sus nombres?",
+          "actividad": "Hacer un conteo de aves del colegio durante una semana.",
+          "errores": [
+            "Creer que hay más especies en países fríos y ricos."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Un país lleno de vida",
+          "visual": {
+            "tipo": "escena",
+            "id": "megadiversa",
+            "fases": [
+              {
+                "id": "por-que",
+                "nombre": "¿Por qué?",
+                "texto": "Trópico, tres cordilleras con muchos pisos térmicos y dos océanos."
+              },
+              {
+                "id": "aves",
+                "nombre": "Aves",
+                "texto": "Más de 1900 especies: el país con más aves del mundo."
+              },
+              {
+                "id": "orquideas",
+                "nombre": "Orquídeas",
+                "texto": "Más de 4000 especies; también entre los primeros en anfibios, mariposas y plantas."
+              },
+              {
+                "id": "endemicas",
+                "nombre": "Endémicas",
+                "texto": "Muchas especies solo viven aquí: si desaparecen, desaparecen para siempre."
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "megadiversa-juego",
+      "preguntas": [
+        {
+          "id": "ec-me-1",
+          "enunciado": "¿En qué grupo es Colombia el primer país del mundo en número de especies?",
+          "opciones": [
+            "Aves",
+            "Pingüinos",
+            "Osos polares",
+            "Camellos"
+          ],
+          "correcta": 0,
+          "explicacion": "Más de 1900 especies."
+        },
+        {
+          "id": "ec-me-2",
+          "enunciado": "¿Qué es una especie endémica?",
+          "opciones": [
+            "Una que solo vive en un lugar del mundo",
+            "Una que vive en todos los países",
+            "Una que llegó de otro continente",
+            "Una que ya se extinguió"
+          ],
+          "correcta": 0,
+          "explicacion": "Por eso su conservación depende de ese lugar."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "amenazas",
+      "titulo": "Amenazas a la biodiversidad",
+      "resumen": "Pérdida de hábitat, especies invasoras, tráfico de fauna, contaminación y cambio climático.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "basico",
+      "requiere": [
+        "megadiversa"
+      ],
+      "ficha": {
+        "idea": "Las principales amenazas a la biodiversidad son la pérdida de hábitat (sobre todo la deforestación para potreros, cultivos ilícitos y minería), las especies invasoras que llegan de otros lugares y desplazan a las nativas, la sobreexplotación y el tráfico de fauna, la contaminación y el cambio climático.",
+        "contexto": [
+          {
+            "titulo": "El pez león",
+            "texto": "Llegó al Caribe desde el océano Índico y el Pacífico; aquí no tiene depredadores y se come a muchos peces pequeños."
+          },
+          {
+            "titulo": "Tráfico de fauna",
+            "texto": "Sacar animales silvestres del monte para venderlos es un delito en Colombia; muchos mueren en el camino."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Amenazas: pérdida de hábitat, invasoras, tráfico, contaminación y cambio climático."
+          ],
+          "media": [
+            "La pérdida de hábitat es la más grave."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Qué amenaza ves más cerca de tu vereda?",
+          "actividad": "Mapear en la vereda las amenazas que los estudiantes reconocen.",
+          "errores": [
+            "Creer que solo la caza amenaza a los animales."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Lo que la pone en riesgo",
+          "visual": {
+            "tipo": "escena",
+            "id": "amenazas",
+            "fases": [
+              {
+                "id": "habitat",
+                "nombre": "Pérdida de hábitat",
+                "texto": "Talar y quemar bosques para potreros, cultivos ilícitos o minería."
+              },
+              {
+                "id": "invasoras",
+                "nombre": "Especies invasoras",
+                "texto": "El pez león o el caracol africano desplazan a las especies nativas."
+              },
+              {
+                "id": "trafico",
+                "nombre": "Tráfico",
+                "texto": "Cazar o vender loros, tortugas y monos sacados del monte."
+              },
+              {
+                "id": "clima",
+                "nombre": "Contaminación y clima",
+                "texto": "Ríos contaminados y glaciares que se derriten."
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "amenazas-juego",
+      "preguntas": [
+        {
+          "id": "ec-am-1",
+          "enunciado": "¿Cuál es la mayor amenaza para la biodiversidad en Colombia?",
+          "opciones": [
+            "La pérdida de hábitat por deforestación",
+            "Los terremotos",
+            "Las especies nativas",
+            "La lluvia"
+          ],
+          "correcta": 0,
+          "explicacion": "Sin hábitat, las especies no tienen dónde vivir."
+        },
+        {
+          "id": "ec-am-2",
+          "enunciado": "¿Por qué el pez león es un problema en el Caribe?",
+          "opciones": [
+            "Es invasor y no tiene depredadores aquí",
+            "Es una especie endémica",
+            "Limpia los arrecifes",
+            "Solo come algas"
+          ],
+          "correcta": 0,
+          "explicacion": "Desplaza a los peces nativos."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "conservar",
+      "titulo": "Conservar la biodiversidad",
+      "resumen": "Áreas protegidas, corredores, semillas criollas y acciones de todos los días.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "intermedio",
+      "requiere": [
+        "amenazas"
+      ],
+      "ficha": {
+        "idea": "Para conservar la biodiversidad se crean áreas protegidas como los parques nacionales, se conectan los parches de bosque con corredores biológicos para que los animales puedan moverse, se guardan semillas en bancos y casas de semillas, y se cambian prácticas diarias: sembrar especies nativas, no comprar fauna silvestre, cuidar las quebradas y registrar lo que se observa.",
+        "contexto": [
+          {
+            "titulo": "Cueva de los Guácharos",
+            "texto": "El primer parque nacional de Colombia (1960) está en el sur del Huila; protege a los guácharos, aves que viven en cuevas y se orientan con sonidos."
+          },
+          {
+            "titulo": "Ciencia de todos",
+            "texto": "Cualquier persona puede registrar especies con fotos en plataformas de ciencia ciudadana y ayudar a conocerlas."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Áreas protegidas y corredores biológicos ayudan a conservar."
+          ],
+          "media": [
+            "Las semillas criollas conservan la diversidad genética."
+          ],
+          "avanzada": [
+            "Las acciones locales también cuentan."
+          ]
+        },
+        "docente": {
+          "abrir": "Si fueras alcalde, ¿qué harías para proteger la biodiversidad del municipio?",
+          "actividad": "Diseñar un corredor biológico entre dos parches de bosque de la vereda.",
+          "errores": [
+            "Pensar que conservar es solo trabajo del Gobierno."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Cuidar lo que hay",
+          "visual": {
+            "tipo": "escena",
+            "id": "conservar",
+            "fases": [
+              {
+                "id": "areas",
+                "nombre": "Áreas protegidas",
+                "texto": "Colombia tiene más de 60 parques nacionales; el primero, Cueva de los Guácharos, está en el Huila."
+              },
+              {
+                "id": "corredores",
+                "nombre": "Corredores",
+                "texto": "Franjas de bosque que unen parches para que los animales pasen."
+              },
+              {
+                "id": "semillas",
+                "nombre": "Semillas",
+                "texto": "Bancos y casas de semillas campesinas guardan la diversidad de los cultivos."
+              },
+              {
+                "id": "local",
+                "nombre": "Desde aquí",
+                "texto": "Sembrar nativas, no comprar fauna, cuidar quebradas y registrar lo que vemos."
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "conservar-juego",
+      "preguntas": [
+        {
+          "id": "ec-co-1",
+          "enunciado": "¿Para qué sirve un corredor biológico?",
+          "opciones": [
+            "Para unir parches de bosque y que los animales puedan moverse",
+            "Para que pasen los carros",
+            "Para sembrar un solo tipo de árbol",
+            "Para cazar más fácil"
+          ],
+          "correcta": 0,
+          "explicacion": "Evita que las poblaciones queden aisladas."
+        },
+        {
+          "id": "ec-co-2",
+          "enunciado": "¿Cuál fue el primer parque nacional de Colombia?",
+          "opciones": [
+            "Cueva de los Guácharos, en el Huila",
+            "Parque Tayrona",
+            "Amacayacu",
+            "Chingaza"
+          ],
+          "correcta": 0,
+          "explicacion": "Se creó en 1960."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}

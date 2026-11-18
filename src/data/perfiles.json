@@ -140,6 +140,11 @@
       "sucesion-ecologica": [
         "primaria",
         "secundaria"
+      ],
+      "biodiversidad": [
+        "que-es-biodiversidad",
+        "megadiversa",
+        "amenazas"
       ]
     },
     "nivelDibujo": "basico",
@@ -168,7 +173,8 @@
       "flujo-energia": "Productores y consumidores, cadenas y redes tróficas.",
       "relaciones-seres-vivos": "Relaciones intra e interespecíficas: grupos, depredación, competencia y simbiosis.",
       "poblaciones": "Tamaño y densidad de una población.",
-      "sucesion-ecologica": "Sucesión primaria y secundaria."
+      "sucesion-ecologica": "Sucesión primaria y secundaria.",
+      "biodiversidad": "Qué es la biodiversidad, Colombia megadiversa y sus amenazas."
     }
   },
   {
@@ -354,6 +360,12 @@
         "primaria",
         "secundaria",
         "perturbaciones"
+      ],
+      "biodiversidad": [
+        "que-es-biodiversidad",
+        "megadiversa",
+        "amenazas",
+        "conservar"
       ]
     },
     "nivelDibujo": "intermedio",
@@ -382,7 +394,8 @@
       "flujo-energia": "Suma la pirámide de energía (regla del 10 %).",
       "relaciones-seres-vivos": "Relaciones intra e interespecíficas: grupos, depredación, competencia y simbiosis.",
       "poblaciones": "Suma las curvas J y S y el ciclo depredador–presa con simulador.",
-      "sucesion-ecologica": "Suma perturbaciones y restauración ecológica."
+      "sucesion-ecologica": "Suma perturbaciones y restauración ecológica.",
+      "biodiversidad": "Suma las formas de conservar."
     }
   },
   {
@@ -589,6 +602,12 @@
         "primaria",
         "secundaria",
         "perturbaciones"
+      ],
+      "biodiversidad": [
+        "que-es-biodiversidad",
+        "megadiversa",
+        "amenazas",
+        "conservar"
       ]
     },
     "nivelDibujo": "avanzado",
@@ -617,7 +636,8 @@
       "flujo-energia": "Los cuatro pasos completos.",
       "relaciones-seres-vivos": "Relaciones intra e interespecíficas: grupos, depredación, competencia y simbiosis.",
       "poblaciones": "Los tres pasos, con captura y recaptura.",
-      "sucesion-ecologica": "Los tres pasos completos."
+      "sucesion-ecologica": "Los tres pasos completos.",
+      "biodiversidad": "Los cuatro pasos completos."
     }
   }
 ]

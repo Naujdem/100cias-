@@ -32,6 +32,7 @@ import { IntraJuego, DepredacionJuego, SimbiosisJuego } from './JuegosRelaciones
 import SimuladorPoblaciones from './SimuladorPoblaciones.tsx'
 import { DensidadJuego, CrecimientoJuego, DepredadorPresaJuego } from './JuegosPoblaciones.tsx'
 import { SucesionPrimariaJuego, SucesionSecundariaJuego, PerturbacionesJuego } from './JuegosSucesion.tsx'
+import { BiodiversidadNivelesJuego, MegadiversaJuego, AmenazasJuego, ConservarJuego } from './JuegosBiodiversidad.tsx'
 import { ProductoresJuego, CadenaJuego, RedJuego, PiramideJuego } from './JuegosEnergia.tsx'
 import { BiotecQueJuego, InsulinaJuego, PcrJuego, TransgenicoJuego, EdicionJuego, DebateJuego } from './JuegosBiotec.tsx'
 import { QueEsMutacionJuego, PuntualesJuego, EfectosJuego, NumericasJuego, CromosomicasJuego, VariacionJuego } from './JuegosMutaciones.tsx'
@@ -225,6 +226,10 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'sucesion-primaria-juego': SucesionPrimariaJuego,
   'sucesion-secundaria-juego': SucesionSecundariaJuego,
   'perturbaciones-juego': PerturbacionesJuego,
+  'biodiv-niveles-juego': BiodiversidadNivelesJuego,
+  'megadiversa-juego': MegadiversaJuego,
+  'amenazas-juego': AmenazasJuego,
+  'conservar-juego': ConservarJuego,
   'meiosis-i-ii-juego': MeiosisIoIIJuego,
   'oficio-juego': OficioJuego,
   'origen-celulas-juego': OrigenCelulasJuego,
