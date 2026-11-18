@@ -13,7 +13,7 @@ Guía de contenidos: plan curricular de Ciencias Naturales 2025 (Química 6°–
 4. **Gases, soluciones y equilibrio** (10°–11°)
 5. **Química orgánica** (11°)
 
-## Área 1 · La materia y sus cambios
+## Área 1 · La materia y sus cambios (construida el 18 nov 2026)
 
 1. **¿Qué es la química?** — objeto de estudio, importancia en la vida diaria, la química en el campo (suelos,
    abonos, cocina).

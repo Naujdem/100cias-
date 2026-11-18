@@ -42,6 +42,5 @@ export const PROXIMOS: Record<string, { etiqueta: string; nombre: string }[]> = 
   ],
   evolucion: [],
   materia: [
-    { etiqueta: '6', nombre: 'Separación de mezclas' },
   ],
 }
