@@ -22,6 +22,8 @@ import { DondeEstaJuego, NucleotidoJuego, ParejaBaseJuego, AdnArnJuego, Cromosom
 import { ParaQueCopiarJuego, HorquillaJuego, ModelosJuego, EnzimasJuego, ErroresJuego } from './JuegosReplicacion.tsx'
 import { DogmaJuego, TranscripcionJuego, CodigoGeneticoJuego, TraduccionJuego, RegulacionJuego, SplicingJuego } from './JuegosExpresion.tsx'
 import RuedaCodones from './RuedaCodones.tsx'
+import PunnettNoMendel from './PunnettNoMendel.tsx'
+import { IncompletaJuego, CodominanciaJuego, SangreJuego, LigadaJuego, GenealogiaJuego, PoligenicaJuego } from './JuegosNoMendel.tsx'
 import FasesMitosis from './FasesMitosis.tsx'
 import MeiosisJuego from './MeiosisJuego.tsx'
 import ClasificaCasos, { CASOS_OXIGENO, CASOS_MUERTE, CASOS_TEJIDOS, CASOS_REPRODUCCION } from './ClasificaCasos.tsx'
@@ -165,6 +167,15 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'splicing-juego': SplicingJuego,
   'rueda-codones': RuedaCodones,
   transcribe: () => <ArmaHelice arn />,
+  'punnett-incompleta': () => <PunnettNoMendel modo="incompleta" />,
+  'punnett-sangre': () => <PunnettNoMendel modo="sangre" />,
+  'punnett-ligado': () => <PunnettNoMendel modo="ligado" />,
+  'incompleta-juego': IncompletaJuego,
+  'codominancia-juego': CodominanciaJuego,
+  'sangre-juego': SangreJuego,
+  'ligada-juego': LigadaJuego,
+  'genealogia-juego': GenealogiaJuego,
+  'poligenica-juego': PoligenicaJuego,
   'meiosis-i-ii-juego': MeiosisIoIIJuego,
   'oficio-juego': OficioJuego,
   'origen-celulas-juego': OrigenCelulasJuego,

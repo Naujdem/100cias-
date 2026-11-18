@@ -16,6 +16,7 @@ import { EscenaGriffith, EscenaAvery, EscenaHersheyChase, EscenaMiescher, Escena
 import { EscenaZoomAdn, EscenaNucleotido, EscenaAdnArn, EscenaEmpaquetamiento, EscenaGen } from './EscenasAdn.tsx'
 import { EscenaParaQueCopiar, EscenaHorquilla, EscenaModelos, EscenaEnzimas, EscenaErrores } from './EscenasReplicacion.tsx'
 import { EscenaDogma, EscenaTranscripcion, EscenaLecturaCodones, EscenaTraduccion, EscenaRegulacion, EscenaSplicing } from './EscenasExpresion.tsx'
+import { EscenaIncompleta, EscenaCodominancia, EscenaAbo, EscenaLigada, EscenaGenealogia, EscenaPoligenica } from './EscenasNoMendel.tsx'
 
 /** Escenas vivas: un dibujo que se transforma según la fase (`fase` = id de la fase en el JSON). */
 export const ESCENAS: Record<string, ComponentType<{ fase: string }>> = {
@@ -70,6 +71,12 @@ export const ESCENAS: Record<string, ComponentType<{ fase: string }>> = {
   traduccion: EscenaTraduccion,
   regulacion: EscenaRegulacion,
   splicing: EscenaSplicing,
+  incompleta: EscenaIncompleta,
+  codominancia: EscenaCodominancia,
+  abo: EscenaAbo,
+  ligada: EscenaLigada,
+  genealogia: EscenaGenealogia,
+  poligenica: EscenaPoligenica,
   'optico-electronico': EscenaOpticoElectronico,
   'celula-animal': EscenaZoomCelula,
   'celula-vegetal': ({ fase }) => EscenaZoomCelula({ fase, vegetal: true }),
