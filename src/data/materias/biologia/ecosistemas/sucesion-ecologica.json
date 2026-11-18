@@ -1,0 +1,350 @@
+{
+  "id": "sucesion-ecologica",
+  "materia": "biologia",
+  "area": "ecosistemas",
+  "titulo": "Sucesión ecológica",
+  "subtema": "Cómo cambia y se recupera un ecosistema",
+  "orden": 36,
+  "etiqueta": "6",
+  "vistas": [
+    "ruta"
+  ],
+  "tituloVista": "Ruta de la sucesión",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Describir la sucesión primaria y la secundaria.",
+    "Diferenciar perturbaciones naturales y humanas.",
+    "Proponer acciones de restauración."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con un texto de ecología. Los tiempos de cada etapa son aproximados y varían con el clima."
+  ],
+  "bloques": [
+    {
+      "id": "primaria",
+      "titulo": "Sucesión primaria",
+      "resumen": "Sobre roca desnuda llegan primero los líquenes y, en cientos de años, se forma un bosque.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "La sucesión ecológica es el cambio de una comunidad a lo largo del tiempo. En la sucesión primaria se empieza sin suelo, sobre roca desnuda, como la lava enfriada o el terreno que deja un glaciar. Llegan primero los organismos pioneros, los líquenes, que rompen la roca; con sus restos y los de los musgos se forma suelo, y luego llegan hierbas, arbustos y árboles. Tras cientos de años se forma una comunidad madura o clímax.",
+        "contexto": [
+          {
+            "titulo": "Glaciares que se van",
+            "texto": "Los glaciares de Colombia se derriten por el calentamiento: en las rocas que dejan, la sucesión primaria empieza de cero."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Sucesión: cambio de una comunidad en el tiempo.",
+            "Primaria: empieza sobre roca desnuda.",
+            "Los líquenes son los pioneros."
+          ],
+          "media": [
+            "Termina en una comunidad madura (clímax)."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Cómo crees que aparece la vida en una roca recién salida de un volcán?",
+          "actividad": "Buscar líquenes y musgos en muros y piedras del colegio.",
+          "errores": [
+            "Creer que los árboles pueden crecer directamente sobre la roca."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "De la roca al bosque",
+          "visual": {
+            "tipo": "escena",
+            "id": "sucesion-primaria",
+            "fases": [
+              {
+                "id": "roca",
+                "nombre": "Roca desnuda",
+                "texto": "Lava enfriada o roca que deja un glaciar: no hay suelo."
+              },
+              {
+                "id": "liquenes",
+                "nombre": "Líquenes",
+                "texto": "Los pioneros: viven sobre la roca y la rompen poco a poco."
+              },
+              {
+                "id": "musgos",
+                "nombre": "Musgos",
+                "texto": "Con los restos se forma una capa delgada de suelo."
+              },
+              {
+                "id": "hierbas",
+                "nombre": "Hierbas",
+                "texto": "El suelo es más profundo y llegan las hierbas."
+              },
+              {
+                "id": "arbustos",
+                "nombre": "Arbustos",
+                "texto": "Más sombra y humedad."
+              },
+              {
+                "id": "bosque",
+                "nombre": "Bosque",
+                "texto": "Tras cientos de años, una comunidad madura: el clímax."
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "sucesion-primaria-juego",
+      "preguntas": [
+        {
+          "id": "ec-sp-1",
+          "enunciado": "¿Quiénes son los primeros en colonizar la roca desnuda?",
+          "opciones": [
+            "Los líquenes",
+            "Los árboles",
+            "Los monos",
+            "Las hierbas altas"
+          ],
+          "correcta": 0,
+          "explicacion": "Son los organismos pioneros."
+        },
+        {
+          "id": "ec-sp-2",
+          "enunciado": "¿Qué diferencia a la sucesión primaria?",
+          "opciones": [
+            "Empieza sin suelo",
+            "Ocurre solo en potreros",
+            "Dura unos meses",
+            "Empieza con árboles grandes"
+          ],
+          "correcta": 0,
+          "explicacion": "El suelo se forma durante la sucesión."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "secundaria",
+      "titulo": "Sucesión secundaria",
+      "resumen": "Después de un incendio o en un potrero abandonado el suelo sigue ahí: el bosque vuelve más rápido.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "requiere": [
+        "primaria"
+      ],
+      "ficha": {
+        "idea": "En la sucesión secundaria la comunidad se pierde pero el suelo se conserva, con semillas y raíces: después de un incendio, una tala o en un potrero abandonado. Por eso es más rápida: en meses brotan pastos y hierbas, en pocos años aparece el rastrojo con arbustos, luego un bosque joven y, en décadas, un bosque secundario parecido al original.",
+        "contexto": [
+          {
+            "titulo": "El rastrojo",
+            "texto": "En el campo se llama rastrojo al monte bajo que crece en un terreno que se deja de trabajar: es una etapa de la sucesión."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Secundaria: el suelo se conserva.",
+            "Es más rápida que la primaria."
+          ],
+          "media": [
+            "Pastos → rastrojo → bosque joven → bosque secundario."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Qué le pasa a un potrero si nadie lo vuelve a usar?",
+          "actividad": "Comparar fotos de un potrero, un rastrojo y un bosque de la vereda.",
+          "errores": [
+            "Pensar que un bosque talado no puede volver."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "El bosque vuelve",
+          "visual": {
+            "tipo": "escena",
+            "id": "sucesion-secundaria",
+            "fases": [
+              {
+                "id": "perturbacion",
+                "nombre": "La perturbación",
+                "texto": "Un incendio, una tala o un potrero abandonado: el suelo sigue ahí."
+              },
+              {
+                "id": "pastos",
+                "nombre": "Pastos",
+                "texto": "En pocos meses brotan pastos y hierbas."
+              },
+              {
+                "id": "rastrojo",
+                "nombre": "Rastrojo",
+                "texto": "En pocos años: arbustos y plantas pioneras."
+              },
+              {
+                "id": "bosque-joven",
+                "nombre": "Bosque joven",
+                "texto": "Árboles que crecen rápido y dan sombra."
+              },
+              {
+                "id": "bosque",
+                "nombre": "Bosque secundario",
+                "texto": "En décadas, un bosque parecido al original."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Primaria y secundaria",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "🪨",
+              "titulo": "Primaria",
+              "puntos": [
+                "Sin suelo",
+                "Pioneros: líquenes",
+                "Cientos de años"
+              ]
+            },
+            "der": {
+              "icono": "🌾",
+              "titulo": "Secundaria",
+              "puntos": [
+                "Con suelo",
+                "Pioneros: pastos",
+                "Décadas"
+              ]
+            }
+          }
+        }
+      ],
+      "juego": "sucesion-secundaria-juego",
+      "preguntas": [
+        {
+          "id": "ec-ss-1",
+          "enunciado": "¿Por qué la sucesión secundaria es más rápida que la primaria?",
+          "opciones": [
+            "Porque el suelo ya existe",
+            "Porque no hay seres vivos",
+            "Porque llueve más",
+            "Porque empieza con árboles adultos"
+          ],
+          "correcta": 0,
+          "explicacion": "Hay suelo, semillas y raíces."
+        },
+        {
+          "id": "ec-ss-2",
+          "enunciado": "¿Qué es el rastrojo?",
+          "opciones": [
+            "El monte bajo que crece en un terreno abandonado",
+            "Un bosque maduro",
+            "Roca desnuda",
+            "Un tipo de liquen"
+          ],
+          "correcta": 0,
+          "explicacion": "Es una etapa de la sucesión secundaria."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "perturbaciones",
+      "titulo": "Perturbaciones y restauración",
+      "resumen": "Erupciones, deslizamientos, talas y quemas reinician la sucesión; la restauración ayuda a que el bosque vuelva.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "intermedio",
+      "requiere": [
+        "secundaria"
+      ],
+      "ficha": {
+        "idea": "Las perturbaciones son eventos que destruyen parte de una comunidad y reinician la sucesión. Algunas son naturales, como erupciones, deslizamientos o inundaciones; otras las causan las personas, como la tala, las quemas o la minería, que suelen ser más frecuentes y a veces dañan tanto el suelo que la recuperación tarda muchísimo. La restauración ecológica ayuda a la sucesión: proteger el terreno, sembrar especies nativas y cuidar las fuentes de agua.",
+        "contexto": [
+          {
+            "titulo": "Nativas",
+            "texto": "Sembrar especies nativas de la región atrae aves y otros animales que traen más semillas: el bosque se recupera más rápido."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Perturbación: evento que reinicia la sucesión."
+          ],
+          "media": [
+            "Hay perturbaciones naturales y humanas."
+          ],
+          "avanzada": [
+            "La restauración ecológica acelera la recuperación."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Hay en la vereda algún terreno que se esté recuperando? ¿Qué lo ayudaría?",
+          "actividad": "Diseñar con la clase un plan de restauración para un rincón del colegio.",
+          "errores": [
+            "Creer que basta sembrar cualquier árbol, aunque no sea de la región."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Romper y reparar",
+          "visual": {
+            "tipo": "escena",
+            "id": "perturbaciones",
+            "fases": [
+              {
+                "id": "naturales",
+                "nombre": "Naturales",
+                "texto": "Erupciones, deslizamientos e inundaciones reinician la sucesión."
+              },
+              {
+                "id": "humanas",
+                "nombre": "Humanas",
+                "texto": "Tala, quemas y minería: más frecuentes y a veces más dañinas para el suelo."
+              },
+              {
+                "id": "restaurar",
+                "nombre": "Restaurar",
+                "texto": "Proteger el terreno, sembrar especies nativas y cuidar el agua."
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "perturbaciones-juego",
+      "preguntas": [
+        {
+          "id": "ec-pe-1",
+          "enunciado": "¿Cuál es una perturbación causada por las personas?",
+          "opciones": [
+            "Una quema para sembrar",
+            "Una erupción volcánica",
+            "Un deslizamiento por lluvias",
+            "Una inundación natural"
+          ],
+          "correcta": 0,
+          "explicacion": "Las quemas son una causa frecuente de incendios."
+        },
+        {
+          "id": "ec-pe-2",
+          "enunciado": "¿Por qué conviene sembrar especies nativas al restaurar?",
+          "opciones": [
+            "Atraen fauna que trae más semillas y se adaptan mejor",
+            "Crecen sin agua",
+            "No necesitan suelo",
+            "Evitan toda perturbación"
+          ],
+          "correcta": 0,
+          "explicacion": "Ayudan a que el bosque se recupere más rápido."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}

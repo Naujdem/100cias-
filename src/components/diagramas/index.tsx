@@ -31,6 +31,7 @@ import RedTrofica from './RedTrofica.tsx'
 import { IntraJuego, DepredacionJuego, SimbiosisJuego } from './JuegosRelaciones.tsx'
 import SimuladorPoblaciones from './SimuladorPoblaciones.tsx'
 import { DensidadJuego, CrecimientoJuego, DepredadorPresaJuego } from './JuegosPoblaciones.tsx'
+import { SucesionPrimariaJuego, SucesionSecundariaJuego, PerturbacionesJuego } from './JuegosSucesion.tsx'
 import { ProductoresJuego, CadenaJuego, RedJuego, PiramideJuego } from './JuegosEnergia.tsx'
 import { BiotecQueJuego, InsulinaJuego, PcrJuego, TransgenicoJuego, EdicionJuego, DebateJuego } from './JuegosBiotec.tsx'
 import { QueEsMutacionJuego, PuntualesJuego, EfectosJuego, NumericasJuego, CromosomicasJuego, VariacionJuego } from './JuegosMutaciones.tsx'
@@ -221,6 +222,9 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'densidad-juego': DensidadJuego,
   'crecimiento-juego': CrecimientoJuego,
   'depredador-presa-juego': DepredadorPresaJuego,
+  'sucesion-primaria-juego': SucesionPrimariaJuego,
+  'sucesion-secundaria-juego': SucesionSecundariaJuego,
+  'perturbaciones-juego': PerturbacionesJuego,
   'meiosis-i-ii-juego': MeiosisIoIIJuego,
   'oficio-juego': OficioJuego,
   'origen-celulas-juego': OrigenCelulasJuego,

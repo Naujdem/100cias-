@@ -136,6 +136,10 @@
       ],
       "poblaciones": [
         "tamano-densidad"
+      ],
+      "sucesion-ecologica": [
+        "primaria",
+        "secundaria"
       ]
     },
     "nivelDibujo": "basico",
@@ -163,7 +167,8 @@
       "factores-ecosistemas": "Factores, pisos térmicos y ecosistemas de Colombia.",
       "flujo-energia": "Productores y consumidores, cadenas y redes tróficas.",
       "relaciones-seres-vivos": "Relaciones intra e interespecíficas: grupos, depredación, competencia y simbiosis.",
-      "poblaciones": "Tamaño y densidad de una población."
+      "poblaciones": "Tamaño y densidad de una población.",
+      "sucesion-ecologica": "Sucesión primaria y secundaria."
     }
   },
   {
@@ -344,6 +349,11 @@
         "tamano-densidad",
         "crecimiento",
         "depredador-presa"
+      ],
+      "sucesion-ecologica": [
+        "primaria",
+        "secundaria",
+        "perturbaciones"
       ]
     },
     "nivelDibujo": "intermedio",
@@ -371,7 +381,8 @@
       "factores-ecosistemas": "Suma el rango de tolerancia y el factor limitante.",
       "flujo-energia": "Suma la pirámide de energía (regla del 10 %).",
       "relaciones-seres-vivos": "Relaciones intra e interespecíficas: grupos, depredación, competencia y simbiosis.",
-      "poblaciones": "Suma las curvas J y S y el ciclo depredador–presa con simulador."
+      "poblaciones": "Suma las curvas J y S y el ciclo depredador–presa con simulador.",
+      "sucesion-ecologica": "Suma perturbaciones y restauración ecológica."
     }
   },
   {
@@ -573,6 +584,11 @@
         "tamano-densidad",
         "crecimiento",
         "depredador-presa"
+      ],
+      "sucesion-ecologica": [
+        "primaria",
+        "secundaria",
+        "perturbaciones"
       ]
     },
     "nivelDibujo": "avanzado",
@@ -600,7 +616,8 @@
       "factores-ecosistemas": "Los cuatro pasos completos.",
       "flujo-energia": "Los cuatro pasos completos.",
       "relaciones-seres-vivos": "Relaciones intra e interespecíficas: grupos, depredación, competencia y simbiosis.",
-      "poblaciones": "Los tres pasos, con captura y recaptura."
+      "poblaciones": "Los tres pasos, con captura y recaptura.",
+      "sucesion-ecologica": "Los tres pasos completos."
     }
   }
 ]
