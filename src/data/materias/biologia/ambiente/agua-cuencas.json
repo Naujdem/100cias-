@@ -1,0 +1,365 @@
+{
+  "id": "agua-cuencas",
+  "materia": "biologia",
+  "area": "ambiente",
+  "titulo": "El agua y las cuencas",
+  "subtema": "De dónde viene el agua que usamos",
+  "orden": 52,
+  "etiqueta": "2",
+  "vistas": ["ruta"],
+  "tituloVista": "Ruta del agua",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Reconocer que el agua dulce disponible es muy poca.",
+    "Identificar las partes de una cuenca hidrográfica.",
+    "Explicar por qué los páramos y los bosques regulan el agua.",
+    "Calcular y reducir la huella hídrica propia."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar cifras con el IDEAM (Estudio Nacional del Agua) y Water Footprint Network. Los litros de la huella hídrica son promedios mundiales aproximados."
+  ],
+  "bloques": [
+    {
+      "id": "agua-planeta",
+      "titulo": "El agua del planeta",
+      "resumen": "Casi toda el agua de la Tierra es salada; de la dulce, la mayor parte está congelada o bajo tierra.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "La Tierra parece un planeta de agua, pero cerca del 97 % es agua salada de los océanos. Solo alrededor del 3 % es dulce, y de ella la mayor parte está congelada en los polos y glaciares o guardada bajo tierra. El agua de ríos y lagos, la que usamos con más facilidad, es menos del 1 % de toda el agua. Colombia es uno de los países con más agua del mundo, pero está mal repartida: la mayor parte corre por la Orinoquia y la Amazonía, donde vive poca gente, y muchos municipios andinos sufren por desabastecimiento en las sequías.",
+        "contexto": [
+          {
+            "titulo": "Un balde de agua",
+            "texto": "Si toda el agua de la Tierra cupiera en un balde de 10 litros, el agua de ríos y lagos sería menos de una cucharada."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Casi toda el agua de la Tierra es salada.",
+            "El agua dulce de ríos y lagos es muy poca."
+          ],
+          "media": [
+            "La mayor parte del agua dulce está congelada o bajo tierra.",
+            "Colombia tiene mucha agua, pero mal repartida."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "Si el planeta está cubierto de agua, ¿por qué hay pueblos que se quedan sin ella?",
+          "actividad": "Con un balde de 10 litros, separar con vasos y goteros cuánta agua es salada, cuánta es hielo y cuánta está en ríos y lagos.",
+          "errores": [
+            "Creer que el agua dulce es abundante porque se ve mucha agua en el mapa."
+          ],
+          "minutos": 15
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "De toda el agua de la Tierra, ¿cuánta está en ríos y lagos?",
+            "opciones": ["Menos del 1 %", "Cerca de la mitad", "Una cuarta parte", "Casi toda"],
+            "correcta": 0,
+            "explicacion": "Casi toda es salada, y la dulce está sobre todo congelada o bajo tierra."
+          }
+        },
+        {
+          "titulo": "Un balde de agua",
+          "visual": {
+            "tipo": "escena",
+            "id": "agua-planeta",
+            "fases": [
+              { "id": "toda", "nombre": "Toda el agua", "texto": "Imagina toda el agua de la Tierra en un balde de 10 litros." },
+              { "id": "salada", "nombre": "Salada", "texto": "Casi 10 litros son agua salada de los océanos." },
+              { "id": "dulce", "nombre": "Dulce", "texto": "Solo unos 3 vasos son agua dulce." },
+              { "id": "rios", "nombre": "Ríos y lagos", "texto": "La de ríos y lagos cabe en menos de una cucharada." }
+            ]
+          }
+        }
+      ],
+      "juego": "agua-planeta-juego",
+      "preguntas": [
+        {
+          "id": "am-ag-1",
+          "enunciado": "¿Dónde está la mayor parte del agua dulce?",
+          "opciones": ["Congelada o bajo tierra", "En los ríos", "En las nubes", "En los seres vivos"],
+          "correcta": 0,
+          "explicacion": "Ríos y lagos tienen muy poca."
+        },
+        {
+          "id": "am-ag-2",
+          "enunciado": "¿Por qué en Colombia hay municipios sin agua si el país tiene mucha?",
+          "opciones": [
+            "Porque el agua está mal repartida y las fuentes se dañan",
+            "Porque toda el agua de Colombia es salada",
+            "Porque en Colombia no llueve",
+            "Porque los ríos se secaron todos"
+          ],
+          "correcta": 0,
+          "explicacion": "La mayor parte corre lejos de donde vive la gente."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "cuenca",
+      "titulo": "La cuenca hidrográfica",
+      "resumen": "Una cuenca es todo el territorio cuya agua corre hacia el mismo río: desde los filos de las montañas hasta la desembocadura.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "requiere": ["agua-planeta"],
+      "ficha": {
+        "idea": "Una cuenca hidrográfica es el territorio donde toda el agua que cae escurre hacia un mismo río. La limita la divisoria de aguas: los filos de las montañas, desde donde el agua baja hacia un lado o hacia otro. En la parte alta están los nacimientos; muchas quebradas (afluentes) se unen al río principal, que lleva el agua hasta su desembocadura en otro río, un lago o el mar. Todo lo que pasa en la cuenca, arriba o abajo, afecta el agua: una tala en la parte alta se nota en el río de la parte baja. El río Magdalena nace en el Macizo Colombiano, en el Huila, y su cuenca es la más poblada del país.",
+        "contexto": [
+          {
+            "titulo": "Vivimos en una cuenca",
+            "texto": "La quebrada de tu vereda es afluente de otro río, y ese, a su vez, del Magdalena: todos vivimos en alguna cuenca."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Cuenca: el territorio cuya agua va a un mismo río.",
+            "Partes: nacimiento, afluentes, río principal y desembocadura."
+          ],
+          "media": [
+            "Divisoria de aguas: los filos de las montañas que separan dos cuencas.",
+            "Lo que se hace arriba afecta el agua de abajo."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "La quebrada de la vereda, ¿hasta dónde llega al final?",
+          "actividad": "En un mapa del municipio, seguir con el dedo una quebrada desde su nacimiento hasta el Magdalena y nombrar los ríos por los que pasa.",
+          "errores": [
+            "Pensar que la cuenca es solo el cauce del río, y no todo el territorio que le da agua."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "De la montaña al mar",
+          "visual": {
+            "tipo": "escena",
+            "id": "cuenca",
+            "fases": [
+              { "id": "divisoria", "nombre": "Divisoria de aguas", "texto": "Los filos de las montañas: el agua baja hacia un lado o hacia el otro." },
+              { "id": "nacimientos", "nombre": "Nacimientos", "texto": "En la parte alta brota el agua del suelo y del páramo." },
+              { "id": "afluentes", "nombre": "Afluentes", "texto": "Las quebradas bajan y se unen unas con otras." },
+              { "id": "rio", "nombre": "Río principal", "texto": "Recoge el agua de toda la cuenca." },
+              { "id": "desembocadura", "nombre": "Desembocadura", "texto": "Donde el río entrega su agua a otro río o al mar." }
+            ]
+          }
+        },
+        {
+          "titulo": "El río Magdalena",
+          "visual": { "tipo": "cifra", "icono": "🏞️", "valor": "≈1.500 km", "texto": "desde su nacimiento en el Macizo Colombiano (Huila) hasta el mar Caribe." }
+        }
+      ],
+      "juego": "cuenca-juego",
+      "diagrama": "maqueta-cuenca",
+      "preguntas": [
+        {
+          "id": "am-ag-3",
+          "enunciado": "¿Qué es una cuenca hidrográfica?",
+          "opciones": [
+            "El territorio cuya agua escurre hacia un mismo río",
+            "Solo el cauce por donde corre un río",
+            "Un lago en la montaña",
+            "El lugar donde el río llega al mar"
+          ],
+          "correcta": 0,
+          "explicacion": "Incluye montañas, bosques, potreros y pueblos."
+        },
+        {
+          "id": "am-ag-4",
+          "enunciado": "Si se tala el bosque de la parte alta de una cuenca, ¿qué pasa abajo?",
+          "opciones": [
+            "Hay más crecientes en invierno y menos agua en verano",
+            "No pasa nada, porque está lejos",
+            "El río se vuelve salado",
+            "Llueve más en la parte baja"
+          ],
+          "correcta": 0,
+          "explicacion": "El agua escurre de golpe en vez de infiltrarse."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "fabricas-agua",
+      "titulo": "Páramos y bosques: fábricas de agua",
+      "resumen": "El páramo atrapa la niebla y guarda el agua como una esponja; el bosque la deja entrar al suelo. Así los ríos tienen agua todo el año.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "basico",
+      "requiere": ["cuenca"],
+      "ficha": {
+        "idea": "Los páramos no fabrican agua de la nada, pero la regulan. Los frailejones y los pajonales atrapan la niebla; los musgos y el suelo negro del páramo, lleno de materia orgánica, guardan el agua como una esponja y la sueltan poco a poco hacia los nacimientos. Los bosques hacen algo parecido más abajo: sus raíces y la hojarasca dejan que el agua de la lluvia se infiltre en vez de escurrir. Gracias a eso los ríos tienen agua en verano y no se desbordan tanto en invierno. Colombia tiene cerca de la mitad de los páramos del mundo, y de ellos depende buena parte del agua de las ciudades andinas.",
+        "contexto": [
+          {
+            "titulo": "Un páramo cerca",
+            "texto": "En el Huila hay páramos en el Macizo Colombiano y en las cordilleras: de ellos nacen el Magdalena y muchos de sus afluentes."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "El páramo guarda el agua como una esponja.",
+            "El bosque ayuda a que el agua entre al suelo."
+          ],
+          "media": [
+            "Por eso los ríos tienen agua en verano y crecen menos en invierno.",
+            "Colombia tiene cerca de la mitad de los páramos del mundo."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Por qué la quebrada sigue corriendo aunque lleve semanas sin llover?",
+          "actividad": "Echar un vaso de agua sobre una esponja y otro sobre una tabla inclinada: comparar cuánta agua escurre y cuánta queda guardada.",
+          "errores": [
+            "Creer que el páramo «produce» agua; la capta, la guarda y la regula."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "La esponja del páramo",
+          "visual": {
+            "tipo": "escena",
+            "id": "paramo-esponja",
+            "fases": [
+              { "id": "niebla", "nombre": "Captar", "texto": "Los frailejones y los pajonales atrapan las gotas de la niebla." },
+              { "id": "esponja", "nombre": "Guardar", "texto": "Los musgos y el suelo negro guardan el agua como una esponja." },
+              { "id": "soltar", "nombre": "Soltar poco a poco", "texto": "El agua sale despacio hacia los nacimientos, aun en verano." },
+              { "id": "dano", "nombre": "Si se daña", "texto": "Con quemas, papa o ganado el suelo se compacta y deja de guardar agua." }
+            ]
+          },
+          "atajo": { "texto": "Más sobre esto: el frailejón", "tema": "adaptaciones", "bloque": "morfologicas" }
+        },
+        {
+          "titulo": "Bosque y potrero",
+          "visual": {
+            "tipo": "compara",
+            "izq": { "icono": "🌳", "titulo": "Con bosque", "puntos": ["El agua se infiltra", "Ríos con agua en verano", "Agua clara"] },
+            "der": { "icono": "🐄", "titulo": "Sin bosque", "puntos": ["El agua escurre de golpe", "Crecientes en invierno", "Agua con barro"] }
+          }
+        }
+      ],
+      "juego": "fabricas-agua-juego",
+      "preguntas": [
+        {
+          "id": "am-ag-5",
+          "enunciado": "¿Qué hace el páramo con el agua?",
+          "opciones": [
+            "La capta, la guarda y la suelta poco a poco",
+            "La fabrica a partir de las rocas",
+            "La evapora toda",
+            "La vuelve salada"
+          ],
+          "correcta": 0,
+          "explicacion": "Por eso se dice que es una esponja."
+        },
+        {
+          "id": "am-ag-6",
+          "enunciado": "¿Por qué con bosque los ríos tienen agua en verano?",
+          "opciones": [
+            "Porque el agua de la lluvia se infiltró y sale despacio",
+            "Porque los árboles producen agua",
+            "Porque en el bosque llueve todos los días",
+            "Porque el bosque detiene la evaporación del mar"
+          ],
+          "correcta": 0,
+          "explicacion": "El suelo funciona como un tanque."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "huella-hidrica",
+      "titulo": "Huella hídrica",
+      "resumen": "Además del agua que gastamos en la casa, usamos agua escondida en todo lo que comemos y compramos.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "intermedio",
+      "requiere": ["fabricas-agua"],
+      "ficha": {
+        "idea": "La huella hídrica es toda el agua que usamos, directa e indirectamente. La directa es la que gastamos en la casa: bañarnos, cocinar, lavar. La indirecta está «escondida» en los productos: el agua que se necesitó para cultivar, criar o fabricar lo que consumimos. Una taza de café necesita unos 130 litros desde la mata hasta la taza; una camiseta de algodón, unos 2.500 litros; un kilo de carne de res, más de 15.000. En Colombia la agricultura y la ganadería usan la mayor parte del agua. Cuidar el agua es ahorrarla en casa, pero también proteger las cuencas y consumir con cuidado.",
+        "contexto": [
+          {
+            "titulo": "El café del Huila",
+            "texto": "El Huila es el mayor productor de café de Colombia: cuidar el agua en el beneficio del café y no echar las mieles a las quebradas protege la cuenca."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Huella hídrica: toda el agua que usamos."
+          ],
+          "media": [
+            "Directa: la de la casa. Indirecta: la escondida en los productos.",
+            "La agricultura y la ganadería usan la mayor parte del agua."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Cuánta agua crees que hay en tu desayuno?",
+          "actividad": "Calcular en grupo el agua escondida de un almuerzo típico y proponer cambios para reducirla.",
+          "errores": [
+            "Pensar que solo gastamos el agua que sale de la llave."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Agua escondida",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "☕", "titulo": "Una taza de café", "texto": "≈130 litros." },
+              { "icono": "👕", "titulo": "Una camiseta de algodón", "texto": "≈2.500 litros." },
+              { "icono": "🥩", "titulo": "1 kg de carne de res", "texto": "≈15.000 litros." },
+              { "icono": "🚿", "titulo": "Una ducha de 10 minutos", "texto": "≈100 litros." }
+            ]
+          }
+        },
+        {
+          "titulo": "Cuidar el agua",
+          "visual": {
+            "tipo": "compara",
+            "izq": { "icono": "🏠", "titulo": "En casa", "puntos": ["Duchas cortas", "Cerrar la llave", "Reparar goteras", "Recoger agua lluvia"] },
+            "der": { "icono": "🏞️", "titulo": "En la cuenca", "puntos": ["Proteger nacimientos", "No quemar ni talar", "No echar desechos al río"] }
+          }
+        }
+      ],
+      "juego": "huella-hidrica-juego",
+      "preguntas": [
+        {
+          "id": "am-ag-7",
+          "enunciado": "¿Qué es la huella hídrica indirecta?",
+          "opciones": [
+            "El agua escondida en los productos que consumimos",
+            "El agua que tomamos al día",
+            "El agua que se pierde por goteras",
+            "La lluvia que cae en la casa"
+          ],
+          "correcta": 0,
+          "explicacion": "Se usó para cultivarlos, criarlos o fabricarlos."
+        },
+        {
+          "id": "am-ag-8",
+          "enunciado": "¿Qué actividad usa más agua en Colombia?",
+          "opciones": ["La agricultura y la ganadería", "Las duchas", "Lavar la ropa", "Lavar los carros"],
+          "correcta": 0,
+          "explicacion": "Por eso importa cómo producimos los alimentos."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}

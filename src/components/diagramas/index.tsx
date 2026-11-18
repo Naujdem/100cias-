@@ -67,6 +67,8 @@ import { MetodoMendelJuego, DominanteJuego, GenotipoJuego, ProporcionJuego, Puro
 import { ComparadorProEu, ComparadorAnimalVegetal, ExploradorBacterias, GaleriaEspecializadas } from './TiposCelulas.tsx'
 import { MateriaReciclaJuego, CicloAguaJuego, CicloCarbonoJuego, CicloNitrogenoJuego, CiclosRepasoJuego } from './JuegosCiclos.tsx'
 import ViajeCarbono from './ViajeCarbono.tsx'
+import { AguaPlanetaJuego, CuencaJuego, FabricasAguaJuego, HuellaHidricaJuego } from './JuegosAgua.tsx'
+import MaquetaCuenca from './MaquetaCuenca.tsx'
 
 /** Registro de diagramas interactivos. La clave es el valor de `bloque.diagrama`. */
 export const DIAGRAMAS: Record<string, ComponentType> = {
@@ -358,4 +360,9 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'ciclo-nitrogeno-juego': CicloNitrogenoJuego,
   'ciclos-repaso-juego': CiclosRepasoJuego,
   'viaje-carbono': ViajeCarbono,
+  'agua-planeta-juego': AguaPlanetaJuego,
+  'cuenca-juego': CuencaJuego,
+  'fabricas-agua-juego': FabricasAguaJuego,
+  'huella-hidrica-juego': HuellaHidricaJuego,
+  'maqueta-cuenca': MaquetaCuenca,
 }
