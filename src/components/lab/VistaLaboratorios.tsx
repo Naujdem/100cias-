@@ -1,18 +1,34 @@
 import { useState } from 'react'
+import type { ReactNode } from 'react'
 import { enlace } from '../../lib/ruta.ts'
 import { Migas } from '../Biblioteca.tsx'
 import Mesa from './Mesa.tsx'
 import type { Nivel, Practica } from './Mesa.tsx'
 import solucionMolar from './practicas/solucionMolar.tsx'
+import Seguridad from './practicas/Seguridad.tsx'
 
 // Laboratorios virtuales (PLAN-LABORATORIOS.md). Las prácticas listas van en PRACTICAS; las demás de la
 // ruta salen como «próximamente».
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const PRACTICAS: Practica<any>[] = [solucionMolar]
+// Dos tipos: prácticas de mesa (Practica, con el motor Mesa) y minijuegos con su propio componente.
+interface Entrada {
+  id: string
+  titulo: string
+  resumen: string
+  grupo: string
+  desdeGrado: number
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  mesa?: Practica<any>
+  Juego?: (p: { grado: number }) => ReactNode
+}
+
+const PRACTICAS: Entrada[] = [
+  { id: 'seguridad', titulo: 'Práctica cero: seguridad en el laboratorio', resumen: 'Vístete, reconoce los pictogramas, decide qué está bien y a dónde va cada residuo.', grupo: 'Para empezar', desdeGrado: 6, Juego: Seguridad },
+  { id: solucionMolar.id, titulo: solucionMolar.titulo, resumen: solucionMolar.resumen, grupo: 'Química', desdeGrado: solucionMolar.desdeGrado, mesa: solucionMolar },
+]
 
 const PROXIMAS: { lab: string; items: string[] }[] = [
-  { lab: 'Para empezar', items: ['Práctica cero: seguridad en el laboratorio', 'Reconoce tu material'] },
+  { lab: 'Para empezar', items: ['Reconoce tu material'] },
   {
     lab: 'Química',
     items: ['Medición: precisión y exactitud', 'Densidades', 'Mezclas y técnicas de separación', 'Conservación de la masa', 'Ensayo a la llama', 'Tipos de reacción', 'Reactivo límite con globos', 'Gases', 'Dilución y solubilidad', 'Ácidos, bases y pH', 'Titulación ácido-base', 'Velocidad de reacción', 'Saponificación', 'Combustión'],
@@ -38,7 +54,7 @@ export default function VistaLaboratorios({ practica, perfilId }: { practica?: s
         {PRACTICAS.map((p) => (
           <li key={p.id}>
             <a href={enlace.lab(p.id)} className={TARJETA}>
-              <span className="text-xs font-bold uppercase tracking-widest text-[var(--acento)]">Química · desde {p.desdeGrado}°</span>
+              <span className="text-xs font-bold uppercase tracking-widest text-[var(--acento)]">{p.grupo} · desde {p.desdeGrado}°</span>
               <span className="font-semibold">{p.titulo}</span>
               <span className="text-sm text-[var(--suave)]">{p.resumen}</span>
             </a>
@@ -59,8 +75,7 @@ export default function VistaLaboratorios({ practica, perfilId }: { practica?: s
   )
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-function VistaPractica({ P, grado }: { P: Practica<any>; grado: number }) {
+function VistaPractica({ P, grado }: { P: Entrada; grado: number }) {
   const [calc, setCalc] = useState(grado < 11)
   const [pistas, setPistas] = useState(grado < 11)
   const nivel: Nivel = { grado, calculadora: calc, pistas }
@@ -68,13 +83,13 @@ function VistaPractica({ P, grado }: { P: Practica<any>; grado: number }) {
     <div>
       <Migas pasos={[{ texto: 'Inicio', a: enlace.inicio }, { texto: 'Laboratorios', a: enlace.lab() }, { texto: P.titulo }]} />
       <h1 className="mt-1 text-2xl font-semibold sm:text-3xl">{P.titulo}</h1>
-      <div className="mt-2 flex flex-wrap items-center gap-4 text-sm">
+      {P.mesa && <div className="mt-2 flex flex-wrap items-center gap-4 text-sm">
         <label className="flex items-center gap-2"><input type="checkbox" checked={calc} onChange={(e) => setCalc(e.target.checked)} /> Calculadora</label>
         <label className="flex items-center gap-2"><input type="checkbox" checked={pistas} onChange={(e) => setPistas(e.target.checked)} /> Pasos y pistas</label>
         {grado < P.desdeGrado && <span className="text-[var(--suave)]">Esta práctica es desde {P.desdeGrado}°.</span>}
-      </div>
+      </div>}
       <div className="mt-4">
-        <Mesa P={P} nivel={nivel} />
+        {P.mesa ? <Mesa P={P.mesa} nivel={nivel} /> : P.Juego ? <P.Juego grado={grado} /> : null}
       </div>
     </div>
   )
