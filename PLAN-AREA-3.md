@@ -1,6 +1,6 @@
 # Plan del área 3 · Relaciones ecosistémicas
 
-**BORRADOR para aprobar** (propuesto el 17 nov 2026, mientras JuanMed no estaba). Mismo método del área 2:
+Aprobado por JuanMed el 17 nov 2026, **con el tema 8 opcional incluido**. Mismo método del área 2:
 una lección por tema siguiendo NORMA-LECCIONES.md (ruta de pasos, escenas vivas, Explora, Juega, Comprueba,
 casillas por grado, «cada idea en un solo lugar»). Ejemplos y ecosistemas de Colombia siempre que se pueda.
 El tema 1 ya se construyó como muestra; si el plan cambia, se ajusta.
@@ -21,7 +21,7 @@ El tema 1 ya se construyó como muestra; si el plan cambia, se ajusta.
 6. **Sucesión ecológica** — primaria y secundaria; cómo se recupera un potrero o un bosque quemado.
 7. **Biodiversidad** — qué es (genes, especies, ecosistemas), Colombia megadiversa, especies endémicas,
    amenazas; adaptaciones solo en mención corta (van a fondo en el área 4).
-8. *(Opcional, por decidir)* **Territorio y saberes** — cómo comunidades indígenas y campesinas leen y cuidan
+8. **Territorio y saberes** — cómo comunidades indígenas y campesinas leen y cuidan
    su territorio (calendarios ecológicos, chagra o huerta, semillas propias), en diálogo con lo anterior.
 
 ## Conexiones (sin repetir)
@@ -30,7 +30,6 @@ El tema 1 ya se construyó como muestra; si el plan cambia, se ajusta.
 - Ciclos biogeoquímicos (agua, carbono, nitrógeno), recursos y cuidado del ambiente: área 5.
 - Adaptación y selección natural: área 4 → aquí mención corta con «Más sobre esto».
 
-## Para decidir con JuanMed
+## Ejemplos regionales
 
-- ¿Se aprueba la ruta? ¿Entra el tema 8 opcional?
-- ¿Algún ecosistema o ejemplo de su región (Huila, Tolima) que quiera destacar?
+- Huila y Tolima cuando se pueda: desierto de la Tatacoa (bosque seco), Macizo Colombiano, río Magdalena.
