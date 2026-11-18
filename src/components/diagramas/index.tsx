@@ -109,6 +109,8 @@ import { BalanceadaJuego, CoeficienteJuego, OxidaReduceJuego } from './JuegosBal
 import FabricaFeS from './FabricaFeS.tsx'
 import { MasaCambiaJuego, ProporcionAguaJuego, CualLeyJuego } from './JuegosLeyes.tsx'
 import ConvertidorMol from './ConvertidorMol.tsx'
+import CajaGas from './CajaGas.tsx'
+import { PropiedadGasJuego, VariableGasJuego, KelvinJuego, UnidadesPresionJuego, AlturaPresionJuego } from './JuegosGases.tsx'
 import { UnidadContarJuego, MasaMolarJuego, ConversionJuego, EmpiricaJuego } from './JuegosMol.tsx'
 import ReactivoLimite from './ReactivoLimite.tsx'
 import { MolMolJuego, MasaMasaJuego, LimiteJuego } from './JuegosEstequiometria.tsx'
@@ -549,6 +551,12 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'mol-mol-juego': MolMolJuego,
   'masa-masa-juego': MasaMasaJuego,
   'limite-juego': LimiteJuego,
+  'caja-gas': CajaGas,
+  'propiedad-gas-juego': PropiedadGasJuego,
+  'variable-gas-juego': VariableGasJuego,
+  'kelvin-juego': KelvinJuego,
+  'unidades-presion-juego': UnidadesPresionJuego,
+  'altura-presion-juego': AlturaPresionJuego,
   'tipos-radiacion-juego': TiposRadiacionJuego,
   'vida-media-juego': VidaMediaJuego,
   'usos-nucleares-juego': UsosNuclearesJuego,

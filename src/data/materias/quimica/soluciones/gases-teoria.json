@@ -1,0 +1,688 @@
+{
+  "id": "gases-teoria",
+  "materia": "quimica",
+  "area": "soluciones",
+  "titulo": "Teoría cinética y propiedades de los gases",
+  "subtema": "Partículas en movimiento: presión, volumen, temperatura y la presión del aire",
+  "orden": 131,
+  "etiqueta": "1",
+  "vistas": [
+    "ruta"
+  ],
+  "tituloVista": "Ruta de los gases",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Explicar las propiedades de los gases con el modelo de partículas.",
+    "Relacionar la presión, el volumen y la temperatura con el movimiento de las partículas.",
+    "Convertir temperaturas a kelvin y presiones entre atm, mmHg y kPa.",
+    "Explicar por qué la presión atmosférica disminuye con la altura."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con un texto de química de bachillerato (cero absoluto −273,15 °C; 1 atm = 760 mmHg = 101 325 Pa ≈ 14,7 psi; Torricelli 1643).",
+    "Alturas y presiones de Neiva, Bogotá y el Nevado del Huila aproximadas con la fórmula barométrica: verificar con el IDEAM."
+  ],
+  "bloques": [
+    {
+      "id": "particulas",
+      "titulo": "Los gases son partículas en movimiento",
+      "resumen": "Partículas pequeñas, muy separadas, que se mueven sin parar y chocan.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "La teoría cinética explica cómo se porta un gas imaginándolo como muchísimas partículas diminutas. Esas partículas están muy separadas unas de otras (entre ellas solo hay vacío), se mueven todo el tiempo en línea recta y en todas las direcciones, y chocan entre sí y contra las paredes del recipiente sin perder energía. Casi no se atraen. Con esa idea se entienden las propiedades de los gases: se pueden comprimir (hay espacio vacío entre las partículas), se expanden hasta llenar todo el recipiente y se difunden, es decir, se mezclan solas con otros gases, como el olor del café que llega a toda la casa.",
+        "contexto": [
+          {
+            "titulo": "«Cinética» viene del griego",
+            "texto": "Kínesis significa movimiento: es la teoría de las partículas en movimiento."
+          },
+          {
+            "titulo": "¿Por qué el gas de la cocina huele?",
+            "texto": "El gas natural y el propano no tienen olor. Les agregan un compuesto de azufre muy oloroso para que una fuga se note enseguida."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Un gas está hecho de partículas separadas que se mueven sin parar.",
+            "Los gases se comprimen, se expanden y se difunden."
+          ],
+          "media": [
+            "Teoría cinética: partículas muy separadas, en movimiento rectilíneo y desordenado, que chocan sin perder energía y casi no se atraen."
+          ],
+          "avanzada": [
+            "Gas ideal: partículas sin volumen propio y sin fuerzas entre ellas; los gases reales se acercan a ese modelo a baja presión y alta temperatura."
+          ]
+        },
+        "docente": {
+          "abrir": "Si alguien abre un frasco de perfume en la puerta del salón, ¿quién lo huele primero? ¿Por qué llega hasta el fondo?",
+          "actividad": "Jeringa tapada con el dedo: con aire se puede empujar el émbolo; con agua, casi nada. Discutir qué hay entre las partículas.",
+          "errores": [
+            "Creer que entre las partículas del gas hay aire.",
+            "Pensar que las partículas se agrandan al calentarse (lo que cambia es su rapidez y su separación)."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Un olor que viaja",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Alguien prepara café en la cocina y lo hueles desde tu cuarto. ¿Qué llegó hasta tu nariz?",
+            "opciones": [
+              "Partículas del aroma que se movieron por el aire",
+              "El calor del café",
+              "Nada: el olor es solo una sensación",
+              "El sonido de la greca"
+            ],
+            "correcta": 0,
+            "explicacion": "Partículas del café se mezclaron con el aire y viajaron hasta ti: eso es la difusión."
+          }
+        },
+        {
+          "titulo": "Dentro de un gas",
+          "visual": {
+            "tipo": "escena",
+            "id": "gas-particulas",
+            "fases": [
+              {
+                "id": "cafe",
+                "nombre": "El olor viaja",
+                "texto": "El gas se esparce solo por toda la casa."
+              },
+              {
+                "id": "zoom",
+                "nombre": "De cerca",
+                "texto": "Partículas pequeñas, muy separadas; entre ellas, vacío."
+              },
+              {
+                "id": "choques",
+                "nombre": "Siempre chocando",
+                "texto": "Chocan contra las paredes: eso es la presión."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre sólidos, líquidos y gases",
+            "tema": "estados-materia",
+            "bloque": "particulas"
+          }
+        },
+        {
+          "titulo": "Las ideas de la teoría cinética",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🔬",
+                "titulo": "Pequeñas y separadas",
+                "texto": "Casi todo el gas es espacio vacío."
+              },
+              {
+                "icono": "💨",
+                "titulo": "Siempre en movimiento",
+                "texto": "En línea recta y en todas las direcciones."
+              },
+              {
+                "icono": "🎱",
+                "titulo": "Choques",
+                "texto": "Rebotan sin perder energía."
+              },
+              {
+                "icono": "🧲",
+                "titulo": "Casi no se atraen",
+                "texto": "Por eso no tienen forma fija."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Tres propiedades",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "🗜️",
+              "titulo": "Se comprimen",
+              "puntos": [
+                "Caben en menos espacio",
+                "Cilindro de gas, llanta"
+              ]
+            },
+            "der": {
+              "icono": "🎈",
+              "titulo": "Se expanden y difunden",
+              "puntos": [
+                "Llenan todo el recipiente",
+                "Se mezclan solos: perfume, café"
+              ]
+            }
+          }
+        }
+      ],
+      "juego": "propiedad-gas-juego",
+      "preguntas": [
+        {
+          "id": "qm-gt-1",
+          "enunciado": "¿Por qué un gas se puede comprimir?",
+          "opciones": [
+            "Porque entre sus partículas hay mucho espacio vacío",
+            "Porque sus partículas se encogen",
+            "Porque sus partículas desaparecen",
+            "Porque no tiene masa"
+          ],
+          "correcta": 0,
+          "explicacion": "Al comprimir, las partículas se acercan."
+        },
+        {
+          "id": "qm-gt-2",
+          "enunciado": "El olor del perfume llega a todo el salón. ¿Cómo se llama eso?",
+          "opciones": [
+            "Difusión",
+            "Compresión",
+            "Condensación",
+            "Fusión"
+          ],
+          "correcta": 0,
+          "explicacion": "Las partículas del perfume se mezclan con el aire."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "variables",
+      "titulo": "Presión, volumen y temperatura",
+      "resumen": "Un gas se describe con P, V, T y la cantidad de gas.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "requiere": [
+        "particulas"
+      ],
+      "ficha": {
+        "idea": "Para describir un gas se usan cuatro datos. La presión (P) es la fuerza con que las partículas golpean las paredes en cada pedazo de superficie: más choques o choques más fuertes, más presión. El volumen (V) es el espacio que ocupa el gas, que siempre es el de su recipiente. La temperatura (T) indica qué tan rápido se mueven, en promedio, sus partículas: si el gas se calienta, van más rápido y chocan más y más fuerte. Y la cantidad de gas (n, en moles) dice cuántas partículas hay. Las cuatro están ligadas: si una cambia, cambia al menos otra. Por eso una llanta inflada en la mañana tiene más presión al mediodía, cuando el sol la calienta.",
+        "contexto": [
+          {
+            "titulo": "¿Qué tan rápido van?",
+            "texto": "A temperatura ambiente, las moléculas del aire se mueven en promedio a unos 500 m/s, más rápido que el sonido. No llegan lejos porque chocan miles de millones de veces por segundo."
+          },
+          {
+            "titulo": "Instrumentos",
+            "texto": "Manómetro: presión de un gas encerrado (llantas, cilindros). Barómetro: presión del aire. Termómetro: temperatura."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "P: presión. V: volumen. T: temperatura.",
+            "Más calor → partículas más rápidas → más presión."
+          ],
+          "media": [
+            "La presión de un gas se debe a los choques de sus partículas contra las paredes del recipiente."
+          ],
+          "avanzada": [
+            "La temperatura absoluta es proporcional a la energía cinética promedio de las partículas."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué no se debe dejar un aerosol cerca del fogón ni al sol?",
+          "actividad": "Botella plástica vacía y tapada: meterla en agua caliente y luego en agua fría. Explicar con partículas lo que pasa.",
+          "errores": [
+            "Creer que la presión empuja solo hacia abajo (empuja en todas las direcciones).",
+            "Confundir calor con temperatura."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Las variables de un gas",
+          "visual": {
+            "tipo": "escena",
+            "id": "gas-variables",
+            "fases": [
+              {
+                "id": "presion",
+                "nombre": "Presión",
+                "texto": "Los choques contra las paredes."
+              },
+              {
+                "id": "volumen",
+                "nombre": "Volumen",
+                "texto": "El espacio que ocupa: todo el recipiente."
+              },
+              {
+                "id": "temperatura",
+                "nombre": "Temperatura",
+                "texto": "Qué tan rápido se mueven las partículas."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Juega con la caja",
+          "visual": {
+            "tipo": "diagrama",
+            "id": "caja-gas"
+          }
+        },
+        {
+          "titulo": "Al sol",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Una llanta inflada se deja al sol del mediodía. ¿Qué pasa con la presión del aire de adentro?",
+            "opciones": [
+              "Sube, porque las partículas van más rápido y chocan más",
+              "Baja, porque el aire se escapa",
+              "Sigue igual",
+              "Sube, porque entran partículas"
+            ],
+            "correcta": 0,
+            "explicacion": "El volumen y la cantidad de aire casi no cambian; la temperatura sí."
+          }
+        }
+      ],
+      "diagrama": "caja-gas",
+      "juego": "variable-gas-juego",
+      "preguntas": [
+        {
+          "id": "qm-gt-3",
+          "enunciado": "¿Qué produce la presión de un gas?",
+          "opciones": [
+            "Los choques de sus partículas contra las paredes",
+            "El peso del recipiente",
+            "El color del gas",
+            "Que las partículas estén quietas"
+          ],
+          "correcta": 0,
+          "explicacion": "Más choques, más presión."
+        },
+        {
+          "id": "qm-gt-4",
+          "enunciado": "Si un gas se calienta, sus partículas…",
+          "opciones": [
+            "Se mueven más rápido",
+            "Se hacen más grandes",
+            "Se detienen",
+            "Se convierten en líquido"
+          ],
+          "correcta": 0,
+          "explicacion": "La temperatura mide qué tan rápido se mueven."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "kelvin",
+      "titulo": "La escala Kelvin",
+      "resumen": "Empieza en el cero absoluto: K = °C + 273.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "intermedio",
+      "requiere": [
+        "variables"
+      ],
+      "ficha": {
+        "idea": "Si un gas se enfría, sus partículas van cada vez más despacio. Existe un límite: a −273,15 °C se mueven lo mínimo posible y no se puede enfriar más. Esa temperatura se llama cero absoluto. El físico William Thomson, lord Kelvin, propuso una escala que empieza justo ahí: 0 K. Sus «grados» son del mismo tamaño que los Celsius, así que para pasar de una a otra basta con sumar 273 (o 273,15 si se quiere precisión): el agua se congela a 273 K y hierve, a nivel del mar, a 373 K. En Kelvin no hay temperaturas negativas y no se dice «grados»: solo kelvin. En los cálculos de gases siempre se usa esta escala.",
+        "contexto": [
+          {
+            "titulo": "¿Por qué Kelvin en los gases?",
+            "texto": "Si un gas pasa de 10 °C a 20 °C no duplica su presión, porque en realidad pasó de 283 K a 293 K. Las leyes de los gases solo funcionan en kelvin."
+          },
+          {
+            "titulo": "Lo más frío",
+            "texto": "En laboratorios se ha llegado a menos de una milmillonésima de kelvin, pero nunca al cero absoluto."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Cero absoluto: la temperatura más baja posible."
+          ],
+          "media": [
+            "K = °C + 273. El cero absoluto es 0 K = −273 °C.",
+            "En los cálculos de gases se usa siempre kelvin."
+          ],
+          "avanzada": [
+            "Energía cinética promedio de una partícula: Ec = (3/2)·k·T, con k = 1,38 × 10⁻²³ J/K."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Puede algo estar más frío que el hielo? ¿Hasta dónde se puede enfriar algo?",
+          "actividad": "Construir una tabla de conversiones con temperaturas del Huila (Neiva, Tarqui, el páramo) y del congelador.",
+          "errores": [
+            "Escribir «grados kelvin» o «°K».",
+            "Olvidar convertir a kelvin antes de usar una ley de los gases."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Hasta dónde se enfría",
+          "visual": {
+            "tipo": "escena",
+            "id": "kelvin",
+            "fases": [
+              {
+                "id": "celsius",
+                "nombre": "Celsius",
+                "texto": "El agua se congela a 0 °C y hierve a 100 °C."
+              },
+              {
+                "id": "cero",
+                "nombre": "Cero absoluto",
+                "texto": "−273 °C: las partículas casi no se mueven."
+              },
+              {
+                "id": "kelvin",
+                "nombre": "Kelvin",
+                "texto": "Empieza en el cero absoluto: K = °C + 273."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Convertir",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🌡️",
+            "valor": "25 °C = 298 K",
+            "texto": "Se suma 273. De kelvin a Celsius se resta."
+          }
+        },
+        {
+          "titulo": "Temperatura y energía",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "⚡",
+            "valor": "Ec = (3/2) k T",
+            "texto": "Si la temperatura en kelvin se duplica, la energía cinética promedio también."
+          },
+          "nivel": "avanzado"
+        }
+      ],
+      "juego": "kelvin-juego",
+      "preguntas": [
+        {
+          "id": "qm-gt-5",
+          "enunciado": "¿Cuántos kelvin son 20 °C?",
+          "opciones": [
+            "293 K",
+            "−253 K",
+            "20 K",
+            "2730 K"
+          ],
+          "correcta": 0,
+          "explicacion": "20 + 273 = 293."
+        },
+        {
+          "id": "qm-gt-6",
+          "enunciado": "¿Qué es el cero absoluto?",
+          "opciones": [
+            "La temperatura más baja posible, 0 K",
+            "La temperatura a la que se congela el agua",
+            "0 °C",
+            "La temperatura del espacio a la sombra de la Luna"
+          ],
+          "correcta": 0,
+          "explicacion": "Equivale a −273,15 °C."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "unidades-presion",
+      "titulo": "Unidades de presión",
+      "resumen": "1 atm = 760 mmHg = 101,3 kPa: el experimento de Torricelli.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "intermedio",
+      "requiere": [
+        "variables"
+      ],
+      "ficha": {
+        "idea": "En 1643, Evangelista Torricelli llenó de mercurio un tubo de vidrio de un metro, lo tapó y lo volteó dentro de una cubeta también con mercurio. El mercurio bajó, pero no del todo: se quedó en una columna de unos 760 mm. Lo que la sostenía era el aire, que empujaba sobre el mercurio de la cubeta. Había inventado el barómetro. De ahí salen las unidades de presión: la atmósfera (atm) es la presión del aire a nivel del mar, que sostiene 760 milímetros de mercurio (mmHg, también llamados torr). En el Sistema Internacional la unidad es el pascal (Pa): 1 atm = 101 325 Pa ≈ 101,3 kPa. En las llantas y los compresores se usa la libra por pulgada cuadrada (psi): 1 atm ≈ 14,7 psi.",
+        "contexto": [
+          {
+            "titulo": "¿Por qué mercurio?",
+            "texto": "Es muy denso. Con agua, la columna mediría más de 10 metros."
+          },
+          {
+            "titulo": "El mercurio es tóxico",
+            "texto": "Hoy los barómetros y termómetros de mercurio se están reemplazando por digitales. Si se rompe uno, no se toca ni se barre: se ventila y se avisa a un adulto."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "La presión del aire se mide con el barómetro."
+          ],
+          "media": [
+            "1 atm = 760 mmHg = 760 torr = 101,3 kPa ≈ 14,7 psi."
+          ],
+          "avanzada": [
+            "1 Pa = 1 N/m². Presión = fuerza / área."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Qué marca el calibrador de una llanta? ¿En qué unidades?",
+          "actividad": "Vaso lleno de agua tapado con una hoja: voltearlo y explicar por qué el agua no cae.",
+          "errores": [
+            "Creer que el vacío «chupa» el mercurio (lo que lo sostiene es el aire de afuera).",
+            "Confundir la presión del manómetro con la presión total."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "El tubo de Torricelli",
+          "visual": {
+            "tipo": "escena",
+            "id": "torricelli",
+            "fases": [
+              {
+                "id": "tubo",
+                "nombre": "El tubo",
+                "texto": "Lleno de mercurio, boca abajo en la cubeta."
+              },
+              {
+                "id": "columna",
+                "nombre": "760 mm",
+                "texto": "El aire sostiene una columna de 760 mm."
+              },
+              {
+                "id": "unidades",
+                "nombre": "Las unidades",
+                "texto": "1 atm = 760 mmHg = 101,3 kPa ≈ 14,7 psi."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "¿Dónde las ves?",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🌍",
+                "titulo": "atm",
+                "texto": "El aire a nivel del mar."
+              },
+              {
+                "icono": "🩺",
+                "titulo": "mmHg",
+                "texto": "La tensión arterial (120/80)."
+              },
+              {
+                "icono": "🧪",
+                "titulo": "kPa",
+                "texto": "Ciencia y pronóstico del tiempo."
+              },
+              {
+                "icono": "🚲",
+                "titulo": "psi",
+                "texto": "Llantas y compresores."
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "unidades-presion-juego",
+      "preguntas": [
+        {
+          "id": "qm-gt-7",
+          "enunciado": "¿Cuántos mmHg hay en 2 atm?",
+          "opciones": [
+            "1520 mmHg",
+            "760 mmHg",
+            "380 mmHg",
+            "101,3 mmHg"
+          ],
+          "correcta": 0,
+          "explicacion": "2 × 760 = 1520."
+        },
+        {
+          "id": "qm-gt-8",
+          "enunciado": "En el barómetro de Torricelli, ¿qué sostiene la columna de mercurio?",
+          "opciones": [
+            "La presión del aire sobre la cubeta",
+            "El vacío de arriba del tubo",
+            "El vidrio del tubo",
+            "La gravedad"
+          ],
+          "correcta": 0,
+          "explicacion": "El aire empuja el mercurio de la cubeta."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "altura",
+      "titulo": "La presión del aire y la altura",
+      "resumen": "Mientras más alto, menos aire encima y menos presión.",
+      "anio": 5,
+      "etiqueta": "Paso 5",
+      "nivel": "basico",
+      "requiere": [
+        "variables"
+      ],
+      "ficha": {
+        "idea": "Vivimos en el fondo de un océano de aire. Ese aire pesa y empuja sobre todo lo que hay en la Tierra: es la presión atmosférica. Mientras más alto se sube, menos aire queda encima y menos presión hay. A nivel del mar la presión sostiene 760 mm de mercurio; en Neiva (unos 440 m) es de unos 720 mmHg; en Bogotá (unos 2600 m), de unos 560 mmHg, y en la cima del Nevado del Huila (unos 5360 m) apenas de unos 400 mmHg, casi la mitad. Por eso un paquete de papas comprado en Neiva se infla al subir al páramo: el aire de adentro sigue igual, pero afuera empuja menos. Con menos presión el aire tiene menos oxígeno en cada respiración, y el agua hierve a menos de 100 °C.",
+        "contexto": [
+          {
+            "titulo": "El mal de altura",
+            "texto": "Al llegar de tierra caliente a lugares muy altos se puede sentir dolor de cabeza o ahogo: en cada respiración entra menos oxígeno. El cuerpo se acostumbra en unos días."
+          },
+          {
+            "titulo": "Valores aproximados",
+            "texto": "La presión también cambia un poco con el clima del día; los barómetros del IDEAM la registran."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Presión atmosférica: el peso del aire que tenemos encima.",
+            "Más altura → menos presión."
+          ],
+          "media": [
+            "Nivel del mar ≈ 760 mmHg; Bogotá ≈ 560 mmHg; Nevado del Huila ≈ 400 mmHg."
+          ],
+          "avanzada": [
+            "La presión baja de forma aproximadamente exponencial con la altura (más o menos a la mitad cada 5,5 km)."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Alguien ha visto inflarse un paquete de papas o destaparse un frasco de champú en un viaje a la montaña?",
+          "actividad": "Botella plástica cerrada en un lugar alto y llevarla a uno bajo (o al revés): observar si se arruga o se infla.",
+          "errores": [
+            "Creer que en las alturas hay menos aire «porque hace frío».",
+            "Pensar que la presión atmosférica solo empuja hacia abajo."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "El paquete inflado",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Compras un paquete de papas en Neiva y subes al páramo. El paquete se infla. ¿Por qué?",
+            "opciones": [
+              "Afuera hay menos presión del aire y el aire de adentro empuja más",
+              "Entró aire al paquete",
+              "Las papas se hincharon con el frío",
+              "El paquete se calentó"
+            ],
+            "correcta": 0,
+            "explicacion": "El aire de adentro es el mismo, pero arriba hay menos aire empujando por fuera."
+          }
+        },
+        {
+          "titulo": "Del Magdalena al nevado",
+          "visual": {
+            "tipo": "escena",
+            "id": "presion-altura",
+            "fases": [
+              {
+                "id": "columna",
+                "nombre": "Columnas de aire",
+                "texto": "Encima de cada lugar hay una columna de aire que pesa."
+              },
+              {
+                "id": "lugares",
+                "nombre": "Neiva, Bogotá, el nevado",
+                "texto": "Más arriba, menos presión."
+              },
+              {
+                "id": "papas",
+                "nombre": "El paquete de papas",
+                "texto": "Se infla donde afuera empuja menos."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre hervir en la altura",
+            "tema": "propiedades-materia",
+            "bloque": "fusion-ebullicion"
+          }
+        },
+        {
+          "titulo": "Arriba, la mitad",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🏔️",
+            "valor": "≈ 400 mmHg",
+            "texto": "En la cima del Nevado del Huila: casi la mitad que a nivel del mar."
+          }
+        }
+      ],
+      "juego": "altura-presion-juego",
+      "preguntas": [
+        {
+          "id": "qm-gt-9",
+          "enunciado": "¿Dónde es mayor la presión atmosférica?",
+          "opciones": [
+            "En Neiva",
+            "En Bogotá",
+            "En el Nevado del Huila",
+            "Es igual en los tres"
+          ],
+          "correcta": 0,
+          "explicacion": "Neiva es el más bajo de los tres."
+        },
+        {
+          "id": "qm-gt-10",
+          "enunciado": "¿Por qué baja la presión del aire al subir una montaña?",
+          "opciones": [
+            "Porque queda menos aire encima",
+            "Porque hace más frío",
+            "Porque hay más árboles",
+            "Porque el aire pesa más arriba"
+          ],
+          "correcta": 0,
+          "explicacion": "La presión atmosférica es el peso del aire que hay encima."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}
