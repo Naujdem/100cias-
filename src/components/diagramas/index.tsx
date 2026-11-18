@@ -94,6 +94,8 @@ import LlenaOrbitales from './LlenaOrbitales.tsx'
 import TablaPeriodica from './TablaPeriodica.tsx'
 import MapaCalor from './MapaCalor.tsx'
 import ArmaLewis from './ArmaLewis.tsx'
+import GeometriaVsepr from './GeometriaVsepr.tsx'
+import { IntraInterJuego, GeometriaJuego, MoleculaPolarJuego, FuerzaJuego, DisuelveJuego } from './JuegosFuerzas.tsx'
 import { OctetoJuego, TipoEnlaceJuego, PolarJuego, LewisJuego } from './JuegosEnlace.tsx'
 import { RadioJuego, IonizacionJuego, ElectronegatividadJuego, MetalicoJuego } from './JuegosPeriodicas.tsx'
 import { HistoriaTablaJuego, GrupoPeriodoJuego, MetalJuego, FamiliaJuego, ColombiaElementosJuego } from './JuegosTabla.tsx'
@@ -486,6 +488,12 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'tipo-enlace-juego': TipoEnlaceJuego,
   'polar-juego': PolarJuego,
   'lewis-juego': LewisJuego,
+  'geometria-vsepr': GeometriaVsepr,
+  'intra-inter-juego': IntraInterJuego,
+  'geometria-juego': GeometriaJuego,
+  'molecula-polar-juego': MoleculaPolarJuego,
+  'fuerza-juego': FuerzaJuego,
+  'disuelve-juego': DisuelveJuego,
   'amenaza-vulnerabilidad-juego': AmenazaVulnerabilidadJuego,
   'amenazas-colombia-juego': AmenazasColombiaJuego,
   'armero-juego': ArmeroJuego,
