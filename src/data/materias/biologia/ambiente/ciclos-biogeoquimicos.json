@@ -1,0 +1,480 @@
+{
+  "id": "ciclos-biogeoquimicos",
+  "materia": "biologia",
+  "area": "ambiente",
+  "titulo": "Ciclos biogeoquímicos",
+  "subtema": "La materia da vueltas por el planeta",
+  "orden": 51,
+  "etiqueta": "1",
+  "vistas": ["ruta"],
+  "tituloVista": "Ruta de los ciclos",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Explicar que la materia se recicla en la naturaleza mientras la energía fluye.",
+    "Describir los ciclos del agua, el carbono, el nitrógeno y el fósforo.",
+    "Reconocer cómo las actividades humanas alteran los ciclos."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con un texto de ecología. Los porcentajes y tiempos son aproximados."
+  ],
+  "bloques": [
+    {
+      "id": "materia-recicla",
+      "titulo": "La materia se recicla",
+      "resumen": "La energía entra y se pierde, pero los átomos se usan una y otra vez: viajan entre el aire, el agua, el suelo, las rocas y los seres vivos.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "La Tierra recibe energía del Sol todo el tiempo, pero casi no recibe materia nueva: los átomos de carbono, nitrógeno, fósforo o el agua que hay hoy son los mismos de hace millones de años. Por eso la materia se recicla. Cada elemento viaja entre depósitos o reservorios (la atmósfera, el agua, el suelo, las rocas y los seres vivos) y vuelve a empezar: ese recorrido es un ciclo biogeoquímico, porque pasa por los seres vivos (bio), por la Tierra (geo) y por reacciones químicas (química).",
+        "contexto": [
+          {
+            "titulo": "Átomos viajeros",
+            "texto": "Un átomo de carbono de tu cuerpo pudo estar antes en un dinosaurio, en el aire de la Edad Media o en una hoja de un frailejón."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "La energía fluye: entra del Sol y se pierde como calor.",
+            "La materia se recicla: los átomos se usan una y otra vez.",
+            "Ciclo biogeoquímico: el viaje de un elemento por la naturaleza."
+          ],
+          "media": [
+            "Reservorios: atmósfera, agua, suelo, rocas y seres vivos."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿De dónde salió el carbono que forma tu cuerpo? ¿Es nuevo?",
+          "actividad": "Contar en voz alta el «viaje» de un átomo desde el aire hasta el estudiante, pasando por una planta del almuerzo.",
+          "errores": [
+            "Creer que la materia se gasta y desaparece, como la energía que se pierde en calor."
+          ],
+          "minutos": 15
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "El carbono que forma tu cuerpo…",
+            "opciones": [
+              "Ya estuvo antes en otros seres vivos y en el aire",
+              "Lo fabricó tu cuerpo de la nada",
+              "Llegó del Sol con la luz",
+              "Es nuevo y desaparece cuando mueres"
+            ],
+            "correcta": 0,
+            "explicacion": "Los átomos no se crean ni se destruyen: se reciclan una y otra vez."
+          }
+        },
+        {
+          "titulo": "Energía y materia",
+          "visual": {
+            "tipo": "compara",
+            "izq": { "icono": "☀️", "titulo": "La energía fluye", "puntos": ["Entra del Sol", "Pasa por la cadena", "Se pierde como calor"] },
+            "der": { "icono": "♻️", "titulo": "La materia se recicla", "puntos": ["Los átomos no se gastan", "Pasan de un ser a otro", "Vuelven al ambiente"] }
+          },
+          "atajo": { "texto": "Más sobre esto: flujo de energía", "tema": "flujo-energia", "bloque": "productores-consumidores" }
+        },
+        {
+          "titulo": "Dónde están los átomos",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "🌫️", "titulo": "Atmósfera", "texto": "Gases como el CO₂ y el nitrógeno." },
+              { "icono": "🌊", "titulo": "Agua", "texto": "Océanos, ríos y lagos." },
+              { "icono": "🟫", "titulo": "Suelo", "texto": "Restos y sales minerales." },
+              { "icono": "🪨", "titulo": "Rocas", "texto": "El depósito más grande y más lento." },
+              { "icono": "🌿", "titulo": "Seres vivos", "texto": "Toman átomos y los devuelven." }
+            ]
+          }
+        }
+      ],
+      "juego": "materia-recicla-juego",
+      "preguntas": [
+        {
+          "id": "am-ci-1",
+          "enunciado": "¿Qué diferencia hay entre la energía y la materia en un ecosistema?",
+          "opciones": [
+            "La energía fluye y se pierde; la materia se recicla",
+            "Las dos se reciclan sin perderse",
+            "La materia llega del Sol y la energía de las rocas",
+            "Las dos desaparecen al final de la cadena"
+          ],
+          "correcta": 0,
+          "explicacion": "La energía sale como calor; los átomos vuelven a usarse."
+        },
+        {
+          "id": "am-ci-2",
+          "enunciado": "¿Por qué se llaman ciclos «biogeoquímicos»?",
+          "opciones": [
+            "Porque pasan por los seres vivos, la Tierra y reacciones químicas",
+            "Porque solo ocurren en laboratorios",
+            "Porque los descubrió un químico llamado Bio",
+            "Porque solo ocurren en las rocas"
+          ],
+          "correcta": 0,
+          "explicacion": "Bio: vida; geo: Tierra; química: reacciones."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "ciclo-agua",
+      "titulo": "El ciclo del agua",
+      "resumen": "El Sol evapora el agua, las plantas la transpiran, se condensa en nubes, cae como lluvia y vuelve al mar por ríos y bajo tierra.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "requiere": ["materia-recicla"],
+      "ficha": {
+        "idea": "El ciclo del agua lo mueve la energía del Sol. El agua de mares, ríos y suelos se evapora; las plantas también sueltan vapor por sus hojas (transpiración). En lo alto el vapor se enfría y se condensa en gotas que forman las nubes. Cuando las gotas pesan, caen como precipitación: lluvia, granizo o nieve. En el suelo, una parte escurre por la superficie hacia quebradas y ríos (escorrentía) y otra se infiltra y forma aguas subterráneas. Al final el agua vuelve al mar y el ciclo continúa.",
+        "contexto": [
+          {
+            "titulo": "Bosques que hacen llover",
+            "texto": "La Amazonía transpira tanta agua que forma «ríos voladores» de vapor que llevan lluvia a los Andes colombianos."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Evaporación: el agua pasa a vapor con el calor del Sol.",
+            "Condensación: el vapor se enfría y forma nubes.",
+            "Precipitación: el agua cae como lluvia, granizo o nieve."
+          ],
+          "media": [
+            "Transpiración: las plantas sueltan vapor por las hojas.",
+            "Escorrentía e infiltración: el agua corre por encima o entra al suelo."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "Si llueve en la vereda, ¿esa agua dónde estaba la semana pasada?",
+          "actividad": "Poner una bolsa plástica transparente sobre una rama al sol y ver, en una hora, las gotas de la transpiración.",
+          "errores": [
+            "Creer que las nubes son humo o vapor caliente; son gotas diminutas de agua líquida o hielo."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "La vuelta del agua",
+          "visual": {
+            "tipo": "escena",
+            "id": "ciclo-agua",
+            "fases": [
+              { "id": "evaporacion", "nombre": "Evaporación", "texto": "El calor del Sol convierte el agua del mar y los ríos en vapor." },
+              { "id": "transpiracion", "nombre": "Transpiración", "texto": "Las plantas sueltan vapor de agua por sus hojas." },
+              { "id": "condensacion", "nombre": "Condensación", "texto": "En lo alto el vapor se enfría y forma gotas: las nubes." },
+              { "id": "precipitacion", "nombre": "Precipitación", "texto": "Las gotas pesan y caen como lluvia, granizo o nieve." },
+              { "id": "escorrentia", "nombre": "Escorrentía e infiltración", "texto": "El agua corre hacia los ríos o entra al suelo, y vuelve al mar." }
+            ]
+          }
+        }
+      ],
+      "juego": "ciclo-agua-juego",
+      "preguntas": [
+        {
+          "id": "am-ci-3",
+          "enunciado": "¿Qué mueve el ciclo del agua?",
+          "opciones": ["La energía del Sol", "El viento solamente", "Los peces", "La Luna"],
+          "correcta": 0,
+          "explicacion": "El calor del Sol evapora el agua."
+        },
+        {
+          "id": "am-ci-4",
+          "enunciado": "¿Cómo se llama el vapor que sueltan las plantas por sus hojas?",
+          "opciones": ["Transpiración", "Infiltración", "Precipitación", "Escorrentía"],
+          "correcta": 0,
+          "explicacion": "Los bosques devuelven mucha agua al aire."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "ciclo-carbono",
+      "titulo": "El ciclo del carbono",
+      "resumen": "Las plantas toman CO₂ del aire con la fotosíntesis; la respiración, la descomposición y la quema de combustibles lo devuelven.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "basico",
+      "requiere": ["materia-recicla"],
+      "ficha": {
+        "idea": "El carbono forma todas las moléculas de la vida. Las plantas y las algas lo toman del aire como CO₂ y, con la fotosíntesis, lo convierten en azúcares. Pasa a los animales por la alimentación. La respiración de plantas y animales lo devuelve al aire, y también la descomposición de los restos por hongos y bacterias. El océano disuelve mucho CO₂. Una parte queda guardada por millones de años en rocas y en combustibles fósiles (carbón, petróleo y gas); al quemarlos, ese carbono vuelve al aire de golpe.",
+        "contexto": [
+          {
+            "titulo": "El carbón del Cerrejón",
+            "texto": "El carbón que se extrae en La Guajira son restos de selvas de hace unos 60 millones de años: carbono que estuvo guardado todo ese tiempo."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Fotosíntesis: las plantas toman CO₂ del aire.",
+            "Respiración y descomposición: devuelven CO₂ al aire.",
+            "Combustibles fósiles: carbono guardado por millones de años."
+          ],
+          "media": [
+            "El océano disuelve y guarda mucho CO₂.",
+            "Quemar combustibles y talar bosques aumentan el CO₂ del aire."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "Un árbol pesa toneladas. ¿De dónde salió toda esa madera?",
+          "actividad": "Recorrer con el Explora el viaje de un átomo de carbono y comparar en grupo las rutas que salieron.",
+          "errores": [
+            "Creer que la madera de un árbol sale del suelo; casi toda viene del CO₂ del aire."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "El carbono da vueltas",
+          "visual": {
+            "tipo": "escena",
+            "id": "ciclo-carbono",
+            "fases": [
+              { "id": "fotosintesis", "nombre": "Fotosíntesis", "texto": "Las plantas toman CO₂ del aire y lo convierten en azúcares." },
+              { "id": "alimentacion", "nombre": "Alimentación", "texto": "El carbono pasa de las plantas a los animales que las comen." },
+              { "id": "respiracion", "nombre": "Respiración", "texto": "Plantas y animales devuelven CO₂ al aire." },
+              { "id": "descomposicion", "nombre": "Descomposición", "texto": "Hongos y bacterias deshacen los restos y sueltan CO₂." },
+              { "id": "oceano", "nombre": "Océano", "texto": "El mar disuelve CO₂; con él, las conchas forman rocas.", "nivel": "intermedio" },
+              { "id": "combustion", "nombre": "Combustión", "texto": "Quemar carbón, petróleo, gas o bosques devuelve carbono guardado." }
+            ]
+          },
+          "atajo": { "texto": "Más sobre esto: fotosíntesis", "tema": "metabolismo-celular", "bloque": "fotosintesis" }
+        },
+        {
+          "titulo": "Carbono de más",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "🏭", "titulo": "Quemar fósiles", "texto": "Suelta en años lo que se guardó en millones." },
+              { "icono": "🪓", "titulo": "Talar y quemar", "texto": "Menos árboles que lo tomen y más humo." },
+              { "icono": "🌡️", "titulo": "Más CO₂ en el aire", "texto": "Retiene más calor: el tema del clima." }
+            ]
+          }
+        }
+      ],
+      "juego": "ciclo-carbono-juego",
+      "diagrama": "viaje-carbono",
+      "preguntas": [
+        {
+          "id": "am-ci-5",
+          "enunciado": "¿Qué proceso saca CO₂ del aire?",
+          "opciones": ["La fotosíntesis", "La respiración", "La combustión", "La descomposición"],
+          "correcta": 0,
+          "explicacion": "Las plantas y las algas lo convierten en azúcares."
+        },
+        {
+          "id": "am-ci-6",
+          "enunciado": "¿Por qué quemar petróleo aumenta el CO₂ del aire?",
+          "opciones": [
+            "Devuelve en poco tiempo carbono que estuvo guardado millones de años",
+            "Porque el petróleo fabrica carbono nuevo",
+            "Porque el humo enfría el aire",
+            "Porque el petróleo tiene agua"
+          ],
+          "correcta": 0,
+          "explicacion": "Es carbono que estaba fuera del ciclo rápido."
+        },
+        {
+          "id": "am-ci-7",
+          "enunciado": "La madera de un árbol se forma principalmente con…",
+          "opciones": ["El CO₂ que toma del aire", "La tierra que absorbe", "Los abonos", "El calor del Sol"],
+          "correcta": 0,
+          "explicacion": "La fotosíntesis convierte ese carbono en azúcares y madera."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "ciclo-nitrogeno",
+      "titulo": "El ciclo del nitrógeno",
+      "resumen": "El aire está lleno de nitrógeno, pero solo algunas bacterias pueden fijarlo para que las plantas lo usen.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "intermedio",
+      "requiere": ["ciclo-carbono"],
+      "ficha": {
+        "idea": "El nitrógeno es necesario para formar proteínas y ADN. Casi el 78 % del aire es nitrógeno (N₂), pero ni las plantas ni los animales pueden usarlo así. Algunas bacterias del suelo y de los nódulos de las raíces del fríjol y otras leguminosas lo fijan: lo convierten en compuestos que las plantas absorben (los rayos también fijan un poco). Los animales lo obtienen al comer plantas. Cuando los seres vivos mueren o excretan, los descomponedores liberan amonio; otras bacterias lo transforman en nitratos (nitrificación) y otras devuelven N₂ al aire (desnitrificación).",
+        "contexto": [
+          {
+            "titulo": "El fríjol abona",
+            "texto": "En la milpa y la chagra el fríjol se siembra con el maíz: sus bacterias fijan nitrógeno que aprovechan las dos plantas."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "El aire tiene mucho nitrógeno, pero las plantas no lo pueden usar así.",
+            "Fijación: bacterias lo convierten en una forma útil."
+          ],
+          "media": [
+            "Leguminosas (fríjol, arveja) tienen bacterias fijadoras en sus raíces.",
+            "Los descomponedores devuelven el nitrógeno al suelo."
+          ],
+          "avanzada": [
+            "Nitrificación: amonio → nitratos. Desnitrificación: nitratos → N₂ del aire."
+          ]
+        },
+        "docente": {
+          "abrir": "Respiramos nitrógeno todo el día. ¿Por qué igual necesitamos comerlo?",
+          "actividad": "Arrancar con cuidado una mata de fríjol y buscar los nódulos de las raíces.",
+          "errores": [
+            "Creer que las plantas toman el nitrógeno directamente del aire."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Nitrógeno por todas partes",
+          "visual": { "tipo": "cifra", "icono": "🌫️", "valor": "78 %", "texto": "del aire es nitrógeno, pero casi ningún ser vivo puede usarlo así." }
+        },
+        {
+          "titulo": "Las bacterias hacen el trabajo",
+          "visual": {
+            "tipo": "escena",
+            "id": "ciclo-nitrogeno",
+            "fases": [
+              { "id": "fijacion", "nombre": "Fijación", "texto": "Bacterias del suelo y de las raíces del fríjol convierten el N₂ del aire." },
+              { "id": "asimilacion", "nombre": "Asimilación", "texto": "Las plantas absorben el nitrógeno y forman proteínas; los animales lo comen." },
+              { "id": "amonificacion", "nombre": "Descomposición", "texto": "Restos y excrementos: los descomponedores liberan amonio." },
+              { "id": "nitrificacion", "nombre": "Nitrificación", "texto": "Otras bacterias cambian el amonio por nitratos.", "nivel": "avanzado" },
+              { "id": "desnitrificacion", "nombre": "Desnitrificación", "texto": "Otras bacterias devuelven el nitrógeno al aire.", "nivel": "avanzado" }
+            ]
+          }
+        },
+        {
+          "titulo": "Abono de más",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "🧪", "titulo": "Fertilizantes", "texto": "Nitrógeno fabricado por las personas." },
+              { "icono": "🌧️", "titulo": "La lluvia lo arrastra", "texto": "El sobrante llega a ríos y lagos." },
+              { "icono": "🟢", "titulo": "Aguas verdes", "texto": "Crecen algas de más: se verá en Contaminación." }
+            ]
+          }
+        }
+      ],
+      "juego": "ciclo-nitrogeno-juego",
+      "preguntas": [
+        {
+          "id": "am-ci-8",
+          "enunciado": "¿Quiénes convierten el nitrógeno del aire en una forma que las plantas pueden usar?",
+          "opciones": ["Algunas bacterias", "Los animales herbívoros", "Las hojas de los árboles", "Las rocas"],
+          "correcta": 0,
+          "explicacion": "Son las bacterias fijadoras, muchas en las raíces de leguminosas."
+        },
+        {
+          "id": "am-ci-9",
+          "enunciado": "¿Por qué se siembra fríjol junto al maíz?",
+          "opciones": [
+            "Sus bacterias fijan nitrógeno que abona el suelo",
+            "Porque el fríjol espanta la lluvia",
+            "Porque el maíz no necesita nitrógeno",
+            "Porque el fríjol saca el nitrógeno del suelo"
+          ],
+          "correcta": 0,
+          "explicacion": "Es un abono natural."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "ciclo-fosforo",
+      "titulo": "El ciclo del fósforo",
+      "resumen": "El fósforo sale de las rocas, pasa por el suelo y los seres vivos y vuelve a las rocas en el fondo del mar: no pasa por el aire.",
+      "anio": 5,
+      "etiqueta": "Paso 5",
+      "nivel": "avanzado",
+      "requiere": ["ciclo-nitrogeno"],
+      "ficha": {
+        "idea": "El fósforo forma el ADN, el ATP y los huesos. A diferencia del carbono y el nitrógeno, no tiene una forma gaseosa: su ciclo no pasa por la atmósfera. La lluvia y el viento desgastan las rocas (meteorización) y liberan fosfatos al suelo y al agua; las plantas los absorben y pasan a los animales. Los descomponedores los devuelven al suelo. Una parte llega al mar, se hunde y forma sedimentos que, en millones de años, vuelven a ser rocas que se levantan. Por eso es el ciclo más lento, y el fósforo suele ser escaso.",
+        "contexto": [
+          {
+            "titulo": "El guano",
+            "texto": "Los excrementos de las aves marinas (guano) son ricos en fósforo y se usaron por siglos como abono: así parte del fósforo del mar vuelve a la tierra."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "El fósforo está en las rocas y no pasa por el aire."
+          ],
+          "media": [
+            "Rocas → suelo → plantas → animales → descomponedores."
+          ],
+          "avanzada": [
+            "Es el ciclo más lento: los sedimentos tardan millones de años en volver a ser roca.",
+            "Forma parte del ADN, el ATP y los huesos."
+          ]
+        },
+        "docente": {
+          "abrir": "Si el fósforo no está en el aire, ¿cómo llega a nuestros huesos?",
+          "actividad": "Comparar en una tabla los cuatro ciclos: dónde está el depósito principal, si pasa por el aire y qué tan rápido es.",
+          "errores": [
+            "Creer que todos los ciclos tienen una fase en el aire."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Un ciclo sin aire",
+          "visual": {
+            "tipo": "escena",
+            "id": "ciclo-fosforo",
+            "fases": [
+              { "id": "rocas", "nombre": "Meteorización", "texto": "La lluvia y el viento desgastan las rocas y sueltan fosfatos." },
+              { "id": "plantas", "nombre": "Plantas", "texto": "Las raíces absorben los fosfatos del suelo." },
+              { "id": "animales", "nombre": "Animales", "texto": "Pasa a los animales: ADN, ATP y huesos." },
+              { "id": "descomposicion", "nombre": "Descomposición", "texto": "Los restos devuelven el fósforo al suelo." },
+              { "id": "sedimentos", "nombre": "Sedimentos", "texto": "En el mar se hunde y, en millones de años, vuelve a ser roca." }
+            ]
+          }
+        },
+        {
+          "titulo": "Cuatro ciclos",
+          "visual": {
+            "tipo": "compara",
+            "izq": { "icono": "🌫️", "titulo": "Pasan por el aire", "puntos": ["Agua", "Carbono", "Nitrógeno", "Son más rápidos"] },
+            "der": { "icono": "🪨", "titulo": "No pasa por el aire", "puntos": ["Fósforo", "Depósito: las rocas", "Es el más lento"] }
+          }
+        }
+      ],
+      "juego": "ciclos-repaso-juego",
+      "preguntas": [
+        {
+          "id": "am-ci-10",
+          "enunciado": "¿Qué tiene de especial el ciclo del fósforo?",
+          "opciones": [
+            "No pasa por la atmósfera",
+            "Es el más rápido de todos",
+            "Solo ocurre en el aire",
+            "Lo mueven los rayos"
+          ],
+          "correcta": 0,
+          "explicacion": "Su depósito principal son las rocas."
+        },
+        {
+          "id": "am-ci-11",
+          "enunciado": "¿Cómo sale el fósforo de las rocas?",
+          "opciones": [
+            "Por el desgaste de la lluvia y el viento",
+            "Por la fotosíntesis",
+            "Por la respiración de los animales",
+            "Por la evaporación del mar"
+          ],
+          "correcta": 0,
+          "explicacion": "Se llama meteorización."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}
