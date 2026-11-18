@@ -1,0 +1,594 @@
+{
+  "id": "alcoholes",
+  "materia": "quimica",
+  "area": "organica",
+  "titulo": "Alcoholes, fenoles y éteres",
+  "subtema": "El grupo –OH: del guarapo al alcohol antiséptico, y sus parientes",
+  "orden": 146,
+  "etiqueta": "6",
+  "vistas": [
+    "ruta"
+  ],
+  "tituloVista": "Ruta de los alcoholes, fenoles y éteres",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Reconocer los alcoholes por su grupo –OH y explicar cómo se obtiene el etanol por fermentación.",
+    "Nombrar alcoholes sencillos y clasificarlos en primarios, secundarios y terciarios.",
+    "Diferenciar alcoholes, fenoles y éteres, y conocer usos y peligros de algunos de ellos."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con un texto de química de bachillerato y fuentes de salud (alcohol antiséptico al 70 %; toxicidad del metanol; Lister, 1867; éter como anestesia, 1846)."
+  ],
+  "bloques": [
+    {
+      "id": "que-son",
+      "titulo": "El grupo –OH y el guarapo",
+      "resumen": "Alcohol = cadena de carbono + grupo hidroxilo.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "Un alcohol es un compuesto orgánico con un grupo hidroxilo (–OH) unido a un carbono de una cadena: R–OH. El más conocido es el etanol (CH₃–CH₂–OH), el alcohol de las bebidas. En Colombia se produce desde hace siglos por fermentación: el jugo de la caña (guarapo) o de la fruta tiene azúcares, y las levaduras, que son hongos microscópicos, los transforman en etanol y dióxido de carbono cuando no hay oxígeno (C₆H₁₂O₆ → 2 C₂H₅OH + 2 CO₂). Así se hacen el guarapo fuerte, la chicha, la cerveza y el vino. Como la fermentación se detiene hacia el 12–15 % de alcohol, para obtener más (aguardiente, ron) hay que destilar. El –OH hace que los alcoholes pequeños se mezclen con el agua, porque forman puentes de hidrógeno con ella, y que hiervan a más temperatura que los alcanos parecidos.",
+        "contexto": [
+          {
+            "titulo": "Un solo lugar",
+            "texto": "Cómo obtienen energía las levaduras con la fermentación se ve en Biología (metabolismo celular)."
+          },
+          {
+            "titulo": "No confundir",
+            "texto": "El –OH de los alcoholes no es el OH⁻ de las bases: los alcoholes no son básicos."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Los alcoholes tienen el grupo –OH.",
+            "El etanol se obtiene fermentando azúcares con levaduras."
+          ],
+          "media": [
+            "C₆H₁₂O₆ → 2 C₂H₅OH + 2 CO₂ (fermentación alcohólica).",
+            "Para más de 15 % de alcohol se destila."
+          ],
+          "avanzada": [
+            "Los puentes de hidrógeno explican su solubilidad en agua y su punto de ebullición alto (etanol 78 °C, propano −42 °C)."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué el guarapo se «pone fuerte» si se deja varios días?",
+          "actividad": "Fermentar jugo de panela con levadura en una botella con un globo en la boca y observar cómo se infla con el CO₂ durante dos días.",
+          "errores": [
+            "Creer que el alcohol tiene OH⁻ y es una base.",
+            "Pensar que la fermentación necesita oxígeno."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Del trapiche a la botella",
+          "visual": {
+            "tipo": "escena",
+            "id": "ol-guarapo",
+            "fases": [
+              {
+                "id": "cana",
+                "nombre": "Caña",
+                "texto": "El guarapo tiene azúcares."
+              },
+              {
+                "id": "levadura",
+                "nombre": "Levaduras",
+                "texto": "Comen azúcar sin oxígeno."
+              },
+              {
+                "id": "fermento",
+                "nombre": "Fermentación",
+                "texto": "Sale etanol y CO₂."
+              },
+              {
+                "id": "destilar",
+                "nombre": "Destilación",
+                "texto": "Para más de 15 % de alcohol."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre la fermentación",
+            "tema": "metabolismo-celular",
+            "bloque": "respiracion-fermentacion"
+          }
+        },
+        {
+          "titulo": "¿Qué hace el globo?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Si se pone un globo en la boca de una botella con jugo y levadura, ¿por qué se infla?",
+            "opciones": [
+              "Por el CO₂ de la fermentación",
+              "Por el oxígeno",
+              "Por el vapor de alcohol",
+              "Por el calor"
+            ],
+            "correcta": 0,
+            "explicacion": "Las levaduras sueltan CO₂ junto con el etanol."
+          }
+        }
+      ],
+      "juego": "org-alcohol-o-no-juego",
+      "preguntas": [
+        {
+          "id": "qm-or-l-1",
+          "enunciado": "¿Qué grupo funcional tienen los alcoholes?",
+          "opciones": [
+            "Hidroxilo, –OH",
+            "Carboxilo, –COOH",
+            "Carbonilo, C=O",
+            "Amino, –NH₂"
+          ],
+          "correcta": 0,
+          "explicacion": "R–OH."
+        },
+        {
+          "id": "qm-or-l-2",
+          "enunciado": "¿Qué organismos transforman los azúcares del guarapo en alcohol?",
+          "opciones": [
+            "Las levaduras",
+            "Las plantas",
+            "Los virus",
+            "Las algas"
+          ],
+          "correcta": 0,
+          "explicacion": "Hongos microscópicos."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "usos",
+      "titulo": "Alcoholes útiles y peligrosos",
+      "resumen": "Etanol, isopropílico, metanol, glicerina y etilenglicol.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "ficha": {
+        "idea": "El alcohol antiséptico es etanol o alcohol isopropílico al 70 %: a esa concentración desnaturaliza las proteínas de bacterias y virus mejor que el alcohol puro, que se evapora muy rápido y entra peor. El etanol también es combustible: se mezcla con la gasolina. El metanol (CH₃OH), el alcohol más sencillo, se usa como solvente y combustible, pero es muy tóxico: tomar una pequeña cantidad puede causar ceguera o la muerte. Por eso son tan peligrosos los licores adulterados. La glicerina o glicerol tiene tres –OH: es dulce, espesa, humectante, y sale como subproducto al hacer jabón; se usa en cremas y jarabes. El etilenglicol, con dos –OH, es el anticongelante de los radiadores y también es tóxico.",
+        "contexto": [
+          {
+            "titulo": "Seguridad",
+            "texto": "Nunca consumir licor de origen dudoso ni alcohol industrial. El alcohol antiséptico es solo de uso externo."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "El alcohol antiséptico es al 70 %.",
+            "El metanol es muy tóxico."
+          ],
+          "media": [
+            "Metanol: tóxico (ceguera). Etanol: bebidas, antiséptico, combustible. Glicerina: tres –OH, cremas y jarabes."
+          ],
+          "avanzada": [
+            "Polialcoholes: etilenglicol (2 –OH) y glicerol (3 –OH)."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué el alcohol antiséptico viene al 70 % y no al 100 %?",
+          "actividad": "Revisar etiquetas de alcohol antiséptico, gel antibacterial y cremas para encontrar etanol, isopropanol o glicerina.",
+          "errores": [
+            "Creer que el alcohol más puro desinfecta mejor.",
+            "Pensar que todos los alcoholes se pueden beber."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Familia de alcoholes",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "☠️",
+                "titulo": "Metanol",
+                "texto": "CH₃OH: tóxico, ceguera"
+              },
+              {
+                "icono": "🧴",
+                "titulo": "Etanol",
+                "texto": "Antiséptico y bebidas"
+              },
+              {
+                "icono": "🧼",
+                "titulo": "Isopropílico",
+                "texto": "Antiséptico al 70 %"
+              },
+              {
+                "icono": "🚗",
+                "titulo": "Etilenglicol",
+                "texto": "2 –OH: anticongelante"
+              },
+              {
+                "icono": "🧈",
+                "titulo": "Glicerina",
+                "texto": "3 –OH: cremas y jarabes"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "El número del antiséptico",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🧴",
+            "valor": "70 %",
+            "texto": "Con algo de agua el alcohol entra mejor en el microbio y no se evapora tan rápido."
+          }
+        }
+      ],
+      "juego": "org-uso-alcohol-juego",
+      "preguntas": [
+        {
+          "id": "qm-or-l-3",
+          "enunciado": "¿Por qué es peligroso un licor adulterado?",
+          "opciones": [
+            "Puede tener metanol, que causa ceguera o la muerte",
+            "Tiene demasiada agua",
+            "Tiene azúcar",
+            "Tiene poca glicerina"
+          ],
+          "correcta": 0,
+          "explicacion": "El metanol es muy tóxico."
+        },
+        {
+          "id": "qm-or-l-4",
+          "enunciado": "¿Cuántos grupos –OH tiene la glicerina?",
+          "opciones": [
+            "3",
+            "1",
+            "2",
+            "4"
+          ],
+          "correcta": 0,
+          "explicacion": "Es un polialcohol."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "nombres",
+      "titulo": "Nombres con -ol",
+      "resumen": "Cadena con el –OH, número más bajo para él y terminación -ol.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "intermedio",
+      "requiere": [
+        "que-son"
+      ],
+      "ficha": {
+        "idea": "Los alcoholes se nombran con la cadena más larga que contenga el carbono del –OH, cambiando la -o final del alcano por -ol: metano → metanol, etano → etanol. Se numera desde el extremo más cercano al –OH y su número va delante (o, en la forma IUPAC actual, antes de -ol): CH₃–CH₂–CH₂–OH es 1-propanol (propan-1-ol) y CH₃–CH(OH)–CH₃ es 2-propanol, el alcohol isopropílico. Si hay dos –OH se dice -diol (etanodiol, el etilenglicol) y si hay tres, -triol (propanotriol, la glicerina). En el nombre común se dice «alcohol» y el radical: alcohol metílico, alcohol etílico, alcohol isopropílico.",
+        "contexto": [
+          {
+            "titulo": "Nombres comunes",
+            "texto": "Alcohol etílico = etanol; alcohol isopropílico = 2-propanol; glicerina = 1,2,3-propanotriol."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Los alcoholes terminan en -ol: metanol, etanol, propanol."
+          ],
+          "media": [
+            "El número dice en qué carbono está el –OH: 1-propanol, 2-propanol.",
+            "-diol: dos –OH; -triol: tres."
+          ],
+          "avanzada": [
+            "Forma IUPAC actual: propan-2-ol, propano-1,2,3-triol."
+          ]
+        },
+        "docente": {
+          "abrir": "Si el alcohol isopropílico tiene 3 carbonos, ¿por qué no se llama simplemente propanol?",
+          "actividad": "Dibujar los alcoholes de 1 a 4 carbonos (incluidos los de posición) y ponerles su nombre sistemático y común.",
+          "errores": [
+            "Numerar dando el número más bajo a las ramas y no al –OH.",
+            "Escribir «etanool» o «propanool»."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Mismo C₃H₈O, otro lugar",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "1️⃣",
+              "titulo": "1-propanol",
+              "puntos": [
+                "CH₃–CH₂–CH₂–OH",
+                "El –OH en la punta"
+              ]
+            },
+            "der": {
+              "icono": "2️⃣",
+              "titulo": "2-propanol",
+              "puntos": [
+                "CH₃–CH(OH)–CH₃",
+                "Alcohol isopropílico"
+              ]
+            }
+          }
+        },
+        {
+          "titulo": "¿Cómo se llama?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "CH₃–CH₂–CH(OH)–CH₃",
+            "opciones": [
+              "2-butanol",
+              "3-butanol",
+              "1-butanol",
+              "Butanal"
+            ],
+            "correcta": 0,
+            "explicacion": "Se numera desde el extremo más cercano al –OH."
+          }
+        }
+      ],
+      "juego": "org-nombre-ol-juego",
+      "preguntas": [
+        {
+          "id": "qm-or-l-5",
+          "enunciado": "¿Cómo se llama CH₃–OH?",
+          "opciones": [
+            "Metanol",
+            "Metano",
+            "Metanal",
+            "Etanol"
+          ],
+          "correcta": 0,
+          "explicacion": "Un carbono con –OH."
+        },
+        {
+          "id": "qm-or-l-6",
+          "enunciado": "¿Cuál es el nombre sistemático del alcohol isopropílico?",
+          "opciones": [
+            "2-propanol",
+            "1-propanol",
+            "Propanona",
+            "Isopropano"
+          ],
+          "correcta": 0,
+          "explicacion": "El –OH está en el carbono 2."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "clasificacion",
+      "titulo": "Primarios, secundarios y terciarios",
+      "resumen": "Según a cuántos carbonos está unido el carbono del –OH.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "avanzado",
+      "requiere": [
+        "nombres"
+      ],
+      "ficha": {
+        "idea": "Los alcoholes se clasifican según el carbono que lleva el –OH. Si ese carbono está unido a un solo carbono más, el alcohol es primario (etanol, 1-propanol); si está unido a dos, secundario (2-propanol); y si está unido a tres, terciario (2-metil-2-propanol). La diferencia se nota al oxidarlos. Un alcohol primario se oxida a aldehído y después a ácido carboxílico: así el vino o el guarapo que se deja abierto se vuelve vinagre, porque unas bacterias oxidan el etanol a ácido acético. Un secundario se oxida a cetona (el 2-propanol da acetona). Un terciario casi no se oxida. En la prueba de alcoholemia antigua, el etanol del aliento reducía el dicromato naranja a cromo verde.",
+        "contexto": [
+          {
+            "titulo": "Un solo lugar",
+            "texto": "Aldehídos, cetonas y ácidos se estudian a fondo en el tema siguiente."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Hay alcoholes primarios, secundarios y terciarios."
+          ],
+          "media": [
+            "Primario: el C del –OH unido a 1 C. Secundario: a 2. Terciario: a 3."
+          ],
+          "avanzada": [
+            "Oxidación: primario → aldehído → ácido; secundario → cetona; terciario: no se oxida fácil."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué el vino o el guarapo que se dejan destapados se vuelven vinagre?",
+          "actividad": "Dejar un poco de guarapo fermentado destapado una o dos semanas y medir su acidez con el indicador de repollo morado.",
+          "errores": [
+            "Contar los hidrógenos en vez de los carbonos vecinos.",
+            "Creer que el número del –OH en el nombre dice si es primario."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Cuántos carbonos vecinos?",
+          "visual": {
+            "tipo": "escena",
+            "id": "ol-tipos",
+            "fases": [
+              {
+                "id": "primario",
+                "nombre": "Primario",
+                "texto": "El C del –OH tiene 1 carbono vecino."
+              },
+              {
+                "id": "secundario",
+                "nombre": "Secundario",
+                "texto": "Tiene 2 carbonos vecinos."
+              },
+              {
+                "id": "terciario",
+                "nombre": "Terciario",
+                "texto": "Tiene 3 carbonos vecinos."
+              },
+              {
+                "id": "oxidacion",
+                "nombre": "Al oxidarse",
+                "texto": "Etanol → etanal → ácido acético: vinagre."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre aldehídos y ácidos",
+            "tema": "carbonilos",
+            "bloque": "carbonilo"
+          }
+        }
+      ],
+      "juego": "org-tipo-alcohol-juego",
+      "preguntas": [
+        {
+          "id": "qm-or-l-7",
+          "enunciado": "¿Qué tipo de alcohol es el 2-propanol?",
+          "opciones": [
+            "Secundario",
+            "Primario",
+            "Terciario",
+            "Cuaternario"
+          ],
+          "correcta": 0,
+          "explicacion": "Su C–OH está unido a 2 carbonos."
+        },
+        {
+          "id": "qm-or-l-8",
+          "enunciado": "¿Qué se obtiene al oxidar completamente el etanol?",
+          "opciones": [
+            "Ácido acético",
+            "Acetona",
+            "Metanol",
+            "Etano"
+          ],
+          "correcta": 0,
+          "explicacion": "Primario → aldehído → ácido."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "fenoles-eteres",
+      "titulo": "Fenoles y éteres",
+      "resumen": "El –OH en un anillo y el oxígeno entre dos carbonos.",
+      "anio": 5,
+      "etiqueta": "Paso 5",
+      "nivel": "intermedio",
+      "requiere": [
+        "que-son"
+      ],
+      "ficha": {
+        "idea": "Cuando el –OH está pegado directamente a un anillo de benceno el compuesto no es un alcohol sino un fenol. Los fenoles son algo ácidos y muchos son antisépticos: en 1867 Joseph Lister lavó heridas e instrumentos con fenol y bajaron mucho las muertes por infección después de las cirugías. El timol del tomillo y el eugenol del clavo de olor también son fenoles, y por eso se usan en enjuagues y en odontología. Los éteres tienen un oxígeno entre dos carbonos (R–O–R′). No tienen –OH, así que no forman puentes de hidrógeno entre ellos y hierven a temperaturas bajas. El éter dietílico se usó desde 1846 como anestesia en cirugía: es muy volátil e inflamable. Se nombran con los dos radicales y la palabra éter (éter dietílico, éter etilmetílico) o como alcoxialcanos (etoxietano).",
+        "contexto": [
+          {
+            "titulo": "Isómeros de función",
+            "texto": "El etanol y el éter dimetílico son C₂H₆O: uno es alcohol y el otro éter."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Fenol: –OH unido a un anillo de benceno.",
+            "Éter: un oxígeno entre dos carbonos, R–O–R′."
+          ],
+          "media": [
+            "Fenoles: antisépticos (Lister), timol, eugenol.",
+            "Éter dietílico: anestesia antigua, muy inflamable."
+          ],
+          "avanzada": [
+            "Los éteres no forman puentes de H entre sus moléculas: hierven a menor temperatura que los alcoholes isómeros."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué el clavo de olor alivia un poco el dolor de muela?",
+          "actividad": "Oler (de lejos) clavo de olor, tomillo y un enjuague bucal; leer la historia de Lister y de la primera anestesia con éter.",
+          "errores": [
+            "Llamar alcohol al fenol.",
+            "Confundir éter con éster."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Alcohol, fenol, éter",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "🧪",
+              "titulo": "Alcohol vs fenol",
+              "puntos": [
+                "Alcohol: –OH en una cadena",
+                "Fenol: –OH en el anillo",
+                "El fenol es algo ácido"
+              ]
+            },
+            "der": {
+              "icono": "😴",
+              "titulo": "Éter",
+              "puntos": [
+                "R–O–R′",
+                "Sin –OH",
+                "Volátil e inflamable"
+              ]
+            }
+          }
+        },
+        {
+          "titulo": "Fenoles y éteres conocidos",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🏥",
+                "titulo": "Fenol",
+                "texto": "El antiséptico de Lister"
+              },
+              {
+                "icono": "🌿",
+                "titulo": "Timol",
+                "texto": "Del tomillo"
+              },
+              {
+                "icono": "🦷",
+                "titulo": "Eugenol",
+                "texto": "Del clavo de olor"
+              },
+              {
+                "icono": "😴",
+                "titulo": "Éter dietílico",
+                "texto": "Anestesia desde 1846"
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "org-fenol-eter-juego",
+      "preguntas": [
+        {
+          "id": "qm-or-l-9",
+          "enunciado": "¿Qué diferencia a un fenol de un alcohol?",
+          "opciones": [
+            "En el fenol el –OH está unido a un anillo de benceno",
+            "El fenol no tiene oxígeno",
+            "El fenol tiene nitrógeno",
+            "No hay diferencia"
+          ],
+          "correcta": 0,
+          "explicacion": "Por eso se comporta distinto."
+        },
+        {
+          "id": "qm-or-l-10",
+          "enunciado": "¿Qué estructura tienen los éteres?",
+          "opciones": [
+            "R–O–R′",
+            "R–OH",
+            "R–COOH",
+            "R–NH₂"
+          ],
+          "correcta": 0,
+          "explicacion": "Un oxígeno entre dos carbonos."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}

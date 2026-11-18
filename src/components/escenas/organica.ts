@@ -4,6 +4,11 @@ import { EscenaWohler, EscenaCarbono, EscenaFormulas, EscenaHibridacion } from '
 import { EscenaGrupoIdea, EscenaGrupoMapa } from './EscenasGrupos.tsx'
 import { EscenaAlcCocina, EscenaAlcRamificado, EscenaAlcIsomeros, EscenaAlcCombustion } from './EscenasAlcanos.tsx'
 import { EscenaAlqCotidiano, EscenaAlqCisTrans, EscenaAlqAdicion, EscenaAlqPolimero } from './EscenasAlquenos.tsx'
+import { EscenaKekule, EscenaOrtoMetaPara, EscenaCfc } from './EscenasAromaticos.tsx'
+import { EscenaGuarapo, EscenaTiposAlcohol } from './EscenasAlcoholes.tsx'
+import { EscenaCarbonilo, EscenaJabon } from './EscenasCarbonilos.tsx'
+import { EscenaAminas, EscenaAmidas } from './EscenasNitrogenados.tsx'
+import { EscenaPetroleoOrigen, EscenaBiocombustibles } from './EscenasPetroleo.tsx'
 
 export const ESCENAS_ORGANICA: Record<string, ComponentType<{ fase: string }>> = {
   'org-wohler': EscenaWohler,
@@ -20,4 +25,15 @@ export const ESCENAS_ORGANICA: Record<string, ComponentType<{ fase: string }>> =
   'alq-cis-trans': EscenaAlqCisTrans,
   'alq-adicion': EscenaAlqAdicion,
   'alq-polimero': EscenaAlqPolimero,
+  'aro-kekule': EscenaKekule,
+  'aro-omp': EscenaOrtoMetaPara,
+  'aro-cfc': EscenaCfc,
+  'ol-guarapo': EscenaGuarapo,
+  'ol-tipos': EscenaTiposAlcohol,
+  'car-carbonilo': EscenaCarbonilo,
+  'car-jabon': EscenaJabon,
+  'nit-aminas': EscenaAminas,
+  'nit-amidas': EscenaAmidas,
+  'pet-origen': EscenaPetroleoOrigen,
+  'pet-bio': EscenaBiocombustibles,
 }

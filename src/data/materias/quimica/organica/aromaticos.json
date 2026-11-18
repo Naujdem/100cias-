@@ -1,0 +1,485 @@
+{
+  "id": "aromaticos",
+  "materia": "quimica",
+  "area": "organica",
+  "titulo": "Aromáticos y halogenuros",
+  "subtema": "Desde 9°: el anillo del benceno, sus derivados y los compuestos con halógenos",
+  "orden": 145,
+  "etiqueta": "5",
+  "vistas": [
+    "ruta"
+  ],
+  "tituloVista": "Ruta de los aromáticos y halogenuros",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Describir la estructura del benceno, la idea de Kekulé y la resonancia.",
+    "Reconocer derivados aromáticos comunes y nombrar los disustituidos (orto, meta, para).",
+    "Explicar qué son los halogenuros, sus usos y cómo los CFC dañaron la capa de ozono."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con un texto de química de bachillerato (Kekulé, 1865; Protocolo de Montreal, 1987; Colombia adhirió en 1993; un átomo de Cl puede destruir miles de moléculas de ozono)."
+  ],
+  "bloques": [
+    {
+      "id": "benceno",
+      "titulo": "El benceno y el sueño de Kekulé",
+      "resumen": "Un anillo de 6 carbonos con electrones compartidos por todo el anillo.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "intermedio",
+      "nucleo": true,
+      "ficha": {
+        "idea": "El benceno, C₆H₆, fue un rompecabezas: tiene tan pocos hidrógenos que debería tener muchos dobles enlaces y ser muy reactivo, pero es muy estable y no da las adiciones de los alquenos. En 1865 August Kekulé propuso que sus 6 carbonos forman un anillo hexagonal con enlaces sencillos y dobles alternados; contó años después que la idea le llegó soñando con una serpiente que se mordía la cola. Hoy se sabe que los seis enlaces del anillo son iguales, ni sencillos ni dobles: los 6 electrones π no están quietos en tres dobles enlaces, sino repartidos por todo el anillo. Esto se llama resonancia y se dibuja como un hexágono con un círculo adentro. Esa nube de electrones da al anillo su estabilidad. Los compuestos con este anillo se llaman aromáticos, porque los primeros que se conocieron tenían olores fuertes, aunque muchos no huelen.",
+        "contexto": [
+          {
+            "titulo": "Cuidado",
+            "texto": "El benceno es cancerígeno: en el colegio no se usa, solo se estudia."
+          },
+          {
+            "titulo": "Fórmula de esqueleto",
+            "texto": "Cada vértice del hexágono es un C con un H."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "El benceno es un anillo de 6 carbonos: C₆H₆."
+          ],
+          "media": [
+            "Kekulé (1865): anillo con dobles enlaces alternados.",
+            "Resonancia: los electrones π se reparten por todo el anillo; se dibuja un círculo."
+          ],
+          "avanzada": [
+            "Los 6 enlaces C–C miden lo mismo (entre sencillo y doble). Aromaticidad: el anillo prefiere sustituir a sumar."
+          ]
+        },
+        "docente": {
+          "abrir": "Si el benceno tiene 3 dobles enlaces, ¿por qué no decolora el agua de bromo como el eteno?",
+          "actividad": "Contar la historia del sueño de Kekulé y discutir el papel de la imaginación en la ciencia; armar el anillo con plastilina.",
+          "errores": [
+            "Creer que en el benceno los dobles enlaces están fijos.",
+            "Pensar que todos los aromáticos huelen."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Del sueño al anillo",
+          "visual": {
+            "tipo": "escena",
+            "id": "aro-kekule",
+            "fases": [
+              {
+                "id": "serpiente",
+                "nombre": "El sueño",
+                "texto": "Una serpiente que se muerde la cola."
+              },
+              {
+                "id": "kekule",
+                "nombre": "Kekulé, 1865",
+                "texto": "Anillo con dobles alternados."
+              },
+              {
+                "id": "resonancia",
+                "nombre": "Resonancia",
+                "texto": "Las dos formas se alternan."
+              },
+              {
+                "id": "circulo",
+                "nombre": "Hoy",
+                "texto": "Electrones repartidos: un círculo."
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "org-aromatico-juego",
+      "preguntas": [
+        {
+          "id": "qm-or-r-1",
+          "enunciado": "¿Cuál es la fórmula del benceno?",
+          "opciones": [
+            "C₆H₆",
+            "C₆H₁₂",
+            "C₆H₁₄",
+            "C₂H₂"
+          ],
+          "correcta": 0,
+          "explicacion": "Un anillo de 6 C con un H cada uno."
+        },
+        {
+          "id": "qm-or-r-2",
+          "enunciado": "¿Qué representa el círculo dentro del hexágono del benceno?",
+          "opciones": [
+            "Los electrones π repartidos por todo el anillo",
+            "Un átomo de oxígeno",
+            "Un hueco vacío",
+            "Un enlace iónico"
+          ],
+          "correcta": 0,
+          "explicacion": "Resonancia."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "derivados",
+      "titulo": "Derivados del benceno",
+      "resumen": "Tolueno, naftalina, fenol, vainillina… y orto, meta, para.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "intermedio",
+      "requiere": [
+        "benceno"
+      ],
+      "ficha": {
+        "idea": "Si se cambia uno o más hidrógenos del benceno por otros grupos se obtienen sus derivados, muchos muy conocidos. El tolueno (con un CH₃) es el solvente de las pinturas y del pegante de zapatería, peligroso de inhalar. La naftalina, dos anillos unidos, es la de las bolitas contra las polillas. El fenol (con un –OH) fue el primer antiséptico de los quirófanos. La vainillina da el olor a vainilla, el ácido acetilsalicílico es la aspirina y el TNT es un explosivo. Cuando el anillo tiene dos sustituyentes, su posición se indica con números o con prefijos: orto (1,2, vecinos), meta (1,3) y para (1,4, opuestos). Por ejemplo, el para-diclorobenceno se usa como desodorante de baños. Los anillos aromáticos también están en la vida: en los aminoácidos fenilalanina, tirosina y triptófano.",
+        "contexto": [
+          {
+            "titulo": "Radical fenilo",
+            "texto": "El benceno como rama se llama fenil (C₆H₅–)."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Al cambiar H del benceno por otros grupos salen sus derivados: tolueno, naftalina, fenol."
+          ],
+          "media": [
+            "Tolueno (–CH₃), fenol (–OH), naftalina (dos anillos)."
+          ],
+          "avanzada": [
+            "Disustituidos: orto (1,2), meta (1,3) y para (1,4)."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Qué tienen en común las bolitas de naftalina, el pegante de zapatería y la aspirina?",
+          "actividad": "Dibujar el anillo y los tres diclorobencenos; comprobar con un hexágono de cartulina que 1,2 y 1,6 son la misma molécula.",
+          "errores": [
+            "Creer que orto, meta y para son tres sustancias con distinta fórmula.",
+            "Pensar que inhalar solventes es inofensivo."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "La familia del benceno",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🎨",
+                "titulo": "Tolueno",
+                "texto": "Solventes y pegantes"
+              },
+              {
+                "icono": "🧦",
+                "titulo": "Naftalina",
+                "texto": "Contra las polillas"
+              },
+              {
+                "icono": "🏥",
+                "titulo": "Fenol",
+                "texto": "El primer antiséptico"
+              },
+              {
+                "icono": "🍦",
+                "titulo": "Vainillina",
+                "texto": "Olor a vainilla"
+              },
+              {
+                "icono": "💊",
+                "titulo": "Aspirina",
+                "texto": "Dolor y fiebre"
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre el fenol",
+            "tema": "alcoholes",
+            "bloque": "fenoles-eteres"
+          }
+        },
+        {
+          "titulo": "Orto, meta, para",
+          "visual": {
+            "tipo": "escena",
+            "id": "aro-omp",
+            "fases": [
+              {
+                "id": "orto",
+                "nombre": "Orto (1,2)",
+                "texto": "Sustituyentes vecinos."
+              },
+              {
+                "id": "meta",
+                "nombre": "Meta (1,3)",
+                "texto": "Separados por un carbono."
+              },
+              {
+                "id": "para",
+                "nombre": "Para (1,4)",
+                "texto": "Opuestos."
+              }
+            ]
+          },
+          "nivel": "avanzado"
+        }
+      ],
+      "juego": "org-omp-juego",
+      "preguntas": [
+        {
+          "id": "qm-or-r-3",
+          "enunciado": "¿Qué grupo tiene el tolueno sobre el anillo?",
+          "opciones": [
+            "–CH₃",
+            "–OH",
+            "–Cl",
+            "–NH₂"
+          ],
+          "correcta": 0,
+          "explicacion": "Metilbenceno."
+        },
+        {
+          "id": "qm-or-r-4",
+          "enunciado": "¿Qué posición indica el prefijo «para»?",
+          "opciones": [
+            "1,4: opuestos",
+            "1,2: vecinos",
+            "1,3",
+            "Cualquiera"
+          ],
+          "correcta": 0,
+          "explicacion": "Lados opuestos del anillo."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "halogenuros",
+      "titulo": "Halogenuros",
+      "resumen": "Compuestos orgánicos con F, Cl, Br o I.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "intermedio",
+      "ficha": {
+        "idea": "Los halogenuros de alquilo o haloalcanos son compuestos orgánicos en los que uno o más hidrógenos se cambiaron por un halógeno: flúor, cloro, bromo o yodo (R–X). Se nombran con el halógeno como prefijo y su posición: clorometano, 1,2-dicloroetano, 2-bromopropano. Muchos son muy útiles: el cloroformo (triclorometano) se usó como anestesia en el siglo XIX; el PVC tiene cloro en su cadena; el teflón de las sartenes está hecho de carbono y flúor; y el halotano fue un anestésico moderno. Otros resultaron dañinos: el DDT, un insecticida muy usado contra el mosquito de la malaria, se acumula en las cadenas alimentarias y afectó a las aves; y los CFC, que parecían perfectos para neveras y aerosoles, dañaron la capa de ozono.",
+        "contexto": [
+          {
+            "titulo": "Propiedades",
+            "texto": "Son más densos que el agua y casi no se disuelven en ella; muchos son buenos solventes."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Los halogenuros tienen un halógeno (F, Cl, Br, I) en lugar de un hidrógeno."
+          ],
+          "media": [
+            "Se nombran con prefijos: cloro-, bromo-, fluoro-, yodo-. Ejemplos: cloroformo, teflón, PVC, DDT."
+          ],
+          "avanzada": [
+            "Bioacumulación: los halogenuros persistentes se concentran a lo largo de la cadena alimentaria."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Qué tienen en común una sartén antiadherente, un tubo de PVC y una nevera vieja?",
+          "actividad": "Investigar en grupos la historia de un halogenuro (cloroformo, DDT, teflón, CFC): para qué servía y qué problema causó.",
+          "errores": [
+            "Creer que todo compuesto con cloro es tóxico.",
+            "Confundir el cloro del agua potable con los halogenuros orgánicos."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Útiles y problemáticos",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "😴",
+                "titulo": "Cloroformo",
+                "texto": "CHCl₃: anestesia antigua"
+              },
+              {
+                "icono": "🍳",
+                "titulo": "Teflón",
+                "texto": "C y F: antiadherente"
+              },
+              {
+                "icono": "🚰",
+                "titulo": "PVC",
+                "texto": "Cloro en la cadena"
+              },
+              {
+                "icono": "🦟",
+                "titulo": "DDT",
+                "texto": "Insecticida que se acumula"
+              },
+              {
+                "icono": "❄️",
+                "titulo": "CFC",
+                "texto": "Neveras y aerosoles"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "¿Cómo se llama?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "CH₃–CH₂–Cl",
+            "opciones": [
+              "Cloroetano",
+              "Clorometano",
+              "Etanol",
+              "Cloruro de sodio"
+            ],
+            "correcta": 0,
+            "explicacion": "Un cloro en una cadena de 2 carbonos."
+          }
+        }
+      ],
+      "juego": "org-halogenuro-juego",
+      "preguntas": [
+        {
+          "id": "qm-or-r-5",
+          "enunciado": "¿Cómo se llama CHCl₃?",
+          "opciones": [
+            "Triclorometano (cloroformo)",
+            "Clorometano",
+            "Tetracloruro de carbono",
+            "Cloroetano"
+          ],
+          "correcta": 0,
+          "explicacion": "Tres cloros en un carbono."
+        },
+        {
+          "id": "qm-or-r-6",
+          "enunciado": "¿Qué elementos forman el teflón?",
+          "opciones": [
+            "Carbono y flúor",
+            "Carbono y cloro",
+            "Hierro y carbono",
+            "Silicio y oxígeno"
+          ],
+          "correcta": 0,
+          "explicacion": "Politetrafluoroetileno."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "cfc-ozono",
+      "titulo": "Los CFC y la capa de ozono",
+      "resumen": "Cómo un compuesto «perfecto» rompió el escudo de la Tierra.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "intermedio",
+      "requiere": [
+        "halogenuros"
+      ],
+      "ficha": {
+        "idea": "Los clorofluorocarbonos (CFC), como el freón CCl₂F₂, se inventaron hacia 1930 para neveras: no son tóxicos, no arden y casi no reaccionan. Por eso se usaron también en aerosoles y espumas. Pero son tan estables que no se destruyen abajo: suben despacio hasta la estratosfera, a unos 25 km, donde está la capa de ozono (O₃) que filtra la radiación ultravioleta del Sol. Allí la luz UV rompe el CFC y suelta átomos de cloro. Cada átomo de Cl rompe una molécula de ozono, queda libre otra vez y sigue rompiendo: un solo Cl puede destruir miles de moléculas de ozono. En los años 80 se descubrió el agujero de ozono sobre la Antártida. En 1987 los países firmaron el Protocolo de Montreal para dejar de producir CFC; Colombia se adhirió en 1993. La capa se está recuperando poco a poco: es uno de los mejores ejemplos de un problema ambiental global resuelto con ciencia y acuerdos.",
+        "contexto": [
+          {
+            "titulo": "No confundir",
+            "texto": "El agujero de ozono y el calentamiento global son problemas distintos, aunque los CFC también son gases de efecto invernadero."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Los CFC dañaron la capa de ozono, que nos protege de la luz ultravioleta."
+          ],
+          "media": [
+            "La luz UV suelta cloro de los CFC; cada Cl destruye muchas moléculas de O₃.",
+            "Protocolo de Montreal (1987)."
+          ],
+          "avanzada": [
+            "Cl + O₃ → ClO + O₂; ClO + O → Cl + O₂: el cloro actúa como catalizador."
+          ]
+        },
+        "docente": {
+          "abrir": "Si los CFC no eran tóxicos ni inflamables, ¿por qué se prohibieron?",
+          "actividad": "Revisar etiquetas de aerosoles y neveras viejas buscando «libre de CFC» o el gas que usan; línea de tiempo del ozono.",
+          "errores": [
+            "Creer que el agujero de ozono es lo que causa el calentamiento global.",
+            "Pensar que el ozono de la estratosfera es el mismo problema que el ozono contaminante de las ciudades."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Del aerosol a la estratosfera",
+          "visual": {
+            "tipo": "escena",
+            "id": "aro-cfc",
+            "fases": [
+              {
+                "id": "aerosol",
+                "nombre": "Abajo",
+                "texto": "Los CFC son tan estables que no se destruyen."
+              },
+              {
+                "id": "sube",
+                "nombre": "Suben",
+                "texto": "Hasta la capa de ozono, a unos 25 km."
+              },
+              {
+                "id": "rompe",
+                "nombre": "La luz UV",
+                "texto": "Rompe el CFC y suelta cloro."
+              },
+              {
+                "id": "ciclo",
+                "nombre": "El cloro destruye",
+                "texto": "Un Cl rompe miles de moléculas de O₃."
+              },
+              {
+                "id": "montreal",
+                "nombre": "Montreal, 1987",
+                "texto": "Se prohibieron y la capa se recupera."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre la contaminación del aire",
+            "tema": "contaminacion",
+            "bloque": "aire-contaminado"
+          }
+        }
+      ],
+      "juego": "org-ozono-juego",
+      "preguntas": [
+        {
+          "id": "qm-or-r-7",
+          "enunciado": "¿Qué átomo de los CFC destruye el ozono?",
+          "opciones": [
+            "El cloro",
+            "El flúor",
+            "El carbono",
+            "El hidrógeno"
+          ],
+          "correcta": 0,
+          "explicacion": "Liberado por la luz ultravioleta."
+        },
+        {
+          "id": "qm-or-r-8",
+          "enunciado": "¿Qué acuerdo internacional prohibió los CFC?",
+          "opciones": [
+            "El Protocolo de Montreal",
+            "El Acuerdo de París",
+            "El Protocolo de Kioto",
+            "La Cumbre de Río"
+          ],
+          "correcta": 0,
+          "explicacion": "Firmado en 1987."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}

@@ -20,21 +20,34 @@ export function construir(pesados: Atomo[], enlaces: Enlace[], hidrogenos: 'todo
   const at = [...pesados]
   const en = [...enlaces]
   if (hidrogenos === 'no') return { at, en }
-  const candidatos = [0, 90, 180, 270, 45, 135, 225, 315, 30, 150, 210, 330, 60, 120, 240, 300].map((g) => (g * Math.PI) / 180)
+  const cand = Array.from({ length: 24 }, (_, k) => (k * 15 * Math.PI) / 180)
+  const fuera90 = (x: number) => { const g = ((x * 180) / Math.PI) % 90; return Math.min(g, 90 - g) }
+  // elige juntos los ángulos de los H que faltan: la mayor separación mínima; si empatan, los más cerca de 0/90/180/270
+  const elegir = (angs: number[], k: number): number[] => {
+    let mejor: number[] = [], puntaje = -1, castigo = Infinity
+    const probar = (desde: number, sel: number[]) => {
+      if (sel.length === k) {
+        const todos = [...angs, ...sel]
+        let m = 10
+        for (let a = 0; a < todos.length; a++) for (let b = a + 1; b < todos.length; b++) m = Math.min(m, dist(todos[a], todos[b]))
+        const c = sel.reduce((t, x) => t + fuera90(x), 0)
+        if (m > puntaje + 0.01 || (Math.abs(m - puntaje) <= 0.01 && c < castigo)) { puntaje = m; castigo = c; mejor = sel }
+        return
+      }
+      for (let j = desde; j < cand.length; j++) probar(j + 1, [...sel, cand[j]])
+    }
+    probar(0, [])
+    return mejor
+  }
   pesados.forEach((a, i) => {
     if (hidrogenos === 'hetero' && a[0] === 'C') return
     const vecinos = en.filter((e) => e[0] === i || e[1] === i)
     const usados = vecinos.reduce((s, e) => s + (e[2] ?? 1), 0)
-    const libres = (VALENCIA[a[0]] ?? 0) - usados
+    const libres = Math.min(4, (VALENCIA[a[0]] ?? 0) - usados)
+    if (libres <= 0) return
     const angs = vecinos.map((e) => ang(a, pesados[e[0] === i ? e[1] : e[0]]))
-    for (let k = 0; k < libres; k++) {
-      let mejor = candidatos[0], puntaje = -1
-      for (const c of candidatos) {
-        const m = angs.length ? Math.min(...angs.map((x) => dist(x, c))) : 10
-        if (m > puntaje + 0.01) { puntaje = m; mejor = c }
-      }
-      angs.push(mejor)
-      at.push(['H', a[1] + Math.cos(mejor) * largo, a[2] + Math.sin(mejor) * largo])
+    for (const g of elegir(angs, libres)) {
+      at.push(['H', a[1] + Math.cos(g) * largo, a[2] + Math.sin(g) * largo])
       en.push([i, at.length - 1, 1])
     }
   })
