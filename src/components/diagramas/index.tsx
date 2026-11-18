@@ -142,7 +142,10 @@ import { DesarrolloSostenibleJuego, OdsJuego, PraeJuego, ProyectoAulaJuego, Part
 import ArbolProblemas from './ArbolProblemas.tsx'
 
 /** Registro de diagramas interactivos. La clave es el valor de `bloque.diagrama`. */
+import { DIAGRAMAS_ORGANICA } from './organica.ts'
+
 export const DIAGRAMAS: Record<string, ComponentType> = {
+  ...DIAGRAMAS_ORGANICA,
   'corcho-hooke': CorchoHooke,
   'gota-leeuwenhoek': GotaLeeuwenhoek,
   // un diagrama por nivel, que abre el diagrama anidado ya posicionado en ese nivel

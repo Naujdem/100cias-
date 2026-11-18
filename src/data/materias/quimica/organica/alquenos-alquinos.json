@@ -1,0 +1,582 @@
+{
+  "id": "alquenos-alquinos",
+  "materia": "quimica",
+  "area": "organica",
+  "titulo": "Alquenos y alquinos",
+  "subtema": "Hidrocarburos con enlaces dobles y triples: etileno, acetileno y polímeros",
+  "orden": 144,
+  "etiqueta": "4",
+  "vistas": [
+    "ruta"
+  ],
+  "tituloVista": "Ruta de los alquenos y alquinos",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Reconocer alquenos (C=C) y alquinos (C≡C) como hidrocarburos insaturados y sus usos.",
+    "Nombrar alquenos y alquinos indicando la posición del enlace múltiple.",
+    "Explicar la isomería cis-trans, las reacciones de adición y la formación de polímeros como el polietileno."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con un texto de química de bachillerato (llama oxiacetilénica ≈ 3100 °C; reacción del carburo de calcio con agua; etileno como hormona de maduración)."
+  ],
+  "bloques": [
+    {
+      "id": "que-son",
+      "titulo": "Insaturados: dobles y triples",
+      "resumen": "Alquenos (C=C, CₙH₂ₙ) y alquinos (C≡C, CₙH₂ₙ₋₂).",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "Los alquenos son hidrocarburos con al menos un enlace doble entre carbonos y los alquinos tienen al menos uno triple. Se llaman insaturados porque tienen menos hidrógenos que el alcano del mismo número de carbonos: con un doble, CₙH₂ₙ; con un triple, CₙH₂ₙ₋₂. El alqueno más sencillo es el eteno o etileno (C₂H₄), una hormona vegetal: el banano maduro lo libera y hace madurar a las frutas vecinas; por eso un aguacate envuelto en papel con un banano madura más rápido. El alquino más sencillo es el etino o acetileno (C₂H₂): ardiendo con oxígeno puro da una llama de unos 3100 °C que sirve para soldar y cortar metales. Antes, en las minas y en las fincas, se usaban lámparas de carburo: el carburo de calcio con agua suelta acetileno, que se quema para dar luz.",
+        "contexto": [
+          {
+            "titulo": "Más reactivos",
+            "texto": "El enlace π del doble y del triple se rompe con facilidad: por eso son más reactivos que los alcanos."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Alquenos: enlace doble. Alquinos: enlace triple.",
+            "Etileno: madura las frutas. Acetileno: soldadura."
+          ],
+          "media": [
+            "Alquenos CₙH₂ₙ; alquinos CₙH₂ₙ₋₂. Son insaturados."
+          ],
+          "avanzada": [
+            "CaC₂ + 2 H₂O → C₂H₂ + Ca(OH)₂ (lámpara de carburo)."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué se envuelve el aguacate en papel periódico para que madure rápido?",
+          "actividad": "Experimento de una semana: dos aguacates biches, uno solo y otro en una bolsa de papel con un banano maduro; comparar.",
+          "errores": [
+            "Creer que «insaturado» quiere decir que le falta un carbono.",
+            "Confundir el etileno (gas) con el etilenglicol (anticongelante)."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Dobles y triples en la vida diaria",
+          "visual": {
+            "tipo": "escena",
+            "id": "alq-cotidiano",
+            "fases": [
+              {
+                "id": "fruta",
+                "nombre": "Etileno",
+                "texto": "El banano maduro hace madurar a los demás."
+              },
+              {
+                "id": "soldadura",
+                "nombre": "Acetileno",
+                "texto": "Llama de unos 3100 °C para soldar."
+              },
+              {
+                "id": "carburo",
+                "nombre": "Lámpara de carburo",
+                "texto": "Carburo + agua → acetileno."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre frenar y acelerar la maduración",
+            "tema": "cinetica",
+            "bloque": "cocina"
+          }
+        },
+        {
+          "titulo": "Saturado o insaturado",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "⛽",
+              "titulo": "Alcano",
+              "puntos": [
+                "Solo enlaces sencillos",
+                "CₙH₂ₙ₊₂",
+                "Poco reactivo"
+              ]
+            },
+            "der": {
+              "icono": "🍌",
+              "titulo": "Alqueno / alquino",
+              "puntos": [
+                "Un doble o un triple",
+                "CₙH₂ₙ / CₙH₂ₙ₋₂",
+                "Más reactivo"
+              ]
+            }
+          }
+        }
+      ],
+      "juego": "org-ano-eno-ino-juego",
+      "preguntas": [
+        {
+          "id": "qm-or-q-1",
+          "enunciado": "¿Qué fórmula general tienen los alquenos con un enlace doble?",
+          "opciones": [
+            "CₙH₂ₙ",
+            "CₙH₂ₙ₊₂",
+            "CₙH₂ₙ₋₂",
+            "CₙHₙ"
+          ],
+          "correcta": 0,
+          "explicacion": "Dos H menos que el alcano."
+        },
+        {
+          "id": "qm-or-q-2",
+          "enunciado": "¿Qué gas liberan las frutas maduras que hace madurar a las demás?",
+          "opciones": [
+            "Etileno",
+            "Acetileno",
+            "Metano",
+            "Oxígeno"
+          ],
+          "correcta": 0,
+          "explicacion": "Es una hormona vegetal."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "nombres",
+      "titulo": "Nombres con -eno e -ino",
+      "resumen": "La cadena con el enlace múltiple y el número más bajo para él.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "intermedio",
+      "requiere": [
+        "que-son"
+      ],
+      "ficha": {
+        "idea": "Los alquenos se nombran como los alcanos, cambiando -ano por -eno, y los alquinos con -ino: eteno, propeno, etino, propino. Desde 4 carbonos hay que decir dónde está el enlace múltiple, porque puede estar en distintos lugares: CH₂=CH–CH₂–CH₃ es 1-buteno y CH₃–CH=CH–CH₃ es 2-buteno. Las reglas cambian un poco: la cadena principal debe contener el enlace doble o triple, y se numera desde el extremo que le dé a ese enlace el número más bajo, aunque las ramas queden con números más altos. El número que se escribe es el del primer carbono del enlace. Con ramas: 2-metil-2-buteno. La IUPAC actual pone el número justo antes de la terminación (but-2-eno, 2-metilbut-2-eno); en los textos escolares aparecen las dos formas.",
+        "contexto": [
+          {
+            "titulo": "Nombres comunes",
+            "texto": "Etileno = eteno; propileno = propeno; acetileno = etino."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Alquenos terminan en -eno y alquinos en -ino."
+          ],
+          "media": [
+            "El número indica dónde empieza el enlace múltiple: 1-buteno, 2-buteno.",
+            "Se numera para que el enlace múltiple tenga el número más bajo."
+          ],
+          "avanzada": [
+            "Forma IUPAC actual: but-2-eno, 2-metilbut-2-eno."
+          ]
+        },
+        "docente": {
+          "abrir": "CH₂=CH–CH₂–CH₃ y CH₃–CH=CH–CH₃ son C₄H₈. ¿Pueden llamarse los dos «buteno»?",
+          "actividad": "Con el constructor, que cada grupo arme una molécula y la dicte en voz alta para que otro grupo la dibuje; comparar.",
+          "errores": [
+            "Numerar para favorecer las ramas y no el enlace doble.",
+            "Escribir el número del segundo carbono del enlace."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Dónde está el doble?",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "1️⃣",
+              "titulo": "1-buteno",
+              "puntos": [
+                "CH₂=CH–CH₂–CH₃",
+                "Doble entre C1 y C2"
+              ]
+            },
+            "der": {
+              "icono": "2️⃣",
+              "titulo": "2-buteno",
+              "puntos": [
+                "CH₃–CH=CH–CH₃",
+                "Doble entre C2 y C3"
+              ]
+            }
+          }
+        },
+        {
+          "titulo": "Constructor de cadenas",
+          "visual": {
+            "tipo": "diagrama",
+            "id": "constructor-cadenas"
+          }
+        }
+      ],
+      "diagrama": "constructor-cadenas",
+      "juego": "org-nombre-eno-juego",
+      "preguntas": [
+        {
+          "id": "qm-or-q-3",
+          "enunciado": "¿Cómo se llama CH≡C–CH₂–CH₃?",
+          "opciones": [
+            "1-butino",
+            "2-butino",
+            "1-buteno",
+            "Butano"
+          ],
+          "correcta": 0,
+          "explicacion": "Triple entre C1 y C2."
+        },
+        {
+          "id": "qm-or-q-4",
+          "enunciado": "¿Desde dónde se numera la cadena de un alqueno?",
+          "opciones": [
+            "Desde el extremo más cercano al enlace doble",
+            "Siempre desde la izquierda",
+            "Desde la rama más grande",
+            "Desde el centro"
+          ],
+          "correcta": 0,
+          "explicacion": "El enlace múltiple manda."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "cis-trans",
+      "titulo": "Isomería cis-trans",
+      "resumen": "El doble enlace no gira: mismo lado o lados opuestos.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "avanzado",
+      "requiere": [
+        "nombres"
+      ],
+      "ficha": {
+        "idea": "Alrededor de un enlace sencillo los átomos giran libremente, pero el enlace doble no deja girar, porque el enlace π se rompería. Por eso, si cada carbono del doble tiene dos grupos distintos, hay dos formas posibles: cis, con los grupos iguales del mismo lado, y trans, con los grupos en lados opuestos. El cis-2-buteno y el trans-2-buteno son sustancias distintas con puntos de ebullición distintos. La isomería cis-trans es muy importante en la vida: en el ojo, la luz cambia la forma del retinal de cis a trans y así empieza la visión; y las grasas trans, que se forman al endurecer aceites en la industria, son más rectas, se acomodan como las saturadas y se asocian con enfermedades del corazón.",
+        "contexto": [
+          {
+            "titulo": "Condición",
+            "texto": "No hay cis-trans si un carbono del doble tiene dos grupos iguales (por ejemplo, dos H, como en el 1-buteno)."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "El enlace doble no deja girar la molécula."
+          ],
+          "media": [
+            "Cis: grupos del mismo lado. Trans: lados opuestos."
+          ],
+          "avanzada": [
+            "Necesita dos grupos distintos en cada carbono del doble. Visión (retinal) y grasas trans."
+          ]
+        },
+        "docente": {
+          "abrir": "Si el doble enlace no gira, ¿cuántas formas tiene el 2-buteno?",
+          "actividad": "Hacer el doble enlace con dos palillos paralelos entre dos bolas de plastilina y comprobar que no gira; armar las formas cis y trans.",
+          "errores": [
+            "Creer que cis y trans se convierten girando.",
+            "Buscar cis-trans en el 1-buteno."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "El doble no gira",
+          "visual": {
+            "tipo": "escena",
+            "id": "alq-cis-trans",
+            "fases": [
+              {
+                "id": "sencillo",
+                "nombre": "Enlace sencillo",
+                "texto": "Gira libremente."
+              },
+              {
+                "id": "cis",
+                "nombre": "cis-2-buteno",
+                "texto": "Los CH₃ del mismo lado."
+              },
+              {
+                "id": "trans",
+                "nombre": "trans-2-buteno",
+                "texto": "Los CH₃ en lados opuestos."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre la hibridación sp²",
+            "tema": "carbono",
+            "bloque": "hibridacion"
+          }
+        }
+      ],
+      "juego": "org-cis-trans-juego",
+      "preguntas": [
+        {
+          "id": "qm-or-q-5",
+          "enunciado": "¿Por qué existen isómeros cis y trans en los alquenos?",
+          "opciones": [
+            "Porque el enlace doble no deja girar",
+            "Porque tienen distinta fórmula",
+            "Porque son iónicos",
+            "Porque tienen oxígeno"
+          ],
+          "correcta": 0,
+          "explicacion": "El enlace π impide la rotación."
+        },
+        {
+          "id": "qm-or-q-6",
+          "enunciado": "¿Cuál de estos tiene isómeros cis y trans?",
+          "opciones": [
+            "2-buteno",
+            "1-buteno",
+            "Eteno",
+            "Propeno"
+          ],
+          "correcta": 0,
+          "explicacion": "Cada carbono del doble tiene H y CH₃."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "adicion",
+      "titulo": "Reacciones de adición",
+      "resumen": "El doble se abre y se le suman átomos.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "avanzado",
+      "requiere": [
+        "que-son"
+      ],
+      "ficha": {
+        "idea": "Como el enlace π del doble se rompe con facilidad, los alquenos dan reacciones de adición: el doble se abre y cada carbono recibe un átomo nuevo. Con hidrógeno (y un catalizador de níquel o platino) se forma el alcano: es la hidrogenación, la que convierte aceites líquidos en margarinas. Con bromo, el agua de bromo de color café se decolora al instante: es la prueba de laboratorio para saber si un compuesto es insaturado. Con HCl se forma un cloroalcano y con agua (y ácido) un alcohol: así se fabrica etanol industrial a partir de etileno. Cuando la molécula no es simétrica, el H se va al carbono del doble que ya tenía más hidrógenos (regla de Markovnikov). Los alquinos pueden sumar dos veces, porque tienen dos enlaces π.",
+        "contexto": [
+          {
+            "titulo": "Prueba del bromo",
+            "texto": "Alcano + agua de bromo: sigue café. Alqueno + agua de bromo: se vuelve incolora."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "En la adición, el doble enlace se abre y se le pegan átomos."
+          ],
+          "media": [
+            "H₂ → alcano; Br₂ → dibromuro (decolora el agua de bromo); HCl → cloroalcano; H₂O → alcohol."
+          ],
+          "avanzada": [
+            "Markovnikov: el H va al carbono del doble con más H. Alquinos: doble adición."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Cómo se convierte un aceite líquido en una margarina sólida?",
+          "actividad": "Demostración del docente (o video) de la prueba del agua de bromo con un aceite vegetal y con aceite mineral.",
+          "errores": [
+            "Creer que en la adición se sueltan átomos.",
+            "Pensar que los alcanos dan adición."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "El doble se abre",
+          "visual": {
+            "tipo": "escena",
+            "id": "alq-adicion",
+            "fases": [
+              {
+                "id": "eteno",
+                "nombre": "Eteno",
+                "texto": "Un enlace doble listo para abrirse."
+              },
+              {
+                "id": "bromo",
+                "nombre": "Con Br₂",
+                "texto": "Se suma un Br a cada carbono."
+              },
+              {
+                "id": "producto",
+                "nombre": "Producto",
+                "texto": "1,2-dibromoetano: el agua de bromo pierde su color."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "¿Qué se forma?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "CH₂=CH₂ + H₂O (con ácido) →",
+            "opciones": [
+              "CH₃–CH₂–OH (etanol)",
+              "CH₄ + CO₂",
+              "CH₃–CH₃",
+              "CH≡CH"
+            ],
+            "correcta": 0,
+            "explicacion": "Adición de agua: un alcohol."
+          }
+        }
+      ],
+      "juego": "org-adicion-juego",
+      "preguntas": [
+        {
+          "id": "qm-or-q-7",
+          "enunciado": "¿Qué se obtiene al sumar H₂ al eteno?",
+          "opciones": [
+            "Etano",
+            "Etino",
+            "Etanol",
+            "Metano"
+          ],
+          "correcta": 0,
+          "explicacion": "Hidrogenación: alqueno → alcano."
+        },
+        {
+          "id": "qm-or-q-8",
+          "enunciado": "¿Qué pasa con el agua de bromo si se le agrega un alqueno?",
+          "opciones": [
+            "Pierde su color café",
+            "Se pone roja",
+            "Explota",
+            "No cambia"
+          ],
+          "correcta": 0,
+          "explicacion": "El bromo se suma al doble enlace."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "polimeros",
+      "titulo": "Del etileno al polietileno",
+      "resumen": "Polímeros de adición: miles de monómeros en cadena.",
+      "anio": 5,
+      "etiqueta": "Paso 5",
+      "nivel": "intermedio",
+      "requiere": [
+        "que-son"
+      ],
+      "ficha": {
+        "idea": "Si los dobles enlaces de muchas moléculas de etileno se abren y se unen entre sí, se forma una cadena larguísima de miles de carbonos: el polietileno, el plástico de las bolsas y los envases. La molécula pequeña que se repite se llama monómero y la cadena, polímero; esta reacción es una polimerización por adición. Cambiando un hidrógeno del etileno se obtienen otros plásticos: con un CH₃ (propileno) sale el polipropileno de las tapas y los baldes; con un Cl (cloruro de vinilo), el PVC de los tubos; con un anillo de benceno (estireno), el poliestireno del icopor. Son materiales baratos, livianos y resistentes; el problema es que duran cientos de años en el ambiente, y por eso hay que reducirlos, reutilizarlos y separarlos bien.",
+        "contexto": [
+          {
+            "titulo": "Código de reciclaje",
+            "texto": "El número del triángulo dice el plástico: 2 y 4 polietileno, 3 PVC, 5 polipropileno, 6 poliestireno."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "El polietileno se forma uniendo muchas moléculas de etileno."
+          ],
+          "media": [
+            "Monómero: la unidad que se repite. Polímero: la cadena larga. Polimerización por adición."
+          ],
+          "avanzada": [
+            "n CH₂=CH₂ → –(CH₂–CH₂)ₙ–. Monómeros: propileno, cloruro de vinilo, estireno."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Qué tienen que ver una bolsa plástica y el gas que madura el banano?",
+          "actividad": "Hacer una cadena con clips: cada clip es un monómero; luego buscar en casa el número de reciclaje de cinco envases.",
+          "errores": [
+            "Creer que el plástico es una sustancia natural.",
+            "Confundir polímero (cadena) con monómero (unidad)."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Miles de etilenos en fila",
+          "visual": {
+            "tipo": "escena",
+            "id": "alq-polimero",
+            "fases": [
+              {
+                "id": "monomeros",
+                "nombre": "Monómeros",
+                "texto": "Moléculas de etileno sueltas."
+              },
+              {
+                "id": "abren",
+                "nombre": "Se abren los dobles",
+                "texto": "Cada C queda con un enlace libre."
+              },
+              {
+                "id": "cadena",
+                "nombre": "Polietileno",
+                "texto": "Una cadena de miles de carbonos."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre los residuos y el reciclaje",
+            "tema": "residuos-consumo"
+          }
+        },
+        {
+          "titulo": "Cambia un H, cambia el plástico",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🛍️",
+                "titulo": "Polietileno",
+                "texto": "H: bolsas y envases"
+              },
+              {
+                "icono": "🪣",
+                "titulo": "Polipropileno",
+                "texto": "CH₃: tapas y baldes"
+              },
+              {
+                "icono": "🚰",
+                "titulo": "PVC",
+                "texto": "Cl: tubos"
+              },
+              {
+                "icono": "🥡",
+                "titulo": "Poliestireno",
+                "texto": "Benceno: icopor"
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "org-plastico-juego",
+      "preguntas": [
+        {
+          "id": "qm-or-q-9",
+          "enunciado": "¿Cuál es el monómero del polietileno?",
+          "opciones": [
+            "Etileno (eteno)",
+            "Etano",
+            "Metano",
+            "Etanol"
+          ],
+          "correcta": 0,
+          "explicacion": "Sus dobles enlaces se abren y se unen."
+        },
+        {
+          "id": "qm-or-q-10",
+          "enunciado": "¿Qué plástico se fabrica con cloruro de vinilo?",
+          "opciones": [
+            "PVC",
+            "Polietileno",
+            "Poliestireno",
+            "Nailon"
+          ],
+          "correcta": 0,
+          "explicacion": "Policloruro de vinilo."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}

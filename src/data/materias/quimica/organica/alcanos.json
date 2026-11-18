@@ -1,0 +1,607 @@
+{
+  "id": "alcanos",
+  "materia": "quimica",
+  "area": "organica",
+  "titulo": "Alcanos",
+  "subtema": "Hidrocarburos saturados: del biogás a la gasolina, sus nombres e isómeros",
+  "orden": 143,
+  "etiqueta": "3",
+  "vistas": [
+    "ruta"
+  ],
+  "tituloVista": "Ruta de los alcanos",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Reconocer los alcanos como hidrocarburos saturados (CₙH₂ₙ₊₂) y sus usos como combustibles.",
+    "Nombrar alcanos lineales y ramificados con las reglas de la IUPAC.",
+    "Explicar qué son los isómeros estructurales y escribir la combustión de un alcano."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con un texto de química de bachillerato (puntos de ebullición del butano −0,5 °C y del metilpropano −12 °C; composición del gas de cilindro; isómeros del C₅H₁₂ y del C₆H₁₄)."
+  ],
+  "bloques": [
+    {
+      "id": "que-son",
+      "titulo": "¿Qué son los alcanos?",
+      "resumen": "Hidrocarburos con solo enlaces sencillos: CₙH₂ₙ₊₂.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "Los alcanos son los hidrocarburos más sencillos: solo tienen carbono e hidrógeno, y todos sus enlaces son sencillos. Se dice que son saturados porque cada carbono tiene el máximo de hidrógenos posible. Su fórmula general es CₙH₂ₙ₊₂: metano CH₄, etano C₂H₆, propano C₃H₈, butano C₄H₁₀. Con pocos carbonos son gases: el metano es el gas natural y el del biogás que sale del estiércol en los biodigestores de las fincas; el propano y el butano son el gas del cilindro. Entre 5 y unos 17 carbonos son líquidos, como la gasolina, el queroseno y el ACPM; con más carbonos son sólidos, como la parafina de las velas. Los alcanos casi no reaccionan (por eso también se llaman parafinas, «poca afinidad»), no se disuelven en agua porque son apolares, flotan sobre ella y arden muy bien.",
+        "contexto": [
+          {
+            "titulo": "Cicloalcanos",
+            "texto": "Si la cadena se cierra en un anillo se llaman cicloalcanos (CₙH₂ₙ), como el ciclohexano."
+          },
+          {
+            "titulo": "Biogás",
+            "texto": "Mezcla de metano y CO₂ que se produce cuando las bacterias descomponen el estiércol sin oxígeno."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Los alcanos tienen solo C, H y enlaces sencillos.",
+            "Son combustibles: gas natural, gas de cilindro, gasolina, parafina."
+          ],
+          "media": [
+            "Fórmula general CₙH₂ₙ₊₂. Son saturados y apolares: no se disuelven en agua."
+          ],
+          "avanzada": [
+            "Cicloalcanos: CₙH₂ₙ. Al aumentar los carbonos sube el punto de ebullición (más fuerzas de London)."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Qué tienen en común el gas del biodigestor, el del cilindro y la vela de parafina?",
+          "actividad": "Echar unas gotas de aceite mineral o parafina líquida en agua y observar que no se mezcla y flota; relacionarlo con un derrame de petróleo.",
+          "errores": [
+            "Creer que el gas de cilindro es oxígeno o «gas natural».",
+            "Pensar que los alcanos líquidos se disuelven en agua."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Alcanos en la vida diaria",
+          "visual": {
+            "tipo": "escena",
+            "id": "alc-cocina",
+            "fases": [
+              {
+                "id": "biogas",
+                "nombre": "Biogás",
+                "texto": "Metano, CH₄: 1 carbono."
+              },
+              {
+                "id": "cilindro",
+                "nombre": "Gas de cilindro",
+                "texto": "Propano y butano: 3 y 4 carbonos."
+              },
+              {
+                "id": "gasolina",
+                "nombre": "Gasolina",
+                "texto": "Líquidos de 5 a 10 carbonos."
+              },
+              {
+                "id": "vela",
+                "nombre": "Parafina",
+                "texto": "Sólidos de más de 20 carbonos."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "La fórmula general",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🧮",
+            "valor": "CₙH₂ₙ₊₂",
+            "texto": "Si tiene 5 carbonos: C₅H₁₂, el pentano."
+          }
+        }
+      ],
+      "juego": "org-estado-alcano-juego",
+      "preguntas": [
+        {
+          "id": "qm-or-a-1",
+          "enunciado": "¿Cuál es la fórmula del propano?",
+          "opciones": [
+            "C₃H₈",
+            "C₃H₆",
+            "C₃H₄",
+            "CH₄"
+          ],
+          "correcta": 0,
+          "explicacion": "CₙH₂ₙ₊₂ con n = 3."
+        },
+        {
+          "id": "qm-or-a-2",
+          "enunciado": "¿Por qué se dice que los alcanos son saturados?",
+          "opciones": [
+            "Tienen solo enlaces sencillos y el máximo de hidrógenos",
+            "Están mojados",
+            "Tienen enlaces dobles",
+            "Tienen oxígeno"
+          ],
+          "correcta": 0,
+          "explicacion": "No les cabe ningún H más."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "nombres",
+      "titulo": "Met-, et-, prop-, but-…",
+      "resumen": "El prefijo dice cuántos carbonos hay y -ano que es un alcano.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "ficha": {
+        "idea": "El nombre de un alcano lineal tiene dos partes: un prefijo que dice cuántos carbonos hay y la terminación -ano. Los cuatro primeros tienen nombres históricos que hay que aprenderse: met- (1), et- (2), prop- (3) y but- (4). Desde 5 se usan los números griegos: pent- (5), hex- (6), hept- (7), oct- (8), non- (9) y dec- (10). Así, el octano de la gasolina tiene 8 carbonos y el decano 10. Los mismos prefijos sirven para toda la química orgánica: el etanol, el etileno y el ácido etanoico tienen 2 carbonos; el propanol y la propanona, 3. Cuando un alcano pierde un hidrógeno y queda pegado a otra cadena se llama radical alquilo y cambia -ano por -il: metil (–CH₃), etil (–CH₂–CH₃).",
+        "contexto": [
+          {
+            "titulo": "Truco",
+            "texto": "«Mi Elefante Prefiere Bananos»: met, et, prop, but."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "met 1, et 2, prop 3, but 4, pent 5, hex 6, hept 7, oct 8, non 9, dec 10."
+          ],
+          "media": [
+            "Alcano lineal = prefijo + -ano. Radical alquilo = prefijo + -il (metil, etil)."
+          ],
+          "avanzada": [
+            "Los prefijos se usan en todas las familias: etanol, propanona, ácido butanoico."
+          ]
+        },
+        "docente": {
+          "abrir": "Si «octano» viene de 8, ¿cuántos carbonos tiene el pentano? ¿Y el hexano?",
+          "actividad": "Hacer tarjetas con el prefijo de un lado y el número de carbonos del otro y jugar a emparejarlas en parejas.",
+          "errores": [
+            "Confundir prop- (3) con pent- (5).",
+            "Escribir metil cuando es metano (y al revés)."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Los prefijos",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "1️⃣",
+                "titulo": "Met-",
+                "texto": "metano CH₄"
+              },
+              {
+                "icono": "2️⃣",
+                "titulo": "Et-",
+                "texto": "etano C₂H₆"
+              },
+              {
+                "icono": "3️⃣",
+                "titulo": "Prop-",
+                "texto": "propano C₃H₈"
+              },
+              {
+                "icono": "4️⃣",
+                "titulo": "But-",
+                "texto": "butano C₄H₁₀"
+              },
+              {
+                "icono": "5️⃣",
+                "titulo": "Pent-",
+                "texto": "pentano C₅H₁₂"
+              },
+              {
+                "icono": "8️⃣",
+                "titulo": "Oct-",
+                "texto": "octano C₈H₁₈"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Constructor de alcanos",
+          "visual": {
+            "tipo": "diagrama",
+            "id": "constructor-alcanos"
+          }
+        }
+      ],
+      "diagrama": "constructor-alcanos",
+      "juego": "org-prefijo-juego",
+      "preguntas": [
+        {
+          "id": "qm-or-a-3",
+          "enunciado": "¿Cuántos carbonos tiene el hexano?",
+          "opciones": [
+            "6",
+            "5",
+            "7",
+            "8"
+          ],
+          "correcta": 0,
+          "explicacion": "hex- = 6."
+        },
+        {
+          "id": "qm-or-a-4",
+          "enunciado": "¿Cómo se llama el alcano de 4 carbonos?",
+          "opciones": [
+            "Butano",
+            "Propano",
+            "Pentano",
+            "Tetrano"
+          ],
+          "correcta": 0,
+          "explicacion": "but- = 4."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "ramificados",
+      "titulo": "Alcanos ramificados",
+      "resumen": "Cadena más larga, números más bajos y radicales.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "intermedio",
+      "requiere": [
+        "nombres"
+      ],
+      "ficha": {
+        "idea": "Muchos alcanos tienen ramas. Para nombrarlos se siguen unos pasos. Primero se busca la cadena de carbonos más larga, aunque esté doblada en el dibujo: esa da el nombre principal. Luego se numera desde el extremo que deje las ramas con los números más bajos. Después se nombra cada rama como radical (metil, etil) con el número del carbono donde está. Si hay varias ramas iguales se agrupan con di-, tri-, tetra- y se escriben todos sus números separados por comas; si son distintas se ordenan alfabéticamente (etil antes que metil). Los números se separan de las palabras con guiones. Por ejemplo, CH₃–CH(CH₃)–CH₂–CH₃ es 2-metilbutano, y CH₃–C(CH₃)₂–CH₂–CH₃ es 2,2-dimetilbutano.",
+        "contexto": [
+          {
+            "titulo": "Error clásico",
+            "texto": "La cadena más larga no siempre es la que está dibujada en línea recta."
+          },
+          {
+            "titulo": "Isooctano",
+            "texto": "El 2,2,4-trimetilpentano es la referencia de octanaje 100 de la gasolina."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Las ramas se nombran como radicales: metil, etil."
+          ],
+          "media": [
+            "Pasos: cadena más larga → numerar con los números más bajos → nombrar ramas con su número → nombre de la cadena.",
+            "Ramas iguales: di-, tri-, tetra-."
+          ],
+          "avanzada": [
+            "Ramas distintas en orden alfabético sin contar di- ni tri-: 3-etil-2-metilpentano."
+          ]
+        },
+        "docente": {
+          "abrir": "Dibujen 5 carbonos en forma de L. ¿Siguen siendo pentano?",
+          "actividad": "Repartir fórmulas semidesarrolladas con trampas (cadena doblada) para que en parejas encuentren la cadena más larga con un color.",
+          "errores": [
+            "Tomar como principal la cadena dibujada en línea recta.",
+            "Numerar desde el extremo equivocado.",
+            "Escribir 2-dimetil en vez de 2,2-dimetil."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Nombrar paso a paso",
+          "visual": {
+            "tipo": "escena",
+            "id": "alc-ramificado",
+            "fases": [
+              {
+                "id": "molecula",
+                "nombre": "La molécula",
+                "texto": "CH₃–CH(CH₃)–CH₂–CH₂–CH₃"
+              },
+              {
+                "id": "cadena",
+                "nombre": "Cadena más larga",
+                "texto": "Tiene 5 carbonos: pentano."
+              },
+              {
+                "id": "numerar",
+                "nombre": "Numerar",
+                "texto": "Desde el extremo más cerca de la rama."
+              },
+              {
+                "id": "nombre",
+                "nombre": "Nombre",
+                "texto": "2-metilpentano."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "¿Cuál es el nombre?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "CH₃–CH(CH₃)–CH(CH₃)–CH₃",
+            "opciones": [
+              "2,3-dimetilbutano",
+              "2-dimetilbutano",
+              "1,2-dimetilbutano",
+              "hexano"
+            ],
+            "correcta": 0,
+            "explicacion": "Dos metilos en los carbonos 2 y 3 de una cadena de 4."
+          }
+        }
+      ],
+      "juego": "org-ramificado-juego",
+      "preguntas": [
+        {
+          "id": "qm-or-a-5",
+          "enunciado": "¿Qué nombre tiene CH₃–CH(CH₃)–CH₃?",
+          "opciones": [
+            "Metilpropano (2-metilpropano)",
+            "Butano",
+            "1-metilpropano",
+            "Dimetiletano"
+          ],
+          "correcta": 0,
+          "explicacion": "Cadena de 3 con un metilo en el carbono 2."
+        },
+        {
+          "id": "qm-or-a-6",
+          "enunciado": "¿Qué es lo primero al nombrar un alcano ramificado?",
+          "opciones": [
+            "Buscar la cadena de carbonos más larga",
+            "Contar los hidrógenos",
+            "Nombrar las ramas",
+            "Escribir -ano"
+          ],
+          "correcta": 0,
+          "explicacion": "Esa cadena da el nombre principal."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "isomeros",
+      "titulo": "Isómeros estructurales",
+      "resumen": "Misma fórmula molecular, distinta estructura.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "avanzado",
+      "requiere": [
+        "ramificados"
+      ],
+      "ficha": {
+        "idea": "Dos compuestos son isómeros si tienen la misma fórmula molecular pero sus átomos están unidos de otra manera. El C₄H₁₀ puede ser butano (cadena recta) o metilpropano (ramificado): son dos sustancias distintas, y el butano hierve a unos −0,5 °C mientras el metilpropano a unos −12 °C, porque las moléculas ramificadas son más compactas, se tocan menos y sus fuerzas de London son más débiles. Con 5 carbonos hay 3 isómeros (pentano, metilbutano y dimetilpropano), con 6 hay 5, con 10 hay 75 y con 20 más de 366 000. En los isómeros de cadena cambia la forma del esqueleto; en los de posición cambia el lugar del grupo funcional (1-propanol y 2-propanol), y en los de función cambia el grupo (etanol y éter dimetílico, los dos C₂H₆O).",
+        "contexto": [
+          {
+            "titulo": "Por qué importa",
+            "texto": "Las cadenas ramificadas arden mejor en el motor: por eso el isooctano es la referencia del octanaje."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Los isómeros tienen la misma fórmula molecular y distinta estructura."
+          ],
+          "media": [
+            "C₄H₁₀: butano y metilpropano. C₅H₁₂: 3 isómeros."
+          ],
+          "avanzada": [
+            "Isomería de cadena, de posición y de función. Las ramificadas hierven a menor temperatura."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Cuántas moléculas distintas pueden armar con 4 carbonos y 10 hidrógenos?",
+          "actividad": "En grupos, armar con plastilina todos los isómeros del C₅H₁₂ y del C₆H₁₄; comprobar que no haya repetidos girándolos.",
+          "errores": [
+            "Contar como isómeros la misma molécula dibujada al revés o doblada.",
+            "Creer que los isómeros tienen las mismas propiedades."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "C₄H₁₀ y C₅H₁₂",
+          "visual": {
+            "tipo": "escena",
+            "id": "alc-isomeros",
+            "fases": [
+              {
+                "id": "butano",
+                "nombre": "Butano",
+                "texto": "Cadena recta; hierve a −0,5 °C."
+              },
+              {
+                "id": "metilpropano",
+                "nombre": "Metilpropano",
+                "texto": "Ramificado; hierve a −12 °C."
+              },
+              {
+                "id": "pentanos",
+                "nombre": "Los 3 del C₅H₁₂",
+                "texto": "Pentano, metilbutano y dimetilpropano."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre las fuerzas de London",
+            "tema": "geometria-fuerzas",
+            "bloque": "fuerzas"
+          }
+        },
+        {
+          "titulo": "Los isómeros se multiplican",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "4️⃣",
+                "titulo": "C₄H₁₀",
+                "texto": "2 isómeros"
+              },
+              {
+                "icono": "5️⃣",
+                "titulo": "C₅H₁₂",
+                "texto": "3 isómeros"
+              },
+              {
+                "icono": "6️⃣",
+                "titulo": "C₆H₁₄",
+                "texto": "5 isómeros"
+              },
+              {
+                "icono": "🔟",
+                "titulo": "C₁₀H₂₂",
+                "texto": "75 isómeros"
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "org-isomero-juego",
+      "preguntas": [
+        {
+          "id": "qm-or-a-7",
+          "enunciado": "¿Qué tienen igual dos isómeros?",
+          "opciones": [
+            "La fórmula molecular",
+            "La estructura",
+            "El punto de ebullición",
+            "El nombre"
+          ],
+          "correcta": 0,
+          "explicacion": "Cambia cómo se unen los átomos."
+        },
+        {
+          "id": "qm-or-a-8",
+          "enunciado": "¿Cuántos isómeros tiene el C₅H₁₂?",
+          "opciones": [
+            "3",
+            "2",
+            "5",
+            "1"
+          ],
+          "correcta": 0,
+          "explicacion": "Pentano, metilbutano y dimetilpropano."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "combustion",
+      "titulo": "Los alcanos arden",
+      "resumen": "Combustión completa e incompleta.",
+      "anio": 5,
+      "etiqueta": "Paso 5",
+      "nivel": "basico",
+      "ficha": {
+        "idea": "La reacción más importante de los alcanos es la combustión: con el oxígeno del aire producen dióxido de carbono, agua y mucha energía. Por eso son los combustibles más usados del mundo: el gas de la estufa, la gasolina del carro, el ACPM de los camiones. Para el metano: CH₄ + 2 O₂ → CO₂ + 2 H₂O + energía; para el propano: C₃H₈ + 5 O₂ → 3 CO₂ + 4 H₂O. Si falta oxígeno, la combustión es incompleta: la llama se pone amarilla, sale hollín (carbono) y monóxido de carbono (CO), un gas sin olor muy venenoso. Por eso la llama de la estufa debe ser azul y los calentadores de gas no se usan en cuartos cerrados. El CO₂ que liberan los combustibles es el principal gas de efecto invernadero.",
+        "contexto": [
+          {
+            "titulo": "Un solo lugar",
+            "texto": "La combustión como tipo de reacción se ve en Reacciones y ecuaciones; aquí, aplicada a los alcanos."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Los alcanos arden y dan CO₂, agua y energía."
+          ],
+          "media": [
+            "CH₄ + 2 O₂ → CO₂ + 2 H₂O. Con poco oxígeno: CO y hollín (llama amarilla)."
+          ],
+          "avanzada": [
+            "Balanceo general: CₙH₂ₙ₊₂ + (3n+1)/2 O₂ → n CO₂ + (n+1) H₂O."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué es peligrosa una llama amarilla en la estufa de gas?",
+          "actividad": "Observar (con el docente) la llama de un mechero o una vela; poner una cuchara fría sobre la llama amarilla y ver el hollín.",
+          "errores": [
+            "Creer que el CO y el CO₂ son lo mismo.",
+            "Pensar que la combustión destruye la materia."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "La llama de la estufa",
+          "visual": {
+            "tipo": "escena",
+            "id": "alc-combustion",
+            "fases": [
+              {
+                "id": "completa",
+                "nombre": "Completa",
+                "texto": "Llama azul: CO₂ y agua."
+              },
+              {
+                "id": "incompleta",
+                "nombre": "Incompleta",
+                "texto": "Llama amarilla: hollín y CO."
+              },
+              {
+                "id": "ecuacion",
+                "nombre": "La ecuación",
+                "texto": "CH₄ + 2 O₂ → CO₂ + 2 H₂O"
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre la combustión",
+            "tema": "reacciones-ecuaciones",
+            "bloque": "combustion"
+          }
+        },
+        {
+          "titulo": "Balancea",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "C₃H₈ + ? O₂ → 3 CO₂ + 4 H₂O",
+            "opciones": [
+              "5",
+              "3",
+              "4",
+              "10"
+            ],
+            "correcta": 0,
+            "explicacion": "3 × 2 + 4 = 10 oxígenos → 5 O₂."
+          }
+        }
+      ],
+      "juego": "org-combustion-juego",
+      "preguntas": [
+        {
+          "id": "qm-or-a-9",
+          "enunciado": "¿Qué produce la combustión completa del metano?",
+          "opciones": [
+            "CO₂ y agua",
+            "CO y hollín",
+            "Oxígeno e hidrógeno",
+            "Metanol"
+          ],
+          "correcta": 0,
+          "explicacion": "Con suficiente oxígeno."
+        },
+        {
+          "id": "qm-or-a-10",
+          "enunciado": "¿Qué gas venenoso sale cuando falta oxígeno en la combustión?",
+          "opciones": [
+            "Monóxido de carbono (CO)",
+            "Oxígeno",
+            "Nitrógeno",
+            "Vapor de agua"
+          ],
+          "correcta": 0,
+          "explicacion": "No tiene olor ni color."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}

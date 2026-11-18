@@ -1,0 +1,481 @@
+{
+  "id": "nitrogenados",
+  "materia": "quimica",
+  "area": "organica",
+  "titulo": "Compuestos nitrogenados",
+  "subtema": "Aminas, alcaloides, amidas y nitrilos: del olor a pescado a la urea y las proteínas",
+  "orden": 148,
+  "etiqueta": "8",
+  "vistas": [
+    "ruta"
+  ],
+  "tituloVista": "Ruta de los compuestos nitrogenados",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Reconocer las aminas como derivados del amoníaco y clasificarlas en primarias, secundarias y terciarias.",
+    "Identificar alcaloides conocidos y sus efectos sobre el cuerpo.",
+    "Reconocer las amidas (urea, enlace peptídico, nailon) y los nitrilos."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con un texto de química de bachillerato y fuentes de salud (contenido de cafeína aproximado de una taza de café; urea con 46 % de nitrógeno; amígdalina en semillas)."
+  ],
+  "bloques": [
+    {
+      "id": "aminas",
+      "titulo": "Aminas: parientes del amoníaco",
+      "resumen": "Cambiar los H del NH₃ por cadenas de carbono.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "Las aminas son compuestos orgánicos derivados del amoníaco (NH₃) en los que uno, dos o los tres hidrógenos se cambian por cadenas de carbono. Si se cambia uno es una amina primaria (metilamina, CH₃–NH₂); si se cambian dos, secundaria (dimetilamina), y si se cambian los tres, terciaria (trimetilamina). Como el amoníaco, las aminas son bases débiles: el nitrógeno tiene un par de electrones libre que puede atrapar un H⁺. Las aminas pequeñas huelen fuerte y desagradable: la trimetilamina es el olor a pescado, y la putrescina y la cadaverina, el de la carne podrida. Por eso al pescado se le echa limón: el ácido convierte la amina en una sal sin olor. Muchas moléculas importantes del cuerpo son aminas, como la adrenalina, la dopamina y la serotonina.",
+        "contexto": [
+          {
+            "titulo": "Nombres",
+            "texto": "Se nombran con los radicales y la palabra amina: metilamina, etilamina, dimetilamina, trimetilamina."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Las aminas se parecen al amoníaco: tienen nitrógeno.",
+            "El olor a pescado es una amina."
+          ],
+          "media": [
+            "Primaria R–NH₂, secundaria R₂NH, terciaria R₃N.",
+            "Son bases débiles."
+          ],
+          "avanzada": [
+            "El limón neutraliza la amina: R–NH₂ + H⁺ → R–NH₃⁺ (sal sin olor)."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué se le echa limón al pescado?",
+          "actividad": "Discutir en casa o en clase por qué el limón o el vinagre quitan el olor a pescado de las manos; relacionarlo con ácidos y bases.",
+          "errores": [
+            "Confundir amina con amida.",
+            "Creer que todas las aminas son tóxicas."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Del amoníaco a las aminas",
+          "visual": {
+            "tipo": "escena",
+            "id": "nit-aminas",
+            "fases": [
+              {
+                "id": "amoniaco",
+                "nombre": "Amoníaco",
+                "texto": "NH₃: un N con tres H."
+              },
+              {
+                "id": "primaria",
+                "nombre": "Primaria",
+                "texto": "Metilamina: un carbono en el N."
+              },
+              {
+                "id": "secundaria",
+                "nombre": "Secundaria",
+                "texto": "Dimetilamina: dos carbonos."
+              },
+              {
+                "id": "terciaria",
+                "nombre": "Terciaria",
+                "texto": "Trimetilamina: olor a pescado."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "¿Por qué funciona el limón?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "El pescado huele a trimetilamina, una base. ¿Qué hace el limón?",
+            "opciones": [
+              "La neutraliza y forma una sal sin olor",
+              "La tapa con su olor y nada más",
+              "La convierte en alcohol",
+              "La congela"
+            ],
+            "correcta": 0,
+            "explicacion": "Ácido + base → sal."
+          }
+        }
+      ],
+      "juego": "org-amina-juego",
+      "preguntas": [
+        {
+          "id": "qm-or-n-1",
+          "enunciado": "¿De qué sustancia derivan las aminas?",
+          "opciones": [
+            "Del amoníaco, NH₃",
+            "Del agua",
+            "Del metano",
+            "Del ácido acético"
+          ],
+          "correcta": 0,
+          "explicacion": "Se cambian sus H por cadenas."
+        },
+        {
+          "id": "qm-or-n-2",
+          "enunciado": "¿Qué tipo de amina es la trimetilamina?",
+          "opciones": [
+            "Terciaria",
+            "Primaria",
+            "Secundaria",
+            "Cuaternaria"
+          ],
+          "correcta": 0,
+          "explicacion": "Tres carbonos unidos al N."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "alcaloides",
+      "titulo": "Alcaloides",
+      "resumen": "Aminas de las plantas que actúan sobre el cuerpo.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "requiere": [
+        "aminas"
+      ],
+      "ficha": {
+        "idea": "Los alcaloides son sustancias con nitrógeno, casi siempre en anillos, que producen las plantas, probablemente para defenderse de los animales que se las comen. Tienen efectos fuertes sobre el sistema nervioso, por eso muchos son medicamentos y otros son venenos o drogas. La cafeína del café, el té y las gaseosas de cola es un estimulante suave: una taza de café tiene unos 80 a 100 mg. La teobromina del cacao es su pariente: es la razón por la que el chocolate es peligroso para los perros. La nicotina del tabaco es muy adictiva. La quinina de la corteza del árbol de quina sirvió para tratar la malaria y la morfina, de la amapola, es un analgésico potente que solo se usa con control médico. Lo que diferencia un remedio de un veneno muchas veces es la dosis.",
+        "contexto": [
+          {
+            "titulo": "La quina",
+            "texto": "El árbol de la quina crece en los Andes; José Celestino Mutis la estudió en la Expedición Botánica."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Los alcaloides son compuestos con nitrógeno que producen las plantas.",
+            "La cafeína es un alcaloide."
+          ],
+          "media": [
+            "Cafeína (café), teobromina (cacao), nicotina (tabaco), quinina (quina), morfina (amapola)."
+          ],
+          "avanzada": [
+            "Actúan sobre receptores del sistema nervioso; la dosis separa el efecto terapéutico del tóxico."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué no se le debe dar chocolate a un perro?",
+          "actividad": "Leer etiquetas de café, gaseosas de cola, té y bebidas energizantes y comparar cuánta cafeína tiene cada una.",
+          "errores": [
+            "Creer que lo natural no puede ser tóxico.",
+            "Pensar que la cafeína no tiene ningún efecto en el cuerpo."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Alcaloides conocidos",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "☕",
+                "titulo": "Cafeína",
+                "texto": "Café, té, cola"
+              },
+              {
+                "icono": "🍫",
+                "titulo": "Teobromina",
+                "texto": "Cacao"
+              },
+              {
+                "icono": "🚬",
+                "titulo": "Nicotina",
+                "texto": "Tabaco: muy adictiva"
+              },
+              {
+                "icono": "🌳",
+                "titulo": "Quinina",
+                "texto": "Quina: contra la malaria"
+              },
+              {
+                "icono": "🌺",
+                "titulo": "Morfina",
+                "texto": "Analgésico con control médico"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Una taza de café",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "☕",
+            "valor": "≈ 80–100 mg",
+            "texto": "de cafeína; los adultos no deberían pasar de unos 400 mg al día."
+          }
+        }
+      ],
+      "juego": "org-alcaloide-juego",
+      "preguntas": [
+        {
+          "id": "qm-or-n-3",
+          "enunciado": "¿Qué tienen en común todos los alcaloides?",
+          "opciones": [
+            "Tienen nitrógeno y los producen las plantas",
+            "Son todos ácidos",
+            "Son todos azúcares",
+            "No tienen carbono"
+          ],
+          "correcta": 0,
+          "explicacion": "Casi siempre en anillos."
+        },
+        {
+          "id": "qm-or-n-4",
+          "enunciado": "¿Qué alcaloide del cacao es tóxico para los perros?",
+          "opciones": [
+            "Teobromina",
+            "Cafeína",
+            "Nicotina",
+            "Quinina"
+          ],
+          "correcta": 0,
+          "explicacion": "Los perros la eliminan muy lento."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "amidas",
+      "titulo": "Amidas: urea, proteínas y nailon",
+      "resumen": "Un carbonilo unido a un nitrógeno: –CO–N–.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "intermedio",
+      "requiere": [
+        "aminas"
+      ],
+      "ficha": {
+        "idea": "Una amida tiene un grupo carbonilo unido a un nitrógeno: –CO–NH₂ (o –CO–NH– si el N tiene otra cadena). Se forman cuando un ácido carboxílico reacciona con el amoníaco o con una amina, soltando agua, igual que los ésteres. La amida más conocida es la urea, CO(NH₂)₂: la que obtuvo Wöhler, la que eliminamos en la orina y uno de los abonos más usados en el campo, porque tiene un 46 % de nitrógeno. El enlace amida es también el enlace peptídico que une los aminoácidos en las proteínas. Y el nailon es una poliamida: un polímero de condensación en el que miles de moléculas se unen con enlaces amida, soltando agua en cada unión. El acetaminofén es otra amida conocida.",
+        "contexto": [
+          {
+            "titulo": "Un solo lugar",
+            "texto": "Cómo se forman y se pliegan las proteínas se ve en Biología; aquí, el enlace químico que las une."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "La urea del abono es una amida.",
+            "Las proteínas tienen enlaces amida (peptídicos)."
+          ],
+          "media": [
+            "Amida: –CO–NH₂. Ácido + amina → amida + agua.",
+            "Urea: 46 % de nitrógeno."
+          ],
+          "avanzada": [
+            "Polímeros de condensación: nailon (poliamida), poliéster. Cada unión suelta una molécula de agua."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Qué tienen en común el abono de urea, la carne y una media de nailon?",
+          "actividad": "Revisar un bulto o etiqueta de urea (46-0-0) y calcular cuánto nitrógeno hay en 50 kg.",
+          "errores": [
+            "Confundir amida con amina.",
+            "Creer que la urea del abono se saca de la orina."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Amidas por todas partes",
+          "visual": {
+            "tipo": "escena",
+            "id": "nit-amidas",
+            "fases": [
+              {
+                "id": "grupo",
+                "nombre": "Grupo amida",
+                "texto": "–CO–NH₂: carbonilo + nitrógeno."
+              },
+              {
+                "id": "urea",
+                "nombre": "Urea",
+                "texto": "CO(NH₂)₂: abono y orina."
+              },
+              {
+                "id": "peptido",
+                "nombre": "Enlace peptídico",
+                "texto": "Une los aminoácidos de las proteínas."
+              },
+              {
+                "id": "nailon",
+                "nombre": "Nailon",
+                "texto": "Una poliamida: muchas uniones amida."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre las proteínas",
+            "tema": "niveles-organizacion",
+            "bloque": "macromoleculas"
+          }
+        },
+        {
+          "titulo": "Urea del abono",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🌱",
+            "valor": "46 % N",
+            "texto": "50 kg de urea aportan unos 23 kg de nitrógeno al cultivo."
+          }
+        }
+      ],
+      "juego": "org-amina-amida-juego",
+      "preguntas": [
+        {
+          "id": "qm-or-n-5",
+          "enunciado": "¿Qué grupo tienen las amidas?",
+          "opciones": [
+            "–CO–NH₂",
+            "–NH₂ solo",
+            "–COOH",
+            "–C≡N"
+          ],
+          "correcta": 0,
+          "explicacion": "Carbonilo unido a nitrógeno."
+        },
+        {
+          "id": "qm-or-n-6",
+          "enunciado": "¿Qué enlace une los aminoácidos de una proteína?",
+          "opciones": [
+            "El enlace peptídico (amida)",
+            "El enlace éster",
+            "El enlace iónico",
+            "El puente de hidrógeno"
+          ],
+          "correcta": 0,
+          "explicacion": "Ácido de un aminoácido + amina del otro."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "nitrilos",
+      "titulo": "Nitrilos",
+      "resumen": "El grupo –C≡N.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "avanzado",
+      "requiere": [
+        "amidas"
+      ],
+      "ficha": {
+        "idea": "Los nitrilos tienen un carbono unido a un nitrógeno con enlace triple: –C≡N. Se nombran agregando -nitrilo al nombre del hidrocarburo con el mismo número de carbonos: CH₃–CN es etanonitrilo (acetonitrilo), un solvente de laboratorio. El acrilonitrilo (CH₂=CH–CN) es el monómero de las fibras acrílicas de cobijas y sacos, y con él se fabrican plásticos resistentes y el caucho de los guantes de nitrilo. El grupo –CN está relacionado con el cianuro, que es muy tóxico porque bloquea la respiración celular. Algunas semillas, como las de la manzana, el durazno y la almendra amarga, tienen amigdalina, que en el cuerpo puede soltar cianuro: por eso no se deben comer en grandes cantidades. La yuca amarga también contiene compuestos que sueltan cianuro y se debe cocinar bien.",
+        "contexto": [
+          {
+            "titulo": "Hidrólisis",
+            "texto": "Un nitrilo con agua (y ácido o base) pasa a amida y después a ácido carboxílico."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Los nitrilos tienen el grupo –C≡N."
+          ],
+          "media": [
+            "Nombre: hidrocarburo + -nitrilo (etanonitrilo).",
+            "Acrilonitrilo: fibras acrílicas y guantes de nitrilo."
+          ],
+          "avanzada": [
+            "R–C≡N + H₂O → R–CO–NH₂ → R–COOH. El cianuro bloquea la respiración celular."
+          ]
+        },
+        "docente": {
+          "abrir": "¿De qué están hechos los guantes azules de nitrilo?",
+          "actividad": "Buscar en etiquetas de ropa la palabra «acrílico» y en una caja de guantes la palabra «nitrilo»; dibujar el grupo funcional.",
+          "errores": [
+            "Creer que todo compuesto con –CN es tan tóxico como el cianuro.",
+            "Confundir nitrilo con nitro (–NO₂)."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Nitrilos y su familia",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🧤",
+                "titulo": "Acrilonitrilo",
+                "texto": "Guantes de nitrilo y acrílicos"
+              },
+              {
+                "icono": "🧪",
+                "titulo": "Acetonitrilo",
+                "texto": "Solvente de laboratorio"
+              },
+              {
+                "icono": "🍑",
+                "titulo": "Amigdalina",
+                "texto": "Semillas: puede soltar cianuro"
+              },
+              {
+                "icono": "🥔",
+                "titulo": "Yuca amarga",
+                "texto": "Cocinar bien"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "¿Cómo se llama?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "CH₃–CH₂–C≡N",
+            "opciones": [
+              "Propanonitrilo",
+              "Etanonitrilo",
+              "Propilamina",
+              "Propanamida"
+            ],
+            "correcta": 0,
+            "explicacion": "Tres carbonos contando el del –CN."
+          }
+        }
+      ],
+      "juego": "org-nitrogenado-juego",
+      "preguntas": [
+        {
+          "id": "qm-or-n-7",
+          "enunciado": "¿Qué grupo funcional tienen los nitrilos?",
+          "opciones": [
+            "–C≡N",
+            "–NH₂",
+            "–CO–NH₂",
+            "–NO₂"
+          ],
+          "correcta": 0,
+          "explicacion": "Triple enlace carbono-nitrógeno."
+        },
+        {
+          "id": "qm-or-n-8",
+          "enunciado": "¿Para qué se usa el acrilonitrilo?",
+          "opciones": [
+            "Fibras acrílicas y guantes de nitrilo",
+            "Como abono",
+            "Como alimento",
+            "Como anestesia"
+          ],
+          "correcta": 0,
+          "explicacion": "Es un monómero."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}

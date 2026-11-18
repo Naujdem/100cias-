@@ -1,0 +1,593 @@
+{
+  "id": "carbonilos",
+  "materia": "quimica",
+  "area": "organica",
+  "titulo": "Aldehídos, cetonas, ácidos y ésteres",
+  "subtema": "El grupo carbonilo: del formol y la acetona al vinagre, los olores de las frutas y el jabón",
+  "orden": 147,
+  "etiqueta": "7",
+  "vistas": [
+    "ruta"
+  ],
+  "tituloVista": "Ruta de aldehídos, cetonas, ácidos y ésteres",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Diferenciar aldehídos y cetonas por la posición del grupo carbonilo y nombrarlos con -al y -ona.",
+    "Reconocer los ácidos carboxílicos y los ésteres en productos de la vida diaria.",
+    "Explicar la esterificación y la saponificación (fabricación del jabón)."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con un texto de química de bachillerato (aromas de ésteres: acetato de isoamilo y banano, butanoato de etilo y piña, etc.; vinagre al 4–5 % de ácido acético)."
+  ],
+  "bloques": [
+    {
+      "id": "carbonilo",
+      "titulo": "El grupo carbonilo: aldehídos y cetonas",
+      "resumen": "C=O al final de la cadena (aldehído) o en medio (cetona).",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "El grupo carbonilo es un carbono unido a un oxígeno con enlace doble: C=O. Si está en la punta de la cadena, con un hidrógeno al lado (–CHO), el compuesto es un aldehído; si está en medio, entre dos carbonos, es una cetona. El aldehído más sencillo es el metanal o formaldehído; disuelto en agua es el formol, que conserva muestras de laboratorio porque endurece las proteínas, pero es tóxico. Muchos aldehídos tienen olores agradables: el cinamaldehído es la canela y la vainillina, la vainilla. La cetona más conocida es la propanona o acetona, el quitaesmalte: disuelve el esmalte y se evapora rápido. Nuestro cuerpo también produce cetonas cuando quema grasas en ayunas.",
+        "contexto": [
+          {
+            "titulo": "Truco",
+            "texto": "Aldehído: el C=O «al final». Cetona: el C=O «en medio»."
+          },
+          {
+            "titulo": "Un solo lugar",
+            "texto": "La glucosa es un aldehído y la fructosa una cetona: los azúcares se ven en Biología."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Aldehídos y cetonas tienen el grupo C=O.",
+            "Formol: un aldehído. Acetona: una cetona."
+          ],
+          "media": [
+            "Aldehído: –CHO en la punta. Cetona: C=O entre dos carbonos."
+          ],
+          "avanzada": [
+            "Los aldehídos se oxidan fácil a ácidos; las cetonas no."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Qué tienen en común la canela, la vainilla y el formol del laboratorio?",
+          "actividad": "Poner unas gotas de acetona sobre esmalte de uñas, sobre icopor y sobre un plástico duro; comparar qué disuelve.",
+          "errores": [
+            "Confundir el carbonilo (C=O) con el hidroxilo (–OH).",
+            "Creer que la acetona es un alcohol."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Al final o en medio?",
+          "visual": {
+            "tipo": "escena",
+            "id": "car-carbonilo",
+            "fases": [
+              {
+                "id": "grupo",
+                "nombre": "El carbonilo",
+                "texto": "Un C con un O en enlace doble."
+              },
+              {
+                "id": "aldehido",
+                "nombre": "Aldehído",
+                "texto": "En la punta: metanal (formol)."
+              },
+              {
+                "id": "cetona",
+                "nombre": "Cetona",
+                "texto": "En medio: propanona (acetona)."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Aromas y usos",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🌰",
+                "titulo": "Cinamaldehído",
+                "texto": "Canela"
+              },
+              {
+                "icono": "🍦",
+                "titulo": "Vainillina",
+                "texto": "Vainilla"
+              },
+              {
+                "icono": "🧪",
+                "titulo": "Formol",
+                "texto": "Conserva muestras; tóxico"
+              },
+              {
+                "icono": "💅",
+                "titulo": "Acetona",
+                "texto": "Quitaesmalte"
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "org-aldehido-cetona-juego",
+      "preguntas": [
+        {
+          "id": "qm-or-k-1",
+          "enunciado": "¿Qué diferencia a un aldehído de una cetona?",
+          "opciones": [
+            "El aldehído tiene el C=O en la punta y la cetona en medio",
+            "La cetona no tiene oxígeno",
+            "El aldehído tiene nitrógeno",
+            "Son lo mismo"
+          ],
+          "correcta": 0,
+          "explicacion": "La posición del carbonilo."
+        },
+        {
+          "id": "qm-or-k-2",
+          "enunciado": "¿Qué sustancia es el quitaesmalte común?",
+          "opciones": [
+            "Acetona (propanona)",
+            "Formol",
+            "Etanol",
+            "Vinagre"
+          ],
+          "correcta": 0,
+          "explicacion": "Una cetona."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "nombres",
+      "titulo": "Nombres con -al y -ona",
+      "resumen": "Metanal, etanal, propanona, butanona…",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "intermedio",
+      "requiere": [
+        "carbonilo"
+      ],
+      "ficha": {
+        "idea": "Los aldehídos se nombran cambiando la -o del alcano por -al: metanal (HCHO), etanal (CH₃–CHO), propanal. No necesitan número, porque el –CHO siempre está en el carbono 1. Las cetonas cambian la -o por -ona y llevan el número del carbono del C=O cuando hace falta: propanona (CH₃–CO–CH₃), butanona, 2-pentanona y 3-pentanona. La cetona más pequeña tiene 3 carbonos, porque necesita uno a cada lado. También se usan nombres comunes: formaldehído (metanal), acetaldehído (etanal, el que da la resaca), acetona (propanona) y metiletilcetona (butanona).",
+        "contexto": [
+          {
+            "titulo": "Por qué no hay «etanona»",
+            "texto": "Con 2 carbonos, un C=O siempre queda en la punta: es un aldehído."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Aldehídos: -al. Cetonas: -ona."
+          ],
+          "media": [
+            "Metanal, etanal, propanal; propanona, butanona, 2-pentanona."
+          ],
+          "avanzada": [
+            "Forma IUPAC actual: pentan-2-ona. Nombres comunes: formaldehído, acetaldehído, acetona."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué existe el metanal pero no existe la «metanona»?",
+          "actividad": "Escribir en tarjetas fórmulas y nombres de aldehídos y cetonas de 1 a 5 carbonos y emparejarlas.",
+          "errores": [
+            "Poner número al aldehído (1-propanal).",
+            "Escribir etanona."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Mismo C₃H₆O",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "🧪",
+              "titulo": "Propanal",
+              "puntos": [
+                "CH₃–CH₂–CHO",
+                "Aldehído: C=O en la punta"
+              ]
+            },
+            "der": {
+              "icono": "💅",
+              "titulo": "Propanona",
+              "puntos": [
+                "CH₃–CO–CH₃",
+                "Cetona: C=O en medio"
+              ]
+            }
+          }
+        },
+        {
+          "titulo": "¿Cómo se llama?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "CH₃–CH₂–CO–CH₂–CH₃",
+            "opciones": [
+              "3-pentanona",
+              "2-pentanona",
+              "Pentanal",
+              "3-pentanol"
+            ],
+            "correcta": 0,
+            "explicacion": "Cetona de 5 carbonos con el C=O en el carbono 3."
+          }
+        }
+      ],
+      "juego": "org-nombre-al-ona-juego",
+      "preguntas": [
+        {
+          "id": "qm-or-k-3",
+          "enunciado": "¿Cómo se llama CH₃–CHO?",
+          "opciones": [
+            "Etanal",
+            "Etanol",
+            "Etanona",
+            "Metanal"
+          ],
+          "correcta": 0,
+          "explicacion": "Aldehído de 2 carbonos."
+        },
+        {
+          "id": "qm-or-k-4",
+          "enunciado": "¿Cuántos carbonos tiene, como mínimo, una cetona?",
+          "opciones": [
+            "3",
+            "1",
+            "2",
+            "4"
+          ],
+          "correcta": 0,
+          "explicacion": "Necesita un carbono a cada lado del C=O."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "acidos",
+      "titulo": "Ácidos carboxílicos",
+      "resumen": "El grupo –COOH: vinagre, hormigas, limón, leche agria.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "basico",
+      "ficha": {
+        "idea": "Los ácidos carboxílicos tienen el grupo carboxilo, –COOH: un carbonilo y un hidroxilo en el mismo carbono. Ese H puede soltarse como H⁺, por eso son ácidos, aunque débiles. El ácido acético (etanoico) es el del vinagre, que tiene un 4 a 5 %; se forma cuando bacterias oxidan el alcohol del guarapo o del vino. El ácido fórmico (metanoico) es el que inyectan las hormigas y algunas orugas al picar. El ácido láctico se forma en la leche agria, en el kumis y en los músculos cansados; el cítrico está en el limón y la naranja, y el butírico da el olor a mantequilla rancia. Los ácidos de cadena larga, como el palmítico o el oleico, son los ácidos grasos que forman las grasas y los aceites. Se nombran con la palabra ácido y la terminación -oico: ácido metanoico, ácido etanoico.",
+        "contexto": [
+          {
+            "titulo": "Un solo lugar",
+            "texto": "Qué es un ácido débil y el pH se ven en Ácidos, bases y pH; los ácidos grasos como lípidos, en Biología."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Los ácidos carboxílicos tienen el grupo –COOH.",
+            "Vinagre: ácido acético. Hormigas: ácido fórmico."
+          ],
+          "media": [
+            "Nombre: ácido + raíz + -oico (ácido etanoico).",
+            "Son ácidos débiles: sueltan el H del –COOH."
+          ],
+          "avanzada": [
+            "Ácidos grasos: ácidos carboxílicos de cadena larga (palmítico C16, esteárico C18, oleico C18 con un doble)."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué arde la picadura de una hormiga?",
+          "actividad": "Medir con el indicador de repollo morado vinagre, jugo de limón, kumis y agua con bicarbonato; ordenar de más a menos ácido.",
+          "errores": [
+            "Creer que el –COOH es un alcohol porque tiene –OH.",
+            "Pensar que todos los ácidos son fuertes y peligrosos."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Ácidos de la casa",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🍶",
+                "titulo": "Acético",
+                "texto": "Vinagre"
+              },
+              {
+                "icono": "🐜",
+                "titulo": "Fórmico",
+                "texto": "Picadura de hormiga"
+              },
+              {
+                "icono": "🥛",
+                "titulo": "Láctico",
+                "texto": "Kumis y leche agria"
+              },
+              {
+                "icono": "🍋",
+                "titulo": "Cítrico",
+                "texto": "Limón y naranja"
+              },
+              {
+                "icono": "🧈",
+                "titulo": "Butírico",
+                "texto": "Mantequilla rancia"
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre ácidos débiles y pH",
+            "tema": "acidos-bases",
+            "bloque": "fuertes-debiles"
+          }
+        },
+        {
+          "titulo": "El vinagre",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🍶",
+            "valor": "4–5 %",
+            "texto": "de ácido acético en agua: CH₃–COOH."
+          }
+        }
+      ],
+      "juego": "org-acido-casa-juego",
+      "preguntas": [
+        {
+          "id": "qm-or-k-5",
+          "enunciado": "¿Qué grupo funcional tienen los ácidos carboxílicos?",
+          "opciones": [
+            "–COOH",
+            "–OH",
+            "–CHO",
+            "–O–"
+          ],
+          "correcta": 0,
+          "explicacion": "Carboxilo."
+        },
+        {
+          "id": "qm-or-k-6",
+          "enunciado": "¿Cuál es el nombre sistemático del ácido acético?",
+          "opciones": [
+            "Ácido etanoico",
+            "Ácido metanoico",
+            "Etanol",
+            "Ácido propanoico"
+          ],
+          "correcta": 0,
+          "explicacion": "Dos carbonos."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "esteres",
+      "titulo": "Ésteres: los olores de las frutas",
+      "resumen": "Ácido + alcohol → éster + agua.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "basico",
+      "requiere": [
+        "acidos"
+      ],
+      "ficha": {
+        "idea": "Cuando un ácido carboxílico reacciona con un alcohol, se unen soltando una molécula de agua y forman un éster (R–COO–R′). Muchos ésteres tienen olores muy agradables y son los responsables del aroma de las frutas y las flores. El acetato de isoamilo huele a banano; el butanoato de etilo, a piña; el acetato de octilo, a naranja; el salicilato de metilo, a pomada mentolada. La industria los fabrica para los aromas artificiales de dulces, gaseosas y perfumes. El acetato de etilo es el solvente de muchos quitaesmaltes y pegantes. Se nombran como si fueran una sal: la parte del ácido termina en -ato y la del alcohol en -ilo: etanoato de etilo (acetato de etilo). Las grasas y los aceites también son ésteres: de glicerina con tres ácidos grasos.",
+        "contexto": [
+          {
+            "titulo": "Truco del nombre",
+            "texto": "Primero el ácido (-ato), luego el alcohol (-ilo): ácido etanoico + etanol → etanoato de etilo."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Los ésteres dan el olor a muchas frutas.",
+            "Ácido + alcohol → éster + agua."
+          ],
+          "media": [
+            "Grupo éster: –COO–. Nombre: …ato de …ilo."
+          ],
+          "avanzada": [
+            "Las grasas son triésteres de glicerina y ácidos grasos (triglicéridos)."
+          ]
+        },
+        "docente": {
+          "abrir": "¿De dónde sale el olor a banano de un dulce que no tiene banano?",
+          "actividad": "Oler esencias artificiales de banano, piña y fresa y buscar en la etiqueta «saborizante artificial»; relacionarlas con su éster.",
+          "errores": [
+            "Confundir éster con éter.",
+            "Creer que un aroma artificial es siempre más dañino que uno natural."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Fábrica de olores",
+          "visual": {
+            "tipo": "diagrama",
+            "id": "fabrica-olores"
+          }
+        },
+        {
+          "titulo": "Ésteres que se huelen",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🍌",
+                "titulo": "Acetato de isoamilo",
+                "texto": "Banano"
+              },
+              {
+                "icono": "🍍",
+                "titulo": "Butanoato de etilo",
+                "texto": "Piña"
+              },
+              {
+                "icono": "🍊",
+                "titulo": "Acetato de octilo",
+                "texto": "Naranja"
+              },
+              {
+                "icono": "🍐",
+                "titulo": "Acetato de propilo",
+                "texto": "Pera"
+              },
+              {
+                "icono": "🌿",
+                "titulo": "Salicilato de metilo",
+                "texto": "Pomada mentolada"
+              }
+            ]
+          }
+        }
+      ],
+      "diagrama": "fabrica-olores",
+      "juego": "org-ester-juego",
+      "preguntas": [
+        {
+          "id": "qm-or-k-7",
+          "enunciado": "¿Qué se forma al reaccionar un ácido carboxílico con un alcohol?",
+          "opciones": [
+            "Un éster y agua",
+            "Un éter y CO₂",
+            "Una sal y oxígeno",
+            "Un aldehído"
+          ],
+          "correcta": 0,
+          "explicacion": "Esterificación."
+        },
+        {
+          "id": "qm-or-k-8",
+          "enunciado": "¿Cómo se llama el éster de ácido etanoico y etanol?",
+          "opciones": [
+            "Etanoato de etilo",
+            "Etilo de etanoato",
+            "Etanoico de etilo",
+            "Éter dietílico"
+          ],
+          "correcta": 0,
+          "explicacion": "La parte del ácido va primero, con -ato."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "jabon",
+      "titulo": "Esterificación y saponificación",
+      "resumen": "Hacer ésteres y romperlos: así se hace el jabón.",
+      "anio": 5,
+      "etiqueta": "Paso 5",
+      "nivel": "avanzado",
+      "requiere": [
+        "esteres"
+      ],
+      "ficha": {
+        "idea": "La esterificación (ácido + alcohol ⇌ éster + agua) es lenta y reversible: necesita un catalizador ácido y calor, y llega a un equilibrio. Para obtener más éster se usa exceso de uno de los reactivos o se retira el agua, como dice Le Chatelier. El proceso contrario, romper un éster con agua, es la hidrólisis. Si se rompe con una base fuerte como la soda cáustica (NaOH), se llama saponificación, que significa «hacer jabón»: una grasa o un aceite (triéster de glicerina) con NaOH da glicerina y tres sales de ácidos grasos, que son el jabón. Cada molécula de jabón tiene una cabeza iónica que ama el agua y una cola larga de carbonos que ama la grasa: así atrapa la mugre en pequeñas bolitas (micelas) que el agua arrastra. En muchas casas del campo se hacía jabón de tierra con sebo y lejía de ceniza.",
+        "contexto": [
+          {
+            "titulo": "Seguridad",
+            "texto": "La soda cáustica quema la piel y los ojos: hacer jabón requiere guantes, gafas y supervisión."
+          },
+          {
+            "titulo": "Un solo lugar",
+            "texto": "El equilibrio y Le Chatelier se explican en Equilibrio químico."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "El jabón se hace con grasa y soda cáustica."
+          ],
+          "media": [
+            "Esterificación: ácido + alcohol ⇌ éster + agua. Saponificación: grasa + NaOH → jabón + glicerina."
+          ],
+          "avanzada": [
+            "El jabón tiene cabeza polar y cola apolar: forma micelas que atrapan la grasa."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Cómo hacían jabón las abuelas con sebo y ceniza?",
+          "actividad": "Con el docente y protección: preparar una pequeña cantidad de jabón con aceite usado y NaOH, o ver un video y analizar la reacción.",
+          "errores": [
+            "Creer que el jabón «disuelve» la mugre en el agua sin más.",
+            "Pensar que la esterificación es completa e irreversible."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Del aceite al jabón",
+          "visual": {
+            "tipo": "escena",
+            "id": "car-jabon",
+            "fases": [
+              {
+                "id": "grasa",
+                "nombre": "Grasa",
+                "texto": "Un triéster de glicerina."
+              },
+              {
+                "id": "soda",
+                "nombre": "Con NaOH",
+                "texto": "Se rompen los tres enlaces éster."
+              },
+              {
+                "id": "jabon",
+                "nombre": "Jabón y glicerina",
+                "texto": "Sales de ácidos grasos."
+              },
+              {
+                "id": "micela",
+                "nombre": "Cómo lava",
+                "texto": "Las colas atrapan la grasa en micelas."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre el equilibrio químico",
+            "tema": "equilibrio-quimico",
+            "bloque": "le-chatelier"
+          }
+        }
+      ],
+      "juego": "org-jabon-juego",
+      "preguntas": [
+        {
+          "id": "qm-or-k-9",
+          "enunciado": "¿Qué productos da la saponificación de una grasa?",
+          "opciones": [
+            "Jabón y glicerina",
+            "Éster y agua",
+            "Alcohol y CO₂",
+            "Ácido y sal"
+          ],
+          "correcta": 0,
+          "explicacion": "Grasa + base fuerte."
+        },
+        {
+          "id": "qm-or-k-10",
+          "enunciado": "¿Qué parte de la molécula de jabón atrapa la grasa?",
+          "opciones": [
+            "La cola larga de carbonos",
+            "La cabeza iónica",
+            "El sodio",
+            "El agua"
+          ],
+          "correcta": 0,
+          "explicacion": "Semejante disuelve a semejante."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}

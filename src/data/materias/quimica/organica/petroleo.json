@@ -1,0 +1,467 @@
+{
+  "id": "petroleo",
+  "materia": "quimica",
+  "area": "organica",
+  "titulo": "Petróleo, plásticos y biocombustibles",
+  "subtema": "Opcional (11°): de dónde sale el petróleo, cómo se refina y qué lo puede reemplazar",
+  "orden": 149,
+  "etiqueta": "9",
+  "vistas": [
+    "ruta"
+  ],
+  "tituloVista": "Ruta del petróleo, los plásticos y los biocombustibles",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Explicar el origen del petróleo y su importancia en Colombia.",
+    "Describir la destilación fraccionada y el craqueo, y relacionar cada fracción con sus usos.",
+    "Analizar los plásticos y los biocombustibles con sus ventajas y sus problemas."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con fuentes actualizadas (Ecopetrol, Ministerio de Minas y Energía, UPME): refinerías de Barrancabermeja y Cartagena, mezcla de etanol en la gasolina y de biodiésel en el ACPM; rangos de temperatura de las fracciones son aproximados."
+  ],
+  "bloques": [
+    {
+      "id": "origen",
+      "titulo": "¿De dónde sale el petróleo?",
+      "resumen": "Plancton enterrado, presión, calor y millones de años.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "intermedio",
+      "nucleo": true,
+      "ficha": {
+        "idea": "El petróleo es una mezcla de miles de hidrocarburos, sobre todo alcanos, cicloalcanos y aromáticos. Se formó a partir de plancton y algas que vivieron en mares y lagos hace millones de años: al morir se acumularon en el fondo con barro, sin oxígeno, y quedaron enterrados bajo capas y capas de sedimentos. Con la presión y el calor de la profundidad, durante millones de años, esa materia orgánica se transformó en petróleo y gas, que subieron por rocas porosas hasta quedar atrapados bajo una roca impermeable. Por eso es un recurso no renovable: se gasta millones de veces más rápido de lo que se forma. En Colombia hay petróleo sobre todo en los Llanos Orientales (Meta, Casanare, Arauca) y en el Magdalena Medio; las refinerías principales están en Barrancabermeja y Cartagena. Además de energía, el petróleo es la materia prima de casi todos los plásticos, muchos fertilizantes, solventes y medicamentos.",
+        "contexto": [
+          {
+            "titulo": "Gas natural",
+            "texto": "Se forma de la misma manera; es sobre todo metano y suele estar junto al petróleo."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "El petróleo se formó de restos de seres vivos enterrados hace millones de años.",
+            "Es un recurso no renovable."
+          ],
+          "media": [
+            "Plancton + sedimento + presión + calor + millones de años → petróleo y gas.",
+            "En Colombia: Llanos Orientales y Magdalena Medio."
+          ],
+          "avanzada": [
+            "Roca madre, roca almacén (porosa) y roca sello (impermeable)."
+          ]
+        },
+        "docente": {
+          "abrir": "Si el petróleo viene de seres vivos, ¿por qué no es renovable?",
+          "actividad": "Ubicar en un mapa de Colombia las zonas petroleras, los oleoductos y las refinerías; discutir qué impactos y beneficios trae a esas regiones.",
+          "errores": [
+            "Creer que el petróleo viene de los dinosaurios.",
+            "Pensar que hay lagos subterráneos de petróleo."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Millones de años bajo tierra",
+          "visual": {
+            "tipo": "escena",
+            "id": "pet-origen",
+            "fases": [
+              {
+                "id": "mar",
+                "nombre": "Un mar antiguo",
+                "texto": "Plancton y algas mueren y caen al fondo."
+              },
+              {
+                "id": "entierro",
+                "nombre": "Enterrado",
+                "texto": "Capas de sedimento sin oxígeno."
+              },
+              {
+                "id": "coccion",
+                "nombre": "Presión y calor",
+                "texto": "Millones de años: se forma petróleo."
+              },
+              {
+                "id": "trampa",
+                "nombre": "Atrapado",
+                "texto": "Sube por roca porosa hasta una roca sello."
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "org-petroleo-juego",
+      "preguntas": [
+        {
+          "id": "qm-or-p-1",
+          "enunciado": "¿De qué se formó principalmente el petróleo?",
+          "opciones": [
+            "De plancton y algas enterrados hace millones de años",
+            "De dinosaurios",
+            "De rocas volcánicas",
+            "De agua de mar"
+          ],
+          "correcta": 0,
+          "explicacion": "Materia orgánica sin oxígeno, presión y calor."
+        },
+        {
+          "id": "qm-or-p-2",
+          "enunciado": "¿Por qué el petróleo es no renovable?",
+          "opciones": [
+            "Tarda millones de años en formarse",
+            "Se evapora",
+            "Es radiactivo",
+            "Solo hay en un país"
+          ],
+          "correcta": 0,
+          "explicacion": "Se gasta mucho más rápido de lo que se forma."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "refinacion",
+      "titulo": "La torre de destilación",
+      "resumen": "Separar el crudo por puntos de ebullición.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "intermedio",
+      "requiere": [
+        "origen"
+      ],
+      "ficha": {
+        "idea": "El petróleo crudo no sirve tal como sale: hay que separarlo en fracciones. En la refinería se calienta a unos 400 °C y el vapor entra por abajo a una torre de destilación fraccionada, que es caliente abajo y fría arriba. A medida que el vapor sube se enfría, y cada grupo de hidrocarburos se condensa a la altura donde la temperatura baja de su punto de ebullición. Arriba salen los gases (1 a 4 carbonos: gas de cilindro), luego la gasolina y la nafta (5 a 10), el queroseno o combustible de avión (10 a 16), el diésel o ACPM (14 a 20), los aceites lubricantes y las parafinas; abajo queda el residuo pesado, del que sale el asfalto. Como se vende mucha más gasolina de la que trae el crudo, las moléculas grandes se parten en pequeñas con calor y catalizadores: es el craqueo, que también da etileno y propileno para fabricar plásticos.",
+        "contexto": [
+          {
+            "titulo": "Un solo lugar",
+            "texto": "La destilación como método de separación se explica en Mezclas y separación; aquí, aplicada al petróleo."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "En la refinería el petróleo se separa en fracciones calentándolo."
+          ],
+          "media": [
+            "Arriba (frío): gases y gasolina. Abajo (caliente): diésel, aceites y asfalto.",
+            "Menos carbonos → menor punto de ebullición → sale más arriba."
+          ],
+          "avanzada": [
+            "Craqueo: C₁₆H₃₄ → C₈H₁₈ + C₈H₁₆ (más gasolina y alquenos para plásticos)."
+          ]
+        },
+        "docente": {
+          "abrir": "Si el petróleo es una mezcla, ¿cómo se separa la gasolina del asfalto?",
+          "actividad": "Ordenar tarjetas de productos (gas, gasolina, queroseno, ACPM, aceite, parafina, asfalto) en una torre dibujada en el tablero.",
+          "errores": [
+            "Creer que la gasolina se «fabrica» desde cero y no se separa.",
+            "Pensar que lo más pesado sale arriba."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Torre de destilación",
+          "visual": {
+            "tipo": "diagrama",
+            "id": "torre-destilacion"
+          }
+        },
+        {
+          "titulo": "Destilar o craquear",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "🌡️",
+              "titulo": "Destilación",
+              "puntos": [
+                "Separa lo que ya está",
+                "Cambio físico"
+              ]
+            },
+            "der": {
+              "icono": "🔨",
+              "titulo": "Craqueo",
+              "puntos": [
+                "Parte moléculas grandes",
+                "Cambio químico",
+                "Más gasolina y etileno"
+              ]
+            }
+          },
+          "nivel": "avanzado"
+        }
+      ],
+      "diagrama": "torre-destilacion",
+      "juego": "org-fraccion-juego",
+      "preguntas": [
+        {
+          "id": "qm-or-p-3",
+          "enunciado": "¿Por qué la gasolina sale más arriba que el ACPM en la torre?",
+          "opciones": [
+            "Tiene moléculas más pequeñas y hierve a menos temperatura",
+            "Es más pesada",
+            "Tiene más oxígeno",
+            "Sale al azar"
+          ],
+          "correcta": 0,
+          "explicacion": "Arriba la torre está más fría."
+        },
+        {
+          "id": "qm-or-p-4",
+          "enunciado": "¿Qué es el craqueo?",
+          "opciones": [
+            "Romper moléculas grandes en otras más pequeñas",
+            "Mezclar gasolina con agua",
+            "Quemar el petróleo",
+            "Filtrar el crudo"
+          ],
+          "correcta": 0,
+          "explicacion": "Con calor y catalizadores."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "plasticos",
+      "titulo": "Plásticos: útiles y persistentes",
+      "resumen": "Polímeros de adición y de condensación, y su destino.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "intermedio",
+      "requiere": [
+        "refinacion"
+      ],
+      "ficha": {
+        "idea": "Casi todos los plásticos son polímeros fabricados a partir del petróleo. Algunos se forman por adición, abriendo dobles enlaces de monómeros como el etileno, el propileno, el cloruro de vinilo o el estireno. Otros se forman por condensación, uniendo monómeros que sueltan agua en cada enlace, como el PET de las botellas (un poliéster) y el nailon (una poliamida). Los termoplásticos se ablandan con calor y se pueden reciclar fundiéndolos; los termoestables, como la baquelita, no. El triángulo con un número del 1 al 7 dice qué plástico es: 1 PET, 2 polietileno de alta densidad, 3 PVC, 4 polietileno de baja densidad, 5 polipropileno, 6 poliestireno y 7 otros. El problema es que los microorganismos casi no los degradan: duran siglos, se rompen en microplásticos que llegan a los ríos, al mar y a los alimentos. Por eso lo primero es reducir, luego reutilizar y, al final, separar bien para reciclar.",
+        "contexto": [
+          {
+            "titulo": "Un solo lugar",
+            "texto": "La polimerización del etileno se ve en Alquenos y alquinos; los residuos y su manejo, en Biología."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Los plásticos son polímeros hechos con petróleo.",
+            "El número del triángulo dice qué plástico es."
+          ],
+          "media": [
+            "Adición: polietileno, PVC. Condensación: PET, nailon.",
+            "Termoplásticos (se reciclan fundiendo) y termoestables."
+          ],
+          "avanzada": [
+            "Microplásticos: fragmentos menores de 5 mm que se acumulan en los ecosistemas."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Cuántos años puede durar una botella plástica en un río?",
+          "actividad": "Clasificar durante una semana los plásticos que se botan en casa según su número de reciclaje y hacer una gráfica.",
+          "errores": [
+            "Creer que todo plástico con el triángulo se recicla en cualquier lugar.",
+            "Pensar que el plástico desaparece cuando se rompe en pedacitos."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Los números del reciclaje",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "1️⃣",
+                "titulo": "PET",
+                "texto": "Botellas de gaseosa"
+              },
+              {
+                "icono": "2️⃣",
+                "titulo": "PEAD",
+                "texto": "Tarros de champú"
+              },
+              {
+                "icono": "3️⃣",
+                "titulo": "PVC",
+                "texto": "Tubos"
+              },
+              {
+                "icono": "4️⃣",
+                "titulo": "PEBD",
+                "texto": "Bolsas"
+              },
+              {
+                "icono": "5️⃣",
+                "titulo": "PP",
+                "texto": "Tapas y baldes"
+              },
+              {
+                "icono": "6️⃣",
+                "titulo": "PS",
+                "texto": "Icopor"
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre residuos y consumo",
+            "tema": "residuos-consumo"
+          }
+        },
+        {
+          "titulo": "Dos maneras de hacer polímeros",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "➕",
+              "titulo": "Adición",
+              "puntos": [
+                "Se abren dobles enlaces",
+                "No sobra nada",
+                "Polietileno, PVC"
+              ]
+            },
+            "der": {
+              "icono": "💧",
+              "titulo": "Condensación",
+              "puntos": [
+                "Cada unión suelta agua",
+                "PET, nailon"
+              ]
+            }
+          }
+        }
+      ],
+      "juego": "org-reciclaje-juego",
+      "preguntas": [
+        {
+          "id": "qm-or-p-5",
+          "enunciado": "¿Qué plástico tiene el número 1 en el triángulo de reciclaje?",
+          "opciones": [
+            "PET",
+            "PVC",
+            "Polipropileno",
+            "Poliestireno"
+          ],
+          "correcta": 0,
+          "explicacion": "Botellas de bebidas."
+        },
+        {
+          "id": "qm-or-p-6",
+          "enunciado": "¿Qué diferencia un polímero de condensación de uno de adición?",
+          "opciones": [
+            "En la condensación cada unión suelta una molécula pequeña como agua",
+            "La condensación usa dobles enlaces",
+            "La adición suelta agua",
+            "No hay diferencia"
+          ],
+          "correcta": 0,
+          "explicacion": "PET y nailon son de condensación."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "biocombustibles",
+      "titulo": "Biocombustibles",
+      "resumen": "Etanol de caña y biodiésel de palma: ventajas y debates.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "intermedio",
+      "requiere": [
+        "origen"
+      ],
+      "ficha": {
+        "idea": "Los biocombustibles se hacen con biomasa actual en vez de petróleo. En Colombia hay dos principales. El bioetanol se obtiene fermentando el jugo o la melaza de la caña de azúcar, sobre todo en el valle del río Cauca, y luego destilándolo y secándolo; se mezcla con la gasolina. El biodiésel se hace con aceite de palma africana, que se hace reaccionar con metanol (una transesterificación: los triglicéridos se convierten en ésteres metílicos y glicerina); se mezcla con el ACPM. Su ventaja es que son renovables y que el CO₂ que liberan al quemarse lo habían tomado las plantas al crecer, así que aportan menos CO₂ nuevo a la atmósfera. Pero hay debates: si se tumba bosque para sembrar caña o palma, el balance ambiental empeora; usan mucha agua y tierra que podría producir alimentos, y su precio depende de subsidios. Los de segunda generación buscan usar residuos (bagazo, aceite de cocina usado) en vez de cultivos.",
+        "contexto": [
+          {
+            "titulo": "Un solo lugar",
+            "texto": "La fermentación se explica en Alcoholes y los ésteres en el tema 7; aquí se aplican a los combustibles."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "El bioetanol se hace con caña; el biodiésel con aceite de palma."
+          ],
+          "media": [
+            "Ventaja: renovables, menos CO₂ nuevo. Problemas: deforestación, agua, competencia con alimentos."
+          ],
+          "avanzada": [
+            "Transesterificación: triglicérido + 3 metanol → 3 ésteres metílicos (biodiésel) + glicerina."
+          ]
+        },
+        "docente": {
+          "abrir": "Si el biodiésel también suelta CO₂ al quemarse, ¿por qué se dice que contamina menos?",
+          "actividad": "Debate en dos grupos: «Colombia debe aumentar la mezcla de biocombustibles» a favor y en contra, con datos.",
+          "errores": [
+            "Creer que los biocombustibles no liberan CO₂.",
+            "Pensar que todo lo «bio» es automáticamente bueno para el ambiente."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "De la planta al tanque",
+          "visual": {
+            "tipo": "escena",
+            "id": "pet-bio",
+            "fases": [
+              {
+                "id": "cana",
+                "nombre": "Bioetanol",
+                "texto": "Caña → fermentación → destilación → gasolina."
+              },
+              {
+                "id": "palma",
+                "nombre": "Biodiésel",
+                "texto": "Aceite de palma + metanol → biodiésel."
+              },
+              {
+                "id": "ciclo",
+                "nombre": "El ciclo del CO₂",
+                "texto": "La planta toma el CO₂ que el motor suelta."
+              },
+              {
+                "id": "debate",
+                "nombre": "El debate",
+                "texto": "Bosques, agua y alimentos."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre el ciclo del carbono",
+            "tema": "ciclos-biogeoquimicos"
+          }
+        }
+      ],
+      "juego": "org-bio-juego",
+      "preguntas": [
+        {
+          "id": "qm-or-p-7",
+          "enunciado": "¿De qué se obtiene principalmente el bioetanol en Colombia?",
+          "opciones": [
+            "De la caña de azúcar",
+            "Del carbón",
+            "Del petróleo",
+            "De la palma"
+          ],
+          "correcta": 0,
+          "explicacion": "Fermentando su jugo o melaza."
+        },
+        {
+          "id": "qm-or-p-8",
+          "enunciado": "¿Cuál es una crítica a los biocombustibles?",
+          "opciones": [
+            "Pueden causar deforestación y competir con los alimentos",
+            "Son radiactivos",
+            "No arden",
+            "No son renovables"
+          ],
+          "correcta": 0,
+          "explicacion": "Su balance ambiental depende de cómo se cultiven."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}

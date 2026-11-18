@@ -66,7 +66,10 @@ import { EscenaProyectoAula } from './EscenasSostenibilidad.tsx'
 import { EscenaCicloAgua, EscenaCicloCarbono, EscenaCicloNitrogeno, EscenaCicloFosforo } from './EscenasCiclos.tsx'
 
 /** Escenas vivas: un dibujo que se transforma según la fase (`fase` = id de la fase en el JSON). */
+import { ESCENAS_ORGANICA } from './organica.ts'
+
 export const ESCENAS: Record<string, ComponentType<{ fase: string }>> = {
+  ...ESCENAS_ORGANICA,
   mitosis: EscenaMitosis,
   meiosis: EscenaMeiosis,
   niveles: EscenaNiveles,

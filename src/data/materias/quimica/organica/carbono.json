@@ -1,0 +1,464 @@
+{
+  "id": "carbono",
+  "materia": "quimica",
+  "area": "organica",
+  "titulo": "El carbono y sus compuestos",
+  "subtema": "Qué es orgánico, los 4 enlaces del carbono y cómo se escriben sus fórmulas",
+  "orden": 141,
+  "etiqueta": "1",
+  "vistas": [
+    "ruta"
+  ],
+  "tituloVista": "Ruta del carbono y sus compuestos",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Explicar qué estudia la química orgánica y por qué el experimento de Wöhler cambió la idea de «fuerza vital».",
+    "Reconocer que el carbono forma 4 enlaces y puede hacer cadenas con enlaces sencillos, dobles y triples.",
+    "Pasar una molécula entre sus fórmulas molecular, desarrollada, semidesarrollada y de esqueleto."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con un texto de química de bachillerato (Wöhler, 1828; ángulos 109,5°, 120° y 180°; más de 20 millones de compuestos orgánicos conocidos, cifra aproximada)."
+  ],
+  "bloques": [
+    {
+      "id": "que-es-organica",
+      "titulo": "¿Qué es la química orgánica?",
+      "resumen": "La química de los compuestos del carbono.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "Al principio se llamó «orgánico» a lo que venía de los seres vivos: el azúcar, el aceite, la cera, el alcohol. Se creía que esas sustancias solo podían fabricarlas los organismos gracias a una «fuerza vital». En 1828 Friedrich Wöhler calentó cianato de amonio, una sal mineral, y obtuvo urea, la misma sustancia de la orina. Fue el comienzo del fin de esa idea: los compuestos de los seres vivos siguen las mismas leyes que el resto de la materia. Hoy la química orgánica es la química de los compuestos del carbono (salvo unos pocos sencillos como el CO₂, los carbonatos y los cianuros, que se estudian con la inorgánica). Se conocen millones de compuestos orgánicos, muchos más que inorgánicos: combustibles, plásticos, medicamentos, colorantes, perfumes y, por supuesto, las moléculas de la vida.",
+        "contexto": [
+          {
+            "titulo": "¿Por qué tantos?",
+            "texto": "El carbono se une a otros carbonos y forma cadenas largas, ramificadas y anillos; con pocos elementos (C, H, O, N) salen millones de combinaciones."
+          },
+          {
+            "titulo": "Un solo lugar",
+            "texto": "Las biomoléculas (carbohidratos, lípidos, proteínas) se ven en Biología; aquí se estudia la química de sus grupos."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "La química orgánica estudia los compuestos del carbono."
+          ],
+          "media": [
+            "Wöhler (1828) obtuvo urea a partir de una sal inorgánica y debilitó la teoría de la fuerza vital.",
+            "CO₂, carbonatos y cianuros se estudian en la química inorgánica."
+          ],
+          "avanzada": [
+            "Elementos más comunes en los compuestos orgánicos: C, H, O, N, y a veces S, P y halógenos."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Qué tienen en común la gasolina, el azúcar, una bolsa plástica y el ADN?",
+          "actividad": "Clasificar etiquetas de productos de la casa (aceite, sal, vinagre, bicarbonato, azúcar, alcohol) en orgánicos e inorgánicos y discutir los casos dudosos.",
+          "errores": [
+            "Creer que «orgánico» significa natural, sano o sin químicos.",
+            "Pensar que todo compuesto con carbono es orgánico (CO₂, CaCO₃)."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "De la fuerza vital a Wöhler",
+          "visual": {
+            "tipo": "escena",
+            "id": "org-wohler",
+            "fases": [
+              {
+                "id": "vital",
+                "nombre": "La fuerza vital",
+                "texto": "Se creía que solo los seres vivos fabricaban sustancias orgánicas."
+              },
+              {
+                "id": "wohler",
+                "nombre": "Wöhler, 1828",
+                "texto": "Calentó cianato de amonio y obtuvo urea."
+              },
+              {
+                "id": "hoy",
+                "nombre": "Hoy",
+                "texto": "Orgánica = química de los compuestos del carbono."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre los bioelementos",
+            "tema": "niveles-organizacion",
+            "bloque": "macromoleculas"
+          }
+        },
+        {
+          "titulo": "Millones de compuestos",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🧬",
+            "valor": "> 20 millones",
+            "texto": "Compuestos orgánicos conocidos, y cada año se suman más."
+          }
+        }
+      ],
+      "juego": "org-organico-juego",
+      "preguntas": [
+        {
+          "id": "qm-or-c-1",
+          "enunciado": "¿Qué estudia hoy la química orgánica?",
+          "opciones": [
+            "Los compuestos del carbono",
+            "Solo lo que viene de los seres vivos",
+            "Los productos sin químicos",
+            "Los metales"
+          ],
+          "correcta": 0,
+          "explicacion": "Lo que la define es el carbono, no el origen."
+        },
+        {
+          "id": "qm-or-c-2",
+          "enunciado": "¿Qué obtuvo Wöhler en 1828 a partir de una sal inorgánica?",
+          "opciones": [
+            "Urea",
+            "Azúcar",
+            "Alcohol",
+            "Petróleo"
+          ],
+          "correcta": 0,
+          "explicacion": "Una sustancia de los seres vivos hecha en el laboratorio."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "cuatro-enlaces",
+      "titulo": "El carbono hace 4 enlaces",
+      "resumen": "Tetravalencia, cadenas y enlaces sencillo, doble y triple.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "ficha": {
+        "idea": "El carbono tiene 6 electrones: 2 en el primer nivel y 4 en el último. Para completar el octeto comparte esos 4 electrones y forma siempre 4 enlaces covalentes: es tetravalente. Esos enlaces pueden ir a cuatro átomos distintos, como en el metano (CH₄), o repartirse: un enlace doble cuenta por dos y un triple por tres. Lo más especial es que el carbono se une fácilmente a otros carbonos y forma cadenas: lineales, ramificadas o cerradas en anillos. Entre carbono y carbono puede haber un enlace sencillo (etano), doble (eteno) o triple (etino), y cada uno cambia la forma y el comportamiento de la molécula. El hidrógeno siempre hace 1 enlace, el oxígeno 2 y el nitrógeno 3: con esa regla se puede comprobar si una fórmula está bien escrita.",
+        "contexto": [
+          {
+            "titulo": "Regla para revisar",
+            "texto": "C 4 enlaces · N 3 · O 2 · H y halógenos 1. Un doble cuenta 2, un triple cuenta 3."
+          },
+          {
+            "titulo": "Cadenas",
+            "texto": "Abierta (lineal o ramificada) o cerrada (cíclica)."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "El carbono siempre forma 4 enlaces.",
+            "Los carbonos se unen entre sí y forman cadenas."
+          ],
+          "media": [
+            "Enlace sencillo C–C, doble C=C y triple C≡C.",
+            "Cadenas lineales, ramificadas y cíclicas."
+          ],
+          "avanzada": [
+            "Carbono primario, secundario, terciario o cuaternario según a cuántos carbonos esté unido."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué con tan pocos elementos existen millones de compuestos orgánicos?",
+          "actividad": "Armar moléculas con plastilina y palillos (carbono negro con 4 palillos, hidrógeno blanco con 1, oxígeno rojo con 2): metano, etano, eteno, etanol.",
+          "errores": [
+            "Dibujar carbonos con 3 o 5 enlaces.",
+            "Contar un enlace doble como uno solo."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Un átomo con 4 manos",
+          "visual": {
+            "tipo": "escena",
+            "id": "org-carbono",
+            "fases": [
+              {
+                "id": "atomo",
+                "nombre": "El átomo",
+                "texto": "6 electrones, 4 en el último nivel."
+              },
+              {
+                "id": "metano",
+                "nombre": "4 enlaces",
+                "texto": "Metano: un C con 4 H."
+              },
+              {
+                "id": "cadena",
+                "nombre": "Cadenas",
+                "texto": "Lineales, ramificadas y en anillo."
+              },
+              {
+                "id": "multiples",
+                "nombre": "Sencillo, doble, triple",
+                "texto": "Etano, eteno y etino."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre los niveles de energía",
+            "tema": "electrones-atomo",
+            "bloque": "niveles"
+          }
+        },
+        {
+          "titulo": "Armador de moléculas",
+          "visual": {
+            "tipo": "diagrama",
+            "id": "armador-moleculas"
+          }
+        }
+      ],
+      "diagrama": "armador-moleculas",
+      "juego": "org-valencia-juego",
+      "preguntas": [
+        {
+          "id": "qm-or-c-3",
+          "enunciado": "¿Cuántos enlaces forma el carbono en sus compuestos?",
+          "opciones": [
+            "4",
+            "2",
+            "3",
+            "6"
+          ],
+          "correcta": 0,
+          "explicacion": "Es tetravalente."
+        },
+        {
+          "id": "qm-or-c-4",
+          "enunciado": "¿Qué enlace hay entre los carbonos del etino?",
+          "opciones": [
+            "Triple",
+            "Sencillo",
+            "Doble",
+            "Iónico"
+          ],
+          "correcta": 0,
+          "explicacion": "C≡C."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "formulas",
+      "titulo": "Cuatro maneras de escribir una molécula",
+      "resumen": "Fórmulas molecular, desarrollada, semidesarrollada y de esqueleto.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "intermedio",
+      "requiere": [
+        "cuatro-enlaces"
+      ],
+      "ficha": {
+        "idea": "La misma molécula se puede escribir de varias maneras, según lo que se quiera mostrar. La fórmula molecular solo cuenta los átomos: C₄H₁₀. La desarrollada dibuja todos los átomos y todos los enlaces: es la más clara, pero ocupa mucho. La semidesarrollada agrupa los hidrógenos con su carbono y solo muestra los enlaces entre carbonos: CH₃–CH₂–CH₂–CH₃. La de esqueleto, la que usan los químicos, es un zigzag: cada vértice y cada extremo es un carbono, los hidrógenos de los carbonos no se escriben y los demás átomos (O, N, Cl) sí. La fórmula molecular no basta para saber qué sustancia es: el etanol y el éter dimetílico son los dos C₂H₆O y son sustancias distintas (isómeros).",
+        "contexto": [
+          {
+            "titulo": "Truco del esqueleto",
+            "texto": "Cada punta es un C; a cada C le faltan tantos H como necesite para llegar a 4 enlaces."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Una molécula se puede escribir de varias formas."
+          ],
+          "media": [
+            "Molecular: C₄H₁₀. Desarrollada: todos los enlaces. Semidesarrollada: CH₃–CH₂–CH₂–CH₃. Esqueleto: zigzag."
+          ],
+          "avanzada": [
+            "La fórmula molecular no identifica la sustancia: los isómeros comparten fórmula."
+          ]
+        },
+        "docente": {
+          "abrir": "Si les dicto «C₂H₆O», ¿todos dibujarán la misma molécula?",
+          "actividad": "Dar la fórmula de esqueleto de 5 moléculas y pedir que escriban la semidesarrollada y la molecular.",
+          "errores": [
+            "Olvidar que cada vértice del esqueleto es un carbono.",
+            "Escribir los H de los carbonos en el esqueleto."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "El butano, cuatro veces",
+          "visual": {
+            "tipo": "escena",
+            "id": "org-formulas",
+            "fases": [
+              {
+                "id": "molecular",
+                "nombre": "Molecular",
+                "texto": "C₄H₁₀: solo cuenta los átomos."
+              },
+              {
+                "id": "desarrollada",
+                "nombre": "Desarrollada",
+                "texto": "Todos los átomos y enlaces."
+              },
+              {
+                "id": "semi",
+                "nombre": "Semidesarrollada",
+                "texto": "CH₃–CH₂–CH₂–CH₃"
+              },
+              {
+                "id": "esqueleto",
+                "nombre": "Esqueleto",
+                "texto": "Un zigzag: cada punta es un carbono."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "¿Misma fórmula?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "El etanol y el éter dimetílico son C₂H₆O. ¿Son la misma sustancia?",
+            "opciones": [
+              "No: los átomos están unidos de otra manera",
+              "Sí, porque tienen la misma fórmula",
+              "Sí, porque los dos tienen oxígeno",
+              "No, porque tienen distinta masa"
+            ],
+            "correcta": 0,
+            "explicacion": "Son isómeros: la fórmula molecular no basta."
+          }
+        }
+      ],
+      "juego": "org-formulas-juego",
+      "preguntas": [
+        {
+          "id": "qm-or-c-5",
+          "enunciado": "En una fórmula de esqueleto, ¿qué representa cada vértice del zigzag?",
+          "opciones": [
+            "Un átomo de carbono",
+            "Un átomo de hidrógeno",
+            "Un enlace doble",
+            "Un oxígeno"
+          ],
+          "correcta": 0,
+          "explicacion": "Los H de los carbonos no se escriben."
+        },
+        {
+          "id": "qm-or-c-6",
+          "enunciado": "¿Qué fórmula es CH₃–CH₂–CH₃?",
+          "opciones": [
+            "Semidesarrollada",
+            "Molecular",
+            "De esqueleto",
+            "Iónica"
+          ],
+          "correcta": 0,
+          "explicacion": "Agrupa los H con su carbono."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "hibridacion",
+      "titulo": "Hibridación del carbono",
+      "resumen": "sp³, sp² y sp: por qué cada enlace da una forma.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "avanzado",
+      "requiere": [
+        "cuatro-enlaces"
+      ],
+      "ficha": {
+        "idea": "En el átomo aislado, el carbono tiene 2 electrones en el orbital 2s y 2 en los 2p, así que parecería que solo puede hacer 2 enlaces. Al enlazarse, los orbitales del último nivel se mezclan y forman orbitales híbridos iguales. Con cuatro enlaces sencillos, el 2s se mezcla con los tres 2p: cuatro orbitales sp³ que apuntan a los vértices de un tetraedro, con ángulos de 109,5° (metano, etano). Si hay un enlace doble, se mezclan el 2s y dos 2p: tres orbitales sp² en un plano, a 120°, y el p que sobra forma el enlace pi (π) del doble enlace (eteno). Si hay un triple, se mezclan el 2s y un 2p: dos orbitales sp en línea, a 180°, y los dos p que sobran forman dos enlaces π (etino). El enlace π no deja girar la molécula alrededor del doble enlace, y de ahí sale la isomería cis-trans.",
+        "contexto": [
+          {
+            "titulo": "Sigma y pi",
+            "texto": "Todo enlace sencillo es σ; el doble es σ + π; el triple es σ + 2 π."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "La forma de la molécula depende del tipo de enlace del carbono."
+          ],
+          "media": [
+            "sp³: tetraédrico, 109,5°. sp²: plano, 120°. sp: lineal, 180°."
+          ],
+          "avanzada": [
+            "Enlace doble = 1 σ + 1 π; triple = 1 σ + 2 π. El π impide la rotación."
+          ]
+        },
+        "docente": {
+          "abrir": "Si el carbono tiene solo 2 electrones desapareados, ¿cómo hace 4 enlaces?",
+          "actividad": "Construir con globos inflados atados por el nudo: 4 globos (tetraedro), 3 (triángulo) y 2 (línea); medir los ángulos.",
+          "errores": [
+            "Pensar que el metano es plano y cuadrado.",
+            "Creer que los dos enlaces del doble son iguales."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Tres formas",
+          "visual": {
+            "tipo": "escena",
+            "id": "org-hibridacion",
+            "fases": [
+              {
+                "id": "sp3",
+                "nombre": "sp³",
+                "texto": "Tetraedro, 109,5°: metano."
+              },
+              {
+                "id": "sp2",
+                "nombre": "sp²",
+                "texto": "Plano, 120°: eteno."
+              },
+              {
+                "id": "sp",
+                "nombre": "sp",
+                "texto": "Lineal, 180°: etino."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre la geometría molecular",
+            "tema": "geometria-fuerzas",
+            "bloque": "geometria"
+          }
+        }
+      ],
+      "juego": "org-hibridacion-juego",
+      "preguntas": [
+        {
+          "id": "qm-or-c-7",
+          "enunciado": "¿Qué hibridación tiene un carbono con un enlace triple?",
+          "opciones": [
+            "sp",
+            "sp²",
+            "sp³",
+            "Ninguna"
+          ],
+          "correcta": 0,
+          "explicacion": "Dos orbitales sp en línea, 180°."
+        },
+        {
+          "id": "qm-or-c-8",
+          "enunciado": "¿Qué ángulo forman los enlaces de un carbono sp³?",
+          "opciones": [
+            "109,5°",
+            "120°",
+            "180°",
+            "90°"
+          ],
+          "correcta": 0,
+          "explicacion": "Los vértices de un tetraedro."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}
