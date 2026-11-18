@@ -1,0 +1,706 @@
+{
+  "id": "concentracion",
+  "materia": "quimica",
+  "area": "soluciones",
+  "titulo": "Concentración de las soluciones",
+  "subtema": "Porcentajes, ppm, molaridad, diluciones, normalidad y fracción molar",
+  "orden": 135,
+  "etiqueta": "5",
+  "vistas": [
+    "ruta"
+  ],
+  "tituloVista": "Ruta de la concentración",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Diferenciar soluciones diluidas y concentradas.",
+    "Calcular concentraciones en porcentaje y en ppm a partir de situaciones cotidianas.",
+    "Calcular la molaridad y preparar soluciones por dilución.",
+    "Usar la normalidad y la fracción molar en casos sencillos."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con un texto de química de bachillerato.",
+    "Cloro residual libre en agua potable 0,3–2,0 mg/L (Resolución 2115 de 2007, Colombia): verificar vigencia. Flúor en crema dental y CO₂ del aire aproximados."
+  ],
+  "bloques": [
+    {
+      "id": "que-es-concentracion",
+      "titulo": "Diluida o concentrada",
+      "resumen": "La concentración dice cuánto soluto hay en cierta cantidad de solución.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "Decir que una solución tiene «mucha» o «poca» sal no basta: no es lo mismo una cucharada de sal en un vaso que en un balde. La concentración es la relación entre la cantidad de soluto y la cantidad de solución. Una solución diluida tiene poco soluto para su volumen; una concentrada, mucho. Por eso un agua de panela puede quedar «aguada» o «cargada». La concentración no depende de cuánto se sirva: un vasito y una jarra de la misma limonada tienen la misma concentración, aunque en la jarra haya más azúcar en total. Cuando el soluto tiene color, como el sulfato de cobre, el color más intenso indica mayor concentración. Para decirlo con números se usan varias unidades: porcentajes, partes por millón y molaridad.",
+        "contexto": [
+          {
+            "titulo": "En la vida diaria",
+            "texto": "Los medicamentos, los venenos para plagas, el cloro del agua o el alcohol antiséptico funcionan bien solo a cierta concentración: muy diluidos no sirven y muy concentrados hacen daño."
+          },
+          {
+            "titulo": "Leer etiquetas",
+            "texto": "Casi todos los productos de aseo y de agricultura traen la concentración en la etiqueta; las instrucciones de dilución se siguen al pie de la letra."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Concentración: cuánto soluto hay en cierta cantidad de solución.",
+            "Diluida: poco soluto. Concentrada: mucho soluto."
+          ],
+          "media": [
+            "La concentración no depende de la cantidad que se tome de la solución."
+          ],
+          "avanzada": [
+            "La concentración es una propiedad intensiva."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Un vaso de agua de panela tiene más panela que una olla de la misma agua de panela? ¿Está más dulce?",
+          "actividad": "Preparar tres vasos de agua de panela con 1, 2 y 4 cucharadas y ordenarlos por sabor (sin probar sustancias del laboratorio).",
+          "errores": [
+            "Confundir cantidad total de soluto con concentración.",
+            "Pensar que «concentrada» y «saturada» son lo mismo."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Cuál es más dulce?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Preparas agua de panela en una olla y sirves un pocillo. ¿Cuál es más dulce?",
+            "opciones": [
+              "Igual de dulces",
+              "El pocillo",
+              "La olla",
+              "Depende del color del pocillo"
+            ],
+            "correcta": 0,
+            "explicacion": "Es la misma solución: tiene la misma concentración."
+          }
+        },
+        {
+          "titulo": "Poco o mucho soluto",
+          "visual": {
+            "tipo": "escena",
+            "id": "concentracion-color",
+            "fases": [
+              {
+                "id": "diluida",
+                "nombre": "Diluida",
+                "texto": "Poco soluto en el agua."
+              },
+              {
+                "id": "concentrada",
+                "nombre": "Concentrada",
+                "texto": "Mucho soluto en la misma agua."
+              },
+              {
+                "id": "mismo",
+                "nombre": "Vasito o jarra",
+                "texto": "Mismo color, misma concentración."
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "concentrada-juego",
+      "preguntas": [
+        {
+          "id": "qm-co-1",
+          "enunciado": "¿Qué es la concentración de una solución?",
+          "opciones": [
+            "La relación entre la cantidad de soluto y la cantidad de solución",
+            "La cantidad de agua",
+            "El color de la solución",
+            "La temperatura de la solución"
+          ],
+          "correcta": 0,
+          "explicacion": "Soluto en cierta cantidad de solución."
+        },
+        {
+          "id": "qm-co-2",
+          "enunciado": "Si a un jugo le agregas agua, el jugo queda…",
+          "opciones": [
+            "Más diluido",
+            "Más concentrado",
+            "Saturado",
+            "Igual"
+          ],
+          "correcta": 0,
+          "explicacion": "El mismo soluto en más volumen."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "porcentajes",
+      "titulo": "Porcentajes: %m/m, %V/V y %m/V",
+      "resumen": "Cuánto soluto hay en cada 100 partes de solución.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "requiere": [
+        "que-es-concentracion"
+      ],
+      "ficha": {
+        "idea": "Las concentraciones más usadas en la vida diaria son porcentajes: cuántas partes de soluto hay en cada 100 partes de solución. En el porcentaje masa a masa (%m/m) las dos se miden en gramos: un abono con 15 % de nitrógeno tiene 15 g de nitrógeno en cada 100 g de abono, y el oro de 18 quilates tiene 75 % de oro. En el porcentaje volumen a volumen (%V/V), en mililitros: el alcohol antiséptico al 70 % tiene 70 mL de alcohol en cada 100 mL de solución. Y en el porcentaje masa a volumen (%m/V), gramos de soluto en 100 mL de solución: el suero fisiológico tiene 0,9 g de sal en cada 100 mL. Siempre se divide la cantidad de soluto entre la de solución completa (soluto más solvente) y se multiplica por 100.",
+        "contexto": [
+          {
+            "titulo": "Ejemplo %m/m",
+            "texto": "20 g de azúcar en 180 g de agua: la solución pesa 200 g; % = 20 / 200 × 100 = 10 %."
+          },
+          {
+            "titulo": "Ejemplo %m/V",
+            "texto": "Para 500 mL de suero al 0,9 % se necesitan 0,9 × 5 = 4,5 g de sal."
+          },
+          {
+            "titulo": "¿Por qué 70 % y no 96 %?",
+            "texto": "El alcohol al 70 % desinfecta mejor que el puro: el agua le ayuda a entrar en los microbios."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Un porcentaje dice cuánto soluto hay en cada 100 partes de solución."
+          ],
+          "media": [
+            "%m/m = g soluto / g solución × 100. %V/V = mL soluto / mL solución × 100. %m/V = g soluto / mL solución × 100.",
+            "Solución = soluto + solvente."
+          ],
+          "avanzada": [
+            "El %m/V no es adimensional: son g por cada 100 mL."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Qué quiere decir «alcohol al 70 %»? ¿70 % de qué?",
+          "actividad": "Leer etiquetas de vinagre, alcohol, agua oxigenada, abonos y bebidas; clasificar cada porcentaje.",
+          "errores": [
+            "Dividir entre la masa del solvente en vez de la de la solución.",
+            "Mezclar gramos con mililitros en un %m/m."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Tres porcentajes",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "⚖️",
+                "titulo": "% m/m",
+                "texto": "Gramos en 100 g: abono, oro de 18 quilates."
+              },
+              {
+                "icono": "🧪",
+                "titulo": "% V/V",
+                "texto": "mL en 100 mL: alcohol al 70 %."
+              },
+              {
+                "icono": "💧",
+                "titulo": "% m/V",
+                "texto": "Gramos en 100 mL: suero al 0,9 %."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "La fórmula de siempre",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "💯",
+            "valor": "soluto ÷ solución × 100",
+            "texto": "La solución es todo: soluto más solvente."
+          }
+        },
+        {
+          "titulo": "Calcula",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Disuelves 10 g de azúcar en 90 g de agua. ¿Cuál es el %m/m?",
+            "opciones": [
+              "10 %",
+              "11 %",
+              "9 %",
+              "90 %"
+            ],
+            "correcta": 0,
+            "explicacion": "La solución pesa 100 g: 10 / 100 × 100 = 10 %."
+          }
+        }
+      ],
+      "juego": "porcentaje-juego",
+      "preguntas": [
+        {
+          "id": "qm-co-3",
+          "enunciado": "¿Cuántos gramos de sal hay en 1 L de suero al 0,9 % m/V?",
+          "opciones": [
+            "9 g",
+            "0,9 g",
+            "90 g",
+            "900 g"
+          ],
+          "correcta": 0,
+          "explicacion": "0,9 g en cada 100 mL; 1 L son 10 veces 100 mL."
+        },
+        {
+          "id": "qm-co-4",
+          "enunciado": "El alcohol antiséptico al 70 % es un porcentaje…",
+          "opciones": [
+            "Volumen a volumen",
+            "Masa a masa",
+            "Masa a volumen",
+            "De pureza"
+          ],
+          "correcta": 0,
+          "explicacion": "70 mL de alcohol en 100 mL de solución."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "ppm",
+      "titulo": "Partes por millón",
+      "resumen": "Para cantidades muy pequeñas: 1 ppm = 1 mg en 1 L de agua.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "basico",
+      "requiere": [
+        "porcentajes"
+      ],
+      "ficha": {
+        "idea": "Cuando el soluto está en cantidades muy pequeñas, los porcentajes quedan llenos de ceros. Para eso se usan las partes por millón (ppm): cuántas partes de soluto hay en un millón de partes de solución. Como un litro de agua pesa un millón de miligramos, en soluciones con agua 1 ppm es 1 mg de soluto en 1 L. Así se mide el cloro del agua potable, que en Colombia debe quedar entre 0,3 y 2 mg por litro: suficiente para matar microbios y tan poco que se puede tomar. También el flúor de la crema dental, el CO₂ del aire (unas 420 ppm) y contaminantes peligrosos como el mercurio, que hace daño aun en cantidades diminutas.",
+        "contexto": [
+          {
+            "titulo": "Cálculo",
+            "texto": "ppm = mg de soluto / L de solución. 3 mg de cloro en 2 L de agua = 1,5 ppm."
+          },
+          {
+            "titulo": "Más pequeño todavía",
+            "texto": "Para venenos muy fuertes se usan partes por billón (ppb): 1 µg por litro."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "ppm: partes por millón; se usa para cantidades muy pequeñas.",
+            "1 ppm = 1 mg en 1 L de agua."
+          ],
+          "media": [
+            "ppm = mg de soluto / L de solución (en soluciones acuosas diluidas).",
+            "El agua potable lleva entre 0,3 y 2 ppm de cloro libre."
+          ],
+          "avanzada": [
+            "1 % = 10 000 ppm."
+          ]
+        },
+        "docente": {
+          "abrir": "Si el cloro mata microbios, ¿por qué no nos hace daño el agua de la llave?",
+          "actividad": "Calcular cuántas gotas de blanqueador se necesitan para potabilizar 20 L de agua según la etiqueta, y convertirlo a ppm.",
+          "errores": [
+            "Pensar que una cantidad pequeña nunca es peligrosa.",
+            "Usar ppm para concentraciones grandes."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Una parte en un millón",
+          "visual": {
+            "tipo": "escena",
+            "id": "ppm-piscina",
+            "fases": [
+              {
+                "id": "litro",
+                "nombre": "Un litro",
+                "texto": "1 mg en 1 L = 1 ppm."
+              },
+              {
+                "id": "tanque",
+                "nombre": "Un tanque",
+                "texto": "1 g en 1000 L = 1 ppm."
+              },
+              {
+                "id": "cloro",
+                "nombre": "El agua de la llave",
+                "texto": "Cloro entre 0,3 y 2 ppm."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre el mercurio y la contaminación",
+            "tema": "contaminacion",
+            "bloque": "mercurio"
+          }
+        }
+      ],
+      "juego": "ppm-juego",
+      "preguntas": [
+        {
+          "id": "qm-co-5",
+          "enunciado": "¿Cuántas ppm son 5 mg de una sustancia en 1 L de agua?",
+          "opciones": [
+            "5 ppm",
+            "0,5 ppm",
+            "50 ppm",
+            "5000 ppm"
+          ],
+          "correcta": 0,
+          "explicacion": "1 mg en 1 L = 1 ppm."
+        },
+        {
+          "id": "qm-co-6",
+          "enunciado": "¿Para qué se usan las ppm?",
+          "opciones": [
+            "Para cantidades muy pequeñas de soluto",
+            "Para soluciones saturadas",
+            "Para medir la temperatura",
+            "Para soluciones de gases solamente"
+          ],
+          "correcta": 0,
+          "explicacion": "Como el cloro del agua o el mercurio."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "molaridad",
+      "titulo": "Molaridad y molalidad",
+      "resumen": "Moles de soluto por litro de solución.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "intermedio",
+      "requiere": [
+        "porcentajes"
+      ],
+      "ficha": {
+        "idea": "En química interesa saber cuántas partículas de soluto hay, no solo cuántos gramos, porque las reacciones ocurren partícula a partícula. Por eso se usa la molaridad (M): los moles de soluto que hay en un litro de solución. Una solución 1 M de sal tiene 1 mol de NaCl (58,5 g) en 1 L de solución. Para prepararla se pesan los 58,5 g, se disuelven en un poco de agua dentro de un matraz aforado y se completa con agua hasta la marca de 1 L. Para calcularla, primero se pasan los gramos a moles (÷ masa molar) y los mililitros a litros, y después se divide. La molalidad (m) se parece, pero divide entre los kilogramos de solvente, no entre los litros de solución: como no cambia con la temperatura, se usa en las propiedades coligativas.",
+        "contexto": [
+          {
+            "titulo": "Ejemplo",
+            "texto": "4 g de NaOH (40 g/mol) en 250 mL: 0,1 mol ÷ 0,25 L = 0,4 M."
+          },
+          {
+            "titulo": "¿Por qué el matraz?",
+            "texto": "Al disolverse, el soluto cambia un poco el volumen. Por eso no se echan 58,5 g en 1 L de agua, sino que se completa hasta 1 L de solución."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "La molaridad cuenta cuántos moles de soluto hay en cada litro."
+          ],
+          "media": [
+            "M = moles de soluto / litros de solución.",
+            "Primero g → mol (÷ masa molar), luego mL → L (÷ 1000)."
+          ],
+          "avanzada": [
+            "m = moles de soluto / kg de solvente; no depende de la temperatura."
+          ]
+        },
+        "docente": {
+          "abrir": "Si las reacciones ocurren partícula a partícula, ¿basta con saber cuántos gramos hay?",
+          "actividad": "Calcular la masa de sal para 250 mL de solución 0,2 M y comprobarlo en el preparador.",
+          "errores": [
+            "Dividir entre el volumen de agua en vez del de la solución.",
+            "Olvidar pasar los mL a litros."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Preparar 1 M",
+          "visual": {
+            "tipo": "escena",
+            "id": "preparar-molar",
+            "fases": [
+              {
+                "id": "pesar",
+                "nombre": "Pesar",
+                "texto": "58,5 g de NaCl = 1 mol."
+              },
+              {
+                "id": "disolver",
+                "nombre": "Disolver",
+                "texto": "En un poco de agua."
+              },
+              {
+                "id": "aforar",
+                "nombre": "Aforar",
+                "texto": "Hasta la marca de 1 L: 1 M."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre convertir gramos a moles",
+            "tema": "el-mol",
+            "bloque": "conversiones"
+          }
+        },
+        {
+          "titulo": "Preparador de soluciones",
+          "visual": {
+            "tipo": "diagrama",
+            "id": "preparador-soluciones"
+          }
+        }
+      ],
+      "diagrama": "preparador-soluciones",
+      "juego": "molaridad-juego",
+      "preguntas": [
+        {
+          "id": "qm-co-7",
+          "enunciado": "¿Cuál es la molaridad de 2 mol de soluto en 4 L de solución?",
+          "opciones": [
+            "0,5 M",
+            "2 M",
+            "8 M",
+            "4 M"
+          ],
+          "correcta": 0,
+          "explicacion": "2 ÷ 4 = 0,5."
+        },
+        {
+          "id": "qm-co-8",
+          "enunciado": "¿Cuántos gramos de NaCl (58,5 g/mol) hay en 1 L de solución 0,1 M?",
+          "opciones": [
+            "5,85 g",
+            "58,5 g",
+            "0,1 g",
+            "585 g"
+          ],
+          "correcta": 0,
+          "explicacion": "0,1 mol × 58,5 g/mol."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "diluciones",
+      "titulo": "Diluciones",
+      "resumen": "Al agregar solvente, los moles no cambian: C₁·V₁ = C₂·V₂.",
+      "anio": 5,
+      "etiqueta": "Paso 5",
+      "nivel": "intermedio",
+      "requiere": [
+        "molaridad"
+      ],
+      "ficha": {
+        "idea": "Diluir es agregar solvente a una solución para bajar su concentración, como cuando se prepara un jugo de caja con agua o se mezcla un blanqueador antes de usarlo. Al diluir no se agrega ni se quita soluto: la cantidad de soluto se mantiene, pero se reparte en más volumen. Por eso se cumple C₁ × V₁ = C₂ × V₂, donde C₁ y V₁ son la concentración y el volumen de la solución inicial, y C₂ y V₂ los de la final. Sirve con cualquier unidad de concentración, siempre que se use la misma a los dos lados. En el laboratorio se compran soluciones concentradas («solución madre») y se diluyen según se necesite. Una regla de seguridad: cuando se diluye un ácido fuerte, se echa el ácido sobre el agua, nunca el agua sobre el ácido.",
+        "contexto": [
+          {
+            "titulo": "Ejemplo",
+            "texto": "¿Cuánta solución 2 M se necesita para preparar 500 mL de 0,5 M? V₁ = 0,5 × 500 / 2 = 125 mL; se completan con agua hasta 500 mL."
+          },
+          {
+            "titulo": "Factor de dilución",
+            "texto": "Si el volumen se multiplica por 10, la concentración se divide entre 10."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Diluir es agregar agua para bajar la concentración."
+          ],
+          "media": [
+            "C₁ × V₁ = C₂ × V₂ (la cantidad de soluto no cambia)."
+          ],
+          "avanzada": [
+            "Diluciones en serie: cada paso multiplica la dilución anterior."
+          ]
+        },
+        "docente": {
+          "abrir": "Si el jugo de caja dice «1 parte de jugo por 3 de agua», ¿qué tan diluido queda?",
+          "actividad": "Diluciones en serie con colorante de comida: cada vaso con 1 parte del anterior y 9 de agua; observar el color.",
+          "errores": [
+            "Pensar que al diluir se pierde soluto.",
+            "Tomar V₂ como el agua agregada y no como el volumen final."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Agregar agua",
+          "visual": {
+            "tipo": "escena",
+            "id": "dilucion",
+            "fases": [
+              {
+                "id": "inicial",
+                "nombre": "Concentrada",
+                "texto": "100 mL de 2 M."
+              },
+              {
+                "id": "agregar",
+                "nombre": "Agregar agua",
+                "texto": "No se agrega soluto."
+              },
+              {
+                "id": "final",
+                "nombre": "Diluida",
+                "texto": "400 mL de 0,5 M."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Seguridad",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "⚠️",
+            "valor": "Ácido sobre agua",
+            "texto": "Nunca agua sobre el ácido: puede hervir y salpicar."
+          }
+        }
+      ],
+      "juego": "dilucion-juego",
+      "preguntas": [
+        {
+          "id": "qm-co-9",
+          "enunciado": "Si 100 mL de una solución 1 M se completan hasta 500 mL, la nueva concentración es…",
+          "opciones": [
+            "0,2 M",
+            "5 M",
+            "0,5 M",
+            "1 M"
+          ],
+          "correcta": 0,
+          "explicacion": "1 × 100 = C₂ × 500."
+        },
+        {
+          "id": "qm-co-10",
+          "enunciado": "Al diluir una solución, ¿qué se mantiene igual?",
+          "opciones": [
+            "La cantidad de soluto",
+            "La concentración",
+            "El volumen",
+            "El color"
+          ],
+          "correcta": 0,
+          "explicacion": "Solo se agrega solvente."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "normalidad",
+      "titulo": "Normalidad y fracción molar",
+      "resumen": "Equivalentes por litro y moles de cada componente sobre los moles totales.",
+      "anio": 6,
+      "etiqueta": "Paso 6",
+      "nivel": "avanzado",
+      "requiere": [
+        "diluciones"
+      ],
+      "ficha": {
+        "idea": "Hay dos unidades más que se usan en casos especiales. La normalidad (N) cuenta equivalentes por litro de solución. En ácidos y bases, un equivalente es lo que aporta un mol de H⁺ o de OH⁻: el HCl aporta un H⁺, así que 1 M = 1 N; el ácido sulfúrico, H₂SO₄, aporta dos, así que 1 M = 2 N. Es útil en las titulaciones, porque ácidos y bases reaccionan equivalente a equivalente. La fracción molar (X) dice qué parte de los moles totales corresponde a cada componente: X = moles del componente / moles totales. No tiene unidades, y las fracciones de todos los componentes suman 1. Se usa en mezclas de gases (presiones parciales de Dalton) y en las propiedades coligativas.",
+        "contexto": [
+          {
+            "titulo": "Ejemplo de normalidad",
+            "texto": "Ca(OH)₂ 0,5 M aporta 2 OH⁻ por unidad: 0,5 × 2 = 1 N."
+          },
+          {
+            "titulo": "Ejemplo de fracción molar",
+            "texto": "1 mol de azúcar en 9 mol de agua: X(azúcar) = 1/10 = 0,1; X(agua) = 0,9."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Hay otras formas de medir la concentración que se usan en química avanzada."
+          ],
+          "media": [
+            "N = M × número de equivalentes.",
+            "Fracción molar = moles del componente / moles totales."
+          ],
+          "avanzada": [
+            "N = equivalentes / L. ΣX = 1. Pᵢ = Xᵢ · P total (Dalton)."
+          ]
+        },
+        "docente": {
+          "abrir": "Si el ácido sulfúrico tiene dos H⁺, ¿neutraliza lo mismo que el clorhídrico a la misma molaridad?",
+          "actividad": "Calcular N y X para varias soluciones del preparador.",
+          "errores": [
+            "Usar la normalidad para el azúcar (no aporta H⁺ ni OH⁻).",
+            "Olvidar que las fracciones molares suman 1."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Equivalentes",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "⚗️",
+                "titulo": "HCl",
+                "texto": "1 H⁺: 1 M = 1 N."
+              },
+              {
+                "icono": "🧪",
+                "titulo": "H₂SO₄",
+                "texto": "2 H⁺: 1 M = 2 N."
+              },
+              {
+                "icono": "🧴",
+                "titulo": "NaOH",
+                "texto": "1 OH⁻: 1 M = 1 N."
+              },
+              {
+                "icono": "🪨",
+                "titulo": "Ca(OH)₂",
+                "texto": "2 OH⁻: 1 M = 2 N."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Fracción molar",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🧮",
+            "valor": "X = n / n total",
+            "texto": "Sin unidades; todas las fracciones suman 1."
+          },
+          "atajo": {
+            "texto": "Más sobre las presiones parciales",
+            "tema": "leyes-gases",
+            "bloque": "gas-ideal"
+          }
+        }
+      ],
+      "juego": "normalidad-juego",
+      "preguntas": [
+        {
+          "id": "qm-co-11",
+          "enunciado": "¿Cuál es la normalidad de H₂SO₄ 0,5 M?",
+          "opciones": [
+            "1 N",
+            "0,5 N",
+            "0,25 N",
+            "2 N"
+          ],
+          "correcta": 0,
+          "explicacion": "Aporta 2 H⁺: 0,5 × 2."
+        },
+        {
+          "id": "qm-co-12",
+          "enunciado": "En una mezcla de 2 mol de N₂ y 2 mol de O₂, la fracción molar del O₂ es…",
+          "opciones": [
+            "0,5",
+            "2",
+            "0,25",
+            "1"
+          ],
+          "correcta": 0,
+          "explicacion": "2 / 4."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}
