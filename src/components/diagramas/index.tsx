@@ -116,6 +116,8 @@ import LabSoluciones from './LabSoluciones.tsx'
 import PreparadorSoluciones from './PreparadorSoluciones.tsx'
 import ReactorColisiones from './ReactorColisiones.tsx'
 import BalancinChatelier from './BalancinChatelier.tsx'
+import EscalaPh from './EscalaPh.tsx'
+import { AcidoOBaseJuego, PhJuego, IndicadorJuego, SueloPhJuego, FuerteDebilJuego, BronstedJuego } from './JuegosAcidosBases.tsx'
 import { ReversibleJuego, EquilibrioJuego, ChatelierJuego, KcJuego, EquilibrioVidaJuego } from './JuegosEquilibrio.tsx'
 import { RapidaLentaJuego, MasRapidoJuego, ColisionJuego, ActivacionJuego, ConservarAlimentosJuego } from './JuegosCinetica.tsx'
 import { ConcentradaJuego, PorcentajeJuego, PpmJuego, MolaridadJuego, DilucionJuego, NormalidadJuego } from './JuegosConcentracion.tsx'
@@ -608,6 +610,13 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'chatelier-juego': ChatelierJuego,
   'kc-juego': KcJuego,
   'equilibrio-vida-juego': EquilibrioVidaJuego,
+  'escala-ph': EscalaPh,
+  'acido-o-base-juego': AcidoOBaseJuego,
+  'ph-escala-juego': PhJuego,
+  'indicador-juego': IndicadorJuego,
+  'suelo-ph-juego': SueloPhJuego,
+  'fuerte-debil-juego': FuerteDebilJuego,
+  'bronsted-juego': BronstedJuego,
   'tipos-radiacion-juego': TiposRadiacionJuego,
   'vida-media-juego': VidaMediaJuego,
   'usos-nucleares-juego': UsosNuclearesJuego,
