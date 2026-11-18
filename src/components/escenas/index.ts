@@ -39,6 +39,7 @@ import { EscenaCicloEstados, EscenaCurvaCalentamiento } from './EscenasEstados.t
 import { EscenaPapelCambios, EscenaSenalesQuimicas, EscenaMacheteOxido } from './EscenasCambios.tsx'
 import { EscenaParticulasClasificacion } from './EscenasClasificacion.tsx'
 import { EscenaSepararMezclas } from './EscenasSeparacion.tsx'
+import { EscenaOcteto, EscenaIonico, EscenaCovalente, EscenaEnlaceMetalico } from './EscenasEnlace.tsx'
 import { EscenaHistoriaTabla, EscenaEstructuraTabla, EscenaMetales, EscenaRadio, EscenaIonizacion, EscenaElectronegatividad, EscenaCaracterMetalico } from './EscenasTabla.tsx'
 import { EscenaDemocrito, EscenaDalton, EscenaThomson, EscenaRutherford, EscenaBohr, EscenaNube, EscenaChadwick, EscenaParticulas, EscenaNumeros, EscenaIones, EscenaIsotopos, EscenaNivelesE, EscenaMoeller, EscenaCajas, EscenaCuanticos } from './EscenasAtomo.tsx'
 import { EscenaRiesgo, EscenaArmero, EscenaEvacuacion } from './EscenasRiesgo.tsx'
@@ -237,6 +238,10 @@ export const ESCENAS: Record<string, ComponentType<{ fase: string }>> = {
   'pp-ionizacion': EscenaIonizacion,
   'pp-electronegatividad': EscenaElectronegatividad,
   'pp-metalico': EscenaCaracterMetalico,
+  'en-octeto': EscenaOcteto,
+  'en-ionico': EscenaIonico,
+  'en-covalente': EscenaCovalente,
+  'en-metalico': EscenaEnlaceMetalico,
   compostaje: EscenaCompostaje,
   riesgo: EscenaRiesgo,
   armero: EscenaArmero,
