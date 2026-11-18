@@ -33,6 +33,7 @@ import { EscenaInvernadero, EscenaGlaciares, EscenaEnos } from './EscenasClima.t
 import { EscenaAireContaminado, EscenaBiomagnificacion, EscenaEutrofizacion } from './EscenasContaminacion.tsx'
 import { EscenaHidroelectrica } from './EscenasEnergia2.tsx'
 import { EscenaViajeBasura, EscenaCompostaje } from './EscenasResiduos.tsx'
+import { EscenaRiesgo, EscenaArmero, EscenaEvacuacion } from './EscenasRiesgo.tsx'
 import { EscenaCicloAgua, EscenaCicloCarbono, EscenaCicloNitrogeno, EscenaCicloFosforo } from './EscenasCiclos.tsx'
 
 /** Escenas vivas: un dibujo que se transforma según la fase (`fase` = id de la fase en el JSON). */
@@ -194,4 +195,7 @@ export const ESCENAS: Record<string, ComponentType<{ fase: string }>> = {
   hidroelectrica: EscenaHidroelectrica,
   'viaje-basura': EscenaViajeBasura,
   compostaje: EscenaCompostaje,
+  riesgo: EscenaRiesgo,
+  armero: EscenaArmero,
+  evacuacion: EscenaEvacuacion,
 }

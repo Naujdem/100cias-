@@ -79,6 +79,8 @@ import { RecursosJuego, HidroelectricaJuego, RepresasJuego, FuentesEnergiaJuego,
 import MezclaElectrica from './MezclaElectrica.tsx'
 import { ResiduosJuego, LasRJuego, SepararJuego, CompostajeJuego, EconomiaCircularJuego } from './JuegosResiduos.tsx'
 import Canecas from './Canecas.tsx'
+import { AmenazaVulnerabilidadJuego, AmenazasColombiaJuego, ArmeroJuego, AntesDuranteDespuesJuego, PlanEscolarJuego } from './JuegosRiesgo.tsx'
+import RiesgoVereda from './RiesgoVereda.tsx'
 
 /** Registro de diagramas interactivos. La clave es el valor de `bloque.diagrama`. */
 export const DIAGRAMAS: Record<string, ComponentType> = {
@@ -406,4 +408,10 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'compostaje-juego': CompostajeJuego,
   'economia-circular-juego': EconomiaCircularJuego,
   canecas: Canecas,
+  'amenaza-vulnerabilidad-juego': AmenazaVulnerabilidadJuego,
+  'amenazas-colombia-juego': AmenazasColombiaJuego,
+  'armero-juego': ArmeroJuego,
+  'antes-durante-despues-juego': AntesDuranteDespuesJuego,
+  'plan-escolar-juego': PlanEscolarJuego,
+  'riesgo-vereda': RiesgoVereda,
 }
