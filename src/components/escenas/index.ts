@@ -47,6 +47,7 @@ import { EscenaEcuacion, EscenaTiposReaccion, EscenaCombustion } from './Escenas
 import { EscenaConservacion, EscenaTanteo, EscenaRedox } from './EscenasBalanceo.tsx'
 import { EscenaLavoisier, EscenaProust, EscenaDalton as EscenaDaltonLeyes } from './EscenasLeyes.tsx'
 import { EscenaGasParticulas, EscenaGasVariables, EscenaKelvin, EscenaTorricelli, EscenaPresionAltura } from './EscenasGases.tsx'
+import { EscenaBoyle, EscenaCharles, EscenaGayLussac, EscenaAvogadro, EscenaDaltonGraham } from './EscenasLeyesGases.tsx'
 import { EscenaMolContar, EscenaMasaMolar, EscenaCaminoMol } from './EscenasMol.tsx'
 import { EscenaReceta, EscenaMasaMasa, EscenaLimite } from './EscenasEstequiometria.tsx'
 import { EscenaIntra, EscenaPolaridad, EscenaFuerzas, EscenaSoluble } from './EscenasFuerzas.tsx'
@@ -291,6 +292,11 @@ export const ESCENAS: Record<string, ComponentType<{ fase: string }>> = {
   kelvin: EscenaKelvin,
   torricelli: EscenaTorricelli,
   'presion-altura': EscenaPresionAltura,
+  'ley-boyle': EscenaBoyle,
+  'ley-charles': EscenaCharles,
+  'ley-gay-lussac': EscenaGayLussac,
+  'ley-avogadro': EscenaAvogadro,
+  'dalton-graham': EscenaDaltonGraham,
   compostaje: EscenaCompostaje,
   riesgo: EscenaRiesgo,
   armero: EscenaArmero,

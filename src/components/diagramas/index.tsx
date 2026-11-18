@@ -110,6 +110,8 @@ import FabricaFeS from './FabricaFeS.tsx'
 import { MasaCambiaJuego, ProporcionAguaJuego, CualLeyJuego } from './JuegosLeyes.tsx'
 import ConvertidorMol from './ConvertidorMol.tsx'
 import CajaGas from './CajaGas.tsx'
+import PistonGas from './PistonGas.tsx'
+import { BoyleJuego, CharlesJuego, GayLussacJuego, CualLeyGasJuego, AvogadroJuego, GasIdealJuego } from './JuegosLeyesGases.tsx'
 import { PropiedadGasJuego, VariableGasJuego, KelvinJuego, UnidadesPresionJuego, AlturaPresionJuego } from './JuegosGases.tsx'
 import { UnidadContarJuego, MasaMolarJuego, ConversionJuego, EmpiricaJuego } from './JuegosMol.tsx'
 import ReactivoLimite from './ReactivoLimite.tsx'
@@ -557,6 +559,13 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'kelvin-juego': KelvinJuego,
   'unidades-presion-juego': UnidadesPresionJuego,
   'altura-presion-juego': AlturaPresionJuego,
+  'piston-gas': PistonGas,
+  'boyle-juego': BoyleJuego,
+  'charles-juego': CharlesJuego,
+  'gay-lussac-juego': GayLussacJuego,
+  'cual-ley-gas-juego': CualLeyGasJuego,
+  'avogadro-juego': AvogadroJuego,
+  'gas-ideal-juego': GasIdealJuego,
   'tipos-radiacion-juego': TiposRadiacionJuego,
   'vida-media-juego': VidaMediaJuego,
   'usos-nucleares-juego': UsosNuclearesJuego,

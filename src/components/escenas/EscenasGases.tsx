@@ -15,7 +15,7 @@ function T({ x, y, t, c = TINTA, s = 12, peso = 800 }: { x: number; y: number; t
 }
 
 // Partículas que se mueven solas (SMIL), dentro de una caja de ancho w y alto h.
-function Particulas({ x, y, w, h, n, dur = 2, r = 5, c = GAS, semilla = 1 }: { x: number; y: number; w: number; h: number; n: number; dur?: number; r?: number; c?: string; semilla?: number }) {
+export function Particulas({ x, y, w, h, n, dur = 2, r = 5, c = GAS, semilla = 1 }: { x: number; y: number; w: number; h: number; n: number; dur?: number; r?: number; c?: string; semilla?: number }) {
   const az = (k: number) => {
     const v = Math.sin(k * 12.9898 + semilla * 78.233) * 43758.5453
     return v - Math.floor(v)
