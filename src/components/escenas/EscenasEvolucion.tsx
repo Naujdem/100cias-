@@ -737,3 +737,199 @@ export function EscenaTiposSeleccion({ fase }: { fase: string }) {
     </svg>
   )
 }
+
+/* ═══ Tema 4 · Adaptaciones ══════════════════════════════════════════════ */
+
+/* ── qué es una adaptación: el mismo grupo en dos ambientes ───────────── */
+
+const ADAPTA = ['pregunta', 'paramo', 'selva', 'idea']
+
+export function EscenaAdaptacion({ fase }: { fase: string }) {
+  const i = idx(ADAPTA, fase)
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label={`Qué es una adaptación: ${fase}`} className="h-full w-full">
+      {fondo('#f4f1ea')}
+      {/* páramo */}
+      <g style={{ transition: suave, opacity: i === 2 ? 0.25 : 1 }}>
+        <rect x="20" y="40" width="170" height="200" rx="14" fill="#dfe8ef" />
+        <T x={105} y={62} t="Páramo · 3500 m" s={11} />
+        <T x={105} y={84} t="❄️ frío de noche" s={10} peso={600} />
+        <ellipse cx="105" cy="170" rx="44" ry="30" fill="#4a3528" />
+        <circle cx="140" cy="148" r="20" fill="#4a3528" />
+        <path d="M 150 140 a 8 8 0 1 1 6 12" fill="none" stroke="#e8d5a0" strokeWidth="4" />
+        <T x={105} y={225} t="pelaje grueso y largo" s={10} c={AZUL} />
+      </g>
+      {/* selva */}
+      <g style={{ transition: suave, opacity: i === 1 ? 0.25 : 1 }}>
+        <rect x="210" y="40" width="170" height="200" rx="14" fill="#e3efdc" />
+        <T x={295} y={62} t="Selva · 200 m" s={11} />
+        <T x={295} y={84} t="☀️ calor y humedad" s={10} peso={600} />
+        <ellipse cx="295" cy="170" rx="38" ry="22" fill="#8a6a40" />
+        <circle cx="326" cy="156" r="14" fill="#8a6a40" />
+        <path d="M 330 146 l 6 -12 l 4 12 z" fill="#8a6a40" />
+        <T x={295} y={225} t="pelaje corto, orejas que disipan calor" s={9} c={VERDE} />
+      </g>
+      <g style={ver(i === 0)}><T x={200} y={275} t="¿Por qué los animales de cada lugar son tan distintos?" s={13} /></g>
+      <g style={ver(i === 3)}>
+        <rect x="40" y="252" width="320" height="40" rx="10" fill="#fff" stroke="#d8cfbd" />
+        <T x={200} y={270} t="Adaptación: rasgo heredado que ayuda" s={12} />
+        <T x={200} y={286} t="a sobrevivir y reproducirse en un ambiente" s={11} peso={600} />
+      </g>
+    </svg>
+  )
+}
+
+/* ── el frailejón, un experto del frío ───────────────────────────────── */
+
+const FRAILEJON = ['planta', 'roseta', 'pelos', 'abrigo', 'agua']
+
+export function EscenaFrailejon({ fase }: { fase: string }) {
+  const i = idx(FRAILEJON, fase)
+  const zoom = ['none', 'translate(0px, 80px) scale(1.5)', 'translate(-180px, 100px) scale(2.4)', 'translate(-80px, -140px) scale(1.8)', 'none'][i]
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label={`Adaptaciones del frailejón: ${fase}`} className="h-full w-full">
+      {fondo(i === 4 ? '#e6eef4' : '#eef1ea')}
+      <g style={{ transition: suave, transform: zoom, transformOrigin: '200px 150px' }}>
+        <rect x="-50" y="270" width="500" height="60" fill="#9fae7a" />
+        {/* tallo cubierto de hojas secas */}
+        <rect x="186" y="120" width="28" height="150" fill="#8a7458" />
+        {Array.from({ length: 12 }, (_, k) => (
+          <path key={k} d={`M ${k % 2 ? 186 : 214} ${130 + k * 12} l ${k % 2 ? -12 : 12} 10`} stroke="#a89070" strokeWidth="5" strokeLinecap="round" />
+        ))}
+        {/* roseta de hojas afelpadas */}
+        {Array.from({ length: 11 }, (_, k) => {
+          const a = -170 + k * 16
+          return <ellipse key={k} cx="200" cy="112" rx="7" ry="34" fill="#c9d6b0" stroke="#aebd92"
+            transform={`rotate(${a + 90} 200 112) translate(0 -30)`} />
+        })}
+        <circle cx="200" cy="112" r="10" fill="#b5c49a" />
+        {/* pelitos */}
+        <g style={{ transition: suave, opacity: i === 2 ? 1 : 0 }}>
+          {Array.from({ length: 14 }, (_, k) => <line key={k} x1={262 + (k % 7) * 3} y1={92 + Math.floor(k / 7) * 6} x2={264 + (k % 7) * 3} y2={88 + Math.floor(k / 7) * 6} stroke="#fff" strokeWidth="0.8" />)}
+        </g>
+        {/* agua guardada */}
+        <g style={{ transition: suave, opacity: i === 4 ? 1 : 0 }}>
+          <rect x="192" y="140" width="16" height="110" rx="6" fill="#7fb4dc" opacity="0.8" />
+          {[110, 160, 290, 320].map((x) => <T key={x} x={x} y={60} t="💧" s={14} />)}
+        </g>
+      </g>
+      <rect x="20" y="250" width="360" height="42" rx="10" fill="#ffffffdd" />
+      <T x={200} y={268} t={['Frailejón: vive a más de 3000 m, con heladas casi cada noche', 'Hojas en roseta: de noche se cierran y protegen el centro', 'Pelos blancos: como una cobija y un filtro contra el sol', 'Hojas secas pegadas al tallo: abrigo para el tallo', 'Guarda agua en su tallo y capta la de la niebla'][i]} s={11} />
+      <T x={200} y={284} t={['', 'adaptación morfológica', 'adaptación morfológica', 'adaptación morfológica', 'agua para el páramo y los ríos'][i]} s={10} peso={600} c={AZUL} />
+    </svg>
+  )
+}
+
+/* ── fisiológicas: el cactus que respira de noche ────────────────────── */
+
+const CACTUS = ['dia', 'noche']
+
+export function EscenaCactus({ fase }: { fase: string }) {
+  const i = idx(CACTUS, fase)
+  const noche = i === 1
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label={`Cactus de la Tatacoa: ${fase}`} className="h-full w-full">
+      {fondo(noche ? '#2c3550' : '#f6e8c8')}
+      <circle cx={noche ? 330 : 70} cy="60" r="26" fill={noche ? '#e9e6d6' : '#f2b632'} style={{ transition: suave }} />
+      <rect x="-10" y="250" width="420" height="60" fill={noche ? '#5a4a3c' : '#d9a86a'} style={{ transition: 'fill 0.8s' }} />
+      <rect x="180" y="110" width="40" height="145" rx="20" fill="#5f9a4f" />
+      <rect x="130" y="150" width="30" height="60" rx="15" fill="#5f9a4f" />
+      <rect x="140" y="190" width="45" height="20" rx="10" fill="#5f9a4f" />
+      {/* estomas */}
+      {[[200, 140], [200, 180], [200, 220], [145, 170]].map(([x, y], k) => (
+        <g key={k} transform={`translate(${x} ${y})`}>
+          <ellipse rx="7" ry="4" fill="#3f6d33" />
+          <ellipse rx={noche ? 3 : 0.5} ry="2.5" fill="#1d2b17" style={{ transition: suave }} />
+        </g>
+      ))}
+      <g style={ver(noche)}>
+        <T x={290} y={160} t="CO₂ →" s={14} c="#e9e6d6" />
+        <T x={300} y={185} t="estomas abiertos" s={11} c="#e9e6d6" />
+      </g>
+      <g style={ver(!noche)}>
+        <T x={300} y={160} t="estomas cerrados" s={12} />
+        <T x={300} y={180} t="no pierde agua" s={11} peso={600} />
+      </g>
+      <T x={200} y={285} t={noche ? 'De noche, fresco: abre los estomas y guarda el CO₂' : 'De día, calor: cierra los estomas y usa el CO₂ guardado'} s={11} c={noche ? '#fff' : TINTA} />
+    </svg>
+  )
+}
+
+/* ── de conducta: aves migratorias ───────────────────────────────────── */
+
+const MIGRA = ['verano', 'otono', 'colombia', 'regreso']
+
+export function EscenaMigracion({ fase }: { fase: string }) {
+  const i = idx(MIGRA, fase)
+  const pos = [[150, 70], [190, 150], [240, 225], [150, 70]][i]
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label={`Migración: ${fase}`} className="h-full w-full">
+      {fondo('#e3eef6')}
+      <path d="M 40 20 Q 160 10 260 40 Q 240 110 200 130 Q 180 160 210 185 L 230 200 Q 280 230 270 290 L 210 290 Q 200 240 180 210 Q 120 160 90 110 Q 50 70 40 20 Z" fill="#cfdcb8" />
+      <T x={150} y={55} t="Norteamérica" s={10} />
+      <T x={245} y={260} t="Colombia" s={10} />
+      <path d="M 150 70 Q 230 140 240 225" fill="none" stroke="#888" strokeWidth="2" strokeDasharray="5 5" />
+      <g style={{ transition: 'transform 1.6s cubic-bezier(.45,.05,.25,1)', transform: `translate(${pos[0]}px, ${pos[1]}px)` }}>
+        <text textAnchor="middle" dominantBaseline="middle" fontSize="24">🐦</text>
+      </g>
+      <T x={330} y={40} t={['Junio', 'Septiembre', 'Diciembre', 'Abril'][i]} s={18} c={AZUL} />
+      <rect x="20" y="250" width="170" height="44" rx="10" fill="#fff" />
+      <T x={105} y={268} t={['Cría en el norte', 'Se acorta el día: parte', 'Pasa el invierno aquí', 'Vuelve a criar'][i]} s={11} />
+      <T x={105} y={284} t={['comida abundante', 'el frío se acerca', 'hay insectos y frutos', 'la primavera regresa'][i]} s={10} peso={600} />
+    </svg>
+  )
+}
+
+/* ── camuflaje, advertencia y mimetismo ──────────────────────────────── */
+
+const MIMETISMO = ['camuflaje', 'advertencia', 'imitadora', 'aprende']
+
+function Serpiente({ x, y, falsa }: { x: number; y: number; falsa: boolean }) {
+  // coral verdadera: rojo-amarillo-negro-amarillo-rojo; falsa: orden de anillos distinto
+  const anillos = falsa ? ['#c43c3c', '#2b2b2b', '#e8d14a', '#2b2b2b', '#c43c3c', '#2b2b2b', '#e8d14a', '#2b2b2b'] : ['#c43c3c', '#e8d14a', '#2b2b2b', '#e8d14a', '#c43c3c', '#e8d14a', '#2b2b2b', '#e8d14a']
+  return (
+    <g transform={`translate(${x} ${y})`}>
+      {anillos.map((c, k) => <rect key={k} x={k * 16} y="0" width="16" height="14" fill={c} />)}
+      <ellipse cx="-4" cy="7" rx="10" ry="8" fill="#2b2b2b" />
+    </g>
+  )
+}
+
+export function EscenaMimetismo({ fase }: { fase: string }) {
+  const i = idx(MIMETISMO, fase)
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label={`Camuflaje y mimetismo: ${fase}`} className="h-full w-full">
+      {fondo('#eef1ea')}
+      {/* camuflaje: insecto hoja entre hojas */}
+      <g style={ver(i === 0)}>
+        {Array.from({ length: 9 }, (_, k) => (
+          <ellipse key={k} cx={90 + (k % 3) * 110} cy={80 + Math.floor(k / 3) * 60} rx="34" ry="18" fill="#6aa04f" transform={`rotate(${(k * 23) % 60 - 30} ${90 + (k % 3) * 110} ${80 + Math.floor(k / 3) * 60})`} />
+        ))}
+        <ellipse cx="200" cy="140" rx="30" ry="16" fill="#71a656" stroke="#5a8c41" />
+        <line x1="172" y1="140" x2="228" y2="140" stroke="#5a8c41" strokeWidth="1.5" />
+        <T x={200} y={270} t="¿Ves el insecto hoja? Está en el centro" s={12} />
+      </g>
+      {/* advertencia: rana dorada */}
+      <g style={ver(i === 1)}>
+        <ellipse cx="200" cy="150" rx="50" ry="34" fill="#f2c31b" />
+        <circle cx="175" cy="125" r="11" fill="#f2c31b" /><circle cx="225" cy="125" r="11" fill="#f2c31b" />
+        <circle cx="175" cy="125" r="5" fill="#2b2b2b" /><circle cx="225" cy="125" r="5" fill="#2b2b2b" />
+        <T x={200} y={230} t="Rana dorada: colores vivos = «soy venenosa»" s={12} />
+        <T x={200} y={250} t="Pacífico colombiano (Cauca)" s={10} peso={600} />
+      </g>
+      {/* coral y falsa coral */}
+      <g style={ver(i >= 2)}>
+        <Serpiente x={90} y={90} falsa={false} />
+        <T x={160} y={80} t="Coral verdadera (venenosa)" s={11} c={ROJO} />
+        <Serpiente x={90} y={170} falsa />
+        <T x={160} y={160} t="Falsa coral (inofensiva)" s={11} c={VERDE} />
+      </g>
+      <g style={ver(i === 2)}><T x={200} y={260} t="La inofensiva imita los colores de la peligrosa" s={12} /></g>
+      <g style={ver(i === 3)}>
+        <T x={330} y={130} t="🦅" s={36} />
+        <T x={200} y={250} t="El depredador que aprendió a evitar la coral" s={12} />
+        <T x={200} y={268} t="también evita a la imitadora" s={12} />
+      </g>
+    </svg>
+  )
+}
