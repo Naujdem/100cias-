@@ -69,6 +69,14 @@ Además de las prácticas guiadas, una **Mesa libre** que se desbloquea con las 
 - Usa el mismo motor e inventario de las prácticas ya hechas (no hay material nuevo).
 - Las mezclas salen de un catálogo de reacciones conocidas (las de las prácticas + algunas extra);
   si la combinación no está en el catálogo → «se mezcla, no hay reacción visible».
+- **Mezclas por definir** (idea de JuanMed): cada combinación que no está en el catálogo se guarda en
+  Supabase (`lab_mezclas_pendientes`: ingredientes ordenados como clave, cuántas veces se intentó,
+  fecha). Sin conexión, se guarda en el dispositivo y se sube al volver la red.
+- **Panel del docente**: lista de mezclas pendientes (las más intentadas primero) → «Definir reacción»
+  (color, efecto SVG, gas/precipitado/calor, explicación por grado) o «Sin reacción» (para que deje de aparecer).
+  Lo definido va a `lab_reacciones` y desde ese momento cualquiera que repita la mezcla ve el efecto.
+  Solo el rol docente/administrador puede definir (RLS).
+- El catálogo base vive en el repo; lo agregado desde el panel vive en Supabase y se suma al cargar.
 - Libreta de descubrimientos: cada reacción nueva encontrada queda registrada (estilo colección).
 - Retos opcionales: «consigue una solución azul más clara», «haz que el globo se infle más».
 - Lo peligroso sigue siendo solo simulación, con aviso.
