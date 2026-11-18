@@ -2,7 +2,7 @@
 
 Aprobado por JuanMed el 18 nov 2026. Mismo método de las áreas 2, 3 y 4: una lección por tema siguiendo
 NORMA-LECCIONES.md (ruta de pasos, escenas vivas, Explora, Juega, Comprueba, casillas por grado, «cada idea en
-un solo lugar»). Ejemplos de Colombia y del Huila siempre que se pueda.
+un solo lugar»). Ejemplos de Colombia y del Huila siempre que se pueda. **Los 9 temas están construidos (18 nov 2026), pendientes de revisión docente y revisión visual en pantalla.**
 
 ## Ruta de temas
 
