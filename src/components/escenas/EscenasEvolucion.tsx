@@ -1,4 +1,5 @@
-// Escenas vivas de la historia del pensamiento evolutivo (área 4, tema 1).
+// Escenas vivas del área 4 (evolución): tema 1 (historia) y tema 2 (evidencias).
+import { Extremidad, ESPECIES, HUESOS, type Especie } from '../diagramas/ExtremidadesHomologas.tsx'
 
 const suave = 'transform 1.1s cubic-bezier(.45,.05,.25,1), opacity 0.7s ease'
 const ver = (si: boolean, mover = 'none', quieto = 'none') => ({ transition: suave, opacity: si ? 1 : 0, transform: si ? mover : quieto })
@@ -397,6 +398,201 @@ export function EscenaRitmos({ fase }: { fase: string }) {
       </g>
       <g style={ver(i === 2)}><T x={210} y={30} t="Gradual (azul) y puntuado (rojo)" s={13} /></g>
       <Flecha id="ri-fl" />
+    </svg>
+  )
+}
+
+/* ═══ Tema 2 · Evidencias de la evolución ═══════════════════════════════ */
+
+/* ── cómo se forma un fósil ──────────────────────────────────────────── */
+
+const FOSIL = ['muere', 'sedimento', 'mineral', 'capas', 'aparece']
+
+function Pez({ hueso = false }: { hueso?: boolean }) {
+  return (
+    <g>
+      <path d="M -40 0 Q -10 -22 25 0 Q -10 22 -40 0 Z M 25 0 l 16 -12 v 24 z" fill={hueso ? 'none' : '#7aa7c9'} stroke={hueso ? '#efe6d4' : '#4f7fa3'} strokeWidth="2" style={{ transition: suave }} />
+      {hueso && <><line x1="-38" y1="0" x2="28" y2="0" stroke="#efe6d4" strokeWidth="2.5" />
+        {[-26, -16, -6, 4, 14].map((x) => <line key={x} x1={x} y1="-12" x2={x} y2="12" stroke="#efe6d4" strokeWidth="1.6" />)}
+        <circle cx="-30" cy="-3" r="3" fill="#efe6d4" /></>}
+    </g>
+  )
+}
+
+export function EscenaFosil({ fase }: { fase: string }) {
+  const i = idx(FOSIL, fase)
+  const capas = [0, 1, 1, 4, 4][i]
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label={`Formación de un fósil: ${fase}`} className="h-full w-full">
+      {fondo('#e3eef6')}
+      <rect x="0" y="80" width="400" height="220" fill="#b9d4e6" style={{ transition: suave, opacity: i <= 2 ? 1 : 0 }} />
+      <rect x="0" y="230" width="400" height="70" fill="#c9ae80" />
+      {Array.from({ length: 4 }, (_, k) => (
+        <rect key={k} x="0" y={230 - (k + 1) * 32} width="400" height="32" fill={['#d8c59c', '#c2a575', '#d4bd92', '#b8986a'][k]}
+          style={{ transition: suave, opacity: k < capas ? 1 : 0 }} />
+      ))}
+      {/* erosión: la roca se desgasta y el fósil aflora */}
+      <path d="M 0 98 L 120 98 Q 200 210 280 98 L 400 98 L 400 0 L 0 0 Z" fill="#f2e6cf" style={{ transition: suave, opacity: i === 4 ? 1 : 0 }} />
+      <g style={{ transition: suave, transform: i === 0 ? 'translate(200px, 150px)' : 'translate(200px, 216px)' }}>
+        <Pez hueso={i >= 2} />
+      </g>
+      <g style={ver(i === 2)}><T x={200} y={60} t="El agua con minerales reemplaza el hueso por roca" s={12} c={AZUL} /></g>
+      <g style={ver(i === 3)}><T x={200} y={60} t="Más capas encima: más antiguo cuanto más abajo" s={12} /></g>
+      <g style={ver(i === 4)}><T x={200} y={40} t="🔍 La erosión deja ver el fósil" s={14} c={MARRON} /></g>
+    </svg>
+  )
+}
+
+/* ── anatomía comparada: la misma extremidad que se transforma ─────────── */
+
+const ANATOMIA: Especie[] = ['humano', 'murcielago', 'ballena', 'ave']
+
+export function EscenaAnatomia({ fase }: { fase: string }) {
+  const esp = (ANATOMIA.includes(fase as Especie) ? fase : 'humano') as Especie
+  const e = ESPECIES.find((x) => x.id === esp)!
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label={`Extremidad homóloga: ${e.n}`} className="h-full w-full">
+      {fondo('#f4f1ea')}
+      <g transform="translate(40 140) scale(0.62)"><Extremidad especie={esp} /></g>
+      <T x={200} y={40} t={`${e.ic} ${e.n}`} s={16} />
+      <T x={200} y={60} t={`sirve para ${e.uso}`} s={12} peso={600} />
+      {HUESOS.map((h, k) => (
+        <g key={h.id}>
+          <rect x={22 + k * 92} y="250" width="12" height="12" rx="3" fill={h.c} />
+          <text x={38 + k * 92} y="260" fontSize="10" fontWeight="700" fill={TINTA}>{h.n}</text>
+        </g>
+      ))}
+    </svg>
+  )
+}
+
+/* ── embriones de vertebrados ────────────────────────────────────────── */
+
+const EMBRIONES = ['temprano', 'medio', 'adulto']
+const VERTEBRADOS = [
+  { n: 'Pez', adulto: '🐟' },
+  { n: 'Pollo', adulto: '🐔' },
+  { n: 'Cerdo', adulto: '🐖' },
+  { n: 'Humano', adulto: '🧍' },
+]
+
+function Embrion({ k, i }: { k: number; i: number }) {
+  // en la fase temprana todos son casi iguales; luego divergen
+  const estira = i === 0 ? 1 : [1.25, 1.1, 1.05, 0.95][k]
+  const cabeza = i === 0 ? 14 : [12, 15, 16, 20][k]
+  return (
+    <g style={{ transition: suave, opacity: i === 2 ? 0 : 1 }}>
+      <path d={`M 0 ${-30 * estira} Q 22 -10 14 18 Q 4 38 -10 40 Q -2 26 -8 14 Q -18 -4 0 ${-30 * estira} Z`} fill="#f3c9b6" stroke="#d99a86" strokeWidth="1.5" style={{ transition: suave }} />
+      <circle cx="2" cy={-24 * estira} r={cabeza} fill="#f3c9b6" stroke="#d99a86" strokeWidth="1.5" style={{ transition: suave }} />
+      <circle cx="6" cy={-26 * estira} r="2.5" fill="#6b4a3a" />
+      {/* arcos faríngeos */}
+      {[0, 1, 2].map((a) => <path key={a} d={`M -6 ${-8 + a * 6} q 6 2 10 0`} fill="none" stroke="#c97b66" strokeWidth="1.5" />)}
+      {/* cola */}
+      <path d="M -10 40 q -10 6 -14 -2" fill="none" stroke="#d99a86" strokeWidth="3" style={{ transition: suave, opacity: i === 0 || k === 0 ? 1 : 0.4 }} />
+    </g>
+  )
+}
+
+export function EscenaEmbriones({ fase }: { fase: string }) {
+  const i = idx(EMBRIONES, fase)
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label={`Embriones de vertebrados: ${fase}`} className="h-full w-full">
+      {fondo('#f6f0ee')}
+      {VERTEBRADOS.map((v, k) => (
+        <g key={v.n} transform={`translate(${60 + k * 93} 140)`}>
+          <Embrion k={k} i={i} />
+          <text textAnchor="middle" fontSize="54" dominantBaseline="middle" style={{ transition: suave, opacity: i === 2 ? 1 : 0 }}>{v.adulto}</text>
+          <T x={0} y={95} t={v.n} s={13} />
+        </g>
+      ))}
+      <g style={ver(i === 0)}><T x={200} y={40} t="Al principio: arcos en el cuello y cola" s={13} /></g>
+      <g style={ver(i === 1)}><T x={200} y={40} t="Luego cada uno toma su propia forma" s={13} /></g>
+      <g style={ver(i === 2)}><T x={200} y={40} t="Adultos muy distintos, origen común" s={13} c={AZUL} /></g>
+    </svg>
+  )
+}
+
+/* ── biogeografía: colonizar islas ───────────────────────────────────── */
+
+const ISLAS = ['continente', 'llegada', 'diversifica']
+const ISLAS_POS = [[250, 90], [320, 160], [260, 230]]
+const AVES_ISLA = ['#c9702f', '#5fb04a', '#3f6fb8']
+
+function Ave({ x, y, c, k = 1 }: { x: number; y: number; c: string; k?: number }) {
+  return (
+    <g transform={`translate(${x} ${y}) scale(${k})`}>
+      <ellipse rx="10" ry="7" fill={c} />
+      <circle cx="9" cy="-5" r="5" fill={c} />
+      <path d="M 13 -6 l 6 1 l -6 2 z" fill="#d9b26a" />
+    </g>
+  )
+}
+
+export function EscenaIslas({ fase }: { fase: string }) {
+  const i = idx(ISLAS, fase)
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label={`Biogeografía de islas: ${fase}`} className="h-full w-full">
+      {fondo('#cfe3f1')}
+      <path d="M -10 20 Q 90 60 110 150 Q 100 240 -10 290 Z" fill="#cfdcb8" />
+      <T x={55} y={150} t="Continente" s={12} />
+      {ISLAS_POS.map(([x, y], k) => <ellipse key={k} cx={x} cy={y} rx="34" ry="20" fill="#d9cfa0" />)}
+      <Ave x={60} y={180} c="#8a8a8a" k={1.4} />
+      {ISLAS_POS.map(([x, y], k) => (
+        <g key={k}>
+          <g style={{ transition: suave, opacity: i >= 1 ? 1 : 0, transform: i >= 1 ? `translate(${x}px, ${y - 4}px)` : 'translate(70px, 180px)' }}>
+            <Ave x={0} y={0} c={i === 2 ? AVES_ISLA[k] : '#8a8a8a'} k={1.2} />
+          </g>
+          <path d={`M 80 175 Q ${(x + 80) / 2} ${y - 60} ${x - 30} ${y}`} fill="none" stroke="#888" strokeWidth="1.5" strokeDasharray="4 4" style={{ transition: suave, opacity: i === 1 ? 1 : 0 }} />
+        </g>
+      ))}
+      <g style={ver(i === 2)}><T x={290} y={30} t="Una especie distinta en cada isla" s={12} c={MARRON} /></g>
+      <g style={ver(i === 0)}><T x={290} y={30} t="Las islas nacen sin aves" s={12} /></g>
+      <g style={ver(i === 1)}><T x={290} y={30} t="Llegan unas pocas del continente" s={12} /></g>
+    </svg>
+  )
+}
+
+/* ── evidencia molecular: comparar secuencias ─────────────────────────── */
+
+const MOLECULAR = ['secuencias', 'comparar', 'arbol']
+const BASE = 'ATGCCGTAAGCT'
+const SEQ = [
+  { n: 'Humano', s: BASE },
+  { n: 'Chimpancé', s: 'ATGCCGTAAGCC' },
+  { n: 'Ratón', s: 'ATGACGTTAGCC' },
+  { n: 'Pez', s: 'TTGACCTTAGAC' },
+]
+
+export function EscenaMolecular({ fase }: { fase: string }) {
+  const i = idx(MOLECULAR, fase)
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label={`Evidencia molecular: ${fase}`} className="h-full w-full">
+      {fondo('#f2f0f6')}
+      <g style={{ transition: suave, transform: i === 2 ? 'translate(-120px, 0) scale(0.7)' : 'none', transformOrigin: '0 150px' }}>
+        {SEQ.map((q, k) => {
+          const dif = [...q.s].filter((b, j) => b !== BASE[j]).length
+          return (
+            <g key={q.n} transform={`translate(20 ${70 + k * 50})`}>
+              <text x="0" y="0" fontSize="12" fontWeight="800" fill={TINTA}>{q.n}</text>
+              {[...q.s].map((b, j) => {
+                const distinta = b !== BASE[j]
+                return <text key={j} x={95 + j * 18} y="0" fontSize="15" fontFamily="monospace" fontWeight="800"
+                  fill={i >= 1 && distinta ? ROJO : TINTA} style={{ transition: 'fill 0.6s' }}>{b}</text>
+              })}
+              <text x="320" y="0" fontSize="11" fontWeight="700" fill={ROJO} style={{ transition: suave, opacity: i >= 1 && k > 0 ? 1 : 0 }}>{dif} diferencias</text>
+            </g>
+          )
+        })}
+      </g>
+      {/* árbol de parentesco */}
+      <g style={ver(i === 2, 'none', 'translate(30px, 0)')}>
+        <path d="M 280 100 V 140 M 280 100 H 300 M 280 140 H 300 M 260 120 V 185 M 260 120 H 280 M 260 185 H 300 M 240 152 V 230 M 240 152 H 260 M 240 230 H 300 M 220 191 H 240" fill="none" stroke={MARRON} strokeWidth="3" />
+        {['Humano', 'Chimpancé', 'Ratón', 'Pez'].map((n, k) => (
+          <text key={n} x="306" y={[104, 144, 189, 234][k]} fontSize="11" fontWeight="800" fill={TINTA}>{n}</text>
+        ))}
+      </g>
+      <T x={200} y={30} t={['El mismo gen en cuatro animales', 'Menos diferencias = parientes más cercanos', 'Las diferencias dibujan el árbol de parentesco'][i]} s={13} />
+      <T x={200} y={290} t="secuencias de ejemplo, simplificadas" s={9} peso={600} />
     </svg>
   )
 }

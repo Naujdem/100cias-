@@ -1,0 +1,360 @@
+{
+  "id": "evidencias-evolucion",
+  "materia": "biologia",
+  "area": "evolucion",
+  "titulo": "Evidencias de la evolución",
+  "subtema": "Fósiles, anatomía, embriones, islas y ADN",
+  "orden": 42,
+  "etiqueta": "2",
+  "vistas": ["ruta"],
+  "tituloVista": "Ruta de las evidencias",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Explicar cómo se forman los fósiles y qué dicen sobre el pasado.",
+    "Diferenciar estructuras homólogas, análogas y vestigiales.",
+    "Relacionar la embriología, la biogeografía y el ADN con el parentesco entre especies."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con un texto de biología. A verificar: edad de la fauna de La Venta (Mioceno medio, ≈ 13 millones de años), Purussaurus neivensis, similitud de ADN humano–chimpancé (≈ 98–99 %). Las secuencias de la escena molecular son de ejemplo, no reales."
+  ],
+  "bloques": [
+    {
+      "id": "fosiles",
+      "titulo": "Los fósiles",
+      "resumen": "Restos o huellas de seres vivos del pasado conservados en las rocas. Las capas más profundas guardan los más antiguos.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "Un fósil es un resto (hueso, concha, tronco) o una huella (pisada, molde) de un ser vivo del pasado conservado en la roca. Casi siempre se forma cuando el organismo queda enterrado rápido en sedimento y los minerales reemplazan poco a poco sus partes duras. Como las capas de roca se acumulan una sobre otra, los fósiles de abajo son más antiguos: el registro fósil muestra que las formas de vida han cambiado y que muchas especies se extinguieron.",
+        "contexto": [
+          { "titulo": "La Tatacoa, un museo al aire libre", "texto": "En el desierto de la Tatacoa (Villavieja, Huila) están los fósiles de La Venta, de hace unos 13 millones de años: primates, tortugas, perezosos y un caimán gigante llamado Purussaurus neivensis, por Neiva." },
+          { "titulo": "Fósiles de transición", "texto": "Algunos fósiles mezclan rasgos de dos grupos, como Archaeopteryx, con plumas de ave y dientes y cola de reptil." },
+          { "titulo": "Un registro incompleto", "texto": "La mayoría de los seres vivos se descomponen sin dejar rastro. Por eso el registro fósil tiene huecos." }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Fósil: resto o huella de un ser vivo del pasado conservado en la roca.",
+            "Las capas de abajo son más antiguas que las de arriba."
+          ],
+          "media": ["Los fósiles muestran que las especies cambian y se extinguen."],
+          "avanzada": ["Los fósiles de transición combinan rasgos de dos grupos."]
+        },
+        "docente": {
+          "abrir": "¿Cómo sabemos qué animales vivieron hace millones de años si nadie los vio?",
+          "actividad": "Hacer moldes de conchas u hojas en plastilina o yeso y comparar con un fósil real o una foto de la Tatacoa.",
+          "errores": ["Creer que el fósil es el hueso original: casi siempre es roca que copió su forma.", "Pensar que todos los seres vivos dejan fósiles."],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "En la Tatacoa se encuentran fósiles de caimanes y tortugas en pleno desierto. ¿Qué nos dice eso?",
+            "opciones": ["Que hace millones de años ahí había ríos y humedales", "Que los caimanes vivían en el desierto", "Que alguien los llevó allí", "Que los fósiles se mueven con el viento"],
+            "correcta": 0,
+            "explicacion": "Los fósiles cuentan cómo era el ambiente: hace unos 13 millones de años la Tatacoa era una zona húmeda con ríos."
+          }
+        },
+        {
+          "titulo": "Cómo se forma un fósil",
+          "visual": {
+            "tipo": "escena",
+            "id": "ev-fosil",
+            "fases": [
+              { "id": "muere", "nombre": "Muere", "texto": "Un pez muere y cae al fondo de un lago." },
+              { "id": "sedimento", "nombre": "Queda enterrado", "texto": "La arena y el barro lo cubren rápido; las partes blandas se descomponen." },
+              { "id": "mineral", "nombre": "Mineralización", "texto": "El agua con minerales reemplaza poco a poco los huesos por roca." },
+              { "id": "capas", "nombre": "Más capas", "texto": "Encima se acumulan más capas durante millones de años." },
+              { "id": "aparece", "nombre": "Aparece", "texto": "La erosión desgasta la roca y el fósil sale a la luz." }
+            ]
+          }
+        },
+        {
+          "titulo": "Fósiles del Huila",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "🐊", "titulo": "Purussaurus", "texto": "Caimán gigante; su nombre recuerda a Neiva." },
+              { "icono": "🐒", "titulo": "Primates", "texto": "Monos emparentados con los actuales de la Amazonia." },
+              { "icono": "🐢", "titulo": "Tortugas", "texto": "Indican que había ríos y humedales." }
+            ]
+          },
+          "puntos": ["La Venta, Tatacoa: unos 13 millones de años"]
+        }
+      ],
+      "juego": "fosil-juego",
+      "preguntas": [
+        {
+          "id": "ev-fo-1",
+          "enunciado": "¿Por qué los fósiles de las capas profundas son más antiguos?",
+          "opciones": ["Porque las capas se acumulan una sobre otra con el tiempo", "Porque los animales pesados se hunden más", "Porque el calor de la Tierra los empuja hacia abajo", "Porque los más antiguos eran más pequeños"],
+          "correcta": 0,
+          "explicacion": "Cada capa se deposita encima de la anterior: lo de abajo se formó primero."
+        },
+        {
+          "id": "ev-fo-2",
+          "enunciado": "¿Qué es un fósil de transición?",
+          "opciones": ["Uno que combina rasgos de dos grupos, como Archaeopteryx", "Uno que cambió de lugar con un terremoto", "Uno que todavía no termina de formarse", "Uno de un animal que aún vive"],
+          "correcta": 0,
+          "explicacion": "Archaeopteryx tenía plumas y alas de ave, pero dientes y cola larga de reptil."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "anatomia",
+      "titulo": "Anatomía comparada",
+      "resumen": "Los mismos huesos en el brazo, el ala y la aleta revelan un antepasado común. También hay órganos parecidos sin parentesco y órganos que ya casi no se usan.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "Al comparar cuerpos aparecen tres tipos de estructuras. Las homólogas tienen el mismo origen y plan, aunque cumplan funciones distintas: el brazo humano, el ala del murciélago y la aleta de la ballena tienen los mismos huesos en el mismo orden, porque vienen de un antepasado común. Las análogas cumplen la misma función pero tienen distinto origen, como el ala de un ave y la de una mariposa. Las vestigiales son restos reducidos de órganos que fueron útiles en los antepasados.",
+        "contexto": [
+          { "titulo": "Homólogo no es igual", "texto": "Lo que se repite es el plan de huesos, no la forma ni el tamaño: el húmero de la ballena es corto y grueso; el del murciélago, delgado." },
+          { "titulo": "Análogas: soluciones parecidas", "texto": "Tiburones y delfines tienen forma de torpedo y aletas, pero el tiburón es un pez y el delfín un mamífero." },
+          { "titulo": "Vestigios en el cuerpo humano", "texto": "El coxis (resto de la cola), las muelas del juicio y los músculos para mover las orejas." }
+        ],
+        "analogia": { "titulo": "Una casa remodelada", "texto": "Las estructuras homólogas son como casas hechas con el mismo plano y remodeladas para usos distintos: una tienda, un taller, una vivienda." },
+        "cuaderno": {
+          "facil": [
+            "Homólogas: mismo origen, función distinta (brazo, ala de murciélago, aleta).",
+            "Análogas: misma función, origen distinto (ala de ave y de mariposa).",
+            "Vestigiales: órganos reducidos que fueron útiles en los antepasados."
+          ],
+          "media": ["Las estructuras homólogas indican un antepasado común."],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "Mueve tu brazo: ¿en qué se parece a un ala de murciélago?",
+          "actividad": "Con el Explora, seguir cada hueso en las cuatro extremidades y dibujar la propia mano con los mismos colores.",
+          "errores": ["Confundir homólogo (mismo origen) con análogo (misma función).", "Creer que los órganos vestigiales no sirven para nada."],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Los mismos huesos",
+          "visual": {
+            "tipo": "escena",
+            "id": "ev-anatomia",
+            "fases": [
+              { "id": "humano", "nombre": "Brazo humano", "texto": "Un húmero, dos huesos del antebrazo (radio y cúbito), carpos y cinco dedos." },
+              { "id": "murcielago", "nombre": "Murciélago", "texto": "Los mismos huesos, con los dedos larguísimos sosteniendo una piel: un ala." },
+              { "id": "ballena", "nombre": "Ballena", "texto": "Huesos cortos y anchos dentro de una aleta para nadar." },
+              { "id": "ave", "nombre": "Ave", "texto": "Algunos dedos se fusionaron y las plumas forman el ala.", "nota": "Mismo plan, funciones distintas: estructuras homólogas." }
+            ]
+          }
+        },
+        {
+          "titulo": "Homólogas y análogas",
+          "visual": {
+            "tipo": "compara",
+            "izq": { "icono": "🦇", "titulo": "Homólogas", "puntos": ["Mismo origen", "Función distinta", "Brazo, ala, aleta"] },
+            "der": { "icono": "🦋", "titulo": "Análogas", "puntos": ["Origen distinto", "Misma función", "Ala de ave y de mariposa"] }
+          }
+        },
+        {
+          "titulo": "Órganos vestigiales",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "🦴", "titulo": "Coxis", "texto": "Lo que queda de la cola de nuestros antepasados." },
+              { "icono": "🦷", "titulo": "Muelas del juicio", "texto": "Útiles con mandíbulas más grandes." },
+              { "icono": "🐍", "titulo": "Patas de la boa", "texto": "Pequeños huesos de cadera y espolones." },
+              { "icono": "🐋", "titulo": "Cadera de la ballena", "texto": "Huesos de cadera sin patas traseras." }
+            ]
+          }
+        }
+      ],
+      "juego": "anatomia-juego",
+      "diagrama": "extremidades-homologas",
+      "preguntas": [
+        {
+          "id": "ev-an-1",
+          "enunciado": "El brazo humano y el ala del murciélago tienen los mismos huesos. Son estructuras…",
+          "opciones": ["Homólogas", "Análogas", "Vestigiales", "Fósiles"],
+          "correcta": 0,
+          "explicacion": "Mismo plan de huesos, heredado de un antepasado común, con funciones distintas."
+        },
+        {
+          "id": "ev-an-2",
+          "enunciado": "¿Por qué el ala de una mariposa y la de un ave son análogas?",
+          "opciones": ["Sirven para volar pero tienen origen y estructura distintos", "Tienen los mismos huesos", "Las dos son restos sin función", "Vienen del mismo antepasado cercano"],
+          "correcta": 0,
+          "explicacion": "La de la mariposa no tiene huesos: es una membrana; la del ave tiene huesos y plumas."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "embriologia",
+      "titulo": "Embriología comparada",
+      "resumen": "Los embriones de peces, aves y mamíferos se parecen mucho al comienzo: tienen arcos en el cuello y cola.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "intermedio",
+      "ficha": {
+        "idea": "En sus primeras etapas, los embriones de los vertebrados se parecen: todos tienen una cola y unos pliegues en el cuello llamados arcos faríngeos. En los peces esos arcos forman las branquias; en los mamíferos, partes de la mandíbula, el oído y la garganta. Que el desarrollo empiece igual indica que heredaron el mismo programa de un antepasado común.",
+        "contexto": [
+          { "titulo": "Los dibujos de Haeckel", "texto": "En 1874 Ernst Haeckel dibujó embriones demasiado parecidos. Exageró, pero el parecido real existe y hoy se estudia con fotos y genes." },
+          { "titulo": "La cola del embrión humano", "texto": "Hacia la cuarta semana el embrión humano tiene una cola que luego se reduce hasta el coxis." }
+        ],
+        "cuaderno": {
+          "facil": ["Los embriones de los vertebrados se parecen al comienzo del desarrollo."],
+          "media": ["Todos tienen arcos faríngeos y cola en las primeras etapas."],
+          "avanzada": ["El parecido indica un programa de desarrollo heredado de un antepasado común."]
+        },
+        "docente": {
+          "abrir": "¿Un embrión humano tiene cola? ¿Por qué crees que sí o que no?",
+          "actividad": "Ordenar fotos de embriones de distintos vertebrados por etapa y marcar los rasgos compartidos.",
+          "errores": ["Creer que el embrión humano «pasa por ser pez»: solo comparte rasgos tempranos."],
+          "minutos": 15
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Al principio, muy parecidos",
+          "visual": {
+            "tipo": "escena",
+            "id": "ev-embriones",
+            "fases": [
+              { "id": "temprano", "nombre": "Etapa temprana", "texto": "Pez, pollo, cerdo y humano: los cuatro embriones tienen arcos en el cuello y cola." },
+              { "id": "medio", "nombre": "Etapa media", "texto": "Cada embrión empieza a tomar la forma de su especie." },
+              { "id": "adulto", "nombre": "Adultos", "texto": "Al final son muy distintos, pero empezaron con el mismo plan." }
+            ]
+          }
+        }
+      ],
+      "juego": "embriones-juego",
+      "preguntas": [
+        {
+          "id": "ev-em-1",
+          "enunciado": "¿Qué rasgos comparten los embriones tempranos de los vertebrados?",
+          "opciones": ["Cola y arcos faríngeos", "Plumas y pico", "Pelo y uñas", "Branquias funcionales en todos"],
+          "correcta": 0,
+          "explicacion": "En los peces los arcos forman branquias; en los mamíferos, partes de la mandíbula, el oído y la garganta."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "biogeografia",
+      "titulo": "Biogeografía",
+      "resumen": "Las especies de una isla se parecen a las del continente más cercano: llegaron de allí y cambiaron.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "intermedio",
+      "ficha": {
+        "idea": "La biogeografía estudia dónde vive cada especie. Las especies de las islas se parecen a las del continente más cercano, no a las de otras islas con clima parecido pero lejanas: descienden de unos pocos colonizadores que llegaron del continente y cambiaron en cada isla. También explica por qué los marsupiales dominan en Australia, aislada durante millones de años.",
+        "contexto": [
+          { "titulo": "Galápagos y Sudamérica", "texto": "Los pinzones de las Galápagos se parecen a aves de Sudamérica, no a las de las islas de Cabo Verde, en África, que tienen un clima parecido." },
+          { "titulo": "Wallace y su línea", "texto": "Wallace notó que entre dos islas de Indonesia muy cercanas cambia casi toda la fauna: de un lado animales asiáticos, del otro australianos." },
+          { "titulo": "Islas en la montaña", "texto": "Los páramos son como islas separadas por valles: muchas especies de frailejón viven en un solo páramo." }
+        ],
+        "cuaderno": {
+          "facil": ["Las especies de una isla se parecen a las del continente más cercano."],
+          "media": ["Descienden de colonizadores que cambiaron en cada isla."],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "Si en una isla nueva solo pudieran llegar aves, ¿de dónde llegarían primero?",
+          "actividad": "En un mapa de Colombia, ubicar páramos aislados y comentar por qué tienen especies propias.",
+          "errores": ["Creer que cada isla recibió sus especies ya formadas."],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Colonizar islas",
+          "visual": {
+            "tipo": "escena",
+            "id": "ev-islas",
+            "fases": [
+              { "id": "continente", "nombre": "Islas nuevas", "texto": "Unas islas volcánicas surgen del mar, sin animales." },
+              { "id": "llegada", "nombre": "Llegan colonizadores", "texto": "Unas pocas aves del continente cercano llegan volando o arrastradas por tormentas." },
+              { "id": "diversifica", "nombre": "Cambian en cada isla", "texto": "Separadas, las aves de cada isla cambian según su alimento: aparecen especies distintas." }
+            ]
+          },
+          "atajo": { "texto": "Más sobre esto: El viaje del Beagle", "tema": "historia-evolucion", "bloque": "beagle" }
+        }
+      ],
+      "juego": "biogeografia-juego",
+      "preguntas": [
+        {
+          "id": "ev-bi-1",
+          "enunciado": "¿Por qué los animales de las Galápagos se parecen a los de Sudamérica?",
+          "opciones": ["Porque sus antepasados llegaron de Sudamérica", "Porque tienen el mismo clima que todo el continente", "Porque fueron creados iguales", "Porque las islas estaban pegadas a Europa"],
+          "correcta": 0,
+          "explicacion": "Unos pocos colonizadores del continente cercano llegaron y cambiaron en cada isla."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "molecular",
+      "titulo": "Evidencia molecular",
+      "resumen": "Todos los seres vivos usan ADN y el mismo código genético. Cuanto más se parece el ADN de dos especies, más cercano es su parentesco.",
+      "anio": 5,
+      "etiqueta": "Paso 5",
+      "nivel": "avanzado",
+      "ficha": {
+        "idea": "Todos los seres vivos guardan su información en ADN y la traducen con el mismo código genético: una señal de que tienen un origen común. Al comparar el mismo gen en distintas especies, las diferencias se acumulan con el tiempo: cuantas menos diferencias, más reciente es su antepasado común. Con estos datos se construyen árboles de parentesco que coinciden, en gran parte, con lo que muestran los fósiles y la anatomía.",
+        "contexto": [
+          { "titulo": "Humanos y chimpancés", "texto": "Comparten alrededor del 98–99 % de su ADN: su antepasado común vivió hace unos 6 o 7 millones de años." },
+          { "titulo": "Evolución que se ve", "texto": "Las bacterias resistentes a los antibióticos aumentan cuando estos se usan mal: es selección natural observada en pocos años." }
+        ],
+        "cuaderno": {
+          "facil": ["Todos los seres vivos usan ADN y el mismo código genético."],
+          "media": ["Menos diferencias en el ADN indican un parentesco más cercano."],
+          "avanzada": ["Las comparaciones de ADN permiten construir árboles de parentesco."]
+        },
+        "docente": {
+          "abrir": "Si el ADN es un libro de instrucciones, ¿qué esperarías al comparar el de dos especies parientes?",
+          "actividad": "Comparar secuencias cortas impresas y contar diferencias para ordenar especies por parentesco.",
+          "errores": ["Creer que los humanos descienden de los chimpancés actuales: comparten un antepasado común."],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "El ADN como reloj",
+          "visual": {
+            "tipo": "escena",
+            "id": "ev-molecular",
+            "fases": [
+              { "id": "secuencias", "nombre": "El mismo gen", "texto": "Se lee el mismo fragmento de ADN en cuatro animales." },
+              { "id": "comparar", "nombre": "Contar diferencias", "texto": "El chimpancé difiere poco del humano; el ratón, más; el pez, mucho más." },
+              { "id": "arbol", "nombre": "Árbol de parentesco", "texto": "Con las diferencias se dibuja un árbol: los más parecidos comparten un antepasado más reciente." }
+            ]
+          },
+          "atajo": { "texto": "Más sobre esto: El código genético", "tema": "expresion-genica", "bloque": "codigo" }
+        }
+      ],
+      "juego": "molecular-juego",
+      "preguntas": [
+        {
+          "id": "ev-mo-1",
+          "enunciado": "El gen X tiene 2 diferencias entre A y B y 15 entre A y C. ¿Qué se concluye?",
+          "opciones": ["A está más emparentada con B que con C", "A está más emparentada con C que con B", "Las tres especies son igual de parientes", "B desciende de C"],
+          "correcta": 0,
+          "explicacion": "Menos diferencias indican un antepasado común más reciente."
+        },
+        {
+          "id": "ev-mo-2",
+          "enunciado": "¿Qué indica que todos los seres vivos usen el mismo código genético?",
+          "opciones": ["Un origen común de la vida", "Que todos son de la misma especie", "Que el ADN no cambia", "Que no hay evolución"],
+          "correcta": 0,
+          "explicacion": "Sería muy improbable que el mismo código apareciera muchas veces por separado."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}

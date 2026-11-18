@@ -124,3 +124,79 @@ export function RitmosJuego() {
       cierre="Los dos ritmos existen: depende del grupo y de la época." />
   )
 }
+
+/* ═══ Tema 2 · Evidencias de la evolución ═══ */
+
+export function FosilJuego() {
+  return (
+    <JuegoDecide titulo="¿Es un fósil?" pregunta="¿Es fósil?" instrucciones="Decide si cada hallazgo es un fósil o no." clave="cien:fosil-mejor"
+      opciones={[o('si', 'Es fósil', '🦴'), o('no', 'No es fósil', '🚫')]}
+      cartas={[
+        c('🐊', 'Mandíbula de caimán convertida en roca en la Tatacoa', 'si', 'Los minerales reemplazaron el hueso: es un fósil.'),
+        c('👣', 'Huellas de dinosaurio en una roca', 'si', 'Las huellas también son fósiles.'),
+        c('🦴', 'Hueso de vaca enterrado el año pasado', 'no', 'Es reciente: no ha pasado el tiempo para fosilizarse.'),
+        c('🐚', 'Concha marina dentro de una roca en lo alto de una montaña', 'si', 'Esa roca se formó en el mar y luego se levantó.'),
+        c('🪨', 'Una piedra con forma de corazón', 'no', 'Su forma no viene de un ser vivo.'),
+        c('🍂', 'Molde de una hoja en una roca', 'si', 'Una huella o molde de un ser vivo es un fósil.'),
+      ]}
+      cierre="Fósil: resto o huella de un ser vivo antiguo conservado en la roca." />
+  )
+}
+
+export function AnatomiaJuego() {
+  return (
+    <JuegoDecide titulo="Homólogas, análogas o vestigiales" pregunta="¿Qué tipo de estructura?" instrucciones="Decide qué tipo de estructuras son en cada caso." clave="cien:anatomia-mejor"
+      opciones={[o('ho', 'Homólogas', '🦇'), o('an', 'Análogas', '🦋'), o('ve', 'Vestigial', '🦴')]}
+      cartas={[
+        c('🐋', 'Aleta de ballena y brazo humano', 'ho', 'Mismos huesos, funciones distintas.'),
+        c('🦅', 'Ala de águila y ala de mosca', 'an', 'Las dos sirven para volar, pero tienen origen distinto.'),
+        c('🧍', 'El coxis humano', 've', 'Es el resto de una cola.'),
+        c('🐈', 'Pata de gato y ala de murciélago', 'ho', 'Mismo plan de huesos de mamífero.'),
+        c('🦈', 'Aleta de tiburón y aleta de delfín', 'an', 'Un pez y un mamífero con la misma solución para nadar.'),
+        c('🐍', 'Huesitos de cadera de la boa', 've', 'Restos de las patas de sus antepasados.'),
+        c('🐦', 'Ala de ave y pata delantera de lagarto', 'ho', 'Vienen del mismo plan de extremidad.'),
+      ]}
+      cierre="Homólogas: mismo origen. Análogas: misma función. Vestigiales: restos." />
+  )
+}
+
+export function EmbrionesJuego() {
+  return (
+    <JuegoDecide titulo="Embriones" pregunta="¿Es cierto?" instrucciones="Decide si cada frase sobre los embriones de vertebrados es cierta o falsa." clave="cien:embriones-mejor" opciones={VF}
+      cartas={[
+        c('🐣', 'Los embriones tempranos de pez, pollo y humano se parecen', 'v', 'Comparten cola y arcos faríngeos.'),
+        c('👶', 'El embrión humano tiene cola durante unas semanas', 'v', 'Luego se reduce hasta formar el coxis.'),
+        c('🐟', 'El embrión humano respira con branquias', 'f', 'Tiene arcos faríngeos, pero nunca branquias que funcionen.'),
+        c('🐖', 'Los adultos son tan parecidos como los embriones', 'f', 'Los adultos son muy distintos; el parecido es temprano.'),
+        c('🧬', 'El parecido viene de un programa de desarrollo heredado', 'v', 'Lo heredaron de un antepasado común.'),
+      ]}
+      cierre="Desarrollos que empiezan igual: un antepasado común." />
+  )
+}
+
+export function BiogeografiaJuego() {
+  return (
+    <JuegoDecide titulo="¿De dónde vienen?" pregunta="¿A quién se parecen más?" instrucciones="Decide a qué se parecen más los seres vivos de cada lugar." clave="cien:biogeografia-mejor"
+      opciones={[o('cerca', 'Al continente cercano', '📍'), o('lejos', 'A un lugar lejano de clima igual', '🌍')]}
+      cartas={[
+        c('🐦', 'Pinzones de las Galápagos', 'cerca', 'Se parecen a aves de Sudamérica.'),
+        c('🦎', 'Lagartos de las islas de Cabo Verde', 'cerca', 'Se parecen a los de África, el continente cercano.'),
+        c('🌿', 'Frailejones de un páramo de Colombia', 'cerca', 'Se parecen a los de los páramos vecinos, no a plantas de montañas de África.'),
+      ]}
+      cierre="Las especies de las islas descienden de las del continente más cercano." />
+  )
+}
+
+export function MolecularJuego() {
+  return (
+    <JuegoDecide titulo="¿Quién es más pariente?" pregunta="¿Qué especie es más cercana?" instrucciones="Compara las diferencias en un mismo gen y elige la especie más emparentada con la primera." clave="cien:molecular-mejor"
+      opciones={[o('a', 'La primera opción', '1️⃣'), o('b', 'La segunda opción', '2️⃣')]}
+      cartas={[
+        c('🧍', 'Humano: ¿chimpancé (1 diferencia) o ratón (12)?', 'a', 'Menos diferencias, antepasado más reciente.'),
+        c('🐈', 'Gato: ¿pez (20 diferencias) o perro (4)?', 'b', 'Gato y perro son mamíferos carnívoros.'),
+        c('🐔', 'Pollo: ¿pato (3 diferencias) o tiburón (25)?', 'a', 'Pollo y pato son aves.'),
+        c('🐸', 'Rana: ¿humano (18 diferencias) o salamandra (6)?', 'b', 'Rana y salamandra son anfibios.'),
+      ]}
+      cierre="Menos diferencias en el ADN = parentesco más cercano. (Cifras de ejemplo.)" />
+  )
+}
