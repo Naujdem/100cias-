@@ -449,3 +449,164 @@ export function EscenaIsotopos({ fase }: { fase: string }) {
     </svg>
   )
 }
+
+/* ── Tema 3: los electrones en el átomo ───────────────────────────────── */
+
+const NIVELES_E = ['niveles', 'llenar', 'ultima']
+const CAP_N = [2, 8, 8]
+
+/** Sodio: 2, 8, 1. Los niveles se llenan de adentro hacia afuera. */
+export function EscenaNivelesE({ fase }: { fase: string }) {
+  const i = idx(NIVELES_E, fase)
+  const lleno = i === 0 ? [0, 0, 0] : [2, 8, 1]
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label={`Niveles de energía: ${fase}`} className="h-full w-full">
+      {fondo('#eef3f7')}
+      <circle cx="150" cy="145" r="14" fill={ROJO} />
+      <T x={150} y={150} t="Na" c="#fff" s={10} />
+      {CAP_N.map((cap, k) => {
+        const r = 40 + k * 32
+        return (
+          <g key={k}>
+            <circle cx="150" cy="145" r={r} fill="none" stroke={i === 2 && k === 2 ? ORO : '#9bb0c6'} strokeWidth={i === 2 && k === 2 ? 4 : 2} style={{ transition: 'stroke 0.6s' }} />
+            {Array.from({ length: cap }, (_, j) => {
+              const a = (j / cap) * Math.PI * 2 - Math.PI / 2
+              return <circle key={j} cx={150 + r * Math.cos(a)} cy={145 + r * Math.sin(a)} r="5" fill={AZUL} style={{ transition: suave, opacity: j < lleno[k] ? 1 : 0.08 }} />
+            })}
+          </g>
+        )
+      })}
+      <g style={ver(i === 0)}>
+        <T x={315} y={90} t="nivel 1: hasta 2" s={12} />
+        <T x={315} y={115} t="nivel 2: hasta 8" s={12} />
+        <T x={315} y={140} t="nivel 3: hasta 8*" s={12} />
+        <T x={315} y={175} t="*en los primeros 20 elementos" s={9} peso={600} />
+      </g>
+      <g style={ver(i === 1)}>
+        <T x={315} y={110} t="Sodio: 11 electrones" s={13} />
+        <T x={315} y={135} t="2 · 8 · 1" s={18} c={AZUL} />
+        <T x={315} y={160} t="de adentro hacia afuera" s={11} peso={600} />
+      </g>
+      <g style={ver(i === 2)}>
+        <T x={315} y={110} t="Última capa: 1 electrón" s={13} c="#a8822f" />
+        <T x={315} y={135} t="electrones de valencia" s={12} />
+        <T x={315} y={160} t="son los que reaccionan" s={11} peso={600} />
+      </g>
+      <T x={200} y={285} t={['Cada nivel tiene un cupo de electrones', 'Se llenan primero los niveles de menor energía', 'La última capa decide cómo se comporta el átomo'][i]} s={13} />
+    </svg>
+  )
+}
+
+const MOELLER = ['subniveles', 'diagonales', 'ejemplo']
+const FILAS = [['1s'], ['2s', '2p'], ['3s', '3p', '3d'], ['4s', '4p', '4d', '4f'], ['5s', '5p', '5d', '5f'], ['6s', '6p', '6d'], ['7s', '7p']]
+
+export function EscenaMoeller({ fase }: { fase: string }) {
+  const i = idx(MOELLER, fase)
+  const x0 = 60, y0 = 40, dx = 52, dy = 32
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label={`Diagrama de Moeller: ${fase}`} className="h-full w-full">
+      <Flecha id="fm-a" c={ROJO} />
+      {fondo('#f4f0e8')}
+      {FILAS.map((f, r) => f.map((s, c) => (
+        <T key={s} x={x0 + c * dx} y={y0 + r * dy} t={s} s={14} c={i === 2 && ['1s', '2s', '2p', '3s', '3p', '4s', '3d'].includes(s) ? AZUL : TINTA} />
+      )))}
+      <g style={ver(i >= 1)}>
+        {Array.from({ length: 8 }, (_, d) => {
+          // diagonal d: empieza en la casilla (fila, col) con fila + col = d… recorrida de arriba-derecha a abajo-izquierda
+          const c1 = Math.min(Math.floor(d / 2), 3), r1 = d - c1
+          const r2 = Math.min(d, 6), c2 = d - r2
+          if (r1 > 6 || c2 < 0) return null
+          return <line key={d} x1={x0 + c1 * dx + 18} y1={y0 + r1 * dy - 16} x2={x0 + c2 * dx - 14} y2={y0 + r2 * dy + 6} stroke={ROJO} strokeWidth="1.8" opacity="0.75" markerEnd="url(#fm-a)" />
+        })}
+      </g>
+      <g style={ver(i === 0)}>
+        <T x={305} y={130} t="s: 2 e⁻ · p: 6 e⁻" s={13} />
+        <T x={305} y={155} t="d: 10 e⁻ · f: 14 e⁻" s={13} />
+      </g>
+      <g style={ver(i === 1)}>
+        <T x={300} y={140} t="Se siguen las flechas:" s={12} />
+        <T x={300} y={162} t="1s 2s 2p 3s 3p 4s 3d…" s={12} c={ROJO} />
+      </g>
+      <g style={ver(i === 2)}>
+        <T x={300} y={125} t="Hierro (26 e⁻):" s={13} />
+        <T x={300} y={150} t="1s² 2s² 2p⁶ 3s²" s={13} c={AZUL} />
+        <T x={300} y={172} t="3p⁶ 4s² 3d⁶" s={13} c={AZUL} />
+        <T x={300} y={195} t="2+2+6+2+6+2+6 = 26" s={11} peso={600} />
+      </g>
+      <T x={200} y={285} t={['Cada nivel se divide en subniveles: s, p, d, f', 'El 4s se llena antes que el 3d', 'El exponente dice cuántos electrones hay'][i]} s={13} />
+    </svg>
+  )
+}
+
+const CAJAS = ['caja', 'pauli', 'hund']
+
+function Caja({ x, y, f }: { x: number; y: number; f: ('u' | 'd')[] }) {
+  return (
+    <g>
+      <rect x={x} y={y} width="34" height="34" fill="#fff" stroke={TINTA} strokeWidth="2" />
+      {f.includes('u') && <path d={`M ${x + 11} ${y + 28} L ${x + 11} ${y + 6} M ${x + 6} ${y + 12} L ${x + 11} ${y + 6} L ${x + 16} ${y + 12}`} stroke={AZUL} strokeWidth="2.5" fill="none" />}
+      {f.includes('d') && <path d={`M ${x + 23} ${y + 6} L ${x + 23} ${y + 28} M ${x + 18} ${y + 22} L ${x + 23} ${y + 28} L ${x + 28} ${y + 22}`} stroke={ROJO} strokeWidth="2.5" fill="none" />}
+    </g>
+  )
+}
+
+export function EscenaCajas({ fase }: { fase: string }) {
+  const i = idx(CAJAS, fase)
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label={`Diagrama de orbitales: ${fase}`} className="h-full w-full">
+      {fondo('#eef3f7')}
+      <g style={ver(i === 0)}>
+        <Caja x={183} y={90} f={[]} />
+        <T x={200} y={150} t="cada caja = 1 orbital" s={13} />
+        <T x={200} y={172} t="cabe un máximo de 2 electrones" s={12} peso={600} />
+        <T x={200} y={215} t="s: 1 caja · p: 3 · d: 5 · f: 7" s={13} c={AZUL} />
+      </g>
+      <g style={ver(i === 1)}>
+        <Caja x={110} y={90} f={['u', 'd']} />
+        <T x={127} y={150} t="✔ giros opuestos" s={12} c="#4f8a3c" />
+        <rect x="256" y="90" width="34" height="34" fill="#fff" stroke={TINTA} strokeWidth="2" />
+        <path d="M 267 118 L 267 96 M 262 102 L 267 96 L 272 102 M 279 118 L 279 96 M 274 102 L 279 96 L 284 102" stroke={AZUL} strokeWidth="2.5" fill="none" />
+        <T x={273} y={150} t="✘ mismo giro" s={12} c={ROJO} />
+        <T x={200} y={215} t="Pauli: en un orbital, dos electrones" s={13} />
+        <T x={200} y={235} t="con giros (espín) opuestos" s={13} />
+      </g>
+      <g style={ver(i === 2)}>
+        <T x={200} y={50} t="Nitrógeno: 2p³" s={14} />
+        {[0, 1, 2].map((k) => <Caja key={k} x={70 + k * 36} y={80} f={['u']} />)}
+        <T x={123} y={140} t="✔ uno en cada caja" s={12} c="#4f8a3c" />
+        <Caja x={230} y={80} f={['u', 'd']} /><Caja x={266} y={80} f={['u']} /><Caja x={302} y={80} f={[]} />
+        <T x={285} y={140} t="✘ se aparean antes" s={12} c={ROJO} />
+        <T x={200} y={210} t="Hund: primero uno en cada orbital," s={13} />
+        <T x={200} y={230} t="todos con el mismo giro; luego se aparean" s={13} />
+        <T x={200} y={260} t="(como los pasajeros que eligen silla sola en el bus)" s={11} peso={600} />
+      </g>
+    </svg>
+  )
+}
+
+const CUANT = ['n', 'l', 'm', 's']
+
+export function EscenaCuanticos({ fase }: { fase: string }) {
+  const i = idx(CUANT, fase)
+  const filas = [
+    ['n', 'principal', 'nivel: 1, 2, 3…', 'el piso del edificio'],
+    ['ℓ', 'secundario', 'forma: 0 = s, 1 = p, 2 = d, 3 = f', 'el tipo de apartamento'],
+    ['mℓ', 'magnético', 'orientación: de −ℓ a +ℓ', 'la puerta'],
+    ['s', 'espín', 'giro: +½ o −½', 'quién de los dos inquilinos'],
+  ]
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label={`Números cuánticos: ${fase}`} className="h-full w-full">
+      {fondo('#f2f0f7')}
+      <T x={200} y={34} t="La «dirección» de un electrón" s={15} />
+      {filas.map(([sim, nom, val, ana], k) => (
+        <g key={sim} style={{ transition: suave, opacity: k <= i ? 1 : 0.15 }}>
+          <rect x="20" y={52 + k * 52} width="360" height="44" rx="10" fill={k === i ? '#fff' : '#ebe8f2'} stroke={k === i ? AZUL : '#d4cfe0'} strokeWidth="2" />
+          <text x="48" y={81 + k * 52} textAnchor="middle" fontSize="20" fontWeight="800" fill={AZUL}>{sim}</text>
+          <text x="80" y={72 + k * 52} fontSize="12" fontWeight="800" fill={TINTA}>{nom} · {val}</text>
+          <text x="80" y={88 + k * 52} fontSize="11" fontWeight="600" fill={GRIS}>como {ana}</text>
+        </g>
+      ))}
+      <g style={ver(i === 3)}><T x={200} y={280} t="Ej.: el electrón del hidrógeno → n = 1, ℓ = 0, mℓ = 0, s = +½" s={12} /></g>
+    </svg>
+  )
+}

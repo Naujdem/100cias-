@@ -90,6 +90,8 @@ import { SepararHeteroJuego, SepararHomoJuego, CafeSeparaJuego } from './JuegosS
 import { DemocritoJuego, DaltonJuego, ThomsonJuego, RutherfordJuego, BohrJuego, NubeJuego, ChadwickJuego } from './JuegosModelosAtomicos.tsx'
 import LaminaOro from './LaminaOro.tsx'
 import ArmaAtomo from './ArmaAtomo.tsx'
+import LlenaOrbitales from './LlenaOrbitales.tsx'
+import { CapasElectronesJuego, MoellerJuego, HundJuego, CuanticosJuego } from './JuegosElectrones.tsx'
 import { ParticulasJuego, NumeroAtomicoJuego, IonJuego, IsotopoJuego } from './JuegosAtomoDentro.tsx'
 import { AmenazaVulnerabilidadJuego, AmenazasColombiaJuego, ArmeroJuego, AntesDuranteDespuesJuego, PlanEscolarJuego } from './JuegosRiesgo.tsx'
 import RiesgoVereda from './RiesgoVereda.tsx'
@@ -457,6 +459,11 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'numero-atomico-juego': NumeroAtomicoJuego,
   'ion-juego': IonJuego,
   'isotopo-juego': IsotopoJuego,
+  'llena-orbitales': LlenaOrbitales,
+  'capas-e-juego': CapasElectronesJuego,
+  'moeller-juego': MoellerJuego,
+  'hund-juego': HundJuego,
+  'cuanticos-juego': CuanticosJuego,
   'amenaza-vulnerabilidad-juego': AmenazaVulnerabilidadJuego,
   'amenazas-colombia-juego': AmenazasColombiaJuego,
   'armero-juego': ArmeroJuego,

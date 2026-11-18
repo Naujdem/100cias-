@@ -44,7 +44,6 @@ export const PROXIMOS: Record<string, { etiqueta: string; nombre: string }[]> = 
   materia: [
   ],
   atomo: [
-    { etiqueta: '3', nombre: 'Los electrones en el átomo' },
     { etiqueta: '4', nombre: 'La tabla periódica: historia y estructura' },
     { etiqueta: '5', nombre: 'Propiedades periódicas' },
     { etiqueta: '6', nombre: 'Enlace químico' },
