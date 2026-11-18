@@ -123,6 +123,11 @@
         "bioticos-abioticos",
         "pisos-termicos",
         "ecosistemas-colombia"
+      ],
+      "flujo-energia": [
+        "productores-consumidores",
+        "cadenas",
+        "redes"
       ]
     },
     "nivelDibujo": "basico",
@@ -147,7 +152,8 @@
       "mutaciones": "Qué es una mutación, mutaciones puntuales y de dónde sale la variación.",
       "biotecnologia": "Qué es la biotecnología, los transgénicos y el debate.",
       "niveles-ecologicos": "Qué es la ecología, los niveles y hábitat y nicho.",
-      "factores-ecosistemas": "Factores, pisos térmicos y ecosistemas de Colombia."
+      "factores-ecosistemas": "Factores, pisos térmicos y ecosistemas de Colombia.",
+      "flujo-energia": "Productores y consumidores, cadenas y redes tróficas."
     }
   },
   {
@@ -312,6 +318,12 @@
         "pisos-termicos",
         "ecosistemas-colombia",
         "tolerancia"
+      ],
+      "flujo-energia": [
+        "productores-consumidores",
+        "cadenas",
+        "redes",
+        "piramides"
       ]
     },
     "nivelDibujo": "intermedio",
@@ -336,7 +348,8 @@
       "mutaciones": "Suma los efectos (anemia falciforme) y los cambios en el número de cromosomas.",
       "biotecnologia": "Suma el ADN recombinante, la PCR y CRISPR.",
       "niveles-ecologicos": "Los tres pasos, con el bioma y la competencia.",
-      "factores-ecosistemas": "Suma el rango de tolerancia y el factor limitante."
+      "factores-ecosistemas": "Suma el rango de tolerancia y el factor limitante.",
+      "flujo-energia": "Suma la pirámide de energía (regla del 10 %)."
     }
   },
   {
@@ -522,6 +535,12 @@
         "pisos-termicos",
         "ecosistemas-colombia",
         "tolerancia"
+      ],
+      "flujo-energia": [
+        "productores-consumidores",
+        "cadenas",
+        "redes",
+        "piramides"
       ]
     },
     "nivelDibujo": "avanzado",
@@ -546,7 +565,8 @@
       "mutaciones": "Los seis pasos, con las mutaciones cromosómicas estructurales.",
       "biotecnologia": "Los seis pasos completos.",
       "niveles-ecologicos": "Los tres pasos, con el bioma y la competencia.",
-      "factores-ecosistemas": "Los cuatro pasos completos."
+      "factores-ecosistemas": "Los cuatro pasos completos.",
+      "flujo-energia": "Los cuatro pasos completos."
     }
   }
 ]

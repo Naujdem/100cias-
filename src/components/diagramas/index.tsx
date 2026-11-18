@@ -27,6 +27,8 @@ import MutaGen from './MutaGen.tsx'
 import PcrCiclos from './PcrCiclos.tsx'
 import { EcologiaQueJuego, NivelesEcologicosJuego, HabitatNichoJuego, FactoresJuego, PisosJuego, EcosistemasColombiaJuego, ToleranciaJuego } from './JuegosEcologia.tsx'
 import PisosTermicos from './PisosTermicos.tsx'
+import RedTrofica from './RedTrofica.tsx'
+import { ProductoresJuego, CadenaJuego, RedJuego, PiramideJuego } from './JuegosEnergia.tsx'
 import { BiotecQueJuego, InsulinaJuego, PcrJuego, TransgenicoJuego, EdicionJuego, DebateJuego } from './JuegosBiotec.tsx'
 import { QueEsMutacionJuego, PuntualesJuego, EfectosJuego, NumericasJuego, CromosomicasJuego, VariacionJuego } from './JuegosMutaciones.tsx'
 import { IncompletaJuego, CodominanciaJuego, SangreJuego, LigadaJuego, GenealogiaJuego, PoligenicaJuego } from './JuegosNoMendel.tsx'
@@ -204,6 +206,11 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'ecosistemas-co-juego': EcosistemasColombiaJuego,
   'tolerancia-juego': ToleranciaJuego,
   'pisos-termicos': PisosTermicos,
+  'red-trofica': RedTrofica,
+  'productores-juego': ProductoresJuego,
+  'cadena-juego': CadenaJuego,
+  'red-juego': RedJuego,
+  'piramide-juego': PiramideJuego,
   'meiosis-i-ii-juego': MeiosisIoIIJuego,
   'oficio-juego': OficioJuego,
   'origen-celulas-juego': OrigenCelulasJuego,
