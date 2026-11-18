@@ -33,6 +33,7 @@ import SimuladorPoblaciones from './SimuladorPoblaciones.tsx'
 import { DensidadJuego, CrecimientoJuego, DepredadorPresaJuego } from './JuegosPoblaciones.tsx'
 import { SucesionPrimariaJuego, SucesionSecundariaJuego, PerturbacionesJuego } from './JuegosSucesion.tsx'
 import { BiodiversidadNivelesJuego, MegadiversaJuego, AmenazasJuego, ConservarJuego } from './JuegosBiodiversidad.tsx'
+import { TerritorioJuego, CalendarioJuego, PolicultivoJuego, DialogoJuego } from './JuegosTerritorio.tsx'
 import { ProductoresJuego, CadenaJuego, RedJuego, PiramideJuego } from './JuegosEnergia.tsx'
 import { BiotecQueJuego, InsulinaJuego, PcrJuego, TransgenicoJuego, EdicionJuego, DebateJuego } from './JuegosBiotec.tsx'
 import { QueEsMutacionJuego, PuntualesJuego, EfectosJuego, NumericasJuego, CromosomicasJuego, VariacionJuego } from './JuegosMutaciones.tsx'
@@ -230,6 +231,10 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'megadiversa-juego': MegadiversaJuego,
   'amenazas-juego': AmenazasJuego,
   'conservar-juego': ConservarJuego,
+  'territorio-juego': TerritorioJuego,
+  'calendario-juego': CalendarioJuego,
+  'policultivo-juego': PolicultivoJuego,
+  'dialogo-juego': DialogoJuego,
   'meiosis-i-ii-juego': MeiosisIoIIJuego,
   'oficio-juego': OficioJuego,
   'origen-celulas-juego': OrigenCelulasJuego,

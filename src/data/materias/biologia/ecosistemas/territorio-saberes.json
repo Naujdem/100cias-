@@ -1,0 +1,416 @@
+{
+  "id": "territorio-saberes",
+  "materia": "biologia",
+  "area": "ecosistemas",
+  "titulo": "Territorio y saberes",
+  "subtema": "La ecología desde las comunidades",
+  "orden": 38,
+  "etiqueta": "8",
+  "vistas": [
+    "ruta"
+  ],
+  "tituloVista": "Ruta del territorio",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Comprender el territorio como lugar, relaciones y memoria.",
+    "Reconocer saberes de las comunidades sobre el ritmo del año y los cultivos.",
+    "Practicar el diálogo de saberes con respeto."
+  ],
+  "fuentes": [
+    "BORRADOR general: cada docente lo completa con los saberes de la comunidad del colegio. A verificar: temporadas de lluvia de la región, prácticas de la chagra y el tul."
+  ],
+  "bloques": [
+    {
+      "id": "territorio",
+      "titulo": "El territorio",
+      "resumen": "El territorio no es solo tierra: es el lugar, las relaciones entre quienes lo habitan y la memoria de generaciones.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "Para muchas comunidades indígenas, afrodescendientes y campesinas, el territorio es más que un pedazo de tierra: incluye el agua, los seres vivos, las personas que lo trabajan y cuidan, y la memoria de lo que se sabe de él desde hace generaciones. Desde la ecología también se ve así: un ecosistema es un tejido de relaciones, y las personas hacen parte de él.",
+        "contexto": [
+          {
+            "titulo": "Para completar en clase",
+            "texto": "Cada comunidad tiene su manera de nombrar y cuidar su territorio. Esta lección es una base: lo más valioso es lo que aporten los estudiantes, sus familias y los mayores de la región."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Territorio = lugar + relaciones + memoria."
+          ],
+          "media": [
+            "Las personas también hacen parte del ecosistema."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Qué lugares de la vereda tienen un nombre o una historia especial?",
+          "actividad": "Hacer un mapa del territorio con los estudiantes: quebradas, bosques, sitios con historia, quién sabe qué.",
+          "errores": [
+            "Pensar que solo los científicos saben de la naturaleza.",
+            "Presentar los saberes de una comunidad como si fueran de todas."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Lugar, relaciones y memoria",
+          "visual": {
+            "tipo": "escena",
+            "id": "territorio",
+            "fases": [
+              {
+                "id": "tierra",
+                "nombre": "La tierra",
+                "texto": "Montañas, valles y suelo."
+              },
+              {
+                "id": "agua",
+                "nombre": "El agua",
+                "texto": "Las quebradas y ríos que lo recorren."
+              },
+              {
+                "id": "seres",
+                "nombre": "Los seres vivos",
+                "texto": "Plantas, animales, cultivos."
+              },
+              {
+                "id": "personas",
+                "nombre": "Las personas",
+                "texto": "Quienes lo trabajan, lo habitan y lo cuidan."
+              },
+              {
+                "id": "memoria",
+                "nombre": "La memoria",
+                "texto": "Nombres, historias y saberes que pasan de generación en generación."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre esto: niveles ecológicos",
+            "tema": "niveles-ecologicos",
+            "bloque": "niveles"
+          }
+        }
+      ],
+      "juego": "territorio-juego",
+      "preguntas": [
+        {
+          "id": "ec-te-1",
+          "enunciado": "Según esta lección, ¿qué incluye el territorio?",
+          "opciones": [
+            "El lugar, las relaciones y la memoria",
+            "Solo el terreno y sus límites",
+            "Solo los animales silvestres",
+            "Solo lo que aparece en un mapa"
+          ],
+          "correcta": 0,
+          "explicacion": "Es un tejido de relaciones."
+        },
+        {
+          "id": "ec-te-2",
+          "enunciado": "¿Las personas hacen parte del ecosistema?",
+          "opciones": [
+            "Sí: se relacionan con los demás seres vivos y con el entorno",
+            "No, viven aparte de la naturaleza",
+            "Solo si viven en la selva",
+            "Solo los científicos"
+          ],
+          "correcta": 0,
+          "explicacion": "Lo usan, lo transforman y lo cuidan."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "senales",
+      "titulo": "Leer las señales del año",
+      "resumen": "Las comunidades que viven del campo conocen el ritmo de lluvias y veranos y lo leen en señales de la naturaleza.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "requiere": [
+        "territorio"
+      ],
+      "ficha": {
+        "idea": "Quienes viven del campo conocen el ritmo del año: en buena parte de la región andina hay dos temporadas de lluvias (más o menos de marzo a mayo y de septiembre a noviembre) y dos más secas. Con ese ritmo deciden cuándo sembrar y cosechar. Muchas comunidades leen señales como la floración de ciertos árboles, el canto de algunas aves, el vuelo de las hormigas, las nubes o la luna. Algunas de esas señales coinciden con lo que mide la ciencia y otras se están estudiando: vale la pena investigarlas con respeto.",
+        "contexto": [
+          {
+            "titulo": "Investigar en casa",
+            "texto": "Preguntar en la familia qué señales usan para saber que vienen las lluvias, y anotarlas durante un año para comprobarlas."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Hay temporadas de lluvias y de verano.",
+            "Se siembra con las lluvias."
+          ],
+          "media": [
+            "Las comunidades leen señales de la naturaleza."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Cómo saben en tu familia que van a llegar las lluvias?",
+          "actividad": "Llevar un calendario ecológico del curso durante el año: lluvias, floraciones, aves, siembras.",
+          "errores": [
+            "Desechar los saberes sin escucharlos o aceptarlos todos sin comprobarlos."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "El ritmo del año",
+          "visual": {
+            "tipo": "escena",
+            "id": "calendario",
+            "fases": [
+              {
+                "id": "anio",
+                "nombre": "El año",
+                "texto": "El año de una comunidad que vive del campo."
+              },
+              {
+                "id": "lluvias",
+                "nombre": "Lluvias y verano",
+                "texto": "En buena parte de la región andina hay dos temporadas de lluvias."
+              },
+              {
+                "id": "siembra",
+                "nombre": "Sembrar y cosechar",
+                "texto": "Se siembra al llegar las lluvias y se cosecha después."
+              },
+              {
+                "id": "senales",
+                "nombre": "Las señales",
+                "texto": "Floraciones, aves, hormigas, nubes o la luna: cada comunidad tiene las suyas."
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "calendario-juego",
+      "preguntas": [
+        {
+          "id": "ec-se-1",
+          "enunciado": "¿Por qué se siembra al comienzo de las lluvias?",
+          "opciones": [
+            "Porque las semillas necesitan humedad para germinar",
+            "Porque hace más calor",
+            "Porque las plagas desaparecen",
+            "Por costumbre, sin ninguna razón"
+          ],
+          "correcta": 0,
+          "explicacion": "El agua es clave para germinar."
+        },
+        {
+          "id": "ec-se-2",
+          "enunciado": "¿Qué es una buena forma de estudiar una señal tradicional del clima?",
+          "opciones": [
+            "Anotarla durante un tiempo y comparar con lo que pasa",
+            "Descartarla porque no es científica",
+            "Creerla sin revisarla",
+            "No preguntar a nadie"
+          ],
+          "correcta": 0,
+          "explicacion": "Escuchar y comprobar: así dialogan saberes y ciencia."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "policultivo",
+      "titulo": "Chagra, tul y huerta",
+      "resumen": "Sembrar muchas especies juntas protege el suelo, reduce las plagas y da comida variada.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "basico",
+      "requiere": [
+        "territorio"
+      ],
+      "ficha": {
+        "idea": "Muchas comunidades siembran varias especies juntas: es el policultivo. Así son la chagra de los pueblos amazónicos, el tul de los nasa y la huerta campesina. El fríjol aporta nitrógeno al suelo, el maíz le sirve de tutor y la ahuyama cubre el suelo y guarda la humedad; además, las plagas se propagan menos que en un monocultivo y la familia tiene comida variada. Guardar e intercambiar las semillas propias conserva la diversidad genética.",
+        "contexto": [
+          {
+            "titulo": "Semillas propias",
+            "texto": "Los custodios de semillas guardan variedades criollas de maíz, fríjol y papa adaptadas a cada lugar."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Policultivo: muchas especies juntas.",
+            "Protege el suelo y reduce las plagas."
+          ],
+          "media": [
+            "Las semillas criollas conservan la diversidad genética."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Qué se siembra junto en las huertas de tu familia?",
+          "actividad": "Diseñar o mejorar la huerta escolar como policultivo.",
+          "errores": [
+            "Pensar que lo tradicional es siempre menos productivo."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Muchas especies juntas",
+          "visual": {
+            "tipo": "escena",
+            "id": "policultivo",
+            "fases": [
+              {
+                "id": "mono",
+                "nombre": "Monocultivo",
+                "texto": "Una sola especie: si llega una plaga, encuentra comida de sobra."
+              },
+              {
+                "id": "poli",
+                "nombre": "Policultivo",
+                "texto": "Muchas especies juntas: la chagra, el tul, la huerta."
+              },
+              {
+                "id": "por-que",
+                "nombre": "Por qué funciona",
+                "texto": "El fríjol aporta nitrógeno, el maíz da apoyo y la ahuyama cubre el suelo."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre esto: conservar la biodiversidad",
+            "tema": "biodiversidad",
+            "bloque": "conservar"
+          }
+        }
+      ],
+      "juego": "policultivo-juego",
+      "preguntas": [
+        {
+          "id": "ec-po-1",
+          "enunciado": "¿Qué ventaja tiene el policultivo frente al monocultivo?",
+          "opciones": [
+            "Las plagas se propagan menos y el suelo se protege",
+            "Se cosecha más fácil con máquinas",
+            "Necesita más insecticidas",
+            "Solo sirve para un cultivo"
+          ],
+          "correcta": 0,
+          "explicacion": "La diversidad protege."
+        },
+        {
+          "id": "ec-po-2",
+          "enunciado": "¿Qué aporta el fríjol al suelo?",
+          "opciones": [
+            "Nitrógeno",
+            "Sal",
+            "Arena",
+            "Petróleo"
+          ],
+          "correcta": 0,
+          "explicacion": "Sus raíces tienen bacterias que fijan nitrógeno."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "dialogo",
+      "titulo": "Diálogo de saberes",
+      "resumen": "La ciencia y los saberes de las comunidades pueden conversar; investigar con respeto es pedir permiso, escuchar, reconocer y devolver.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "intermedio",
+      "requiere": [
+        "territorio"
+      ],
+      "ficha": {
+        "idea": "La ciencia mide y experimenta; los saberes de las comunidades vienen de observar el territorio durante generaciones. Cada forma de conocer ve cosas que la otra no, y pueden conversar: es el diálogo de saberes. Para aprender de una comunidad hay que pedir permiso, escuchar a los mayores, reconocer quién enseñó cada cosa y devolver lo aprendido.",
+        "contexto": [
+          {
+            "titulo": "Ejemplos de diálogo",
+            "texto": "Ecólogos e indígenas han trabajado juntos para inventariar plantas medicinales, restaurar bosques y entender cómo cambia el clima en las montañas."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Ciencia y saberes pueden dialogar."
+          ],
+          "media": [
+            "Investigar con respeto: permiso, escucha, reconocimiento y devolución."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Qué podría aprender un científico de un mayor de la comunidad, y al revés?",
+          "actividad": "Proyecto: entrevistar (con permiso) a un mayor sobre una planta o un animal y compararlo con lo que dice la ciencia.",
+          "errores": [
+            "Ver los saberes como «creencias» y la ciencia como única verdad.",
+            "Romantizar los saberes sin contrastarlos."
+          ],
+          "minutos": 40
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Conversar",
+          "visual": {
+            "tipo": "escena",
+            "id": "dialogo",
+            "fases": [
+              {
+                "id": "dos-formas",
+                "nombre": "Dos formas",
+                "texto": "La ciencia mide y experimenta; los saberes observan por generaciones."
+              },
+              {
+                "id": "puente",
+                "nombre": "Un puente",
+                "texto": "Cada una ve cosas que la otra no: pueden conversar."
+              },
+              {
+                "id": "respeto",
+                "nombre": "Con respeto",
+                "texto": "Pedir permiso, escuchar, reconocer y devolver."
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "dialogo-juego",
+      "preguntas": [
+        {
+          "id": "ec-di-1",
+          "enunciado": "¿Qué es el diálogo de saberes?",
+          "opciones": [
+            "Una conversación entre la ciencia y los saberes de las comunidades",
+            "Una discusión para ver quién gana",
+            "Copiar lo que dicen los libros",
+            "Un examen escrito"
+          ],
+          "correcta": 0,
+          "explicacion": "Cada una aporta lo que la otra no ve."
+        },
+        {
+          "id": "ec-di-2",
+          "enunciado": "¿Qué es lo primero al investigar los saberes de una comunidad?",
+          "opciones": [
+            "Pedir permiso",
+            "Publicar sin preguntar",
+            "Grabar a escondidas",
+            "Corregir a los mayores"
+          ],
+          "correcta": 0,
+          "explicacion": "El consentimiento es la base del respeto."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}
