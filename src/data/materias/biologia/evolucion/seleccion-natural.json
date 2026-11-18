@@ -1,0 +1,366 @@
+{
+  "id": "seleccion-natural",
+  "materia": "biologia",
+  "area": "evolucion",
+  "titulo": "Selección natural",
+  "subtema": "Cómo el ambiente moldea a las especies",
+  "orden": 43,
+  "etiqueta": "3",
+  "vistas": ["ruta"],
+  "tituloVista": "Ruta de la selección natural",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Explicar los cuatro ingredientes de la selección natural.",
+    "Diferenciar la selección natural de la artificial y de la idea de Lamarck.",
+    "Reconocer casos de selección natural observados hoy."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con un texto de biología. A verificar: fechas de la polilla moteada (Biston betularia; forma oscura registrada en 1848, mayoría hacia 1895 en Manchester), domesticación del maíz (≈ 9000 años, México), sequía de 1977 en la isla Daphne Mayor (Peter y Rosemary Grant)."
+  ],
+  "bloques": [
+    {
+      "id": "ingredientes",
+      "titulo": "Los ingredientes de la selección natural",
+      "resumen": "Variación, herencia, sobreproducción y supervivencia diferencial: con estos cuatro ingredientes, las poblaciones cambian.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "La selección natural necesita cuatro ingredientes. Variación: los individuos de una población son distintos. Herencia: muchas de esas diferencias pasan a los hijos. Sobreproducción: nacen más individuos de los que el ambiente puede sostener. Supervivencia diferencial: los que tienen variaciones favorables en ese ambiente sobreviven y se reproducen más. Generación tras generación, las variaciones favorables se vuelven más comunes y la población se adapta.",
+        "contexto": [
+          { "titulo": "El ambiente no crea, escoge", "texto": "La selección no fabrica la variación: escoge entre las que ya existen. Las variaciones nuevas aparecen por mutación." },
+          { "titulo": "Selecciona individuos, cambia poblaciones", "texto": "Un individuo no evoluciona en su vida. Lo que cambia es la población, de una generación a la siguiente." },
+          { "titulo": "Favorable depende del lugar", "texto": "Un pelaje grueso es ventaja en el páramo y desventaja en la selva caliente." }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Ingredientes: variación, herencia, sobreproducción y supervivencia diferencial.",
+            "Los individuos con variaciones favorables sobreviven y dejan más hijos.",
+            "Las poblaciones cambian, no los individuos."
+          ],
+          "media": ["La selección escoge entre variaciones que ya existen."],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "Si todos los conejos fueran idénticos, ¿podría el ambiente favorecer a unos sobre otros?",
+          "actividad": "Juego de las pinzas: con pinzas, cucharas y ganchos (picos distintos) recoger frijoles; contar quién «sobrevive» y repetir.",
+          "errores": ["Creer que los individuos cambian porque lo necesitan.", "Pensar que la selección crea la variación."],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Un pez pone 5000 huevos. ¿Cuántos crees que llegan a adultos?",
+            "opciones": ["Muy pocos", "Casi todos", "La mitad exacta", "Todos, si hay comida"],
+            "correcta": 0,
+            "explicacion": "La mayoría muere antes: nacen muchos más de los que el ambiente puede sostener. ¿Cuáles sobreviven? Ahí entra la selección."
+          }
+        },
+        {
+          "titulo": "Cuatro ingredientes",
+          "visual": {
+            "tipo": "escena",
+            "id": "ev-seleccion",
+            "fases": [
+              { "id": "variacion", "nombre": "Variación", "texto": "Los escarabajos de una población no son iguales: unos son verdes y otros marrones." },
+              { "id": "muchos", "nombre": "Sobreproducción", "texto": "Nacen más de los que el ambiente puede sostener." },
+              { "id": "seleccion", "nombre": "Supervivencia diferencial", "texto": "Sobre la tierra oscura, las aves ven y comen más escarabajos verdes." },
+              { "id": "herencia", "nombre": "Herencia", "texto": "Los sobrevivientes tienen hijos parecidos a ellos." },
+              { "id": "cambio", "nombre": "La población cambia", "texto": "Tras muchas generaciones casi todos son marrones: la población se adaptó." }
+            ]
+          }
+        },
+        {
+          "titulo": "Lamarck y Darwin",
+          "visual": {
+            "tipo": "compara",
+            "izq": { "icono": "🦒", "titulo": "Lamarck", "puntos": ["El individuo cambia en vida", "Hereda lo adquirido", "Cambia porque lo necesita"] },
+            "der": { "icono": "🐦", "titulo": "Darwin y Wallace", "puntos": ["La variación ya existe", "El ambiente escoge", "Cambia la población"] }
+          },
+          "atajo": { "texto": "Más sobre esto: Lamarck", "tema": "historia-evolucion", "bloque": "lamarck" }
+        }
+      ],
+      "juego": "ingredientes-juego",
+      "preguntas": [
+        {
+          "id": "sn-in-1",
+          "enunciado": "¿Cuál de estos NO es un ingrediente de la selección natural?",
+          "opciones": ["Que los individuos se esfuercen por cambiar", "Variación entre individuos", "Herencia de las características", "Supervivencia diferencial"],
+          "correcta": 0,
+          "explicacion": "El esfuerzo no cambia los genes: esa era la idea de Lamarck."
+        },
+        {
+          "id": "sn-in-2",
+          "enunciado": "¿Qué es lo que evoluciona por selección natural?",
+          "opciones": ["La población, de generación en generación", "Cada individuo durante su vida", "Solo los individuos más fuertes", "El ambiente"],
+          "correcta": 0,
+          "explicacion": "Los individuos no cambian sus genes; cambia la proporción de variaciones en la población."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "polillas",
+      "titulo": "La polilla moteada",
+      "resumen": "Cuando el hollín ennegreció los troncos en Inglaterra, las polillas oscuras pasaron de raras a comunes. Con el aire limpio volvieron las claras.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "La polilla moteada (Biston betularia) descansa de día sobre los troncos. Antes de la Revolución Industrial casi todas eran claras y se confundían con los líquenes. El hollín de las fábricas ennegreció los troncos: las claras quedaron a la vista de las aves y las oscuras, antes raras, sobrevivieron más. En pocas décadas casi todas eran oscuras. Cuando las leyes limpiaron el aire, las claras volvieron a ser mayoría. Es selección natural observada por los científicos.",
+        "contexto": [
+          { "titulo": "De rara a común", "texto": "La forma oscura se registró por primera vez cerca de Manchester en 1848; hacia 1895 era casi el 98 % de las polillas de esa zona." },
+          { "titulo": "Los experimentos", "texto": "En los años cincuenta Bernard Kettlewell liberó polillas marcadas y vio que las aves comían más a las que no se camuflaban. Estudios posteriores lo confirmaron." },
+          { "titulo": "La variación ya estaba", "texto": "El hollín no volvió oscuras a las polillas: las oscuras ya existían por una mutación y el ambiente las favoreció." }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Con el hollín, las polillas oscuras sobrevivieron más y se volvieron comunes.",
+            "Con el aire limpio, volvieron a ser comunes las claras."
+          ],
+          "media": ["El ambiente no causó el color: escogió entre colores que ya existían."],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Qué le pasaría a una polilla blanca que se posa sobre un tronco negro?",
+          "actividad": "Con el simulador, hacer de aves por grupos: un grupo con tronco limpio y otro con hollín; comparar las gráficas.",
+          "errores": ["Creer que las polillas se oscurecieron por el hollín."],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Hollín y polillas",
+          "visual": {
+            "tipo": "escena",
+            "id": "ev-polillas",
+            "fases": [
+              { "id": "antes", "nombre": "Troncos claros", "texto": "Antes de 1850 casi todas las polillas son claras; las oscuras, raras, son presa fácil." },
+              { "id": "hollin", "nombre": "Llega el hollín", "texto": "El humo de las fábricas ennegrece los troncos. Ahora las claras se ven de lejos." },
+              { "id": "despues", "nombre": "Ganan las oscuras", "texto": "Las aves comen más claras. Hacia 1900 casi todas son oscuras." },
+              { "id": "limpio", "nombre": "Aire limpio", "texto": "Desde los años cincuenta, leyes contra el humo: los troncos se aclaran y vuelven las polillas claras." }
+            ]
+          }
+        },
+        {
+          "titulo": "Sé el ave",
+          "visual": { "tipo": "cifra", "icono": "🐦", "valor": "Tú eliges", "texto": "En el Explora tocas las polillas que ves y miras qué pasa en varias generaciones" },
+          "puntos": ["Cambia el tronco y repite", "Mira la gráfica de oscuras"]
+        }
+      ],
+      "juego": "polillas-juego",
+      "diagrama": "simulador-polillas",
+      "preguntas": [
+        {
+          "id": "sn-po-1",
+          "enunciado": "¿Por qué aumentaron las polillas oscuras durante la Revolución Industrial?",
+          "opciones": ["Las aves las veían menos sobre los troncos con hollín", "El hollín pintó sus alas", "Comían hollín y se oscurecían", "Las claras se mudaron a otro bosque"],
+          "correcta": 0,
+          "explicacion": "Las oscuras ya existían; el nuevo ambiente las favoreció."
+        },
+        {
+          "id": "sn-po-2",
+          "enunciado": "¿Qué pasó cuando se limpió el aire?",
+          "opciones": ["Volvieron a ser comunes las polillas claras", "Desaparecieron todas las polillas", "Siguieron siendo todas oscuras", "Aparecieron polillas verdes"],
+          "correcta": 0,
+          "explicacion": "Con troncos claros, la ventaja volvió a ser de las claras."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "artificial",
+      "titulo": "Selección artificial",
+      "resumen": "Cuando las personas escogen qué plantas o animales se reproducen, las especies cambian: así surgieron el maíz, los perros y el ganado.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "basico",
+      "ficha": {
+        "idea": "En la selección artificial son las personas, y no el ambiente, quienes escogen qué individuos se reproducen. Escogiendo durante muchas generaciones las plantas con más grano o los animales más mansos, se obtuvieron el maíz, el frijol, las razas de perros y de ganado. Darwin la usó como prueba: si las personas logran tanto cambio en pocos miles de años, la naturaleza puede lograr mucho más en millones.",
+        "contexto": [
+          { "titulo": "El maíz viene del teosinte", "texto": "Hace unos 9000 años, en el sur de México, se empezó a seleccionar el teosinte, una hierba de pocos granos duros. El resultado es el maíz." },
+          { "titulo": "Semillas criollas", "texto": "Cada comunidad campesina e indígena ha seleccionado sus propias variedades de maíz, frijol y papa: es un saber que se hereda." },
+          { "titulo": "Darwin y las palomas", "texto": "Darwin criaba palomas y mostró que todas sus razas venían de la paloma de las rocas." }
+        ],
+        "cuaderno": {
+          "facil": [
+            "En la selección artificial las personas escogen quién se reproduce.",
+            "El maíz se obtuvo del teosinte por selección artificial."
+          ],
+          "media": ["Darwin la usó como prueba de que las especies pueden cambiar."],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Cómo crees que era el maíz antes de que lo cultivaran las personas?",
+          "actividad": "Preguntar en casa qué semillas se guardan para sembrar y por qué se escogen esas.",
+          "errores": ["Creer que la selección artificial cambia los genes directamente, como la ingeniería genética."],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Del teosinte al maíz",
+          "visual": {
+            "tipo": "escena",
+            "id": "ev-maiz",
+            "fases": [
+              { "id": "teosinte", "nombre": "Teosinte", "texto": "Una hierba silvestre de México con unos pocos granos duros." },
+              { "id": "escoger", "nombre": "Escoger", "texto": "Los agricultores guardan las semillas de las plantas con más grano para sembrarlas." },
+              { "id": "generaciones", "nombre": "Miles de años", "texto": "Generación tras generación, las mazorcas se vuelven grandes y con muchos granos." },
+              { "id": "variedades", "nombre": "Variedades", "texto": "Cada pueblo seleccionó sus maíces: amarillos, blancos, morados, rojos." }
+            ]
+          },
+          "atajo": { "texto": "Más sobre esto: Chagra, tul y huerta", "tema": "territorio-saberes", "bloque": "policultivo" }
+        },
+        {
+          "titulo": "Natural o artificial",
+          "visual": {
+            "tipo": "compara",
+            "izq": { "icono": "🌿", "titulo": "Natural", "puntos": ["Escoge el ambiente", "Favorece sobrevivir", "Millones de años"] },
+            "der": { "icono": "👩‍🌾", "titulo": "Artificial", "puntos": ["Escogen las personas", "Favorece lo que nos sirve", "Cientos o miles de años"] }
+          }
+        }
+      ],
+      "juego": "artificial-juego",
+      "preguntas": [
+        {
+          "id": "sn-ar-1",
+          "enunciado": "¿Qué diferencia la selección artificial de la natural?",
+          "opciones": ["En la artificial escogen las personas", "En la artificial no hay variación", "La natural solo ocurre en plantas", "La artificial no necesita herencia"],
+          "correcta": 0,
+          "explicacion": "Los dos procesos necesitan variación y herencia; cambia quién escoge."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "hoy",
+      "titulo": "Selección natural que vemos hoy",
+      "resumen": "Bacterias resistentes a los antibióticos, plagas resistentes a los venenos y pinzones que cambian tras una sequía: la evolución se puede observar.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "intermedio",
+      "ficha": {
+        "idea": "La selección natural no es solo cosa del pasado. Cuando se usa un antibiótico, mueren las bacterias sensibles y sobreviven las pocas que ya eran resistentes; al multiplicarse, la infección se vuelve resistente. Lo mismo pasa con las plagas y los plaguicidas. Y en las Galápagos, tras la sequía de 1977, solo los pinzones de pico grande pudieron romper las semillas duras que quedaban: la siguiente generación tuvo picos más grandes.",
+        "contexto": [
+          { "titulo": "Un problema de salud", "texto": "Las bacterias resistentes causan infecciones difíciles de curar. Por eso los antibióticos se toman solo con fórmula médica y completos." },
+          { "titulo": "Plagas en el campo", "texto": "Si se fumiga siempre con el mismo veneno, sobreviven los insectos resistentes y la plaga vuelve más fuerte. Rotar y combinar métodos ayuda." },
+          { "titulo": "Los Grant", "texto": "Peter y Rosemary Grant midieron los picos de los pinzones de la isla Daphne Mayor durante décadas." }
+        ],
+        "cuaderno": {
+          "facil": ["Las bacterias resistentes son un ejemplo de selección natural actual."],
+          "media": [
+            "El antibiótico no crea la resistencia: selecciona a las bacterias que ya la tenían.",
+            "Tras la sequía de 1977, los pinzones de pico grande sobrevivieron más."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Por qué el médico dice que hay que terminar el tratamiento de antibiótico?",
+          "actividad": "Preguntar a agricultores de la vereda si han notado plagas que ya no mueren con el veneno de antes.",
+          "errores": ["Creer que la persona se vuelve resistente al antibiótico: son las bacterias."],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Bacterias resistentes",
+          "visual": {
+            "tipo": "escena",
+            "id": "ev-resistencia",
+            "fases": [
+              { "id": "infeccion", "nombre": "Infección", "texto": "Millones de bacterias: casi todas sensibles, unas pocas resistentes por mutación." },
+              { "id": "antibiotico", "nombre": "Antibiótico", "texto": "El antibiótico mata a las sensibles." },
+              { "id": "sobreviven", "nombre": "Sobreviven", "texto": "Quedan las resistentes, sobre todo si el tratamiento se deja a medias." },
+              { "id": "regresan", "nombre": "Vuelven", "texto": "Se multiplican: ahora casi toda la población es resistente." }
+            ]
+          }
+        },
+        {
+          "titulo": "Más ejemplos de hoy",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "🐦", "titulo": "Pinzones (1977)", "texto": "Tras una sequía, picos más grandes en la siguiente generación." },
+              { "icono": "🐛", "titulo": "Plagas", "texto": "Insectos resistentes a los plaguicidas." },
+              { "icono": "🦟", "titulo": "Mosquitos", "texto": "Resistentes a algunos insecticidas." }
+            ]
+          }
+        }
+      ],
+      "juego": "resistencia-juego",
+      "preguntas": [
+        {
+          "id": "sn-ho-1",
+          "enunciado": "¿Por qué una infección puede volverse resistente al antibiótico?",
+          "opciones": ["Sobreviven y se multiplican las bacterias que ya eran resistentes", "El antibiótico enseña a las bacterias a resistir", "La persona se acostumbra al medicamento", "Las bacterias se esfuerzan por resistir"],
+          "correcta": 0,
+          "explicacion": "El antibiótico es el ambiente que selecciona: elimina a las sensibles."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "tipos",
+      "titulo": "Tipos de selección",
+      "resumen": "La selección puede favorecer un extremo (direccional), el promedio (estabilizadora) o los dos extremos (disruptiva).",
+      "anio": 5,
+      "etiqueta": "Paso 5",
+      "nivel": "avanzado",
+      "ficha": {
+        "idea": "Si se grafica una característica, como el tamaño del pico, la mayoría de la población queda cerca del promedio. La selección direccional favorece un extremo y corre la curva hacia ese lado. La estabilizadora favorece el promedio y estrecha la curva, como en el peso de los bebés al nacer. La disruptiva favorece los dos extremos y puede partir la población en dos grupos, un posible comienzo de especies nuevas.",
+        "contexto": [
+          { "titulo": "Direccional", "texto": "Los pinzones tras la sequía de 1977 y las polillas oscuras con el hollín." },
+          { "titulo": "Estabilizadora", "texto": "Los bebés muy pequeños o muy grandes tenían históricamente menos probabilidad de sobrevivir." },
+          { "titulo": "Disruptiva", "texto": "Si en una isla solo hay semillas muy pequeñas y muy grandes, los picos medianos quedan en desventaja." }
+        ],
+        "cuaderno": {
+          "facil": ["Hay tres tipos de selección: direccional, estabilizadora y disruptiva."],
+          "media": [],
+          "avanzada": [
+            "Direccional: favorece un extremo; estabilizadora: el promedio; disruptiva: los dos extremos.",
+            "La selección disruptiva puede iniciar la formación de especies."
+          ]
+        },
+        "docente": {
+          "abrir": "Si medimos la estatura del curso, ¿cómo se vería la gráfica?",
+          "actividad": "Graficar una característica del curso (largo de la mano) y discutir qué tipo de selección la cambiaría en cada ambiente imaginado.",
+          "errores": ["Pensar que la selección siempre favorece al «más grande» o «más fuerte»."],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Tres formas de escoger",
+          "visual": {
+            "tipo": "escena",
+            "id": "ev-tipos-seleccion",
+            "fases": [
+              { "id": "inicio", "nombre": "La curva", "texto": "La mayoría de los picos son medianos; pocos son muy pequeños o muy grandes." },
+              { "id": "direccional", "nombre": "Direccional", "texto": "Se favorece un extremo: la curva se corre." },
+              { "id": "estabilizadora", "nombre": "Estabilizadora", "texto": "Se favorece el promedio: la curva se estrecha." },
+              { "id": "disruptiva", "nombre": "Disruptiva", "texto": "Se favorecen los dos extremos: la curva se parte en dos." }
+            ]
+          }
+        }
+      ],
+      "juego": "tipos-seleccion-juego",
+      "preguntas": [
+        {
+          "id": "sn-ti-1",
+          "enunciado": "En un lago sobreviven los peces muy pequeños y los muy grandes. ¿Qué tipo de selección es?",
+          "opciones": ["Disruptiva", "Direccional", "Estabilizadora", "Artificial"],
+          "correcta": 0,
+          "explicacion": "Se favorecen los dos extremos y se perjudica el promedio."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}

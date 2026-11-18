@@ -160,6 +160,11 @@
       "evidencias-evolucion": [
         "fosiles",
         "anatomia"
+      ],
+      "seleccion-natural": [
+        "ingredientes",
+        "polillas",
+        "artificial"
       ]
     },
     "nivelDibujo": "basico",
@@ -192,7 +197,8 @@
       "biodiversidad": "Qué es la biodiversidad, Colombia megadiversa y sus amenazas.",
       "territorio-saberes": "Territorio, el ritmo del año y el policultivo.",
       "historia-evolucion": "Cuatro hitos: Linneo, Lamarck, el viaje del Beagle y Darwin y Wallace.",
-      "evidencias-evolucion": "Fósiles (con la Tatacoa) y anatomía comparada."
+      "evidencias-evolucion": "Fósiles (con la Tatacoa) y anatomía comparada.",
+      "seleccion-natural": "Ingredientes, la polilla moteada y la selección artificial (maíz)."
     }
   },
   {
@@ -404,6 +410,12 @@
         "anatomia",
         "embriologia",
         "biogeografia"
+      ],
+      "seleccion-natural": [
+        "ingredientes",
+        "polillas",
+        "artificial",
+        "hoy"
       ]
     },
     "nivelDibujo": "intermedio",
@@ -436,7 +448,8 @@
       "biodiversidad": "Suma las formas de conservar.",
       "territorio-saberes": "Suma el diálogo de saberes.",
       "historia-evolucion": "Seis hitos: suma a Cuvier y Lyell.",
-      "evidencias-evolucion": "Suma embriología y biogeografía."
+      "evidencias-evolucion": "Suma embriología y biogeografía.",
+      "seleccion-natural": "Suma la selección que vemos hoy (antibióticos, plagas, pinzones)."
     }
   },
   {
@@ -672,6 +685,13 @@
         "embriologia",
         "biogeografia",
         "molecular"
+      ],
+      "seleccion-natural": [
+        "ingredientes",
+        "polillas",
+        "artificial",
+        "hoy",
+        "tipos"
       ]
     },
     "nivelDibujo": "avanzado",
@@ -704,7 +724,8 @@
       "biodiversidad": "Los cuatro pasos completos.",
       "territorio-saberes": "Los cuatro pasos completos.",
       "historia-evolucion": "Los ocho hitos: suma la síntesis moderna y el equilibrio puntuado.",
-      "evidencias-evolucion": "Las cinco evidencias: suma la molecular."
+      "evidencias-evolucion": "Las cinco evidencias: suma la molecular.",
+      "seleccion-natural": "Los cinco pasos: suma los tipos de selección."
     }
   }
 ]

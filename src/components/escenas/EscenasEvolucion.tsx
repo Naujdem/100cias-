@@ -596,3 +596,144 @@ export function EscenaMolecular({ fase }: { fase: string }) {
     </svg>
   )
 }
+
+/* ═══ Tema 3 · Selección natural ═════════════════════════════════════════ */
+
+/* ── la polilla moteada y el hollín ──────────────────────────────────── */
+
+const POLILLAS = ['antes', 'hollin', 'despues', 'limpio']
+const POL_POS = Array.from({ length: 12 }, (_, k) => [130 + (k % 4) * 50 + (Math.floor(k / 4) % 2) * 20, 70 + Math.floor(k / 4) * 60])
+// cuántas oscuras hay en cada fase (de 12)
+const POL_OSC = [1, 1, 10, 3]
+
+function MiniPolilla({ x, y, oscura }: { x: number; y: number; oscura: boolean }) {
+  return (
+    <g transform={`translate(${x} ${y})`}>
+      <path d="M 0 0 L -14 -7 Q -17 5 -5 7 Z M 0 0 L 14 -7 Q 17 5 5 7 Z" fill={oscura ? '#3b3631' : '#e9e4d8'} stroke="#8a8478" strokeWidth="0.6" style={{ transition: 'fill 0.9s' }} />
+      <ellipse rx="2" ry="6" fill="#5a4a3c" />
+    </g>
+  )
+}
+
+export function EscenaPolillas({ fase }: { fase: string }) {
+  const i = idx(POLILLAS, fase)
+  const tronco = i === 1 || i === 2 ? '#35302b' : '#d9d3c4'
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label={`Polilla moteada: ${fase}`} className="h-full w-full">
+      {fondo(i === 1 || i === 2 ? '#c9c4bc' : '#e9efe4')}
+      <g style={ver(i === 1 || i === 2)}>
+        <rect x="320" y="150" width="40" height="110" fill="#6b625a" />
+        <rect x="335" y="110" width="12" height="40" fill="#6b625a" />
+        <circle cx="345" cy="90" r="16" fill="#8f8a84" opacity="0.7" /><circle cx="360" cy="65" r="20" fill="#8f8a84" opacity="0.5" />
+      </g>
+      <rect x="100" y="20" width="200" height="260" fill={tronco} style={{ transition: 'fill 1s' }} />
+      {POL_POS.map(([x, y], k) => <MiniPolilla key={k} x={x} y={y} oscura={k < POL_OSC[i]} />)}
+      <T x={200} y={295} t={['Antes de 1850: casi todas claras', 'Las fábricas ennegrecen los troncos', 'Hacia 1900: casi todas oscuras', 'Aire limpio: vuelven las claras'][i]} s={12} />
+      <T x={50} y={40} t={['≈ 1800', '≈ 1850', '≈ 1900', '≈ 1970'][i]} s={16} c={AZUL} />
+    </svg>
+  )
+}
+
+/* ── selección artificial: del teosinte al maíz ──────────────────────── */
+
+const MAIZ = ['teosinte', 'escoger', 'generaciones', 'variedades']
+
+function Mazorca({ x, y, k, c = '#e8c547' }: { x: number; y: number; k: number; c?: string }) {
+  // k = 0 teosinte (pequeño, pocos granos) … 1 maíz actual
+  const largo = 30 + 90 * k
+  const ancho = 10 + 22 * k
+  const filas = Math.round(2 + 6 * k)
+  return (
+    <g transform={`translate(${x} ${y})`} style={{ transition: suave }}>
+      <path d={`M 0 ${largo / 2 + 10} q -${ancho} -10 -${ancho * 0.6} -${largo} M 0 ${largo / 2 + 10} q ${ancho} -10 ${ancho * 0.6} -${largo}`} fill="none" stroke="#8fb06a" strokeWidth="3" />
+      <ellipse rx={ancho / 2} ry={largo / 2} fill={c} stroke="#b8902a" strokeWidth="1.2" />
+      {Array.from({ length: filas }, (_, f) => (
+        <line key={f} x1={-ancho / 2 + ((f + 1) * ancho) / (filas + 1)} y1={-largo / 2 + 6} x2={-ancho / 2 + ((f + 1) * ancho) / (filas + 1)} y2={largo / 2 - 6} stroke="#b8902a" strokeWidth="0.8" />
+      ))}
+    </g>
+  )
+}
+
+export function EscenaMaiz({ fase }: { fase: string }) {
+  const i = idx(MAIZ, fase)
+  const k = [0, 0.15, 0.85, 0.85][i]
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label={`Del teosinte al maíz: ${fase}`} className="h-full w-full">
+      {fondo('#f4f1ea')}
+      <g style={ver(i <= 2)}>
+        <Mazorca x={200} y={150} k={k} />
+        <g style={ver(i === 1)}>
+          <Mazorca x={90} y={150} k={0} />
+          <Mazorca x={310} y={150} k={0.05} />
+          <T x={200} y={70} t="✋ se siembran las semillas de la mejor" s={12} />
+        </g>
+        <T x={200} y={270} t={['Teosinte: unos pocos granos duros', 'Los agricultores escogen las plantas con más grano', 'Miles de años después: mazorcas grandes', ''][i]} s={12} />
+        <g style={ver(i === 2)}><T x={200} y={40} t="≈ 9000 años de selección en México" s={13} c={AZUL} /></g>
+      </g>
+      <g style={ver(i === 3, 'none', 'translate(0, 20px)')}>
+        {['#e8c547', '#f2efe2', '#7a3b8c', '#c43c3c', '#d98a2f'].map((c, n) => <Mazorca key={c} x={60 + n * 70} y={140} k={0.65} c={c} />)}
+        <T x={200} y={250} t="Variedades criollas: cada comunidad seleccionó las suyas" s={12} />
+      </g>
+    </svg>
+  )
+}
+
+/* ── resistencia a los antibióticos ──────────────────────────────────── */
+
+const RESIST = ['infeccion', 'antibiotico', 'sobreviven', 'regresan']
+const BAC_POS = Array.from({ length: 20 }, (_, k) => [90 + (k % 5) * 55 + ((k * 17) % 11), 70 + Math.floor(k / 5) * 45 + ((k * 29) % 9)])
+const RESISTENTES = new Set([3, 11])
+
+export function EscenaResistencia({ fase }: { fase: string }) {
+  const i = idx(RESIST, fase)
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label={`Resistencia a antibióticos: ${fase}`} className="h-full w-full">
+      {fondo(i === 1 ? '#eef2f8' : '#f4f1ea')}
+      <circle cx="200" cy="140" r="125" fill="#fff" stroke="#c9d2dc" strokeWidth="3" />
+      {BAC_POS.map(([x, y], k) => {
+        const res = RESISTENTES.has(k)
+        const viva = i === 0 || res || i === 3
+        const color = i === 3 ? '#c43c3c' : res ? '#c43c3c' : '#4f8a3c'
+        return (
+          <g key={k} transform={`translate(${x} ${y}) rotate(${(k * 40) % 180})`} style={{ transition: suave, opacity: viva ? 1 : 0.12 }}>
+            <rect x="-11" y="-5" width="22" height="10" rx="5" fill={color} style={{ transition: 'fill 0.8s' }} />
+          </g>
+        )
+      })}
+      <g style={ver(i === 1)}>{[[120, 50], [280, 60], [200, 240]].map(([x, y]) => <T key={x} x={x} y={y} t="💊" s={20} />)}</g>
+      <T x={200} y={292} t={['Una infección: casi todas sensibles, unas pocas resistentes', 'El antibiótico mata a las sensibles', 'Sobreviven las que ya eran resistentes', 'Se multiplican: ahora la infección es resistente'][i]} s={11} />
+    </svg>
+  )
+}
+
+/* ── tipos de selección: curvas de distribución ──────────────────────── */
+
+const TIPOS = ['inicio', 'direccional', 'estabilizadora', 'disruptiva']
+
+function curva(media: number, ancho: number, alto: number, media2?: number) {
+  const pts: string[] = []
+  for (let x = 40; x <= 360; x += 8) {
+    let y = alto * Math.exp(-((x - media) ** 2) / (2 * ancho ** 2))
+    if (media2 !== undefined) y = alto * Math.exp(-((x - media2) ** 2) / (2 * ancho ** 2)) + y
+    pts.push(`${x},${230 - y}`)
+  }
+  return `M ${pts.join(' L ')}`
+}
+
+export function EscenaTiposSeleccion({ fase }: { fase: string }) {
+  const i = idx(TIPOS, fase)
+  const nueva = [curva(200, 45, 140), curva(260, 45, 140), curva(200, 22, 170), curva(120, 28, 110, 280)][i]
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label={`Tipos de selección: ${fase}`} className="h-full w-full">
+      {fondo('#f4f1ea')}
+      <line x1="40" y1="230" x2="365" y2="230" stroke="#888" strokeWidth="2" />
+      <T x={200} y={250} t="tamaño del pico (pequeño → grande)" s={10} peso={600} />
+      <path d={curva(200, 45, 140)} fill="none" stroke="#aaa" strokeWidth="2" strokeDasharray="5 4" />
+      <path d={nueva} fill="none" stroke={ROJO} strokeWidth="3.5" />
+      <g style={ver(i === 1)}><T x={300} y={60} t="→ se favorece un extremo" c={ROJO} s={12} /></g>
+      <g style={ver(i === 2)}><T x={200} y={45} t="→ ← se favorece el promedio" c={ROJO} s={12} /></g>
+      <g style={ver(i === 3)}><T x={200} y={60} t="← → se favorecen los dos extremos" c={ROJO} s={12} /></g>
+      <T x={200} y={280} t={['Población inicial (línea gris)', 'Direccional: semillas duras, picos más grandes', 'Estabilizadora: los picos medianos sobreviven más', 'Disruptiva: dos tipos de semilla, dos tipos de pico'][i]} s={11} />
+    </svg>
+  )
+}

@@ -200,3 +200,81 @@ export function MolecularJuego() {
       cierre="Menos diferencias en el ADN = parentesco más cercano. (Cifras de ejemplo.)" />
   )
 }
+
+/* ═══ Tema 3 · Selección natural ═══ */
+
+export function IngredientesJuego() {
+  return (
+    <JuegoDecide titulo="Los ingredientes" pregunta="¿Qué ingrediente es?" instrucciones="Cada frase describe un ingrediente de la selección natural. Decide cuál." clave="cien:ingredientes-mejor"
+      opciones={[o('var', 'Variación', '🎨'), o('her', 'Herencia', '🧬'), o('sob', 'Sobreproducción', '🥚'), o('sup', 'Supervivencia diferencial', '🏆')]}
+      cartas={[
+        c('🐸', 'Las ranas de una charca tienen manchas distintas', 'var', 'Los individuos no son iguales.'),
+        c('🐟', 'Un pez pone miles de huevos, pero pocos llegan a adultos', 'sob', 'Nacen más de los que el ambiente puede sostener.'),
+        c('👪', 'Los hijos se parecen a sus padres', 'her', 'Las características pasan de padres a hijos.'),
+        c('🦎', 'Los lagartos más rápidos escapan más y dejan más crías', 'sup', 'No todos sobreviven y se reproducen igual.'),
+        c('🌱', 'Unas plantas toleran mejor la sequía y producen más semillas', 'sup', 'El ambiente favorece a unas más que a otras.'),
+        c('🐞', 'Las mariquitas de una especie tienen distinto número de puntos', 'var', 'Otra muestra de variación.'),
+      ]}
+      cierre="Variación + herencia + sobreproducción + supervivencia diferencial = selección natural." />
+  )
+}
+
+export function PolillasJuego() {
+  return (
+    <JuegoDecide titulo="¿Quién sobrevive?" pregunta="¿Qué polilla se salva mejor?" instrucciones="Mira el fondo y decide qué polilla tiene más probabilidad de sobrevivir." clave="cien:polillas-mejor"
+      opciones={[o('c', 'La clara', '🤍'), o('o', 'La oscura', '🖤')]}
+      cartas={[
+        c('🌳', 'Tronco claro cubierto de líquenes', 'c', 'La clara se confunde con el tronco.'),
+        c('🏭', 'Tronco negro de hollín', 'o', 'La oscura pasa desapercibida.'),
+        c('🌫️', 'Bosque cerca de una fábrica en 1890', 'o', 'El hollín oscureció los troncos.'),
+        c('🍃', 'Bosque en 1990, con leyes de aire limpio', 'c', 'Los troncos volvieron a aclararse.'),
+      ]}
+      cierre="El ambiente decide qué variación es favorable." />
+  )
+}
+
+export function ArtificialJuego() {
+  return (
+    <JuegoDecide titulo="¿Natural o artificial?" pregunta="¿Quién selecciona?" instrucciones="Decide si en cada caso selecciona el ambiente (natural) o las personas (artificial)." clave="cien:artificial-mejor"
+      opciones={[o('nat', 'Natural', '🌿'), o('art', 'Artificial', '👩‍🌾')]}
+      cartas={[
+        c('🌽', 'Del teosinte al maíz de mazorca grande', 'art', 'Los agricultores escogieron las semillas.'),
+        c('🐕', 'Del lobo a los perros de todas las razas', 'art', 'Las personas eligieron qué perros se cruzaban.'),
+        c('🦠', 'Bacterias resistentes a un antibiótico', 'nat', 'El antibiótico, parte del ambiente, las seleccionó.'),
+        c('🐄', 'Vacas que dan más leche', 'art', 'Los ganaderos cruzan a las que más producen.'),
+        c('🐦', 'Pinzones con picos más grandes tras una sequía', 'nat', 'Solo los de pico grande podían romper las semillas duras.'),
+        c('☕', 'Variedades de café resistentes a la roya', 'art', 'Se cruzaron y escogieron plantas resistentes.'),
+      ]}
+      cierre="En la artificial elige la persona; en la natural, el ambiente." />
+  )
+}
+
+export function ResistenciaJuego() {
+  return (
+    <JuegoDecide titulo="Antibióticos" pregunta="¿Ayuda o empeora la resistencia?" instrucciones="Decide si cada acción ayuda a evitar bacterias resistentes o la empeora." clave="cien:resistencia-mejor"
+      opciones={[o('ayuda', 'Ayuda a evitarla', '✅'), o('empeora', 'La empeora', '⚠️')]}
+      cartas={[
+        c('💊', 'Dejar el antibiótico apenas te sientes mejor', 'empeora', 'Pueden sobrevivir las más resistentes y multiplicarse.'),
+        c('🩺', 'Tomarlo solo cuando el médico lo receta', 'ayuda', 'Menos uso innecesario, menos selección de resistentes.'),
+        c('🤧', 'Tomar antibióticos para una gripa', 'empeora', 'La gripa es por virus: el antibiótico no sirve y selecciona bacterias.'),
+        c('🧼', 'Lavarse las manos', 'ayuda', 'Menos infecciones, menos antibióticos.'),
+        c('🐔', 'Dar antibióticos a animales sanos para que engorden', 'empeora', 'Selecciona bacterias resistentes en las granjas.'),
+      ]}
+      cierre="Cada uso innecesario de antibióticos selecciona bacterias resistentes." />
+  )
+}
+
+export function TiposSeleccionJuego() {
+  return (
+    <JuegoDecide titulo="Tres tipos de selección" pregunta="¿Qué tipo es?" instrucciones="Decide qué tipo de selección describe cada caso." clave="cien:tipos-seleccion-mejor"
+      opciones={[o('dir', 'Direccional', '➡️'), o('est', 'Estabilizadora', '🎯'), o('dis', 'Disruptiva', '↔️')]}
+      cartas={[
+        c('🐦', 'Tras una sequía sobreviven los pinzones de pico más grande', 'dir', 'Se favorece un extremo.'),
+        c('👶', 'Los bebés de peso medio sobreviven más que los muy pequeños o muy grandes', 'est', 'Se favorece el promedio.'),
+        c('🐟', 'En un lago sobreviven los peces muy pequeños y los muy grandes', 'dis', 'Se favorecen los dos extremos.'),
+        c('🦒', 'Las jirafas de cuello más largo alcanzan más hojas', 'dir', 'La población se corre hacia cuellos más largos.'),
+        c('🥚', 'Las aves que ponen un número medio de huevos crían más pollos', 'est', 'Muy pocos o demasiados huevos son una desventaja.'),
+      ]}
+      cierre="Direccional: un extremo. Estabilizadora: el promedio. Disruptiva: los dos extremos." />
+  )
+}
