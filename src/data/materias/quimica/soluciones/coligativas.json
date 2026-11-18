@@ -1,0 +1,369 @@
+{
+  "id": "coligativas",
+  "materia": "quimica",
+  "area": "soluciones",
+  "titulo": "Propiedades coligativas",
+  "subtema": "Opcional (11°): presión de vapor, ebullición, congelación y ósmosis",
+  "orden": 139,
+  "etiqueta": "9",
+  "vistas": [
+    "ruta"
+  ],
+  "tituloVista": "Ruta de las propiedades coligativas",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Explicar por qué las propiedades coligativas dependen del número de partículas de soluto.",
+    "Calcular el ascenso ebulloscópico y el descenso crioscópico de soluciones sencillas.",
+    "Explicar la ósmosis y la presión osmótica con ejemplos de la vida diaria."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con un texto de química de bachillerato (Ke = 0,512 y Kc = 1,86 °C·kg/mol para el agua; presión osmótica del agua de mar ≈ 27 atm; congelación del agua de mar ≈ −1,9 °C)."
+  ],
+  "bloques": [
+    {
+      "id": "que-son",
+      "titulo": "¿Qué son las propiedades coligativas?",
+      "resumen": "Propiedades que dependen de cuántas partículas de soluto hay, no de cuáles.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "avanzado",
+      "nucleo": true,
+      "ficha": {
+        "idea": "Cuando se disuelve algo en agua, la solución ya no se comporta como el agua pura: hierve a más temperatura, se congela a menos temperatura, se evapora menos y puede jalar agua a través de una membrana. Esas son las propiedades coligativas, y tienen algo curioso: no importa qué soluto sea, sino cuántas partículas hay. Un mol de azúcar y un mol de urea cambian igual el punto de congelación; un mol de sal lo cambia el doble, porque cada NaCl se separa en dos iones. La explicación empieza en la superficie: las partículas de soluto ocupan parte de ella y estorban a las moléculas de agua que quieren escapar, así que baja la presión de vapor (ley de Raoult). Con menos presión de vapor, hay que calentar más para que hierva, y hay que enfriar más para que se congele.",
+        "contexto": [
+          {
+            "titulo": "Factor de van 't Hoff (i)",
+            "texto": "Cuántas partículas da cada unidad de soluto: azúcar 1, NaCl 2, CaCl₂ 3 (en soluciones diluidas)."
+          },
+          {
+            "titulo": "Molalidad",
+            "texto": "Se usa la molalidad (mol por kg de solvente) porque no cambia con la temperatura."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Al disolver algo en agua, cambia la temperatura a la que hierve y a la que se congela."
+          ],
+          "media": [
+            "Propiedades coligativas: descenso de la presión de vapor, ascenso ebulloscópico, descenso crioscópico y presión osmótica.",
+            "Dependen del número de partículas de soluto."
+          ],
+          "avanzada": [
+            "Raoult: P = X(solvente) · P°. Factor i de van 't Hoff."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué el agua de mar no se congela a 0 °C?",
+          "actividad": "Congelar en el congelador vasos de agua pura, agua con azúcar y agua con sal (la misma cantidad de moles) y comparar.",
+          "errores": [
+            "Creer que importa qué soluto es y no cuántas partículas da.",
+            "Olvidar que los compuestos iónicos se separan en varios iones."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "El soluto estorba",
+          "visual": {
+            "tipo": "escena",
+            "id": "raoult",
+            "fases": [
+              {
+                "id": "pura",
+                "nombre": "Agua pura",
+                "texto": "Muchas moléculas escapan de la superficie."
+              },
+              {
+                "id": "soluto",
+                "nombre": "Con soluto",
+                "texto": "Algunas partículas ocupan la superficie."
+              },
+              {
+                "id": "resultado",
+                "nombre": "Menos vapor",
+                "texto": "Baja la presión de vapor."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre la presión de vapor",
+            "tema": "agua-liquidos",
+            "bloque": "presion-vapor"
+          }
+        },
+        {
+          "titulo": "Cuenta partículas",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🍬",
+                "titulo": "Azúcar",
+                "texto": "1 partícula por molécula."
+              },
+              {
+                "icono": "🧂",
+                "titulo": "NaCl",
+                "texto": "2 partículas: Na⁺ y Cl⁻."
+              },
+              {
+                "icono": "🧪",
+                "titulo": "CaCl₂",
+                "texto": "3 partículas: Ca²⁺ y 2 Cl⁻."
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "coligativa-juego",
+      "preguntas": [
+        {
+          "id": "qm-cg-1",
+          "enunciado": "¿De qué dependen las propiedades coligativas?",
+          "opciones": [
+            "Del número de partículas de soluto",
+            "Del color del soluto",
+            "De qué sustancia es el soluto",
+            "Del recipiente"
+          ],
+          "correcta": 0,
+          "explicacion": "No importa cuál, sino cuántas."
+        },
+        {
+          "id": "qm-cg-2",
+          "enunciado": "¿Cuántas partículas da cada unidad de NaCl al disolverse?",
+          "opciones": [
+            "2",
+            "1",
+            "3",
+            "Ninguna"
+          ],
+          "correcta": 0,
+          "explicacion": "Na⁺ y Cl⁻."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "ebullicion-congelacion",
+      "titulo": "Hierve más arriba, se congela más abajo",
+      "resumen": "Ascenso ebulloscópico y descenso crioscópico.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "avanzado",
+      "requiere": [
+        "que-son"
+      ],
+      "ficha": {
+        "idea": "Una solución hierve a una temperatura más alta que el solvente puro: es el ascenso ebulloscópico, ΔTe = Ke · i · m, donde Ke es una constante del solvente (0,512 °C·kg/mol para el agua) y m la molalidad. Y se congela a una temperatura más baja: es el descenso crioscópico, ΔTc = Kc · i · m, con Kc = 1,86 °C·kg/mol para el agua. El descenso crioscópico es el que más se usa. En los países fríos se echa sal en las carreteras para que el hielo se derrita aunque haga menos de 0 °C, y se pone anticongelante (etilenglicol) en el radiador de los carros, que además sube el punto de ebullición y evita que el motor hierva en verano. El helado casero se hace con hielo y sal alrededor del recipiente: la mezcla baja de 0 °C y congela la leche. La sal que se echa a la olla al cocinar casi no cambia el punto de ebullición: hay muy poca para notarlo.",
+        "contexto": [
+          {
+            "titulo": "Ejemplo",
+            "texto": "58,5 g de NaCl (1 mol) en 1 kg de agua: i·m = 2. ΔTc = 1,86 × 2 = 3,7 °C → se congela a −3,7 °C. ΔTe = 0,512 × 2 ≈ 1 °C → hierve a ≈ 101 °C."
+          },
+          {
+            "titulo": "El mar",
+            "texto": "El agua de mar se congela a unos −1,9 °C."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "El agua con sal hierve un poco más arriba y se congela más abajo que el agua pura."
+          ],
+          "media": [
+            "Ascenso ebulloscópico: ΔTe = Ke·i·m. Descenso crioscópico: ΔTc = Kc·i·m."
+          ],
+          "avanzada": [
+            "Para el agua: Ke = 0,512 y Kc = 1,86 °C·kg/mol. Con estas fórmulas se puede calcular la masa molar de un soluto desconocido."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Cómo se puede congelar leche para hacer helado sin congelador?",
+          "actividad": "Helado casero en bolsa: leche con azúcar en una bolsa pequeña, dentro de una grande con hielo y sal; medir la temperatura del hielo con y sin sal.",
+          "errores": [
+            "Creer que la sal de la olla hace que el agua hierva más rápido.",
+            "Olvidar el factor i de los compuestos iónicos."
+          ],
+          "minutos": 40
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Con soluto",
+          "visual": {
+            "tipo": "escena",
+            "id": "ebullicion-congelacion",
+            "fases": [
+              {
+                "id": "hervir",
+                "nombre": "Hervir",
+                "texto": "El soluto sube el punto de ebullición."
+              },
+              {
+                "id": "helado",
+                "nombre": "Helado casero",
+                "texto": "Hielo y sal bajan de 0 °C."
+              },
+              {
+                "id": "carretera",
+                "nombre": "Carreteras y radiadores",
+                "texto": "El soluto baja el punto de congelación."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Calculadora coligativa",
+          "visual": {
+            "tipo": "diagrama",
+            "id": "calculadora-coligativa"
+          }
+        }
+      ],
+      "diagrama": "calculadora-coligativa",
+      "juego": "crioscopia-juego",
+      "preguntas": [
+        {
+          "id": "qm-cg-3",
+          "enunciado": "¿A qué temperatura se congela una solución 1 m de azúcar en agua?",
+          "opciones": [
+            "−1,86 °C",
+            "0 °C",
+            "−3,72 °C",
+            "+1,86 °C"
+          ],
+          "correcta": 0,
+          "explicacion": "ΔTc = 1,86 × 1 × 1."
+        },
+        {
+          "id": "qm-cg-4",
+          "enunciado": "¿Por qué se echa sal en las carreteras heladas?",
+          "opciones": [
+            "Porque baja el punto de congelación del agua",
+            "Porque calienta la carretera",
+            "Porque sube el punto de ebullición",
+            "Porque la sal no se moja"
+          ],
+          "correcta": 0,
+          "explicacion": "El hielo se derrite bajo 0 °C."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "osmosis",
+      "titulo": "Ósmosis y presión osmótica",
+      "resumen": "El agua pasa por una membrana hacia donde hay más soluto.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "avanzado",
+      "requiere": [
+        "que-son"
+      ],
+      "ficha": {
+        "idea": "Una membrana semipermeable deja pasar el agua pero no ciertos solutos. Si a un lado hay agua pura y al otro una solución, el agua pasa hacia la solución, como intentando igualar las concentraciones: es la ósmosis. La presión que habría que hacer sobre la solución para detener ese paso se llama presión osmótica (π = i · M · R · T), y puede ser enorme: el agua de mar tiene unas 27 atm. La ósmosis explica que la lechuga marchita se ponga crocante en agua, que las fresas con azúcar suelten su jugo, que la carne salada se conserve (los microbios pierden agua) y que los sueros que se ponen en la vena tengan la misma concentración de la sangre (soluciones isotónicas): en agua pura los glóbulos rojos se hinchan y revientan, y en agua muy salada se arrugan. Si se empuja la solución con más presión que la osmótica, el agua pasa al revés: es la ósmosis inversa, que se usa para potabilizar agua de mar.",
+        "contexto": [
+          {
+            "titulo": "Un solo lugar",
+            "texto": "Cómo atraviesan el agua y otras sustancias la membrana de la célula se ve en la Biología de la membrana; aquí se calcula la presión osmótica."
+          },
+          {
+            "titulo": "Ejemplo",
+            "texto": "Suero glucosado 0,3 M a 37 °C: π = 1 × 0,3 × 0,082 × 310 ≈ 7,6 atm, parecida a la de la sangre."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "El agua pasa a través de una membrana hacia donde hay más soluto."
+          ],
+          "media": [
+            "Ósmosis: paso del solvente por una membrana semipermeable hacia la solución más concentrada.",
+            "Isotónica: misma concentración; hipotónica: menos; hipertónica: más."
+          ],
+          "avanzada": [
+            "π = i·M·R·T. Ósmosis inversa: con presión mayor que π, el agua pasa hacia el lado diluido."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué se pone crocante una lechuga marchita si se deja en agua fría?",
+          "actividad": "Papas en agua pura y en agua muy salada durante una hora: comparar su firmeza y su peso.",
+          "errores": [
+            "Creer que el soluto es el que pasa por la membrana.",
+            "Pensar que la ósmosis solo ocurre en los seres vivos."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "El tubo en U",
+          "visual": {
+            "tipo": "escena",
+            "id": "osmosis-u",
+            "fases": [
+              {
+                "id": "inicio",
+                "nombre": "Al empezar",
+                "texto": "Agua pura y solución separadas por una membrana."
+              },
+              {
+                "id": "pasa",
+                "nombre": "El agua pasa",
+                "texto": "Hacia donde hay más soluto."
+              },
+              {
+                "id": "presion",
+                "nombre": "Presión osmótica",
+                "texto": "La presión que la detiene."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre la membrana de la célula",
+            "tema": "celula-eucariota",
+            "bloque": "membrana"
+          }
+        },
+        {
+          "titulo": "Agua de mar a agua dulce",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🌊",
+            "valor": "≈ 27 atm",
+            "texto": "Presión osmótica del agua de mar; la ósmosis inversa empuja más fuerte para sacar agua dulce."
+          }
+        }
+      ],
+      "juego": "osmosis-quimica-juego",
+      "preguntas": [
+        {
+          "id": "qm-cg-5",
+          "enunciado": "En la ósmosis, el agua pasa por la membrana hacia…",
+          "opciones": [
+            "La solución más concentrada",
+            "La solución más diluida",
+            "El lado más frío",
+            "Ningún lado"
+          ],
+          "correcta": 0,
+          "explicacion": "Hacia donde hay más soluto."
+        },
+        {
+          "id": "qm-cg-6",
+          "enunciado": "¿Por qué los sueros para la vena tienen la misma concentración que la sangre?",
+          "opciones": [
+            "Para que los glóbulos rojos no ganen ni pierdan agua",
+            "Para que sepan bien",
+            "Para que no se congelen",
+            "Para que tengan color"
+          ],
+          "correcta": 0,
+          "explicacion": "Son isotónicos."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}

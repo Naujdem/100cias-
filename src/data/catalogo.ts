@@ -48,6 +48,5 @@ export const PROXIMOS: Record<string, { etiqueta: string; nombre: string }[]> = 
   reacciones: [
   ],
   soluciones: [
-    { etiqueta: '9', nombre: 'Propiedades coligativas (opcional)' },
   ],
 }

@@ -54,6 +54,7 @@ import { EscenaConcentracionColor, EscenaPpm, EscenaPrepararMolar, EscenaDilucio
 import { EscenaVelocidadReaccion, EscenaFactoresVelocidad, EscenaColisiones, EscenaEnergiaActivacion, EscenaConservarAlimentos } from './EscenasCinetica.tsx'
 import { EscenaIdaVuelta, EscenaEquilibrioDinamico, EscenaLeChatelier, EscenaEquilibrioNaturaleza } from './EscenasEquilibrio.tsx'
 import { EscenaAcidoBase, EscenaRepolloIndicador, EscenaSueloPh, EscenaFuerteDebil, EscenaTitulacion } from './EscenasAcidosBases.tsx'
+import { EscenaRaoult, EscenaEbullicionCongelacion, EscenaOsmosisU } from './EscenasColigativas.tsx'
 import { EscenaMolContar, EscenaMasaMolar, EscenaCaminoMol } from './EscenasMol.tsx'
 import { EscenaReceta, EscenaMasaMasa, EscenaLimite } from './EscenasEstequiometria.tsx'
 import { EscenaIntra, EscenaPolaridad, EscenaFuerzas, EscenaSoluble } from './EscenasFuerzas.tsx'
@@ -332,6 +333,9 @@ export const ESCENAS: Record<string, ComponentType<{ fase: string }>> = {
   'suelo-ph': EscenaSueloPh,
   'fuerte-debil': EscenaFuerteDebil,
   titulacion: EscenaTitulacion,
+  raoult: EscenaRaoult,
+  'ebullicion-congelacion': EscenaEbullicionCongelacion,
+  'osmosis-u': EscenaOsmosisU,
   compostaje: EscenaCompostaje,
   riesgo: EscenaRiesgo,
   armero: EscenaArmero,
