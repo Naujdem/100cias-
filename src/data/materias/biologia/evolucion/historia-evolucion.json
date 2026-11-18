@@ -34,18 +34,31 @@
         "cuando": "1735 (Systema Naturae)",
         "idea": "Linneo ordenó a los seres vivos en grupos cada vez más amplios y le dio a cada especie un nombre científico de dos palabras. Para él, y para casi todos los naturalistas de su tiempo, cada especie había sido creada tal como es y no cambiaba: es la idea del fijismo.",
         "contexto": [
-          { "titulo": "Un mundo lleno de especies nuevas", "texto": "Los viajes de exploración traían a Europa miles de plantas y animales desconocidos. Hacía falta una forma de ordenarlos." },
-          { "titulo": "Nombres de dos palabras", "texto": "El oso de anteojos es Tremarctos ornatus: la primera palabra es el género y la segunda la especie. Así se entienden científicos de todos los idiomas." },
-          { "titulo": "Fijismo", "texto": "Si las especies no cambian, clasificarlas es como ordenar una colección que ya está completa. Esa idea se pondría en duda en el siglo siguiente." }
+          {
+            "titulo": "Un mundo lleno de especies nuevas",
+            "texto": "Los viajes de exploración traían a Europa miles de plantas y animales desconocidos. Hacía falta una forma de ordenarlos."
+          },
+          {
+            "titulo": "Nombres de dos palabras",
+            "texto": "El oso de anteojos es Tremarctos ornatus: la primera palabra es el género y la segunda la especie. Así se entienden científicos de todos los idiomas."
+          },
+          {
+            "titulo": "Fijismo",
+            "texto": "Si las especies no cambian, clasificarlas es como ordenar una colección que ya está completa. Esa idea se pondría en duda en el siglo siguiente."
+          }
         ],
-        "evidencia": ["Las especies que conocía se veían iguales generación tras generación."],
+        "evidencia": [
+          "Las especies que conocía se veían iguales generación tras generación."
+        ],
         "limites": "Linneo no explicaba por qué unas especies se parecen más que otras. Darwin daría la respuesta: porque comparten un antepasado.",
         "cuaderno": {
           "facil": [
             "Carlos Linneo clasificó a los seres vivos y les dio nombres de dos palabras (1735).",
             "El fijismo dice que las especies no cambian."
           ],
-          "media": ["El nombre científico tiene género y especie, por ejemplo Tremarctos ornatus."],
+          "media": [
+            "El nombre científico tiene género y especie, por ejemplo Tremarctos ornatus."
+          ],
           "avanzada": []
         }
       },
@@ -56,10 +69,27 @@
             "tipo": "escena",
             "id": "ev-linneo",
             "fases": [
-              { "id": "desorden", "nombre": "Miles de especies", "texto": "Los exploradores traían a Europa plantas y animales nunca vistos. ¿Cómo ordenarlos?" },
-              { "id": "grupos", "nombre": "Grupos dentro de grupos", "texto": "Linneo los agrupó por parecido: especies en géneros, géneros en órdenes, órdenes en clases y clases en reinos." },
-              { "id": "nombre", "nombre": "Nombre de dos palabras", "texto": "Cada especie recibe un nombre en latín: primero el género y luego la especie.", "nota": "Tremarctos ornatus es el oso de anteojos, que vive en los Andes de Colombia." },
-              { "id": "fijo", "nombre": "Especies fijas", "texto": "Para Linneo cada especie había sido creada así y no cambiaba. Esta idea se llama fijismo." }
+              {
+                "id": "desorden",
+                "nombre": "Miles de especies",
+                "texto": "Los exploradores traían a Europa plantas y animales nunca vistos. ¿Cómo ordenarlos?"
+              },
+              {
+                "id": "grupos",
+                "nombre": "Grupos dentro de grupos",
+                "texto": "Linneo los agrupó por parecido: especies en géneros, géneros en órdenes, órdenes en clases y clases en reinos."
+              },
+              {
+                "id": "nombre",
+                "nombre": "Nombre de dos palabras",
+                "texto": "Cada especie recibe un nombre en latín: primero el género y luego la especie.",
+                "nota": "Tremarctos ornatus es el oso de anteojos, que vive en los Andes de Colombia."
+              },
+              {
+                "id": "fijo",
+                "nombre": "Especies fijas",
+                "texto": "Para Linneo cada especie había sido creada así y no cambiaba. Esta idea se llama fijismo."
+              }
             ]
           }
         },
@@ -68,7 +98,12 @@
           "visual": {
             "tipo": "pregunta",
             "enunciado": "Si las especies nunca cambian, ¿por qué el jaguar y el gato doméstico se parecen tanto?",
-            "opciones": ["El fijismo no lo explica bien", "Porque viven en el mismo lugar", "Porque comen lo mismo", "Es pura casualidad"],
+            "opciones": [
+              "El fijismo no lo explica bien",
+              "Porque viven en el mismo lugar",
+              "Porque comen lo mismo",
+              "Es pura casualidad"
+            ],
             "correcta": 0,
             "explicacion": "El fijismo describe los parecidos pero no los explica. La evolución dirá que se parecen porque comparten un antepasado."
           }
@@ -78,14 +113,24 @@
         {
           "id": "he-li-1",
           "enunciado": "¿Qué dice el fijismo?",
-          "opciones": ["Que las especies no cambian con el tiempo", "Que las especies cambian por selección natural", "Que los caracteres adquiridos se heredan", "Que la Tierra tiene millones de años"],
+          "opciones": [
+            "Que las especies no cambian con el tiempo",
+            "Que las especies cambian por selección natural",
+            "Que los caracteres adquiridos se heredan",
+            "Que la Tierra tiene millones de años"
+          ],
           "correcta": 0,
           "explicacion": "El fijismo supone que cada especie fue creada tal como es hoy."
         },
         {
           "id": "he-li-2",
           "enunciado": "En el nombre Tremarctos ornatus, ¿qué indica Tremarctos?",
-          "opciones": ["El género", "La especie", "El reino", "El país donde vive"],
+          "opciones": [
+            "El género",
+            "La especie",
+            "El reino",
+            "El país donde vive"
+          ],
           "correcta": 0,
           "explicacion": "La primera palabra es el género (con mayúscula) y la segunda la especie."
         }
@@ -111,19 +156,34 @@
         "cuando": "1809 (Filosofía zoológica)",
         "idea": "Lamarck propuso que las especies se transforman poco a poco. Según él, los órganos que se usan se desarrollan y los que no se usan se atrofian (uso y desuso), y esos cambios adquiridos en vida se heredan. Acertó en que las especies cambian, pero no en cómo.",
         "contexto": [
-          { "titulo": "Experto en invertebrados", "texto": "Estudió caracoles, insectos y gusanos, y él mismo inventó la palabra «invertebrados». Al ordenarlos vio series de formas que parecían cambiar poco a poco." },
-          { "titulo": "Un valiente", "texto": "Decir que las especies cambian iba contra la idea dominante. Lamarck murió pobre, ciego y poco reconocido." },
-          { "titulo": "La jirafa", "texto": "Su ejemplo más famoso: las jirafas estirarían el cuello para comer hojas altas y sus crías nacerían con el cuello un poco más largo." }
+          {
+            "titulo": "Experto en invertebrados",
+            "texto": "Estudió caracoles, insectos y gusanos, y él mismo inventó la palabra «invertebrados». Al ordenarlos vio series de formas que parecían cambiar poco a poco."
+          },
+          {
+            "titulo": "Un valiente",
+            "texto": "Decir que las especies cambian iba contra la idea dominante. Lamarck murió pobre, ciego y poco reconocido."
+          },
+          {
+            "titulo": "La jirafa",
+            "texto": "Su ejemplo más famoso: las jirafas estirarían el cuello para comer hojas altas y sus crías nacerían con el cuello un poco más largo."
+          }
         ],
-        "evidencia": ["Series de fósiles y de invertebrados con formas que cambian poco a poco."],
+        "evidencia": [
+          "Series de fósiles y de invertebrados con formas que cambian poco a poco."
+        ],
         "limites": "Lo que se adquiere en vida (músculos, cicatrices, un cuello estirado) no se hereda, porque no cambia los genes de los óvulos ni de los espermatozoides.",
         "cuaderno": {
           "facil": [
             "Lamarck propuso en 1809 que las especies cambian con el tiempo.",
             "Según Lamarck, los caracteres adquiridos en vida se heredan."
           ],
-          "media": ["Su idea del uso y desuso de los órganos resultó equivocada."],
-          "avanzada": ["Los cambios adquiridos no alteran el ADN de las células sexuales."]
+          "media": [
+            "Su idea del uso y desuso de los órganos resultó equivocada."
+          ],
+          "avanzada": [
+            "Los cambios adquiridos no alteran el ADN de las células sexuales."
+          ]
         }
       },
       "diapositivas": [
@@ -133,10 +193,27 @@
             "tipo": "escena",
             "id": "ev-lamarck",
             "fases": [
-              { "id": "corto", "nombre": "Cuello corto", "texto": "Imagina las jirafas antiguas, con el cuello más corto, y las hojas cada vez más arriba." },
-              { "id": "estira", "nombre": "Se estira", "texto": "Según Lamarck, cada jirafa estira el cuello toda su vida y lo alarga un poco: el órgano que se usa se desarrolla." },
-              { "id": "hereda", "nombre": "Lo hereda", "texto": "Sus crías nacerían con ese cuello más largo. Tras muchas generaciones: jirafas de cuello largo." },
-              { "id": "hoy", "nombre": "Lo que sabemos hoy", "texto": "Lo que se gana en vida no se hereda. El hijo de una persona que hace pesas no nace musculoso.", "nota": "Darwin y Wallace darán otra explicación: la selección natural." }
+              {
+                "id": "corto",
+                "nombre": "Cuello corto",
+                "texto": "Imagina las jirafas antiguas, con el cuello más corto, y las hojas cada vez más arriba."
+              },
+              {
+                "id": "estira",
+                "nombre": "Se estira",
+                "texto": "Según Lamarck, cada jirafa estira el cuello toda su vida y lo alarga un poco: el órgano que se usa se desarrolla."
+              },
+              {
+                "id": "hereda",
+                "nombre": "Lo hereda",
+                "texto": "Sus crías nacerían con ese cuello más largo. Tras muchas generaciones: jirafas de cuello largo."
+              },
+              {
+                "id": "hoy",
+                "nombre": "Lo que sabemos hoy",
+                "texto": "Lo que se gana en vida no se hereda. El hijo de una persona que hace pesas no nace musculoso.",
+                "nota": "Darwin y Wallace darán otra explicación: la selección natural."
+              }
             ]
           }
         },
@@ -144,8 +221,22 @@
           "titulo": "Acertó y se equivocó",
           "visual": {
             "tipo": "compara",
-            "izq": { "icono": "✅", "titulo": "Acertó", "puntos": ["Las especies cambian con el tiempo", "Los cambios son graduales"] },
-            "der": { "icono": "❌", "titulo": "Se equivocó", "puntos": ["Uso y desuso de los órganos", "Herencia de lo adquirido en vida"] }
+            "izq": {
+              "icono": "✅",
+              "titulo": "Acertó",
+              "puntos": [
+                "Las especies cambian con el tiempo",
+                "Los cambios son graduales"
+              ]
+            },
+            "der": {
+              "icono": "❌",
+              "titulo": "Se equivocó",
+              "puntos": [
+                "Uso y desuso de los órganos",
+                "Herencia de lo adquirido en vida"
+              ]
+            }
           }
         }
       ],
@@ -153,14 +244,24 @@
         {
           "id": "he-la-1",
           "enunciado": "Según Lamarck, ¿por qué las jirafas tienen el cuello largo?",
-          "opciones": ["Lo estiraron en vida y lo heredaron sus crías", "Las de cuello largo sobrevivieron más", "Siempre lo tuvieron así", "Por una mutación al azar"],
+          "opciones": [
+            "Lo estiraron en vida y lo heredaron sus crías",
+            "Las de cuello largo sobrevivieron más",
+            "Siempre lo tuvieron así",
+            "Por una mutación al azar"
+          ],
           "correcta": 0,
           "explicacion": "Esa es la herencia de los caracteres adquiridos. La segunda opción es la explicación de Darwin."
         },
         {
           "id": "he-la-2",
           "enunciado": "¿Cuál idea de Lamarck se considera correcta hoy?",
-          "opciones": ["Que las especies cambian con el tiempo", "Que lo adquirido en vida se hereda", "Que los órganos crecen solo por usarlos", "Que las especies nunca se extinguen"],
+          "opciones": [
+            "Que las especies cambian con el tiempo",
+            "Que lo adquirido en vida se hereda",
+            "Que los órganos crecen solo por usarlos",
+            "Que las especies nunca se extinguen"
+          ],
           "correcta": 0,
           "explicacion": "Fue de los primeros en defender la transformación de las especies, aunque el mecanismo que propuso no era el correcto."
         }
@@ -186,16 +287,33 @@
         "cuando": "1796 (mamut y elefante), 1812 (estudios de fósiles)",
         "idea": "Cuvier comparó huesos fósiles con los de animales vivos y demostró que muchos pertenecían a especies que ya no existen. Así probó que las especies se extinguen. Para explicarlo propuso el catastrofismo: grandes catástrofes habrían borrado faunas enteras.",
         "contexto": [
-          { "titulo": "Un hueso basta", "texto": "Conocía tan bien la anatomía que, con unos pocos huesos, podía reconstruir el animal completo." },
-          { "titulo": "Capas con fósiles distintos", "texto": "En las rocas cerca de París cada capa tenía animales diferentes: las faunas habían cambiado con el tiempo." },
-          { "titulo": "Rival de Lamarck", "texto": "Era fijista: aceptaba la extinción, pero no que unas especies se transformaran en otras." }
+          {
+            "titulo": "Un hueso basta",
+            "texto": "Conocía tan bien la anatomía que, con unos pocos huesos, podía reconstruir el animal completo."
+          },
+          {
+            "titulo": "Capas con fósiles distintos",
+            "texto": "En las rocas cerca de París cada capa tenía animales diferentes: las faunas habían cambiado con el tiempo."
+          },
+          {
+            "titulo": "Rival de Lamarck",
+            "texto": "Era fijista: aceptaba la extinción, pero no que unas especies se transformaran en otras."
+          }
         ],
-        "evidencia": ["Los molares y mandíbulas del mamut son distintos de los de los elefantes de India y de África."],
+        "evidencia": [
+          "Los molares y mandíbulas del mamut son distintos de los de los elefantes de India y de África."
+        ],
         "limites": "Los cambios en los fósiles no se deben solo a catástrofes: también hay cambio lento y extinciones graduales.",
         "cuaderno": {
-          "facil": ["Cuvier demostró con fósiles que las especies se extinguen."],
-          "media": ["Propuso el catastrofismo: catástrofes que borraron faunas enteras."],
-          "avanzada": ["Fundó la anatomía comparada y la paleontología."]
+          "facil": [
+            "Cuvier demostró con fósiles que las especies se extinguen."
+          ],
+          "media": [
+            "Propuso el catastrofismo: catástrofes que borraron faunas enteras."
+          ],
+          "avanzada": [
+            "Fundó la anatomía comparada y la paleontología."
+          ]
         }
       },
       "diapositivas": [
@@ -205,31 +323,66 @@
             "tipo": "escena",
             "id": "ev-cuvier",
             "fases": [
-              { "id": "capas", "nombre": "Las capas", "texto": "Las rocas se forman en capas. Las de abajo son más antiguas que las de arriba." },
-              { "id": "fosiles", "nombre": "Fósiles distintos", "texto": "Cada capa guarda fósiles diferentes: los animales de cada época no eran los mismos." },
-              { "id": "mamut", "nombre": "Mamut y elefante", "texto": "Cuvier comparó los dientes del mamut con los de los elefantes vivos: son de otra especie, que ya no existe." },
-              { "id": "catastrofe", "nombre": "Catastrofismo", "texto": "Para Cuvier, grandes catástrofes como inundaciones habían borrado esas faunas de golpe.", "nota": "Hoy se acepta que hubo extinciones masivas, pero también cambio lento." }
+              {
+                "id": "capas",
+                "nombre": "Las capas",
+                "texto": "Las rocas se forman en capas. Las de abajo son más antiguas que las de arriba."
+              },
+              {
+                "id": "fosiles",
+                "nombre": "Fósiles distintos",
+                "texto": "Cada capa guarda fósiles diferentes: los animales de cada época no eran los mismos."
+              },
+              {
+                "id": "mamut",
+                "nombre": "Mamut y elefante",
+                "texto": "Cuvier comparó los dientes del mamut con los de los elefantes vivos: son de otra especie, que ya no existe."
+              },
+              {
+                "id": "catastrofe",
+                "nombre": "Catastrofismo",
+                "texto": "Para Cuvier, grandes catástrofes como inundaciones habían borrado esas faunas de golpe.",
+                "nota": "Hoy se acepta que hubo extinciones masivas, pero también cambio lento."
+              }
             ]
           }
         },
         {
           "titulo": "Su gran aporte",
-          "visual": { "tipo": "cifra", "icono": "🦣", "valor": "Extinción", "texto": "Antes de Cuvier muchos creían que ninguna especie podía desaparecer" },
-          "puntos": ["Cuvier probó que las especies se extinguen", "Pero creía que no se transforman"]
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🦣",
+            "valor": "Extinción",
+            "texto": "Antes de Cuvier muchos creían que ninguna especie podía desaparecer"
+          },
+          "puntos": [
+            "Cuvier probó que las especies se extinguen",
+            "Pero creía que no se transforman"
+          ]
         }
       ],
       "preguntas": [
         {
           "id": "he-cu-1",
           "enunciado": "¿Qué demostró Cuvier al comparar el mamut con los elefantes vivos?",
-          "opciones": ["Que las especies se extinguen", "Que el mamut se convirtió en elefante", "Que los fósiles son rocas sin relación con la vida", "Que la Tierra tiene pocos miles de años"],
+          "opciones": [
+            "Que las especies se extinguen",
+            "Que el mamut se convirtió en elefante",
+            "Que los fósiles son rocas sin relación con la vida",
+            "Que la Tierra tiene pocos miles de años"
+          ],
           "correcta": 0,
           "explicacion": "Sus huesos y dientes eran de una especie distinta que ya no vive: el mamut se extinguió."
         },
         {
           "id": "he-cu-2",
           "enunciado": "¿Qué propone el catastrofismo?",
-          "opciones": ["Que grandes catástrofes borraron faunas enteras", "Que los cambios son siempre lentos", "Que las especies se transforman por el uso", "Que no existen los fósiles"],
+          "opciones": [
+            "Que grandes catástrofes borraron faunas enteras",
+            "Que los cambios son siempre lentos",
+            "Que las especies se transforman por el uso",
+            "Que no existen los fósiles"
+          ],
           "correcta": 0,
           "explicacion": "Cuvier explicaba los cambios entre capas de roca con catástrofes repentinas."
         }
@@ -255,16 +408,33 @@
         "cuando": "1830–1833 (Principios de geología)",
         "idea": "Lyell defendió el uniformismo: los ríos, la lluvia, los volcanes y los terremotos que vemos hoy, actuando muy despacio, bastan para formar montañas y valles. Eso exige una Tierra muchísimo más antigua de lo que se creía. Darwin aplicó esa misma idea a los seres vivos.",
         "contexto": [
-          { "titulo": "El presente explica el pasado", "texto": "Si un río deja una capa delgada de barro cada año, mil capas son mil años. Así se lee el tiempo en las rocas." },
-          { "titulo": "El libro del Beagle", "texto": "Darwin llevó el primer tomo en el viaje y recibió los otros en Sudamérica. Vio terremotos y costas levantadas que confirmaban a Lyell." },
-          { "titulo": "Un ejemplo en el Huila", "texto": "Las cárcavas de la Tatacoa muestran capas formadas durante millones de años y talladas por la lluvia." }
+          {
+            "titulo": "El presente explica el pasado",
+            "texto": "Si un río deja una capa delgada de barro cada año, mil capas son mil años. Así se lee el tiempo en las rocas."
+          },
+          {
+            "titulo": "El libro del Beagle",
+            "texto": "Darwin llevó el primer tomo en el viaje y recibió los otros en Sudamérica. Vio terremotos y costas levantadas que confirmaban a Lyell."
+          },
+          {
+            "titulo": "Un ejemplo en el Huila",
+            "texto": "Las cárcavas de la Tatacoa muestran capas formadas durante millones de años y talladas por la lluvia."
+          }
         ],
-        "evidencia": ["Capas de roca, costas levantadas y valles que se forman hoy a ritmo lento."],
+        "evidencia": [
+          "Capas de roca, costas levantadas y valles que se forman hoy a ritmo lento."
+        ],
         "limites": "Lyell tardó en aceptar la evolución de las especies, aunque al final apoyó a Darwin.",
         "cuaderno": {
-          "facil": ["Lyell mostró que la Tierra cambia lentamente y es muy antigua."],
-          "media": ["Uniformismo: las fuerzas de hoy explican el pasado."],
-          "avanzada": ["Darwin aplicó a los seres vivos la idea de cambios lentos que se acumulan."]
+          "facil": [
+            "Lyell mostró que la Tierra cambia lentamente y es muy antigua."
+          ],
+          "media": [
+            "Uniformismo: las fuerzas de hoy explican el pasado."
+          ],
+          "avanzada": [
+            "Darwin aplicó a los seres vivos la idea de cambios lentos que se acumulan."
+          ]
         }
       },
       "diapositivas": [
@@ -274,10 +444,26 @@
             "tipo": "escena",
             "id": "ev-lyell",
             "fases": [
-              { "id": "rio", "nombre": "El río deposita", "texto": "Cada creciente deja una capa delgada de arena y barro en el fondo." },
-              { "id": "capas", "nombre": "Se acumulan", "texto": "Capa sobre capa, durante miles y millones de años, se forma una roca enorme." },
-              { "id": "erosion", "nombre": "La lluvia talla", "texto": "Luego la tierra se levanta y la lluvia y el viento la tallan, como en la Tatacoa." },
-              { "id": "tiempo", "nombre": "Tiempo profundo", "texto": "Fuerzas pequeñas más muchísimo tiempo dan cambios enormes. La Tierra tiene unos 4600 millones de años." }
+              {
+                "id": "rio",
+                "nombre": "El río deposita",
+                "texto": "Cada creciente deja una capa delgada de arena y barro en el fondo."
+              },
+              {
+                "id": "capas",
+                "nombre": "Se acumulan",
+                "texto": "Capa sobre capa, durante miles y millones de años, se forma una roca enorme."
+              },
+              {
+                "id": "erosion",
+                "nombre": "La lluvia talla",
+                "texto": "Luego la tierra se levanta y la lluvia y el viento la tallan, como en la Tatacoa."
+              },
+              {
+                "id": "tiempo",
+                "nombre": "Tiempo profundo",
+                "texto": "Fuerzas pequeñas más muchísimo tiempo dan cambios enormes. La Tierra tiene unos 4600 millones de años."
+              }
             ]
           }
         },
@@ -286,9 +472,21 @@
           "visual": {
             "tipo": "tarjetas",
             "items": [
-              { "icono": "🪨", "titulo": "Lyell", "texto": "Cambios lentos y pequeños forman montañas." },
-              { "icono": "📖", "titulo": "Darwin lo leyó", "texto": "Llevó su libro en el Beagle." },
-              { "icono": "🐦", "titulo": "La misma idea", "texto": "Cambios pequeños en muchas generaciones forman especies nuevas." }
+              {
+                "icono": "🪨",
+                "titulo": "Lyell",
+                "texto": "Cambios lentos y pequeños forman montañas."
+              },
+              {
+                "icono": "📖",
+                "titulo": "Darwin lo leyó",
+                "texto": "Llevó su libro en el Beagle."
+              },
+              {
+                "icono": "🐦",
+                "titulo": "La misma idea",
+                "texto": "Cambios pequeños en muchas generaciones forman especies nuevas."
+              }
             ]
           }
         }
@@ -297,14 +495,24 @@
         {
           "id": "he-ly-1",
           "enunciado": "¿Qué dice el uniformismo de Lyell?",
-          "opciones": ["Las fuerzas que actúan hoy, muy despacio, explican el pasado de la Tierra", "Todo el relieve se formó por catástrofes repentinas", "La Tierra tiene pocos miles de años", "Las especies no cambian"],
+          "opciones": [
+            "Las fuerzas que actúan hoy, muy despacio, explican el pasado de la Tierra",
+            "Todo el relieve se formó por catástrofes repentinas",
+            "La Tierra tiene pocos miles de años",
+            "Las especies no cambian"
+          ],
           "correcta": 0,
           "explicacion": "Lluvia, ríos y volcanes, actuando durante millones de años, bastan para formar el relieve."
         },
         {
           "id": "he-ly-2",
           "enunciado": "¿Por qué las ideas de Lyell fueron importantes para Darwin?",
-          "opciones": ["Le dieron el tiempo necesario para que las especies cambiaran poco a poco", "Le enseñaron cómo funcionan los genes", "Le mostraron que las especies son fijas", "Le explicaron la extinción del mamut"],
+          "opciones": [
+            "Le dieron el tiempo necesario para que las especies cambiaran poco a poco",
+            "Le enseñaron cómo funcionan los genes",
+            "Le mostraron que las especies son fijas",
+            "Le explicaron la extinción del mamut"
+          ],
           "correcta": 0,
           "explicacion": "La evolución por pequeños cambios necesita muchísimo tiempo, y Lyell mostró que la Tierra lo tenía."
         }
@@ -330,18 +538,32 @@
         "cuando": "1831–1836 (viaje), 1835 (Galápagos)",
         "idea": "En el viaje del Beagle, Darwin vio fósiles de animales gigantes parecidos a los que aún vivían en Sudamérica, y en las Galápagos encontró sinsontes, tortugas y pinzones que cambiaban de una isla a otra. Empezó a sospechar que las especies no son fijas.",
         "contexto": [
-          { "titulo": "Tenía 22 años", "texto": "Había dejado medicina y estudiado para ser pastor, pero lo apasionaban los escarabajos y la geología." },
-          { "titulo": "Más tiempo en tierra que en el mar", "texto": "Mientras el barco cartografiaba las costas, Darwin recorría Brasil, Argentina, Chile y Perú recogiendo muestras." },
-          { "titulo": "Los pinzones", "texto": "Darwin no se dio cuenta en el momento: en 1837 el ornitólogo John Gould le mostró que eran muchas especies distintas de pinzones." }
+          {
+            "titulo": "Tenía 22 años",
+            "texto": "Había dejado medicina y estudiado para ser pastor, pero lo apasionaban los escarabajos y la geología."
+          },
+          {
+            "titulo": "Más tiempo en tierra que en el mar",
+            "texto": "Mientras el barco cartografiaba las costas, Darwin recorría Brasil, Argentina, Chile y Perú recogiendo muestras."
+          },
+          {
+            "titulo": "Los pinzones",
+            "texto": "Darwin no se dio cuenta en el momento: en 1837 el ornitólogo John Gould le mostró que eran muchas especies distintas de pinzones."
+          }
         ],
-        "evidencia": ["Fósiles de perezosos y armadillos gigantes en Argentina.", "Especies distintas en cada isla de las Galápagos."],
+        "evidencia": [
+          "Fósiles de perezosos y armadillos gigantes en Argentina.",
+          "Especies distintas en cada isla de las Galápagos."
+        ],
         "limites": "En el viaje Darwin solo reunió observaciones; la explicación la construyó durante los 20 años siguientes.",
         "cuaderno": {
           "facil": [
             "Darwin viajó en el Beagle de 1831 a 1836.",
             "En las Galápagos vio especies parecidas pero distintas en cada isla."
           ],
-          "media": ["Los pinzones tienen picos distintos según su alimento."],
+          "media": [
+            "Los pinzones tienen picos distintos según su alimento."
+          ],
           "avanzada": []
         }
       },
@@ -352,11 +574,32 @@
             "tipo": "escena",
             "id": "ev-beagle",
             "fases": [
-              { "id": "salida", "nombre": "Sale de Inglaterra", "texto": "En diciembre de 1831 el Beagle zarpa con Darwin, de 22 años, como naturalista." },
-              { "id": "sudamerica", "nombre": "Sudamérica", "texto": "Recorre costas y montañas y encuentra fósiles de perezosos y armadillos gigantes." },
-              { "id": "galapagos", "nombre": "Galápagos", "texto": "En 1835 llega a unas islas volcánicas frente a Ecuador, cada una con sus propias tortugas y aves." },
-              { "id": "picos", "nombre": "Los picos", "texto": "Los pinzones tienen picos distintos según lo que comen: gruesos para semillas, finos para insectos.", "nota": "¿Por qué habría especies distintas en islas tan cercanas?" },
-              { "id": "regreso", "nombre": "Regreso", "texto": "En 1836 vuelve a Inglaterra con miles de muestras y una pregunta que lo acompañará toda la vida." }
+              {
+                "id": "salida",
+                "nombre": "Sale de Inglaterra",
+                "texto": "En diciembre de 1831 el Beagle zarpa con Darwin, de 22 años, como naturalista."
+              },
+              {
+                "id": "sudamerica",
+                "nombre": "Sudamérica",
+                "texto": "Recorre costas y montañas y encuentra fósiles de perezosos y armadillos gigantes."
+              },
+              {
+                "id": "galapagos",
+                "nombre": "Galápagos",
+                "texto": "En 1835 llega a unas islas volcánicas frente a Ecuador, cada una con sus propias tortugas y aves."
+              },
+              {
+                "id": "picos",
+                "nombre": "Los picos",
+                "texto": "Los pinzones tienen picos distintos según lo que comen: gruesos para semillas, finos para insectos.",
+                "nota": "¿Por qué habría especies distintas en islas tan cercanas?"
+              },
+              {
+                "id": "regreso",
+                "nombre": "Regreso",
+                "texto": "En 1836 vuelve a Inglaterra con miles de muestras y una pregunta que lo acompañará toda la vida."
+              }
             ]
           }
         },
@@ -365,7 +608,12 @@
           "visual": {
             "tipo": "pregunta",
             "enunciado": "En cada isla hay un pinzón distinto, pero todos se parecen a uno del continente. ¿Qué podría explicarlo?",
-            "opciones": ["Unos pinzones llegaron del continente y cambiaron en cada isla", "Cada isla recibió su especie ya hecha", "Los pinzones cambian de pico cada año", "Son la misma especie con distinto nombre"],
+            "opciones": [
+              "Unos pinzones llegaron del continente y cambiaron en cada isla",
+              "Cada isla recibió su especie ya hecha",
+              "Los pinzones cambian de pico cada año",
+              "Son la misma especie con distinto nombre"
+            ],
             "correcta": 0,
             "explicacion": "Esa fue la sospecha de Darwin: un antepasado común que se diversificó en cada isla."
           }
@@ -375,14 +623,24 @@
         {
           "id": "he-be-1",
           "enunciado": "¿Qué observó Darwin en las islas Galápagos?",
-          "opciones": ["Especies parecidas pero distintas en cada isla", "Las mismas especies que en Inglaterra", "Animales que no tenían ningún parecido con los del continente", "Que todas las islas tenían una sola especie de ave"],
+          "opciones": [
+            "Especies parecidas pero distintas en cada isla",
+            "Las mismas especies que en Inglaterra",
+            "Animales que no tenían ningún parecido con los del continente",
+            "Que todas las islas tenían una sola especie de ave"
+          ],
           "correcta": 0,
           "explicacion": "Tortugas, sinsontes y pinzones cambiaban de una isla a otra, aunque se parecían a los del continente."
         },
         {
           "id": "he-be-2",
           "enunciado": "¿Por qué los pinzones de las Galápagos tienen picos diferentes?",
-          "opciones": ["Porque se alimentan de cosas distintas", "Porque se los liman contra las rocas", "Porque son de edades diferentes", "Por el color de sus plumas"],
+          "opciones": [
+            "Porque se alimentan de cosas distintas",
+            "Porque se los liman contra las rocas",
+            "Porque son de edades diferentes",
+            "Por el color de sus plumas"
+          ],
           "correcta": 0,
           "explicacion": "Cada forma de pico sirve para un alimento: semillas duras, insectos, flores o cactus."
         }
@@ -396,7 +654,9 @@
       "anio": 1859,
       "nivel": "basico",
       "nucleo": true,
-      "requiere": ["beagle"],
+      "requiere": [
+        "beagle"
+      ],
       "resumen": "Por separado llegaron a la misma idea: los individuos con variaciones favorables sobreviven y se reproducen más, y así las especies cambian.",
       "autores": [
         {
@@ -415,12 +675,27 @@
         "cuando": "1858 (presentación conjunta), 1859 (El origen de las especies)",
         "idea": "En una población los individuos son distintos entre sí, nacen más de los que pueden sobrevivir y las diferencias se heredan. Los que tienen variaciones favorables en su ambiente sobreviven y dejan más hijos. Generación tras generación, la especie cambia: es la selección natural. Todas las especies descienden de antepasados comunes.",
         "contexto": [
-          { "titulo": "Veinte años de silencio", "texto": "Darwin tenía la idea desde 1838, pero siguió reuniendo pruebas por miedo a la reacción que causaría." },
-          { "titulo": "La carta de Wallace", "texto": "En 1858 Wallace, enfermo de fiebre en las islas Molucas, escribió la misma teoría y se la envió a Darwin." },
-          { "titulo": "Un acuerdo justo", "texto": "El 1 de julio de 1858 se leyeron juntos textos de ambos en la Sociedad Linneana de Londres. Un año después salió el libro de Darwin." },
-          { "titulo": "Wallace cerca de Colombia", "texto": "Antes de Asia, Wallace exploró el río Negro y el Vaupés, cerca de la actual frontera con Colombia." }
+          {
+            "titulo": "Veinte años de silencio",
+            "texto": "Darwin tenía la idea desde 1838, pero siguió reuniendo pruebas por miedo a la reacción que causaría."
+          },
+          {
+            "titulo": "La carta de Wallace",
+            "texto": "En 1858 Wallace, enfermo de fiebre en las islas Molucas, escribió la misma teoría y se la envió a Darwin."
+          },
+          {
+            "titulo": "Un acuerdo justo",
+            "texto": "El 1 de julio de 1858 se leyeron juntos textos de ambos en la Sociedad Linneana de Londres. Un año después salió el libro de Darwin."
+          },
+          {
+            "titulo": "Wallace cerca de Colombia",
+            "texto": "Antes de Asia, Wallace exploró el río Negro y el Vaupés, cerca de la actual frontera con Colombia."
+          }
         ],
-        "evidencia": ["Cría de palomas y otros animales domésticos.", "Fósiles, distribución de las especies y anatomía comparada."],
+        "evidencia": [
+          "Cría de palomas y otros animales domésticos.",
+          "Fósiles, distribución de las especies y anatomía comparada."
+        ],
         "limites": "Darwin no sabía cómo se heredan las variaciones ni de dónde salen. La genética lo explicaría en el siglo XX.",
         "cuaderno": {
           "facil": [
@@ -428,8 +703,12 @@
             "Los individuos con variaciones favorables sobreviven y dejan más hijos.",
             "Darwin publicó El origen de las especies en 1859."
           ],
-          "media": ["Todas las especies descienden de antepasados comunes."],
-          "avanzada": ["Darwin no conocía los mecanismos de la herencia."]
+          "media": [
+            "Todas las especies descienden de antepasados comunes."
+          ],
+          "avanzada": [
+            "Darwin no conocía los mecanismos de la herencia."
+          ]
         }
       },
       "diapositivas": [
@@ -439,20 +718,62 @@
             "tipo": "escena",
             "id": "ev-seleccion",
             "fases": [
-              { "id": "variacion", "nombre": "Variación", "texto": "Los escarabajos de una población no son iguales: unos son verdes y otros marrones." },
-              { "id": "muchos", "nombre": "Nacen demasiados", "texto": "Nacen más de los que el ambiente puede sostener. No todos sobrevivirán." },
-              { "id": "seleccion", "nombre": "Sobreviven los mejor adaptados", "texto": "Sobre la tierra oscura, las aves ven y comen más escarabajos verdes. Los marrones pasan desapercibidos." },
-              { "id": "herencia", "nombre": "Herencia", "texto": "Los sobrevivientes tienen hijos parecidos a ellos. En la siguiente generación hay más marrones." },
-              { "id": "cambio", "nombre": "La especie cambia", "texto": "Tras muchas generaciones casi todos son marrones: la población se adaptó a su ambiente.", "nota": "A fondo en el tema 3, «Selección natural»." }
+              {
+                "id": "variacion",
+                "nombre": "Variación",
+                "texto": "Los escarabajos de una población no son iguales: unos son verdes y otros marrones."
+              },
+              {
+                "id": "muchos",
+                "nombre": "Nacen demasiados",
+                "texto": "Nacen más de los que el ambiente puede sostener. No todos sobrevivirán."
+              },
+              {
+                "id": "seleccion",
+                "nombre": "Sobreviven los mejor adaptados",
+                "texto": "Sobre la tierra oscura, las aves ven y comen más escarabajos verdes. Los marrones pasan desapercibidos."
+              },
+              {
+                "id": "herencia",
+                "nombre": "Herencia",
+                "texto": "Los sobrevivientes tienen hijos parecidos a ellos. En la siguiente generación hay más marrones."
+              },
+              {
+                "id": "cambio",
+                "nombre": "La especie cambia",
+                "texto": "Tras muchas generaciones casi todos son marrones: la población se adaptó a su ambiente.",
+                "nota": "A fondo en el tema 3, «Selección natural»."
+              }
             ]
+          },
+          "atajo": {
+            "texto": "Más sobre esto: Selección natural",
+            "tema": "seleccion-natural",
+            "bloque": "ingredientes"
           }
         },
         {
           "titulo": "Dos naturalistas, una idea",
           "visual": {
             "tipo": "compara",
-            "izq": { "icono": "🚢", "titulo": "Darwin", "puntos": ["Viaje del Beagle", "20 años de pruebas", "El origen de las especies (1859)"] },
-            "der": { "icono": "🦋", "titulo": "Wallace", "puntos": ["Amazonia y archipiélago malayo", "Carta a Darwin (1858)", "Gran experto en biogeografía"] }
+            "izq": {
+              "icono": "🚢",
+              "titulo": "Darwin",
+              "puntos": [
+                "Viaje del Beagle",
+                "20 años de pruebas",
+                "El origen de las especies (1859)"
+              ]
+            },
+            "der": {
+              "icono": "🦋",
+              "titulo": "Wallace",
+              "puntos": [
+                "Amazonia y archipiélago malayo",
+                "Carta a Darwin (1858)",
+                "Gran experto en biogeografía"
+              ]
+            }
           }
         },
         {
@@ -460,7 +781,12 @@
           "visual": {
             "tipo": "pregunta",
             "enunciado": "Las jirafas de cuello más largo alcanzaban más hojas, vivían más y tenían más crías. ¿De quién es esta explicación?",
-            "opciones": ["De Darwin y Wallace", "De Lamarck", "De Linneo", "De Cuvier"],
+            "opciones": [
+              "De Darwin y Wallace",
+              "De Lamarck",
+              "De Linneo",
+              "De Cuvier"
+            ],
             "correcta": 0,
             "explicacion": "No hay estiramiento heredado: las que ya nacían con el cuello más largo sobrevivían más. Es selección natural."
           }
@@ -470,14 +796,24 @@
         {
           "id": "he-dw-1",
           "enunciado": "¿Qué necesita la selección natural para funcionar?",
-          "opciones": ["Variación entre individuos que se hereda", "Que los individuos se esfuercen por cambiar", "Que todos los individuos sean iguales", "Una catástrofe que extinga a la especie"],
+          "opciones": [
+            "Variación entre individuos que se hereda",
+            "Que los individuos se esfuercen por cambiar",
+            "Que todos los individuos sean iguales",
+            "Una catástrofe que extinga a la especie"
+          ],
           "correcta": 0,
           "explicacion": "Si todos fueran iguales o las diferencias no se heredaran, no habría nada que seleccionar."
         },
         {
           "id": "he-dw-2",
           "enunciado": "¿Por qué la teoría se atribuye a Darwin y también a Wallace?",
-          "opciones": ["Llegaron a la misma idea por separado", "Escribieron juntos El origen de las especies", "Wallace la copió de Darwin", "Viajaron juntos en el Beagle"],
+          "opciones": [
+            "Llegaron a la misma idea por separado",
+            "Escribieron juntos El origen de las especies",
+            "Wallace la copió de Darwin",
+            "Viajaron juntos en el Beagle"
+          ],
           "correcta": 0,
           "explicacion": "Wallace la formuló en su ensayo de 1858 sin conocer el trabajo de Darwin, y se presentaron juntos."
         }
@@ -490,7 +826,9 @@
       "titulo": "La síntesis moderna",
       "anio": 1942,
       "nivel": "avanzado",
-      "requiere": ["darwin-wallace"],
+      "requiere": [
+        "darwin-wallace"
+      ],
       "resumen": "La genética de Mendel y la selección natural de Darwin se unieron en una sola teoría: la evolución es el cambio de las frecuencias de los genes en las poblaciones.",
       "autores": [
         {
@@ -509,16 +847,34 @@
         "cuando": "1918–1950 (libro de Huxley, 1942)",
         "idea": "Al principio del siglo XX parecía que Mendel y Darwin se contradecían. Varios científicos mostraron con matemáticas, experimentos y observaciones de campo que encajan: las mutaciones crean variación, los genes la heredan y la selección natural (junto con el azar) cambia la frecuencia de los genes en una población.",
         "contexto": [
-          { "titulo": "Lo que le faltaba a Darwin", "texto": "Darwin no sabía cómo se heredan las variaciones. Mendel ya lo había descubierto en 1866, pero casi nadie lo leyó." },
-          { "titulo": "Genética de poblaciones", "texto": "Fisher, Haldane y Wright calcularon cómo cambian las frecuencias de los alelos de generación en generación." },
-          { "titulo": "Una frase famosa", "texto": "Dobzhansky escribió en 1973 que nada en biología tiene sentido si no es a la luz de la evolución." }
+          {
+            "titulo": "Lo que le faltaba a Darwin",
+            "texto": "Darwin no sabía cómo se heredan las variaciones. Mendel ya lo había descubierto en 1866, pero casi nadie lo leyó."
+          },
+          {
+            "titulo": "Genética de poblaciones",
+            "texto": "Fisher, Haldane y Wright calcularon cómo cambian las frecuencias de los alelos de generación en generación."
+          },
+          {
+            "titulo": "Una frase famosa",
+            "texto": "Dobzhansky escribió en 1973 que nada en biología tiene sentido si no es a la luz de la evolución."
+          }
         ],
-        "evidencia": ["Experimentos con poblaciones de moscas de la fruta.", "Modelos matemáticos de genética de poblaciones."],
+        "evidencia": [
+          "Experimentos con poblaciones de moscas de la fruta.",
+          "Modelos matemáticos de genética de poblaciones."
+        ],
         "limites": "Después se sumaron el ADN, la deriva genética y la evolución del desarrollo: la teoría sigue creciendo.",
         "cuaderno": {
-          "facil": ["La síntesis moderna unió la genética de Mendel con la selección natural de Darwin."],
-          "media": ["Las mutaciones producen la variación sobre la que actúa la selección."],
-          "avanzada": ["La evolución es el cambio de las frecuencias de los alelos en una población."]
+          "facil": [
+            "La síntesis moderna unió la genética de Mendel con la selección natural de Darwin."
+          ],
+          "media": [
+            "Las mutaciones producen la variación sobre la que actúa la selección."
+          ],
+          "avanzada": [
+            "La evolución es el cambio de las frecuencias de los alelos en una población."
+          ]
         }
       },
       "diapositivas": [
@@ -528,40 +884,90 @@
             "tipo": "escena",
             "id": "ev-sintesis",
             "fases": [
-              { "id": "piezas", "nombre": "Dos piezas sueltas", "texto": "Darwin explicó la selección pero no la herencia. Mendel explicó la herencia pero no la evolución." },
-              { "id": "union", "nombre": "Se unen", "texto": "Entre 1918 y 1950 se mostró que las dos piezas encajan en una sola teoría." },
-              { "id": "frecuencias", "nombre": "Frecuencias de alelos", "texto": "En una población, la selección hace que un alelo favorable sea cada vez más común." },
-              { "id": "mutacion", "nombre": "Fuente de variación", "texto": "Las mutaciones producen alelos nuevos: la materia prima de la evolución." }
+              {
+                "id": "piezas",
+                "nombre": "Dos piezas sueltas",
+                "texto": "Darwin explicó la selección pero no la herencia. Mendel explicó la herencia pero no la evolución."
+              },
+              {
+                "id": "union",
+                "nombre": "Se unen",
+                "texto": "Entre 1918 y 1950 se mostró que las dos piezas encajan en una sola teoría."
+              },
+              {
+                "id": "frecuencias",
+                "nombre": "Frecuencias de alelos",
+                "texto": "En una población, la selección hace que un alelo favorable sea cada vez más común."
+              },
+              {
+                "id": "mutacion",
+                "nombre": "Fuente de variación",
+                "texto": "Las mutaciones producen alelos nuevos: la materia prima de la evolución."
+              }
             ]
           },
-          "atajo": { "texto": "Más sobre esto: Mutaciones y variación", "tema": "mutaciones", "bloque": "variacion" }
+          "atajo": {
+            "texto": "Más sobre esto: Mutaciones y variación",
+            "tema": "mutaciones",
+            "bloque": "variacion"
+          }
         },
         {
           "titulo": "Lo que aportó cada uno",
           "visual": {
             "tipo": "tarjetas",
             "items": [
-              { "icono": "🧮", "titulo": "Fisher, Haldane, Wright", "texto": "Matemáticas de los genes en poblaciones." },
-              { "icono": "🪰", "titulo": "Dobzhansky", "texto": "Variación genética en moscas silvestres." },
-              { "icono": "🐦", "titulo": "Mayr", "texto": "Qué es una especie y cómo se forma." },
-              { "icono": "📘", "titulo": "Huxley", "texto": "Le dio nombre a la síntesis (1942)." }
+              {
+                "icono": "🧮",
+                "titulo": "Fisher, Haldane, Wright",
+                "texto": "Matemáticas de los genes en poblaciones."
+              },
+              {
+                "icono": "🪰",
+                "titulo": "Dobzhansky",
+                "texto": "Variación genética en moscas silvestres."
+              },
+              {
+                "icono": "🐦",
+                "titulo": "Mayr",
+                "texto": "Qué es una especie y cómo se forma."
+              },
+              {
+                "icono": "📘",
+                "titulo": "Huxley",
+                "texto": "Le dio nombre a la síntesis (1942)."
+              }
             ]
           },
-          "atajo": { "texto": "Más sobre esto: Herencia mendeliana", "tema": "herencia-mendeliana", "bloque": "genes-alelos" }
+          "atajo": {
+            "texto": "Más sobre esto: Herencia mendeliana",
+            "tema": "herencia-mendeliana",
+            "bloque": "genes-alelos"
+          }
         }
       ],
       "preguntas": [
         {
           "id": "he-si-1",
           "enunciado": "¿Qué unió la síntesis moderna?",
-          "opciones": ["La genética de Mendel y la selección natural de Darwin", "El fijismo y el catastrofismo", "Las ideas de Lamarck y Cuvier", "La teoría celular y la geología"],
+          "opciones": [
+            "La genética de Mendel y la selección natural de Darwin",
+            "El fijismo y el catastrofismo",
+            "Las ideas de Lamarck y Cuvier",
+            "La teoría celular y la geología"
+          ],
           "correcta": 0,
           "explicacion": "Mostró que la herencia mendeliana y la selección natural se complementan."
         },
         {
           "id": "he-si-2",
           "enunciado": "Según la síntesis moderna, ¿de dónde sale la variación nueva?",
-          "opciones": ["De las mutaciones", "Del esfuerzo de los individuos", "De las catástrofes", "Del uso de los órganos"],
+          "opciones": [
+            "De las mutaciones",
+            "Del esfuerzo de los individuos",
+            "De las catástrofes",
+            "Del uso de los órganos"
+          ],
           "correcta": 0,
           "explicacion": "Las mutaciones crean alelos nuevos; la reproducción sexual los combina."
         }
@@ -574,7 +980,9 @@
       "titulo": "Eldredge y Gould: el equilibrio puntuado",
       "anio": 1972,
       "nivel": "avanzado",
-      "requiere": ["sintesis"],
+      "requiere": [
+        "sintesis"
+      ],
       "resumen": "Propusieron que muchas especies pasan largos periodos casi sin cambios y cambian rápido en momentos cortos, como muestran muchos registros fósiles.",
       "autores": [
         {
@@ -593,16 +1001,33 @@
         "cuando": "1972",
         "idea": "Muchos fósiles muestran especies que casi no cambian durante millones de años (equilibrio) y que dan paso a otras en periodos geológicamente cortos (puntuado). Eldredge y Gould propusieron que esto no es un defecto del registro fósil, sino una forma real de evolucionar, distinta del gradualismo de cambio lento y constante.",
         "contexto": [
-          { "titulo": "Los «huecos» del registro", "texto": "Darwin pensaba que faltaban fósiles intermedios porque se conserva muy poco. Eldredge y Gould dijeron que la quietud también es un dato." },
-          { "titulo": "Rápido es relativo", "texto": "Un cambio «rápido» puede durar decenas de miles de años: poco frente a millones de años de estabilidad." },
-          { "titulo": "Un debate vivo", "texto": "Hoy se acepta que ambos ritmos existen: unas líneas cambian de forma gradual y otras a saltos." }
+          {
+            "titulo": "Los «huecos» del registro",
+            "texto": "Darwin pensaba que faltaban fósiles intermedios porque se conserva muy poco. Eldredge y Gould dijeron que la quietud también es un dato."
+          },
+          {
+            "titulo": "Rápido es relativo",
+            "texto": "Un cambio «rápido» puede durar decenas de miles de años: poco frente a millones de años de estabilidad."
+          },
+          {
+            "titulo": "Un debate vivo",
+            "texto": "Hoy se acepta que ambos ritmos existen: unas líneas cambian de forma gradual y otras a saltos."
+          }
         ],
-        "evidencia": ["Series de fósiles de trilobites y caracoles con largos periodos sin cambio."],
+        "evidencia": [
+          "Series de fósiles de trilobites y caracoles con largos periodos sin cambio."
+        ],
         "limites": "No contradice la selección natural: discute el ritmo de la evolución, no su mecanismo.",
         "cuaderno": {
-          "facil": ["El equilibrio puntuado propone largos periodos sin cambio y cambios rápidos."],
-          "media": ["El gradualismo propone un cambio lento y constante."],
-          "avanzada": ["Ambos ritmos se observan en el registro fósil."]
+          "facil": [
+            "El equilibrio puntuado propone largos periodos sin cambio y cambios rápidos."
+          ],
+          "media": [
+            "El gradualismo propone un cambio lento y constante."
+          ],
+          "avanzada": [
+            "Ambos ritmos se observan en el registro fósil."
+          ]
         }
       },
       "diapositivas": [
@@ -612,9 +1037,21 @@
             "tipo": "escena",
             "id": "ev-ritmos",
             "fases": [
-              { "id": "gradual", "nombre": "Gradualismo", "texto": "La forma cambia un poquito en cada época: una rampa suave." },
-              { "id": "puntuado", "nombre": "Equilibrio puntuado", "texto": "La forma se queda casi igual mucho tiempo y cambia en un salto corto: una escalera." },
-              { "id": "ambos", "nombre": "Ambos existen", "texto": "En el registro fósil se encuentran los dos ritmos, según el grupo y la época." }
+              {
+                "id": "gradual",
+                "nombre": "Gradualismo",
+                "texto": "La forma cambia un poquito en cada época: una rampa suave."
+              },
+              {
+                "id": "puntuado",
+                "nombre": "Equilibrio puntuado",
+                "texto": "La forma se queda casi igual mucho tiempo y cambia en un salto corto: una escalera."
+              },
+              {
+                "id": "ambos",
+                "nombre": "Ambos existen",
+                "texto": "En el registro fósil se encuentran los dos ritmos, según el grupo y la época."
+              }
             ]
           }
         }
@@ -623,14 +1060,24 @@
         {
           "id": "he-ep-1",
           "enunciado": "¿Qué propone el equilibrio puntuado?",
-          "opciones": ["Largos periodos sin cambio interrumpidos por cambios rápidos", "Un cambio lento y constante todo el tiempo", "Que las especies nunca cambian", "Que lo adquirido en vida se hereda"],
+          "opciones": [
+            "Largos periodos sin cambio interrumpidos por cambios rápidos",
+            "Un cambio lento y constante todo el tiempo",
+            "Que las especies nunca cambian",
+            "Que lo adquirido en vida se hereda"
+          ],
           "correcta": 0,
           "explicacion": "Equilibrio = estabilidad larga; puntuado = cambios cortos que la interrumpen."
         },
         {
           "id": "he-ep-2",
           "enunciado": "¿El equilibrio puntuado niega la selección natural?",
-          "opciones": ["No: discute el ritmo de la evolución, no el mecanismo", "Sí: la reemplaza por las catástrofes", "Sí: vuelve al fijismo", "No: dice que la evolución ya se detuvo"],
+          "opciones": [
+            "No: discute el ritmo de la evolución, no el mecanismo",
+            "Sí: la reemplaza por las catástrofes",
+            "Sí: vuelve al fijismo",
+            "No: dice que la evolución ya se detuvo"
+          ],
           "correcta": 0,
           "explicacion": "La pregunta es qué tan rápido ocurre el cambio, no qué lo causa."
         }
