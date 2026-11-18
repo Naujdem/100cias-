@@ -53,6 +53,7 @@ import { EscenaDisolver, EscenaSaturacion, EscenaFactoresSolubilidad, EscenaCurv
 import { EscenaConcentracionColor, EscenaPpm, EscenaPrepararMolar, EscenaDilucion } from './EscenasConcentracion.tsx'
 import { EscenaVelocidadReaccion, EscenaFactoresVelocidad, EscenaColisiones, EscenaEnergiaActivacion, EscenaConservarAlimentos } from './EscenasCinetica.tsx'
 import { EscenaIdaVuelta, EscenaEquilibrioDinamico, EscenaLeChatelier, EscenaEquilibrioNaturaleza } from './EscenasEquilibrio.tsx'
+import { EscenaAcidoBase, EscenaRepolloIndicador, EscenaSueloPh, EscenaFuerteDebil, EscenaTitulacion } from './EscenasAcidosBases.tsx'
 import { EscenaMolContar, EscenaMasaMolar, EscenaCaminoMol } from './EscenasMol.tsx'
 import { EscenaReceta, EscenaMasaMasa, EscenaLimite } from './EscenasEstequiometria.tsx'
 import { EscenaIntra, EscenaPolaridad, EscenaFuerzas, EscenaSoluble } from './EscenasFuerzas.tsx'
@@ -326,6 +327,11 @@ export const ESCENAS: Record<string, ComponentType<{ fase: string }>> = {
   'equilibrio-dinamico': EscenaEquilibrioDinamico,
   'le-chatelier': EscenaLeChatelier,
   'equilibrio-naturaleza': EscenaEquilibrioNaturaleza,
+  'acido-base': EscenaAcidoBase,
+  'repollo-indicador': EscenaRepolloIndicador,
+  'suelo-ph': EscenaSueloPh,
+  'fuerte-debil': EscenaFuerteDebil,
+  titulacion: EscenaTitulacion,
   compostaje: EscenaCompostaje,
   riesgo: EscenaRiesgo,
   armero: EscenaArmero,

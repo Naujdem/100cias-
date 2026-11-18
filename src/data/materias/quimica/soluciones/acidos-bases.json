@@ -1,0 +1,713 @@
+{
+  "id": "acidos-bases",
+  "materia": "quimica",
+  "area": "soluciones",
+  "titulo": "Ácidos, bases y pH",
+  "subtema": "Arrhenius, escala de pH, indicadores, suelo, fuerza, Brønsted-Lowry y titulación",
+  "orden": 138,
+  "etiqueta": "8",
+  "vistas": [
+    "ruta"
+  ],
+  "tituloVista": "Ruta de los ácidos y las bases",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Diferenciar ácidos y bases por sus propiedades y según Arrhenius.",
+    "Ubicar sustancias de la vida diaria en la escala de pH y usar indicadores caseros.",
+    "Explicar el encalado de los suelos ácidos.",
+    "Diferenciar ácidos fuertes y débiles y explicar la neutralización y la titulación."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con un texto de química de bachillerato (pH aproximados de las sustancias de la casa; viraje de la fenolftaleína ≈ 8,2; Arrhenius 1887; Brønsted-Lowry 1923).",
+    "pH preferidos de los cultivos aproximados: verificar con Cenicafé o AGROSAVIA."
+  ],
+  "bloques": [
+    {
+      "id": "que-son",
+      "titulo": "Ácidos y bases",
+      "resumen": "Los ácidos sueltan H⁺ en el agua; las bases, OH⁻.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "Desde hace siglos se separan las sustancias en dos grupos. Los ácidos tienen sabor agrio, como el limón, el vinagre o la naranja; corroen algunos metales y ponen rojo el jugo de repollo morado. Las bases (o álcalis) tienen sabor amargo, se sienten jabonosas al tacto, como el jabón, el bicarbonato o la cal, y ponen verde el repollo. En 1887, Svante Arrhenius explicó la diferencia: un ácido es una sustancia que en el agua suelta iones de hidrógeno (H⁺), como el ácido clorhídrico, HCl → H⁺ + Cl⁻; una base es una sustancia que en el agua suelta iones hidróxido (OH⁻), como la soda cáustica, NaOH → Na⁺ + OH⁻. Muchos ácidos y bases son peligrosos: en el laboratorio nunca se prueban ni se tocan, y los de la casa (blanqueador, destapacañerías) se manejan con guantes y lejos de los niños.",
+        "contexto": [
+          {
+            "titulo": "El ácido del estómago",
+            "texto": "El estómago produce ácido clorhídrico para digerir; la acidez se calma con antiácidos, que son bases suaves."
+          },
+          {
+            "titulo": "Ácidos y bases de la tabla",
+            "texto": "Los nombres de los ácidos (clorhídrico, sulfúrico) y de los hidróxidos se ven en Nomenclatura."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Ácidos: agrios (limón, vinagre). Bases: amargas y jabonosas (jabón, cal)."
+          ],
+          "media": [
+            "Arrhenius: ácido = suelta H⁺ en agua; base = suelta OH⁻ en agua."
+          ],
+          "avanzada": [
+            "En el agua, el H⁺ se une a una molécula de agua y forma el ion hidronio, H₃O⁺."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Qué tienen en común el limón, el vinagre y la gaseosa? ¿Y el jabón, la cal y el bicarbonato?",
+          "actividad": "Clasificar productos de la casa por lo que dice su etiqueta (sin probarlos) y luego comprobar con el indicador de repollo.",
+          "errores": [
+            "Creer que todos los ácidos son peligrosos y todas las bases inofensivas.",
+            "Probar sustancias para saber si son ácidas."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Agrios y jabonosos",
+          "visual": {
+            "tipo": "escena",
+            "id": "acido-base",
+            "fases": [
+              {
+                "id": "acidos",
+                "nombre": "Ácidos",
+                "texto": "Limón, vinagre, naranja, gaseosa."
+              },
+              {
+                "id": "bases",
+                "nombre": "Bases",
+                "texto": "Jabón, bicarbonato, cal, blanqueador."
+              },
+              {
+                "id": "arrhenius",
+                "nombre": "Arrhenius",
+                "texto": "Ácidos sueltan H⁺; bases, OH⁻."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre los nombres de los ácidos",
+            "tema": "acidos-sales",
+            "bloque": "hidracidos"
+          }
+        }
+      ],
+      "juego": "acido-o-base-juego",
+      "preguntas": [
+        {
+          "id": "qm-ab-1",
+          "enunciado": "Según Arrhenius, un ácido es una sustancia que en el agua…",
+          "opciones": [
+            "Suelta iones H⁺",
+            "Suelta iones OH⁻",
+            "No se disuelve",
+            "Se vuelve sólida"
+          ],
+          "correcta": 0,
+          "explicacion": "Como el HCl."
+        },
+        {
+          "id": "qm-ab-2",
+          "enunciado": "¿Cuál es una base?",
+          "opciones": [
+            "El jabón",
+            "El limón",
+            "El vinagre",
+            "La gaseosa"
+          ],
+          "correcta": 0,
+          "explicacion": "Se siente jabonoso y es amargo."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "escala-ph",
+      "titulo": "La escala de pH",
+      "resumen": "De 0 a 14: menos de 7 es ácido, 7 neutro y más de 7 básico.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "requiere": [
+        "que-son"
+      ],
+      "ficha": {
+        "idea": "Para decir qué tan ácida o básica es una sustancia se usa la escala de pH, que va de 0 a 14. Un pH de 7 es neutro, como el agua pura. Por debajo de 7 las sustancias son ácidas, y más ácidas cuanto más bajo el número: el limón tiene pH de unos 2 y el jugo del estómago, de 1 a 2. Por encima de 7 son básicas, y más cuanto más alto: el jabón tiene unos 10 y la soda cáustica, 13 o 14. Lo importante es que la escala no va de uno en uno: cada número es diez veces más ácido o básico que el siguiente. Un pH 3 es diez veces más ácido que un pH 4 y cien veces más que un pH 5. Nuestra sangre se mantiene en un pH de 7,35 a 7,45: un cambio pequeño puede ser grave.",
+        "contexto": [
+          {
+            "titulo": "¿Qué significa pH?",
+            "texto": "Viene de «potencial de hidrógeno»: mide la concentración de iones H⁺. pH = −log[H⁺]."
+          },
+          {
+            "titulo": "La lluvia",
+            "texto": "La lluvia limpia es un poco ácida (pH ≈ 5,6) porque disuelve CO₂ del aire; la lluvia ácida, por contaminación, tiene pH menor de 5,6."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "pH 7: neutro. Menos de 7: ácido. Más de 7: básico."
+          ],
+          "media": [
+            "Cada unidad de pH es 10 veces más ácida o básica que la siguiente.",
+            "pH = −log[H⁺]."
+          ],
+          "avanzada": [
+            "pH + pOH = 14 (a 25 °C)."
+          ]
+        },
+        "docente": {
+          "abrir": "Si el limón tiene pH 2 y el vinagre pH 3, ¿cuántas veces más ácido es el limón?",
+          "actividad": "Construir una escala de pH en el tablero con productos de la casa usando el Explora y el indicador de repollo.",
+          "errores": [
+            "Creer que pH 3 es solo «un poquito» más ácido que pH 4.",
+            "Pensar que pH 0 significa que no hay ácido."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Cuál es más ácido?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "El limón tiene pH 2 y el tomate pH 4. ¿Cuántas veces más ácido es el limón?",
+            "opciones": [
+              "100 veces",
+              "2 veces",
+              "Lo mismo",
+              "20 veces"
+            ],
+            "correcta": 0,
+            "explicacion": "Dos unidades de pH: 10 × 10 = 100."
+          }
+        },
+        {
+          "titulo": "Escala de pH casera",
+          "visual": {
+            "tipo": "diagrama",
+            "id": "escala-ph"
+          }
+        },
+        {
+          "titulo": "De diez en diez",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🔟",
+            "valor": "× 10 por cada número",
+            "texto": "pH 3 es 10 veces más ácido que pH 4 y 100 veces más que pH 5."
+          }
+        }
+      ],
+      "diagrama": "escala-ph",
+      "juego": "ph-escala-juego",
+      "preguntas": [
+        {
+          "id": "qm-ab-3",
+          "enunciado": "¿Qué pH tiene una sustancia neutra?",
+          "opciones": [
+            "7",
+            "0",
+            "14",
+            "1"
+          ],
+          "correcta": 0,
+          "explicacion": "Como el agua pura."
+        },
+        {
+          "id": "qm-ab-4",
+          "enunciado": "Una sustancia con pH 11 es…",
+          "opciones": [
+            "Básica",
+            "Ácida",
+            "Neutra",
+            "No se puede saber"
+          ],
+          "correcta": 0,
+          "explicacion": "Mayor que 7."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "indicadores",
+      "titulo": "Indicadores: el repollo morado",
+      "resumen": "Sustancias que cambian de color según el pH.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "basico",
+      "requiere": [
+        "escala-ph"
+      ],
+      "ficha": {
+        "idea": "Un indicador es una sustancia que cambia de color según el pH. Se puede hacer uno en la casa: se pica repollo morado, se hierve unos minutos en agua y se cuela. El agua morada contiene antocianinas, los mismos pigmentos de la mora y el agraz, que se ponen rojas o rosadas en los ácidos, siguen moradas en lo neutro y se vuelven azules, verdes y hasta amarillas en las bases. En el laboratorio se usan otros: el papel tornasol (rojo en ácidos, azul en bases), la fenolftaleína (incolora en ácidos, fucsia en bases) y el papel indicador universal, que da un color distinto para cada número de pH. Para medir con precisión se usa el pH-metro, un aparato electrónico.",
+        "contexto": [
+          {
+            "titulo": "Otros indicadores caseros",
+            "texto": "La cúrcuma se pone roja en las bases; el agua de flor de Jamaica y la de remolacha también cambian de color."
+          },
+          {
+            "titulo": "Las hortensias",
+            "texto": "Las hortensias dan flores azules en suelos ácidos y rosadas en suelos básicos."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Un indicador cambia de color según si la sustancia es ácida o básica.",
+            "Repollo morado: rojo en ácidos, verde en bases."
+          ],
+          "media": [
+            "Papel tornasol: rojo en ácido, azul en base. Fenolftaleína: incolora en ácido, fucsia en base (pH > 8,2)."
+          ],
+          "avanzada": [
+            "Cada indicador tiene su rango de viraje; se elige según la titulación."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Cómo podríamos saber si algo es ácido sin probarlo?",
+          "actividad": "Preparar indicador de repollo y probarlo con limón, vinagre, agua, bicarbonato, jabón y agua de cal; ordenar los vasos por color.",
+          "errores": [
+            "Creer que el color del indicador es el color de la sustancia.",
+            "Pensar que el repollo solo sirve para ácidos."
+          ],
+          "minutos": 40
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "El indicador de repollo",
+          "visual": {
+            "tipo": "escena",
+            "id": "repollo-indicador",
+            "fases": [
+              {
+                "id": "hervir",
+                "nombre": "Prepararlo",
+                "texto": "Repollo morado hervido y colado."
+              },
+              {
+                "id": "colores",
+                "nombre": "Los colores",
+                "texto": "Rojo en ácidos, verde en bases."
+              },
+              {
+                "id": "fenolftaleina",
+                "nombre": "Fenolftaleína",
+                "texto": "Incolora en ácidos, fucsia en bases."
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "indicador-juego",
+      "preguntas": [
+        {
+          "id": "qm-ab-5",
+          "enunciado": "Con indicador de repollo morado, el vinagre se ve…",
+          "opciones": [
+            "Rojo o rosado",
+            "Verde",
+            "Azul",
+            "Amarillo"
+          ],
+          "correcta": 0,
+          "explicacion": "Es ácido."
+        },
+        {
+          "id": "qm-ab-6",
+          "enunciado": "¿Qué es un indicador?",
+          "opciones": [
+            "Una sustancia que cambia de color según el pH",
+            "Una sustancia que neutraliza ácidos",
+            "Un tipo de ácido",
+            "Un aparato para medir la temperatura"
+          ],
+          "correcta": 0,
+          "explicacion": "Como el repollo o la fenolftaleína."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "suelo",
+      "titulo": "El pH del suelo y el encalado",
+      "resumen": "Muchos suelos de Colombia son ácidos; la cal ayuda a corregirlos.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "basico",
+      "requiere": [
+        "escala-ph"
+      ],
+      "ficha": {
+        "idea": "El pH del suelo decide qué tan bien aprovechan las plantas los nutrientes. En las zonas de mucha lluvia, como buena parte de la zona andina y la Amazonía, el agua va lavando el calcio y el magnesio del suelo y lo vuelve ácido; los abonos de amonio usados por años también lo acidifican. En un suelo muy ácido (pH menor de 5) aparece aluminio que daña las raíces, y la planta no toma bien el fósforo ni otros nutrientes aunque se abone. Por eso se hace encalado: se aplica cal agrícola (carbonato de calcio, CaCO₃) o cal dolomita, que neutralizan parte de la acidez. La cantidad se decide con un análisis de suelo, porque cada cultivo prefiere un pH: el café se da bien en suelos algo ácidos (más o menos 5 a 5,5), y el fríjol y el maíz prefieren alrededor de 6 a 6,5.",
+        "contexto": [
+          {
+            "titulo": "Análisis de suelo",
+            "texto": "Se toman muestras de varios puntos del lote, se mezclan y se envían a un laboratorio (por ejemplo, de la Federación de Cafeteros o de AGROSAVIA)."
+          },
+          {
+            "titulo": "Ceniza",
+            "texto": "La ceniza de leña también es básica; antiguamente se usaba para corregir la acidez de las huertas."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Hay suelos ácidos y suelos básicos.",
+            "La cal agrícola ayuda a corregir los suelos muy ácidos."
+          ],
+          "media": [
+            "Encalado: aplicar CaCO₃ para subir el pH del suelo; la dosis sale del análisis de suelo."
+          ],
+          "avanzada": [
+            "En suelos con pH < 5,5 se solubiliza el aluminio (Al³⁺), tóxico para las raíces."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué un campesino echa cal antes de sembrar, si la cal no es un abono?",
+          "actividad": "Medir con indicador de repollo el pH de muestras de suelo de la vereda (suelo mezclado con agua y colado).",
+          "errores": [
+            "Creer que la cal es un abono que sirve para todo.",
+            "Pensar que todos los cultivos necesitan suelo neutro."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Corregir la acidez",
+          "visual": {
+            "tipo": "escena",
+            "id": "suelo-ph",
+            "fases": [
+              {
+                "id": "acido",
+                "nombre": "Suelo ácido",
+                "texto": "Las plantas no aprovechan el abono."
+              },
+              {
+                "id": "cal",
+                "nombre": "Encalado",
+                "texto": "La cal neutraliza la acidez."
+              },
+              {
+                "id": "sano",
+                "nombre": "Cultivo sano",
+                "texto": "Con el pH adecuado, la planta crece."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre cómo conservar el suelo",
+            "tema": "suelo-territorio",
+            "bloque": "conservar-suelo"
+          }
+        },
+        {
+          "titulo": "Cada cultivo tiene su pH",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "☕",
+                "titulo": "Café",
+                "texto": "≈ 5 a 5,5"
+              },
+              {
+                "icono": "🌽",
+                "titulo": "Maíz",
+                "texto": "≈ 5,8 a 6,5"
+              },
+              {
+                "icono": "🫘",
+                "titulo": "Fríjol",
+                "texto": "≈ 6 a 6,5"
+              },
+              {
+                "icono": "🥔",
+                "titulo": "Papa",
+                "texto": "≈ 5 a 6"
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "suelo-ph-juego",
+      "preguntas": [
+        {
+          "id": "qm-ab-7",
+          "enunciado": "¿Para qué se echa cal agrícola al suelo?",
+          "opciones": [
+            "Para neutralizar la acidez",
+            "Para hacerlo más ácido",
+            "Para matar las plantas",
+            "Para que llueva menos"
+          ],
+          "correcta": 0,
+          "explicacion": "Sube el pH."
+        },
+        {
+          "id": "qm-ab-8",
+          "enunciado": "¿Por qué los suelos de zonas muy lluviosas suelen ser ácidos?",
+          "opciones": [
+            "Porque la lluvia lava el calcio y el magnesio",
+            "Porque la lluvia es muy básica",
+            "Porque hace frío",
+            "Porque no tienen plantas"
+          ],
+          "correcta": 0,
+          "explicacion": "Quedan los componentes ácidos."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "fuertes-debiles",
+      "titulo": "Ácidos y bases fuertes y débiles",
+      "resumen": "Fuerte: se disocia todo. Débil: solo una parte.",
+      "anio": 5,
+      "etiqueta": "Paso 5",
+      "nivel": "intermedio",
+      "requiere": [
+        "indicadores"
+      ],
+      "ficha": {
+        "idea": "No todos los ácidos sueltan sus H⁺ de la misma manera. Un ácido fuerte, como el clorhídrico (HCl), el sulfúrico (H₂SO₄) o el nítrico (HNO₃), se disocia por completo en el agua: todas sus moléculas sueltan el H⁺. Un ácido débil, como el acético del vinagre, el cítrico del limón o el carbónico de la gaseosa, solo se disocia en una pequeña parte, y queda un equilibrio entre las moléculas enteras y los iones. Con las bases pasa igual: el hidróxido de sodio es una base fuerte y el amoníaco, una débil. Por eso dos soluciones con la misma concentración pueden tener pH muy distintos: el HCl 0,1 M tiene pH 1 y el ácido acético 0,1 M, alrededor de 2,9. No hay que confundir fuerte con concentrado: el vinagre es un ácido débil aunque esté concentrado, y un ácido fuerte muy diluido puede ser poco ácido.",
+        "contexto": [
+          {
+            "titulo": "Más ejemplos",
+            "texto": "Ácidos fuertes: HCl, HBr, HI, HNO₃, H₂SO₄, HClO₄. Bases fuertes: los hidróxidos de los metales alcalinos y algunos alcalinotérreos (NaOH, KOH, Ca(OH)₂)."
+          },
+          {
+            "titulo": "Ka",
+            "texto": "La fuerza de un ácido débil se mide con su constante de acidez Ka: cuanto más pequeña, más débil."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Algunos ácidos sueltan todo su H⁺ (fuertes) y otros solo un poco (débiles)."
+          ],
+          "media": [
+            "Fuerte: se disocia por completo. Débil: se disocia en parte (equilibrio ⇌).",
+            "Fuerte no es lo mismo que concentrado."
+          ],
+          "avanzada": [
+            "pH de un ácido fuerte = −log de su concentración. Para un débil se usa Ka."
+          ]
+        },
+        "docente": {
+          "abrir": "Si el vinagre es ácido, ¿por qué se puede comer y el ácido clorhídrico no?",
+          "actividad": "Comparar en el Explora el pH del vinagre con el del jugo gástrico y discutir por qué uno es débil y el otro fuerte.",
+          "errores": [
+            "Confundir fuerte con concentrado.",
+            "Creer que los ácidos débiles no son peligrosos."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Todos o unos pocos",
+          "visual": {
+            "tipo": "escena",
+            "id": "fuerte-debil",
+            "fases": [
+              {
+                "id": "fuerte",
+                "nombre": "Fuerte",
+                "texto": "Todas las moléculas sueltan el H⁺."
+              },
+              {
+                "id": "debil",
+                "nombre": "Débil",
+                "texto": "Solo unas pocas: equilibrio."
+              },
+              {
+                "id": "comparar",
+                "nombre": "Comparar",
+                "texto": "Misma concentración, distinto pH."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre el equilibrio dinámico",
+            "tema": "equilibrio-quimico",
+            "bloque": "dinamico"
+          }
+        },
+        {
+          "titulo": "Calcular el pH",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "🧮",
+            "valor": "pH = −log[H⁺]",
+            "texto": "HCl 0,01 M → [H⁺] = 10⁻² → pH 2."
+          },
+          "nivel": "avanzado"
+        }
+      ],
+      "juego": "fuerte-debil-juego",
+      "preguntas": [
+        {
+          "id": "qm-ab-9",
+          "enunciado": "¿Qué caracteriza a un ácido fuerte?",
+          "opciones": [
+            "Se disocia por completo en el agua",
+            "Está muy concentrado",
+            "Tiene olor fuerte",
+            "Es de color oscuro"
+          ],
+          "correcta": 0,
+          "explicacion": "Todas sus moléculas sueltan el H⁺."
+        },
+        {
+          "id": "qm-ab-10",
+          "enunciado": "¿Por qué el ácido acético 0,1 M tiene un pH más alto que el HCl 0,1 M?",
+          "opciones": [
+            "Porque es un ácido débil y se disocia poco",
+            "Porque está más diluido",
+            "Porque es una base",
+            "Porque tiene más agua"
+          ],
+          "correcta": 0,
+          "explicacion": "Suelta menos H⁺."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "bronsted",
+      "titulo": "Brønsted-Lowry, neutralización y titulación",
+      "resumen": "Ácidos que donan H⁺, bases que los aceptan, y cómo medir una concentración.",
+      "anio": 6,
+      "etiqueta": "Paso 6",
+      "nivel": "avanzado",
+      "requiere": [
+        "fuertes-debiles"
+      ],
+      "ficha": {
+        "idea": "En 1923, Brønsted y Lowry propusieron una idea más amplia: un ácido es una sustancia que dona un ion H⁺ (un protón) y una base, una que lo acepta. Así se entiende que el amoníaco (NH₃) sea una base aunque no tenga OH⁻: le quita un H⁺ al agua. Cuando un ácido dona su H⁺ queda su base conjugada, y cuando una base lo acepta queda su ácido conjugado. El agua puede hacer de ácido o de base: es anfótera. Cuando un ácido y una base se juntan se neutralizan y forman una sal y agua: HCl + NaOH → NaCl + H₂O. La titulación usa esa reacción para medir la concentración de un ácido: se agrega gota a gota, con una bureta, una base de concentración conocida, con unas gotas de fenolftaleína. Cuando la solución se pone rosada pálida se llegó al punto final; con el volumen gastado se calcula la concentración desconocida.",
+        "contexto": [
+          {
+            "titulo": "Ejemplo de titulación",
+            "texto": "25 mL de HCl gastan 20 mL de NaOH 0,1 M: moles de NaOH = 0,002 = moles de HCl; [HCl] = 0,002 / 0,025 = 0,08 M."
+          },
+          {
+            "titulo": "En la vida diaria",
+            "texto": "Así se controla la acidez de la leche en las plantas lecheras y la del vinagre en las fábricas."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Un ácido y una base se neutralizan y forman sal y agua."
+          ],
+          "media": [
+            "Neutralización: ácido + base → sal + agua.",
+            "Titulación: medir la concentración de un ácido con una base conocida y un indicador."
+          ],
+          "avanzada": [
+            "Brønsted-Lowry: ácido dona H⁺; base acepta H⁺. Pares conjugados.",
+            "Titulación: Ca·Va = Cb·Vb (para ácidos y bases con un H⁺ u OH⁻)."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Cómo podríamos saber cuánto ácido tiene un vinagre sin probarlo?",
+          "actividad": "Titulación de vinagre con soda en solución diluida y fenolftaleína, con el docente (gafas y guantes).",
+          "errores": [
+            "Creer que en el punto final ya no hay iones en la solución.",
+            "Olvidar pasar los mL a litros en el cálculo."
+          ],
+          "minutos": 45
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Dona y acepta",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🎁",
+                "titulo": "Ácido",
+                "texto": "Dona un H⁺: HCl."
+              },
+              {
+                "icono": "🤲",
+                "titulo": "Base",
+                "texto": "Acepta un H⁺: NH₃."
+              },
+              {
+                "icono": "🔁",
+                "titulo": "Conjugados",
+                "texto": "NH₃ / NH₄⁺, HCl / Cl⁻."
+              },
+              {
+                "icono": "💧",
+                "titulo": "Anfótera",
+                "texto": "El agua hace de ácido o de base."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Titulación",
+          "visual": {
+            "tipo": "escena",
+            "id": "titulacion",
+            "fases": [
+              {
+                "id": "inicio",
+                "nombre": "Al empezar",
+                "texto": "Ácido con fenolftaleína: incoloro."
+              },
+              {
+                "id": "goteo",
+                "nombre": "Gota a gota",
+                "texto": "La base va neutralizando el ácido."
+              },
+              {
+                "id": "punto",
+                "nombre": "Punto final",
+                "texto": "Rosado pálido: se mide el volumen gastado."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre la neutralización y las sales",
+            "tema": "acidos-sales",
+            "bloque": "sales"
+          }
+        }
+      ],
+      "juego": "bronsted-juego",
+      "preguntas": [
+        {
+          "id": "qm-ab-11",
+          "enunciado": "Según Brønsted-Lowry, una base es una sustancia que…",
+          "opciones": [
+            "Acepta un ion H⁺",
+            "Dona un ion H⁺",
+            "Suelta electrones",
+            "Tiene sabor agrio"
+          ],
+          "correcta": 0,
+          "explicacion": "Como el NH₃."
+        },
+        {
+          "id": "qm-ab-12",
+          "enunciado": "¿Qué se forma en la neutralización de HCl con NaOH?",
+          "opciones": [
+            "NaCl y agua",
+            "Solo agua",
+            "H₂ y O₂",
+            "NaOH y HCl"
+          ],
+          "correcta": 0,
+          "explicacion": "Una sal y agua."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}
