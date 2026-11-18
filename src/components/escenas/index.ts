@@ -42,6 +42,7 @@ import { EscenaSepararMezclas } from './EscenasSeparacion.tsx'
 import { EscenaDescubrimiento, EscenaTiposRadiacion, EscenaFision } from './EscenasRadiactividad.tsx'
 import { EscenaOxIdea, EscenaOxTabla, EscenaOxCalculo, EscenaOxIon } from './EscenasOxidacion.tsx'
 import { EscenaNomMapa, EscenaNomCruce, EscenaNomHidroxido } from './EscenasNomenclatura.tsx'
+import { EscenaHidracido, EscenaOxacido, EscenaAniones, EscenaSal } from './EscenasAcidosSales.tsx'
 import { EscenaIntra, EscenaPolaridad, EscenaFuerzas, EscenaSoluble } from './EscenasFuerzas.tsx'
 import { EscenaOcteto, EscenaIonico, EscenaCovalente, EscenaEnlaceMetalico } from './EscenasEnlace.tsx'
 import { EscenaHistoriaTabla, EscenaEstructuraTabla, EscenaMetales, EscenaRadio, EscenaIonizacion, EscenaElectronegatividad, EscenaCaracterMetalico } from './EscenasTabla.tsx'
@@ -260,6 +261,10 @@ export const ESCENAS: Record<string, ComponentType<{ fase: string }>> = {
   'nom-mapa': EscenaNomMapa,
   'nom-cruce': EscenaNomCruce,
   'nom-hidroxido': EscenaNomHidroxido,
+  'ac-hidracido': EscenaHidracido,
+  'ac-oxacido': EscenaOxacido,
+  'ac-aniones': EscenaAniones,
+  'ac-sal': EscenaSal,
   compostaje: EscenaCompostaje,
   riesgo: EscenaRiesgo,
   armero: EscenaArmero,
