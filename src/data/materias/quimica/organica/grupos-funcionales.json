@@ -1,0 +1,355 @@
+{
+  "id": "grupos-funcionales",
+  "materia": "quimica",
+  "area": "organica",
+  "titulo": "Grupos funcionales: el mapa",
+  "subtema": "Mapa del área: qué es un grupo funcional y dónde se estudia cada familia",
+  "orden": 142,
+  "etiqueta": "2",
+  "vistas": [
+    "ruta"
+  ],
+  "tituloVista": "Ruta de los grupos funcionales",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Explicar qué es un grupo funcional y por qué determina el comportamiento de una molécula.",
+    "Reconocer los grupos funcionales principales y la terminación de su nombre.",
+    "Encontrar grupos funcionales en moléculas conocidas (vainillina, aspirina, cafeína, ácido acético)."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con un texto de química de bachillerato (terminaciones de nomenclatura y estructuras de vainillina, aspirina y cafeína)."
+  ],
+  "bloques": [
+    {
+      "id": "que-es-grupo",
+      "titulo": "¿Qué es un grupo funcional?",
+      "resumen": "El pedacito de la molécula que manda en su comportamiento.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "Una molécula orgánica se puede ver como un esqueleto de carbonos e hidrógenos con uno o más «pedazos» especiales pegados: átomos de oxígeno, nitrógeno o halógenos, o enlaces dobles y triples. Ese pedazo se llama grupo funcional, y es el que decide cómo se comporta la sustancia. El etano (CH₃–CH₃) es un gas que arde y no se disuelve en agua; si se cambia un H por un –OH se obtiene etanol, un líquido que se mezcla con el agua; y si el extremo se convierte en –COOH, se obtiene ácido acético, el del vinagre, que es ácido. El esqueleto es casi el mismo: lo que cambió fue el grupo funcional. Por eso los compuestos orgánicos se organizan en familias según su grupo funcional, y todos los de una familia se parecen en sus reacciones y llevan la misma terminación en el nombre (-ol, -al, -ona, -oico…).",
+        "contexto": [
+          {
+            "titulo": "Un mapa",
+            "texto": "Este tema es el mapa del área: presenta cada familia y la tarjeta lleva al tema donde se estudia a fondo."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "El grupo funcional es la parte de la molécula que decide cómo se comporta."
+          ],
+          "media": [
+            "Compuestos con el mismo grupo funcional forman una familia y llevan la misma terminación."
+          ],
+          "avanzada": [
+            "Serie homóloga: miembros de una familia que se diferencian en un –CH₂–."
+          ]
+        },
+        "docente": {
+          "abrir": "El alcohol antiséptico y el vinagre tienen 2 carbonos. ¿Por qué uno arde y el otro es ácido?",
+          "actividad": "Comparar con los sentidos (oler de lejos, con la mano) alcohol antiséptico, vinagre y quitaesmalte, y relacionar cada olor con un grupo funcional.",
+          "errores": [
+            "Creer que el número de carbonos es lo que más cambia las propiedades.",
+            "Confundir el grupo funcional con toda la molécula."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Mismo esqueleto, otra función",
+          "visual": {
+            "tipo": "escena",
+            "id": "gf-idea",
+            "fases": [
+              {
+                "id": "etano",
+                "nombre": "Etano",
+                "texto": "CH₃–CH₃: un gas que arde."
+              },
+              {
+                "id": "etanol",
+                "nombre": "Etanol",
+                "texto": "Con –OH: se mezcla con el agua."
+              },
+              {
+                "id": "acido",
+                "nombre": "Ácido acético",
+                "texto": "Con –COOH: es ácido, como el vinagre."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "¿Qué cambió?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "El etano y el etanol tienen 2 carbonos. ¿Qué los hace tan distintos?",
+            "opciones": [
+              "El grupo –OH del etanol",
+              "El número de carbonos",
+              "El tamaño de los átomos",
+              "Nada, son iguales"
+            ],
+            "correcta": 0,
+            "explicacion": "El grupo funcional manda."
+          }
+        }
+      ],
+      "juego": "org-familia-juego",
+      "preguntas": [
+        {
+          "id": "qm-or-g-1",
+          "enunciado": "¿Qué es un grupo funcional?",
+          "opciones": [
+            "El grupo de átomos que determina las propiedades de la molécula",
+            "La cadena de carbonos más larga",
+            "El número de hidrógenos",
+            "Un tipo de enlace iónico"
+          ],
+          "correcta": 0,
+          "explicacion": "Decide el comportamiento químico."
+        },
+        {
+          "id": "qm-or-g-2",
+          "enunciado": "¿Qué grupo funcional convierte el etano en etanol?",
+          "opciones": [
+            "–OH",
+            "–COOH",
+            "–NH₂",
+            "C=C"
+          ],
+          "correcta": 0,
+          "explicacion": "El hidroxilo."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "mapa",
+      "titulo": "El mapa de las familias",
+      "resumen": "Hidrocarburos, oxigenados y nitrogenados, con su terminación.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "ficha": {
+        "idea": "Las familias orgánicas se agrupan en tres grandes regiones. Los hidrocarburos solo tienen carbono e hidrógeno: alcanos (todo sencillo, -ano), alquenos (doble enlace, -eno), alquinos (triple, -ino) y aromáticos (el anillo del benceno). Los compuestos oxigenados tienen oxígeno: alcoholes (–OH, -ol), éteres (–O– entre dos carbonos), aldehídos (–CHO al final, -al), cetonas (C=O en medio, -ona), ácidos carboxílicos (–COOH, ácido …-oico) y ésteres (–COO–, -ato de …-ilo). Los nitrogenados tienen nitrógeno: aminas (–NH₂, -amina), amidas (–CONH₂, -amida) y nitrilos (–C≡N, -nitrilo). Los halogenuros llevan un halógeno (Cl, Br, F, I). Cada familia tiene su tema en esta área; este es el mapa para ubicarse.",
+        "contexto": [
+          {
+            "titulo": "Truco",
+            "texto": "Buscar primero si hay O o N; si no hay, es un hidrocarburo y se mira el tipo de enlace."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Hay familias de hidrocarburos, de compuestos con oxígeno y de compuestos con nitrógeno."
+          ],
+          "media": [
+            "Terminaciones: -ano, -eno, -ino, -ol, -al, -ona, ácido -oico, -ato de -ilo, -amina, -amida."
+          ],
+          "avanzada": [
+            "Prioridad para nombrar: ácido > éster > amida > nitrilo > aldehído > cetona > alcohol > amina."
+          ]
+        },
+        "docente": {
+          "abrir": "Si un compuesto se llama «propanona», ¿qué pueden adivinar de él solo por el nombre?",
+          "actividad": "Hacer en el cuaderno el mapa de familias con su grupo, su terminación y un ejemplo de la casa.",
+          "errores": [
+            "Confundir aldehído y cetona (los dos tienen C=O).",
+            "Confundir alcohol (–OH) con hidróxido (OH⁻ de las bases)."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Tres regiones del mapa",
+          "visual": {
+            "tipo": "escena",
+            "id": "gf-mapa",
+            "fases": [
+              {
+                "id": "hidrocarburos",
+                "nombre": "Hidrocarburos",
+                "texto": "Solo C y H: -ano, -eno, -ino y aromáticos."
+              },
+              {
+                "id": "oxigenados",
+                "nombre": "Con oxígeno",
+                "texto": "Alcoholes, éteres, aldehídos, cetonas, ácidos y ésteres."
+              },
+              {
+                "id": "nitrogenados",
+                "nombre": "Con nitrógeno y halógenos",
+                "texto": "Aminas, amidas, nitrilos y halogenuros."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "¿Dónde se ve a fondo?",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "⛽",
+                "titulo": "Alcanos",
+                "texto": "Tema 3"
+              },
+              {
+                "icono": "🍌",
+                "titulo": "Alquenos y alquinos",
+                "texto": "Tema 4"
+              },
+              {
+                "icono": "💍",
+                "titulo": "Aromáticos y halogenuros",
+                "texto": "Tema 5"
+              },
+              {
+                "icono": "🍶",
+                "titulo": "Alcoholes, fenoles y éteres",
+                "texto": "Tema 6"
+              },
+              {
+                "icono": "🍍",
+                "titulo": "Aldehídos, cetonas, ácidos y ésteres",
+                "texto": "Tema 7"
+              },
+              {
+                "icono": "☕",
+                "titulo": "Nitrogenados",
+                "texto": "Tema 8"
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Empezar por los alcanos",
+            "tema": "alcanos"
+          }
+        }
+      ],
+      "juego": "org-grupo-juego",
+      "preguntas": [
+        {
+          "id": "qm-or-g-3",
+          "enunciado": "¿Qué terminación llevan los alcoholes?",
+          "opciones": [
+            "-ol",
+            "-al",
+            "-ona",
+            "-ano"
+          ],
+          "correcta": 0,
+          "explicacion": "Etanol, metanol."
+        },
+        {
+          "id": "qm-or-g-4",
+          "enunciado": "¿Qué grupo tiene un ácido carboxílico?",
+          "opciones": [
+            "–COOH",
+            "–OH",
+            "–CHO",
+            "–NH₂"
+          ],
+          "correcta": 0,
+          "explicacion": "Carboxilo."
+        },
+        {
+          "id": "qm-or-g-5",
+          "enunciado": "Un compuesto solo con C e H y un enlace triple es un…",
+          "opciones": [
+            "Alquino",
+            "Alqueno",
+            "Alcohol",
+            "Éster"
+          ],
+          "correcta": 0,
+          "explicacion": "Terminación -ino."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "detector",
+      "titulo": "Detector de grupos",
+      "resumen": "Grupos funcionales en moléculas conocidas.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "intermedio",
+      "requiere": [
+        "mapa"
+      ],
+      "ficha": {
+        "idea": "Las moléculas de la vida diaria casi nunca tienen un solo grupo funcional. La vainillina, que da el olor a vainilla, tiene un anillo aromático, un aldehído, un fenol (–OH en el anillo) y un éter. La aspirina tiene un anillo, un ácido carboxílico y un éster; cuando envejece, el éster se rompe con la humedad y huele a vinagre. La cafeína tiene dos anillos con nitrógeno, varios grupos amida y grupos metilo. El ácido acético solo tiene un carboxilo y el acetato de etilo, del quitaesmalte y los pegantes, un éster. Reconocer los grupos permite predecir: si hay –COOH, será ácido; si hay –OH, se mezclará mejor con el agua; si hay un éster, probablemente tendrá olor a fruta.",
+        "contexto": [
+          {
+            "titulo": "Un solo lugar",
+            "texto": "Aquí solo se reconocen; cada grupo se estudia a fondo en su tema."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Una molécula puede tener varios grupos funcionales."
+          ],
+          "media": [
+            "Vainillina: aldehído, fenol, éter. Aspirina: ácido y éster. Cafeína: amidas y anillos con nitrógeno."
+          ],
+          "avanzada": [
+            "Las propiedades de una molécula con varios grupos combinan las de cada uno."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué un frasco viejo de aspirina huele a vinagre?",
+          "actividad": "Buscar en internet o en el empaque la estructura de un medicamento o un aroma y encerrar con colores sus grupos funcionales.",
+          "errores": [
+            "Confundir el –OH del fenol con el de un alcohol.",
+            "Ver un éster como un éter más un carbonilo separados."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Detector de grupos funcionales",
+          "visual": {
+            "tipo": "diagrama",
+            "id": "detector-grupos"
+          }
+        }
+      ],
+      "diagrama": "detector-grupos",
+      "juego": "org-detector-juego",
+      "preguntas": [
+        {
+          "id": "qm-or-g-6",
+          "enunciado": "¿Qué grupo de la aspirina se rompe con la humedad y da olor a vinagre?",
+          "opciones": [
+            "El éster",
+            "El anillo",
+            "El metilo",
+            "El ácido"
+          ],
+          "correcta": 0,
+          "explicacion": "Se hidroliza en ácido salicílico y ácido acético."
+        },
+        {
+          "id": "qm-or-g-7",
+          "enunciado": "¿Qué grupo comparten la vainillina y el formol?",
+          "opciones": [
+            "Aldehído",
+            "Éster",
+            "Amina",
+            "Ácido"
+          ],
+          "correcta": 0,
+          "explicacion": "El –CHO."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}
