@@ -29,7 +29,7 @@ Guía de contenidos: plan curricular de Ciencias Naturales 2025 (Química 6°–
 6. **Separación de mezclas** — filtración, decantación, tamizado, imantación, evaporación, destilación,
    cromatografía (10°). Juega: elegir la técnica para cada mezcla (incluye beneficio del café).
 
-## Área 2 · Átomo, tabla periódica y enlace (ruta aprobada el 18 nov 2026)
+## Área 2 · Átomo, tabla periódica y enlace (construida el 18 nov 2026)
 
 Grados con las casillas de siempre (6°, 9°, 11°).
 
@@ -52,12 +52,31 @@ Grados con las casillas de siempre (6°, 9°, 11°).
 8. *(Opcional, 11°)* **Radiactividad** — tipos de radiación, vida media, usos (medicina, datación); enlaza con
    el tema 2 y con los fósiles.
 
-## Áreas 3 a 5 (ruta detallada cuando se empiecen)
+## Área 3 · Compuestos y reacciones (ruta aprobada el 18 nov 2026)
 
-- **Área 3 · Compuestos y reacciones:** estados de oxidación, nomenclatura inorgánica (óxidos, hidróxidos,
-  ácidos, sales, oxisales), tipos de reacción, balanceo por tanteo y óxido-reducción, leyes ponderales, mol y
-  Avogadro, cálculos estequiométricos, reactivo límite, rendimiento y pureza. Interactivos: balanza de
-  ecuaciones, reactivo límite como «receta», juego de nomenclatura.
+Grados con las casillas de siempre (6°, 9°, 11°).
+
+1. **Estados de oxidación** — qué son, reglas para asignarlos, cálculo en compuestos e iones. Explora: calculadora
+   de oxidación (despeja el número desconocido átomo por átomo). Base de la nomenclatura y del balanceo redox.
+2. **Nomenclatura: óxidos e hidróxidos** — óxidos básicos y ácidos, peróxidos (11°), hidróxidos; sistemas stock,
+   sistemático y tradicional (-oso/-ico desde 9°). Juego: «nombra la fórmula».
+3. **Nomenclatura: ácidos y sales** — hidrácidos, oxácidos, sales binarias, oxisales (-ito/-ato), sales ácidas
+   (11°); ejemplos del campo (abonos, cal, bicarbonato). Explora: «fábrica de compuestos» (catión + anión →
+   fórmula y nombre equilibrando cargas).
+4. **Reacciones y ecuaciones químicas** — partes de una ecuación; síntesis, descomposición, desplazamiento simple y
+   doble, combustión, neutralización. Juego: clasificar reacciones cotidianas. Atajos a fotosíntesis y
+   respiración (Biología).
+5. **Balanceo de ecuaciones** — conservación de la masa (Lavoisier), tanteo; redox en 11° (oxidación, reducción,
+   agentes). Explora: balanza de ecuaciones (coeficientes y conteo de átomos a cada lado).
+6. **Leyes ponderales** — Lavoisier, Proust, Dalton (proporciones múltiples), Richter (11°); puente hacia el mol.
+7. **El mol** — masa molar, número de Avogadro, conversiones gramos ↔ moles ↔ partículas (analogías: docena, bulto
+   de café). Explora: convertidor con el camino visual. Fórmula empírica y molecular (11°).
+8. **Estequiometría** — mol-mol, masa-masa, masa-volumen (volumen de gases del área 4); reactivo límite y en
+   exceso (9°); rendimiento y pureza (11°). Explora: reactivo límite como «receta» (arepas o sánduches → una
+   reacción real).
+
+## Áreas 4 y 5 (ruta detallada cuando se empiecen)
+
 - **Área 4 · Gases, soluciones y equilibrio:** teoría cinética, leyes de los gases (Boyle, Charles,
   Gay-Lussac, combinada, Dalton, Avogadro, ideal, Graham), estados líquido y sólido, soluciones y concentración
   (%m/m, %V/V, %m/V, ppm, M, m, N, fracción molar), coloides, cinética, equilibrio, ácidos y bases, pH,
