@@ -33,7 +33,8 @@ import SimuladorPoblaciones from './SimuladorPoblaciones.tsx'
 import { DensidadJuego, CrecimientoJuego, DepredadorPresaJuego } from './JuegosPoblaciones.tsx'
 import { SucesionPrimariaJuego, SucesionSecundariaJuego, PerturbacionesJuego } from './JuegosSucesion.tsx'
 import { BiodiversidadNivelesJuego, MegadiversaJuego, AmenazasJuego, ConservarJuego } from './JuegosBiodiversidad.tsx'
-import { LinneoJuego, LamarckJuego, CuvierJuego, LyellJuego, BeagleJuego, DarwinWallaceJuego, SintesisJuego, RitmosJuego, FosilJuego, AnatomiaJuego, EmbrionesJuego, BiogeografiaJuego, MolecularJuego, IngredientesJuego, PolillasJuego, ArtificialJuego, ResistenciaJuego, TiposSeleccionJuego, AdaptacionJuego, MorfologicaJuego, FisiologicaJuego, ConductaJuego, MimetismoJuego } from './JuegosHistoriaEvolucion.tsx'
+import { LinneoJuego, LamarckJuego, CuvierJuego, LyellJuego, BeagleJuego, DarwinWallaceJuego, SintesisJuego, RitmosJuego, FosilJuego, AnatomiaJuego, EmbrionesJuego, BiogeografiaJuego, MolecularJuego, IngredientesJuego, PolillasJuego, ArtificialJuego, ResistenciaJuego, TiposSeleccionJuego, AdaptacionJuego, MorfologicaJuego, FisiologicaJuego, ConductaJuego, MimetismoJuego, MecanismosJuego, DerivaJuego, FlujoJuego, SexualJuego, HardyJuego } from './JuegosHistoriaEvolucion.tsx'
+import SimuladorDeriva from './SimuladorDeriva.tsx'
 import ColibriFlores from './ColibriFlores.tsx'
 import SimuladorPolillas from './SimuladorPolillas.tsx'
 import ExtremidadesHomologas from './ExtremidadesHomologas.tsx'
@@ -325,4 +326,10 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'conducta-juego': ConductaJuego,
   'mimetismo-juego': MimetismoJuego,
   'colibri-flores': ColibriFlores,
+  'mecanismos-juego': MecanismosJuego,
+  'deriva-juego': DerivaJuego,
+  'flujo-juego': FlujoJuego,
+  'sexual-juego': SexualJuego,
+  'hardy-juego': HardyJuego,
+  'simulador-deriva': SimuladorDeriva,
 }

@@ -357,3 +357,79 @@ export function MimetismoJuego() {
       cierre="Esconderse, avisar o engañar: tres formas de no ser comido." />
   )
 }
+
+/* ═══ Tema 5 · Mecanismos de cambio en poblaciones ═══ */
+
+export function MecanismosJuego() {
+  return (
+    <JuegoDecide titulo="¿Qué mecanismo es?" pregunta="¿Qué cambió las frecuencias?" instrucciones="Decide qué mecanismo explica cada caso." clave="cien:mecanismos-mejor"
+      opciones={[o('mut', 'Mutación', '🧬'), o('der', 'Deriva', '🎲'), o('flu', 'Flujo génico', '🚶'), o('sel', 'Selección', '🏆')]}
+      cartas={[
+        c('🔥', 'Un incendio mata al azar a casi todos los venados de un bosque', 'der', 'Cuello de botella: decide el azar, no la ventaja.'),
+        c('🌳', 'Un corredor biológico une dos bosques y llegan monos de otro grupo', 'flu', 'Los migrantes traen alelos nuevos.'),
+        c('☢️', 'Aparece un alelo nuevo por un error al copiar el ADN', 'mut', 'Es la fuente de variación nueva.'),
+        c('🦠', 'Las bacterias resistentes sobreviven al antibiótico', 'sel', 'Hay una ventaja que se hereda.'),
+        c('🏝️', 'Unas pocas iguanas llegan a una isla en un tronco y fundan una población', 'der', 'Efecto fundador: los alelos de esas pocas.'),
+        c('🐦', 'Los gallitos de roca más vistosos consiguen más parejas', 'sel', 'Es selección sexual.'),
+      ]}
+      cierre="Mutación crea, deriva sortea, flujo mezcla y selección escoge." />
+  )
+}
+
+export function DerivaJuego() {
+  return (
+    <JuegoDecide titulo="¿Azar o ventaja?" pregunta="¿Deriva o selección?" instrucciones="Decide si el cambio se debe al azar (deriva) o a una ventaja (selección)." clave="cien:deriva-mejor"
+      opciones={[o('der', 'Azar (deriva)', '🎲'), o('sel', 'Ventaja (selección)', '🏆')]}
+      cartas={[
+        c('🌊', 'Una inundación arrastra a la mitad de los escarabajos, sin importar su color', 'der', 'Nadie tenía ventaja: fue el azar.'),
+        c('🐦', 'Las aves comen más escarabajos verdes sobre tierra oscura', 'sel', 'El color marrón da ventaja.'),
+        c('🚜', 'Una carretera deja aislados a 6 armadillos', 'der', 'Población pequeña: el azar pesa mucho.'),
+        c('❄️', 'En una helada sobreviven más las plantas con hojas peludas', 'sel', 'Las hojas peludas dan ventaja.'),
+        c('🏝️', 'Tres lagartijas llegan a una isla y todas son de rayas', 'der', 'Efecto fundador.'),
+      ]}
+      cierre="En la deriva decide la suerte; en la selección, la ventaja." />
+  )
+}
+
+export function FlujoJuego() {
+  return (
+    <JuegoDecide titulo="¿Más o menos flujo?" pregunta="¿Qué pasa con el flujo génico?" instrucciones="Decide si cada situación aumenta o disminuye el flujo de genes entre poblaciones." clave="cien:flujo-mejor"
+      opciones={[o('mas', 'Aumenta', '⬆️'), o('menos', 'Disminuye', '⬇️')]}
+      cartas={[
+        c('🛣️', 'Una carretera parte un bosque en dos', 'menos', 'Los animales ya no se cruzan con los del otro lado.'),
+        c('🌳', 'Se siembra un corredor de árboles entre dos bosques', 'mas', 'Los animales pueden pasar y cruzarse.'),
+        c('🌾', 'El viento lleva polen de un maizal a otro', 'mas', 'El polen lleva genes.'),
+        c('🏙️', 'Se tala el bosque y quedan parches pequeños', 'menos', 'Las poblaciones quedan aisladas.'),
+        c('🌉', 'Se construye un paso de fauna sobre una vía', 'mas', 'Reconecta las poblaciones.'),
+      ]}
+      cierre="El flujo génico mantiene unidas a las poblaciones; el aislamiento las separa." />
+  )
+}
+
+export function SexualJuego() {
+  return (
+    <JuegoDecide titulo="Selección sexual" pregunta="¿Es cierto?" instrucciones="Decide si cada frase sobre la selección sexual es cierta o falsa." clave="cien:sexual-mejor" opciones={VF}
+      cartas={[
+        c('🦚', 'La cola del pavo real ayuda a conseguir pareja', 'v', 'Las hembras prefieren colas grandes y vistosas.'),
+        c('🐦', 'Los colores vivos de los machos nunca tienen costo', 'f', 'También los hacen más visibles para los depredadores.'),
+        c('💃', 'Los saltarines de la selva hacen bailes para atraer hembras', 'v', 'Es una conducta seleccionada por las hembras.'),
+        c('🦌', 'Las astas de los venados machos sirven para pelear por las hembras', 'v', 'Competencia entre machos.'),
+      ]}
+      cierre="La selección sexual favorece lo que ayuda a conseguir pareja, aunque cueste." />
+  )
+}
+
+export function HardyJuego() {
+  return (
+    <JuegoDecide titulo="¿Hay equilibrio?" pregunta="¿Se mantiene el equilibrio?" instrucciones="El equilibrio de Hardy-Weinberg se mantiene solo si no actúa ningún mecanismo. Decide en cada caso." clave="cien:hardy-mejor"
+      opciones={[o('si', 'Se mantiene', '⚖️'), o('no', 'Se rompe', '💥')]}
+      cartas={[
+        c('🐁', 'Población enorme, sin migración, sin mutaciones, apareamiento al azar y sin selección', 'si', 'Se cumplen todas las condiciones.'),
+        c('🏝️', 'Población de 8 individuos', 'no', 'Es pequeña: actúa la deriva.'),
+        c('🚶', 'Llegan individuos de otra población', 'no', 'Hay flujo génico.'),
+        c('🦚', 'Las hembras prefieren a los machos más vistosos', 'no', 'El apareamiento no es al azar.'),
+        c('🦠', 'Un alelo da resistencia a una enfermedad', 'no', 'Hay selección natural.'),
+      ]}
+      cierre="En la naturaleza casi siempre actúa algún mecanismo: por eso las poblaciones evolucionan." />
+  )
+}
