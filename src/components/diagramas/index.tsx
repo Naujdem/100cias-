@@ -73,6 +73,8 @@ import { QueEsSueloJuego, HorizontesJuego, ErosionJuego, DeforestacionJuego, Con
 import PerfilSuelo from './PerfilSuelo.tsx'
 import { TiempoClimaJuego, InvernaderoJuego, CambioClimaticoJuego, NinoNinaJuego, MitigarAdaptarJuego } from './JuegosClima.tsx'
 import SimuladorCo2 from './SimuladorCo2.tsx'
+import { QueEsContaminacionJuego, AguaContaminadaJuego, AireContaminadoJuego, MercurioJuego, EutrofizacionJuego, PlasticosJuego } from './JuegosContaminacion.tsx'
+import RioContaminado from './RioContaminado.tsx'
 
 /** Registro de diagramas interactivos. La clave es el valor de `bloque.diagrama`. */
 export const DIAGRAMAS: Record<string, ComponentType> = {
@@ -381,4 +383,11 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'nino-nina-juego': NinoNinaJuego,
   'mitigar-adaptar-juego': MitigarAdaptarJuego,
   'simulador-co2': SimuladorCo2,
+  'que-es-contaminacion-juego': QueEsContaminacionJuego,
+  'agua-contaminada-juego': AguaContaminadaJuego,
+  'aire-contaminado-juego': AireContaminadoJuego,
+  'mercurio-juego': MercurioJuego,
+  'eutrofizacion-juego': EutrofizacionJuego,
+  'plasticos-juego': PlasticosJuego,
+  'rio-contaminado': RioContaminado,
 }
