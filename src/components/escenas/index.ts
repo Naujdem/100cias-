@@ -25,6 +25,7 @@ import { EscenaIntraespecificas, EscenaDepredacion, EscenaSimbiosis } from './Es
 import { EscenaDensidad, EscenaCrecimiento, EscenaDepredadorPresa } from './EscenasPoblaciones.tsx'
 import { EscenaSucesionPrimaria, EscenaSucesionSecundaria, EscenaPerturbaciones } from './EscenasSucesion.tsx'
 import { EscenaBiodiversidadNiveles, EscenaMegadiversa, EscenaAmenazas, EscenaConservar } from './EscenasBiodiversidad.tsx'
+import { EscenaTerritorio, EscenaCalendario, EscenaPolicultivo, EscenaDialogo } from './EscenasTerritorio.tsx'
 
 /** Escenas vivas: un dibujo que se transforma según la fase (`fase` = id de la fase en el JSON). */
 export const ESCENAS: Record<string, ComponentType<{ fase: string }>> = {
@@ -120,6 +121,10 @@ export const ESCENAS: Record<string, ComponentType<{ fase: string }>> = {
   megadiversa: EscenaMegadiversa,
   amenazas: EscenaAmenazas,
   conservar: EscenaConservar,
+  territorio: EscenaTerritorio,
+  calendario: EscenaCalendario,
+  policultivo: EscenaPolicultivo,
+  dialogo: EscenaDialogo,
   'optico-electronico': EscenaOpticoElectronico,
   'celula-animal': EscenaZoomCelula,
   'celula-vegetal': ({ fase }) => EscenaZoomCelula({ fase, vegetal: true }),

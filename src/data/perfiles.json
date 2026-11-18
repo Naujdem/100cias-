@@ -145,6 +145,11 @@
         "que-es-biodiversidad",
         "megadiversa",
         "amenazas"
+      ],
+      "territorio-saberes": [
+        "territorio",
+        "senales",
+        "policultivo"
       ]
     },
     "nivelDibujo": "basico",
@@ -174,7 +179,8 @@
       "relaciones-seres-vivos": "Relaciones intra e interespecíficas: grupos, depredación, competencia y simbiosis.",
       "poblaciones": "Tamaño y densidad de una población.",
       "sucesion-ecologica": "Sucesión primaria y secundaria.",
-      "biodiversidad": "Qué es la biodiversidad, Colombia megadiversa y sus amenazas."
+      "biodiversidad": "Qué es la biodiversidad, Colombia megadiversa y sus amenazas.",
+      "territorio-saberes": "Territorio, el ritmo del año y el policultivo."
     }
   },
   {
@@ -366,6 +372,12 @@
         "megadiversa",
         "amenazas",
         "conservar"
+      ],
+      "territorio-saberes": [
+        "territorio",
+        "senales",
+        "policultivo",
+        "dialogo"
       ]
     },
     "nivelDibujo": "intermedio",
@@ -395,7 +407,8 @@
       "relaciones-seres-vivos": "Relaciones intra e interespecíficas: grupos, depredación, competencia y simbiosis.",
       "poblaciones": "Suma las curvas J y S y el ciclo depredador–presa con simulador.",
       "sucesion-ecologica": "Suma perturbaciones y restauración ecológica.",
-      "biodiversidad": "Suma las formas de conservar."
+      "biodiversidad": "Suma las formas de conservar.",
+      "territorio-saberes": "Suma el diálogo de saberes."
     }
   },
   {
@@ -608,6 +621,12 @@
         "megadiversa",
         "amenazas",
         "conservar"
+      ],
+      "territorio-saberes": [
+        "territorio",
+        "senales",
+        "policultivo",
+        "dialogo"
       ]
     },
     "nivelDibujo": "avanzado",
@@ -637,7 +656,8 @@
       "relaciones-seres-vivos": "Relaciones intra e interespecíficas: grupos, depredación, competencia y simbiosis.",
       "poblaciones": "Los tres pasos, con captura y recaptura.",
       "sucesion-ecologica": "Los tres pasos completos.",
-      "biodiversidad": "Los cuatro pasos completos."
+      "biodiversidad": "Los cuatro pasos completos.",
+      "territorio-saberes": "Los cuatro pasos completos."
     }
   }
 ]
