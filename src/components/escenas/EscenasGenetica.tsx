@@ -210,14 +210,53 @@ function Fago({ cubierta, adn, conAdn = true }: { cubierta: string; adn: string;
   )
 }
 
+const HC_CSS = `
+@keyframes hc-agita { 0%,100% { transform: translate(0,0) rotate(0) } 20% { transform: translate(-3px,1px) rotate(-1.5deg) } 40% { transform: translate(3px,-1px) rotate(1.2deg) } 60% { transform: translate(-2px,-1px) rotate(-1deg) } 80% { transform: translate(2px,1px) rotate(1.5deg) } }
+@keyframes hc-gira { to { transform: rotate(360deg) } }
+@keyframes hc-rotor { from { transform: rotate(0) } to { transform: rotate(1080deg) } }
+@keyframes hc-cae { from { transform: translate(var(--dx), var(--dy)) } to { transform: none } }
+@keyframes hc-aparece { from { opacity: 0 } to { opacity: 1 } }
+@keyframes hc-sefue { from { opacity: 1 } to { opacity: 0 } }
+.hc-agita { animation: hc-agita .14s linear 14; transform-box: fill-box; transform-origin: center }
+.hc-aspas { animation: hc-gira .18s linear 12; transform-box: fill-box; transform-origin: center }
+.hc-remolino { animation: hc-gira .7s linear 3; transform-box: fill-box; transform-origin: center }
+.hc-rotor { animation: hc-rotor 2.2s cubic-bezier(.25,.6,.3,1) both; transform-box: view-box; transform-origin: 200px 140px }
+.hc-cae { animation: hc-cae 1.3s .9s cubic-bezier(.5,0,.6,1) both }
+.hc-tarde { animation: hc-aparece .6s 2.3s both }
+.hc-poso { animation: hc-aparece .8s 1.7s both }
+.hc-brazo { animation: hc-sefue .5s 2.2s both }
+@media (prefers-reduced-motion: reduce) { .hc * { animation: none !important } }
+`
+
+/** Licuadora: vaso con aspas que giran mientras `activa`. */
+function Licuadora({ activa }: { activa: boolean }) {
+  return (
+    <g>
+      <rect x="186" y="92" width="28" height="6" rx="2" fill="#7f8a96" />
+      <path d="M 184 98 L 216 98 L 211 148 L 189 148 Z" fill="#e6f0f7" stroke="#9aa4ae" strokeWidth="2.5" />
+      <g className={activa ? 'hc-remolino' : ''}>
+        <path d="M 200 112 a 8 8 0 1 1 -8 8 M 200 128 a 5 5 0 1 1 5 -5" fill="none" stroke="#8fb2e2" strokeWidth="2" strokeLinecap="round" />
+      </g>
+      <g className={activa ? 'hc-aspas' : ''}>
+        <path d="M 189 143 L 211 143 M 200 138 L 200 148" stroke={TINTA} strokeWidth="3" strokeLinecap="round" />
+      </g>
+      <path d="M 186 148 L 214 148 L 218 168 L 182 168 Z" fill="#5b6672" />
+      <circle cx="200" cy="158" r="3" fill={activa ? ROJO : '#c9cfd5'} style={{ transition: 'fill .3s' }} />
+    </g>
+  )
+}
+
 export function EscenaHersheyChase({ fase }: { fase: string }) {
   const i = Math.max(0, HERSHEY.indexOf(fase))
+  const licua = i === 3
+  const centri = i === 4
   const lados = [
     { cx: 105, titulo: 'Azufre radiactivo', sub: 'marca la proteína', color: AMARILLO, cubierta: AMARILLO, adn: '#7f8a96' },
     { cx: 295, titulo: 'Fósforo radiactivo', sub: 'marca el ADN', color: ROJO, cubierta: '#7f8a96', adn: ROJO },
   ]
   return (
-    <svg viewBox="0 0 400 300" role="img" aria-label={`Experimento de Hershey y Chase: ${fase}`} className="h-full w-full">
+    <svg viewBox="0 0 400 300" role="img" aria-label={`Experimento de Hershey y Chase: ${fase}`} className="hc h-full w-full">
+      <style>{HC_CSS}</style>
       {fondo('#f3f2ee')}
 
       {/* el fago, grande */}
@@ -230,36 +269,67 @@ export function EscenaHersheyChase({ fase }: { fase: string }) {
         <Texto x={200} y={270} t="Bacteriófago: un virus que infecta bacterias" s={12} />
       </g>
 
+      {/* licuadora en el centro */}
+      <g style={ver(licua, 'none', 'translate(0, 12px)')}>
+        <Licuadora activa={licua} />
+        <Texto x={200} y={186} t="licuadora" s={13} />
+      </g>
+
+      {/* eje de la centrífuga (se va al detenerse) */}
+      <g style={ver(centri)}>
+        <g className={centri ? 'hc-brazo' : ''}>
+          <circle cx="200" cy="140" r="9" fill="#5b6672" />
+          <circle cx="200" cy="140" r="3" fill="#c9cfd5" />
+        </g>
+        <g className={centri ? 'hc-tarde' : ''} style={{ opacity: centri ? undefined : 0 }}>
+          <Texto x={200} y={66} t="centrífuga" s={13} />
+        </g>
+      </g>
+
       {lados.map((l, k) => (
         <g key={l.titulo} style={ver(i >= 1)}>
           <Texto x={l.cx} y={22} t={l.titulo} c={l.color} s={13} />
           <Texto x={l.cx} y={37} t={l.sub} s={10} peso={600} />
 
-          {/* fago y bacteria: marcas → infección → licuadora */}
+          {/* fago y bacteria: marcas → infección → licuadora (se agita y las cubiertas se despegan) */}
           <g style={{ transition: suave, opacity: i >= 1 && i <= 3 ? 1 : 0 }}>
-            <rect x={l.cx - 60} y={168} width="120" height="56" rx="28" fill="#f6e7d4" stroke="#c9a77d" strokeWidth="2.5" style={{ transition: 'opacity 0.6s', opacity: i >= 2 ? 1 : 0 }} />
-            {/* ADN que entró a la bacteria */}
-            <path d={`M ${l.cx - 26} 196 q 8 -12 16 0 t 16 0 t 16 0 t 16 0`} fill="none" stroke={l.adn} strokeWidth="3" strokeLinecap="round" style={{ transition: 'opacity 0.8s 0.5s', opacity: i >= 2 ? 1 : 0 }} />
-            {[-28, 26].map((dx, j) => (
-              <g key={dx} style={{ transition: suave, transform: i >= 3 ? `translate(${dx * 1.2}px, ${-6 - j * 10}px) rotate(${dx > 0 ? 35 : -35}deg)` : i >= 2 ? 'translate(0, 70px)' : 'none', transformBox: 'fill-box' }}>
-                <g transform={`translate(${l.cx + dx} 98)`}><Fago cubierta={l.cubierta} adn={l.adn} conAdn={i < 2} /></g>
-              </g>
-            ))}
-            {k === 0 && <g style={ver(i === 3)}><Texto x={200} y={150} t="🌀 licuadora" s={14} /></g>}
+            <g className={licua ? 'hc-agita' : ''}>
+              <rect x={l.cx - 60} y={168} width="120" height="56" rx="28" fill="#f6e7d4" stroke="#c9a77d" strokeWidth="2.5" style={{ transition: 'opacity 0.6s', opacity: i >= 2 ? 1 : 0 }} />
+              {/* ADN que entró a la bacteria */}
+              <path d={`M ${l.cx - 26} 196 q 8 -12 16 0 t 16 0 t 16 0 t 16 0`} fill="none" stroke={l.adn} strokeWidth="3" strokeLinecap="round" style={{ transition: 'opacity 0.8s 0.5s', opacity: i >= 2 ? 1 : 0 }} />
+              {[-28, 26].map((dx, j) => (
+                <g key={dx} style={{ transition: suave, transitionDelay: licua ? `${0.6 + j * 0.35}s` : '0s', transform: i >= 3 ? `translate(${dx * 1.6}px, ${-4 - j * 12}px) rotate(${dx > 0 ? 50 : -50}deg)` : i >= 2 ? 'translate(0, 70px)' : 'none', transformBox: 'fill-box' }}>
+                  <g transform={`translate(${l.cx + dx} 98)`}><Fago cubierta={l.cubierta} adn={l.adn} conAdn={i < 2} /></g>
+                </g>
+              ))}
+            </g>
           </g>
 
-          {/* centrífuga: fondo (bacterias) y líquido (cubiertas) */}
+          {/* centrífuga: el tubo gira, las bacterias caen al fondo y las cubiertas quedan en el líquido */}
           <g style={ver(i >= 4, 'none', 'translate(0, 20px)')}>
-            <path d={`M ${l.cx - 26} 60 v 150 a 26 26 0 0 0 52 0 v -150`} fill="#fff" stroke="#9aa4ae" strokeWidth="2.5" />
-            <rect x={l.cx - 24} y={80} width="48" height="130" fill="#eef3f8" />
-            {[[-10, 110], [8, 140], [-4, 170]].map(([dx, y]) => (
-              <g key={y} transform={`translate(${l.cx + dx} ${y}) scale(0.45)`}><Fago cubierta={l.cubierta} adn={l.adn} conAdn={false} /></g>
-            ))}
-            <ellipse cx={l.cx} cy={222} rx="20" ry="11" fill="#e2c49f" stroke="#b08a5a" strokeWidth="2" />
-            {/* dónde quedó la radiactividad */}
-            <circle cx={l.cx} cy={k === 0 ? 140 : 222} r={k === 0 ? 36 : 22} fill="none" stroke={l.color} strokeWidth="3" strokeDasharray="5 4" />
-            <Texto x={l.cx} y={268} t={k === 0 ? 'radiactividad en el líquido' : 'radiactividad en las bacterias'} c={l.color} s={11} />
-            <Texto x={l.cx} y={282} t={k === 0 ? 'la proteína quedó afuera' : 'el ADN entró'} s={10} peso={600} />
+            <g className={centri ? 'hc-rotor' : ''}>
+              <path d={`M ${l.cx < 200 ? l.cx + 26 : l.cx - 26} 140 L 200 140`} stroke="#5b6672" strokeWidth="5" strokeLinecap="round" className={centri ? 'hc-brazo' : ''} style={{ opacity: centri ? undefined : 0 }} />
+              <path d={`M ${l.cx - 26} 60 v 150 a 26 26 0 0 0 52 0 v -150`} fill="#fff" stroke="#9aa4ae" strokeWidth="2.5" />
+              <rect x={l.cx - 24} y={80} width="48" height="130" fill="#eef3f8" />
+              {[[-10, 110], [8, 140], [-4, 170]].map(([dx, y]) => (
+                <g key={y} transform={`translate(${l.cx + dx} ${y}) scale(0.45)`}><Fago cubierta={l.cubierta} adn={l.adn} conAdn={false} /></g>
+              ))}
+              {/* bacterias que bajan al fondo */}
+              {[[-10, -95, -8], [10, -60, 6], [0, -125, 0]].map(([dx, dy, x0]) => (
+                <g key={dy} className={centri ? 'hc-cae' : ''} style={{ ['--dx' as string]: `${dx}px`, ['--dy' as string]: `${dy}px` } as React.CSSProperties}>
+                  <ellipse cx={l.cx + x0} cy={222 - (x0 === 0 ? 4 : 0)} rx="8" ry="4.5" fill="#e2c49f" stroke="#b08a5a" strokeWidth="1.5" />
+                </g>
+              ))}
+              <g className={centri ? 'hc-poso' : ''}>
+                <ellipse cx={l.cx} cy={222} rx="20" ry="11" fill="#e2c49f" stroke="#b08a5a" strokeWidth="2" />
+              </g>
+            </g>
+            {/* dónde quedó la radiactividad: aparece cuando la centrífuga se detiene */}
+            <g className={centri ? 'hc-tarde' : ''}>
+              <circle cx={l.cx} cy={k === 0 ? 140 : 222} r={k === 0 ? 36 : 22} fill="none" stroke={l.color} strokeWidth="3" strokeDasharray="5 4" />
+              <Texto x={l.cx} y={268} t={k === 0 ? 'radiactividad en el líquido' : 'radiactividad en las bacterias'} c={l.color} s={11} />
+              <Texto x={l.cx} y={282} t={k === 0 ? 'la proteína quedó afuera' : 'el ADN entró'} s={10} peso={600} />
+            </g>
           </g>
         </g>
       ))}
