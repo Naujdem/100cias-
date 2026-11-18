@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import MesaViva from '../MesaViva.tsx'
 import type { Pieza, Uso } from '../MesaViva.tsx'
 import MicroscopioPanel from '../MicroscopioPanel.tsx'
@@ -132,6 +132,20 @@ const VACIA: SM = { muestra: null, col: 'ninguno', t: 0, lavado: false, ver: fal
 function Simples({ grado }: { grado: number }) {
   const [s, setS] = useState<SM>(VACIA)
   const cambiar = (p: Partial<SM>) => setS((x) => ({ ...x, ver: false, ...p }))
+  // temporizador: cada toque suma 15 s a la cuenta regresiva; al llegar a 0 suena
+  const [cuenta, setCuenta] = useState(0)
+  const [alarma, setAlarma] = useState(false)
+  const actuando = s.col !== 'ninguno' && !s.lavado
+  useEffect(() => {
+    const id = window.setInterval(() => {
+      if (actuando) setS((x) => ({ ...x, t: x.t + 1 })) // el colorante actúa en tiempo real hasta lavar
+      setCuenta((c) => {
+        if (c === 1) setAlarma(true)
+        return Math.max(0, c - 1)
+      })
+    }, 1000)
+    return () => window.clearInterval(id)
+  }, [actuando])
   const sv: S = { muestra: s.muestra ?? 'cebolla', col: s.col, t: s.t, lavado: s.lavado }
   const r = revisarSimple(sv)
   const vista = muestraSimple(sv)
@@ -146,7 +160,7 @@ function Simples({ grado }: { grado: number }) {
     { id: 'azul', nombre: 'Azul de metileno', x: 415, y: 312, ancho: 50, alto: 96, tomable: true, color: GOTERO_COLOR.azul, dibujo: <Gotero color={GOTERO_COLOR.azul} etiqueta="AZUL" /> },
     { id: 'lamina', nombre: 'Lámina', x: 550, y: 345, ancho: 130, alto: 30, tomable: true, dibujo: <Portaobjetos muestra={s.muestra ? MUESTRA_COLOR[s.muestra] : undefined} tinte={tinte} charco={s.col !== 'ninguno' && !s.lavado ? tono(s.col, 0.8) : undefined} /> },
     { id: 'piseta', nombre: 'Piseta con agua', x: 680, y: 305, ancho: 60, alto: 106, tomable: true, color: '#a9d3f5', dibujo: <Piseta /> },
-    { id: 'reloj', nombre: 'Reloj (toca: +15 s)', x: 780, y: 300, ancho: 72, alto: 72, alTocar: () => { if (s.col !== 'ninguno' && !s.lavado) cambiar({ t: s.t + 15 }) }, dibujo: <Reloj s={s.t} /> },
+    { id: 'reloj', nombre: 'Temporizador (toca: +15 s)', x: 780, y: 300, ancho: 72, alto: 72, alTocar: () => { setAlarma(false); setCuenta((c) => c + 15) }, dibujo: <Reloj s={cuenta} alarma={alarma} /> },
     { id: 'micro', nombre: 'Microscopio', x: 880, y: 290, ancho: 90, alto: 140, dibujo: <MicroscopioMini lamina={s.ver} /> },
     { id: 'caneca', nombre: 'Residuos', x: 960, y: 325, ancho: 54, alto: 76, dibujo: <Caneca /> },
   ]
@@ -154,7 +168,7 @@ function Simples({ grado }: { grado: number }) {
   const soltar = (de: string, en: string): Uso | string => {
     if (de === 'lamina') {
       if (en === 'micro') return s.muestra ? { anim: 'poner', hecho: () => setS((x) => ({ ...x, ver: true })) } : 'La lámina está vacía: primero ponle una muestra.'
-      if (en === 'caneca') return { anim: 'poner', hecho: () => setS(VACIA) }
+      if (en === 'caneca') return { anim: 'poner', hecho: () => { setS(VACIA); setCuenta(0); setAlarma(false) } }
       return 'Lleva la lámina al microscopio para observarla, o a la caneca para empezar otra.'
     }
     if (en !== 'lamina') return 'Eso va sobre la lámina.'
@@ -178,9 +192,10 @@ function Simples({ grado }: { grado: number }) {
   return (
     <div className="flex flex-col gap-3">
       <p className="rounded-2xl bg-[var(--tarjeta)] p-4 text-sm">
-        Pon una muestra en la lámina, échale el colorante, toca el reloj para dejarlo actuar, lava el exceso con la piseta y lleva la lámina al microscopio. {s.muestra === 'mucosa' ? 'La mejilla se raspa suavemente con un palillo limpio, que luego se bota.' : ''}
+        Pon una muestra en la lámina y échale el colorante: empieza a actuar enseguida. Programa el temporizador (cada toque, 15 s), lava el exceso cuando suene con la piseta y lleva la lámina al microscopio. {s.muestra === 'mucosa' ? 'La mejilla se raspa suavemente con un palillo limpio, que luego se bota.' : ''}
       </p>
       <MesaViva desde={190} piezas={piezas} destinos={destinos} soltar={soltar} />
+      {s.col !== 'ninguno' && <p className="text-sm">{COLORANTES[s.col]} en contacto: <b>{s.t} s</b>{s.lavado ? ' (lavado: ya no actúa)' : ' y contando…'}{alarma ? <b className="ml-2 text-[#e0604a]">⏰ ¡Tiempo! Lava con la piseta.</b> : null}</p>}
       {s.ver && <MicroscopioPanel grado={grado} muestra={vista.dibujo} velo={vista.velo} onEstado={setEst} />}
       <div className="flex flex-col gap-2">
           {s.ver && !listo && <p className="text-sm font-semibold">Enfoca la muestra con el objetivo de 40x (400x) para revisar la tinción.</p>}
