@@ -93,6 +93,12 @@
       "replicacion-adn": [
         "para-que",
         "horquilla"
+      ],
+      "expresion-genica": [
+        "dogma",
+        "transcripcion",
+        "codigo",
+        "traduccion"
       ]
     },
     "nivelDibujo": "basico",
@@ -111,7 +117,8 @@
       "herencia-mendeliana": "Método de Mendel, dominante y recesivo, alelos y cuadro de Punnett de un carácter.",
       "historia-genetica": "Seis hitos: Mendel, Miescher, Griffith, Franklin, Watson y Crick y el Proyecto Genoma.",
       "adn-genes-cromosomas": "Los seis pasos en lo básico: del cuerpo al ADN, nucleótidos, doble hélice, ADN y ARN, cromosomas y genes.",
-      "replicacion-adn": "Para qué se copia el ADN y la horquilla de replicación."
+      "replicacion-adn": "Para qué se copia el ADN y la horquilla de replicación.",
+      "expresion-genica": "Del gen a la proteína: transcripción, código genético y traducción."
     }
   },
   {
@@ -236,6 +243,13 @@
         "horquilla",
         "semiconservativa",
         "errores"
+      ],
+      "expresion-genica": [
+        "dogma",
+        "transcripcion",
+        "codigo",
+        "traduccion",
+        "regulacion"
       ]
     },
     "nivelDibujo": "intermedio",
@@ -254,7 +268,8 @@
       "herencia-mendeliana": "Leyes de uniformidad y segregación, cuadro de Punnett y cruce de prueba.",
       "historia-genetica": "Diez hitos: suma a Morgan, Avery, Hershey y Chase y CRISPR.",
       "adn-genes-cromosomas": "Los seis pasos; suma las histonas y el enrollamiento del ADN.",
-      "replicacion-adn": "Suma la replicación semiconservativa y los errores de copia."
+      "replicacion-adn": "Suma la replicación semiconservativa y los errores de copia.",
+      "expresion-genica": "Suma los genes encendidos y apagados."
     }
   },
   {
@@ -397,6 +412,14 @@
         "semiconservativa",
         "enzimas",
         "errores"
+      ],
+      "expresion-genica": [
+        "dogma",
+        "transcripcion",
+        "codigo",
+        "traduccion",
+        "regulacion",
+        "procesamiento"
       ]
     },
     "nivelDibujo": "avanzado",
@@ -415,7 +438,8 @@
       "herencia-mendeliana": "Las tres leyes de Mendel, cruces de dos caracteres y probabilidad.",
       "historia-genetica": "Los catorce hitos: suma el redescubrimiento de Mendel, Chargaff, Meselson y Stahl y el código genético.",
       "adn-genes-cromosomas": "Los seis pasos completos: purinas y pirimidinas, cadenas antiparalelas e histonas.",
-      "replicacion-adn": "Los cinco pasos, con las enzimas y los fragmentos de Okazaki."
+      "replicacion-adn": "Los cinco pasos, con las enzimas y los fragmentos de Okazaki.",
+      "expresion-genica": "Los seis pasos, con intrones, exones y empalme alternativo."
     }
   }
 ]
