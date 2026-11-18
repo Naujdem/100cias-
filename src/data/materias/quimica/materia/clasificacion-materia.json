@@ -1,0 +1,261 @@
+{
+  "id": "clasificacion-materia",
+  "materia": "quimica",
+  "area": "materia",
+  "titulo": "Clasificación de la materia",
+  "subtema": "Sustancias puras y mezclas",
+  "orden": 105,
+  "etiqueta": "5",
+  "vistas": ["ruta"],
+  "tituloVista": "Ruta de la clasificación",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Diferenciar sustancias puras y mezclas.",
+    "Diferenciar elementos y compuestos.",
+    "Clasificar mezclas en homogéneas y heterogéneas.",
+    "Ubicar materiales cotidianos en el árbol de la materia."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con el plan curricular de Ciencias Naturales 2025 y un texto de química general (clasificación de la materia)."
+  ],
+  "bloques": [
+    {
+      "id": "sustancias",
+      "titulo": "Sustancias puras: elementos y compuestos",
+      "resumen": "Una sustancia pura tiene composición fija; puede ser un elemento o un compuesto.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "La materia se clasifica en sustancias puras y mezclas. Una sustancia pura está formada por una sola sustancia, tiene composición fija y propiedades constantes: el agua pura siempre hierve a 100 °C al nivel del mar. Las sustancias puras pueden ser elementos o compuestos. Un elemento está formado por una sola clase de átomos y no se puede descomponer en algo más simple: el oro, el hierro, el oxígeno. Hoy se conocen 118 y están ordenados en la tabla periódica. Un compuesto está formado por dos o más elementos unidos químicamente en una proporción fija: el agua (H₂O) siempre tiene dos átomos de hidrógeno por uno de oxígeno. Un compuesto tiene propiedades muy distintas a las de sus elementos: el sodio es un metal que reacciona con violencia con el agua y el cloro es un gas venenoso, pero unidos forman la sal de cocina.",
+        "contexto": [
+          { "titulo": "Separar un compuesto", "texto": "Un compuesto no se separa filtrando ni evaporando: hace falta una reacción química, como pasar corriente eléctrica por el agua (electrólisis)." }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Elemento: una sola clase de átomos (oro, hierro).",
+            "Compuesto: dos o más elementos unidos (agua, sal)."
+          ],
+          "media": [
+            "Sustancia pura: composición fija y propiedades constantes.",
+            "Un compuesto solo se separa en sus elementos con una reacción química."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "El sodio explota en el agua y el cloro es venenoso. ¿Por qué podemos comernos la sal?",
+          "actividad": "Armar con plastilina de colores modelos de un elemento (O₂), un compuesto (H₂O, CO₂) y una mezcla de ambos.",
+          "errores": [
+            "Creer que el O₂ es un compuesto porque tiene dos átomos.",
+            "Pensar que «puro» significa «natural» o «limpio»."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "El sodio explota en el agua y el cloro es venenoso. Unidos forman…",
+            "opciones": ["La sal de cocina", "Un veneno más fuerte", "Agua", "Oro"],
+            "correcta": 0,
+            "explicacion": "Un compuesto tiene propiedades distintas a las de sus elementos."
+          }
+        },
+        {
+          "titulo": "Mira por dentro",
+          "visual": {
+            "tipo": "escena",
+            "id": "particulas-clasificacion",
+            "fases": [
+              { "id": "elemento", "nombre": "Elemento", "texto": "Todos los átomos son iguales." },
+              { "id": "compuesto", "nombre": "Compuesto", "texto": "Átomos distintos unidos, siempre en la misma proporción." },
+              { "id": "mezcla", "nombre": "Mezcla", "texto": "Varias sustancias juntas, pero sin unirse." }
+            ]
+          }
+        },
+        {
+          "titulo": "Los elementos tienen su tabla",
+          "visual": { "tipo": "cifra", "icono": "🧩", "valor": "118 elementos", "texto": "Todos los materiales del universo se forman con ellos." },
+          "nota": "La tabla periódica se estudia en el área 2."
+        }
+      ],
+      "juego": "elemento-compuesto-juego",
+      "preguntas": [
+        {
+          "id": "qm-cl-1",
+          "enunciado": "¿Qué es un compuesto?",
+          "opciones": ["Dos o más elementos unidos químicamente en proporción fija", "Una sola clase de átomos", "Varias sustancias revueltas sin unirse", "Cualquier líquido"],
+          "correcta": 0,
+          "explicacion": "Como el agua: H₂O."
+        },
+        {
+          "id": "qm-cl-2",
+          "enunciado": "¿Cuál es un elemento?",
+          "opciones": ["El hierro (Fe)", "El agua (H₂O)", "La sal (NaCl)", "El aire"],
+          "correcta": 0,
+          "explicacion": "Solo tiene átomos de hierro."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "mezclas",
+      "titulo": "Mezclas homogéneas y heterogéneas",
+      "resumen": "En una mezcla cada sustancia conserva sus propiedades; puede verse uniforme o con partes distintas.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "ficha": {
+        "idea": "Una mezcla es la unión de dos o más sustancias que no se combinan químicamente: cada una conserva sus propiedades y se pueden mezclar en cualquier proporción (el tinto puede ser más claro o más cargado). Las mezclas se separan por métodos físicos. Si no se distinguen sus partes y se ve de un solo aspecto, es homogénea: el agua con sal, el tinto colado, el aire. A las mezclas homogéneas también se les llama soluciones. Si se distinguen sus partes a simple vista, es heterogénea: el agua con aceite, la arena con piedras, el sancocho. Algunas mezclas parecen homogéneas pero no lo son: la leche y la gelatina son coloides, con partículas tan pequeñas que no se ven, pero que dispersan la luz.",
+        "contexto": [
+          { "titulo": "El efecto Tyndall", "texto": "Si se pasa una linterna por un coloide (agua con unas gotas de leche), se ve el haz de luz; en una solución verdadera (agua con sal), no." }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Mezcla homogénea: un solo aspecto (agua con sal).",
+            "Mezcla heterogénea: se ven las partes (agua con aceite)."
+          ],
+          "media": [
+            "En una mezcla cada sustancia conserva sus propiedades y la proporción puede variar.",
+            "Coloides: parecen homogéneos pero dispersan la luz (leche, gelatina, niebla)."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿El tinto es una sustancia pura o una mezcla? ¿Y el agua de la llave?",
+          "actividad": "Preparar en vasos transparentes agua con sal, agua con arena, agua con aceite y agua con leche; clasificarlas y probar el efecto Tyndall con la linterna del celular.",
+          "errores": [
+            "Creer que el agua de la llave es una sustancia pura.",
+            "Pensar que toda mezcla que se ve uniforme es una solución."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "El agua de la llave, ¿es una sustancia pura?",
+            "opciones": ["No: es una mezcla con sales y gases disueltos", "Sí, es agua pura", "Es un elemento", "Es un compuesto puro"],
+            "correcta": 0,
+            "explicacion": "Solo el agua destilada es casi pura."
+          }
+        },
+        {
+          "titulo": "Dos tipos de mezcla",
+          "visual": {
+            "tipo": "compara",
+            "izq": { "icono": "🥃", "titulo": "Homogénea", "puntos": ["Un solo aspecto", "Aguapanela, aire, tinto"] },
+            "der": { "icono": "🥗", "titulo": "Heterogénea", "puntos": ["Se ven las partes", "Sancocho, agua con aceite"] }
+          }
+        },
+        {
+          "titulo": "¿Y la leche?",
+          "nivel": "intermedio",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "🥛", "titulo": "Coloide", "texto": "Partículas que no se ven, pero dispersan la luz." },
+              { "icono": "🔦", "titulo": "Efecto Tyndall", "texto": "El haz de luz se ve dentro del coloide." },
+              { "icono": "🌫️", "titulo": "Otros coloides", "texto": "Niebla, gelatina, mayonesa." }
+            ]
+          }
+        }
+      ],
+      "juego": "homo-hetero-juego",
+      "preguntas": [
+        {
+          "id": "qm-cl-3",
+          "enunciado": "¿Qué tipo de mezcla es el agua con aceite?",
+          "opciones": ["Heterogénea", "Homogénea", "No es mezcla", "Es un compuesto"],
+          "correcta": 0,
+          "explicacion": "Se ven dos capas."
+        },
+        {
+          "id": "qm-cl-4",
+          "enunciado": "¿Qué diferencia una mezcla de un compuesto?",
+          "opciones": ["En la mezcla las sustancias no se unen químicamente", "La mezcla siempre es líquida", "El compuesto se separa filtrando", "No hay diferencia"],
+          "correcta": 0,
+          "explicacion": "Por eso la mezcla se separa por métodos físicos."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "arbol",
+      "titulo": "El árbol de la materia",
+      "resumen": "Con dos preguntas se clasifica cualquier material: ¿una sustancia o varias? ¿se ven sus partes?",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "basico",
+      "ficha": {
+        "idea": "Para clasificar cualquier material se hacen preguntas en orden. Primero: ¿es una sola sustancia o varias? Si es una sola, es una sustancia pura; si son varias, es una mezcla. Si es una sustancia pura: ¿tiene una sola clase de átomos? Entonces es un elemento; si tiene varios elementos unidos, es un compuesto. Si es una mezcla: ¿se distinguen sus partes? Si no, es homogénea; si sí, es heterogénea. Así queda el árbol de la materia, que sirve para ordenar todo lo que nos rodea.",
+        "contexto": [
+          { "titulo": "Separar mezclas", "texto": "Como las sustancias de una mezcla no están unidas, se pueden separar con métodos físicos: filtrar, evaporar, decantar, destilar." }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Materia → sustancia pura (elemento o compuesto) o mezcla (homogénea o heterogénea)."
+          ],
+          "media": [
+            "Preguntas: ¿una sola sustancia? ¿un solo tipo de átomo? ¿se ven las partes?"
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Cuántas preguntas necesitamos para clasificar cualquier cosa del salón?",
+          "actividad": "Traer diez materiales de la casa o la finca y ubicarlos en un árbol de la materia dibujado en el tablero.",
+          "errores": [
+            "Saltarse la primera pregunta y clasificar una mezcla como compuesto."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Cómo se clasifica el aire?",
+            "opciones": ["Mezcla homogénea", "Elemento", "Compuesto", "Mezcla heterogénea"],
+            "correcta": 0,
+            "explicacion": "Es nitrógeno, oxígeno y otros gases mezclados, sin distinguirse."
+          }
+        },
+        {
+          "titulo": "Explora el árbol",
+          "visual": { "tipo": "diagrama", "id": "arbol-materia" }
+        },
+        {
+          "titulo": "¿Y cómo se separan?",
+          "visual": { "tipo": "cifra", "icono": "⚗️", "valor": "filtrar · decantar · evaporar · destilar", "texto": "Las mezclas se separan por métodos físicos." },
+          "atajo": { "texto": "Más sobre esto", "tema": "separacion-mezclas" }
+        }
+      ],
+      "diagrama": "arbol-materia",
+      "juego": "donde-va-juego",
+      "preguntas": [
+        {
+          "id": "qm-cl-5",
+          "enunciado": "¿Cómo se clasifica el bicarbonato de sodio (NaHCO₃)?",
+          "opciones": ["Compuesto", "Elemento", "Mezcla homogénea", "Mezcla heterogénea"],
+          "correcta": 0,
+          "explicacion": "Sodio, hidrógeno, carbono y oxígeno unidos."
+        },
+        {
+          "id": "qm-cl-6",
+          "enunciado": "¿Cuál es la primera pregunta para clasificar un material?",
+          "opciones": ["¿Es una sola sustancia o varias?", "¿De qué color es?", "¿Es líquido?", "¿Cuánto pesa?"],
+          "correcta": 0,
+          "explicacion": "Separa las sustancias puras de las mezclas."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}
