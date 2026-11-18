@@ -93,6 +93,8 @@ import ArmaAtomo from './ArmaAtomo.tsx'
 import LlenaOrbitales from './LlenaOrbitales.tsx'
 import TablaPeriodica from './TablaPeriodica.tsx'
 import MapaCalor from './MapaCalor.tsx'
+import ArmaLewis from './ArmaLewis.tsx'
+import { OctetoJuego, TipoEnlaceJuego, PolarJuego, LewisJuego } from './JuegosEnlace.tsx'
 import { RadioJuego, IonizacionJuego, ElectronegatividadJuego, MetalicoJuego } from './JuegosPeriodicas.tsx'
 import { HistoriaTablaJuego, GrupoPeriodoJuego, MetalJuego, FamiliaJuego, ColombiaElementosJuego } from './JuegosTabla.tsx'
 import { CapasElectronesJuego, MoellerJuego, HundJuego, CuanticosJuego } from './JuegosElectrones.tsx'
@@ -479,6 +481,11 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'ionizacion-juego': IonizacionJuego,
   'electroneg-juego': ElectronegatividadJuego,
   'metalico-juego': MetalicoJuego,
+  'arma-lewis': ArmaLewis,
+  'octeto-juego': OctetoJuego,
+  'tipo-enlace-juego': TipoEnlaceJuego,
+  'polar-juego': PolarJuego,
+  'lewis-juego': LewisJuego,
   'amenaza-vulnerabilidad-juego': AmenazaVulnerabilidadJuego,
   'amenazas-colombia-juego': AmenazasColombiaJuego,
   'armero-juego': ArmeroJuego,

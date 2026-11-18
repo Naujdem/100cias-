@@ -1,0 +1,740 @@
+{
+  "id": "enlace-quimico",
+  "materia": "quimica",
+  "area": "atomo",
+  "titulo": "Enlace químico",
+  "subtema": "Cómo se unen los átomos",
+  "orden": 116,
+  "etiqueta": "6",
+  "vistas": [
+    "ruta"
+  ],
+  "tituloVista": "Ruta del enlace químico",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Explicar la regla del octeto con la notación de Lewis.",
+    "Diferenciar los enlaces iónico, covalente y metálico.",
+    "Reconocer enlaces covalentes polares y apolares, sencillos, dobles y triples.",
+    "Construir estructuras de Lewis de moléculas sencillas."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con el plan curricular de Ciencias Naturales 2025 y un texto de química general. A verificar: criterio de 1,7 en la diferencia de electronegatividad (es orientativo), punto de fusión del NaCl (801 °C) y el año de Lewis (1916)."
+  ],
+  "bloques": [
+    {
+      "id": "octeto",
+      "titulo": "Valencia y regla del octeto",
+      "resumen": "Los átomos se unen ganando, perdiendo o compartiendo electrones de valencia para quedar con 8, como los gases nobles.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "Un enlace químico es la fuerza que mantiene unidos a los átomos. Los que participan son los electrones de valencia, los del último nivel. Los gases nobles tienen 8 electrones en su última capa (el helio, 2) y casi no reaccionan: son estables. Los demás átomos tienden a ganar, perder o compartir electrones hasta quedar con 8 en su última capa: es la regla del octeto (el hidrógeno busca 2, el dueto). La notación de Lewis representa cada átomo con su símbolo y un punto por cada electrón de valencia; los puntos se ponen de a uno en cada lado y luego se van formando pares.",
+        "contexto": [
+          {
+            "titulo": "Valencia",
+            "texto": "La valencia es el número de enlaces que un átomo suele formar: el hidrógeno 1, el oxígeno 2, el nitrógeno 3 y el carbono 4."
+          },
+          {
+            "titulo": "Gilbert Lewis",
+            "texto": "El químico estadounidense G. N. Lewis propuso en 1916 la idea del par de electrones compartido y la notación de puntos."
+          },
+          {
+            "titulo": "No siempre se cumple",
+            "texto": "Hay excepciones (boro con 6, azufre o fósforo con más de 8), pero el octeto funciona muy bien para los elementos de los periodos 2 y 3."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Los electrones de valencia forman los enlaces.",
+            "Regla del octeto: quedar con 8 electrones (el H, con 2)."
+          ],
+          "media": [
+            "Notación de Lewis: un punto por electrón de valencia.",
+            "Metales pierden; no metales ganan o comparten."
+          ],
+          "avanzada": [
+            "Excepciones al octeto: BF₃ (6 en el B), SF₆ (12 en el S)."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué el neón del aviso luminoso no forma compuestos y el sodio sí?",
+          "actividad": "Cada estudiante dibuja la notación de Lewis de un elemento del 1 al 20 en una tarjeta y busca con quién podría unirse para completar 8.",
+          "errores": [
+            "Dibujar todos los electrones del átomo y no solo los de valencia.",
+            "Olvidar que el hidrógeno se completa con 2."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Buscando 8",
+          "visual": {
+            "tipo": "escena",
+            "id": "en-octeto",
+            "fases": [
+              {
+                "id": "valencia",
+                "nombre": "Puntos de Lewis",
+                "texto": "Cada punto es un electrón de valencia: Na 1, Cl 7, Ne 8."
+              },
+              {
+                "id": "octeto",
+                "nombre": "Capa llena",
+                "texto": "El neón ya tiene 8: es estable y casi no reacciona."
+              },
+              {
+                "id": "meta",
+                "nombre": "La regla",
+                "texto": "Los demás ganan, pierden o comparten electrones hasta tener 8."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre los electrones de valencia",
+            "tema": "electrones-atomo",
+            "bloque": "niveles"
+          }
+        },
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Cuántos puntos lleva el oxígeno en notación de Lewis?",
+            "opciones": [
+              "6",
+              "8",
+              "2",
+              "16"
+            ],
+            "correcta": 0,
+            "explicacion": "El oxígeno está en el grupo 16: 6 electrones de valencia."
+          }
+        }
+      ],
+      "juego": "octeto-juego",
+      "preguntas": [
+        {
+          "id": "qn-oc-1",
+          "enunciado": "¿Qué dice la regla del octeto?",
+          "opciones": [
+            "Los átomos tienden a quedar con 8 electrones en su última capa",
+            "Todo átomo tiene 8 protones",
+            "Los enlaces se forman de 8 en 8",
+            "Solo 8 elementos forman enlaces"
+          ],
+          "correcta": 0,
+          "explicacion": "Ganando, perdiendo o compartiendo electrones."
+        },
+        {
+          "id": "qn-oc-2",
+          "enunciado": "¿Por qué los gases nobles casi no forman enlaces?",
+          "opciones": [
+            "Ya tienen 8 electrones en su última capa",
+            "No tienen electrones",
+            "Son metales",
+            "Son muy pesados"
+          ],
+          "correcta": 0,
+          "explicacion": "Ya son estables."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "ionico",
+      "titulo": "Enlace iónico",
+      "resumen": "Un metal le entrega electrones a un no metal; los iones de carga opuesta se atraen y forman cristales.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "requiere": [
+        "octeto"
+      ],
+      "ficha": {
+        "idea": "Cuando se encuentran un metal, que pierde electrones con facilidad, y un no metal, que los atrae con fuerza, el metal le entrega sus electrones de valencia al no metal. Así se forman un catión y un anión, que se atraen por tener cargas opuestas: eso es el enlace iónico. Ocurre cuando la diferencia de electronegatividad es grande (en general, mayor de 1,7). Los compuestos iónicos no forman moléculas sueltas, sino redes cristalinas con millones de iones ordenados. Son sólidos duros y quebradizos, con puntos de fusión altos, muchos se disuelven en agua y, disueltos o fundidos, conducen la electricidad.",
+        "contexto": [
+          {
+            "titulo": "La sal",
+            "texto": "El cloruro de sodio funde a unos 801 °C. Disuelta en agua, conduce la corriente: por eso no se debe tocar aparatos eléctricos con las manos mojadas con sudor o agua salada."
+          },
+          {
+            "titulo": "En el campo",
+            "texto": "Muchos abonos son compuestos iónicos: el cloruro de potasio (KCl) o el nitrato de amonio. Se disuelven en el agua del suelo y las raíces toman los iones."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Iónico: un metal entrega electrones a un no metal.",
+            "Los iones de carga opuesta se atraen."
+          ],
+          "media": [
+            "Diferencia de electronegatividad grande (> 1,7 aprox.).",
+            "Forman cristales: duros, alto punto de fusión; disueltos conducen."
+          ],
+          "avanzada": [
+            "Fórmula con cargas balanceadas: Ca²⁺ + 2 Cl⁻ → CaCl₂."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué el agua con sal conduce la electricidad y el agua destilada casi no?",
+          "actividad": "Con una pila, un bombillo y dos cables, probar si conducen el agua sola, el agua con azúcar y el agua con sal.",
+          "errores": [
+            "Dibujar el NaCl como una molécula aislada.",
+            "Pensar que en el enlace iónico se comparten electrones."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Dar y recibir",
+          "visual": {
+            "tipo": "escena",
+            "id": "en-ionico",
+            "fases": [
+              {
+                "id": "transfiere",
+                "nombre": "Transferencia",
+                "texto": "El sodio le entrega su electrón de valencia al cloro."
+              },
+              {
+                "id": "atraccion",
+                "nombre": "Atracción",
+                "texto": "Na⁺ y Cl⁻ se atraen: es el enlace iónico."
+              },
+              {
+                "id": "cristal",
+                "nombre": "El cristal",
+                "texto": "Los iones se ordenan en una red: un grano de sal."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre los iones",
+            "tema": "atomo-por-dentro",
+            "bloque": "iones"
+          }
+        },
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Cuál de estos compuestos es iónico?",
+            "opciones": [
+              "KCl (cloruro de potasio)",
+              "H₂O",
+              "CH₄",
+              "O₂"
+            ],
+            "correcta": 0,
+            "explicacion": "Potasio (metal) y cloro (no metal)."
+          }
+        },
+        {
+          "titulo": "Cargas que se equilibran",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "⚖️",
+            "valor": "Ca²⁺ + 2 Cl⁻ → CaCl₂",
+            "texto": "Las cargas del compuesto suman cero."
+          },
+          "nivel": "intermedio"
+        }
+      ],
+      "preguntas": [
+        {
+          "id": "qn-io-1",
+          "enunciado": "¿Entre qué tipo de elementos se forma un enlace iónico?",
+          "opciones": [
+            "Un metal y un no metal",
+            "Dos no metales",
+            "Dos metales",
+            "Dos gases nobles"
+          ],
+          "correcta": 0,
+          "explicacion": "El metal cede electrones y el no metal los recibe."
+        },
+        {
+          "id": "qn-io-2",
+          "enunciado": "¿Por qué la sal disuelta en agua conduce la electricidad?",
+          "opciones": [
+            "Porque libera iones que se mueven",
+            "Porque tiene electrones libres como los metales",
+            "Porque el agua se vuelve metal",
+            "No conduce"
+          ],
+          "correcta": 0,
+          "explicacion": "Los iones con carga transportan la corriente."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "covalente",
+      "titulo": "Enlace covalente",
+      "resumen": "Dos no metales comparten pares de electrones; el enlace puede ser sencillo, doble o triple, y polar o apolar.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "basico",
+      "requiere": [
+        "octeto"
+      ],
+      "ficha": {
+        "idea": "Cuando dos no metales se unen, ninguno es capaz de quitarle el electrón al otro, así que los comparten: cada átomo pone electrones y el par compartido pertenece a los dos. Eso es el enlace covalente, y así se forman las moléculas. Si comparten un par, el enlace es sencillo (H–H); si comparten dos, doble (O=O); si comparten tres, triple (N≡N). Cuando los dos átomos son iguales comparten por igual y el enlace es apolar; si uno es más electronegativo, atrae más el par y el enlace es polar, con una carga parcial negativa (δ−) en ese átomo y una positiva (δ+) en el otro.",
+        "contexto": [
+          {
+            "titulo": "Las moléculas de la vida",
+            "texto": "El agua, el oxígeno que respiramos, el CO₂ y las moléculas de los seres vivos (azúcares, proteínas, ADN) se forman con enlaces covalentes."
+          },
+          {
+            "titulo": "Propiedades",
+            "texto": "Las sustancias covalentes suelen tener puntos de fusión bajos (muchas son gases o líquidos) y no conducen la electricidad."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Covalente: dos no metales comparten electrones.",
+            "Sencillo, doble o triple."
+          ],
+          "media": [
+            "Apolar: átomos iguales. Polar: distinta electronegatividad (δ+ y δ−)."
+          ],
+          "avanzada": [
+            "Hay sólidos covalentes en red, como el diamante, durísimos y con punto de fusión altísimo."
+          ]
+        },
+        "docente": {
+          "abrir": "Si ninguno de los dos puede quitarle el electrón al otro, ¿qué pueden hacer?",
+          "actividad": "Modelos con plastilina y palillos: un palillo por cada par compartido (H₂, O₂, N₂, H₂O, CO₂).",
+          "errores": [
+            "Confundir enlace doble con «dos enlaces separados».",
+            "Pensar que todo enlace entre átomos distintos es iónico."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Compartir",
+          "visual": {
+            "tipo": "escena",
+            "id": "en-covalente",
+            "fases": [
+              {
+                "id": "hidrogeno",
+                "nombre": "H₂",
+                "texto": "Cada hidrógeno pone un electrón y comparten el par."
+              },
+              {
+                "id": "agua",
+                "nombre": "Agua",
+                "texto": "El oxígeno comparte un par con cada hidrógeno y conserva dos pares libres."
+              },
+              {
+                "id": "multiples",
+                "nombre": "Doble y triple",
+                "texto": "O=O comparte dos pares; N≡N, tres.",
+                "nivel": "intermedio"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "¿Polar o apolar?",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "⚖️",
+              "titulo": "Apolar",
+              "puntos": [
+                "Átomos iguales",
+                "Comparten por igual",
+                "H₂, O₂, Cl₂"
+              ]
+            },
+            "der": {
+              "icono": "🧲",
+              "titulo": "Polar",
+              "puntos": [
+                "Distinta electronegatividad",
+                "Uno jala más: δ− y δ+",
+                "H–Cl, O–H del agua"
+              ]
+            }
+          },
+          "atajo": {
+            "texto": "Más sobre la electronegatividad",
+            "tema": "propiedades-periodicas",
+            "bloque": "electronegatividad"
+          },
+          "nivel": "intermedio"
+        }
+      ],
+      "juego": "polar-juego",
+      "preguntas": [
+        {
+          "id": "qn-co-1",
+          "enunciado": "¿Qué ocurre en un enlace covalente?",
+          "opciones": [
+            "Dos átomos comparten pares de electrones",
+            "Un átomo le entrega electrones a otro",
+            "Los electrones forman un mar",
+            "Se unen dos iones"
+          ],
+          "correcta": 0,
+          "explicacion": "Así se forman las moléculas."
+        },
+        {
+          "id": "qn-co-2",
+          "enunciado": "¿Cuántos pares de electrones comparten los átomos en la molécula de N₂?",
+          "opciones": [
+            "Tres",
+            "Uno",
+            "Dos",
+            "Cuatro"
+          ],
+          "correcta": 0,
+          "explicacion": "Es un enlace triple: N≡N."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "lewis",
+      "titulo": "Estructuras de Lewis",
+      "resumen": "Se dibujan las moléculas con sus pares compartidos (líneas) y sus pares libres (puntos), cumpliendo el octeto.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "intermedio",
+      "requiere": [
+        "covalente"
+      ],
+      "ficha": {
+        "idea": "Una estructura de Lewis muestra cómo están unidos los átomos de una molécula: cada par compartido se dibuja como una línea y los pares libres como dos puntos. Para armarla: 1) se suman los electrones de valencia de todos los átomos; 2) se pone en el centro el átomo que forma más enlaces (nunca el hidrógeno) y se une con líneas a los demás; 3) los electrones que sobran se reparten como pares libres, primero en los átomos de afuera; 4) si a algún átomo no le alcanza para 8, se convierte un par libre en un enlace doble o triple.",
+        "contexto": [
+          {
+            "titulo": "Comprobar",
+            "texto": "Al final, la suma de electrones en enlaces y pares libres debe ser igual al total de electrones de valencia, y cada átomo debe tener 8 (el H, 2)."
+          },
+          {
+            "titulo": "Para qué sirve",
+            "texto": "La estructura de Lewis permite predecir la forma de la molécula (tema 7) y sus propiedades."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Línea = par compartido; puntos = par libre."
+          ],
+          "media": [
+            "Pasos: contar electrones, esqueleto, pares libres, enlaces múltiples si hace falta.",
+            "Electrones usados = electrones de valencia."
+          ],
+          "avanzada": [
+            "Carga formal para elegir entre estructuras posibles; resonancia (O₃, CO₃²⁻)."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Cómo dibujarías una molécula para mostrar dónde están todos sus electrones de valencia?",
+          "actividad": "En parejas, armar en el Explora las diez moléculas; antes de pedir la solución, dibujarlas en el cuaderno.",
+          "errores": [
+            "Poner el hidrógeno en el centro.",
+            "Olvidar contar los pares libres al revisar el octeto."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Arma la estructura",
+          "visual": {
+            "tipo": "diagrama",
+            "id": "arma-lewis"
+          }
+        },
+        {
+          "titulo": "Cuatro pasos",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🔢",
+                "titulo": "1. Contar",
+                "texto": "Sumar los electrones de valencia."
+              },
+              {
+                "icono": "🦴",
+                "titulo": "2. Esqueleto",
+                "texto": "El que forma más enlaces al centro."
+              },
+              {
+                "icono": "⚫",
+                "titulo": "3. Pares libres",
+                "texto": "Primero en los átomos de afuera."
+              },
+              {
+                "icono": "🔁",
+                "titulo": "4. Revisar",
+                "texto": "Si falta, enlace doble o triple."
+              }
+            ]
+          }
+        }
+      ],
+      "diagrama": "arma-lewis",
+      "juego": "lewis-juego",
+      "preguntas": [
+        {
+          "id": "qn-le-1",
+          "enunciado": "¿Cuántos electrones de valencia hay en total en el CO₂?",
+          "opciones": [
+            "16",
+            "12",
+            "22",
+            "8"
+          ],
+          "correcta": 0,
+          "explicacion": "C aporta 4 y cada O aporta 6: 4 + 6 + 6 = 16."
+        },
+        {
+          "id": "qn-le-2",
+          "enunciado": "En la estructura de Lewis del agua, ¿cuántos pares libres tiene el oxígeno?",
+          "opciones": [
+            "Dos",
+            "Ninguno",
+            "Uno",
+            "Cuatro"
+          ],
+          "correcta": 0,
+          "explicacion": "Dos pares compartidos (con los H) y dos libres: 8 electrones."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "metalico",
+      "titulo": "Enlace metálico",
+      "resumen": "En los metales, los cationes quedan rodeados por un mar de electrones que se mueven libres.",
+      "anio": 5,
+      "etiqueta": "Paso 5",
+      "nivel": "basico",
+      "requiere": [
+        "octeto"
+      ],
+      "ficha": {
+        "idea": "En un metal, todos los átomos son iguales y tienen pocos electrones de valencia que sueltan con facilidad. Esos electrones no pertenecen a ningún átomo en particular: forman un «mar» de electrones que se mueven libres entre los cationes y los mantiene unidos. Este enlace metálico explica las propiedades de los metales: conducen la electricidad (los electrones se desplazan), conducen el calor, tienen brillo y se pueden doblar, estirar en hilos y laminar sin romperse, porque las capas de cationes se deslizan sin que el mar de electrones deje de unirlas.",
+        "contexto": [
+          {
+            "titulo": "Aleaciones",
+            "texto": "Mezclando metales se obtienen aleaciones con nuevas propiedades: el acero (hierro y carbono), el bronce (cobre y estaño), la tumbaga precolombina (oro y cobre)."
+          },
+          {
+            "titulo": "Los tres enlaces",
+            "texto": "Iónico: transferir. Covalente: compartir entre dos. Metálico: compartir entre todos."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Enlace metálico: cationes en un mar de electrones."
+          ],
+          "media": [
+            "Explica que los metales conduzcan, brillen y se puedan doblar."
+          ],
+          "avanzada": [
+            "Aleaciones: acero, bronce, tumbaga."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué un clavo se dobla y un terrón de sal se rompe?",
+          "actividad": "Comparar al golpear con cuidado: un trozo de alambre de cobre (se aplasta) y un cristal de sal (se rompe); explicarlo con los dibujos de los dos enlaces.",
+          "errores": [
+            "Pensar que los electrones del metal están quietos.",
+            "Confundir aleación con compuesto."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Un mar de electrones",
+          "visual": {
+            "tipo": "escena",
+            "id": "en-metalico",
+            "fases": [
+              {
+                "id": "cationes",
+                "nombre": "Cationes",
+                "texto": "Los átomos del metal sueltan sus electrones de valencia."
+              },
+              {
+                "id": "mar",
+                "nombre": "El mar",
+                "texto": "Los electrones se mueven libres entre los cationes."
+              },
+              {
+                "id": "propiedades",
+                "nombre": "Propiedades",
+                "texto": "Conduce y se dobla: las capas se deslizan sin romperse."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Los tres enlaces",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "⚡",
+                "titulo": "Iónico",
+                "texto": "Metal + no metal: se transfieren electrones."
+              },
+              {
+                "icono": "🤝",
+                "titulo": "Covalente",
+                "texto": "No metal + no metal: se comparten."
+              },
+              {
+                "icono": "🔩",
+                "titulo": "Metálico",
+                "texto": "Metal: un mar de electrones compartido por todos."
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "tipo-enlace-juego",
+      "preguntas": [
+        {
+          "id": "qn-me-1",
+          "enunciado": "¿Por qué los metales conducen la electricidad?",
+          "opciones": [
+            "Sus electrones se mueven libres por todo el metal",
+            "Tienen iones disueltos",
+            "Comparten un solo par de electrones",
+            "Son muy pesados"
+          ],
+          "correcta": 0,
+          "explicacion": "El mar de electrones transporta la corriente."
+        },
+        {
+          "id": "qn-me-2",
+          "enunciado": "¿Qué tipo de enlace hay en un alambre de cobre?",
+          "opciones": [
+            "Metálico",
+            "Iónico",
+            "Covalente polar",
+            "Covalente apolar"
+          ],
+          "correcta": 0,
+          "explicacion": "Solo hay átomos de cobre."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "coordinado",
+      "titulo": "Enlace covalente coordinado",
+      "resumen": "Un mismo átomo pone los dos electrones del par compartido, como en el ion amonio (NH₄⁺).",
+      "anio": 6,
+      "etiqueta": "Paso 6",
+      "nivel": "avanzado",
+      "requiere": [
+        "lewis"
+      ],
+      "ficha": {
+        "idea": "En el enlace covalente común cada átomo aporta un electrón al par. En el enlace covalente coordinado (o dativo), un solo átomo aporta los dos electrones: usa uno de sus pares libres para unirse a un átomo o ion que no tiene electrones para compartir. Así se forma el ion amonio: el nitrógeno del amoníaco (NH₃) usa su par libre para unirse a un ion H⁺, que no tiene electrones, y queda NH₄⁺. Lo mismo pasa con el ion hidronio (H₃O⁺) del agua. Una vez formado, el enlace coordinado es igual a los demás.",
+        "contexto": [
+          {
+            "titulo": "Se dibuja con flecha",
+            "texto": "A veces se marca con una flecha que va del átomo que dona el par al que lo recibe: H₃N→H⁺."
+          },
+          {
+            "titulo": "En el suelo y en la sangre",
+            "texto": "El amonio de los abonos y los complejos metálicos, como el hierro de la hemoglobina, se forman con enlaces coordinados."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "En el coordinado, un solo átomo pone los dos electrones."
+          ],
+          "media": [
+            "Ejemplos: NH₄⁺ y H₃O⁺."
+          ],
+          "avanzada": [
+            "Se representa con una flecha del donador al aceptor.",
+            "Base de los complejos de coordinación."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Qué pasa si un átomo tiene un par libre y otro no tiene ningún electrón?",
+          "actividad": "Dibujar paso a paso la formación de NH₄⁺ y H₃O⁺ con estructuras de Lewis.",
+          "errores": [
+            "Pensar que el enlace coordinado es más débil o distinto una vez formado."
+          ],
+          "minutos": 15
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Un solo donador",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🌱",
+                "titulo": "Amonio NH₄⁺",
+                "texto": "El N del NH₃ pone su par libre para el H⁺."
+              },
+              {
+                "icono": "💧",
+                "titulo": "Hidronio H₃O⁺",
+                "texto": "El O del agua acepta un H⁺."
+              },
+              {
+                "icono": "🩸",
+                "titulo": "Hemoglobina",
+                "texto": "El hierro se une con enlaces coordinados."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre las estructuras de Lewis",
+            "tema": "enlace-quimico",
+            "bloque": "lewis"
+          }
+        }
+      ],
+      "preguntas": [
+        {
+          "id": "qn-cd-1",
+          "enunciado": "¿Qué tiene de particular el enlace covalente coordinado?",
+          "opciones": [
+            "Un solo átomo aporta los dos electrones del par",
+            "Se transfieren electrones",
+            "No hay electrones compartidos",
+            "Solo ocurre en metales"
+          ],
+          "correcta": 0,
+          "explicacion": "Un átomo con par libre se lo presta a otro que no tiene electrones."
+        },
+        {
+          "id": "qn-cd-2",
+          "enunciado": "¿En cuál de estos iones hay un enlace coordinado?",
+          "opciones": [
+            "NH₄⁺",
+            "Na⁺",
+            "Cl⁻",
+            "O²⁻"
+          ],
+          "correcta": 0,
+          "explicacion": "El nitrógeno dona su par libre a un H⁺."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}
