@@ -25,6 +25,7 @@ export const UNIDADES: Record<string, Unidad[]> = {
     { id: 'ecosistemas', nombre: 'Relaciones ecosistémicas', texto: 'Cómo se relacionan los seres vivos entre sí y con su entorno.' },
     { id: 'evolucion', nombre: 'Evolución biológica', texto: 'Cómo cambian las especies con el tiempo.' },
     { id: 'ambiente', nombre: 'Dinámicas ambientales', texto: 'Ciclos, recursos y cuidado del ambiente.' },
+    { id: 'cuerpo', nombre: 'Sistemas del cuerpo', texto: 'Cómo funcionan y se regulan los sistemas del cuerpo.' },
   ],
   quimica: [
     { id: 'materia', nombre: 'La materia y sus cambios', texto: 'Qué es la materia, sus propiedades, estados y mezclas.' },
@@ -41,6 +42,16 @@ export const PROXIMOS: Record<string, { etiqueta: string; nombre: string }[]> = 
   genetica: [
   ],
   evolucion: [],
+  cuerpo: [
+    { etiqueta: '2', nombre: 'Nutrición y digestión' },
+    { etiqueta: '3', nombre: 'Respiración y circulación' },
+    { etiqueta: '4', nombre: 'Excreción' },
+    { etiqueta: '5', nombre: 'Sistema inmune' },
+    { etiqueta: '6', nombre: 'Sistema nervioso' },
+    { etiqueta: '7', nombre: 'Sistema endocrino' },
+    { etiqueta: '8', nombre: 'Huesos y músculos' },
+    { etiqueta: '9', nombre: 'Cuerpo y salud (opcional)' },
+  ],
   materia: [
   ],
   atomo: [

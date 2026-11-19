@@ -73,6 +73,8 @@ import { QueEsSueloJuego, HorizontesJuego, ErosionJuego, DeforestacionJuego, Con
 import PerfilSuelo from './PerfilSuelo.tsx'
 import { TiempoClimaJuego, InvernaderoJuego, CambioClimaticoJuego, NinoNinaJuego, MitigarAdaptarJuego } from './JuegosClima.tsx'
 import SimuladorCo2 from './SimuladorCo2.tsx'
+import TermostatoCuerpo from './TermostatoCuerpo.tsx'
+import { HomeoEquilibrioJuego, HomeoAsaJuego, HomeoTemperaturaJuego, HomeoAguaJuego, HomeoGlucosaJuego, HomeoSistemasJuego } from './JuegosHomeostasis.tsx'
 import { QueEsContaminacionJuego, AguaContaminadaJuego, AireContaminadoJuego, MercurioJuego, EutrofizacionJuego, PlasticosJuego } from './JuegosContaminacion.tsx'
 import RioContaminado from './RioContaminado.tsx'
 import { RecursosJuego, HidroelectricaJuego, RepresasJuego, FuentesEnergiaJuego, HuellaEcologicaJuego } from './JuegosRecursos.tsx'
@@ -645,4 +647,11 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'proyecto-aula-juego': ProyectoAulaJuego,
   'participacion-juego': ParticipacionJuego,
   'arbol-problemas': ArbolProblemas,
+  'termostato-cuerpo': TermostatoCuerpo,
+  'homeo-equilibrio-juego': HomeoEquilibrioJuego,
+  'homeo-asa-juego': HomeoAsaJuego,
+  'homeo-temperatura-juego': HomeoTemperaturaJuego,
+  'homeo-agua-juego': HomeoAguaJuego,
+  'homeo-glucosa-juego': HomeoGlucosaJuego,
+  'homeo-sistemas-juego': HomeoSistemasJuego,
 }
