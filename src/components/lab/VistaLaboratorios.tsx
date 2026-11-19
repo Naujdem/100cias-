@@ -34,6 +34,7 @@ import Saponificacion from './practicas/Saponificacion.tsx'
 import Combustion from './practicas/Combustion.tsx'
 import PilaLimones from './practicas/PilaLimones.tsx'
 import Corrosion from './practicas/Corrosion.tsx'
+import Cristalizacion from './practicas/Cristalizacion.tsx'
 
 // Laboratorios virtuales (PLAN-LABORATORIOS.md). Las prácticas listas van en PRACTICAS; las demás de la
 // ruta salen como «próximamente».
@@ -79,6 +80,7 @@ const PRACTICAS: Entrada[] = [
   { id: 'combustion', titulo: 'Combustión completa e incompleta', resumen: 'Mechero con el aire cerrado o abierto: hollín, agua y CO₂ sobre la llama. Y una vela que se apaga bajo el frasco.', grupo: 'Química', desdeGrado: 6, Juego: Combustion },
   { id: 'pila-limones', titulo: 'Pila de limones', resumen: 'Clava zinc y cobre en limones, únelos en serie y mide con el voltímetro hasta encender un LED.', grupo: 'Química', desdeGrado: 6, Juego: PilaLimones },
   { id: 'corrosion', titulo: 'Corrosión de clavos', resumen: 'Clavos en agua, sal, vinagre, aceite o aire seco durante una semana acelerada: ¿qué los oxida y qué los protege?', grupo: 'Química', desdeGrado: 6, Juego: Corrosion },
+  { id: 'cristalizacion', titulo: 'Cristalización', resumen: 'Soluciones saturadas de sal, azúcar o alumbre que se enfrían rápido, lento o se evaporan: tamaño y forma de los cristales.', grupo: 'Química', desdeGrado: 6, Juego: Cristalizacion },
   { id: 'solucion-molar', titulo: 'Prepara 100 mL de solución 0,5 M de sulfato de cobre', resumen: 'Pesa con la balanza, disuelve, pasa con el embudo, afora gota a gota e invierte el matraz. El color muestra la concentración.', grupo: 'Química', desdeGrado: 9, Juego: SolucionMolar },
 ]
 
