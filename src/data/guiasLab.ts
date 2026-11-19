@@ -357,4 +357,31 @@ export const GUIAS: Record<string, Guia> = {
       '¿Para qué sirve repetir una medida varias veces?',
     ],
   },
+  densidades: {
+    objetivo: ['Determinar la densidad de sólidos regulares e irregulares para reconocer su material, y construir una torre de líquidos de distinta densidad.'],
+    fundamento: [
+      'La densidad es la masa que hay en cada unidad de volumen: d = m / V. Se expresa en g/cm³ (1 cm³ = 1 mL).',
+      'El volumen de un sólido regular se calcula con la regla: largo × ancho × alto. El de un sólido irregular se mide por desplazamiento: al sumergirlo en una probeta con agua, lo que sube el nivel es su volumen.',
+      'Un objeto que flota desplaza solo el agua equivalente a su propio peso (principio de Arquímedes): para medir su volumen hay que hundirlo del todo, por ejemplo con un alfiler.',
+      'La densidad no depende del tamaño de la muestra, por eso sirve para identificar materiales. Lo menos denso que el agua (1 g/cm³) flota.',
+      'En la torre, cada líquido se acomoda según su densidad, pero solo forman capas los que no se mezclan entre sí o los que se vierten con cuidado en el orden correcto.',
+    ],
+    materiales: ['Balanza', 'Regla', 'Probeta de 100 mL con 50 mL de agua', 'Alfiler', 'Cubo de madera, bloques de aluminio y plastilina, piedra, tuerca y trozo de vela', 'Vaso alto', 'Miel, jabón lavaloza, agua y alcohol con colorante, aceite', 'Tuerca, uva, cuenta de plástico y corcho'],
+    procedimiento: [
+      'Pesa cada objeto en la balanza y anota su masa.',
+      'Si tiene forma regular, mide largo, ancho y alto con la regla y calcula el volumen.',
+      'Si es irregular, sumérgelo en la probeta con 50 mL de agua y anota el nuevo nivel; si flota, húndelo con el alfiler. El volumen es el nivel final menos 50 mL.',
+      'Calcula la densidad (d = m / V) y compárala con la tabla para reconocer el material.',
+      'Torre: vierte los líquidos en el vaso alto, despacio y por la pared, en el orden que creas correcto.',
+      'Suelta los objetos en la torre y observa en qué capa se queda cada uno.',
+    ],
+    seguridad: ['El alcohol es inflamable: lo maneja un adulto, lejos del fuego.', 'Seca el agua derramada y no pruebes los líquidos de la torre.'],
+    preguntas: [
+      '¿Por qué no se puede medir el volumen de la piedra con la regla?',
+      '¿Qué pasa con la densidad calculada si no hundes la vela? ¿Por qué?',
+      '¿Cuáles materiales flotan en el agua? ¿Qué tienen en común sus densidades?',
+      '¿En qué orden hay que verter los líquidos para que formen cinco capas?',
+      '¿Por qué el aceite logra separar el agua del alcohol?',
+    ],
+  },
 }
