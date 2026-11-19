@@ -131,7 +131,7 @@ Se suman a la ruta, con la regla «como Tinciones» y su guía imprimible; una p
 clásicas de los «201 experimentos»; las de bórax o similares, con aviso de simulación.
 1. ~~**Cuaderno e informe de laboratorio**~~ ✅ (19 nov 2026: minijuego `Informe.tsx`, «Para empezar») (práctica cero, desde 6°; guía de Pamplona): armar un informe con sus partes
    y encontrar los errores de uno mal hecho.
-2. **Pila de limones** (Química área 3, desde 6°): electrodos de zinc y cobre en limones, cables, voltímetro, LED con
+2. ~~**Pila de limones**~~ ✅ (19 nov 2026: `PilaLimones.tsx`) (Química área 3, desde 6°): electrodos de zinc y cobre en limones, cables, voltímetro, LED con
    varios en serie; serie de potenciales en 11°.
 3. **Corrosión de clavos** (área 3, desde 6°): agua, agua con sal, vinagre, aceite y aire seco; días acelerados en
    tiempo real; redox y protección del hierro desde 9°.
