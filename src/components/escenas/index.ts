@@ -28,6 +28,7 @@ import { EscenaBiodiversidadNiveles, EscenaMegadiversa, EscenaAmenazas, EscenaCo
 import { EscenaLinneo, EscenaLamarck, EscenaCuvier, EscenaLyell, EscenaBeagle, EscenaSeleccion, EscenaSintesis, EscenaRitmos, EscenaFosil, EscenaAnatomia, EscenaEmbriones, EscenaIslas, EscenaMolecular, EscenaPolillas, EscenaMaiz, EscenaResistencia, EscenaTiposSeleccion, EscenaAdaptacion, EscenaFrailejon, EscenaCactus, EscenaMigracion, EscenaMimetismo, EscenaAcervo, EscenaDeriva, EscenaFlujo, EscenaSexual, EscenaEspecie, EscenaAlopatrica, EscenaPoliploidia, EscenaRadiacion, EscenaCategorias, EscenaDominios, EscenaCladograma, EscenaArbolVida, EscenaOxigeno, EscenaTierraFirme, EscenaExtinciones, EscenaFosilesColombia, EscenaHomininos } from './EscenasEvolucion.tsx'
 import { EscenaTerritorio, EscenaCalendario, EscenaPolicultivo, EscenaDialogo } from './EscenasTerritorio.tsx'
 import { EscenaAguaPlaneta, EscenaCuenca, EscenaParamoEsponja } from './EscenasAgua.tsx'
+import { EscenaSaludPlato, EscenaSaludSueno, EscenaRepSistemas, EscenaRepFecundacion, EscenaRepCiclo, EscenaRepEmbarazo } from './EscenasSalud.tsx'
 import { EscenaLocEsqueleto, EscenaLocHueso, EscenaLocArticulaciones, EscenaLocAntagonistas, EscenaLocSarcomero } from './EscenasLocomotor.tsx'
 import { EscenaEndHormona, EscenaEndGlandulas, EscenaEndDiabetes, EscenaEndEstres } from './EscenasEndocrino.tsx'
 import { EscenaNerMapa, EscenaNerNeurona, EscenaNerSinapsis, EscenaNerReflejo, EscenaNerEncefalo } from './EscenasNervioso.tsx'
@@ -393,4 +394,10 @@ export const ESCENAS: Record<string, ComponentType<{ fase: string }>> = {
   'loc-articulaciones': EscenaLocArticulaciones,
   'loc-antagonistas': EscenaLocAntagonistas,
   'loc-sarcomero': EscenaLocSarcomero,
+  'salud-plato': EscenaSaludPlato,
+  'salud-sueno': EscenaSaludSueno,
+  'rep-sistemas': EscenaRepSistemas,
+  'rep-fecundacion': EscenaRepFecundacion,
+  'rep-ciclo': EscenaRepCiclo,
+  'rep-embarazo': EscenaRepEmbarazo,
 }

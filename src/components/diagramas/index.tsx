@@ -80,6 +80,8 @@ import InmunidadRebano from './InmunidadRebano.tsx'
 import TiempoReaccion from './TiempoReaccion.tsx'
 import GlucosaDia from './GlucosaDia.tsx'
 import BrazoPalanca from './BrazoPalanca.tsx'
+import MiSemana from './MiSemana.tsx'
+import { SaludDimensionesJuego, SuenoJuego, PlatoJuego, PrevencionJuego, SellosJuego, ReproductorJuego, FecundacionJuego, CicloMenstrualJuego, EmbarazoJuego, SexualidadJuego, PrevencionRepJuego } from './JuegosSalud.tsx'
 import { EsqueletoFuncionJuego, HuesoVivoJuego, ArticulacionesJuego, MusculosTiposJuego, PalancaJuego, SarcomeroJuego } from './JuegosLocomotor.tsx'
 import { HormonaQueJuego, GlandulasJuego, DiabetesJuego, EstresJuego, HormonasCrecimientoJuego, NervEndoJuego } from './JuegosEndocrino.tsx'
 import { NerMapaJuego, NeuronaJuego, SinapsisJuego, ReflejoJuego, EncefaloJuego, PsicoactivasJuego } from './JuegosNervioso.tsx'
@@ -713,4 +715,16 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'musculos-tipos-juego': MusculosTiposJuego,
   'palanca-juego': PalancaJuego,
   'sarcomero-juego': SarcomeroJuego,
+  'mi-semana': MiSemana,
+  'salud-dimensiones-juego': SaludDimensionesJuego,
+  'sueno-juego': SuenoJuego,
+  'plato-juego': PlatoJuego,
+  'prevencion-juego': PrevencionJuego,
+  'sellos-juego': SellosJuego,
+  'reproductor-juego': ReproductorJuego,
+  'fecundacion-juego': FecundacionJuego,
+  'ciclo-menstrual-juego': CicloMenstrualJuego,
+  'embarazo-juego': EmbarazoJuego,
+  'sexualidad-juego': SexualidadJuego,
+  'prevencion-rep-juego': PrevencionRepJuego,
 }

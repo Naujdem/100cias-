@@ -18,8 +18,9 @@ juego y quiz.
 8. **Huesos y músculos** — esqueleto, articulaciones, palancas, contracción (sarcómero en 11°).
 9. **(Opcional) Cuerpo y salud** — deporte, descanso, alimentación, prevención.
 
-**Por decidir:** reproducción humana, sexualidad y prevención como tema 10 (la piden los Estándares de 6° a 9°;
-en el área 1 se dejó por fuera).
+10. **Reproducción humana, sexualidad y prevención** — aprobado el 19 nov 2026 (lo piden los Estándares de 6° a 9°;
+   en el área 1 se dejó por fuera): sistemas reproductores, fecundación, ciclo menstrual, embarazo, respeto y
+   consentimiento, prevención.
 
 ## Conexiones (sin repetir)
 - Células y tejidos: área 1 («De la célula al organismo»); aquí solo «Más sobre esto».

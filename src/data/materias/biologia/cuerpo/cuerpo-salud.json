@@ -1,0 +1,401 @@
+{
+  "id": "cuerpo-salud",
+  "materia": "biologia",
+  "area": "cuerpo",
+  "titulo": "Cuerpo y salud",
+  "subtema": "Hábitos que cuidan todos los sistemas",
+  "orden": 69,
+  "etiqueta": "9",
+  "vistas": ["ruta"],
+  "tituloVista": "Ruta de la salud",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Reconocer la salud como bienestar físico, mental y social.",
+    "Relacionar la actividad física y el sueño con el funcionamiento de los sistemas del cuerpo.",
+    "Armar un plato saludable y leer los sellos de advertencia de los alimentos.",
+    "Proponer hábitos de higiene y prevención para la casa y la vereda."
+  ],
+  "fuentes": [
+    "BORRADOR (tema opcional): verificar recomendaciones con la OMS (actividad física de 5 a 17 años), las Guías Alimentarias Basadas en Alimentos para Colombia (ICBF) y la Ley 2120 de 2021 y su reglamentación sobre sellos de advertencia. Son recomendaciones generales, no indicaciones personales."
+  ],
+  "bloques": [
+    {
+      "id": "que-es-salud",
+      "titulo": "¿Qué es estar sano?",
+      "resumen": "Salud es bienestar físico, mental y social; los hábitos de cada día la construyen.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "diagrama": "mi-semana",
+      "ficha": {
+        "idea": "La Organización Mundial de la Salud define la salud como un estado de completo bienestar físico, mental y social, y no solo como la ausencia de enfermedad. A lo largo de esta área se vio que el cuerpo trabaja como un equipo para mantener la homeostasis; los hábitos de cada día le ayudan o le ponen trabas. La actividad física fortalece el corazón, los pulmones, los huesos y los músculos, mejora el ánimo y el sueño; para niños y adolescentes se recomienda al menos una hora diaria de actividad moderada o intensa (caminar rápido, correr, montar bicicleta, jugar fútbol, trabajar en la finca) y pasar menos tiempo sentado frente a pantallas. Junto con el sueño, la alimentación y la prevención, forman la base del autocuidado.",
+        "cuaderno": {
+          "facil": [
+            "Salud: bienestar físico, mental y social.",
+            "Se recomienda al menos una hora diaria de actividad física."
+          ],
+          "media": [
+            "La actividad física fortalece corazón, pulmones, huesos y músculos, y mejora el ánimo."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Una persona que no está enferma está necesariamente sana?",
+          "actividad": "Con el simulador «Mis hábitos», cada estudiante pone sus hábitos de un día típico (de forma privada) y elige uno solo para mejorar esa semana.",
+          "errores": [
+            "Creer que salud es solo no estar enfermo.",
+            "Pensar que la actividad física tiene que ser un deporte o un gimnasio."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Una persona no tiene ninguna enfermedad, pero vive triste y sola. ¿Está completamente sana?",
+            "opciones": ["No: la salud también es mental y social", "Sí: no tiene enfermedades", "Sí, si hace ejercicio", "Depende de la edad"],
+            "correcta": 0,
+            "explicacion": "La salud incluye el bienestar mental y social."
+          }
+        },
+        {
+          "titulo": "Tres partes de la salud",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "💪", "titulo": "Física", "texto": "Moverse, comer bien, dormir, prevenir." },
+              { "icono": "🧠", "titulo": "Mental", "texto": "Manejar emociones, descansar, pedir ayuda." },
+              { "icono": "🤝", "titulo": "Social", "texto": "Familia, amigos, comunidad." }
+            ]
+          }
+        },
+        {
+          "titulo": "Moverse cada día",
+          "puntos": [
+            "Fortalece corazón, pulmones, huesos y músculos.",
+            "Mejora el ánimo y el sueño."
+          ],
+          "visual": { "tipo": "cifra", "icono": "🏃", "valor": "60 minutos", "texto": "de actividad física al día se recomiendan de los 5 a los 17 años" }
+        }
+      ],
+      "juego": "salud-dimensiones-juego",
+      "preguntas": [
+        {
+          "id": "cu-sa-1",
+          "enunciado": "Según la OMS, la salud es…",
+          "opciones": [
+            "bienestar físico, mental y social",
+            "no tener ninguna enfermedad",
+            "hacer deporte todos los días",
+            "tener un peso exacto"
+          ],
+          "correcta": 0,
+          "explicacion": "No es solo la ausencia de enfermedad."
+        },
+        {
+          "id": "cu-sa-2",
+          "enunciado": "¿Cuánta actividad física se recomienda al día para un adolescente?",
+          "opciones": ["Al menos 60 minutos", "10 minutos", "Ninguna si estudia mucho", "Solo los fines de semana"],
+          "correcta": 0,
+          "explicacion": "Puede repartirse a lo largo del día."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "sueno",
+      "titulo": "Dormir bien",
+      "resumen": "Durmiendo el cuerpo crece y se repara y el cerebro guarda lo aprendido; un adolescente necesita de 8 a 10 horas.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "requiere": ["que-es-salud"],
+      "ficha": {
+        "idea": "Dormir no es tiempo perdido. Durante la noche se pasa varias veces por ciclos de sueño: en el sueño profundo se suelta la hormona del crecimiento y el cuerpo se repara; en el sueño REM se sueña y el cerebro ordena lo aprendido en el día. Un adolescente necesita de 8 a 10 horas. Dormir poco afecta la atención, la memoria, el ánimo y las defensas, y aumenta los accidentes. Ayudan una hora fija para acostarse, un cuarto oscuro y en silencio, no tomar café ni bebidas energizantes en la tarde y dejar el celular fuera de la cama, porque su luz y su contenido retrasan el sueño.",
+        "cuaderno": {
+          "facil": [
+            "Un adolescente necesita de 8 a 10 horas de sueño.",
+            "Al dormir, el cuerpo crece y se repara."
+          ],
+          "media": [
+            "En el sueño REM el cerebro ordena lo aprendido.",
+            "Las pantallas antes de dormir retrasan el sueño."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Por qué después de trasnochar cuesta tanto concentrarse?",
+          "actividad": "Llevar un diario de sueño de una semana (hora de acostarse y de levantarse) y calcular el promedio de horas.",
+          "errores": [
+            "Creer que se puede «recuperar» todo el sueño el fin de semana.",
+            "Pensar que el celular ayuda a dormir."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Una noche de sueño",
+          "visual": {
+            "tipo": "escena",
+            "id": "salud-sueno",
+            "fases": [
+              { "id": "acostarse", "nombre": "Al acostarse", "texto": "El sueño empieza liviano." },
+              { "id": "profundo", "nombre": "Sueño profundo", "texto": "Se suelta la hormona del crecimiento y el cuerpo se repara." },
+              { "id": "rem", "nombre": "Sueño REM", "texto": "Se sueña y el cerebro guarda lo aprendido." },
+              { "id": "despertar", "nombre": "Al despertar", "texto": "Descansado: atento y de buen ánimo." }
+            ]
+          },
+          "atajo": { "texto": "Más sobre esto: crecer y cambiar", "tema": "sistema-endocrino", "bloque": "crecimiento" }
+        }
+      ],
+      "juego": "sueno-juego",
+      "preguntas": [
+        {
+          "id": "cu-sa-3",
+          "enunciado": "¿Cuántas horas de sueño necesita un adolescente?",
+          "opciones": ["De 8 a 10", "De 4 a 5", "De 5 a 6", "Más de 14"],
+          "correcta": 0,
+          "explicacion": "Es la recomendación general para la adolescencia."
+        },
+        {
+          "id": "cu-sa-4",
+          "enunciado": "¿Qué pasa en el sueño profundo?",
+          "opciones": [
+            "Se suelta la hormona del crecimiento y el cuerpo se repara",
+            "El corazón se detiene",
+            "Se digiere más rápido",
+            "Se olvida lo aprendido"
+          ],
+          "correcta": 0,
+          "explicacion": "Por eso dormir bien ayuda a crecer."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "alimentacion",
+      "titulo": "Comer variado",
+      "resumen": "Un plato completo: mitad verduras y frutas, un cuarto cereales o tubérculos, un cuarto proteínas, y agua.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "basico",
+      "requiere": ["que-es-salud"],
+      "ficha": {
+        "idea": "Comer variado le da al cuerpo los nutrientes que necesita: energía, materiales para construir y sustancias que regulan. Una guía sencilla es el plato: la mitad de verduras y frutas, un cuarto de cereales o tubérculos (arroz, papa, yuca, plátano, arepa) y un cuarto de proteínas (fríjol, lenteja, huevo, carne, pescado, queso), y agua para tomar. Conviene preferir los alimentos naturales y la comida casera, y dejar para de vez en cuando las gaseosas, los paquetes y las comidas rápidas, que tienen mucha azúcar, sal o grasa. Ningún alimento es «prohibido»; lo que cuenta es lo que se come la mayoría de los días. Cada cuerpo es distinto: si hay dudas sobre la alimentación propia, lo mejor es consultar al médico o al nutricionista.",
+        "cuaderno": {
+          "facil": [
+            "Plato saludable: mitad verduras y frutas, un cuarto cereales, un cuarto proteínas.",
+            "Agua en vez de bebidas azucaradas."
+          ],
+          "media": [
+            "Preferir alimentos naturales y comida casera."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "Si comparas el almuerzo de tu casa con el plato saludable, ¿qué le sobra o le falta?",
+          "actividad": "Dibujar el plato de un almuerzo típico de la región (por ejemplo, con plátano, fríjoles y ensalada) y ubicar cada alimento en su parte.",
+          "errores": [
+            "Creer que hay alimentos buenos y malos en sí mismos.",
+            "Pensar que el plátano o la arepa son verduras."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Armemos el plato",
+          "visual": {
+            "tipo": "escena",
+            "id": "salud-plato",
+            "fases": [
+              { "id": "vacio", "nombre": "El plato", "texto": "Una guía sencilla para cada comida." },
+              { "id": "verduras", "nombre": "Verduras y frutas", "texto": "La mitad del plato." },
+              { "id": "cereales", "nombre": "Cereales y tubérculos", "texto": "Un cuarto: arroz, papa, yuca, plátano, arepa." },
+              { "id": "proteinas", "nombre": "Proteínas", "texto": "Un cuarto: fríjol, huevo, carne, pescado, queso." },
+              { "id": "agua", "nombre": "Agua", "texto": "Para tomar, agua en vez de gaseosa." }
+            ]
+          },
+          "atajo": { "texto": "Más sobre esto: los nutrientes", "tema": "digestion", "bloque": "nutrientes" }
+        }
+      ],
+      "juego": "plato-juego",
+      "preguntas": [
+        {
+          "id": "cu-sa-5",
+          "enunciado": "En el plato saludable, ¿qué ocupa la mitad?",
+          "opciones": ["Verduras y frutas", "Arroz y papa", "Carne", "Postres"],
+          "correcta": 0,
+          "explicacion": "Aportan vitaminas, minerales y fibra."
+        },
+        {
+          "id": "cu-sa-6",
+          "enunciado": "¿Cuál es la mejor bebida para acompañar las comidas?",
+          "opciones": ["Agua", "Gaseosa", "Bebida energizante", "Jugo de caja azucarado"],
+          "correcta": 0,
+          "explicacion": "Sin azúcar añadida."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "etiquetas",
+      "titulo": "Leer la etiqueta",
+      "resumen": "Los sellos negros de advertencia avisan cuando un producto tiene exceso de azúcares, sodio o grasas.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "intermedio",
+      "requiere": ["alimentacion"],
+      "ficha": {
+        "idea": "En Colombia, la ley exige que los productos comestibles empacados con exceso de ciertos nutrientes lleven sellos de advertencia: octágonos negros que dicen «EXCESO EN» azúcares, sodio, grasas saturadas o grasas trans, y otro que avisa si contienen edulcorantes. Entre menos sellos tenga un producto, mejor. La tabla nutricional muestra cuánto aporta una porción, y la lista de ingredientes va de mayor a menor cantidad: si el azúcar aparece entre los primeros, el producto tiene mucha. Los alimentos naturales, como una fruta, los fríjoles o un huevo, no llevan sellos. Leer la etiqueta ayuda a decidir, sin que haga falta prohibirse nada.",
+        "cuaderno": {
+          "facil": [
+            "Los sellos negros avisan exceso en azúcares, sodio o grasas.",
+            "Entre menos sellos, mejor."
+          ],
+          "media": [
+            "Los ingredientes van de mayor a menor cantidad."
+          ],
+          "avanzada": [
+            "Ley 2120 de 2021 (ley de comida chatarra) y su reglamentación."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Han visto los octágonos negros en los paquetes de la tienda?",
+          "actividad": "Traer empaques vacíos de la tienda, ordenarlos por número de sellos y buscar en qué lugar aparece el azúcar en la lista de ingredientes.",
+          "errores": [
+            "Creer que un producto «light» o «natural» no puede tener sellos.",
+            "Pensar que los sellos significan que el producto está prohibido."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Los sellos de advertencia",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "⬛", "titulo": "EXCESO EN AZÚCARES", "texto": "Gaseosas, galletas, cereales azucarados." },
+              { "icono": "⬛", "titulo": "EXCESO EN SODIO", "texto": "Sopas de paquete, embutidos, pasabocas." },
+              { "icono": "⬛", "titulo": "EXCESO EN GRASAS", "texto": "Saturadas o trans: frituras de paquete." }
+            ]
+          }
+        },
+        {
+          "titulo": "La lista de ingredientes",
+          "puntos": [
+            "Va de lo que más tiene a lo que menos tiene.",
+            "Si el azúcar está entre los primeros, tiene mucha."
+          ],
+          "visual": { "tipo": "cifra", "icono": "🏷️", "valor": "menos sellos", "texto": "es mejor opción" }
+        }
+      ],
+      "juego": "sellos-juego",
+      "preguntas": [
+        {
+          "id": "cu-sa-7",
+          "enunciado": "¿Qué indica un sello negro «EXCESO EN SODIO»?",
+          "opciones": ["Que el producto tiene mucha sal", "Que no tiene sal", "Que tiene mucha azúcar", "Que está vencido"],
+          "correcta": 0,
+          "explicacion": "El sodio viene sobre todo de la sal."
+        },
+        {
+          "id": "cu-sa-8",
+          "enunciado": "¿Cuál de estos alimentos no lleva sellos?",
+          "opciones": ["Una naranja", "Una gaseosa", "Una sopa de paquete", "Unas galletas rellenas"],
+          "correcta": 0,
+          "explicacion": "Los alimentos naturales no llevan sellos."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "prevencion",
+      "titulo": "Prevenir en la casa y la vereda",
+      "resumen": "Lavarse las manos, hervir el agua, calzarse, protegerse del sol, cuidar los dientes y tener las vacunas al día.",
+      "anio": 5,
+      "etiqueta": "Paso 5",
+      "nivel": "basico",
+      "requiere": ["que-es-salud"],
+      "ficha": {
+        "idea": "Muchas enfermedades se previenen con hábitos sencillos. Lavarse las manos con agua y jabón antes de comer y después de ir al baño evita diarreas e infecciones respiratorias. Hervir o filtrar el agua cuando no es potable, lavar frutas y verduras, y no andar descalzo en tierra húmeda previenen los parásitos intestinales, todavía comunes en zonas rurales. Usar gorra, ropa que cubra y bloqueador protege la piel del sol, que es fuerte en la montaña por la altura. Cepillarse los dientes después de comer evita las caries. Tener el carné de vacunas al día protege a cada persona y a la comunidad. Y la salud mental también se cuida: hablar de lo que preocupa y pedir ayuda a tiempo es parte de la prevención.",
+        "cuaderno": {
+          "facil": [
+            "Lavarse las manos, hervir el agua y calzarse previenen enfermedades.",
+            "Vacunas al día y cepillado de dientes."
+          ],
+          "media": [
+            "Protegerse del sol: gorra, ropa y bloqueador.",
+            "Pedir ayuda también es prevención."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿De dónde viene el agua que toman en la casa? ¿La hierven?",
+          "actividad": "Hacer un mapa de riesgos de la vereda (agua, basuras, animales, sol) y proponer una acción de prevención por cada uno para socializar con las familias.",
+          "errores": [
+            "Creer que el agua cristalina siempre es potable.",
+            "Pensar que el sol solo hace daño en tierra caliente."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Hábitos que previenen",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "🧼", "titulo": "Manos limpias", "texto": "Antes de comer y después del baño." },
+              { "icono": "🔥", "titulo": "Agua segura", "texto": "Hervida o filtrada si no es potable." },
+              { "icono": "👟", "titulo": "Calzado", "texto": "En tierra húmeda y potreros." },
+              { "icono": "🧢", "titulo": "Sol", "texto": "Gorra, ropa y bloqueador." },
+              { "icono": "🪥", "titulo": "Dientes", "texto": "Cepillado después de comer." },
+              { "icono": "💉", "titulo": "Vacunas", "texto": "Carné al día." }
+            ]
+          },
+          "atajo": { "texto": "Más sobre esto: las vacunas", "tema": "sistema-inmune", "bloque": "vacunas" }
+        },
+        {
+          "titulo": "Para comprobar",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "El agua de la quebrada se ve cristalina. ¿Se puede tomar sin hervir?",
+            "opciones": ["No: puede tener microbios y parásitos que no se ven", "Sí: si se ve limpia, está limpia", "Sí, si está fría", "Solo si es de mañana"],
+            "correcta": 0,
+            "explicacion": "Los microbios no se ven a simple vista."
+          }
+        }
+      ],
+      "juego": "prevencion-juego",
+      "preguntas": [
+        {
+          "id": "cu-sa-9",
+          "enunciado": "¿Qué previene hervir el agua?",
+          "opciones": ["Parásitos y microbios", "Las caries", "Las quemaduras de sol", "La falta de sueño"],
+          "correcta": 0,
+          "explicacion": "El calor los mata."
+        },
+        {
+          "id": "cu-sa-10",
+          "enunciado": "¿Por qué el sol es fuerte en la montaña aunque haga frío?",
+          "opciones": [
+            "Porque a más altura llega más radiación",
+            "Porque hay más nubes",
+            "Porque el frío quema",
+            "No es cierto: en la montaña no hace daño"
+          ],
+          "correcta": 0,
+          "explicacion": "Hay menos atmósfera que la filtre."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}

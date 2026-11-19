@@ -43,7 +43,6 @@ export const PROXIMOS: Record<string, { etiqueta: string; nombre: string }[]> = 
   ],
   evolucion: [],
   cuerpo: [
-    { etiqueta: '9', nombre: 'Cuerpo y salud (opcional)' },
   ],
   materia: [
   ],
