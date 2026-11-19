@@ -43,6 +43,7 @@ import CalorReacciones from './practicas/CalorReacciones.tsx'
 import Potabilizacion from './practicas/Potabilizacion.tsx'
 import SeleccionPicos from './practicas/SeleccionPicos.tsx'
 import Cuadrantes from './practicas/Cuadrantes.tsx'
+import MesaLibre from './practicas/MesaLibre.tsx'
 
 // Laboratorios virtuales (PLAN-LABORATORIOS.md). Las prácticas listas van en PRACTICAS; las demás de la
 // ruta salen como «próximamente».
@@ -61,6 +62,7 @@ const PRACTICAS: Entrada[] = [
   { id: 'seguridad', titulo: 'Práctica cero: seguridad en el laboratorio', resumen: 'Vístete, reconoce los pictogramas, decide qué está bien y a dónde va cada residuo.', grupo: 'Para empezar', desdeGrado: 6, Juego: Seguridad },
   { id: 'informe', titulo: 'Cuaderno e informe de laboratorio', resumen: 'Arma un informe con sus partes en orden y encuentra los errores de uno mal hecho.', grupo: 'Para empezar', desdeGrado: 6, Juego: Informe },
   { id: 'material', titulo: 'Reconoce tu material', resumen: 'Cada instrumento con su uso, su cuidado y su versión casera; luego, ¿qué es? y ¿cuál uso?', grupo: 'Para empezar', desdeGrado: 6, Juego: Material },
+  { id: 'mesa-libre', titulo: 'Mesa libre', resumen: 'Mezcla lo que quieras del estante y caliéntalo: descubre qué reacciona. Lo que la app no conoce queda guardado para tu docente.', grupo: 'Mesa libre', desdeGrado: 6, Juego: MesaLibre },
   { id: 'microscopio', titulo: 'El microscopio', resumen: 'Sus partes, cómo enfocar sin romper la lámina y el reto de ver células a 400x.', grupo: 'Biología', desdeGrado: 6, Juego: Microscopio },
   { id: 'montaje', titulo: 'Montaje húmedo', resumen: 'Prepara una lámina de cebolla: limpia, extendida y sin burbujas. Al observarla se ven tus errores.', grupo: 'Biología', desdeGrado: 6, Juego: Montaje },
   { id: 'tinciones', titulo: 'Tinciones', resumen: 'Lugol y azul de metileno en cebolla, mejilla y papa; en 11°, la tinción de Gram.', grupo: 'Biología', desdeGrado: 6, Juego: Tinciones },
