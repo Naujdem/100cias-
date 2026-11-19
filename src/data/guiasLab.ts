@@ -270,4 +270,29 @@ export const GUIAS: Record<string, Guia> = {
       '¿Por qué hay que usar un hisopo nuevo para cada caja?',
     ],
   },
+  microscopio: {
+    objetivo: ['Reconocer las partes del microscopio óptico, usarlo en orden (4x, 10x, 40x) y enfocar una lámina sin romperla.'],
+    fundamento: [
+      'El aumento total es el del ocular multiplicado por el del objetivo: 10x × 40x = 400x.',
+      'Siempre se empieza con el objetivo de menor aumento, porque tiene más campo y más distancia de trabajo.',
+      'Con el macrométrico (grueso) se busca la imagen; con el micrométrico (fino) se afina. Con los objetivos grandes solo se usa el micrométrico, porque el objetivo puede chocar con la lámina.',
+      'El diafragma regula la luz: con más aumento se necesita más luz.',
+    ],
+    materiales: ['Microscopio óptico', 'Lámina de cebolla (o cualquier lámina preparada)', 'Papel para limpiar los lentes'],
+    procedimiento: [
+      'Identifica la base, el brazo, el ocular, el tubo, el revólver, los objetivos, la platina y el diafragma.',
+      'Carga el microscopio con una mano debajo de la base y otra en el brazo.',
+      'Pon la lámina en la platina y sujétala con las pinzas. Gira el revólver al objetivo de 4x.',
+      'Sube la platina con el macrométrico hasta ver la imagen y afina con el micrométrico.',
+      'Cambia a 10x y luego a 40x, usando solo el micrométrico.',
+      'Ajusta la luz con el diafragma y anota el aumento total.',
+    ],
+    seguridad: ['Nunca bajes la platina con el objetivo grande: se puede romper la lámina o el objetivo.', 'Las láminas son de vidrio: si se rompen, van a su caja.'],
+    preguntas: [
+      '¿Cuál es el aumento total con el ocular de 10x y el objetivo de 40x?',
+      '¿Por qué se empieza siempre con el objetivo de 4x?',
+      '¿Qué diferencia hay entre el macrométrico y el micrométrico?',
+      '¿Qué pasa si usas el macrométrico con el objetivo de 40x?',
+    ],
+  },
 }
