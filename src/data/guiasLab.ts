@@ -4,6 +4,33 @@ import type { Guia } from '../components/lab/GuiaLab.tsx'
 // cuando se crea o se convierte a mesa viva (PLAN-LABORATORIOS.md).
 
 export const GUIAS: Record<string, Guia> = {
+  'pila-limones': {
+    objetivo: ['Construir una pila con limones, medir su voltaje y encender un LED conectando varias en serie.'],
+    fundamento: [
+      'Una pila convierte energía química en eléctrica. Necesita dos metales distintos (electrodos) y un líquido que conduzca iones (electrolito): aquí, el jugo ácido del limón.',
+      'El zinc suelta electrones y se gasta (polo negativo); los electrones viajan por el cable hasta el cobre (polo positivo), donde los recibe el ácido.',
+      'Un limón da menos de 1 V. Conectados en serie (cobre de uno con zinc del siguiente), los voltajes se suman.',
+      'Desde 9°: es una reacción redox; el zinc se oxida en el ánodo y el H⁺ se reduce en el cátodo. En 11°: el voltaje depende de la diferencia de potenciales de reducción de los dos metales.',
+    ],
+    materiales: ['4 limones jugosos', '4 clavos galvanizados (zinc)', '4 trozos de alambre de cobre grueso o monedas de cobre', '5 cables con caimanes', 'Multímetro (voltímetro)', 'LED rojo', 'Desde 9°: clavo de hierro sin galvanizar'],
+    procedimiento: [
+      'Rueda cada limón sobre la mesa apretándolo un poco para que suelte jugo por dentro.',
+      'Clava en un limón un clavo de zinc y un alambre de cobre, separados unos 2 cm y sin tocarse.',
+      'Pon el multímetro en voltios (DC): punta roja al cobre y negra al zinc. Anota el voltaje.',
+      'Arma un segundo limón igual y une con un cable el cobre del primero con el zinc del segundo. Mide entre los extremos.',
+      'Repite con tres y cuatro limones y anota cada voltaje en una tabla.',
+      'Conecta el LED a los extremos: la pata larga (+) al cobre del último limón. Si no enciende, revisa la polaridad y los cables.',
+      'Desde 9°: cambia el cobre o el zinc por un clavo de hierro y compara el voltaje.',
+    ],
+    seguridad: ['Los limones usados no se comen: absorben metal de los electrodos.', 'Cuidado con las puntas de los clavos y los alambres.', 'Nunca se experimenta con los enchufes de la casa: la corriente de la pared es peligrosa.'],
+    preguntas: [
+      '¿Cuánto voltaje dio un limón? ¿Y cuatro? ¿Qué relación encuentras?',
+      '¿Por qué el voltímetro marcó un número negativo cuando invertiste las puntas?',
+      '¿Qué pasa si usas dos electrodos del mismo metal? ¿Por qué?',
+      'Desde 9°: ¿qué metal se oxida y cuál es el ánodo?',
+      'En 11°: calcula el voltaje estándar de la pila Zn–Cu y compáralo con el que mediste.',
+    ],
+  },
   informe: {
     objetivo: ['Reconocer las partes de un informe de laboratorio y aplicar las normas para llevar el cuaderno de laboratorio.'],
     fundamento: [

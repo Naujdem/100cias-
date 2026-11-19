@@ -32,6 +32,7 @@ import Titulacion from './practicas/Titulacion.tsx'
 import VelocidadReaccion from './practicas/VelocidadReaccion.tsx'
 import Saponificacion from './practicas/Saponificacion.tsx'
 import Combustion from './practicas/Combustion.tsx'
+import PilaLimones from './practicas/PilaLimones.tsx'
 
 // Laboratorios virtuales (PLAN-LABORATORIOS.md). Las prácticas listas van en PRACTICAS; las demás de la
 // ruta salen como «próximamente».
@@ -75,6 +76,7 @@ const PRACTICAS: Entrada[] = [
   { id: 'velocidad-reaccion', titulo: 'Velocidad de reacción', resumen: 'Pastillas efervescentes en agua fría, al clima, caliente o con vinagre, enteras o trituradas: ¿qué la acelera?', grupo: 'Química', desdeGrado: 6, Juego: VelocidadReaccion },
   { id: 'saponificacion', titulo: 'Saponificación (solo simulación)', resumen: 'Aceite y soda cáustica en baño María, agitando hasta la traza: la proporción decide si el jabón sale grasoso, bueno o cáustico.', grupo: 'Química', desdeGrado: 9, Juego: Saponificacion },
   { id: 'combustion', titulo: 'Combustión completa e incompleta', resumen: 'Mechero con el aire cerrado o abierto: hollín, agua y CO₂ sobre la llama. Y una vela que se apaga bajo el frasco.', grupo: 'Química', desdeGrado: 6, Juego: Combustion },
+  { id: 'pila-limones', titulo: 'Pila de limones', resumen: 'Clava zinc y cobre en limones, únelos en serie y mide con el voltímetro hasta encender un LED.', grupo: 'Química', desdeGrado: 6, Juego: PilaLimones },
   { id: 'solucion-molar', titulo: 'Prepara 100 mL de solución 0,5 M de sulfato de cobre', resumen: 'Pesa con la balanza, disuelve, pasa con el embudo, afora gota a gota e invierte el matraz. El color muestra la concentración.', grupo: 'Química', desdeGrado: 9, Juego: SolucionMolar },
 ]
 
