@@ -492,4 +492,30 @@ export const GUIAS: Record<string, Guia> = {
       '¿Para qué sirve el bicarbonato en la electrólisis?',
     ],
   },
+  'reactivo-limite': {
+    objetivo: ['Comprobar que la cantidad de producto de una reacción la fija el reactivo que se acaba primero (reactivo límite).'],
+    fundamento: [
+      'El vinagre (ácido acético) y el bicarbonato de sodio reaccionan mol a mol y producen dióxido de carbono: NaHCO₃ + CH₃COOH → CH₃COONa + H₂O + CO₂.',
+      'Si se deja fija la cantidad de vinagre y se aumenta el bicarbonato, al principio sale más gas; cuando el ácido se acaba, el gas deja de aumentar y el bicarbonato que sobra queda sin reaccionar.',
+      'El reactivo que se agota primero es el reactivo límite: determina cuánto producto se forma. El que sobra es el reactivo en exceso.',
+      'Para que la comparación sea justa se cambia una sola variable (el bicarbonato) y se dejan iguales las demás (el vinagre, las botellas, los globos).',
+    ],
+    materiales: ['Cinco botellas iguales', 'Vinagre', 'Bicarbonato de sodio', 'Cinco globos', 'Cucharita o balanza', 'Cinta métrica'],
+    procedimiento: [
+      'Echa la misma cantidad de vinagre (por ejemplo, 50 mL) en cada botella.',
+      'Pon 1, 2, 3, 4 y 5 g de bicarbonato en los globos, uno en cada uno.',
+      'Pon cada globo en la boca de su botella sin dejar caer el polvo.',
+      'Levanta los globos para que el bicarbonato caiga en el vinagre y espera a que dejen de burbujear.',
+      'Mide el contorno de cada globo con la cinta y anota si quedó bicarbonato en el fondo.',
+      'Haz una gráfica del contorno del globo contra los gramos de bicarbonato.',
+    ],
+    seguridad: ['Usa gafas: el vinagre irrita los ojos.', 'No infles los globos con la boca después de usarlos.'],
+    preguntas: [
+      '¿Qué globos crecieron más? ¿Desde qué cantidad de bicarbonato dejaron de crecer?',
+      '¿En qué botellas quedó bicarbonato en el fondo? ¿Por qué?',
+      '¿Cuál fue el reactivo límite en cada botella?',
+      '¿Por qué hay que poner la misma cantidad de vinagre en todas?',
+      '¿Qué pasaría con el globo más grande si duplicas el vinagre?',
+    ],
+  },
 }
