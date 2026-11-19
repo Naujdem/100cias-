@@ -126,8 +126,8 @@ function revisarSimple(s: S): { ok: boolean; lineas: string[] } {
 const MUESTRA_COLOR: Record<Muestra, string> = { cebolla: '#f1e6cf', mucosa: '#f2d5d0', papa: '#f4e2a8' }
 const GOTERO_COLOR: Record<Col, string> = { ninguno: '#ccc', lugol: '#a0601a', azul: '#2a55c4' }
 
-interface SM { muestra: Muestra | null; col: Col; t: number; lavado: boolean; ver: boolean }
-const VACIA: SM = { muestra: null, col: 'ninguno', t: 0, lavado: false, ver: false }
+interface SM { muestra: Muestra | null; cubre: boolean; col: Col; t: number; lavado: boolean; ver: boolean }
+const VACIA: SM = { muestra: null, cubre: false, col: 'ninguno', t: 0, lavado: false, ver: false }
 
 function Simples({ grado }: { grado: number }) {
   const [s, setS] = useState<SM>(VACIA)
@@ -147,19 +147,21 @@ function Simples({ grado }: { grado: number }) {
     return () => window.clearInterval(id)
   }, [actuando])
   const sv: S = { muestra: s.muestra ?? 'cebolla', col: s.col, t: s.t, lavado: s.lavado }
-  const r = revisarSimple(sv)
+  const r0 = revisarSimple(sv)
+  const r = s.cubre ? r0 : { ok: false, lineas: ['Faltó el cubreobjetos: la muestra queda arrugada y se seca, y el objetivo de 40x se puede mojar con el colorante. Se baja inclinado, apoyando primero un borde, para que no queden burbujas.', ...r0.lineas] }
   const vista = muestraSimple(sv)
   const [est, setEst] = useState<Est | null>(null)
   const listo = !!est && est.obj >= 2 && !est.rota && desenfoque(est) < 1.2
   const tinte = s.col !== 'ninguno' ? tono(s.col, Math.min(0.85, 0.2 + intensidad(sv) * 0.4)) : undefined
   const piezas: Pieza[] = [
-    { id: 'cebolla', nombre: 'Cebolla', x: 70, y: 330, ancho: 70, alto: 50, tomable: true, dibujo: <Cebolla /> },
-    { id: 'mucosa', nombre: 'Palillo (mejilla)', x: 150, y: 320, ancho: 50, alto: 80, tomable: true, dibujo: <Palillo /> },
-    { id: 'papa', nombre: 'Papa', x: 230, y: 335, ancho: 70, alto: 40, tomable: true, dibujo: <Papa /> },
-    { id: 'lugol', nombre: 'Lugol', x: 335, y: 312, ancho: 50, alto: 96, tomable: true, color: GOTERO_COLOR.lugol, dibujo: <Gotero color={GOTERO_COLOR.lugol} etiqueta="LUGOL" oscuro /> },
-    { id: 'azul', nombre: 'Azul de metileno', x: 415, y: 312, ancho: 50, alto: 96, tomable: true, color: GOTERO_COLOR.azul, dibujo: <Gotero color={GOTERO_COLOR.azul} etiqueta="AZUL" /> },
-    { id: 'lamina', nombre: 'Lámina', x: 550, y: 345, ancho: 130, alto: 30, tomable: true, dibujo: <Portaobjetos muestra={s.muestra ? MUESTRA_COLOR[s.muestra] : undefined} tinte={tinte} charco={s.col !== 'ninguno' && !s.lavado ? tono(s.col, 0.8) : undefined} /> },
-    { id: 'piseta', nombre: 'Piseta con agua', x: 680, y: 305, ancho: 60, alto: 106, tomable: true, color: '#a9d3f5', dibujo: <Piseta /> },
+    { id: 'cebolla', nombre: 'Cebolla', x: 60, y: 330, ancho: 70, alto: 50, tomable: true, dibujo: <Cebolla /> },
+    { id: 'mucosa', nombre: 'Palillo (mejilla)', x: 135, y: 320, ancho: 50, alto: 80, tomable: true, dibujo: <Palillo /> },
+    { id: 'papa', nombre: 'Papa', x: 210, y: 335, ancho: 70, alto: 40, tomable: true, dibujo: <Papa /> },
+    { id: 'lugol', nombre: 'Lugol', x: 295, y: 312, ancho: 50, alto: 96, tomable: true, color: GOTERO_COLOR.lugol, dibujo: <Gotero color={GOTERO_COLOR.lugol} etiqueta="LUGOL" oscuro /> },
+    { id: 'azul', nombre: 'Azul de metileno', x: 370, y: 312, ancho: 50, alto: 96, tomable: true, color: GOTERO_COLOR.azul, dibujo: <Gotero color={GOTERO_COLOR.azul} etiqueta="AZUL" /> },
+    { id: 'cubre', nombre: 'Cubreobjetos', x: 455, y: 350, ancho: 60, alto: 24, tomable: true, dibujo: <path d="M-24 6 L-14 -8 H26 L16 6 Z" fill="rgba(220,240,250,0.9)" stroke="#567" strokeWidth="1.5" /> },
+    { id: 'lamina', nombre: 'Lámina', x: 570, y: 345, ancho: 130, alto: 30, tomable: true, dibujo: <Portaobjetos muestra={s.muestra ? MUESTRA_COLOR[s.muestra] : undefined} tinte={tinte} charco={s.col !== 'ninguno' && !s.lavado ? tono(s.col, 0.8) : undefined} cubre={s.cubre} /> },
+    { id: 'piseta', nombre: 'Piseta con agua', x: 690, y: 305, ancho: 60, alto: 106, tomable: true, color: '#a9d3f5', dibujo: <Piseta /> },
     { id: 'reloj', nombre: 'Temporizador (toca: +15 s)', x: 780, y: 300, ancho: 72, alto: 72, alTocar: () => { setAlarma(false); setCuenta((c) => c + 15) }, dibujo: <Reloj s={cuenta} alarma={alarma} /> },
     { id: 'micro', nombre: 'Microscopio', x: 880, y: 290, ancho: 90, alto: 140, dibujo: <MicroscopioMini lamina={s.ver} /> },
     { id: 'caneca', nombre: 'Residuos', x: 960, y: 325, ancho: 54, alto: 76, dibujo: <Caneca /> },
@@ -177,6 +179,10 @@ function Simples({ grado }: { grado: number }) {
       return { anim: de === 'mucosa' ? 'frotar' : 'poner', hecho: () => cambiar({ muestra: de }) }
     }
     if (!s.muestra) return 'Primero pon una muestra en la lámina.'
+    if (de === 'cubre') {
+      if (s.cubre) return 'Ya tiene cubreobjetos.'
+      return { anim: 'poner', hecho: () => cambiar({ cubre: true }) }
+    }
     if (de === 'lugol' || de === 'azul') {
       if (s.col !== 'ninguno' && s.col !== de) return `Ya tiene ${COLORANTES[s.col].toLowerCase()}. Para probar otro colorante, empieza una lámina nueva.`
       if (s.col === de) return 'Ya tiene ese colorante. Toca el reloj para dejarlo actuar.'
@@ -192,7 +198,7 @@ function Simples({ grado }: { grado: number }) {
   return (
     <div className="flex flex-col gap-3">
       <p className="rounded-2xl bg-[var(--tarjeta)] p-4 text-sm">
-        Pon una muestra en la lámina y échale el colorante: empieza a actuar enseguida. Programa el temporizador (cada toque, 15 s), lava el exceso cuando suene con la piseta y lleva la lámina al microscopio. {s.muestra === 'mucosa' ? 'La mejilla se raspa suavemente con un palillo limpio, que luego se bota.' : ''}
+        Pon una muestra en la lámina, cúbrela con el cubreobjetos y echa el colorante por un borde: empieza a actuar enseguida. Programa el temporizador (cada toque, 15 s); cuando suene, lava el exceso con la piseta y lleva la lámina al microscopio. {s.muestra === 'mucosa' ? 'La mejilla se raspa suavemente con un palillo limpio, que luego se bota.' : ''}
       </p>
       <MesaViva desde={190} piezas={piezas} destinos={destinos} soltar={soltar} />
       {s.col !== 'ninguno' && <p className="text-sm">{COLORANTES[s.col]} en contacto: <b>{s.t} s</b>{s.lavado ? ' (lavado: ya no actúa)' : ' y contando…'}{alarma ? <b className="ml-2 text-[#e0604a]">⏰ ¡Tiempo! Lava con la piseta.</b> : null}</p>}
