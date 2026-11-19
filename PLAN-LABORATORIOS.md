@@ -46,7 +46,8 @@ plasmólisis en el MicroscopioPanel a 40x, tiempo ×6; papa: pesar, vaso, 30 min
 gradilla al baño María con tiempo ×10, Biuret soda→cobre, manchas en papel con secado ×20). ✅ Enzimas (18 nov 2026: catalasa con muestra 10 min en su vaso ×20,
 pH con goteros, espuma en tiempo real; amilasa con el tubo en su baño y gota a la placa minuto a minuto ×6). ✅ Fotosíntesis (18 nov 2026: lámpara a mano a las marcas de la regla,
 interruptor, celofán, bicarbonato, burbujas en tiempo real contadas tocando el contador 10 s × 6; cromatografía con
-gotas que deben secar, alcohol en el vaso, tira colgada, tiempo ×12 y sacarla a la bandeja).
+gotas que deben secar, alcohol en el vaso, tira colgada, tiempo ×12 y sacarla a la bandeja). ✅ Fermentación (18 nov 2026: cada botella se arma a mano con
+levadura, azúcar, agua y globo; tiempo por botella 1 s = 1 min; cinta métrica y botella al agua de cal).
 
 Biología:
 1. ~~Montaje húmedo~~ ✅ — gotero, pinza con la telita, extender, bajar el cubreobjetos inclinándolo, papel absorbente; observar en el MicroscopioPanel.
@@ -54,7 +55,7 @@ Biología:
 3. ~~Biomoléculas~~ ✅ — gotear cada reactivo en los tubos de la gradilla, llevar al baño María (con tiempo).
 4. ~~Enzimas~~ ✅ — agua oxigenada sobre la papa o el hígado; gotas de lugol en la placa de toque minuto a minuto.
 5. ~~Fotosíntesis~~ ✅ — acercar o alejar la lámpara con la mano; poner bicarbonato; meter la tira en el solvente.
-6. Fermentación — echar levadura, azúcar y agua en cada botella, poner el globo; el tiempo corre.
+6. ~~Fermentación~~ ✅ — echar levadura, azúcar y agua en cada botella, poner el globo; el tiempo corre.
 7. Extracción de ADN — machacar, echar agua, jabón y sal, filtrar, alcohol frío por la pared, enrollar con el palillo.
 8. Microbiología — hisopo, frotar la superficie, abrir la caja y sembrar, incubadora, contar colonias.
 9. El microscopio — partes y enfoque pasan a usar el MicroscopioPanel (unificar los dos microscopios).
