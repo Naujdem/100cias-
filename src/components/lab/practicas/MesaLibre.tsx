@@ -2,13 +2,14 @@ import { useState } from 'react'
 import MesaViva from '../MesaViva.tsx'
 import type { Pieza, Uso } from '../MesaViva.tsx'
 import { Caneca } from '../dibujos.tsx'
+import EfectosVaso from '../EfectosVaso.tsx'
 import { REACTIVOS, evaluar, guardarPendiente, clave } from '../../../data/reaccionesLibre.ts'
 import type { Resultado } from '../../../data/reaccionesLibre.ts'
 
 // Mesa libre, Fase 1 (PLAN-LABORATORIOS.md). Parte 1: estante con los reactivos de las prácticas, tres vasos, mechero
 // y el catálogo de `data/reaccionesLibre.ts`. Cada porción se echa tomando el frasco y soltándolo en un vaso; el vaso
 // se lleva al mechero para calentarlo. Lo que no está en el catálogo se guarda como pendiente en el dispositivo.
-// Pendiente (partes 2 a 4): efectos SVG completos, panel del docente con exportar/importar y libreta de descubrimientos.
+// Parte 2: efectos animados en `EfectosVaso.tsx`. Pendiente: panel del docente (exportar/importar) y libreta.
 
 interface Vaso { ids: string[]; calor: boolean }
 const VACIO: Vaso = { ids: [], calor: false }
@@ -59,20 +60,16 @@ export default function MesaLibre({ grado }: { grado: number }) {
       const color = colorVaso(v, r)
       const efectos = new Set(r.reacciones.flatMap((x) => x.efectos))
       const solido = r.reacciones.find((x) => x.colorSolido)?.colorSolido
-      const h = Math.min(60, v.ids.length * 9)
+      const h = Math.min(60, v.ids.filter((id) => REACTIVOS.find((x) => x.id === id)!.forma !== 'objeto').length * 9)
       return {
         id: `v${k}`, nombre: `Vaso ${k + 1}${v.ids.length ? `: ${[...new Set(v.ids)].map((id) => REACTIVOS.find((x) => x.id === id)!.n.toLowerCase()).join(', ')}${v.calor ? ' (calentado)' : ''}` : ' (vacío)'}`,
         x: 300 + k * 160, y: 365, ancho: 90, alto: 90, tomable: v.ids.length > 0,
         dibujo: <g>
-          {efectos.has('calor') && <circle r="46" fill="rgba(230,90,40,0.18)" />}
-          {efectos.has('frio') && <circle r="46" fill="rgba(60,130,230,0.15)" />}
           <path d="M-32 -36 V30 Q-32 36 -26 36 H26 Q32 36 32 30 V-36" fill="rgba(255,255,255,0.6)" stroke="#2b2b2b" strokeWidth="2" />
-          {color && <rect x="-30" y={34 - h} width="60" height={h} fill={color} opacity="0.85" style={{ transition: 'fill 1s' }} />}
-          {efectos.has('capas') && <rect x="-30" y={34 - h} width="60" height="8" fill={solido ?? '#e9c94a'} />}
-          {efectos.has('precipitado') && <ellipse cx="0" cy="31" rx="22" ry="4" fill={solido ?? '#fff'} stroke="#999" strokeWidth="0.5" />}
-          {(efectos.has('burbujas') || efectos.has('espuma')) && [-14, 0, 14].map((x, i) => <circle key={x} cx={x} r="2.5" fill="#fff"><animate attributeName="cy" values={`30;${34 - h}`} dur={`${0.7 + i * 0.25}s`} repeatCount="indefinite" /></circle>)}
-          {efectos.has('espuma') && <ellipse cx="0" cy={32 - h} rx="30" ry="6" fill="#fff" />}
-          {efectos.has('humo') && <path d="M-8 -40 q6 -10 0 -20 M8 -40 q6 -10 0 -20" stroke="#aaa" strokeWidth="3" fill="none" />}
+          <EfectosVaso clave={clave(v.ids, v.calor)} efectos={efectos} color={color} colorSolido={solido} h={h} calentado={v.calor}
+            objetos={[...new Set(v.ids)].filter((id) => REACTIVOS.find((x) => x.id === id)!.forma === 'objeto').map((id) => ({ id, color: id === 'hierro' && r.reacciones.some((x) => x.id === 'cuso4-hierro') ? '#b5652d' : id === 'zinc' && r.reacciones.some((x) => x.id === 'cuso4-zinc') ? '#4a3328' : REACTIVOS.find((x) => x.id === id)!.color }))}
+            toxico={r.reacciones.some((x) => x.id.startsWith('blanqueador'))} muchaEspuma={r.reacciones.some((x) => x.id === 'pasta-elefante')} />
+          <path d="M-32 -36 V30 Q-32 36 -26 36 H26 Q32 36 32 30 V-36" fill="none" stroke="#2b2b2b" strokeWidth="2" />
           <text y="52" textAnchor="middle" fontSize="11" fontWeight="800">{k + 1}</text>
         </g>,
       }
