@@ -41,11 +41,12 @@ Decidido el 18 nov 2026. **Toda práctica nueva o convertida se hace como Tincio
 
 ### Prácticas por convertir (una por sesión, en este orden)
 Hechas: ✅ Tinciones (simples y Gram). ✅ Montaje húmedo (18 nov 2026: papel para limpiar y secar, pinza → cebolla → lámina,
-aguja, cubreobjetos que se inclina con W/S o la rueda mientras se sostiene; se revisa al enfocar con 10x).
+aguja, cubreobjetos que se inclina con W/S o la rueda mientras se sostiene; se revisa al enfocar con 10x). ✅ Ósmosis (18 nov 2026: elodea con cambio de medio por el borde con papel,
+plasmólisis en el MicroscopioPanel a 40x, tiempo ×6; papa: pesar, vaso, 30 min con 1 s = 1 min, secar y volver a pesar).
 
 Biología:
 1. ~~Montaje húmedo~~ ✅ — gotero, pinza con la telita, extender, bajar el cubreobjetos inclinándolo, papel absorbente; observar en el MicroscopioPanel.
-2. Ósmosis — elodea en los medios con el MicroscopioPanel; tiras de papa a los vasos y a la balanza; tiempo de espera.
+2. ~~Ósmosis~~ ✅ — elodea en los medios con el MicroscopioPanel; tiras de papa a los vasos y a la balanza; tiempo de espera.
 3. Biomoléculas — gotear cada reactivo en los tubos de la gradilla, llevar al baño María (con tiempo).
 4. Enzimas — agua oxigenada sobre la papa o el hígado; gotas de lugol en la placa de toque minuto a minuto.
 5. Fotosíntesis — acercar o alejar la lámpara con la mano; poner bicarbonato; meter la tira en el solvente.
