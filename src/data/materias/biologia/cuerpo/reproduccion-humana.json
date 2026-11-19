@@ -1,0 +1,492 @@
+{
+  "id": "reproduccion-humana",
+  "materia": "biologia",
+  "area": "cuerpo",
+  "titulo": "Reproducción humana, sexualidad y prevención",
+  "subtema": "Cómo se forma una nueva vida y cómo cuidarse",
+  "orden": 70,
+  "etiqueta": "10",
+  "vistas": ["ruta"],
+  "tituloVista": "Ruta de la reproducción",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Identificar los órganos de los sistemas reproductores y su función.",
+    "Explicar la fecundación a partir de los gametos.",
+    "Describir el ciclo menstrual y el desarrollo del embarazo.",
+    "Reconocer la sexualidad como parte de la vida, con respeto, consentimiento y autocuidado.",
+    "Conocer formas de prevenir el embarazo adolescente y las infecciones de transmisión sexual, y dónde pedir ayuda."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con un texto escolar de biología, los Estándares de Ciencias Naturales (6.° a 9.°), el Programa de Educación para la Sexualidad y Construcción de Ciudadanía (MEN) y la información del Ministerio de Salud sobre Servicios de Salud Amigables para Adolescentes y Jóvenes. Confirmar las líneas de ayuda vigentes (ICBF 141) antes de usarlas en clase. Conviene revisar el tema con orientación escolar."
+  ],
+  "bloques": [
+    {
+      "id": "sistemas-reproductores",
+      "titulo": "Los sistemas reproductores",
+      "resumen": "El femenino produce óvulos y alberga el embarazo; el masculino produce espermatozoides.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "La reproducción permite que nazcan nuevos seres humanos. El sistema reproductor femenino tiene dos ovarios, que producen los óvulos y hormonas como los estrógenos; dos trompas de Falopio, por donde viaja el óvulo y donde ocurre la fecundación; el útero, un órgano muscular donde se desarrolla el embarazo, y la vagina, que comunica el útero con el exterior. El sistema reproductor masculino tiene dos testículos, que producen los espermatozoides y la testosterona; conductos que los llevan; glándulas como la próstata, que producen el líquido que los acompaña (semen), y la uretra, que sale por el pene. Los órganos se nombran con sus nombres científicos, con respeto: conocer el propio cuerpo es parte de cuidarlo. Estos sistemas empiezan a funcionar en la pubertad, por acción de las hormonas.",
+        "cuaderno": {
+          "facil": [
+            "Femenino: ovarios, trompas, útero y vagina.",
+            "Masculino: testículos, conductos, próstata, uretra y pene."
+          ],
+          "media": [
+            "Ovarios y testículos producen gametos y hormonas sexuales.",
+            "Empiezan a funcionar en la pubertad."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Por qué es importante llamar a los órganos por su nombre?",
+          "actividad": "Completar un esquema con los nombres y la función de cada órgano; recoger preguntas anónimas en una caja para responderlas en la siguiente clase.",
+          "errores": [
+            "Usar solo apodos para los órganos, lo que dificulta pedir ayuda médica.",
+            "Creer que la fecundación ocurre en el útero; ocurre en la trompa."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Dónde ocurre normalmente la fecundación?",
+            "opciones": ["En la trompa de Falopio", "En el útero", "En el ovario", "En la vagina"],
+            "correcta": 0,
+            "explicacion": "Luego el embrión viaja al útero."
+          }
+        },
+        {
+          "titulo": "Dos sistemas",
+          "visual": {
+            "tipo": "escena",
+            "id": "rep-sistemas",
+            "fases": [
+              { "id": "femenino", "nombre": "Femenino", "texto": "Ovarios, trompas, útero y vagina." },
+              { "id": "masculino", "nombre": "Masculino", "texto": "Testículos, conductos, próstata y uretra." }
+            ]
+          }
+        }
+      ],
+      "juego": "reproductor-juego",
+      "preguntas": [
+        {
+          "id": "cu-re-1",
+          "enunciado": "¿Qué órgano produce los óvulos?",
+          "opciones": ["El ovario", "El útero", "La trompa", "La vagina"],
+          "correcta": 0,
+          "explicacion": "También produce hormonas."
+        },
+        {
+          "id": "cu-re-2",
+          "enunciado": "¿Qué órgano produce los espermatozoides?",
+          "opciones": ["El testículo", "La próstata", "La uretra", "La vejiga"],
+          "correcta": 0,
+          "explicacion": "La próstata produce parte del líquido que los acompaña."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "fecundacion",
+      "titulo": "Gametos y fecundación",
+      "resumen": "Un espermatozoide y un óvulo, cada uno con 23 cromosomas, se unen y forman el cigoto, con 46.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "requiere": ["sistemas-reproductores"],
+      "ficha": {
+        "idea": "Los gametos son las células de la reproducción: el óvulo, grande y sin movimiento propio, y el espermatozoide, pequeño y con una cola para nadar. Se forman por meiosis, por eso cada uno tiene la mitad de los cromosomas: 23. En la fecundación, uno solo de los espermatozoides entra al óvulo en la trompa; sus núcleos se unen y se forma el cigoto, la primera célula de un nuevo ser, con 46 cromosomas: la mitad de la madre y la mitad del padre. El cigoto se divide por mitosis mientras viaja hacia el útero. Así, cada persona es una combinación nueva de la información de sus padres.",
+        "cuaderno": {
+          "facil": [
+            "Gametos: óvulo y espermatozoide.",
+            "Fecundación: se unen y forman el cigoto."
+          ],
+          "media": [
+            "Cada gameto tiene 23 cromosomas; el cigoto, 46."
+          ],
+          "avanzada": [
+            "Los gametos se forman por meiosis; el cigoto se divide por mitosis."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué te pareces a tu mamá en unas cosas y a tu papá en otras?",
+          "actividad": "Con dos juegos de tarjetas (23 de cada color), armar el «cigoto» y contar sus cromosomas.",
+          "errores": [
+            "Creer que varios espermatozoides fecundan el mismo óvulo.",
+            "Pensar que los gametos tienen 46 cromosomas."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "El encuentro",
+          "visual": {
+            "tipo": "escena",
+            "id": "rep-fecundacion",
+            "fases": [
+              { "id": "gametos", "nombre": "Gametos", "texto": "El óvulo es grande; los espermatozoides, pequeños y con cola." },
+              { "id": "encuentro", "nombre": "En la trompa", "texto": "Los espermatozoides llegan hasta el óvulo." },
+              { "id": "fecundacion", "nombre": "Fecundación", "texto": "Solo uno entra; el óvulo se cierra a los demás." },
+              { "id": "cigoto", "nombre": "Cigoto", "texto": "23 + 23 = 46 cromosomas: una célula nueva." }
+            ]
+          },
+          "atajo": { "texto": "Más sobre esto: la meiosis", "tema": "meiosis", "bloque": "por-que-meiosis" }
+        }
+      ],
+      "juego": "fecundacion-juego",
+      "preguntas": [
+        {
+          "id": "cu-re-3",
+          "enunciado": "¿Cuántos cromosomas tiene un óvulo humano?",
+          "opciones": ["23", "46", "92", "12"],
+          "correcta": 0,
+          "explicacion": "La mitad, por la meiosis."
+        },
+        {
+          "id": "cu-re-4",
+          "enunciado": "¿Qué es el cigoto?",
+          "opciones": [
+            "La primera célula de un nuevo ser, tras la fecundación",
+            "Un espermatozoide",
+            "Una parte del útero",
+            "Una hormona"
+          ],
+          "correcta": 0,
+          "explicacion": "Tiene 46 cromosomas."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "ciclo-menstrual",
+      "titulo": "El ciclo menstrual",
+      "resumen": "Cada mes, aproximadamente, el útero se prepara para un posible embarazo; si no ocurre, llega la menstruación.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "intermedio",
+      "requiere": ["sistemas-reproductores"],
+      "ficha": {
+        "idea": "Desde la pubertad, el cuerpo femenino repite un ciclo de unos 28 días (entre 21 y 35 es normal). Se cuenta desde el primer día de la menstruación, cuando sale por la vagina la capa interna del útero que no se usó, durante 3 a 7 días. Luego, por acción de las hormonas, madura un óvulo en el ovario y el útero forma una capa nueva y gruesa. Hacia la mitad del ciclo ocurre la ovulación: el ovario suelta el óvulo, que viaja por la trompa. Si no hay fecundación, la capa del útero se desprende y empieza un nuevo ciclo. La menstruación es un proceso natural y saludable; hablar de ella con naturalidad y tener acceso a toallas higiénicas u otros productos es parte del bienestar en el colegio. En 11° se relacionan las hormonas: estrógenos y progesterona.",
+        "cuaderno": {
+          "facil": [
+            "El ciclo dura cerca de 28 días; empieza con la menstruación.",
+            "Ovulación: el ovario suelta un óvulo."
+          ],
+          "media": [
+            "Si no hay fecundación, la capa del útero se desprende: menstruación."
+          ],
+          "avanzada": [
+            "Lo regulan hormonas de la hipófisis y de los ovarios (estrógenos y progesterona)."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué la menstruación se repite cada mes, más o menos?",
+          "actividad": "Representar el ciclo en un círculo de 28 casillas y ubicar menstruación, preparación y ovulación; resaltar que cada cuerpo tiene su ritmo.",
+          "errores": [
+            "Creer que la menstruación es una enfermedad o algo sucio.",
+            "Pensar que todos los ciclos duran exactamente 28 días."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Un ciclo de unos 28 días",
+          "visual": {
+            "tipo": "escena",
+            "id": "rep-ciclo",
+            "fases": [
+              { "id": "menstruacion", "nombre": "Menstruación", "texto": "Sale la capa del útero que no se usó." },
+              { "id": "preparacion", "nombre": "Preparación", "texto": "El útero forma una capa nueva; madura un óvulo." },
+              { "id": "ovulacion", "nombre": "Ovulación", "texto": "El ovario suelta el óvulo." },
+              { "id": "espera", "nombre": "Espera", "texto": "Si no hay fecundación, el ciclo vuelve a empezar." }
+            ]
+          }
+        },
+        {
+          "titulo": "Algo natural",
+          "puntos": [
+            "Es un signo de salud del cuerpo.",
+            "Se habla de ella con respeto y sin burlas."
+          ],
+          "visual": { "tipo": "cifra", "icono": "📅", "valor": "21 a 35 días", "texto": "es la duración normal de un ciclo" }
+        }
+      ],
+      "juego": "ciclo-menstrual-juego",
+      "preguntas": [
+        {
+          "id": "cu-re-5",
+          "enunciado": "¿Qué es la ovulación?",
+          "opciones": [
+            "La salida de un óvulo del ovario",
+            "La salida de la capa del útero",
+            "La unión de dos gametos",
+            "El nacimiento del bebé"
+          ],
+          "correcta": 0,
+          "explicacion": "Ocurre hacia la mitad del ciclo."
+        },
+        {
+          "id": "cu-re-6",
+          "enunciado": "¿Por qué ocurre la menstruación?",
+          "opciones": [
+            "Porque no hubo fecundación y la capa del útero se desprende",
+            "Porque hubo fecundación",
+            "Por una infección",
+            "Porque el ovario se rompe"
+          ],
+          "correcta": 0,
+          "explicacion": "Y empieza un ciclo nuevo."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "embarazo",
+      "titulo": "El embarazo y el parto",
+      "resumen": "El embrión se implanta en el útero, la placenta lo alimenta y en unas 40 semanas llega el parto.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "basico",
+      "requiere": ["fecundacion"],
+      "ficha": {
+        "idea": "Unos días después de la fecundación, el embrión se pega a la pared del útero: es la implantación. Se forma la placenta, que por el cordón umbilical le lleva oxígeno y alimento y le retira los desechos. En el primer trimestre se forman todos los órganos y el corazón empieza a latir; desde la semana 9 se le llama feto. En el segundo trimestre crece y se mueve, y la madre lo siente. En el tercero gana peso y maduran sus pulmones. Hacia las 40 semanas llega el parto: el útero se contrae cada vez más fuerte (un ejemplo de retroalimentación positiva) y el bebé sale. Lo que la madre consume pasa en parte por la placenta: alcohol, cigarrillo y drogas pueden dañar al bebé, y los controles prenatales cuidan la salud de los dos.",
+        "cuaderno": {
+          "facil": [
+            "El embarazo dura cerca de 40 semanas (9 meses).",
+            "La placenta lleva oxígeno y alimento al bebé."
+          ],
+          "media": [
+            "Implantación: el embrión se pega al útero.",
+            "Primer trimestre: se forman los órganos."
+          ],
+          "avanzada": [
+            "El parto es un ejemplo de retroalimentación positiva."
+          ]
+        },
+        "docente": {
+          "abrir": "Si el bebé no respira dentro del útero, ¿cómo recibe el oxígeno?",
+          "actividad": "Comparar con objetos el tamaño aproximado del bebé mes a mes (un fríjol, un limón, una mazorca) y relacionarlo con lo que se está formando.",
+          "errores": [
+            "Creer que el bebé respira aire dentro del útero.",
+            "Pensar que «un poquito» de alcohol no le pasa al bebé."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Nueve meses",
+          "visual": {
+            "tipo": "escena",
+            "id": "rep-embarazo",
+            "fases": [
+              { "id": "implantacion", "nombre": "Implantación", "texto": "El embrión se pega a la pared del útero." },
+              { "id": "primer", "nombre": "Primer trimestre", "texto": "Se forman los órganos; late el corazón." },
+              { "id": "segundo", "nombre": "Segundo trimestre", "texto": "Crece y se mueve." },
+              { "id": "tercero", "nombre": "Tercer trimestre", "texto": "Gana peso y maduran los pulmones." },
+              { "id": "parto", "nombre": "Parto", "texto": "Las contracciones del útero lo empujan al exterior." }
+            ]
+          },
+          "atajo": { "texto": "Más sobre esto: retroalimentación positiva", "tema": "homeostasis", "bloque": "retroalimentacion" }
+        }
+      ],
+      "juego": "embarazo-juego",
+      "preguntas": [
+        {
+          "id": "cu-re-7",
+          "enunciado": "¿Qué hace la placenta?",
+          "opciones": [
+            "Lleva oxígeno y alimento al bebé y retira sus desechos",
+            "Produce los óvulos",
+            "Protege al bebé de todo lo que consume la madre",
+            "Hace respirar aire al bebé"
+          ],
+          "correcta": 0,
+          "explicacion": "No lo protege de todo: el alcohol y otras sustancias pasan."
+        },
+        {
+          "id": "cu-re-8",
+          "enunciado": "¿Cuánto dura aproximadamente un embarazo?",
+          "opciones": ["40 semanas", "20 semanas", "12 semanas", "60 semanas"],
+          "correcta": 0,
+          "explicacion": "Unos 9 meses."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "sexualidad",
+      "titulo": "Sexualidad, respeto y cuidado",
+      "resumen": "La sexualidad incluye el cuerpo, los afectos y las decisiones; se vive con respeto, consentimiento y autocuidado.",
+      "anio": 5,
+      "etiqueta": "Paso 5",
+      "nivel": "basico",
+      "requiere": ["sistemas-reproductores"],
+      "ficha": {
+        "idea": "La sexualidad es mucho más que la reproducción: incluye el cuerpo, las emociones, los afectos, la forma de relacionarnos y las decisiones que tomamos. En la pubertad llegan cambios del cuerpo y también nuevas emociones e intereses; cada persona los vive a su ritmo. Algunos principios cuidan a todos: el cuerpo de cada quien le pertenece; nadie debe tocarte, mostrarte imágenes o pedirte fotos si tú no quieres, y nadie debe pedirte que guardes en secreto algo que te incomoda; «no» significa no, y el consentimiento se pregunta y se puede retirar; compartir fotos de otra persona sin su permiso es una falta grave. Si alguien te hace sentir incómodo o en peligro, no es tu culpa: cuéntalo a un adulto de confianza, al orientador o a la línea 141 del ICBF.",
+        "cuaderno": {
+          "facil": [
+            "Mi cuerpo me pertenece; «no» significa no.",
+            "Si algo me incomoda, se lo cuento a un adulto de confianza."
+          ],
+          "media": [
+            "La sexualidad incluye cuerpo, afectos, relaciones y decisiones.",
+            "El consentimiento se pregunta y se puede retirar."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Qué significa respetar a otra persona en una amistad o en un noviazgo?",
+          "actividad": "Analizar casos cortos en grupos: ¿hay respeto?, ¿hay consentimiento?, ¿a quién pedir ayuda? Dejar visibles los contactos del orientador y de la línea 141.",
+          "errores": [
+            "Creer que el silencio es un «sí».",
+            "Pensar que, si pasó algo incómodo, la culpa es de quien lo vivió."
+          ],
+          "minutos": 35
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Principios que cuidan",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "🙋", "titulo": "Mi cuerpo es mío", "texto": "Nadie debe tocarlo sin mi permiso." },
+              { "icono": "🙅", "titulo": "«No» es no", "texto": "El consentimiento se pregunta y se puede retirar." },
+              { "icono": "📵", "titulo": "Fotos con permiso", "texto": "Nunca compartir imágenes de otros." },
+              { "icono": "🤫", "titulo": "Sin secretos incómodos", "texto": "Si un adulto lo pide, cuéntalo." },
+              { "icono": "🗣️", "titulo": "Pedir ayuda", "texto": "Adulto de confianza, orientador o línea 141." }
+            ]
+          }
+        },
+        {
+          "titulo": "Si algo te incomoda",
+          "puntos": [
+            "No es tu culpa.",
+            "Cuéntalo a un adulto de confianza o al orientador."
+          ],
+          "visual": { "tipo": "cifra", "icono": "📞", "valor": "141", "texto": "línea gratuita del ICBF para proteger a niños, niñas y adolescentes" }
+        }
+      ],
+      "juego": "sexualidad-juego",
+      "preguntas": [
+        {
+          "id": "cu-re-9",
+          "enunciado": "¿Qué es el consentimiento?",
+          "opciones": [
+            "Un acuerdo libre que se pregunta y se puede retirar",
+            "Quedarse callado",
+            "Hacer lo que otro pide para no quedar mal",
+            "Algo que solo importa entre adultos"
+          ],
+          "correcta": 0,
+          "explicacion": "El silencio no es un «sí»."
+        },
+        {
+          "id": "cu-re-10",
+          "enunciado": "Si alguien te hace sentir incómodo y te pide guardar el secreto, ¿qué es lo mejor?",
+          "opciones": [
+            "Contárselo a un adulto de confianza",
+            "Guardar el secreto",
+            "Sentir que fue tu culpa",
+            "No decirle a nadie para evitar problemas"
+          ],
+          "correcta": 0,
+          "explicacion": "Pedir ayuda es tu derecho."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "prevencion-rep",
+      "titulo": "Prevención y proyecto de vida",
+      "resumen": "Informarse y consultar a tiempo previene el embarazo adolescente y las infecciones de transmisión sexual.",
+      "anio": 6,
+      "etiqueta": "Paso 6",
+      "nivel": "intermedio",
+      "requiere": ["sexualidad"],
+      "ficha": {
+        "idea": "Decidir sobre la propia vida sexual es una decisión importante que cada persona toma a su tiempo, con información y sin presiones. El embarazo en la adolescencia tiene más riesgos para la salud de la madre y del bebé, y suele cambiar los planes de estudio y de vida de los dos jóvenes. Existen métodos anticonceptivos de barrera (como el condón) y hormonales, que deben orientarse en un servicio de salud. Las infecciones de transmisión sexual (ITS), como el VIH, el virus del papiloma humano (VPH), la sífilis o la clamidia, se transmiten en las relaciones sexuales y muchas no dan síntomas al principio. El condón es el único método que protege a la vez del embarazo y de las ITS, y la vacuna contra el VPH previene el cáncer de cuello uterino. En Colombia, los adolescentes tienen derecho a consulta en los Servicios de Salud Amigables para Adolescentes y Jóvenes, con confidencialidad.",
+        "cuaderno": {
+          "facil": [
+            "Informarse y consultar a tiempo es parte del autocuidado.",
+            "El condón protege del embarazo y de las ITS."
+          ],
+          "media": [
+            "Muchas ITS no dan síntomas al principio.",
+            "La vacuna contra el VPH previene el cáncer de cuello uterino."
+          ],
+          "avanzada": [
+            "Servicios de Salud Amigables para Adolescentes y Jóvenes: consulta confidencial."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Qué planes tienes para los próximos cinco años? ¿Qué podría cambiarlos?",
+          "actividad": "Elaborar una línea de tiempo del proyecto de vida y ubicar dónde queda el servicio de salud amigable más cercano y su horario.",
+          "errores": [
+            "Creer que en la primera relación no hay riesgo de embarazo.",
+            "Pensar que una ITS siempre se nota.",
+            "Creer que los anticonceptivos hormonales protegen de las ITS."
+          ],
+          "minutos": 35
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Decidir con información",
+          "visual": {
+            "tipo": "compara",
+            "izq": { "icono": "🤰", "titulo": "Embarazo adolescente", "puntos": ["Más riesgos de salud.", "Cambia planes de estudio y de vida."] },
+            "der": { "icono": "🦠", "titulo": "ITS", "puntos": ["VIH, VPH, sífilis, clamidia.", "Muchas sin síntomas al principio."] }
+          }
+        },
+        {
+          "titulo": "Formas de cuidarse",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "⏳", "titulo": "Decidir a su tiempo", "texto": "Sin presiones." },
+              { "icono": "🛡️", "titulo": "Condón", "texto": "Protege de embarazo e ITS." },
+              { "icono": "💉", "titulo": "Vacuna VPH", "texto": "Previene el cáncer de cuello uterino." },
+              { "icono": "🩺", "titulo": "Consulta amigable", "texto": "Servicio de salud para jóvenes, confidencial." }
+            ]
+          },
+          "atajo": { "texto": "Más sobre esto: las vacunas", "tema": "sistema-inmune", "bloque": "vacunas" }
+        }
+      ],
+      "juego": "prevencion-rep-juego",
+      "preguntas": [
+        {
+          "id": "cu-re-11",
+          "enunciado": "¿Qué método protege a la vez del embarazo y de las ITS?",
+          "opciones": ["El condón", "Las pastillas anticonceptivas", "Ninguno", "La vacuna contra el VPH"],
+          "correcta": 0,
+          "explicacion": "Los hormonales no protegen de las ITS."
+        },
+        {
+          "id": "cu-re-12",
+          "enunciado": "¿Por qué hay que consultar aunque no haya síntomas?",
+          "opciones": [
+            "Porque muchas ITS no dan síntomas al principio",
+            "Porque las ITS siempre se curan solas",
+            "Porque es obligatorio cada semana",
+            "No hace falta consultar"
+          ],
+          "correcta": 0,
+          "explicacion": "Detectarlas a tiempo permite tratarlas."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}
