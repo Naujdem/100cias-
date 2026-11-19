@@ -61,4 +61,38 @@ export const GUIAS: Record<string, Guia> = {
       'En Gram: ¿de qué color quedan las bacterias del yogur y las E. coli, y a qué se debe la diferencia?',
     ],
   },
+  osmosis: {
+    objetivo: [
+      'Observar la plasmólisis en células de elodea al cambiar el medio y explicarla por ósmosis.',
+      'Medir el cambio de masa de tiras de papa en agua con distintas concentraciones de sal y hallar el punto isotónico.',
+    ],
+    fundamento: [
+      'La ósmosis es el paso de agua a través de una membrana semipermeable desde donde hay menos solutos hacia donde hay más.',
+      'En un medio hipertónico (más sal afuera) la célula pierde agua: en las plantas el protoplasto se encoge y se separa de la pared (plasmólisis). En un medio hipotónico entra agua y la célula queda turgente; la pared evita que reviente.',
+      'En el medio isotónico la célula no gana ni pierde agua. Se halla graficando el cambio de masa contra la concentración y leyendo dónde la línea cruza el cero.',
+    ],
+    materiales: [
+      'Elodea, portaobjetos, cubreobjetos, goteros con agua destilada y sal al 0,9 %, 3 % y 10 %, papel absorbente y microscopio',
+      'Cinco tiras de papa del mismo tamaño, cinco vasos con sal al 0 %, 1 %, 2 %, 5 % y 10 %, balanza, papel absorbente y temporizador',
+    ],
+    procedimiento: [
+      'Elodea: pon una hoja sobre el portaobjetos con una gota de agua destilada y cúbrela.',
+      'Obsérvala a 40x y dibuja las células.',
+      'Pon una gota de sal al 10 % en un borde del cubreobjetos y acerca el papel absorbente al borde contrario para que la arrastre.',
+      'Observa durante unos minutos y dibuja lo que cambia. Luego vuelve a pasar agua destilada de la misma forma.',
+      'Papa: pesa cada tira y anota su masa inicial.',
+      'Pon cada tira en un vaso y deja que pasen 30 minutos.',
+      'Saca cada tira, sécala con papel absorbente y pésala de nuevo.',
+      'Calcula el porcentaje de cambio de masa, haz la gráfica y halla el punto isotónico.',
+    ],
+    seguridad: ['Seca bien las manos y la mesa: el agua cerca del microscopio y de la balanza puede dañarlos.', 'No consumas las papas del experimento.'],
+    preguntas: [
+      '¿Qué le pasó al protoplasto de la elodea en sal al 10 %? ¿Y al volver al agua destilada?',
+      '¿Por qué la célula vegetal no revienta en agua destilada, y una célula animal sí?',
+      '¿En qué vasos la papa ganó masa y en cuáles la perdió? ¿Cómo se sentía al tacto?',
+      '¿En qué concentración está el punto isotónico de la papa?',
+      '¿Por qué hay que secar las tiras antes de pesarlas?',
+      '¿Por qué el suero que se pone en la vena tiene 0,9 % de sal?',
+    ],
+  },
 }

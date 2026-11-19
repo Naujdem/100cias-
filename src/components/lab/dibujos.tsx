@@ -45,7 +45,7 @@ export function Portaobjetos({ muestra, tinte, charco, cubre = true }: { muestra
 }
 
 /** temporizador: muestra los segundos que faltan; con alarma parpadea */
-export function Reloj({ s, alarma = false }: { s: number; alarma?: boolean }) {
+export function Reloj({ s, alarma = false, aviso = '¡Lava!' }: { s: number; alarma?: boolean; aviso?: string }) {
   const a = ((s % 60) / 60) * 2 * Math.PI
   return (
     <g>
@@ -54,7 +54,7 @@ export function Reloj({ s, alarma = false }: { s: number; alarma?: boolean }) {
       {Array.from({ length: 12 }, (_, k) => <line key={k} x1={28 * Math.sin((k * Math.PI) / 6)} y1={-28 * Math.cos((k * Math.PI) / 6)} x2={32 * Math.sin((k * Math.PI) / 6)} y2={-32 * Math.cos((k * Math.PI) / 6)} stroke="#333" strokeWidth="2" />)}
       <line x1="0" y1="0" x2={24 * Math.sin(a)} y2={-24 * Math.cos(a)} stroke="#c0392b" strokeWidth="3" strokeLinecap="round" style={{ transition: 'all 0.5s' }} />
       <circle r="3" fill="#333" />
-      <text y="52" textAnchor="middle" fontSize="13" fontWeight="800" fill={alarma ? '#c0392b' : '#3a2f22'}>{alarma ? '¡Lava!' : `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`}</text>
+      <text y="52" textAnchor="middle" fontSize="13" fontWeight="800" fill={alarma ? '#c0392b' : '#3a2f22'}>{alarma ? aviso : `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`}</text>
     </g>
   )
 }
@@ -150,4 +150,55 @@ export function PapelAbsorbente() {
 /** cubreobjetos (ancho ≈ 50), inclinado «angulo» grados */
 export function Cubreobjetos({ angulo = 0 }: { angulo?: number }) {
   return <path d="M-24 6 L-14 -8 H26 L16 6 Z" fill="rgba(220,240,250,0.9)" stroke="#567" strokeWidth="1.5" transform={`rotate(${-angulo})`} />
+}
+
+/** vaso de precipitado (alto ≈ 90) con líquido, etiqueta y, si se pide, una tira de papa adentro */
+export function Vaso({ color = '#a9d3f5', etiqueta, tira, minutos }: { color?: string; etiqueta?: string; tira?: { largo: number; blanda: boolean }; minutos?: number }) {
+  return (
+    <g>
+      <rect x="-30" y="-6" width="60" height="48" fill={color} opacity="0.7" />
+      {tira && <path d={`M-2 ${40 - tira.largo} q${tira.blanda ? 9 : 0} ${tira.largo / 2} 0 ${tira.largo}`} stroke="#e9d9a0" strokeWidth="9" fill="none" strokeLinecap="round" />}
+      <path d="M-34 -40 V42 Q-34 46 -30 46 H30 Q34 46 34 42 V-40" fill="none" {...T} />
+      {etiqueta && <text y="-46" textAnchor="middle" fontSize="12" fontWeight="800" fill="#3a2f22">{etiqueta}</text>}
+      {minutos !== undefined && <text y="62" textAnchor="middle" fontSize="11" fontWeight="700" fill="#3a2f22">{minutos} min</text>}
+    </g>
+  )
+}
+
+/** balanza digital (ancho ≈ 90) con su lectura */
+export function Balanza({ lectura, encima }: { lectura: string; encima?: boolean }) {
+  return (
+    <g>
+      {encima && <path d="M-22 -16 q22 -6 44 0" stroke="#e9d9a0" strokeWidth="8" fill="none" strokeLinecap="round" />}
+      <rect x="-34" y="-12" width="68" height="6" rx="2" fill="#9aa5ad" {...T} />
+      <path d="M-44 -4 H44 L40 30 H-40 Z" fill="#dfe4e8" {...T} />
+      <rect x="-26" y="6" width="52" height="16" rx="2" fill="#203028" />
+      <text y="19" textAnchor="middle" fontSize="11" fontWeight="700" fill="#7dff9a" fontFamily="monospace">{lectura}</text>
+    </g>
+  )
+}
+
+/** tiras de papa cortadas (las que faltan por usar) */
+export function TirasPapa({ n }: { n: number }) {
+  return (
+    <g>
+      <rect x="-34" y="10" width="68" height="10" rx="3" fill="#c8b48a" {...T} />
+      {Array.from({ length: n }, (_, k) => <rect key={k} x={-28 + k * 12} y="-26" width="8" height="34" rx="3" fill="#f2e3b0" stroke="#b09050" strokeWidth="1.5" />)}
+    </g>
+  )
+}
+
+/** frasco con ramitas de elodea */
+export function Elodea() {
+  return (
+    <g>
+      <rect x="-24" y="-20" width="48" height="58" rx="6" fill="rgba(169,211,245,0.6)" {...T} />
+      {[-10, 0, 10].map((x) => (
+        <g key={x}>
+          <path d={`M${x} 36 Q${x - 4} 10 ${x + 2} -28`} stroke="#3f7f2f" strokeWidth="2" fill="none" />
+          {[-20, -8, 4, 16, 28].map((y) => <ellipse key={y} cx={x + (y % 8 ? 4 : -4)} cy={y} rx="5" ry="2" fill="#4f9f3a" transform={`rotate(${y % 8 ? 30 : -30} ${x} ${y})`} />)}
+        </g>
+      ))}
+    </g>
+  )
 }
