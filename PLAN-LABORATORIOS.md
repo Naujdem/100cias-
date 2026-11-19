@@ -35,6 +35,8 @@ Decidido el 18 nov 2026. **Toda práctica nueva o convertida se hace como Tincio
   objetivos, macro, micro, luz y aceite; el resultado solo sale al enfocar con el aumento indicado.
 - Dibujos reutilizables en `components/lab/dibujos.tsx` (se agregan ahí los nuevos instrumentos).
 - Se mantienen la lógica, los errores posibles, las casillas por grado y el «Comprobar» / revisión de cada práctica.
+- Cada práctica tiene su **guía de laboratorio** (objetivo, fundamento, materiales, procedimiento, seguridad y
+  preguntas) en `data/guiasLab.ts`; se abre con el botón «📄 Guía de laboratorio». Se escribe al crear o convertir la práctica.
 - Botones solo para lo que no es manipular: elegir modo o parte, quices, tablas de datos.
 
 ### Prácticas por convertir (una por sesión, en este orden)
