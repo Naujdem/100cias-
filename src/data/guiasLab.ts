@@ -122,4 +122,35 @@ export const GUIAS: Record<string, Guia> = {
       '¿Qué biomoléculas tiene la leche según tus resultados?',
     ],
   },
+  enzimas: {
+    objetivo: [
+      'Comprobar la acción de la catalasa sobre el agua oxigenada y cómo la afectan la temperatura y el pH.',
+      'Seguir la digestión del almidón por la amilasa con lugol y comparar la rapidez a distintas temperaturas.',
+    ],
+    fundamento: [
+      'Las enzimas son proteínas que aceleran reacciones. Cada una trabaja mejor a cierta temperatura y pH (su óptimo).',
+      'La catalasa, presente en la papa y el hígado, descompone el agua oxigenada en agua y oxígeno: la espuma muestra cuánta actividad hay.',
+      'La amilasa de la saliva convierte el almidón en azúcar. El lugol se pone azul-negro mientras haya almidón; cuando ya no queda, conserva su color amarillo-café.',
+      'Con mucho calor la enzima se desnaturaliza: cambia su forma y deja de funcionar para siempre. En el frío solo se vuelve lenta.',
+    ],
+    materiales: ['Papa e hígado de pollo crudos', 'Vasos con agua a 5, 20, 37, 60 y 100 °C', 'Tubos de ensayo', 'Agua oxigenada al 3 %', 'Vinagre y bicarbonato (desde 9°)', 'Almidón disuelto y amilasa (saliva diluida)', 'Placa de toque con lugol', 'Temporizador'],
+    procedimiento: [
+      'Catalasa: deja un trozo de papa o hígado 10 minutos en el vaso de la temperatura que vas a probar.',
+      'Pásalo al tubo; si vas a probar el pH, échale unas gotas de vinagre o de bicarbonato.',
+      'Echa el agua oxigenada y mide la altura de la espuma al minuto.',
+      'Repite con otras temperaturas y haz la gráfica de espuma contra temperatura.',
+      'Amilasa: pon el tubo de almidón en el baño de una temperatura y échale la amilasa.',
+      'Cada minuto lleva una gota de la mezcla a un pozo de la placa con lugol y anota el color.',
+      'Anota a los cuántos minutos ya no hay almidón. Repite con otra temperatura.',
+    ],
+    seguridad: ['El agua oxigenada irrita los ojos: usa gafas.', 'El hígado crudo se maneja con guantes y se bota en bolsa cerrada.', 'Si se usa saliva, cada quien usa la suya y en un vaso propio.', 'Cuidado con el agua hirviendo: usa pinza.'],
+    preguntas: [
+      '¿Qué gas forma la espuma? Escribe la reacción.',
+      '¿A qué temperatura hubo más espuma? ¿Qué pasó con la muestra hervida y por qué?',
+      '¿Qué diferencia hay entre la enzima enfriada y la hervida?',
+      '¿Cómo cambió la actividad con el vinagre y con el bicarbonato?',
+      '¿Cómo sabes con el lugol que la amilasa ya digirió todo el almidón?',
+      '¿Por qué crees que nuestras enzimas trabajan mejor cerca de 37 °C?',
+    ],
+  },
 }
