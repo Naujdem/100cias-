@@ -573,6 +573,31 @@ export const GUIAS: Record<string, Guia> = {
       '¿Por qué aparecen cristales al enfriar la solución de salitre?',
     ],
   },
+  'velocidad-reaccion': {
+    objetivo: ['Comprobar cómo la temperatura, el tamaño de las partículas y la concentración cambian la velocidad de una reacción, con pastillas efervescentes.'],
+    fundamento: [
+      'La pastilla efervescente tiene bicarbonato y un ácido sólido; al disolverse en agua reaccionan y liberan dióxido de carbono (CO₂), que forma las burbujas.',
+      'Según la teoría de las colisiones, las partículas reaccionan cuando chocan con suficiente energía y en la orientación correcta.',
+      'Más temperatura: las partículas se mueven más rápido y chocan más y con más energía. Partículas más pequeñas: más superficie de contacto. Más concentración: más partículas que pueden chocar.',
+      'La velocidad se puede comparar con 1/t: a menor tiempo, mayor velocidad. Cada 10 °C más, la velocidad casi se duplica, porque más moléculas superan la energía de activación.',
+    ],
+    materiales: ['Tres vasos transparentes', 'Agua fría, al clima y caliente', 'Vinagre', 'Pastillas efervescentes', 'Mortero (o una cuchara)', 'Termómetro', 'Cronómetro'],
+    procedimiento: [
+      'Pon 100 mL de agua fría, al clima y caliente en tres vasos y mide la temperatura de cada uno.',
+      'Echa una pastilla entera en cada vaso al mismo tiempo y toma el tiempo hasta que paren las burbujas.',
+      'Repite con agua al clima: una pastilla entera y otra triturada en el mortero.',
+      'Repite con pastillas enteras en agua, en vinagre mitad y mitad con agua, y en vinagre solo.',
+      'Anota los tiempos en una tabla y, desde 9°, calcula la velocidad como 1/t y grafica tiempo contra temperatura.',
+    ],
+    seguridad: ['El agua caliente la sirve un adulto.', 'No ingieras las pastillas ni la mezcla del laboratorio.'],
+    preguntas: [
+      '¿En qué vaso se disolvió más rápido la pastilla? ¿Por qué?',
+      '¿Por qué hay que cambiar una sola variable a la vez?',
+      '¿Qué diferencia hubo entre la pastilla entera y la triturada? Explícalo con la superficie de contacto.',
+      '¿Por qué el vinagre acelera la reacción?',
+      'Da un ejemplo de la vida diaria en que se aproveche la temperatura para hacer más lenta o más rápida una reacción.',
+    ],
+  },
   titulacion: {
     objetivo: ['Determinar la concentración de un ácido desconocido y la acidez del vinagre por titulación con NaOH 0,1 M y fenolftaleína.'],
     fundamento: [

@@ -28,6 +28,7 @@ import Gases from './practicas/Gases.tsx'
 import DilucionSolubilidad from './practicas/Dilucion.tsx'
 import AcidosBases from './practicas/AcidosBases.tsx'
 import Titulacion from './practicas/Titulacion.tsx'
+import VelocidadReaccion from './practicas/VelocidadReaccion.tsx'
 
 // Laboratorios virtuales (PLAN-LABORATORIOS.md). Las prácticas listas van en PRACTICAS; las demás de la
 // ruta salen como «próximamente».
@@ -67,13 +68,14 @@ const PRACTICAS: Entrada[] = [
   { id: 'dilucion-solubilidad', titulo: 'Dilución y solubilidad', resumen: 'Diluye la solución madre con pipetas y matraz; luego satura agua con salitre y sal a varias temperaturas y arma la curva.', grupo: 'Química', desdeGrado: 9, Juego: DilucionSolubilidad },
   { id: 'acidos-bases', titulo: 'Ácidos, bases y pH', resumen: 'Prepara el indicador de repollo morado y descubre qué sustancias de la casa son ácidas, neutras o básicas.', grupo: 'Química', desdeGrado: 6, Juego: AcidosBases },
   { id: 'titulacion', titulo: 'Titulación ácido-base', resumen: 'Bureta, pipeta y fenolftaleína: halla la concentración de un ácido desconocido y del vinagre. En 11°, la curva de pH.', grupo: 'Química', desdeGrado: 9, Juego: Titulacion },
+  { id: 'velocidad-reaccion', titulo: 'Velocidad de reacción', resumen: 'Pastillas efervescentes en agua fría, al clima, caliente o con vinagre, enteras o trituradas: ¿qué la acelera?', grupo: 'Química', desdeGrado: 6, Juego: VelocidadReaccion },
   { id: 'solucion-molar', titulo: 'Prepara 100 mL de solución 0,5 M de sulfato de cobre', resumen: 'Pesa con la balanza, disuelve, pasa con el embudo, afora gota a gota e invierte el matraz. El color muestra la concentración.', grupo: 'Química', desdeGrado: 9, Juego: SolucionMolar },
 ]
 
 const PROXIMAS: { lab: string; items: string[] }[] = [
   {
     lab: 'Química',
-    items: ['Velocidad de reacción', 'Saponificación', 'Combustión'],
+    items: ['Saponificación', 'Combustión'],
   },
 ]
 

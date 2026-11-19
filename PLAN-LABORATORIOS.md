@@ -77,7 +77,8 @@ Prácticas nuevas hechas con la regla: ✅ Ensayo a la llama (18 nov 2026: meche
 ✅ Dilución y solubilidad (18 nov 2026: pipetas aforadas de 5, 10 y 25 mL a la solución madre y al matraz, agua hasta el aforo, tapón e inversiones; solubilidad con espátulas de KNO₃ y NaCl, varilla, estufa que se toca, temperatura en tiempo real, cristales al enfriar, tocar el vaso saturado para anotar y curva).
 ✅ Ácidos, bases y pH (18 nov 2026: repollo a la olla, estufa que se toca y hervor en tiempo real, colador y olla al frasco; gotero de indicador a ocho tubos; tiras universales desde 9°; pH-metro y [H⁺] en 11°; clasificar ácida/neutra/básica).
 ✅ Titulación (19 nov 2026: embudo a la bureta y quitarlo, NaOH al embudo con lectura inicial que hay que leer, pipeta de 10 mL a HCl desconocido o vinagre 1:10, fenolftaleína, erlenmeyer bajo la bureta, llave que se toca con chorro en tiempo real o gota a gota, agitar tocando el erlenmeyer; 11°: pH-metro y curva).
-Prácticas nuevas pendientes (ya se hacen con la regla): Velocidad de reacción, Saponificación, Combustión.
+✅ Velocidad de reacción (19 nov 2026: tres vasos llenados de a 50 mL con agua fría, al clima, caliente o vinagre; pastilla entera al vaso o al mortero, que se toca para triturar; los tres corren a la vez en tiempo real; termómetro al vaso; tocar el vaso cuando paran las burbujas anota el tiempo, con aviso si fue antes o tarde).
+Prácticas nuevas pendientes (ya se hacen con la regla): Saponificación, Combustión.
 
 ## Fase 0 — Base común
 - 0.1 Mesa de laboratorio (motor reutilizable; cada práctica es configuración).
