@@ -1,0 +1,496 @@
+{
+  "id": "huesos-musculos",
+  "materia": "biologia",
+  "area": "cuerpo",
+  "titulo": "Huesos y músculos",
+  "subtema": "El sistema que nos sostiene y nos mueve",
+  "orden": 68,
+  "etiqueta": "8",
+  "vistas": ["ruta"],
+  "tituloVista": "Ruta del movimiento",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Describir las funciones del esqueleto y compararlo con el de otros animales.",
+    "Reconocer el hueso como un tejido vivo: partes, médula y reparación.",
+    "Clasificar las articulaciones y nombrar sus partes.",
+    "Diferenciar los tipos de músculo y explicar por qué trabajan en pareja.",
+    "Explicar el movimiento del cuerpo como un sistema de palancas.",
+    "Describir la contracción muscular con la actina y la miosina."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con un texto escolar de biología y los DBA de Ciencias Naturales 8°-4. Las medidas del simulador (inserción del bíceps ≈ 4 cm, antebrazo 35 cm) son aproximadas."
+  ],
+  "bloques": [
+    {
+      "id": "esqueleto",
+      "titulo": "El esqueleto",
+      "resumen": "206 huesos que sostienen, protegen, permiten el movimiento y fabrican la sangre.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "El esqueleto de un adulto tiene unos 206 huesos (un bebé nace con cerca de 300, que se van uniendo). Cumple varias funciones: sostiene el cuerpo y le da forma, como las columnas de una casa; protege los órganos delicados (el cráneo al encéfalo, las costillas al corazón y los pulmones, la columna a la médula espinal); permite el movimiento, porque los músculos se pegan a los huesos y los jalan; fabrica las células de la sangre en la médula roja, y guarda calcio y fósforo para cuando el cuerpo los necesite. Junto con los músculos forma el sistema locomotor. No todos los animales tienen un esqueleto como el nuestro: los insectos y los cangrejos tienen un exoesqueleto por fuera, y la lombriz se sostiene con la presión de sus líquidos.",
+        "cuaderno": {
+          "facil": [
+            "Funciones del esqueleto: sostén, protección y movimiento.",
+            "Un adulto tiene unos 206 huesos."
+          ],
+          "media": [
+            "La médula roja fabrica la sangre; los huesos guardan calcio."
+          ],
+          "avanzada": [
+            "Endoesqueleto (vertebrados), exoesqueleto (artrópodos) y esqueleto hidrostático (lombriz)."
+          ]
+        },
+        "docente": {
+          "abrir": "Si no tuviéramos huesos, ¿cómo seríamos?",
+          "actividad": "Palparse el cuerpo y encontrar 10 huesos (clavícula, costillas, rótula, tibia…); marcarlos en una silueta.",
+          "errores": [
+            "Creer que el esqueleto solo sirve para sostener.",
+            "Pensar que la sangre se fabrica en el corazón."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Quién tiene más huesos?",
+            "opciones": ["Un bebé recién nacido", "Un adulto", "Los dos tienen los mismos", "Depende de la estatura"],
+            "correcta": 0,
+            "explicacion": "El bebé tiene unos 300; varios se unen al crecer."
+          }
+        },
+        {
+          "titulo": "Para qué sirve",
+          "visual": {
+            "tipo": "escena",
+            "id": "loc-esqueleto",
+            "fases": [
+              { "id": "esqueleto", "nombre": "El esqueleto", "texto": "Unos 206 huesos en un adulto." },
+              { "id": "sosten", "nombre": "Sostén", "texto": "La columna, la pelvis y las piernas cargan el cuerpo." },
+              { "id": "proteccion", "nombre": "Protección", "texto": "El cráneo y las costillas guardan órganos delicados." },
+              { "id": "movimiento", "nombre": "Movimiento", "texto": "Los músculos jalan los huesos en las articulaciones." },
+              { "id": "fabrica", "nombre": "Fábrica de sangre", "texto": "La médula roja produce las células de la sangre.", "nivel": "intermedio" }
+            ]
+          }
+        },
+        {
+          "titulo": "Otros esqueletos",
+          "nivel": "intermedio",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "🧍", "titulo": "Endoesqueleto", "texto": "Por dentro: vertebrados." },
+              { "icono": "🦗", "titulo": "Exoesqueleto", "texto": "Por fuera: insectos, cangrejos; mudan para crecer." },
+              { "icono": "🪱", "titulo": "Hidrostático", "texto": "Líquido a presión: lombriz." }
+            ]
+          }
+        }
+      ],
+      "juego": "esqueleto-funcion-juego",
+      "preguntas": [
+        {
+          "id": "cu-lo-1",
+          "enunciado": "¿Qué órganos protegen las costillas?",
+          "opciones": ["El corazón y los pulmones", "El encéfalo", "Los riñones", "El estómago y el intestino"],
+          "correcta": 0,
+          "explicacion": "Forman una jaula alrededor del tórax."
+        },
+        {
+          "id": "cu-lo-2",
+          "enunciado": "¿Dónde se fabrican las células de la sangre?",
+          "opciones": ["En la médula roja de los huesos", "En el corazón", "En los músculos", "En la médula espinal"],
+          "correcta": 0,
+          "explicacion": "La médula espinal es tejido nervioso; no fabrica sangre."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "hueso-vivo",
+      "titulo": "El hueso, un tejido vivo",
+      "resumen": "Hueso compacto, esponjoso y médula; crece, se repara y se refuerza con el ejercicio.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "intermedio",
+      "requiere": ["esqueleto"],
+      "ficha": {
+        "idea": "El hueso no es una piedra: es un tejido vivo, con células, vasos sanguíneos y nervios. Por fuera tiene hueso compacto, duro y denso; en los extremos, hueso esponjoso, lleno de huequitos, liviano y resistente. Por dentro está la médula: la roja fabrica sangre y la amarilla guarda grasa. Su dureza viene de sales de calcio y fósforo, y su flexibilidad del colágeno, una proteína. Los huesos largos crecen a lo largo en los cartílagos de crecimiento, cerca de los extremos, hasta el final de la adolescencia. Cuando un hueso se fractura, se forma un callo que en algunas semanas une los pedazos; el yeso solo los mantiene quietos. El calcio (leche, queso, fríjoles, verduras verdes), la vitamina D (que la piel produce con el sol) y el ejercicio mantienen los huesos fuertes.",
+        "cuaderno": {
+          "facil": [
+            "El hueso es un tejido vivo que crece y se repara.",
+            "Calcio, vitamina D y ejercicio lo fortalecen."
+          ],
+          "media": [
+            "Hueso compacto (duro, por fuera) y esponjoso (liviano, en los extremos).",
+            "Médula roja: sangre. Médula amarilla: grasa."
+          ],
+          "avanzada": [
+            "Calcio y fósforo dan dureza; el colágeno, flexibilidad. Los huesos crecen en los cartílagos de crecimiento."
+          ]
+        },
+        "docente": {
+          "abrir": "Si el hueso es tan duro, ¿cómo crece?",
+          "actividad": "Dejar un hueso de pollo una semana en vinagre: pierde el calcio y se vuelve flexible; comparar con uno sin tratar.",
+          "errores": [
+            "Creer que el hueso es materia muerta.",
+            "Pensar que el yeso es el que «pega» el hueso."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Por dentro de un hueso",
+          "visual": {
+            "tipo": "escena",
+            "id": "loc-hueso",
+            "fases": [
+              { "id": "hueso", "nombre": "El fémur", "texto": "El hueso más largo del cuerpo, cortado a lo largo." },
+              { "id": "compacto", "nombre": "Compacto", "texto": "Duro y denso por fuera." },
+              { "id": "esponjoso", "nombre": "Esponjoso", "texto": "Liviano y resistente en los extremos." },
+              { "id": "medula", "nombre": "Médula", "texto": "La roja fabrica sangre; la amarilla guarda grasa." },
+              { "id": "fractura", "nombre": "Fractura", "texto": "Se forma un callo que une los pedazos en semanas." }
+            ]
+          }
+        },
+        {
+          "titulo": "El hueso de pollo en vinagre",
+          "visual": { "tipo": "cifra", "icono": "🍗", "valor": "7 días", "texto": "en vinagre bastan para que un hueso de pollo pierda el calcio y se doble" }
+        }
+      ],
+      "juego": "hueso-vivo-juego",
+      "preguntas": [
+        {
+          "id": "cu-lo-3",
+          "enunciado": "¿Qué le da dureza al hueso?",
+          "opciones": ["Las sales de calcio y fósforo", "El colágeno", "La médula amarilla", "La grasa"],
+          "correcta": 0,
+          "explicacion": "El colágeno le da flexibilidad."
+        },
+        {
+          "id": "cu-lo-4",
+          "enunciado": "¿Qué necesita la piel para producir vitamina D?",
+          "opciones": ["La luz del sol", "Agua", "Calcio", "Ejercicio"],
+          "correcta": 0,
+          "explicacion": "La vitamina D ayuda a absorber el calcio."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "articulaciones",
+      "titulo": "Las articulaciones",
+      "resumen": "Donde se unen dos huesos: fijas, semimóviles o móviles, con cartílago, líquido sinovial y ligamentos.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "basico",
+      "requiere": ["esqueleto"],
+      "ficha": {
+        "idea": "Una articulación es el lugar donde se unen dos o más huesos. Según cuánto se mueven, hay tres tipos. Las fijas no se mueven: los huesos del cráneo encajan como un rompecabezas (suturas). Las semimóviles se mueven un poco: las vértebras, separadas por discos de cartílago que amortiguan. Las móviles se mueven mucho: rodilla, codo, hombro, cadera, dedos. En las móviles, los extremos de los huesos están cubiertos de cartílago liso; entre ellos hay líquido sinovial, que lubrica como el aceite de una bisagra, y los ligamentos, como bandas resistentes, mantienen los huesos unidos. Un esguince es un ligamento estirado o roto, y una luxación es un hueso que se sale de su lugar.",
+        "cuaderno": {
+          "facil": [
+            "Articulación: unión entre huesos.",
+            "Fijas (cráneo), semimóviles (vértebras) y móviles (rodilla, hombro)."
+          ],
+          "media": [
+            "Cartílago, líquido sinovial y ligamentos protegen las articulaciones móviles."
+          ],
+          "avanzada": [
+            "Esguince: ligamento lesionado. Luxación: hueso fuera de su lugar."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué puedes girar el hombro en círculo, pero la rodilla solo se dobla en un sentido?",
+          "actividad": "Mover cada articulación y clasificarla; comparar el hombro (rótula de una bola) con la rodilla (bisagra).",
+          "errores": [
+            "Confundir ligamento (hueso con hueso) con tendón (músculo con hueso).",
+            "Creer que el cráneo es un solo hueso."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Tres formas de unirse",
+          "visual": {
+            "tipo": "escena",
+            "id": "loc-articulaciones",
+            "fases": [
+              { "id": "fijas", "nombre": "Fijas", "texto": "Los huesos del cráneo no se mueven." },
+              { "id": "semimoviles", "nombre": "Semimóviles", "texto": "Las vértebras se mueven un poco." },
+              { "id": "moviles", "nombre": "Móviles", "texto": "Rodilla, codo, hombro: se mueven mucho." },
+              { "id": "partes", "nombre": "Sus partes", "texto": "Cartílago, líquido sinovial y ligamentos.", "nivel": "intermedio" }
+            ]
+          }
+        },
+        {
+          "titulo": "Ligamento o tendón",
+          "nivel": "intermedio",
+          "visual": {
+            "tipo": "compara",
+            "izq": { "icono": "🦴", "titulo": "Ligamento", "puntos": ["Une hueso con hueso.", "Se lesiona en un esguince."] },
+            "der": { "icono": "💪", "titulo": "Tendón", "puntos": ["Une músculo con hueso.", "Ej.: el tendón de Aquiles."] }
+          }
+        }
+      ],
+      "juego": "articulaciones-juego",
+      "preguntas": [
+        {
+          "id": "cu-lo-5",
+          "enunciado": "¿Qué tipo de articulación hay entre las vértebras?",
+          "opciones": ["Semimóvil", "Fija", "Móvil", "No hay articulación"],
+          "correcta": 0,
+          "explicacion": "Los discos de cartílago permiten un poco de movimiento."
+        },
+        {
+          "id": "cu-lo-6",
+          "enunciado": "¿Qué une un hueso con otro hueso?",
+          "opciones": ["Los ligamentos", "Los tendones", "Los músculos", "El líquido sinovial"],
+          "correcta": 0,
+          "explicacion": "Los tendones unen músculo con hueso."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "musculos",
+      "titulo": "Los músculos",
+      "resumen": "Hay músculo esquelético, liso y cardíaco; los esqueléticos solo jalan y por eso trabajan en pareja.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "basico",
+      "requiere": ["articulaciones"],
+      "ficha": {
+        "idea": "Los músculos son tejidos que se contraen: se acortan y producen movimiento. Hay tres tipos. El músculo esquelético se une a los huesos por los tendones y lo movemos a voluntad: hay más de 600 y son casi la mitad del peso del cuerpo. El músculo liso está en las paredes del estómago, el intestino y los vasos sanguíneos, y trabaja sin que lo decidamos. El músculo cardíaco solo está en el corazón y late toda la vida sin cansarse. Los músculos esqueléticos solo pueden jalar, nunca empujar; por eso trabajan en pareja, como el bíceps y el tríceps: cuando el bíceps se contrae, el brazo se dobla (flexión) y el tríceps se estira; cuando el tríceps se contrae, el brazo se estira (extensión). Se llaman músculos antagonistas.",
+        "cuaderno": {
+          "facil": [
+            "Tipos de músculo: esquelético (voluntario), liso y cardíaco (involuntarios).",
+            "Los tendones unen el músculo con el hueso."
+          ],
+          "media": [
+            "Los músculos solo jalan: trabajan en pareja (antagonistas), como bíceps y tríceps."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "Pon la mano sobre el bíceps y dobla el brazo. ¿Qué sientes? ¿Y si lo estiras?",
+          "actividad": "Armar un modelo de brazo con dos tablitas, un tornillo (codo) y dos bandas elásticas (bíceps y tríceps).",
+          "errores": [
+            "Creer que un músculo puede empujar.",
+            "Pensar que el corazón es un músculo esquelético."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Bíceps y tríceps",
+          "visual": {
+            "tipo": "escena",
+            "id": "loc-antagonistas",
+            "fases": [
+              { "id": "extendido", "nombre": "En reposo", "texto": "Los músculos solo jalan: por eso van en pareja." },
+              { "id": "flexion", "nombre": "Flexión", "texto": "El bíceps se contrae y el brazo se dobla." },
+              { "id": "extension", "nombre": "Extensión", "texto": "El tríceps se contrae y el brazo se estira." }
+            ]
+          }
+        },
+        {
+          "titulo": "Tres tipos de músculo",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "💪", "titulo": "Esquelético", "texto": "Mueve los huesos; voluntario." },
+              { "icono": "〰️", "titulo": "Liso", "texto": "Estómago, intestino, vasos; involuntario." },
+              { "icono": "❤️", "titulo": "Cardíaco", "texto": "Solo en el corazón; no se cansa." }
+            ]
+          }
+        }
+      ],
+      "juego": "musculos-tipos-juego",
+      "preguntas": [
+        {
+          "id": "cu-lo-7",
+          "enunciado": "¿Por qué los músculos esqueléticos trabajan en pareja?",
+          "opciones": ["Porque solo pueden jalar", "Porque son muy débiles", "Porque no tienen tendones", "Porque son involuntarios"],
+          "correcta": 0,
+          "explicacion": "Uno dobla y el otro estira."
+        },
+        {
+          "id": "cu-lo-8",
+          "enunciado": "¿Qué tipo de músculo está en las paredes del intestino?",
+          "opciones": ["Liso", "Esquelético", "Cardíaco", "Tendinoso"],
+          "correcta": 0,
+          "explicacion": "Trabaja sin que lo decidamos."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "palancas",
+      "titulo": "El cuerpo, un sistema de palancas",
+      "resumen": "La articulación es el punto de apoyo, el músculo la fuerza y el peso la carga.",
+      "anio": 5,
+      "etiqueta": "Paso 5",
+      "nivel": "intermedio",
+      "requiere": ["musculos"],
+      "diagrama": "brazo-palanca",
+      "ficha": {
+        "idea": "Los huesos y los músculos funcionan como palancas. Una palanca tiene un punto de apoyo, sobre el que gira; una fuerza, que la mueve, y una carga, que se levanta. En el brazo, el codo es el punto de apoyo, el bíceps aplica la fuerza y lo que llevamos en la mano es la carga. Se cumple que la fuerza por su distancia al apoyo es igual a la carga por su distancia al apoyo. Como el bíceps se pega a unos 4 centímetros del codo y la mano está a unos 35, el músculo debe hacer una fuerza varias veces mayor que el peso. A cambio, con un acortamiento pequeño del músculo, la mano se mueve rápido y lejos. En 11° se distinguen tres tipos de palanca según dónde quede el apoyo: el brazo es de tercer género (la fuerza en el medio).",
+        "cuaderno": {
+          "facil": [
+            "Palanca: punto de apoyo, fuerza y carga.",
+            "En el brazo: codo (apoyo), bíceps (fuerza), peso en la mano (carga)."
+          ],
+          "media": [
+            "Fuerza × su distancia al apoyo = carga × su distancia al apoyo."
+          ],
+          "avanzada": [
+            "Tres géneros de palanca; el antebrazo es de tercer género: pierde fuerza y gana velocidad."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué cuesta más sostener un morral con el brazo estirado que pegado al cuerpo?",
+          "actividad": "Con el simulador, encontrar cuánta fuerza hace el bíceps al sostener un cuaderno (≈ 0,5 kg) y un morral (5 kg); luego probar con una regla, un borrador y monedas como palanca.",
+          "errores": [
+            "Creer que el músculo hace la misma fuerza que el peso que se levanta.",
+            "Pensar que el punto de apoyo es la mano."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Partes de una palanca",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "🔺", "titulo": "Punto de apoyo", "texto": "La articulación: el codo." },
+              { "icono": "💪", "titulo": "Fuerza", "texto": "El músculo que jala: el bíceps." },
+              { "icono": "🏋️", "titulo": "Carga", "texto": "Lo que se levanta: el peso en la mano." }
+            ]
+          }
+        },
+        {
+          "titulo": "Tres géneros de palanca",
+          "nivel": "avanzado",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "1️⃣", "titulo": "Primer género", "texto": "Apoyo en el medio: la cabeza sobre la columna." },
+              { "icono": "2️⃣", "titulo": "Segundo género", "texto": "Carga en el medio: ponerse de puntillas." },
+              { "icono": "3️⃣", "titulo": "Tercer género", "texto": "Fuerza en el medio: el antebrazo." }
+            ]
+          }
+        }
+      ],
+      "juego": "palanca-juego",
+      "preguntas": [
+        {
+          "id": "cu-lo-9",
+          "enunciado": "En el brazo como palanca, ¿qué es el codo?",
+          "opciones": ["El punto de apoyo", "La fuerza", "La carga", "El músculo"],
+          "correcta": 0,
+          "explicacion": "Sobre él gira el antebrazo."
+        },
+        {
+          "id": "cu-lo-10",
+          "enunciado": "¿Por qué el bíceps hace más fuerza que el peso que sostiene la mano?",
+          "opciones": [
+            "Porque se pega muy cerca del codo",
+            "Porque el peso está pegado al codo",
+            "Porque los músculos son débiles",
+            "No es cierto: hace la misma fuerza"
+          ],
+          "correcta": 0,
+          "explicacion": "Su distancia al apoyo es mucho menor que la de la mano."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "contraccion",
+      "titulo": "¿Cómo se contrae un músculo?",
+      "resumen": "En cada sarcómero, la miosina jala la actina usando ATP; miles de sarcómeros acortan el músculo.",
+      "anio": 6,
+      "etiqueta": "Paso 6",
+      "nivel": "avanzado",
+      "requiere": ["musculos"],
+      "ficha": {
+        "idea": "Un músculo esquelético está hecho de fibras, células larguísimas con muchos núcleos. Dentro de cada fibra hay miofibrillas formadas por unidades repetidas, los sarcómeros, que se ven como bandas al microscopio (por eso se llama músculo estriado). Cada sarcómero tiene filamentos delgados de actina, anclados a sus bordes (líneas Z), y filamentos gruesos de miosina en el centro. Cuando una neurona motora da la orden, la miosina se engancha a la actina y la jala hacia el centro, usando la energía del ATP. Los filamentos no se acortan: se deslizan unos sobre otros, y el sarcómero se acorta. Como hay miles de sarcómeros en fila, todo el músculo se contrae. Por eso los músculos necesitan mucho ATP, que sale de la respiración celular, y por eso al hacer ejercicio fuerte respiramos más.",
+        "cuaderno": {
+          "facil": [
+            "El músculo se contrae porque sus fibras se acortan."
+          ],
+          "media": [],
+          "avanzada": [
+            "Sarcómero: unidad de contracción, con actina (delgada) y miosina (gruesa).",
+            "La miosina jala la actina usando ATP; los filamentos se deslizan."
+          ]
+        },
+        "docente": {
+          "abrir": "Si un músculo se acorta, ¿se acortan también sus partes más pequeñas?",
+          "actividad": "Entrelazar los dedos de las dos manos sin cruzarlos del todo y deslizarlos: las manos (filamentos) no cambian, pero el conjunto se acorta.",
+          "errores": [
+            "Creer que la actina y la miosina se acortan.",
+            "Pensar que la contracción no gasta energía."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Filamentos que se deslizan",
+          "visual": {
+            "tipo": "escena",
+            "id": "loc-sarcomero",
+            "fases": [
+              { "id": "relajado", "nombre": "Relajado", "texto": "Actina y miosina apenas se superponen." },
+              { "id": "contraido", "nombre": "Contraído", "texto": "La miosina jala la actina: el sarcómero se acorta." }
+            ]
+          },
+          "atajo": { "texto": "Más sobre esto: el ATP", "tema": "metabolismo-celular", "bloque": "atp" }
+        },
+        {
+          "titulo": "Para comprobar",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Al contraerse el músculo, la actina y la miosina…",
+            "opciones": ["se deslizan unas sobre otras", "se acortan", "se rompen", "se convierten en ATP"],
+            "correcta": 0,
+            "explicacion": "Por eso se llama teoría del filamento deslizante."
+          }
+        }
+      ],
+      "juego": "sarcomero-juego",
+      "preguntas": [
+        {
+          "id": "cu-lo-11",
+          "enunciado": "¿Qué es el sarcómero?",
+          "opciones": [
+            "La unidad que se contrae dentro de la fibra muscular",
+            "Un tipo de hueso",
+            "El tendón del bíceps",
+            "Una neurona motora"
+          ],
+          "correcta": 0,
+          "explicacion": "Miles en fila forman una miofibrilla."
+        },
+        {
+          "id": "cu-lo-12",
+          "enunciado": "¿De dónde sale la energía para la contracción?",
+          "opciones": ["Del ATP", "Del calcio del hueso", "Del líquido sinovial", "De la vitamina D"],
+          "correcta": 0,
+          "explicacion": "El ATP se produce en la respiración celular."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}
