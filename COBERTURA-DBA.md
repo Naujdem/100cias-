@@ -17,8 +17,8 @@ Competencias (Guía 7). Solo lo de biología y química: la física todavía no 
 ## Falta o queda corto
 - **8°-4 sistemas de órganos y regulación** (excretor, inmune, nervioso, endocrino, óseo y muscular): solo hay un
   panorama en «De la célula al organismo». Es el hueco más grande de biología: no está en ninguna de las 5 áreas.
-- **10°-4 biotecnología**: el tema tiene transgénicos y CRISPR, pero falta fertilización asistida, clonación
-  reproductiva y terapéutica, terapia génica y la discusión bioética.
+- ~~**10°-4 biotecnología**~~ ✅ (19 nov 2026): se sumaron Clonación, Reproducción asistida y Terapia génica, y la
+  bioética (cuatro principios) en «El debate».
 - **11°-4 mecanismos de reacción orgánica** (homólisis, heterólisis, pericíclicas): no aparecen en Química área 5.
 - Estándar 8°–9° «comparo la información química de las etiquetas» (y pH de productos cotidianos): podría ser una
   actividad corta.

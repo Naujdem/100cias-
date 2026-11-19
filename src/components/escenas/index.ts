@@ -18,7 +18,7 @@ import { EscenaParaQueCopiar, EscenaHorquilla, EscenaModelos, EscenaEnzimas, Esc
 import { EscenaDogma, EscenaTranscripcion, EscenaLecturaCodones, EscenaTraduccion, EscenaRegulacion, EscenaSplicing } from './EscenasExpresion.tsx'
 import { EscenaIncompleta, EscenaCodominancia, EscenaAbo, EscenaLigada, EscenaGenealogia, EscenaPoligenica } from './EscenasNoMendel.tsx'
 import { EscenaQueEsMutacion, EscenaPuntuales, EscenaFalciforme, EscenaNoDisyuncion, EscenaCromosomicas, EscenaVariacion } from './EscenasMutaciones.tsx'
-import { EscenaBiotecQue, EscenaInsulina, EscenaPcr, EscenaTransgenico, EscenaEdicion, EscenaDebate } from './EscenasBiotec.tsx'
+import { EscenaBiotecQue, EscenaInsulina, EscenaPcr, EscenaTransgenico, EscenaEdicion, EscenaDebate, EscenaClonacion, EscenaFiv, EscenaTerapiaGenica } from './EscenasBiotec.tsx'
 import { EscenaEcologiaQue, EscenaNivelesEcologicos, EscenaHabitatNicho, EscenaFactores, EscenaPisos, EscenaEcosistemasColombia, EscenaTolerancia } from './EscenasEcologia.tsx'
 import { EscenaProductores, EscenaCadena, EscenaPiramide } from './EscenasEnergia.tsx'
 import { EscenaIntraespecificas, EscenaDepredacion, EscenaSimbiosis } from './EscenasRelaciones.tsx'
@@ -139,6 +139,9 @@ export const ESCENAS: Record<string, ComponentType<{ fase: string }>> = {
   transgenico: EscenaTransgenico,
   edicion: EscenaEdicion,
   debate: EscenaDebate,
+  clonacion: EscenaClonacion,
+  fiv: EscenaFiv,
+  'terapia-genica': EscenaTerapiaGenica,
   'ecologia-que': EscenaEcologiaQue,
   'niveles-ecologicos': EscenaNivelesEcologicos,
   'habitat-nicho': EscenaHabitatNicho,

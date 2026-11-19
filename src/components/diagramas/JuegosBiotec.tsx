@@ -89,7 +89,58 @@ export function DebateJuego() {
         c('📜', 'Que pocas empresas tengan patentes sobre las semillas', 'pre', 'Puede volver dependientes a los agricultores.'),
         c('🐛', 'Usar menos insecticidas en algunos cultivos', 'ben', 'Es uno de los argumentos a favor del maíz Bt.'),
         c('👶', 'Editar embriones humanos', 'pre', 'Los cambios pasarían a las siguientes generaciones.'),
+        c('🧬', 'Curar una enfermedad hereditaria con terapia génica', 'ben', 'Ya hay tratamientos aprobados.'),
+        c('💰', 'Que una terapia génica cueste más de un millón de dólares', 'pre', 'Plantea quién puede acceder a ella (justicia).'),
+        c('🐑', 'Clonar personas', 'pre', 'La clonación humana reproductiva está prohibida en casi todo el mundo.'),
       ]}
       cierre="Hay beneficios y preocupaciones: conviene decidir con evidencia y escuchando a todos." />
+  )
+}
+
+export function ClonacionJuego() {
+  return (
+    <JuegoDecide titulo="¿Reproductiva o terapéutica?" pregunta="¿Qué clonación es?" instrucciones="Decide si el objetivo es obtener un individuo completo (reproductiva) o células y tejidos para curar (terapéutica)." clave="cien:clonacion-mejor"
+      opciones={[o('rep', 'Reproductiva', '🐑'), o('ter', 'Terapéutica', '🧫')]}
+      cartas={[
+        c('🐑', 'Dolly, la oveja nacida en 1996', 'rep', 'Un individuo completo con el ADN de la donante.'),
+        c('❤️', 'Fabricar células de músculo cardíaco para reparar un corazón', 'ter', 'Se buscan tejidos, no un individuo.'),
+        c('🐒', 'Dos monos clonados en China en 2018', 'rep', 'Primeros primates clonados como Dolly.'),
+        c('🧠', 'Obtener neuronas para estudiar el Parkinson', 'ter', 'Células para investigar o curar.'),
+        c('🐕', 'Clonar la mascota de una familia', 'rep', 'Sale un animal con el mismo ADN, no con los mismos recuerdos.'),
+        c('🩹', 'Producir piel para un paciente quemado con sus propias células', 'ter', 'Evitaría el rechazo.'),
+      ]}
+      cierre="La reproductiva da un individuo con el mismo ADN; la terapéutica busca células para curar." />
+  )
+}
+
+export function FivJuego() {
+  return (
+    <JuegoDecide titulo="¿En qué etapa va?" pregunta="¿Dónde ocurre?" instrucciones="Decide si este paso de la fecundación in vitro ocurre en el cuerpo o en el laboratorio." clave="cien:fiv-mejor"
+      opciones={[o('cue', 'En el cuerpo', '🧍'), o('lab', 'En el laboratorio', '🧪')]}
+      cartas={[
+        c('💉', 'Las hormonas hacen madurar varios óvulos', 'cue', 'Se estimulan los ovarios.'),
+        c('🧫', 'El óvulo y el espermatozoide se unen en una placa', 'lab', '«In vitro» significa «en vidrio».'),
+        c('🌡️', 'El embrión se divide durante 3 a 5 días en la incubadora', 'lab', 'Se vigila cómo crece.'),
+        c('🤰', 'El embrión se implanta en el útero', 'cue', 'Si se implanta, hay embarazo.'),
+        c('❄️', 'Se congelan los embriones que no se transfieren', 'lab', 'Es una de las preguntas éticas de la técnica.'),
+        c('🔬', 'Inyectar un espermatozoide dentro del óvulo (ICSI)', 'lab', 'Se usa cuando hay pocos espermatozoides.'),
+      ]}
+      cierre="La FIV une el óvulo y el espermatozoide fuera del cuerpo y luego devuelve el embrión al útero." />
+  )
+}
+
+export function TerapiaGenicaJuego() {
+  return (
+    <JuegoDecide titulo="¿Terapia génica o no?" pregunta="¿Es terapia génica?" instrucciones="Decide si el tratamiento cambia los genes de las células del paciente o si es otro tipo de tratamiento." clave="cien:terapia-genica-mejor"
+      opciones={[o('si', 'Sí, cambia genes', '🧬'), o('no', 'No', '💊')]}
+      cartas={[
+        c('🦠', 'Un virus inofensivo lleva un gen sano a las neuronas de un bebé con atrofia muscular espinal', 'si', 'Aprobada en 2019: el gen sano le permite fabricar la proteína.'),
+        c('💊', 'Tomar insulina todos los días', 'no', 'Reemplaza la proteína, pero no cambia los genes.'),
+        c('👁️', 'Llevar una copia sana de un gen a la retina para una ceguera hereditaria', 'si', 'Aprobada en 2017.'),
+        c('🩸', 'Editar con CRISPR células de la médula y devolverlas al paciente', 'si', 'Terapia génica «ex vivo» para la anemia falciforme.'),
+        c('💉', 'Vacunarse contra el sarampión', 'no', 'Entrena las defensas; no cambia los genes del paciente.'),
+        c('🩺', 'Un trasplante de riñón', 'no', 'Reemplaza el órgano entero.'),
+      ]}
+      cierre="La terapia génica lleva una copia sana del gen o corrige el gen dañado en las células del paciente." />
   )
 }

@@ -293,3 +293,115 @@ export function EscenaDebate({ fase }: { fase: string }) {
     </svg>
   )
 }
+
+/* ── Clonación ────────────────────────────────────────────────────────── */
+
+const CLO = ['donante', 'ovulo', 'fusion', 'embrion', 'reproductiva', 'terapeutica']
+function Oveja({ x, y, cara = '#fff', s = 1 }: { x: number; y: number; cara?: string; s?: number }) {
+  return (
+    <g transform={`translate(${x} ${y}) scale(${s})`}>
+      <ellipse cx="0" cy="0" rx="30" ry="18" fill="#f4f1ea" stroke={TINTA} strokeWidth="2" />
+      {[-18, -6, 6, 18].map((p) => <path key={p} d={`M ${p} 14 V 30`} stroke={TINTA} strokeWidth="3" />)}
+      <ellipse cx="34" cy="-10" rx="11" ry="9" fill={cara} stroke={TINTA} strokeWidth="2" />
+    </g>
+  )
+}
+export function EscenaClonacion({ fase }: { fase: string }) {
+  const i = Math.max(0, CLO.indexOf(fase))
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label={`Clonación: ${fase}`} className="h-full w-full">
+      {fondo('#f2f6ef')}
+      <g style={ver(i <= 4)}>
+        <Oveja x={60} y={70} /><Texto x={60} y={120} t="oveja A (cara blanca)" s={9} />
+        <Oveja x={60} y={190} cara="#333" /><Texto x={60} y={240} t="oveja B (cara negra)" s={9} />
+        <g style={ver(i >= 0)}><circle cx="150" cy="70" r="22" fill={CELESTE} stroke={TINTA} strokeWidth="2" /><circle cx="150" cy="70" r="9" fill={i >= 2 ? CELESTE : MOR} style={{ transition: 'fill 0.6s' }} /><Texto x={150} y={108} t="célula de la ubre" s={9} /><path d="M 92 70 H 126" stroke="#999" strokeDasharray="4 3" /></g>
+        <g style={ver(i >= 1)}><circle cx="150" cy="190" r="24" fill="#fbe8d8" stroke={TINTA} strokeWidth="2" /><circle cx={i >= 1 ? 182 : 150} cy="190" r="8" fill="#333" opacity={i >= 1 ? 0.25 : 1} style={{ transition: suave }} /><Texto x={150} y={230} t="óvulo sin núcleo" s={9} /><path d="M 94 190 H 124" stroke="#999" strokeDasharray="4 3" /></g>
+      </g>
+      <g style={ver(i >= 2 && i <= 4)}>
+        <path d="M 172 80 Q 210 120 230 140 M 172 180 Q 210 160 230 150" stroke="#999" strokeWidth="2" fill="none" />
+        <circle cx="250" cy="145" r="24" fill="#fbe8d8" stroke={TINTA} strokeWidth="2" /><circle cx="250" cy="145" r="9" fill={MOR} />
+        <g style={ver(i === 2)}><path d="M 280 120 l -8 14 h 10 l -8 14" stroke={NARANJA} strokeWidth="3" fill="none" /><Texto x={250} y={190} t="una descarga eléctrica los une" s={9} /></g>
+      </g>
+      <g style={ver(i >= 3 && i <= 4)}>
+        {[[-7, -7], [7, -7], [-7, 7], [7, 7]].map(([a, b], k) => <circle key={k} cx={330 + a} cy={145 + b} r="7" fill="#fbe8d8" stroke={TINTA} />)}
+        <Texto x={330} y={180} t="embrión" s={10} />
+      </g>
+      <g style={ver(i === 4)}>
+        <Oveja x={300} y={245} cara="#333" s={0.9} /><Texto x={300} y={290} t="madre sustituta" s={9} />
+        <Oveja x={360} y={235} s={0.6} /><Texto x={360} y={270} t="Dolly (1996)" c={MOR} s={10} />
+        <Texto x={200} y={30} t="Dolly tiene el ADN de la oveja A: es su clon" c={MOR} s={12} />
+      </g>
+      <g style={ver(i === 5)}>
+        {[[-9, -9], [9, -9], [-9, 9], [9, 9], [0, 0]].map(([a, b], k) => <circle key={k} cx={110 + a} cy={150 + b} r="9" fill="#fbe8d8" stroke={TINTA} />)}
+        <Texto x={110} y={190} t="embrión temprano" s={10} />
+        <path d="M 140 150 H 190" stroke={TINTA} strokeWidth="2" /><Texto x={240} y={110} t="células madre" c={MOR} s={11} />
+        <Tarjeta x={205} y={130} ic="❤️" t="corazón" /><Tarjeta x={295} y={130} ic="🧠" t="neuronas" /><Tarjeta x={385} y={130} ic="🩹" t="piel" w={70} />
+        <Texto x={200} y={270} t="Clonación terapéutica: tejidos, no un individuo completo" s={11} />
+      </g>
+    </svg>
+  )
+}
+
+/* ── Reproducción asistida (fecundación in vitro) ─────────────────────── */
+
+const FIV = ['estimular', 'extraer', 'fecundar', 'cultivar', 'transferir']
+export function EscenaFiv({ fase }: { fase: string }) {
+  const i = Math.max(0, FIV.indexOf(fase))
+  const celulas = i >= 3 ? 8 : i >= 2 ? 1 : 0
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label={`Fecundación in vitro: ${fase}`} className="h-full w-full">
+      {fondo('#fbf3f5')}
+      <g style={ver(i <= 1)}>
+        <ellipse cx="110" cy="150" rx="60" ry="40" fill="#f6c9d4" stroke={TINTA} strokeWidth="2" /><Texto x={110} y={210} t="ovario" s={11} />
+        {[[-30, -8], [-6, 12], [20, -10], [36, 10]].map(([a, b], k) => <circle key={k} cx={110 + a} cy={150 + b} r={i >= 0 ? 11 : 6} fill="#fff" stroke={ROJO} strokeWidth="1.5" />)}
+        <g style={ver(i === 0)}><Texto x={200} y={60} t="Hormonas: maduran varios óvulos a la vez" c={ROJO} s={12} /></g>
+        <g style={ver(i === 1)}><path d="M 300 70 L 150 140" stroke="#888" strokeWidth="3" /><Texto x={290} y={60} t="una aguja guiada por ecografía" s={11} /></g>
+      </g>
+      <g style={ver(i >= 2 && i <= 3)}>
+        <ellipse cx="200" cy="160" rx="110" ry="30" fill="#eef6fb" stroke={TINTA} strokeWidth="2" /><Texto x={200} y={215} t="placa de laboratorio («in vitro»: en vidrio)" s={10} />
+        <circle cx="200" cy="150" r="22" fill="#fbe8d8" stroke={TINTA} strokeWidth="2" />
+        {celulas === 8 && [[-8, -8], [8, -8], [-8, 8], [8, 8], [0, -12], [0, 12], [-12, 0], [12, 0]].map(([a, b], k) => <circle key={k} cx={200 + a} cy={150 + b} r="6" fill="#fde9dc" stroke="#999" />)}
+        <g style={ver(i === 2)}>{[[-70, -12], [-60, 10], [60, -8], [70, 12]].map(([a, b], k) => <path key={k} d={`M ${200 + a} ${150 + b} q ${a > 0 ? 8 : -8} -4 ${a > 0 ? 16 : -16} 0`} stroke={AZUL} strokeWidth="2" fill="none" />)}<Texto x={200} y={60} t="Espermatozoides y óvulo se unen en el laboratorio" c={AZUL} s={12} /></g>
+        <g style={ver(i === 3)}><Texto x={200} y={60} t="El embrión crece 3 a 5 días en una incubadora" c={MOR} s={12} /></g>
+      </g>
+      <g style={ver(i === 4)}>
+        <path d="M 140 90 Q 200 60 260 90 L 240 200 Q 200 230 160 200 Z" fill="#f6c9d4" stroke={TINTA} strokeWidth="2" /><Texto x={200} y={250} t="útero" s={11} />
+        <circle cx="200" cy="150" r="10" fill="#fde9dc" stroke={TINTA} />
+        <Texto x={200} y={40} t="Se transfiere el embrión; si se implanta, hay embarazo" c={VERDE} s={12} />
+      </g>
+    </svg>
+  )
+}
+
+/* ── Terapia génica ───────────────────────────────────────────────────── */
+
+const TG = ['error', 'vector', 'entrega', 'proteina', 'ex-vivo']
+export function EscenaTerapiaGenica({ fase }: { fase: string }) {
+  const i = Math.max(0, TG.indexOf(fase))
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label={`Terapia génica: ${fase}`} className="h-full w-full">
+      {fondo('#eef4f8')}
+      <g style={ver(i <= 3)}>
+        <ellipse cx="250" cy="160" rx="120" ry="90" fill="#fff4e0" stroke={TINTA} strokeWidth="2" />
+        <circle cx="270" cy="160" r="40" fill="#e6dcf2" stroke={MOR} strokeWidth="2" /><Texto x={270} y={215} t="núcleo" s={9} />
+        <path d="M 245 150 h 20" stroke={ROJO} strokeWidth="5" /><path d="M 250 145 l 10 10 m 0 -10 l -10 10" stroke={ROJO} strokeWidth="2" />
+        <g style={ver(i >= 2)}><path d="M 270 172 h 22" stroke={VERDE} strokeWidth="5" /></g>
+        <g style={ver(i === 0)}><Texto x={200} y={30} t="Un gen con un error: la célula no fabrica una proteína" c={ROJO} s={12} /></g>
+        <g style={ver(i === 3)}>{[[180, 120], [200, 200], [320, 230], [340, 110], [170, 170]].map(([x, y], k) => <circle key={k} cx={x} cy={y} r="5" fill={VERDE} />)}<Texto x={200} y={30} t="Ahora sí fabrica la proteína que faltaba" c={VERDE} s={12} /></g>
+      </g>
+      <g style={ver(i >= 1 && i <= 2, i === 2 ? 'translate(150px, 40px) scale(0.6)' : 'none')}>
+        <path d="M 60 100 l 20 -12 l 20 12 v 24 l -20 12 l -20 -12 Z" fill="#d6e6f7" stroke={AZUL} strokeWidth="2" /><path d="M 70 112 h 20" stroke={VERDE} strokeWidth="4" />
+        {[[60, 100], [100, 100], [60, 124], [100, 124]].map(([x, y], k) => <path key={k} d={`M ${x} ${y} l ${x < 80 ? -8 : 8} ${y < 112 ? -6 : 6}`} stroke={AZUL} strokeWidth="2" />)}
+      </g>
+      <g style={ver(i === 1)}><Texto x={110} y={60} t="Un virus sin su ADN dañino («vector»)" c={AZUL} s={11} /><Texto x={110} y={76} t="lleva una copia sana del gen" c={AZUL} s={11} /></g>
+      <g style={ver(i === 2)}><Texto x={200} y={30} t="El vector entra y deja el gen sano en la célula" c={AZUL} s={12} /></g>
+      <g style={ver(i === 4)}>
+        <Tarjeta x={70} y={90} ic="🩸" t="1. Sacar" s="células del paciente" w={100} />
+        <Tarjeta x={200} y={90} ic="🧬" t="2. Corregir" s="en el laboratorio" w={100} />
+        <Tarjeta x={330} y={90} ic="💉" t="3. Devolver" s="al paciente" w={100} />
+        <path d="M 122 140 H 148 M 252 140 H 278" stroke={TINTA} strokeWidth="2" />
+        <Texto x={200} y={240} t="«Ex vivo»: fuera del cuerpo (así son las terapias CRISPR de la anemia falciforme)" s={10} />
+      </g>
+    </svg>
+  )
+}
