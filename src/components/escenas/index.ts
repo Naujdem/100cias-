@@ -28,6 +28,7 @@ import { EscenaBiodiversidadNiveles, EscenaMegadiversa, EscenaAmenazas, EscenaCo
 import { EscenaLinneo, EscenaLamarck, EscenaCuvier, EscenaLyell, EscenaBeagle, EscenaSeleccion, EscenaSintesis, EscenaRitmos, EscenaFosil, EscenaAnatomia, EscenaEmbriones, EscenaIslas, EscenaMolecular, EscenaPolillas, EscenaMaiz, EscenaResistencia, EscenaTiposSeleccion, EscenaAdaptacion, EscenaFrailejon, EscenaCactus, EscenaMigracion, EscenaMimetismo, EscenaAcervo, EscenaDeriva, EscenaFlujo, EscenaSexual, EscenaEspecie, EscenaAlopatrica, EscenaPoliploidia, EscenaRadiacion, EscenaCategorias, EscenaDominios, EscenaCladograma, EscenaArbolVida, EscenaOxigeno, EscenaTierraFirme, EscenaExtinciones, EscenaFosilesColombia, EscenaHomininos } from './EscenasEvolucion.tsx'
 import { EscenaTerritorio, EscenaCalendario, EscenaPolicultivo, EscenaDialogo } from './EscenasTerritorio.tsx'
 import { EscenaAguaPlaneta, EscenaCuenca, EscenaParamoEsponja } from './EscenasAgua.tsx'
+import { EscenaRespVentilacion, EscenaRespAlveolo, EscenaCircCorazon, EscenaCircDoble, EscenaCircSangre, EscenaRespAnimales } from './EscenasCirculacion.tsx'
 import { EscenaDigRecorrido, EscenaDigEnzimas, EscenaDigAbsorcion, EscenaDigAnimales } from './EscenasDigestion.tsx'
 import { EscenaHomeoEquilibrio, EscenaHomeoAsa, EscenaHomeoTemperatura, EscenaHomeoAgua, EscenaHomeoGlucosa, EscenaHomeoSistemas } from './EscenasHomeostasis.tsx'
 import { EscenaFormacionSuelo, EscenaErosion, EscenaDeforestacion } from './EscenasSuelo.tsx'
@@ -359,4 +360,10 @@ export const ESCENAS: Record<string, ComponentType<{ fase: string }>> = {
   'dig-enzimas': EscenaDigEnzimas,
   'dig-absorcion': EscenaDigAbsorcion,
   'dig-animales': EscenaDigAnimales,
+  'resp-ventilacion': EscenaRespVentilacion,
+  'resp-alveolo': EscenaRespAlveolo,
+  'circ-corazon': EscenaCircCorazon,
+  'circ-doble': EscenaCircDoble,
+  'circ-sangre': EscenaCircSangre,
+  'resp-animales': EscenaRespAnimales,
 }

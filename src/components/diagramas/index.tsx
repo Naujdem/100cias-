@@ -74,6 +74,8 @@ import PerfilSuelo from './PerfilSuelo.tsx'
 import { TiempoClimaJuego, InvernaderoJuego, CambioClimaticoJuego, NinoNinaJuego, MitigarAdaptarJuego } from './JuegosClima.tsx'
 import SimuladorCo2 from './SimuladorCo2.tsx'
 import TermostatoCuerpo from './TermostatoCuerpo.tsx'
+import PulsoEjercicio from './PulsoEjercicio.tsx'
+import { VentilacionJuego, AlveoloJuego, CorazonJuego, VasosJuego, SangreCompJuego, RespAnimalesJuego } from './JuegosCirculacion.tsx'
 import { NutrientesJuego, DigRecorridoJuego, DigMecanicaJuego, DigAbsorcionJuego, DigAnimalesJuego } from './JuegosDigestion.tsx'
 import { HomeoEquilibrioJuego, HomeoAsaJuego, HomeoTemperaturaJuego, HomeoAguaJuego, HomeoGlucosaJuego, HomeoSistemasJuego } from './JuegosHomeostasis.tsx'
 import { QueEsContaminacionJuego, AguaContaminadaJuego, AireContaminadoJuego, MercurioJuego, EutrofizacionJuego, PlasticosJuego } from './JuegosContaminacion.tsx'
@@ -660,4 +662,11 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'dig-mecanica-juego': DigMecanicaJuego,
   'dig-absorcion-juego': DigAbsorcionJuego,
   'dig-animales-juego': DigAnimalesJuego,
+  'pulso-ejercicio': PulsoEjercicio,
+  'ventilacion-juego': VentilacionJuego,
+  'alveolo-juego': AlveoloJuego,
+  'corazon-juego': CorazonJuego,
+  'vasos-juego': VasosJuego,
+  'sangre-comp-juego': SangreCompJuego,
+  'resp-animales-juego': RespAnimalesJuego,
 }
