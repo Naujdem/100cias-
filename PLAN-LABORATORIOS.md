@@ -75,7 +75,8 @@ Prácticas nuevas hechas con la regla: ✅ Ensayo a la llama (18 nov 2026: meche
 ✅ Reactivo límite con globos (18 nov 2026: vinagre de a 25 mL a cinco botellas, bicarbonato de a 1 g a cinco globos, globo a la botella y levantarlo soltándolo otra vez; se infla en tiempo real; cinta métrica; aviso si el vinagre no es igual).
 ✅ Gases (18 nov 2026: Boyle con tapón y pesas de 1 kg que se ponen y quitan del émbolo, tocar la jeringa para anotar; Charles con botella y globo a tres baños, temperatura que cambia en tiempo real, termómetro y cinta; gráficas; cero absoluto en 11°).
 ✅ Dilución y solubilidad (18 nov 2026: pipetas aforadas de 5, 10 y 25 mL a la solución madre y al matraz, agua hasta el aforo, tapón e inversiones; solubilidad con espátulas de KNO₃ y NaCl, varilla, estufa que se toca, temperatura en tiempo real, cristales al enfriar, tocar el vaso saturado para anotar y curva).
-Prácticas nuevas pendientes (ya se hacen con la regla): Ácidos, bases y pH, Titulación, Velocidad de reacción, Saponificación, Combustión.
+✅ Ácidos, bases y pH (18 nov 2026: repollo a la olla, estufa que se toca y hervor en tiempo real, colador y olla al frasco; gotero de indicador a ocho tubos; tiras universales desde 9°; pH-metro y [H⁺] en 11°; clasificar ácida/neutra/básica).
+Prácticas nuevas pendientes (ya se hacen con la regla): Titulación, Velocidad de reacción, Saponificación, Combustión.
 
 ## Fase 0 — Base común
 - 0.1 Mesa de laboratorio (motor reutilizable; cada práctica es configuración).

@@ -573,4 +573,31 @@ export const GUIAS: Record<string, Guia> = {
       '¿Por qué aparecen cristales al enfriar la solución de salitre?',
     ],
   },
+  'acidos-bases': {
+    objetivo: ['Preparar un indicador natural de repollo morado y clasificar sustancias de la casa en ácidas, neutras o básicas según su pH.'],
+    fundamento: [
+      'Un indicador es una sustancia que cambia de color según la acidez del medio. El repollo morado contiene antocianinas: rojas en medio ácido, moradas en neutro y azules, verdes o amarillas en medio básico.',
+      'La escala de pH va de 0 a 14: menos de 7 es ácido, 7 es neutro y más de 7 es básico.',
+      'Según Arrhenius, los ácidos liberan iones H⁺ en el agua y las bases liberan iones OH⁻.',
+      'pH = −log[H⁺]: cada unidad de pH significa diez veces más (o menos) iones H⁺.',
+      'El papel indicador universal y el pH-metro permiten medir el pH con más precisión que el repollo.',
+    ],
+    materiales: ['Repollo morado picado', 'Olla con agua y estufa', 'Colador', 'Frasco', 'Gotero', 'Gradilla con ocho tubos', 'Jugo de limón, vinagre, gaseosa, leche, agua destilada, bicarbonato en agua, jabón de ropa en agua y limpiador con amoníaco', 'Papel indicador universal (desde 9°)', 'pH-metro (11°)'],
+    procedimiento: [
+      'Hierve el repollo picado en agua unos 10 minutos.',
+      'Cuela el líquido morado en el frasco: ese es el indicador.',
+      'Pon un poco de cada sustancia en un tubo y numera los tubos.',
+      'Echa unas gotas de indicador en cada tubo y anota el color.',
+      'Desde 9°, moja una tira de papel universal en cada tubo y lee el pH en la escala; en 11°, mídelo también con el pH-metro.',
+      'Clasifica cada sustancia como ácida, neutra o básica.',
+    ],
+    seguridad: ['El agua hirviendo la maneja un adulto.', 'El limpiador con amoníaco irrita: no lo huelas directamente y nunca lo mezcles con cloro.', 'No pruebes las sustancias.'],
+    preguntas: [
+      '¿Qué color tomó el indicador en las sustancias ácidas? ¿Y en las básicas?',
+      '¿Cuál fue la sustancia más ácida y cuál la más básica?',
+      '¿Por qué el agua destilada dejó el indicador morado?',
+      '¿Qué pasa con el indicador si el repollo hierve muy poco tiempo?',
+      '¿Cuántas veces más H⁺ tiene el limón (pH ≈ 2) que la leche (pH ≈ 6,6)?',
+    ],
+  },
 }
