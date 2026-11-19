@@ -22,6 +22,7 @@ import Densidades from './practicas/Densidades.tsx'
 import Mezclas from './practicas/Mezclas.tsx'
 import ConservacionMasa from './practicas/ConservacionMasa.tsx'
 import EnsayoLlama from './practicas/EnsayoLlama.tsx'
+import TiposReaccion from './practicas/TiposReaccion.tsx'
 
 // Laboratorios virtuales (PLAN-LABORATORIOS.md). Las prácticas listas van en PRACTICAS; las demás de la
 // ruta salen como «próximamente».
@@ -55,13 +56,14 @@ const PRACTICAS: Entrada[] = [
   { id: 'mezclas', titulo: 'Mezclas y técnicas de separación', resumen: 'Separa hierro, piedras, arena y sal (el orden importa), agua y aceite, agua de mar y, desde 9°, agua y alcohol. Y cromatografía de tintas.', grupo: 'Química', desdeGrado: 6, Juego: Mezclas },
   { id: 'conservacion-masa', titulo: 'Conservación de la masa', resumen: 'Vinagre y bicarbonato sobre la balanza en vaso abierto, botella con globo o botella tapada: ¿se pierde masa?', grupo: 'Química', desdeGrado: 6, Juego: ConservacionMasa },
   { id: 'ensayo-llama', titulo: 'Ensayo a la llama', resumen: 'Limpia el asa, toma cada sal y mírala arder: cada metal da su color. Identifica la muestra desconocida.', grupo: 'Química', desdeGrado: 6, Juego: EnsayoLlama },
+  { id: 'tipos-reaccion', titulo: 'Tipos de reacción', resumen: 'Metales en sulfato de cobre, precipitados de colores en los tubos y electrólisis del agua con gases que se prueban.', grupo: 'Química', desdeGrado: 6, Juego: TiposReaccion },
   { id: 'solucion-molar', titulo: 'Prepara 100 mL de solución 0,5 M de sulfato de cobre', resumen: 'Pesa con la balanza, disuelve, pasa con el embudo, afora gota a gota e invierte el matraz. El color muestra la concentración.', grupo: 'Química', desdeGrado: 9, Juego: SolucionMolar },
 ]
 
 const PROXIMAS: { lab: string; items: string[] }[] = [
   {
     lab: 'Química',
-    items: ['Tipos de reacción', 'Reactivo límite con globos', 'Gases', 'Dilución y solubilidad', 'Ácidos, bases y pH', 'Titulación ácido-base', 'Velocidad de reacción', 'Saponificación', 'Combustión'],
+    items: ['Reactivo límite con globos', 'Gases', 'Dilución y solubilidad', 'Ácidos, bases y pH', 'Titulación ácido-base', 'Velocidad de reacción', 'Saponificación', 'Combustión'],
   },
 ]
 

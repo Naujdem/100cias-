@@ -464,4 +464,32 @@ export const GUIAS: Record<string, Guia> = {
       '¿Dónde se aprovecha este fenómeno en la vida diaria?',
     ],
   },
+  'tipos-reaccion': {
+    objetivo: ['Reconocer reacciones de sustitución simple, doble sustitución y descomposición por lo que se observa: cambio de color, formación de un sólido o de un gas.'],
+    fundamento: [
+      'Sustitución simple: un elemento más activo reemplaza a otro en un compuesto. El hierro y el zinc sacan al cobre del sulfato de cobre (Fe + CuSO₄ → FeSO₄ + Cu); el cobre no reacciona consigo mismo. Orden de actividad: Zn > Fe > Cu.',
+      'Doble sustitución: dos compuestos intercambian sus partes. Si uno de los productos no se disuelve en agua, aparece un sólido llamado precipitado (por ejemplo, CuSO₄ + 2 NaOH → Cu(OH)₂↓ + Na₂SO₄).',
+      'Descomposición: un compuesto se rompe en sustancias más simples. La corriente eléctrica descompone el agua: 2 H₂O → 2 H₂ + O₂. Sale el doble de hidrógeno que de oxígeno.',
+      'El agua pura conduce muy mal la electricidad; un electrolito (bicarbonato o sal) aporta iones que llevan la corriente.',
+      'El hidrógeno arde con un pequeño estallido; el oxígeno reaviva una astilla con brasa.',
+    ],
+    materiales: ['Tres vasos con solución de sulfato de cobre', 'Clavo de hierro, lámina de zinc y alambre de cobre', 'Lija', 'Gradilla con cuatro tubos de ensayo', 'Goteros con CuSO₄, FeCl₃, CaCl₂, NaCl, NaOH, Na₂CO₃ y AgNO₃', 'Aparato de electrólisis (o vaso con dos tubos invertidos y electrodos de grafito)', 'Batería de 9 V con cables', 'Agua y bicarbonato', 'Fósforos y astilla de madera'],
+    procedimiento: [
+      'Lija el clavo hasta que quede brillante.',
+      'Mete cada metal en un vaso con sulfato de cobre y observa durante 10 minutos el metal y el color del líquido.',
+      'En cada tubo de la gradilla echa unas gotas de dos soluciones distintas y anota si se forma un precipitado y de qué color.',
+      'Llena el aparato de electrólisis con agua, agrega bicarbonato y conecta la batería.',
+      'Anota el volumen de gas en cada tubo cada pocos minutos.',
+      'Acerca un fósforo encendido al gas del polo negativo y una astilla con brasa al del polo positivo.',
+    ],
+    seguridad: ['El hidróxido de sodio y el nitrato de plata son corrosivos y manchan la piel: usa guantes y gafas.', 'Los restos con cobre o plata van al frasco de residuos, no al desagüe.', 'El hidrógeno es inflamable: prueba solo volúmenes pequeños.'],
+    preguntas: [
+      '¿Qué metales reaccionaron con el sulfato de cobre? ¿Cómo lo supiste?',
+      '¿Por qué hubo que lijar el clavo?',
+      '¿Qué parejas formaron precipitado y de qué color?',
+      '¿Por qué no todas las parejas forman un sólido?',
+      '¿Qué gas salió en cada polo y en qué proporción? ¿Qué dice eso de la fórmula del agua?',
+      '¿Para qué sirve el bicarbonato en la electrólisis?',
+    ],
+  },
 }
