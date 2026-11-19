@@ -4,6 +4,31 @@ import type { Guia } from '../components/lab/GuiaLab.tsx'
 // cuando se crea o se convierte a mesa viva (PLAN-LABORATORIOS.md).
 
 export const GUIAS: Record<string, Guia> = {
+  polimeros: {
+    objetivo: ['Formar polímeros entrecruzados (slime) y un bioplástico de almidón, y relacionar sus propiedades con la cantidad de cada ingrediente.'],
+    fundamento: [
+      'Los polímeros son moléculas gigantes formadas por miles de unidades que se repiten. El pegante blanco es alcohol polivinílico (PVA); el almidón de la fécula es un polímero natural de glucosa.',
+      'Un activador de borato une las cadenas del PVA entre sí (entrecruzamiento): según cuántos puentes se formen, la mezcla es líquida, elástica o rígida.',
+      'Al calentar el almidón con agua, sus cadenas se sueltan y forman un gel; al secarse, una lámina. La glicerina actúa como plastificante y la vuelve flexible.',
+    ],
+    materiales: ['Pegante blanco escolar', 'Solución para lentes de contacto (con ácido bórico) y bicarbonato — no bórax en polvo', 'Colorante', 'Vasos y palitos', 'Fécula de maíz', 'Vinagre', 'Glicerina (farmacia)', 'Olla pequeña y estufa', 'Lámina o plato engrasado', 'Guantes'],
+    procedimiento: [
+      'Slime: mezcla 2 cucharadas de pegante con 1 de agua y unas gotas de colorante.',
+      'Agrega una pizca de bicarbonato y la solución para lentes de a una cucharadita, revolviendo, hasta que se despegue del vaso.',
+      'Amasa con guantes y prueba si se estira. Anota cuánto activador usaste y qué textura obtuviste.',
+      'Bioplástico: en la olla, 10 g de fécula, 60 mL de agua y 5 mL de vinagre; haz una mezcla sin glicerina y otra con 5 mL.',
+      'Calienta revolviendo sin parar hasta que se vuelva un gel espeso y translúcido.',
+      'Extiende cada mezcla en una lámina engrasada y déjala secar uno o dos días.',
+      'Compara la flexibilidad de las dos láminas.',
+    ],
+    seguridad: ['El bórax en polvo no se usa en el colegio: irrita la piel y es tóxico si se traga.', 'Guantes para amasar el slime y lavarse las manos después.', 'La mezcla de fécula caliente quema: revuelve con cuchara de palo.', 'El slime va a la caneca, no al desagüe.'],
+    preguntas: [
+      '¿Qué pasó cuando agregaste poco y mucho activador? ¿Por qué?',
+      '¿Qué es un polímero? Da tres ejemplos de la vida diaria.',
+      '¿Qué diferencia hubo entre la lámina con glicerina y la que no tenía?',
+      'Desde 9°: ¿por qué un plástico de almidón contamina menos que uno de petróleo?',
+    ],
+  },
   antiacidos: {
     objetivo: ['Comparar la capacidad de neutralización de varios antiácidos usando un indicador natural.', 'En 11°: comprobar cómo un amortiguador resiste los cambios de pH.'],
     fundamento: [
