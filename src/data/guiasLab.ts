@@ -185,4 +185,28 @@ export const GUIAS: Record<string, Guia> = {
       '¿Por qué el alcohol no debe tapar la mancha de extracto?',
     ],
   },
+  fermentacion: {
+    objetivo: ['Comprobar que la levadura fermenta el azúcar produciendo CO₂, y cómo influyen el azúcar y la temperatura, diseñando un experimento con control.'],
+    fundamento: [
+      'La levadura es un hongo unicelular. Sin oxígeno, transforma el azúcar en alcohol y dióxido de carbono: C₆H₁₂O₆ → 2 C₂H₅OH + 2 CO₂ (fermentación alcohólica).',
+      'El CO₂ infla el globo. El agua de cal (hidróxido de calcio) se pone turbia con el CO₂, y así se reconoce el gas.',
+      'Para saber qué causa un efecto se cambia una sola variable a la vez y se deja una botella de control (sin levadura) para comparar.',
+    ],
+    materiales: ['Cuatro botellas plásticas', 'Levadura de pan', 'Azúcar o panela', 'Agua fría, tibia y muy caliente', 'Cuatro globos', 'Cinta métrica', 'Vaso con agua de cal', 'Temporizador'],
+    procedimiento: [
+      'Decide qué vas a comparar y qué botella será el control.',
+      'En cada botella pon la levadura, las cucharadas de azúcar y el agua que le corresponden.',
+      'Pon el globo en la boca de cada botella enseguida.',
+      'Cada 15 minutos mide el contorno de cada globo con la cinta y anótalo.',
+      'Al final, pasa el gas de cada botella al vaso con agua de cal y observa.',
+    ],
+    seguridad: ['El agua muy caliente la prepara un adulto.', 'No consumas la mezcla de las botellas.'],
+    preguntas: [
+      '¿Qué botella infló más el globo? ¿Por qué?',
+      '¿Para qué sirve la botella sin levadura?',
+      '¿Qué pasó en la botella sin azúcar y en la de agua muy caliente?',
+      '¿Qué gas infló los globos? ¿Cómo lo comprobaste?',
+      '¿Qué otro producto forma la fermentación y dónde lo aprovechamos (pan, chicha, guarapo)?',
+    ],
+  },
 }
