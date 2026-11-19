@@ -518,4 +518,31 @@ export const GUIAS: Record<string, Guia> = {
       '¿Qué pasaría con el globo más grande si duplicas el vinagre?',
     ],
   },
+  gases: {
+    objetivo: ['Comprobar cómo cambia el volumen de un gas con la presión (ley de Boyle) y con la temperatura (ley de Charles).'],
+    fundamento: [
+      'Las partículas de un gas se mueven sin parar y chocan con las paredes del recipiente: esos choques son la presión.',
+      'Ley de Boyle: a temperatura constante, si la presión aumenta el volumen disminuye en la misma proporción (P₁·V₁ = P₂·V₂).',
+      'Ley de Charles: a presión constante, el volumen de un gas es proporcional a su temperatura absoluta (V₁/T₁ = V₂/T₂, con T en kelvin: K = °C + 273).',
+      'Si se prolonga la recta volumen–temperatura, el volumen llegaría a cero cerca de −273 °C: el cero absoluto.',
+    ],
+    materiales: ['Jeringa grande sin aguja', 'Tapón para la punta', 'Cinco pesas de 1 kg (o libros iguales)', 'Botella de vidrio o plástico con un globo en la boca', 'Recipientes con agua y hielo, agua al ambiente y agua caliente', 'Termómetro', 'Cinta métrica'],
+    procedimiento: [
+      'Boyle: llena la jeringa con 30 mL de aire y tapa la punta.',
+      'Pon las pesas de una en una sobre el émbolo; después de cada una, anota la presión y el volumen.',
+      'Calcula P × V para cada fila y haz la gráfica de volumen contra presión.',
+      'Charles: pon el globo en la boca de la botella y lleva la botella al agua con hielo.',
+      'Espera a que el termómetro se estabilice, mide el contorno del globo y anótalo con la temperatura.',
+      'Repite en el agua al ambiente y en la caliente, y haz la gráfica de volumen contra temperatura.',
+    ],
+    seguridad: ['El agua caliente la maneja un adulto.', 'No pongas más peso del que la jeringa aguanta: el émbolo puede salir disparado al quitar el tapón.'],
+    preguntas: [
+      '¿Qué pasó con el volumen del aire al poner más pesas? ¿Por qué?',
+      '¿Qué pasó si no tapabas la punta de la jeringa?',
+      '¿Qué valor dio P × V? ¿Qué significa?',
+      '¿Por qué el globo se infla en el agua caliente y se desinfla en el agua con hielo?',
+      '¿Por qué hay que esperar a que el termómetro se estabilice antes de medir?',
+      '¿Por qué se usa la temperatura en kelvin en la ley de Charles?',
+    ],
+  },
 }
