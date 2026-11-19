@@ -153,4 +153,36 @@ export const GUIAS: Record<string, Guia> = {
       '¿Por qué crees que nuestras enzimas trabajan mejor cerca de 37 °C?',
     ],
   },
+  fotosintesis: {
+    objetivo: [
+      'Medir cómo cambia la producción de oxígeno de la elodea con la distancia de la luz, su color y el CO₂ disponible.',
+      'Separar los pigmentos de las hojas por cromatografía en papel.',
+    ],
+    fundamento: [
+      'En la fotosíntesis la planta usa luz, agua y CO₂ para fabricar azúcar, y libera oxígeno: 6 CO₂ + 6 H₂O → C₆H₁₂O₆ + 6 O₂.',
+      'Más cerca la lámpara, más luz llega a la planta y más oxígeno produce, hasta un límite en el que se satura. El bicarbonato aporta CO₂ al agua.',
+      'La clorofila absorbe sobre todo luz roja y azul y refleja la verde: por eso las hojas se ven verdes y la luz verde casi no sirve para la fotosíntesis.',
+      'En la cromatografía el alcohol sube por el papel y arrastra cada pigmento a una velocidad distinta, según cuánto se disuelve y cuánto se pega al papel. El Rf = distancia de la banda ÷ distancia del frente.',
+    ],
+    materiales: ['Elodea en un tubo con agua', 'Lámpara y regla', 'Celofán de colores (desde 9°)', 'Bicarbonato', 'Hojas verdes, mortero y alcohol', 'Tira de papel de filtro, capilar y vaso', 'Temporizador'],
+    procedimiento: [
+      'Elodea: echa bicarbonato al agua, pon la lámpara a 10 cm y enciéndela.',
+      'Espera a que salgan burbujas de forma pareja y cuenta las que salen en 10 segundos; multiplica por 6.',
+      'Repite con la lámpara a 20, 30, 50 y 80 cm, y con la lámpara apagada.',
+      'Desde 9°: repite con celofán rojo, azul y verde delante de la lámpara.',
+      'Haz la gráfica de burbujas por minuto contra distancia.',
+      'Cromatografía: con el capilar pon el extracto en la línea de la tira varias veces, dejando secar entre una y otra.',
+      'Echa un poco de alcohol en el vaso, sin que llegue a la línea, y cuelga la tira.',
+      'Cuando el frente esté cerca del borde de arriba, saca la tira, déjala secar y nombra las bandas.',
+    ],
+    seguridad: ['El alcohol es inflamable: lejos de llamas y de la lámpara caliente.', 'La lámpara se calienta: no la toques por la pantalla.'],
+    preguntas: [
+      '¿Qué gas forman las burbujas? ¿Cómo lo comprobarías?',
+      '¿Cómo cambió el número de burbujas al alejar la lámpara? ¿Por qué deja de aumentar cuando está muy cerca?',
+      '¿Qué pasó sin bicarbonato? ¿Por qué?',
+      '¿Con qué color de luz hubo menos burbujas y por qué?',
+      '¿Cuántos pigmentos separaste y de qué color es cada uno?',
+      '¿Por qué el alcohol no debe tapar la mancha de extracto?',
+    ],
+  },
 }
