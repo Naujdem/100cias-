@@ -384,4 +384,31 @@ export const GUIAS: Record<string, Guia> = {
       '¿Por qué el aceite logra separar el agua del alcohol?',
     ],
   },
+  mezclas: {
+    objetivo: ['Separar los componentes de varias mezclas escogiendo la técnica adecuada según la propiedad que los diferencia, y comprobar con la cromatografía que una tinta es una mezcla.'],
+    fundamento: [
+      'Una mezcla tiene dos o más sustancias que conservan sus propiedades; por eso se pueden separar por métodos físicos.',
+      'Cada técnica aprovecha una diferencia: el imán, el magnetismo; el tamiz, el tamaño; disolver y filtrar, la solubilidad; decantar, la densidad; evaporar y destilar, el punto de ebullición.',
+      'El orden importa: si se evapora antes de filtrar, la sal y la arena quedan revueltas; si se evapora el agua de mar, el agua se pierde, y para recuperarla hay que destilar.',
+      'En la cromatografía el solvente sube por el papel y arrastra los colorantes de la tinta a distinta velocidad según qué tanto se pegan al papel y qué tanto se disuelven en el solvente.',
+    ],
+    materiales: ['Vaso con cada mezcla', 'Imán', 'Agua', 'Tamiz o colador', 'Embudo con papel filtro', 'Embudo de decantación con soporte', 'Cápsula de porcelana y estufa', 'Equipo de destilación (balón y refrigerante)', 'Tiras de papel filtro', 'Marcadores (uno permanente)', 'Vasos con agua y con alcohol'],
+    procedimiento: [
+      'Observa la mezcla y escribe qué componentes tiene y en qué se diferencian.',
+      'Planea el orden de las técnicas antes de empezar.',
+      'Aplica cada técnica y anota qué quedó separado y qué siguió en el vaso.',
+      'Comprueba si recuperaste cada componente puro; si no, explica qué falló en el orden.',
+      'Cromatografía: traza una línea de lápiz a 2 cm del borde de la tira y pon un punto de tinta sobre ella.',
+      'Mete la punta de la tira en el solvente sin que la tinta toque el líquido y espera unos 10 minutos.',
+      'Saca la tira, marca hasta dónde llegó el solvente y cuenta los colores que aparecieron.',
+    ],
+    seguridad: ['La estufa y el destilador se usan con un adulto: el vidrio y el vapor queman.', 'El alcohol es inflamable: lejos de la llama.', 'No pruebes las mezclas ni lo que separaste.'],
+    preguntas: [
+      '¿Qué propiedad aprovecha cada técnica que usaste?',
+      '¿En qué orden separaste el hierro, las piedritas, la arena y la sal? ¿Por qué ese orden?',
+      '¿Por qué el filtro no separa el agua del aceite?',
+      '¿Cómo recuperarías el agua y la sal del agua de mar?',
+      '¿Cuántos colorantes tenía cada tinta? ¿Por qué la tinta permanente no se movió con agua?',
+    ],
+  },
 }
