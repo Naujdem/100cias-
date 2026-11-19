@@ -1,9 +1,17 @@
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
+import type { ReactNode } from 'react'
+import MesaViva from '../MesaViva.tsx'
+import type { Pieza, Uso } from '../MesaViva.tsx'
+import MicroscopioPanel from '../MicroscopioPanel.tsx'
+import { desenfoque } from './Microscopio.tsx'
+import type { Est } from './Microscopio.tsx'
+import { Aguja, Caneca, Cebolla, Cubreobjetos, Gotero, MicroscopioMini, PapelAbsorbente, Pinza, Portaobjetos } from '../dibujos.tsx'
 
-// Laboratorio de Biología 2 (PLAN-LABORATORIOS.md): montaje húmedo de epidermis de cebolla.
-// El estudiante hace los pasos en el orden que quiera; al observar, la imagen muestra sus errores:
-// huellas (no limpió), células secas (sin agua), cubreobjetos flotando (mucha agua sin secar),
-// muestra gruesa (no pasa la luz), pliegues (no la extendió) y burbujas (bajó mal el cubreobjetos).
+// Laboratorio de Biología 2 (PLAN-LABORATORIOS.md): montaje húmedo de epidermis de cebolla, en mesa viva.
+// Cada paso lo hace el estudiante con los objetos: papel (limpiar / secar), gotero, pinza → cebolla → lámina,
+// aguja (extender), cubreobjetos inclinado (W/S o rueda mientras se sostiene) y la lámina al MicroscopioPanel.
+// Al enfocar con 10x se ven sus errores: huellas, células secas, cubreobjetos flotando, muestra gruesa,
+// pliegues y burbujas.
 
 interface E {
   limpio: boolean
@@ -14,48 +22,10 @@ interface E {
   angulo: number
   burbujas: number
   seco: boolean
-  pasos: string[]
 }
-const INICIO: E = { limpio: false, gotas: 0, muestra: null, extendida: false, cubre: false, angulo: 45, burbujas: 0, seco: false, pasos: [] }
+const INICIO: E = { limpio: false, gotas: 0, muestra: null, extendida: false, cubre: false, angulo: 45, burbujas: 0, seco: false }
 
 const burbujasPor = (a: number) => (a < 15 ? 6 : a < 25 ? 3 : a <= 65 ? 0 : a <= 80 ? 2 : 4)
-
-interface Accion {
-  t: string
-  hacer: (e: E) => { e: E; msg: string; aviso?: boolean }
-}
-
-function acciones(e: E): Accion[] {
-  const paso = (x: E, p: string): E => ({ ...x, pasos: [...x.pasos, p] })
-  const a: Accion[] = []
-  if (!e.cubre) {
-    a.push({ t: 'Limpiar el portaobjetos', hacer: (x) => ({ e: paso({ ...x, limpio: true }, 'limpiar'), msg: 'Lo limpias con papel y lo tomas de los bordes, sin dejar huellas.' }) })
-    a.push({ t: 'Poner una gota de agua', hacer: (x) => ({ e: paso({ ...x, gotas: x.gotas + 1 }, 'agua'), msg: x.gotas >= 1 ? `Ya van ${x.gotas + 1} gotas: con una basta.` : 'Pones una gota de agua en el centro.', aviso: x.gotas >= 1 }) })
-    if (!e.muestra) {
-      a.push({ t: 'Tomar la telita delgada de la cebolla (con pinza)', hacer: (x) => ({ e: paso({ ...x, muestra: 'delgada' }, 'muestra'), msg: 'Con la pinza desprendes la epidermis: una telita casi transparente de la cara interna.' }) })
-      a.push({ t: 'Cortar un trocito de cebolla', hacer: (x) => ({ e: paso({ ...x, muestra: 'gruesa' }, 'muestra'), msg: 'Pones un trocito de cebolla: es grueso, la luz no lo atraviesa.', aviso: true }) })
-    } else if (!e.extendida) {
-      a.push({ t: 'Extender la muestra con la aguja', hacer: (x) => ({ e: paso({ ...x, extendida: true }, 'extender'), msg: x.gotas ? 'La extiendes sobre la gota, sin pliegues.' : 'La extiendes, pero sin agua se pega y se seca.', aviso: !x.gotas }) })
-    }
-    if (e.muestra) {
-      a.push({
-        t: `Bajar el cubreobjetos a ${e.angulo}°`,
-        hacer: (x) => {
-          const b = burbujasPor(x.angulo)
-          return {
-            e: paso({ ...x, cubre: true, burbujas: x.gotas ? b : 0 }, 'cubre'),
-            msg: b === 0 ? 'Apoyas un borde en la gota y lo bajas despacio: el agua empuja el aire hacia afuera.' : x.angulo < 15 ? 'Lo dejas caer plano: queda aire atrapado.' : 'Muy parado: al soltarlo cae de golpe y atrapa aire.',
-            aviso: b > 0,
-          }
-        },
-      })
-    }
-  } else {
-    a.push({ t: 'Secar el exceso con papel absorbente', hacer: (x) => ({ e: paso({ ...x, seco: true }, 'secar'), msg: 'Acercas el papel al borde: chupa el agua que sobra.' }) })
-    a.push({ t: 'Agregar una gota por el borde', hacer: (x) => ({ e: paso({ ...x, gotas: x.gotas + 1, seco: false }, 'agua-borde'), msg: 'La gota entra sola por debajo del cubreobjetos (capilaridad).' }) })
-  }
-  return a
-}
 
 /** vista lateral y desde arriba del portaobjetos */
 function Lamina({ e }: { e: E }) {
@@ -100,54 +70,53 @@ function Lamina({ e }: { e: E }) {
   )
 }
 
-/** lo que se ve al microscopio (10x) según cómo quedó el montaje */
-function Observacion({ e }: { e: E }) {
+/** lo que se ve al microscopio según cómo quedó el montaje (300 × 300, para el MicroscopioPanel) */
+function muestraMontaje(e: E): { dibujo: ReactNode; velo?: { color: string; opacidad: number } } {
   const sinAgua = e.gotas === 0
   const flota = e.gotas > 1 && !e.seco
-  return (
-    <svg viewBox="0 0 300 300" className="w-full max-w-[300px]" role="img" aria-label="Observación al microscopio">
-      <defs>
-        <pattern id="mt-cel" width="140" height="70" patternUnits="userSpaceOnUse" patternTransform="translate(150 150) scale(0.3) translate(-150 -150)">
-          <rect width="140" height="70" fill="#fbf1d9" />
-          <path d={sinAgua ? 'M0 0 Q35 10 70 0 T140 0 M0 35 Q35 45 70 35 T140 35 M0 0 V35 M70 35 V70 M140 0 V35' : 'M0 0 H140 M0 35 H140 M0 70 H140 M0 0 V35 M70 35 V70 M140 0 V35'} stroke="#b07b2c" strokeWidth="4" fill="none" />
-          <ellipse cx="44" cy="17" rx="7" ry="6" fill="#8a5a1e" />
-          <ellipse cx="112" cy="52" rx="7" ry="6" fill="#8a5a1e" />
-        </pattern>
-        <filter id="mt-blur"><feGaussianBlur stdDeviation={flota ? 2.5 : 0} /></filter>
-        <clipPath id="mt-campo"><circle cx="150" cy="150" r="140" /></clipPath>
-      </defs>
-      <rect width="300" height="300" fill="#111" />
-      <g clipPath="url(#mt-campo)">
-        {e.muestra ? (
-          <g filter="url(#mt-blur)">
-            <rect width="300" height="300" fill="url(#mt-cel)" />
-            {sinAgua && <rect width="300" height="300" fill="#7a5a2a" opacity="0.35" />}
-            {e.muestra === 'delgada' && !e.extendida && (
-              <g fill="#8a5a1e" opacity="0.45">
-                <path d="M0 90 Q150 60 300 120 V160 Q150 100 0 130 Z" />
-                <path d="M60 300 Q120 180 210 220 L240 300 Z" />
-              </g>
-            )}
-            {e.muestra === 'gruesa' && <rect width="300" height="300" fill="#2a1a08" opacity="0.88" />}
-          </g>
-        ) : (
-          <rect width="300" height="300" fill="#f6f6f0" />
-        )}
-        {!e.limpio && (
-          <g fill="none" stroke="#6f6a60" strokeWidth="2" opacity="0.5">
-            {[30, 40, 50, 60].map((r) => <ellipse key={r} cx="220" cy="90" rx={r} ry={r * 0.7} />)}
-          </g>
-        )}
-        {e.cubre &&
-          Array.from({ length: e.burbujas }, (_, k) => (
-            <g key={k}>
-              <circle cx={40 + ((k * 83) % 220)} cy={50 + ((k * 61) % 200)} r={16 + (k % 3) * 9} fill="#fafafa" stroke="#111" strokeWidth="5" />
-            </g>
-          ))}
-      </g>
-      <circle cx="150" cy="150" r="140" fill="none" stroke="#000" strokeWidth="4" />
-    </svg>
+  const pared = '#b07b2c'
+  const celulas = Array.from({ length: 7 }, (_, f) =>
+    Array.from({ length: 5 }, (_, c) => {
+      const x = c * 80 - (f % 2) * 40
+      const y = f * 45
+      return (
+        <g key={`${f}-${c}`}>
+          <path d={sinAgua ? `M${x} ${y} q20 8 40 0 t40 0 v45 q-20 -8 -40 0 t-40 0 z` : `M${x} ${y} h80 v45 h-80 z`} fill="#fbf1d9" stroke={pared} strokeWidth="2.5" />
+          <ellipse cx={x + 26} cy={y + 22} rx="6" ry="5" fill="#c9a06a" />
+        </g>
+      )
+    }),
   )
+  const dibujo = (
+    <g>
+      <defs>
+        <filter id="mt-flota"><feGaussianBlur stdDeviation={flota ? 2 : 0} /></filter>
+      </defs>
+      {e.muestra && (
+        <g filter="url(#mt-flota)">
+          {flota && <animateTransform attributeName="transform" type="translate" values="0 0;6 3;-4 5;0 0" dur="2.4s" repeatCount="indefinite" />}
+          {celulas}
+          {e.muestra === 'delgada' && !e.extendida && (
+            <g fill="#8a5a1e" opacity="0.45">
+              <path d="M0 90 Q150 60 300 120 V160 Q150 100 0 130 Z" />
+              <path d="M60 300 Q120 180 210 220 L240 300 Z" />
+            </g>
+          )}
+        </g>
+      )}
+      {!e.limpio && (
+        <g fill="none" stroke="#6f6a60" strokeWidth="2" opacity="0.5">
+          {[30, 40, 50, 60].map((r) => <ellipse key={r} cx="220" cy="90" rx={r} ry={r * 0.7} />)}
+        </g>
+      )}
+      {e.cubre &&
+        Array.from({ length: e.burbujas }, (_, k) => (
+          <circle key={k} cx={40 + ((k * 83) % 220)} cy={50 + ((k * 61) % 200)} r={16 + (k % 3) * 9} fill="#fafafa" stroke="#111" strokeWidth="5" />
+        ))}
+    </g>
+  )
+  const velo = e.muestra === 'gruesa' ? { color: '#2a1a08', opacidad: 0.88 } : e.muestra && sinAgua ? { color: '#7a5a2a', opacidad: 0.35 } : undefined
+  return { dibujo, velo }
 }
 
 function diagnostico(e: E): { ok: boolean; lineas: string[] } {
@@ -155,7 +124,6 @@ function diagnostico(e: E): { ok: boolean; lineas: string[] } {
   if (!e.muestra) return { ok: false, lineas: ['No hay muestra en la lámina.'] }
   if (!e.cubre) return { ok: false, lineas: ['Falta el cubreobjetos: sin él la muestra se seca y el objetivo se puede mojar.'] }
   if (!e.limpio) l.push('Se ven manchas: no limpiaste el portaobjetos (y las huellas de los dedos se ven al microscopio).')
-  else if (e.pasos.indexOf('limpiar') > e.pasos.indexOf('agua') && e.pasos.includes('agua')) l.push('Limpiaste después de poner el agua: el portaobjetos se limpia primero.')
   if (e.gotas === 0) l.push('Sin agua, las células se secan y se arrugan, y quedó aire entre las capas.')
   if (e.gotas > 1 && !e.seco) l.push('Sobra agua: el cubreobjetos flota y la imagen se mueve. Seca el exceso con papel absorbente por el borde.')
   if (e.muestra === 'gruesa') l.push('La muestra es muy gruesa: la luz no la atraviesa. Se usa solo la telita (epidermis) de la cara interna.')
@@ -168,88 +136,121 @@ function diagnostico(e: E): { ok: boolean; lineas: string[] } {
 
 export default function Montaje({ grado }: { grado: number }) {
   const [e, setE] = useState<E>(INICIO)
-  const [msg, setMsg] = useState<{ t: string; aviso?: boolean } | null>(null)
+  const [pinzaCon, setPinzaCon] = useState(false)
   const [ver, setVer] = useState(false)
+  const [mano, setMano] = useState<string | null>(null)
   const [pistas, setPistas] = useState(grado < 11)
-  const lista = acciones(e)
-  const hacer = (a: Accion) => {
-    const r = a.hacer(e)
-    setE(r.e)
-    setMsg({ t: r.msg, aviso: r.aviso })
-    setVer(false)
-  }
-  const angulo = (d: number) => setE((x) => (x.cubre ? x : { ...x, angulo: Math.max(0, Math.min(90, x.angulo + d)) }))
+  const [est, setEst] = useState<Est | null>(null)
+  const cambiar = (p: Partial<E>) => { setVer(false); setE((x) => ({ ...x, ...p })) }
+  const reiniciar = () => { setE(INICIO); setPinzaCon(false); setVer(false); setEst(null) }
+
+  // inclinación del cubreobjetos mientras se sostiene: W/S o rueda del mouse
+  const conCubre = mano === 'cubre' && !e.cubre
+  const girar = useCallback((d: number) => setE((x) => (x.cubre ? x : { ...x, angulo: Math.max(0, Math.min(90, x.angulo + d)) })), [])
+  const caja = useRef<HTMLDivElement>(null)
   useEffect(() => {
+    if (!conCubre) return
     const t = (ev: KeyboardEvent) => {
       const k = ev.key.toLowerCase()
-      if (k === 'w') angulo(5)
-      else if (k === 's') angulo(-5)
-      else if (k === 'o') setVer(true)
-      else if (/^[1-9]$/.test(k) && lista[+k - 1]) hacer(lista[+k - 1])
-      else return
+      if (k !== 'w' && k !== 's') return
       ev.preventDefault()
+      girar(k === 'w' ? 5 : -5)
     }
+    const r = (ev: WheelEvent) => { ev.preventDefault(); girar(ev.deltaY < 0 ? 5 : -5) }
+    const el = caja.current
     document.addEventListener('keydown', t)
-    return () => document.removeEventListener('keydown', t)
-  })
+    el?.addEventListener('wheel', r, { passive: false })
+    return () => { document.removeEventListener('keydown', t); el?.removeEventListener('wheel', r) }
+  }, [conCubre, girar])
+
+  const piezas: Pieza[] = [
+    { id: 'papel', nombre: 'Papel absorbente', x: 70, y: 345, ancho: 70, alto: 40, tomable: true, dibujo: <PapelAbsorbente /> },
+    { id: 'agua', nombre: 'Gotero con agua', x: 150, y: 312, ancho: 50, alto: 96, tomable: true, color: '#a9d3f5', dibujo: <Gotero color="#a9d3f5" etiqueta="AGUA" /> },
+    { id: 'cebolla', nombre: 'Cebolla', x: 235, y: 335, ancho: 70, alto: 50, tomable: true, dibujo: <Cebolla /> },
+    { id: 'pinza', nombre: pinzaCon ? 'Pinza con la telita' : 'Pinza', x: 315, y: 330, ancho: 50, alto: 90, tomable: true, dibujo: <Pinza telita={pinzaCon} /> },
+    { id: 'aguja', nombre: 'Aguja de disección', x: 390, y: 330, ancho: 50, alto: 90, tomable: true, dibujo: <Aguja /> },
+    { id: 'cubre', nombre: `Cubreobjetos (${e.angulo}°)`, x: 470, y: 350, ancho: 60, alto: 30, tomable: true, dibujo: <Cubreobjetos angulo={e.cubre ? 0 : e.angulo} /> },
+    { id: 'lamina', nombre: 'Portaobjetos', x: 600, y: 345, ancho: 130, alto: 30, tomable: true, dibujo: <Portaobjetos muestra={e.muestra ? (e.muestra === 'gruesa' ? '#efe0b0' : '#f4e6c4') : undefined} charco={e.gotas ? '#a9d3f5' : undefined} cubre={e.cubre} /> },
+    { id: 'micro', nombre: 'Microscopio', x: 860, y: 290, ancho: 90, alto: 140, dibujo: <MicroscopioMini lamina={ver} /> },
+    { id: 'caneca', nombre: 'Residuos', x: 955, y: 325, ancho: 54, alto: 76, dibujo: <Caneca /> },
+  ]
+  const destinos = (de: string) => (de === 'lamina' ? ['micro', 'caneca'] : de === 'pinza' && !pinzaCon ? ['cebolla', 'lamina'] : ['lamina'])
+  const soltar = (de: string, en: string): Uso | string => {
+    if (de === 'lamina') {
+      if (en === 'micro') return e.muestra ? { anim: 'poner', hecho: () => setVer(true) } : 'La lámina está vacía: primero ponle la muestra.'
+      if (en === 'caneca') return { anim: 'poner', hecho: reiniciar }
+      return 'Lleva la lámina al microscopio para observarla, o a la caneca para empezar otra.'
+    }
+    if (de === 'pinza' && en === 'cebolla') {
+      if (pinzaCon) return 'La pinza ya tiene la telita: llévala a la lámina.'
+      return { anim: 'frotar', hecho: () => setPinzaCon(true) }
+    }
+    if (en !== 'lamina') return de === 'pinza' ? 'Con la pinza se desprende la telita de la cara interna de la cebolla.' : 'Eso se usa sobre el portaobjetos.'
+    if (de === 'papel') {
+      if (e.cubre) return e.seco ? 'Ya está seco.' : { anim: 'frotar', hecho: () => cambiar({ seco: true }) }
+      if (e.gotas || e.muestra) return 'Con la gota o la muestra encima, el papel se lo llevaría todo. El portaobjetos se limpia primero; después del cubreobjetos el papel sirve para secar el borde.'
+      if (e.limpio) return 'Ya está limpio.'
+      return { anim: 'frotar', hecho: () => cambiar({ limpio: true }) }
+    }
+    if (de === 'agua') return { anim: 'gotas', gotas: 1, hecho: () => cambiar(e.cubre ? { gotas: e.gotas + 1, seco: false } : { gotas: e.gotas + 1 }) }
+    if (e.cubre) return 'Ya tiene el cubreobjetos. Si algo quedó mal, bota la lámina en la caneca y empieza otra.'
+    if (de === 'cebolla' || de === 'pinza') {
+      if (e.muestra) return 'Ya tiene muestra.'
+      if (de === 'pinza' && !pinzaCon) return 'La pinza está vacía: primero desprende la telita de la cebolla.'
+      return { anim: 'poner', hecho: () => { if (de === 'pinza') setPinzaCon(false); cambiar({ muestra: de === 'pinza' ? 'delgada' : 'gruesa' }) } }
+    }
+    if (de === 'aguja') {
+      if (!e.muestra) return 'Primero pon la muestra.'
+      if (e.muestra === 'gruesa') return 'Un trozo grueso no se extiende: hace falta la telita delgada.'
+      if (e.extendida) return 'Ya está extendida.'
+      return { anim: 'frotar', hecho: () => cambiar({ extendida: true }) }
+    }
+    if (de === 'cubre') {
+      if (!e.muestra) return 'Primero pon la muestra: el cubreobjetos va encima.'
+      return { anim: 'poner', hecho: () => cambiar({ cubre: true, burbujas: e.gotas ? burbujasPor(e.angulo) : 0 }) }
+    }
+    return 'No se puede.'
+  }
+
+  const listo = ver && !!est && est.obj >= 1 && !est.rota && desenfoque(est) < 1.2
   const d = diagnostico(e)
-  const btn = 'min-h-10 rounded-full border border-[var(--linea)] bg-[var(--tarjeta)] px-4 text-sm font-semibold hover:border-[var(--acento)]'
+  const vista = muestraMontaje(e)
   return (
-    <div className="flex flex-col gap-4">
-      <p className="rounded-2xl bg-[var(--tarjeta)] p-4">
-        <b>Objetivo:</b> prepara una lámina de epidermis de cebolla para verla al microscopio: limpia, extendida y sin burbujas. Cuando creas que está lista, pulsa «Observar».
+    <div className="flex flex-col gap-3" ref={caja}>
+      <p className="rounded-2xl bg-[var(--tarjeta)] p-4 text-sm">
+        <b>Objetivo:</b> prepara una lámina de epidermis de cebolla limpia, extendida y sin burbujas. Toma los objetos y suéltalos sobre el portaobjetos.
+        El cubreobjetos se inclina mientras lo sostienes (<b>W/S</b> o la rueda del mouse). Cuando esté lista, lleva la lámina al microscopio y enfoca con <b>10x</b>.
       </p>
-      <div className="grid items-start gap-4 md:grid-cols-[1fr_300px]">
-        <div className="flex flex-col gap-3">
+      <MesaViva desde={190} piezas={piezas} destinos={destinos} soltar={soltar} alTomar={setMano} />
+      <div className="grid items-start gap-3 md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+        <div className="flex flex-col gap-2">
           <Lamina e={e} />
-          <div className="rounded-2xl border border-[var(--linea)] bg-[var(--tarjeta)] p-4">
-            <div className="flex flex-wrap gap-2">
-              {lista.map((a, k) => (
-                <button key={a.t} type="button" onClick={() => hacer(a)} className={btn}>
-                  <span className="mr-1 opacity-50">{k + 1}</span> {a.t}
-                </button>
-              ))}
-            </div>
-            {!e.cubre && e.muestra && (
-              <div className="mt-3 flex flex-wrap items-center gap-2 text-sm">
-                <span className="font-semibold">Inclinación del cubreobjetos (W/S):</span>
-                <button type="button" className={btn} onClick={() => angulo(-5)}>−5°</button>
-                <span className="w-10 text-center font-bold">{e.angulo}°</span>
-                <button type="button" className={btn} onClick={() => angulo(5)}>+5°</button>
-              </div>
-            )}
-            {msg && <p className={`mt-3 text-sm ${msg.aviso ? 'font-semibold text-[#b5462c]' : ''}`}>{msg.aviso ? '⚠ ' : '• '}{msg.t}</p>}
-            <div className="mt-3 flex flex-wrap gap-2">
-              <button type="button" className={btn} onClick={() => { setE(INICIO); setMsg(null); setVer(false) }}>Empezar de nuevo</button>
-              <button type="button" className={`${btn} !border-[var(--acento)] !bg-[var(--acento)] !text-white`} onClick={() => setVer(true)}>Observar (O)</button>
-              <label className="flex items-center gap-2 text-sm"><input type="checkbox" checked={pistas} onChange={(ev) => setPistas(ev.target.checked)} /> Pasos</label>
-            </div>
-          </div>
+          {!e.cubre && <p className={`text-sm ${conCubre ? 'font-semibold' : 'text-[var(--suave)]'}`}>Inclinación del cubreobjetos: <b>{e.angulo}°</b>{conCubre ? ' — W/S o rueda para cambiarla' : ''}</p>}
+        </div>
+        <div className="flex flex-col gap-2">
           {pistas && (
             <ol className="list-decimal space-y-1 rounded-2xl bg-[var(--tarjeta)] p-4 pl-8 text-sm">
-              <li className={e.limpio ? 'text-[#2e7d5a]' : ''}>Limpia el portaobjetos y tómalo por los bordes.</li>
+              <li className={e.limpio ? 'text-[#2e7d5a]' : ''}>Limpia el portaobjetos con el papel.</li>
               <li className={e.gotas === 1 ? 'text-[#2e7d5a]' : ''}>Pon una gota de agua en el centro.</li>
-              <li className={e.muestra === 'delgada' ? 'text-[#2e7d5a]' : ''}>Con la pinza, saca la telita delgada de la cara interna de una capa de cebolla.</li>
-              <li className={e.extendida ? 'text-[#2e7d5a]' : ''}>Ponla sobre la gota y extiéndela con la aguja.</li>
-              <li className={e.cubre && e.burbujas === 0 ? 'text-[#2e7d5a]' : ''}>Apoya un borde del cubreobjetos en la gota, inclinado unos 45°, y bájalo despacio.</li>
-              <li className={e.seco ? 'text-[#2e7d5a]' : ''}>Si sobra agua, sécala por el borde con papel absorbente.</li>
+              <li className={e.muestra === 'delgada' ? 'text-[#2e7d5a]' : ''}>Con la pinza, saca la telita de la cebolla y ponla sobre la gota.</li>
+              <li className={e.extendida ? 'text-[#2e7d5a]' : ''}>Extiéndela con la aguja.</li>
+              <li className={e.cubre && e.burbujas === 0 ? 'text-[#2e7d5a]' : ''}>Toma el cubreobjetos, inclínalo unos 45° y bájalo sobre la gota.</li>
+              <li className={e.seco ? 'text-[#2e7d5a]' : ''}>Si sobra agua, sécala por el borde con el papel.</li>
             </ol>
           )}
-        </div>
-        <div className="flex flex-col items-center gap-2">
-          {ver ? (
-            <>
-              <Observacion e={e} />
-              <p className="text-sm font-semibold">Al microscopio, 100x</p>
-              <div className={`w-full rounded-xl border-2 p-3 text-sm ${d.ok ? 'border-[#2e7d5a] bg-[#eaf5ee]' : 'border-[#b5462c] bg-[#fbeee9]'}`}>
-                <ul className="list-disc pl-5">{d.lineas.map((l) => <li key={l}>{l}</li>)}</ul>
-              </div>
-            </>
-          ) : (
-            <p className="rounded-2xl border border-dashed border-[var(--linea)] p-6 text-center text-sm text-[var(--suave)]">Aquí verás tu lámina al microscopio cuando pulses «Observar».</p>
-          )}
+          <div className="flex flex-wrap items-center gap-3 text-sm">
+            <label className="flex items-center gap-2"><input type="checkbox" checked={pistas} onChange={(ev) => setPistas(ev.target.checked)} /> Pasos</label>
+            <button type="button" className="min-h-10 rounded-full border border-[var(--linea)] bg-[var(--tarjeta)] px-4 font-semibold hover:border-[var(--acento)]" onClick={reiniciar}>Empezar de nuevo</button>
+          </div>
         </div>
       </div>
+      {ver && <MicroscopioPanel grado={grado} muestra={vista.dibujo} velo={vista.velo} onEstado={setEst} />}
+      {ver && !listo && <p className="text-sm font-semibold">Enfoca la lámina con el objetivo de 10x (100x) para revisarla.</p>}
+      {listo && (
+        <div className={`rounded-xl border-2 p-3 text-sm ${d.ok ? 'border-[#2e7d5a] bg-[#eaf5ee]' : 'border-[#b5462c] bg-[#fbeee9]'}`}>
+          <ul className="list-disc pl-5">{d.lineas.map((l) => <li key={l}>{l}</li>)}</ul>
+        </div>
+      )}
       <p className="text-sm text-[var(--suave)]">⚠ Los cubreobjetos son muy delgados y se rompen fácil: se toman de los bordes. El vidrio roto va a su caja.</p>
     </div>
   )

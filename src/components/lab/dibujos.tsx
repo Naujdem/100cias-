@@ -115,3 +115,39 @@ export function Papa() {
     </g>
   )
 }
+
+/** pinza de punta fina; con «telita» lleva la epidermis de cebolla en la punta */
+export function Pinza({ telita = false }: { telita?: boolean }) {
+  return (
+    <g transform="rotate(-30)">
+      <path d="M-3 -44 L-6 40 M3 -44 L6 40" stroke="#8a96a0" strokeWidth="5" strokeLinecap="round" />
+      <path d="M-3 -44 L-6 40 M3 -44 L6 40" stroke="#2b2b2b" strokeWidth="1" fill="none" />
+      {telita && <path d="M-10 36 Q0 30 10 36 Q8 48 0 50 Q-8 48 -10 36 Z" fill="rgba(244,230,196,0.9)" stroke="#b07b2c" strokeWidth="1" />}
+    </g>
+  )
+}
+
+/** aguja de disección con mango */
+export function Aguja() {
+  return (
+    <g transform="rotate(30)">
+      <rect x="-5" y="-40" width="10" height="44" rx="4" fill="#e2c28f" {...T} />
+      <path d="M0 4 L0 40" stroke="#555" strokeWidth="2.5" strokeLinecap="round" />
+    </g>
+  )
+}
+
+/** papel absorbente doblado */
+export function PapelAbsorbente() {
+  return (
+    <g>
+      <path d="M-30 14 L-22 -16 H30 L22 14 Z" fill="#fff" {...T} />
+      <path d="M-26 0 H26" stroke="#ccc" strokeWidth="1.5" />
+    </g>
+  )
+}
+
+/** cubreobjetos (ancho ≈ 50), inclinado «angulo» grados */
+export function Cubreobjetos({ angulo = 0 }: { angulo?: number }) {
+  return <path d="M-24 6 L-14 -8 H26 L16 6 Z" fill="rgba(220,240,250,0.9)" stroke="#567" strokeWidth="1.5" transform={`rotate(${-angulo})`} />
+}

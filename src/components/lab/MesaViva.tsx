@@ -49,11 +49,13 @@ interface Props {
   fondo?: ReactNode
   /** texto bajo la mesa */
   ayuda?: string
+  /** avisa qué objeto se tiene en la mano (null al soltarlo) */
+  alTomar?: (id: string | null) => void
 }
 
 const DURA: Record<Anim, number> = { verter: 1300, gotas: 1200, polvo: 1200, poner: 700, frotar: 1100 }
 
-export default function MesaViva({ piezas, alto = 420, desde = 0, soltar, destinos, fondo, ayuda }: Props) {
+export default function MesaViva({ piezas, alto = 420, desde = 0, soltar, destinos, fondo, ayuda, alTomar }: Props) {
   const svg = useRef<SVGSVGElement>(null)
   const [mano, setMano] = useState<string | null>(null)
   const [cursor, setCursor] = useState<{ x: number; y: number } | null>(null)
@@ -65,6 +67,7 @@ export default function MesaViva({ piezas, alto = 420, desde = 0, soltar, destin
   const arrastre = useRef<{ id: string; x0: number; y0: number; movido: boolean } | null>(null)
   const soltado = useRef(false) // evita que el clic que sigue a un arrastre vuelva a tomar el objeto
 
+  useEffect(() => { alTomar?.(mano) }, [mano, alTomar])
   const P = (id: string | null) => piezas.find((p) => p.id === id)
   const validos = mano ? destinos(mano) : []
 
