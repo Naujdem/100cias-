@@ -573,6 +573,34 @@ export const GUIAS: Record<string, Guia> = {
       '¿Por qué aparecen cristales al enfriar la solución de salitre?',
     ],
   },
+  titulacion: {
+    objetivo: ['Determinar la concentración de un ácido desconocido y la acidez del vinagre por titulación con NaOH 0,1 M y fenolftaleína.'],
+    fundamento: [
+      'En una neutralización el ácido y la base reaccionan: HCl + NaOH → NaCl + H₂O. En el punto de equivalencia los moles de base igualan a los de ácido.',
+      'Por eso C(ácido) × V(ácido) = C(base) × V(base): conociendo la concentración de la base y los volúmenes, se calcula la del ácido.',
+      'La fenolftaleína es incolora en medio ácido y rosada en medio básico (desde pH ≈ 8,2): el primer rosado pálido que no se va al agitar marca el punto final.',
+      'Agregar agua al erlenmeyer no cambia el resultado, porque no cambia los moles de ácido.',
+      'En la curva de titulación, un ácido fuerte salta de pH ≈ 3 a 11 en la equivalencia (pH 7); un ácido débil como el acético tiene una zona de amortiguación y su equivalencia queda en pH ≈ 8,7.',
+    ],
+    materiales: ['Bureta de 50 mL con soporte y pinza', 'Embudo', 'NaOH 0,1 M estandarizado', 'Pipeta aforada de 10 mL con pera', 'Erlenmeyer de 250 mL', 'Fenolftaleína', 'Piseta con agua destilada', 'HCl de concentración desconocida', 'Vinagre diluido 1:10', 'pH-metro (11°)'],
+    procedimiento: [
+      'Con el embudo, llena la bureta con NaOH 0,1 M y luego quita el embudo.',
+      'Lee y anota la lectura inicial en la parte de abajo del menisco.',
+      'Con la pipeta y la pera, mide 10,00 mL de la muestra y pásalos al erlenmeyer.',
+      'Agrega 2 o 3 gotas de fenolftaleína y pon el erlenmeyer debajo de la bureta.',
+      'Abre la llave y agita el erlenmeyer sin parar; cuando el rosado tarde en desaparecer, sigue gota a gota.',
+      'Detente con el primer rosado pálido que dure al agitar; anota la lectura final.',
+      'Calcula el volumen gastado y la concentración del ácido; repite al menos dos veces.',
+    ],
+    seguridad: ['El NaOH y el HCl irritan la piel y los ojos: usa gafas y guantes.', 'Nunca pipetees con la boca: usa la pera.', 'Los residuos neutralizados pueden ir al desagüe con abundante agua si el docente lo indica.'],
+    preguntas: [
+      '¿Qué volumen de NaOH gastaste en cada ensayo? ¿Coinciden?',
+      '¿Cuál es la concentración del HCl? Muestra el cálculo.',
+      '¿Qué pasa con el resultado si te pasas del punto final?',
+      '¿Por qué agregar agua al erlenmeyer no cambia el volumen gastado?',
+      '¿Cuántos gramos de ácido acético hay en 100 mL del vinagre sin diluir?',
+    ],
+  },
   'acidos-bases': {
     objetivo: ['Preparar un indicador natural de repollo morado y clasificar sustancias de la casa en ácidas, neutras o básicas según su pH.'],
     fundamento: [

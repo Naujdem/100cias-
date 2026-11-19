@@ -27,6 +27,7 @@ import ReactivoLimite from './practicas/ReactivoLimite.tsx'
 import Gases from './practicas/Gases.tsx'
 import DilucionSolubilidad from './practicas/Dilucion.tsx'
 import AcidosBases from './practicas/AcidosBases.tsx'
+import Titulacion from './practicas/Titulacion.tsx'
 
 // Laboratorios virtuales (PLAN-LABORATORIOS.md). Las prácticas listas van en PRACTICAS; las demás de la
 // ruta salen como «próximamente».
@@ -65,13 +66,14 @@ const PRACTICAS: Entrada[] = [
   { id: 'gases', titulo: 'Gases: Boyle y Charles', resumen: 'Pesas sobre una jeringa tapada y una botella con globo en agua fría y caliente: presión, volumen y temperatura.', grupo: 'Química', desdeGrado: 8, Juego: Gases },
   { id: 'dilucion-solubilidad', titulo: 'Dilución y solubilidad', resumen: 'Diluye la solución madre con pipetas y matraz; luego satura agua con salitre y sal a varias temperaturas y arma la curva.', grupo: 'Química', desdeGrado: 9, Juego: DilucionSolubilidad },
   { id: 'acidos-bases', titulo: 'Ácidos, bases y pH', resumen: 'Prepara el indicador de repollo morado y descubre qué sustancias de la casa son ácidas, neutras o básicas.', grupo: 'Química', desdeGrado: 6, Juego: AcidosBases },
+  { id: 'titulacion', titulo: 'Titulación ácido-base', resumen: 'Bureta, pipeta y fenolftaleína: halla la concentración de un ácido desconocido y del vinagre. En 11°, la curva de pH.', grupo: 'Química', desdeGrado: 9, Juego: Titulacion },
   { id: 'solucion-molar', titulo: 'Prepara 100 mL de solución 0,5 M de sulfato de cobre', resumen: 'Pesa con la balanza, disuelve, pasa con el embudo, afora gota a gota e invierte el matraz. El color muestra la concentración.', grupo: 'Química', desdeGrado: 9, Juego: SolucionMolar },
 ]
 
 const PROXIMAS: { lab: string; items: string[] }[] = [
   {
     lab: 'Química',
-    items: ['Titulación ácido-base', 'Velocidad de reacción', 'Saponificación', 'Combustión'],
+    items: ['Velocidad de reacción', 'Saponificación', 'Combustión'],
   },
 ]
 
