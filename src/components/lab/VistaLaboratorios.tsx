@@ -42,6 +42,7 @@ import CurvaCalentamiento from './practicas/CurvaCalentamiento.tsx'
 import CalorReacciones from './practicas/CalorReacciones.tsx'
 import Potabilizacion from './practicas/Potabilizacion.tsx'
 import SeleccionPicos from './practicas/SeleccionPicos.tsx'
+import Cuadrantes from './practicas/Cuadrantes.tsx'
 
 // Laboratorios virtuales (PLAN-LABORATORIOS.md). Las prácticas listas van en PRACTICAS; las demás de la
 // ruta salen como «próximamente».
@@ -71,6 +72,7 @@ const PRACTICAS: Entrada[] = [
   { id: 'adn-fresa', titulo: 'Extracción de ADN de fresa', resumen: 'Machacar, jabón, sal, filtrar y alcohol frío: saca ADN visible con cosas de la cocina.', grupo: 'Biología', desdeGrado: 6, Juego: ADN },
   { id: 'microbiologia', titulo: 'Microbiología', resumen: 'Técnica aséptica, siembra con control, colonias día a día y conteo; discos y halos de inhibición.', grupo: 'Biología', desdeGrado: 6, Juego: Microbiologia },
   { id: 'seleccion-picos', titulo: 'Selección natural con picos', resumen: 'Pinza, cuchara o pitillo: mide cuánto come cada pico en 15 s y mira qué pico gana generación tras generación según el ambiente.', grupo: 'Biología', desdeGrado: 6, Juego: SeleccionPicos },
+  { id: 'cuadrantes', titulo: 'Muestreo con cuadrantes', resumen: 'Lanza el marco de 1 m² en un potrero, cuenta planta por planta y estima la población, la frecuencia y la diversidad.', grupo: 'Biología', desdeGrado: 6, Juego: Cuadrantes },
   { id: 'agua-suelo', titulo: 'Calidad del agua y del suelo (opcional)', resumen: 'Muestras de la vereda: pH, turbidez, oxígeno, bioindicadores, textura, infiltración y lombrices. Para el PRAE.', grupo: 'Biología', desdeGrado: 6, Juego: Ambiente },
   { id: 'medicion', titulo: 'Medición: precisión y exactitud', resumen: 'Lee el menisco sin paralaje y mide 25 mL cinco veces con cuatro instrumentos: ¿cuál es exacto y cuál preciso?', grupo: 'Química', desdeGrado: 6, Juego: Medicion },
   { id: 'densidades', titulo: 'Densidades', resumen: 'Balanza, regla y probeta para hallar la densidad de seis objetos y reconocer su material; luego, la torre de cinco líquidos.', grupo: 'Química', desdeGrado: 6, Juego: Densidades },

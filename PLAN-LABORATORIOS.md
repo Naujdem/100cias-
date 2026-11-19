@@ -153,7 +153,7 @@ clásicas de los «201 experimentos»; las de bórax o similares, con aviso de s
     filtro casero de arena y carbón → desinfección.
 11. ~~**Selección natural con picos**~~ ✅ (19 nov 2026: `SeleccionPicos.tsx`) (Biología, área 4; DBA 9°-6): «aves» con pinza, cuchara o pitillo compiten por
     semillas durante varias generaciones.
-12. **Muestreo con cuadrantes** (Biología, área 3): contar plantas en un potrero virtual; densidad y diversidad.
+12. ~~**Muestreo con cuadrantes**~~ ✅ (19 nov 2026: `Cuadrantes.tsx`). **Con esto quedan hechas las 12 prácticas extra.** (Biología, área 3): contar plantas en un potrero virtual; densidad y diversidad.
 
 ## Mesa libre (aprobada el 19 nov 2026)
 Decisiones de JuanMed: abierta desde el inicio (cada práctica suma reactivos al estante); primero solo la Fase 1;
