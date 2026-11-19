@@ -1,12 +1,9 @@
-import { useState } from 'react'
 import type { ReactNode } from 'react'
 import { enlace } from '../../lib/ruta.ts'
 import { Migas } from '../Biblioteca.tsx'
-import Mesa from './Mesa.tsx'
 import GuiaLab from './GuiaLab.tsx'
 import { GUIAS } from '../../data/guiasLab.ts'
-import type { Nivel, Practica } from './Mesa.tsx'
-import solucionMolar from './practicas/solucionMolar.tsx'
+import SolucionMolar from './practicas/solucionMolar.tsx'
 import Seguridad from './practicas/Seguridad.tsx'
 import Material from './practicas/Material.tsx'
 import Microscopio from './practicas/Microscopio.tsx'
@@ -28,16 +25,14 @@ import ConservacionMasa from './practicas/ConservacionMasa.tsx'
 // Laboratorios virtuales (PLAN-LABORATORIOS.md). Las prácticas listas van en PRACTICAS; las demás de la
 // ruta salen como «próximamente».
 
-// Dos tipos: prácticas de mesa (Practica, con el motor Mesa) y minijuegos con su propio componente.
+// Cada práctica es un componente propio (mesa viva o minijuego).
 interface Entrada {
   id: string
   titulo: string
   resumen: string
   grupo: string
   desdeGrado: number
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  mesa?: Practica<any>
-  Juego?: (p: { grado: number }) => ReactNode
+  Juego: (p: { grado: number }) => ReactNode
 }
 
 const PRACTICAS: Entrada[] = [
@@ -58,7 +53,7 @@ const PRACTICAS: Entrada[] = [
   { id: 'densidades', titulo: 'Densidades', resumen: 'Balanza, regla y probeta para hallar la densidad de seis objetos y reconocer su material; luego, la torre de cinco líquidos.', grupo: 'Química', desdeGrado: 6, Juego: Densidades },
   { id: 'mezclas', titulo: 'Mezclas y técnicas de separación', resumen: 'Separa hierro, piedras, arena y sal (el orden importa), agua y aceite, agua de mar y, desde 9°, agua y alcohol. Y cromatografía de tintas.', grupo: 'Química', desdeGrado: 6, Juego: Mezclas },
   { id: 'conservacion-masa', titulo: 'Conservación de la masa', resumen: 'Vinagre y bicarbonato sobre la balanza en vaso abierto, botella con globo o botella tapada: ¿se pierde masa?', grupo: 'Química', desdeGrado: 6, Juego: ConservacionMasa },
-  { id: solucionMolar.id, titulo: solucionMolar.titulo, resumen: solucionMolar.resumen, grupo: 'Química', desdeGrado: solucionMolar.desdeGrado, mesa: solucionMolar },
+  { id: 'solucion-molar', titulo: 'Prepara 100 mL de solución 0,5 M de sulfato de cobre', resumen: 'Pesa con la balanza, disuelve, pasa con el embudo, afora gota a gota e invierte el matraz. El color muestra la concentración.', grupo: 'Química', desdeGrado: 9, Juego: SolucionMolar },
 ]
 
 const PROXIMAS: { lab: string; items: string[] }[] = [
@@ -105,9 +100,6 @@ export default function VistaLaboratorios({ practica, perfilId }: { practica?: s
 }
 
 function VistaPractica({ P, grado }: { P: Entrada; grado: number }) {
-  const [calc, setCalc] = useState(grado < 11)
-  const [pistas, setPistas] = useState(grado < 11)
-  const nivel: Nivel = { grado, calculadora: calc, pistas }
   return (
     <div>
       <Migas pasos={[{ texto: 'Inicio', a: enlace.inicio }, { texto: 'Laboratorios', a: enlace.lab() }, { texto: P.titulo }]} />
@@ -115,13 +107,8 @@ function VistaPractica({ P, grado }: { P: Entrada; grado: number }) {
         <h1 className="text-2xl font-semibold sm:text-3xl">{P.titulo}</h1>
         {GUIAS[P.id] && <GuiaLab titulo={P.titulo} guia={GUIAS[P.id]} />}
       </div>
-      {P.mesa && <div className="mt-2 flex flex-wrap items-center gap-4 text-sm">
-        <label className="flex items-center gap-2"><input type="checkbox" checked={calc} onChange={(e) => setCalc(e.target.checked)} /> Calculadora</label>
-        <label className="flex items-center gap-2"><input type="checkbox" checked={pistas} onChange={(e) => setPistas(e.target.checked)} /> Pasos y pistas</label>
-        {grado < P.desdeGrado && <span className="text-[var(--suave)]">Esta práctica es desde {P.desdeGrado}°.</span>}
-      </div>}
       <div className="mt-4">
-        {P.mesa ? <Mesa P={P.mesa} nivel={nivel} /> : P.Juego ? <P.Juego grado={grado} /> : null}
+        <P.Juego grado={grado} />
       </div>
     </div>
   )
