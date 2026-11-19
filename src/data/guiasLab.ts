@@ -4,6 +4,32 @@ import type { Guia } from '../components/lab/GuiaLab.tsx'
 // cuando se crea o se convierte a mesa viva (PLAN-LABORATORIOS.md).
 
 export const GUIAS: Record<string, Guia> = {
+  corrosion: {
+    objetivo: ['Comparar la oxidación de clavos de hierro en distintos medios y reconocer qué la acelera y qué la evita.'],
+    fundamento: [
+      'La corrosión es el deterioro de un metal por reacción con su ambiente. El hierro se oxida cuando tiene a la vez agua y oxígeno, y forma el óxido café (herrumbre).',
+      'La sal y los ácidos aceleran la corrosión porque el agua con iones conduce mejor.',
+      'Pintar, engrasar o recubrir el hierro con zinc (galvanizado) impide o retrasa la oxidación.',
+      'Desde 9°: es una reacción redox: 4Fe + 3O₂ + 6H₂O → 4Fe(OH)₃. En 11°: el zinc protege como ánodo de sacrificio (protección catódica).',
+    ],
+    materiales: ['5 frascos de vidrio con tapa', '5 clavos de hierro limpios (lijados)', 'Agua de la llave', 'Sal', 'Vinagre', 'Aceite de cocina', 'Sílica gel o cal viva (secante) — o algodón seco', 'Desde 9°: clavos galvanizados y clavos pintados con esmalte', 'Lupa', 'Etiquetas y marcador'],
+    procedimiento: [
+      'Lija los clavos para quitarles la grasa y marca cada frasco con su número.',
+      'Frasco 1: agua. Frasco 2: agua con una cucharada de sal. Frasco 3: vinagre. Frasco 4: agua tapada con una capa de aceite. Frasco 5: sílica gel en el fondo y tapa cerrada (aire seco).',
+      'Mete un clavo en cada frasco al mismo tiempo.',
+      'Observa con la lupa cada día durante una semana y anota el color del clavo, del líquido y si hay óxido en el fondo.',
+      'Desde 9°: repite los frascos 1 y 2 con un clavo galvanizado y uno pintado.',
+      'Organiza las observaciones en una tabla y ordena los frascos del más al menos oxidado.',
+    ],
+    seguridad: ['Los clavos tienen punta: manipúlalos con cuidado.', 'La sílica gel no se come ni se toca con las manos mojadas.', 'Al terminar, el agua con óxido va al desagüe con bastante agua y los clavos al reciclaje de metal.'],
+    preguntas: [
+      '¿En qué frasco se oxidó más el clavo? ¿Y menos? ¿Por qué?',
+      '¿Qué dos cosas necesita el hierro para oxidarse? ¿Qué frascos lo demuestran?',
+      '¿Por qué se oxidan más rápido los carros y los techos cerca del mar?',
+      'Desde 9°: escribe la reacción de oxidación del hierro e indica qué se oxida y qué se reduce.',
+      'En 11°: ¿por qué el galvanizado protege el hierro aunque esté rayado?',
+    ],
+  },
   'pila-limones': {
     objetivo: ['Construir una pila con limones, medir su voltaje y encender un LED conectando varias en serie.'],
     fundamento: [

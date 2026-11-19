@@ -133,7 +133,7 @@ clásicas de los «201 experimentos»; las de bórax o similares, con aviso de s
    y encontrar los errores de uno mal hecho.
 2. ~~**Pila de limones**~~ ✅ (19 nov 2026: `PilaLimones.tsx`) (Química área 3, desde 6°): electrodos de zinc y cobre en limones, cables, voltímetro, LED con
    varios en serie; serie de potenciales en 11°.
-3. **Corrosión de clavos** (área 3, desde 6°): agua, agua con sal, vinagre, aceite y aire seco; días acelerados en
+3. ~~**Corrosión de clavos**~~ ✅ (19 nov 2026: `Corrosion.tsx`) (área 3, desde 6°): agua, agua con sal, vinagre, aceite y aire seco; días acelerados en
    tiempo real; redox y protección del hierro desde 9°.
 4. **Cristalización** (área 4, desde 6°): sal, azúcar y alumbre saturados, enfriamiento rápido o lento, hilo semilla;
    tamaño y forma de los cristales.
