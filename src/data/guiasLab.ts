@@ -4,6 +4,32 @@ import type { Guia } from '../components/lab/GuiaLab.tsx'
 // cuando se crea o se convierte a mesa viva (PLAN-LABORATORIOS.md).
 
 export const GUIAS: Record<string, Guia> = {
+  'curva-calentamiento': {
+    objetivo: ['Construir la curva de calentamiento del agua desde hielo hasta la ebullición e identificar los cambios de estado.'],
+    fundamento: [
+      'Al calentar una sustancia pura, su temperatura sube, excepto durante los cambios de estado: mientras el hielo se funde la temperatura se queda en 0 °C y mientras el agua hierve se queda en su punto de ebullición.',
+      'En esas mesetas la energía se usa para separar las partículas (calor latente), no para aumentar su movimiento.',
+      'Desde 9°: el punto de ebullición depende de la presión del aire: a nivel del mar es 100 °C y en Bogotá unos 92 °C.',
+      'En 11°: el calor latente de fusión se calcula como L = Q ÷ m, con Q = potencia × duración de la meseta.',
+    ],
+    materiales: ['Hielo picado (unos 200 g)', 'Vaso de precipitados resistente al calor', 'Estufa o mechero con trípode y malla', 'Termómetro de laboratorio (−10 a 110 °C)', 'Varilla de vidrio', 'Cronómetro', 'Hoja de datos y papel milimetrado'],
+    procedimiento: [
+      'Pon el hielo en el vaso y mide su temperatura inicial con el termómetro en el centro, sin tocar el fondo.',
+      'Enciende la estufa con fuego bajo y constante y pon en marcha el cronómetro.',
+      'Revuelve con suavidad y anota la temperatura cada minuto.',
+      'Anota cuándo empieza y termina de fundirse el hielo y cuándo empieza a hervir el agua.',
+      'Sigue tomando datos unos 5 minutos después de que hierva.',
+      'Grafica la temperatura (eje vertical) contra el tiempo (eje horizontal) y señala las mesetas.',
+    ],
+    seguridad: ['El agua hirviendo y el vapor queman: no te acerques por encima del vaso.', 'No revuelvas con el termómetro: se rompe.', 'Usa pinzas o guantes para mover el vaso caliente.'],
+    preguntas: [
+      '¿A qué temperatura se quedó fija la lectura mientras se fundía el hielo? ¿Y mientras hervía?',
+      '¿Por qué la temperatura no sube en las mesetas si la estufa sigue encendida?',
+      '¿Por qué hay que revolver?',
+      'Desde 9°: ¿a qué temperatura hirvió el agua en tu municipio? ¿Por qué no fue 100 °C?',
+      'En 11°: calcula el calor latente de fusión con tus datos y compáralo con 334 J/g.',
+    ],
+  },
   polimeros: {
     objetivo: ['Formar polímeros entrecruzados (slime) y un bioplástico de almidón, y relacionar sus propiedades con la cantidad de cada ingrediente.'],
     fundamento: [

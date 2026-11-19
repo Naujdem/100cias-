@@ -38,6 +38,7 @@ import Cristalizacion from './practicas/Cristalizacion.tsx'
 import Colorimetria from './practicas/Colorimetria.tsx'
 import Antiacidos from './practicas/Antiacidos.tsx'
 import Polimeros from './practicas/Polimeros.tsx'
+import CurvaCalentamiento from './practicas/CurvaCalentamiento.tsx'
 
 // Laboratorios virtuales (PLAN-LABORATORIOS.md). Las prácticas listas van en PRACTICAS; las demás de la
 // ruta salen como «próximamente».
@@ -87,6 +88,7 @@ const PRACTICAS: Entrada[] = [
   { id: 'colorimetria', titulo: 'Colorimetría', resumen: 'Escala de patrones de sulfato de cobre para estimar la concentración de una muestra; en 11°, absorbancia y ley de Beer.', grupo: 'Química', desdeGrado: 9, Juego: Colorimetria },
   { id: 'antiacidos', titulo: 'Antiácidos y amortiguadores', resumen: '¿Qué antiácido neutraliza más «ácido estomacal»? Con repollo morado y dosis contadas; en 11°, agua contra un amortiguador.', grupo: 'Química', desdeGrado: 9, Juego: Antiacidos },
   { id: 'polimeros', titulo: 'Polímeros: slime y bioplástico', resumen: 'Pegante y activador: la proporción decide líquido, slime o caucho. Y un plástico de fécula, con o sin glicerina.', grupo: 'Química', desdeGrado: 6, Juego: Polimeros },
+  { id: 'curva-calentamiento', titulo: 'Curva de calentamiento del agua', resumen: 'Hielo al fuego, termómetro y libreta minuto a minuto: la gráfica muestra las mesetas de fusión y ebullición.', grupo: 'Química', desdeGrado: 6, Juego: CurvaCalentamiento },
   { id: 'solucion-molar', titulo: 'Prepara 100 mL de solución 0,5 M de sulfato de cobre', resumen: 'Pesa con la balanza, disuelve, pasa con el embudo, afora gota a gota e invierte el matraz. El color muestra la concentración.', grupo: 'Química', desdeGrado: 9, Juego: SolucionMolar },
 ]
 
