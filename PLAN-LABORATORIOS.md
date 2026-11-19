@@ -126,6 +126,24 @@ Con esto quedan hechas todas las prácticas de la ruta.
 10. Microbiología: técnica aséptica, siembra en caja de Petri, colonias en tiempo acelerado; con/sin jabón.
 11. Opcional: calidad del agua y del suelo (área 5, PRAE).
 
+## Prácticas extra (aprobadas el 19 nov 2026)
+Se suman a la ruta, con la regla «como Tinciones» y su guía imprimible; una por PR, en este orden. Varias son
+clásicas de los «201 experimentos»; las de bórax o similares, con aviso de simulación.
+1. **Cuaderno e informe de laboratorio** (práctica cero, desde 6°; guía de Pamplona): armar un informe con sus partes
+   y encontrar los errores de uno mal hecho.
+2. **Pila de limones** (Química área 3, desde 6°): electrodos de zinc y cobre en limones, cables, voltímetro, LED con
+   varios en serie; serie de potenciales en 11°.
+3. **Corrosión de clavos** (área 3, desde 6°): agua, agua con sal, vinagre, aceite y aire seco; días acelerados en
+   tiempo real; redox y protección del hierro desde 9°.
+4. **Cristalización** (área 4, desde 6°): sal, azúcar y alumbre saturados, enfriamiento rápido o lento, hilo semilla;
+   tamaño y forma de los cristales.
+5. **Colorimetría** (área 4, desde 9°): escala de patrones de CuSO₄ para estimar una concentración desconocida;
+   absorbancia y ley de Beer en 11° (versión escolar de la espectrofotometría de la guía Surcolombiana).
+6. **Antiácidos y soluciones amortiguadoras** (área 4, desde 9°): «ácido estomacal» con repollo morado y cuánto
+   neutraliza cada antiácido; en 11°, buffer frente a agua al agregar ácido.
+7. **Polímeros: slime y bioplástico** (área 5, desde 6°): pegante + bórax (la proporción decide líquido, slime o
+   caucho) y bioplástico de fécula con o sin glicerina.
+
 ## Mesa libre (aprobada el 19 nov 2026)
 Decisiones de JuanMed: abierta desde el inicio (cada práctica suma reactivos al estante); primero solo la Fase 1;
 Supabase va mucho después; solo química por ahora (biología, si se hace, al final).
@@ -151,4 +169,4 @@ Supabase va mucho después; solo química por ahora (biología, si se hace, al f
 
 ## Orden de construcción
 Mesa (0.1) → Química 9 (piloto) → seguridad (0.2) → Biología 1–2 → el resto, una práctica por sesión,
-alternando química y biología → Mesa libre al final (aprobada: ver arriba).
+alternando química y biología → prácticas extra (1–7) → Mesa libre al final (aprobada: ver arriba).
