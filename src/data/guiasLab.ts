@@ -4,6 +4,33 @@ import type { Guia } from '../components/lab/GuiaLab.tsx'
 // cuando se crea o se convierte a mesa viva (PLAN-LABORATORIOS.md).
 
 export const GUIAS: Record<string, Guia> = {
+  potabilizacion: {
+    objetivo: ['Aplicar en orden los pasos de potabilización a una muestra de agua turbia y comprobar su efecto en cada etapa.'],
+    fundamento: [
+      'El agua de ríos y quebradas trae partículas grandes, barro fino (coloides) y microbios. Clara no significa potable.',
+      'Cribado: el colador quita hojas y palitos. Coagulación y floculación: el alumbre junta el barro fino en grumos. Sedimentación: los grumos caen al fondo.',
+      'Filtración: un filtro de capas (grava, arenas, carbón y algodón) retiene lo que queda; el carbón quita color y olor.',
+      'Desinfección: el cloro o la luz del sol (método SODIS) matan los microbios. Desde 9°: en Colombia, la Resolución 2115 de 2007 fija los valores del agua potable.',
+    ],
+    materiales: ['Agua turbia (de quebrada o agua con tierra)', 'Colador', '2 jarras transparentes', 'Alumbre (farmacia)', 'Cuchara', 'Botella plástica cortada', 'Algodón, carbón activado (o vegetal molido y lavado), arena fina, arena gruesa y grava, lavados', 'Blanqueador sin aroma y gotero', 'Botella PET transparente para SODIS'],
+    procedimiento: [
+      'Cuela el agua turbia a una jarra y guarda un poco aparte para comparar.',
+      'Agrega una cucharadita de alumbre por litro, revuelve rápido 1 minuto y luego despacio 5 minutos.',
+      'Deja reposar 30 minutos y observa los grumos en el fondo.',
+      'Arma el filtro con la botella boca abajo: algodón en el cuello, luego carbón, arena fina, arena gruesa y grava arriba.',
+      'Vierte con cuidado el agua de arriba de la jarra en el filtro, sin el lodo del fondo.',
+      'Desinfecta: 2 gotas de blanqueador por litro y espera 30 minutos, o pon la botella transparente al sol 6 horas.',
+      'Compara la muestra inicial con la final.',
+    ],
+    seguridad: ['Esta agua no se toma en la práctica: un filtro casero no garantiza agua potable.', 'El blanqueador no se mezcla con otros limpiadores.', 'El lodo del fondo va a la tierra del jardín, no al desagüe.'],
+    preguntas: [
+      '¿Qué quitó cada paso del agua?',
+      '¿Por qué el filtro lleva lo fino abajo y lo grueso arriba?',
+      '¿Por qué no basta con que el agua salga clara?',
+      '¿Qué pasaría si filtraras sin coagular ni dejar reposar?',
+      'Desde 9°: ¿cómo potabilizan el agua en tu municipio o vereda? ¿Hay acueducto o se trata en la casa?',
+    ],
+  },
   'calor-reacciones': {
     objetivo: ['Clasificar disoluciones y reacciones como exotérmicas o endotérmicas midiendo el cambio de temperatura.'],
     fundamento: [

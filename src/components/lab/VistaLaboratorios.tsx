@@ -40,6 +40,7 @@ import Antiacidos from './practicas/Antiacidos.tsx'
 import Polimeros from './practicas/Polimeros.tsx'
 import CurvaCalentamiento from './practicas/CurvaCalentamiento.tsx'
 import CalorReacciones from './practicas/CalorReacciones.tsx'
+import Potabilizacion from './practicas/Potabilizacion.tsx'
 
 // Laboratorios virtuales (PLAN-LABORATORIOS.md). Las prácticas listas van en PRACTICAS; las demás de la
 // ruta salen como «próximamente».
@@ -91,6 +92,7 @@ const PRACTICAS: Entrada[] = [
   { id: 'polimeros', titulo: 'Polímeros: slime y bioplástico', resumen: 'Pegante y activador: la proporción decide líquido, slime o caucho. Y un plástico de fécula, con o sin glicerina.', grupo: 'Química', desdeGrado: 6, Juego: Polimeros },
   { id: 'curva-calentamiento', titulo: 'Curva de calentamiento del agua', resumen: 'Hielo al fuego, termómetro y libreta minuto a minuto: la gráfica muestra las mesetas de fusión y ebullición.', grupo: 'Química', desdeGrado: 6, Juego: CurvaCalentamiento },
   { id: 'calor-reacciones', titulo: 'Reacciones que calientan o enfrían', resumen: 'Disuelve sustancias en vasos de icopor y mide si el agua sube o baja de temperatura: así funcionan las compresas.', grupo: 'Química', desdeGrado: 6, Juego: CalorReacciones },
+  { id: 'potabilizacion', titulo: 'Potabilización del agua', resumen: 'Agua turbia de la quebrada: colar, alumbre, reposo, filtro de botella por capas y desinfección con cloro o al sol.', grupo: 'Química', desdeGrado: 6, Juego: Potabilizacion },
   { id: 'solucion-molar', titulo: 'Prepara 100 mL de solución 0,5 M de sulfato de cobre', resumen: 'Pesa con la balanza, disuelve, pasa con el embudo, afora gota a gota e invierte el matraz. El color muestra la concentración.', grupo: 'Química', desdeGrado: 9, Juego: SolucionMolar },
 ]
 
