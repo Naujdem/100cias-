@@ -4,6 +4,31 @@ import type { Guia } from '../components/lab/GuiaLab.tsx'
 // cuando se crea o se convierte a mesa viva (PLAN-LABORATORIOS.md).
 
 export const GUIAS: Record<string, Guia> = {
+  informe: {
+    objetivo: ['Reconocer las partes de un informe de laboratorio y aplicar las normas para llevar el cuaderno de laboratorio.'],
+    fundamento: [
+      'El cuaderno de laboratorio es el registro de lo que pasó de verdad: se escribe en tinta, con fecha, mientras se trabaja; lo que está mal se tacha con una sola línea para que se pueda leer, sin corrector ni hojas arrancadas.',
+      'El informe organiza ese registro para que otra persona entienda qué se hizo, qué se obtuvo y qué significa.',
+      'Un dato medido nunca se cambia por el «correcto»: si no coincide con el libro, se anota tal cual y se explica la diferencia en el análisis.',
+    ],
+    materiales: ['Cuaderno de laboratorio (o una carpeta solo para eso)', 'Esfero de tinta', 'Regla', 'Calculadora'],
+    procedimiento: [
+      'Escribe en el cuaderno la fecha, el título de la práctica y el objetivo antes de empezar.',
+      'Desde 9°: escribe tu hipótesis antes de medir.',
+      'Arma las tablas de datos con columnas y unidades antes de tomar las medidas.',
+      'Anota cada medida en el momento, con su unidad; si te equivocas, tacha con una línea y escribe al lado.',
+      'Anota también lo que ves: colores, olores, burbujas, cambios de temperatura.',
+      'Con esos datos, redacta el informe con sus partes: título y datos, objetivo, (marco teórico en 11°), (hipótesis desde 9°), materiales, procedimiento en pasado, resultados con tablas y gráficas, (análisis desde 9°), conclusiones y (bibliografía en 11°).',
+      'Revisa que la conclusión responda al objetivo.',
+    ],
+    seguridad: ['El cuaderno no se pone sobre la mesa de los reactivos: se deja en una zona limpia y seca.'],
+    preguntas: [
+      '¿Por qué no se usa corrector en el cuaderno de laboratorio?',
+      '¿Qué diferencia hay entre un resultado y una conclusión?',
+      'Si tu dato no coincide con el del libro, ¿qué debes hacer?',
+      '¿Qué le falta a una gráfica sin nombres en los ejes?',
+    ],
+  },
   montaje: {
     objetivo: ['Preparar un montaje húmedo de epidermis de cebolla y observar sus células al microscopio con el objetivo de 10x.'],
     fundamento: [
