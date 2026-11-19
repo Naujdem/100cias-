@@ -5,6 +5,7 @@ import GuiaLab from './GuiaLab.tsx'
 import { GUIAS } from '../../data/guiasLab.ts'
 import SolucionMolar from './practicas/solucionMolar.tsx'
 import Seguridad from './practicas/Seguridad.tsx'
+import Informe from './practicas/Informe.tsx'
 import Material from './practicas/Material.tsx'
 import Microscopio from './practicas/Microscopio.tsx'
 import Montaje from './practicas/Montaje.tsx'
@@ -47,6 +48,7 @@ interface Entrada {
 
 const PRACTICAS: Entrada[] = [
   { id: 'seguridad', titulo: 'Práctica cero: seguridad en el laboratorio', resumen: 'Vístete, reconoce los pictogramas, decide qué está bien y a dónde va cada residuo.', grupo: 'Para empezar', desdeGrado: 6, Juego: Seguridad },
+  { id: 'informe', titulo: 'Cuaderno e informe de laboratorio', resumen: 'Arma un informe con sus partes en orden y encuentra los errores de uno mal hecho.', grupo: 'Para empezar', desdeGrado: 6, Juego: Informe },
   { id: 'material', titulo: 'Reconoce tu material', resumen: 'Cada instrumento con su uso, su cuidado y su versión casera; luego, ¿qué es? y ¿cuál uso?', grupo: 'Para empezar', desdeGrado: 6, Juego: Material },
   { id: 'microscopio', titulo: 'El microscopio', resumen: 'Sus partes, cómo enfocar sin romper la lámina y el reto de ver células a 400x.', grupo: 'Biología', desdeGrado: 6, Juego: Microscopio },
   { id: 'montaje', titulo: 'Montaje húmedo', resumen: 'Prepara una lámina de cebolla: limpia, extendida y sin burbujas. Al observarla se ven tus errores.', grupo: 'Biología', desdeGrado: 6, Juego: Montaje },
