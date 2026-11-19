@@ -75,6 +75,8 @@ import { TiempoClimaJuego, InvernaderoJuego, CambioClimaticoJuego, NinoNinaJuego
 import SimuladorCo2 from './SimuladorCo2.tsx'
 import TermostatoCuerpo from './TermostatoCuerpo.tsx'
 import PulsoEjercicio from './PulsoEjercicio.tsx'
+import RinonAgua from './RinonAgua.tsx'
+import { ExcOrganosJuego, UrinarioJuego, NefronaJuego, OrinaJuego, PecesAguaJuego } from './JuegosExcrecion.tsx'
 import { VentilacionJuego, AlveoloJuego, CorazonJuego, VasosJuego, SangreCompJuego, RespAnimalesJuego } from './JuegosCirculacion.tsx'
 import { NutrientesJuego, DigRecorridoJuego, DigMecanicaJuego, DigAbsorcionJuego, DigAnimalesJuego } from './JuegosDigestion.tsx'
 import { HomeoEquilibrioJuego, HomeoAsaJuego, HomeoTemperaturaJuego, HomeoAguaJuego, HomeoGlucosaJuego, HomeoSistemasJuego } from './JuegosHomeostasis.tsx'
@@ -669,4 +671,10 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'vasos-juego': VasosJuego,
   'sangre-comp-juego': SangreCompJuego,
   'resp-animales-juego': RespAnimalesJuego,
+  'rinon-agua': RinonAgua,
+  'exc-organos-juego': ExcOrganosJuego,
+  'urinario-juego': UrinarioJuego,
+  'nefrona-juego': NefronaJuego,
+  'orina-juego': OrinaJuego,
+  'peces-agua-juego': PecesAguaJuego,
 }

@@ -1,0 +1,433 @@
+{
+  "id": "excrecion",
+  "materia": "biologia",
+  "area": "cuerpo",
+  "titulo": "Excreción",
+  "subtema": "Cómo el cuerpo saca sus desechos",
+  "orden": 64,
+  "etiqueta": "4",
+  "vistas": ["ruta"],
+  "tituloVista": "Ruta de la excreción",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Diferenciar excreción de egestión e identificar los órganos excretores.",
+    "Describir el recorrido de la orina por el sistema urinario.",
+    "Explicar cómo la nefrona forma la orina: filtración, reabsorción y secreción.",
+    "Relacionar el volumen y el color de la orina con el equilibrio del agua.",
+    "Comparar cómo regulan el agua los peces de río y los de mar."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con un texto escolar de biología y los DBA de Ciencias Naturales 8°-4. Volúmenes (180 L filtrados, ≈ 1,5 L de orina al día, 1 millón de nefronas por riñón) son aproximados de referencia."
+  ],
+  "bloques": [
+    {
+      "id": "que-es-excrecion",
+      "titulo": "¿Qué es excretar?",
+      "resumen": "Excretar es eliminar los desechos que producen las células; lo hacen los pulmones, los riñones, la piel y el hígado.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "Al trabajar, las células producen desechos que serían tóxicos si se acumularan: el dióxido de carbono de la respiración celular y el amoníaco que sale de desarmar las proteínas. La excreción es la eliminación de estos desechos. Los pulmones sacan el CO₂; el hígado convierte el amoníaco en urea, mucho menos tóxica; los riñones filtran la sangre y eliminan la urea, las sales y el agua de más en la orina, y la piel elimina agua, sales y un poco de urea en el sudor. Las heces no son excreción: son restos de alimento que nunca entraron a las células, y su salida se llama egestión. La excreción también ayuda a la homeostasis, porque controla el agua y las sales de la sangre.",
+        "cuaderno": {
+          "facil": [
+            "Excreción: eliminar los desechos que producen las células.",
+            "Órganos excretores: pulmones, riñones, piel e hígado."
+          ],
+          "media": [
+            "El hígado transforma el amoníaco en urea; el riñón la elimina.",
+            "Las heces no son excreción: es egestión."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Respirar es una forma de ir al baño?",
+          "actividad": "Hacer una tabla con cada desecho (CO₂, urea, sales, agua) y el órgano que lo saca, y pedir que ubiquen las heces: ¿van en la tabla o no?",
+          "errores": [
+            "Llamar excreción a la defecación.",
+            "Creer que el sudor sirve sobre todo para sacar desechos; su función principal es enfriar."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Cuál de estos es un órgano excretor?",
+            "opciones": ["Los pulmones", "El estómago", "El corazón", "El intestino delgado"],
+            "correcta": 0,
+            "explicacion": "Sacan el CO₂, un desecho de las células."
+          }
+        },
+        {
+          "titulo": "Cuatro órganos limpian",
+          "visual": {
+            "tipo": "escena",
+            "id": "exc-organos",
+            "fases": [
+              { "id": "todos", "nombre": "Los cuatro", "texto": "Pulmones, riñones, piel e hígado eliminan desechos." },
+              { "id": "pulmones", "nombre": "Pulmones", "texto": "Sacan el CO₂ al espirar." },
+              { "id": "rinones", "nombre": "Riñones", "texto": "Filtran la sangre y forman la orina." },
+              { "id": "piel", "nombre": "Piel", "texto": "El sudor saca agua y sales." },
+              { "id": "higado", "nombre": "Hígado", "texto": "Convierte el amoníaco tóxico en urea.", "nivel": "intermedio" }
+            ]
+          }
+        },
+        {
+          "titulo": "Excreción o egestión",
+          "visual": {
+            "tipo": "compara",
+            "izq": { "icono": "🫘", "titulo": "Excreción", "puntos": ["Desechos hechos por las células.", "CO₂, urea, sales."] },
+            "der": { "icono": "💩", "titulo": "Egestión", "puntos": ["Comida que no se digirió.", "Nunca entró a las células: heces."] }
+          }
+        }
+      ],
+      "juego": "exc-organos-juego",
+      "preguntas": [
+        {
+          "id": "cu-ex-1",
+          "enunciado": "¿Por qué la salida de las heces no se considera excreción?",
+          "opciones": [
+            "Porque son restos de alimento que nunca entraron a las células",
+            "Porque salen por el ano",
+            "Porque no huelen a urea",
+            "Porque las produce el riñón"
+          ],
+          "correcta": 0,
+          "explicacion": "Se llama egestión."
+        },
+        {
+          "id": "cu-ex-2",
+          "enunciado": "¿Qué órgano convierte el amoníaco en urea?",
+          "opciones": ["El hígado", "El riñón", "La vejiga", "El pulmón"],
+          "correcta": 0,
+          "explicacion": "Después, el riñón la elimina en la orina."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "sistema-urinario",
+      "titulo": "El sistema urinario",
+      "resumen": "Los riñones forman la orina; los uréteres la llevan a la vejiga y la uretra la saca.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "requiere": ["que-es-excrecion"],
+      "ficha": {
+        "idea": "El sistema urinario tiene dos riñones, del tamaño de un puño y con forma de fríjol, ubicados a los lados de la columna, debajo de las últimas costillas. A ellos llega la sangre por la arteria renal; allí se filtra, y la sangre limpia sale por la vena renal. Cada riñón tiene alrededor de un millón de nefronas, que son las unidades que forman la orina. La orina baja por los uréteres hasta la vejiga, una bolsa muscular que se estira y la guarda; cuando está llena, se siente la necesidad de orinar y la orina sale por la uretra. Por los riñones pasa toda la sangre del cuerpo muchas veces al día.",
+        "contexto": [
+          {
+            "titulo": "Se puede vivir con uno",
+            "texto": "Una persona sana puede vivir con un solo riñón; por eso existen los trasplantes de donante vivo. Si los dos fallan, se necesita diálisis: una máquina que filtra la sangre."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Riñones → uréteres → vejiga → uretra.",
+            "Los riñones filtran la sangre y forman la orina."
+          ],
+          "media": [
+            "La nefrona es la unidad que forma la orina: hay ≈ 1 millón por riñón."
+          ],
+          "avanzada": [
+            "La diálisis reemplaza la función de los riñones cuando fallan."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Dónde quedan los riñones? Pongan las manos donde creen.",
+          "actividad": "Ubicar los riñones con las manos en la espalda (bajo las costillas) y dibujar el recorrido de la orina en una silueta.",
+          "errores": [
+            "Creer que los riñones están en la parte baja del abdomen.",
+            "Confundir uréter con uretra."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "El camino de la orina",
+          "visual": {
+            "tipo": "escena",
+            "id": "exc-urinario",
+            "fases": [
+              { "id": "rinones", "nombre": "Riñones", "texto": "Reciben la sangre, la filtran y forman la orina." },
+              { "id": "ureteres", "nombre": "Uréteres", "texto": "Dos tubos llevan la orina hasta la vejiga." },
+              { "id": "vejiga", "nombre": "Vejiga", "texto": "Una bolsa muscular la guarda." },
+              { "id": "uretra", "nombre": "Uretra", "texto": "Por aquí sale la orina del cuerpo." }
+            ]
+          }
+        },
+        {
+          "titulo": "Un filtro que no para",
+          "visual": { "tipo": "cifra", "icono": "🫘", "valor": "≈ 1 millón", "texto": "de nefronas tiene cada riñón" }
+        }
+      ],
+      "juego": "urinario-juego",
+      "preguntas": [
+        {
+          "id": "cu-ex-3",
+          "enunciado": "¿Qué órgano guarda la orina?",
+          "opciones": ["La vejiga", "El riñón", "El uréter", "La uretra"],
+          "correcta": 0,
+          "explicacion": "Se estira a medida que se llena."
+        },
+        {
+          "id": "cu-ex-4",
+          "enunciado": "¿Qué lleva la orina del riñón a la vejiga?",
+          "opciones": ["Los uréteres", "La uretra", "La arteria renal", "El intestino"],
+          "correcta": 0,
+          "explicacion": "La uretra la saca del cuerpo."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "nefrona",
+      "titulo": "La nefrona forma la orina",
+      "resumen": "Filtra todo lo pequeño, recupera lo que sirve y suelta lo que sobra: lo que queda es la orina.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "intermedio",
+      "requiere": ["sistema-urinario"],
+      "ficha": {
+        "idea": "La orina se forma en tres pasos. En la filtración, la sangre pasa a presión por el glomérulo, un ovillo de capilares rodeado por una cápsula; el agua, la glucosa, las sales y la urea salen de la sangre hacia el túbulo, mientras que las células y las proteínas, demasiado grandes, se quedan. En la reabsorción, a lo largo del túbulo, lo que sirve vuelve a la sangre: toda la glucosa, casi toda el agua y muchas sales. En la secreción, la sangre suelta al túbulo algunas sustancias que sobran, como restos de medicamentos o el exceso de ciertas sales. Lo que queda en el túbulo es la orina: agua, urea y sales. Cada día se filtran unos 180 litros y solo sale alrededor de litro y medio.",
+        "cuaderno": {
+          "facil": [
+            "Filtración, reabsorción y secreción.",
+            "La orina tiene agua, urea y sales."
+          ],
+          "media": [
+            "En el glomérulo se filtra; en el túbulo se recupera lo que sirve."
+          ],
+          "avanzada": [
+            "Si aparece glucosa en la orina, el riñón no alcanza a recuperarla: es una señal de diabetes."
+          ]
+        },
+        "docente": {
+          "abrir": "Si se filtran 180 litros al día, ¿por qué no orinamos 180 litros?",
+          "actividad": "Filtrar agua con arena, sal y azúcar en un filtro de papel, y discutir qué pasó el filtro y qué tendría que «recuperar» la nefrona.",
+          "errores": [
+            "Creer que el riñón solo filtra, sin recuperar nada.",
+            "Pensar que la orina normal tiene glucosa o proteínas."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Dentro de una nefrona",
+          "visual": {
+            "tipo": "escena",
+            "id": "exc-nefrona",
+            "fases": [
+              { "id": "nefrona", "nombre": "La nefrona", "texto": "Un glomérulo y un túbulo largo rodeado de capilares." },
+              { "id": "filtracion", "nombre": "Filtración", "texto": "El agua y las moléculas pequeñas salen de la sangre." },
+              { "id": "reabsorcion", "nombre": "Reabsorción", "texto": "Lo que sirve vuelve a la sangre." },
+              { "id": "secrecion", "nombre": "Secreción", "texto": "La sangre suelta lo que le sobra.", "nivel": "avanzado" },
+              { "id": "orina", "nombre": "Orina", "texto": "Lo que queda: agua, urea y sales." }
+            ]
+          }
+        },
+        {
+          "titulo": "Casi todo vuelve",
+          "visual": { "tipo": "cifra", "icono": "🔁", "valor": "180 L → 1,5 L", "texto": "más del 99 % del agua filtrada regresa a la sangre" }
+        }
+      ],
+      "juego": "nefrona-juego",
+      "preguntas": [
+        {
+          "id": "cu-ex-5",
+          "enunciado": "¿Qué pasa con la glucosa en la nefrona de una persona sana?",
+          "opciones": [
+            "Se filtra y luego vuelve toda a la sangre",
+            "No se filtra nunca",
+            "Sale toda en la orina",
+            "Se convierte en urea"
+          ],
+          "correcta": 0,
+          "explicacion": "Se reabsorbe por completo."
+        },
+        {
+          "id": "cu-ex-6",
+          "enunciado": "¿Por qué los glóbulos rojos no pasan a la orina?",
+          "opciones": [
+            "Son demasiado grandes para el filtro del glomérulo",
+            "Se reabsorben en el túbulo",
+            "Se destruyen en la vejiga",
+            "Los retiene la uretra"
+          ],
+          "correcta": 0,
+          "explicacion": "Sangre en la orina indica un problema."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "regulacion-agua",
+      "titulo": "El riñón regula el agua",
+      "resumen": "Si falta agua, el riñón ahorra (orina poca y oscura); si sobra, la deja ir (mucha y clara).",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "basico",
+      "requiere": ["sistema-urinario"],
+      "diagrama": "rinon-agua",
+      "ficha": {
+        "idea": "El riñón no solo saca desechos: también decide cuánta agua se pierde, y así mantiene el equilibrio del agua del cuerpo. Cuando falta agua (calor, sudor, poca bebida), la sangre se concentra; el hipotálamo lo detecta, da sed y hace que la hipófisis suelte la hormona antidiurética (ADH). La ADH hace que el túbulo devuelva más agua a la sangre: la orina sale poca y oscura. Cuando sobra agua, baja la ADH, el riñón deja ir el agua y la orina sale abundante y clara. Hay un mínimo: el riñón necesita algo de agua para sacar la urea, así que si no se bebe, el cuerpo se deshidrata. Es un ejemplo de retroalimentación negativa, como se vio en homeostasis.",
+        "cuaderno": {
+          "facil": [
+            "Falta agua: orina poca y oscura. Sobra agua: mucha y clara.",
+            "El riñón mantiene el equilibrio del agua."
+          ],
+          "media": [
+            "Sin agua suficiente, el cuerpo se deshidrata aunque el riñón ahorre."
+          ],
+          "avanzada": [
+            "La ADH (hormona antidiurética), de la hipófisis, hace que el túbulo recupere agua."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué la primera orina de la mañana es más oscura?",
+          "actividad": "Con el simulador, encontrar cuánta agua hay que tomar en un día de mucho sudor para no deshidratarse; luego hacer la tabla de colores de orina para la casa.",
+          "errores": [
+            "Creer que tomar mucha agua «limpia» más el riñón sin límite.",
+            "Pensar que la orina oscura siempre es enfermedad: casi siempre es falta de agua."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "El riñón ahorra o suelta",
+          "visual": {
+            "tipo": "compara",
+            "izq": { "icono": "🟧", "titulo": "Falta agua", "puntos": ["Sube la ADH.", "El riñón recupera agua.", "Orina poca y oscura."] },
+            "der": { "icono": "🟨", "titulo": "Sobra agua", "puntos": ["Baja la ADH.", "El riñón deja ir el agua.", "Orina mucha y clara."] }
+          }
+        },
+        {
+          "titulo": "Retroalimentación negativa",
+          "nivel": "intermedio",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "🥵", "titulo": "Estímulo", "texto": "Falta agua: la sangre se concentra." },
+              { "icono": "🧠", "titulo": "Centro de control", "texto": "El hipotálamo da sed y ordena soltar ADH." },
+              { "icono": "🫘", "titulo": "Efector", "texto": "El riñón recupera agua." },
+              { "icono": "⚖️", "titulo": "Respuesta", "texto": "El agua de la sangre se normaliza." }
+            ]
+          },
+          "atajo": { "texto": "Más sobre esto: el asa de control", "tema": "homeostasis", "bloque": "retroalimentacion" }
+        }
+      ],
+      "juego": "orina-juego",
+      "preguntas": [
+        {
+          "id": "cu-ex-7",
+          "enunciado": "Tras un día de mucho sol y poca agua, ¿cómo será la orina?",
+          "opciones": ["Poca y oscura", "Mucha y clara", "Igual que siempre", "No habrá orina"],
+          "correcta": 0,
+          "explicacion": "El riñón ahorra agua."
+        },
+        {
+          "id": "cu-ex-8",
+          "enunciado": "¿Qué hace la hormona antidiurética (ADH)?",
+          "opciones": [
+            "Hace que el riñón recupere más agua",
+            "Hace que el riñón suelte más agua",
+            "Produce la urea",
+            "Llena la vejiga"
+          ],
+          "correcta": 0,
+          "explicacion": "«Antidiurética»: en contra de orinar mucho."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "peces-agua",
+      "titulo": "Peces de río y de mar",
+      "resumen": "Al pez de río le entra agua y orina mucho; el de mar pierde agua, bebe y saca la sal por las branquias.",
+      "anio": 5,
+      "etiqueta": "Paso 5",
+      "nivel": "intermedio",
+      "requiere": ["regulacion-agua"],
+      "ficha": {
+        "idea": "Por ósmosis, el agua pasa de donde hay menos sales a donde hay más. Un pez de río, como el bocachico, tiene el cuerpo más salado que el agua donde vive, así que le entra agua sin parar por las branquias y la piel: no bebe, orina mucho y muy diluido, y toma sales del agua con las branquias. Un pez de mar, como el pargo, vive en un agua más salada que su cuerpo, así que pierde agua: bebe agua de mar, orina poco y elimina la sal de más con células especiales de las branquias. Algunos peces, como el salmón, pasan del río al mar y cambian de estrategia. Además, cada grupo de animales elimina el nitrógeno de distinta forma: los peces como amoníaco, los mamíferos como urea, y las aves, reptiles e insectos como ácido úrico, que casi no necesita agua.",
+        "cuaderno": {
+          "facil": [
+            "Pez de río: le entra agua; orina mucho.",
+            "Pez de mar: pierde agua; bebe y saca la sal por las branquias."
+          ],
+          "media": [
+            "El agua se mueve por ósmosis hacia donde hay más sales."
+          ],
+          "avanzada": [
+            "Desechos de nitrógeno: amoníaco (peces), urea (mamíferos), ácido úrico (aves, reptiles, insectos)."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Qué le pasaría a un bocachico si lo echamos al mar?",
+          "actividad": "Poner rodajas de pepino en agua dulce y en agua muy salada durante 30 minutos y comparar cuál se ablanda y por qué.",
+          "errores": [
+            "Creer que los peces de mar no beben agua.",
+            "Pensar que la sal entra y sale como el agua, sin gasto de energía."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Dos problemas opuestos",
+          "visual": {
+            "tipo": "escena",
+            "id": "exc-peces",
+            "fases": [
+              { "id": "rio", "nombre": "Pez de río", "texto": "Le entra agua: no bebe y orina mucho y diluido." },
+              { "id": "mar", "nombre": "Pez de mar", "texto": "Pierde agua: bebe agua de mar, orina poco y saca la sal por las branquias." }
+            ]
+          }
+        },
+        {
+          "titulo": "Tres formas de botar el nitrógeno",
+          "nivel": "avanzado",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "🐟", "titulo": "Amoníaco", "texto": "Peces: muy tóxico, pero el agua lo diluye." },
+              { "icono": "🐄", "titulo": "Urea", "texto": "Mamíferos y anfibios adultos: menos tóxica." },
+              { "icono": "🐦", "titulo": "Ácido úrico", "texto": "Aves, reptiles, insectos: casi sin agua (lo blanco del excremento de las aves)." }
+            ]
+          }
+        }
+      ],
+      "juego": "peces-agua-juego",
+      "preguntas": [
+        {
+          "id": "cu-ex-9",
+          "enunciado": "¿Por qué un pez de río orina mucho?",
+          "opciones": [
+            "Porque le entra agua por ósmosis todo el tiempo",
+            "Porque bebe mucha agua",
+            "Porque come mucho",
+            "Porque pierde agua por las branquias"
+          ],
+          "correcta": 0,
+          "explicacion": "Su cuerpo es más salado que el agua del río."
+        },
+        {
+          "id": "cu-ex-10",
+          "enunciado": "¿Cómo elimina un pez de mar la sal que le sobra?",
+          "opciones": ["Por las branquias", "En el sudor", "En las heces solamente", "No la elimina"],
+          "correcta": 0,
+          "explicacion": "Células especiales la bombean hacia afuera."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}
