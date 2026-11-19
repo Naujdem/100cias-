@@ -1,0 +1,512 @@
+{
+  "id": "sistema-inmune",
+  "materia": "biologia",
+  "area": "cuerpo",
+  "titulo": "Sistema inmune",
+  "subtema": "Cómo se defiende el cuerpo",
+  "orden": 65,
+  "etiqueta": "5",
+  "vistas": ["ruta"],
+  "tituloVista": "Ruta de las defensas",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Reconocer las tres líneas de defensa del cuerpo.",
+    "Explicar cómo actúan las barreras y la defensa innata (inflamación, fagocitosis, fiebre).",
+    "Describir la defensa adaptativa: antígenos, linfocitos, anticuerpos y memoria.",
+    "Explicar cómo funcionan las vacunas y la inmunidad de rebaño.",
+    "Reconocer alergias, enfermedades autoinmunes e inmunodeficiencias, y el uso correcto de los antibióticos."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con un texto escolar de biología, los DBA de Ciencias Naturales y el Programa Ampliado de Inmunizaciones (PAI) del Ministerio de Salud. El simulador de rebaño es un modelo de juguete."
+  ],
+  "bloques": [
+    {
+      "id": "lineas-defensa",
+      "titulo": "Tres líneas de defensa",
+      "resumen": "Barreras que impiden la entrada, una defensa innata rápida y una adaptativa específica y con memoria.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "Estamos rodeados de microbios. La mayoría son inofensivos o útiles, pero algunos, llamados patógenos (ciertas bacterias, virus, hongos y parásitos), causan enfermedades. El sistema inmune nos defiende con tres líneas. La primera son las barreras, que impiden la entrada: la piel, el moco, las lágrimas, el ácido del estómago. Si un microbio las cruza, actúa la segunda línea, la defensa innata: rápida y general, ataca igual a cualquier invasor (inflamación, fagocitos, fiebre). Si la infección sigue, entra la tercera línea, la defensa adaptativa: más lenta la primera vez, pero específica para ese microbio y con memoria. No es un órgano solo: participan la médula ósea, el timo, los ganglios linfáticos, el bazo y los glóbulos blancos.",
+        "cuaderno": {
+          "facil": [
+            "Patógeno: microbio que causa enfermedad.",
+            "Tres líneas: barreras, defensa innata y defensa adaptativa."
+          ],
+          "media": [
+            "Innata: rápida y general. Adaptativa: específica y con memoria."
+          ],
+          "avanzada": [
+            "Órganos del sistema inmune: médula ósea, timo, ganglios linfáticos y bazo."
+          ]
+        },
+        "docente": {
+          "abrir": "Si hay microbios en todas partes, ¿por qué no estamos enfermos todo el tiempo?",
+          "actividad": "Representar un castillo: murallas (barreras), guardias que atacan a cualquiera (innata) y francotiradores entrenados contra un enemigo (adaptativa).",
+          "errores": [
+            "Creer que todos los microbios son dañinos.",
+            "Pensar que el sistema inmune es un solo órgano."
+          ],
+          "minutos": 20
+        },
+        "analogia": {
+          "titulo": "Un castillo",
+          "texto": "Murallas, guardias que atacan a cualquier intruso y un ejército entrenado que reconoce a cada enemigo y lo recuerda."
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Por qué casi nadie se enferma dos veces de varicela?",
+            "opciones": ["Porque el cuerpo recuerda al virus", "Porque el virus desaparece del mundo", "Porque la piel se vuelve más gruesa", "Por suerte"],
+            "correcta": 0,
+            "explicacion": "La defensa adaptativa tiene memoria."
+          }
+        },
+        {
+          "titulo": "Un castillo con tres defensas",
+          "visual": {
+            "tipo": "escena",
+            "id": "inm-lineas",
+            "fases": [
+              { "id": "microbios", "nombre": "Los invasores", "texto": "Bacterias, virus, hongos y parásitos buscan entrar." },
+              { "id": "barreras", "nombre": "Barreras", "texto": "Piel, moco, lágrimas y ácido: la primera muralla." },
+              { "id": "innata", "nombre": "Defensa innata", "texto": "Rápida: inflamación y fagocitos atacan a cualquiera." },
+              { "id": "adaptativa", "nombre": "Defensa adaptativa", "texto": "Específica: anticuerpos contra un solo microbio, y memoria." }
+            ]
+          }
+        }
+      ],
+      "juego": "lineas-juego",
+      "preguntas": [
+        {
+          "id": "cu-in-1",
+          "enunciado": "¿Qué caracteriza a la defensa adaptativa?",
+          "opciones": ["Es específica y tiene memoria", "Es la primera en actuar", "Ataca igual a cualquier microbio", "Es la piel"],
+          "correcta": 0,
+          "explicacion": "Reconoce a cada microbio y lo recuerda."
+        },
+        {
+          "id": "cu-in-2",
+          "enunciado": "¿Qué es un patógeno?",
+          "opciones": ["Un microbio que causa enfermedad", "Un glóbulo blanco", "Un tipo de vacuna", "Cualquier bacteria"],
+          "correcta": 0,
+          "explicacion": "Muchas bacterias son útiles: no todas son patógenas."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "barreras",
+      "titulo": "Las barreras",
+      "resumen": "Piel, moco, cilios, lágrimas, ácido del estómago y bacterias buenas impiden que los microbios entren.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "requiere": ["lineas-defensa"],
+      "ficha": {
+        "idea": "La primera línea de defensa no deja entrar a los microbios. La piel sana es una capa dura y seca, con un sudor algo ácido. Las vías respiratorias tienen moco que atrapa polvo y microbios, y cilios que lo barren hacia la garganta; la tos y los estornudos lo expulsan. Las lágrimas y la saliva lavan y contienen lisozima, una enzima que rompe la pared de las bacterias. El ácido del estómago mata muchos microbios de la comida. Y las bacterias buenas de la piel y el intestino (la microbiota) ocupan el espacio y no dejan crecer a las dañinas. Por eso una herida, una quemadura o tomar antibióticos sin necesidad abren la puerta a infecciones.",
+        "cuaderno": {
+          "facil": [
+            "Barreras: piel, moco, lágrimas, saliva y ácido del estómago.",
+            "La microbiota también defiende."
+          ],
+          "media": [
+            "Lisozima: enzima de las lágrimas y la saliva que rompe bacterias."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Por qué hay que lavar y tapar una herida aunque sea pequeña?",
+          "actividad": "Con brillantina en las manos, simular microbios: ver hasta dónde llegan tras saludar y cuánto se quita con agua sola y con jabón.",
+          "errores": [
+            "Creer que la tos y el moco son solo síntomas malos: también son defensas.",
+            "Pensar que hay que eliminar todas las bacterias de la piel."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Murallas del cuerpo",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "🧴", "titulo": "Piel", "texto": "Una capa dura y seca que no deja pasar." },
+              { "icono": "👃", "titulo": "Moco y cilios", "texto": "Atrapan y barren; la tos expulsa." },
+              { "icono": "😢", "titulo": "Lágrimas y saliva", "texto": "Lavan y tienen lisozima." },
+              { "icono": "🧪", "titulo": "Ácido del estómago", "texto": "Mata microbios de la comida." },
+              { "icono": "🦠", "titulo": "Bacterias buenas", "texto": "Ocupan el lugar de las dañinas." }
+            ]
+          }
+        },
+        {
+          "titulo": "El mejor escudo",
+          "visual": { "tipo": "cifra", "icono": "🧼", "valor": "20 segundos", "texto": "de lavado de manos con jabón quitan la mayoría de los microbios" }
+        }
+      ],
+      "juego": "barreras-juego",
+      "preguntas": [
+        {
+          "id": "cu-in-3",
+          "enunciado": "¿Qué hacen los cilios de las vías respiratorias?",
+          "opciones": ["Barren el moco con los microbios atrapados", "Fabrican anticuerpos", "Se comen las bacterias", "Producen ácido"],
+          "correcta": 0,
+          "explicacion": "Lo llevan a la garganta para tragarlo o expulsarlo."
+        },
+        {
+          "id": "cu-in-4",
+          "enunciado": "¿Por qué una quemadura grande se infecta con facilidad?",
+          "opciones": ["Porque se pierde la barrera de la piel", "Porque el calor atrae bacterias", "Porque se acaban los anticuerpos", "Porque se seca el moco"],
+          "correcta": 0,
+          "explicacion": "Sin piel, los microbios entran directo."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "defensa-innata",
+      "titulo": "La defensa innata",
+      "resumen": "Si un microbio entra, la inflamación trae sangre y glóbulos blancos que se lo comen; a veces sube la fiebre.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "basico",
+      "requiere": ["barreras"],
+      "ficha": {
+        "idea": "Cuando un microbio cruza la barrera, por ejemplo por una herida con una espina, las células dañadas mandan señales químicas. Los vasos sanguíneos cercanos se abren y dejan salir líquido: es la inflamación, con sus cuatro señales clásicas: enrojecimiento, calor, hinchazón y dolor. La sangre trae glóbulos blancos que salen del vaso y van al sitio; algunos, los fagocitos (como los neutrófilos y los macrófagos), se comen a los microbios rodeándolos, lo que se llama fagocitosis. El pus son glóbulos blancos y bacterias muertos. Si la infección se extiende, el hipotálamo sube la temperatura: la fiebre hace más difícil la vida de muchos microbios y acelera las defensas. Esta defensa es rápida y está lista desde que nacemos, pero no distingue entre un microbio y otro.",
+        "cuaderno": {
+          "facil": [
+            "Inflamación: rojo, calor, hinchazón y dolor.",
+            "Fagocitosis: los glóbulos blancos se comen a los microbios."
+          ],
+          "media": [
+            "La fiebre ayuda a defenderse; el pus son glóbulos blancos muertos."
+          ],
+          "avanzada": [
+            "Neutrófilos y macrófagos son fagocitos; los macrófagos además avisan a la defensa adaptativa."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué se hincha y se pone roja una picadura o una espina enterrada?",
+          "actividad": "Representar la fagocitosis con un estudiante que rodea con los brazos a otro (la bacteria) mientras el resto explica cada paso.",
+          "errores": [
+            "Creer que la inflamación siempre es mala; es parte de la defensa.",
+            "Pensar que la fiebre es la enfermedad y no una respuesta."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Una espina en el dedo",
+          "visual": {
+            "tipo": "escena",
+            "id": "inm-fagocito",
+            "fases": [
+              { "id": "herida", "nombre": "La herida", "texto": "Una espina rompe la piel y entran bacterias." },
+              { "id": "inflamacion", "nombre": "Inflamación", "texto": "Los vasos se abren: rojo, calor, hinchazón y dolor." },
+              { "id": "llegan", "nombre": "Llegan las defensas", "texto": "Los glóbulos blancos salen del vaso y van al lugar." },
+              { "id": "fagocitosis", "nombre": "Fagocitosis", "texto": "Rodean a las bacterias y se las «comen»." }
+            ]
+          }
+        },
+        {
+          "titulo": "La fiebre, una aliada",
+          "nivel": "intermedio",
+          "puntos": [
+            "El hipotálamo sube el valor de la temperatura.",
+            "A muchos microbios les cuesta crecer con más calor."
+          ],
+          "visual": { "tipo": "cifra", "icono": "🌡️", "valor": "> 38 °C", "texto": "se considera fiebre (aproximado)" },
+          "atajo": { "texto": "Más sobre esto: la temperatura", "tema": "homeostasis", "bloque": "temperatura" }
+        }
+      ],
+      "juego": "innata-juego",
+      "preguntas": [
+        {
+          "id": "cu-in-5",
+          "enunciado": "¿Por qué una zona inflamada se pone roja y caliente?",
+          "opciones": ["Porque llega más sangre", "Porque las bacterias producen calor", "Porque se quema la piel", "Porque sale pus"],
+          "correcta": 0,
+          "explicacion": "Los vasos se abren para traer defensas."
+        },
+        {
+          "id": "cu-in-6",
+          "enunciado": "¿Qué es la fagocitosis?",
+          "opciones": [
+            "Un glóbulo blanco rodea y se come a un microbio",
+            "La fabricación de anticuerpos",
+            "La subida de la temperatura",
+            "La formación de moco"
+          ],
+          "correcta": 0,
+          "explicacion": "La hacen los fagocitos, como los macrófagos."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "defensa-adaptativa",
+      "titulo": "La defensa adaptativa",
+      "resumen": "Los linfocitos reconocen los antígenos de cada microbio, fabrican anticuerpos a la medida y guardan memoria.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "intermedio",
+      "requiere": ["defensa-innata"],
+      "ficha": {
+        "idea": "Cada microbio tiene en su superficie moléculas propias, los antígenos, que son como su cara. Los linfocitos son glóbulos blancos especiales: cada uno reconoce un solo antígeno. Cuando un linfocito encuentra el suyo, se multiplica. Los linfocitos B fabrican anticuerpos, proteínas en forma de Y que encajan en el antígeno como una llave en su cerradura: marcan al microbio, lo inmovilizan y facilitan que los fagocitos lo destruyan. Los linfocitos T ayudan a coordinar la respuesta y destruyen las células que ya están infectadas por virus. Al terminar la infección, quedan linfocitos de memoria: si el mismo microbio vuelve, la respuesta es mucho más rápida y fuerte, y casi siempre no alcanzamos a enfermarnos. La primera vez, en cambio, la respuesta tarda una o dos semanas.",
+        "cuaderno": {
+          "facil": [
+            "Antígeno: la «cara» del microbio. Anticuerpo: la proteína que la reconoce.",
+            "Quedan linfocitos de memoria."
+          ],
+          "media": [
+            "Linfocitos B: anticuerpos. Linfocitos T: coordinan y destruyen células infectadas.",
+            "Antígeno y anticuerpo encajan como llave y cerradura."
+          ],
+          "avanzada": [
+            "Los linfocitos B y T maduran en la médula ósea y el timo."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Cómo sabe el cuerpo contra qué microbio está peleando?",
+          "actividad": "Recortar en cartulina «antígenos» de formas distintas y «anticuerpos» que solo encajan con uno: cada estudiante busca su pareja.",
+          "errores": [
+            "Creer que un mismo anticuerpo sirve contra todos los microbios.",
+            "Confundir antígeno con anticuerpo."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Llave y cerradura",
+          "visual": {
+            "tipo": "escena",
+            "id": "inm-anticuerpos",
+            "fases": [
+              { "id": "antigeno", "nombre": "Antígenos", "texto": "El virus tiene en su superficie moléculas que lo identifican." },
+              { "id": "linfocito", "nombre": "Linfocito B", "texto": "Uno de los linfocitos reconoce ese antígeno y se multiplica." },
+              { "id": "anticuerpos", "nombre": "Anticuerpos", "texto": "Fabrica anticuerpos que encajan en el antígeno y marcan al virus." },
+              { "id": "memoria", "nombre": "Memoria", "texto": "Quedan linfocitos de memoria para la próxima vez." }
+            ]
+          }
+        },
+        {
+          "titulo": "Dos tipos de linfocitos",
+          "visual": {
+            "tipo": "compara",
+            "izq": { "icono": "🅱️", "titulo": "Linfocitos B", "puntos": ["Fabrican anticuerpos.", "Atacan a los microbios en la sangre."] },
+            "der": { "icono": "🇹", "titulo": "Linfocitos T", "puntos": ["Coordinan la respuesta.", "Destruyen células infectadas."] }
+          }
+        }
+      ],
+      "juego": "anticuerpos-juego",
+      "preguntas": [
+        {
+          "id": "cu-in-7",
+          "enunciado": "¿Qué es un anticuerpo?",
+          "opciones": [
+            "Una proteína que reconoce un antígeno específico",
+            "Un microbio debilitado",
+            "Un glóbulo rojo",
+            "Un medicamento contra bacterias"
+          ],
+          "correcta": 0,
+          "explicacion": "Lo fabrican los linfocitos B."
+        },
+        {
+          "id": "cu-in-8",
+          "enunciado": "¿Por qué la segunda infección por el mismo microbio suele ser más leve?",
+          "opciones": [
+            "Por los linfocitos de memoria",
+            "Porque el microbio se debilita",
+            "Porque la piel ya lo conoce",
+            "Por la fiebre"
+          ],
+          "correcta": 0,
+          "explicacion": "Responden rápido, antes de que te enfermes."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "vacunas",
+      "titulo": "Las vacunas",
+      "resumen": "Una vacuna enseña al sistema inmune a reconocer un microbio sin pasar por la enfermedad; si se vacunan muchos, se protege a todos.",
+      "anio": 5,
+      "etiqueta": "Paso 5",
+      "nivel": "basico",
+      "requiere": ["lineas-defensa"],
+      "diagrama": "inmunidad-rebano",
+      "ficha": {
+        "idea": "Una vacuna contiene el microbio muerto o debilitado, una parte de él (un antígeno) o las instrucciones para que nuestras células fabriquen ese antígeno. El sistema inmune responde como si fuera una infección, pero sin la enfermedad, y guarda linfocitos de memoria. Si después llega el microbio de verdad, la respuesta es rápida y fuerte. Algunas vacunas necesitan refuerzos para mantener la memoria. Cuando una gran parte de la comunidad está vacunada, el microbio no encuentra a quién pasar y el contagio se apaga: es la inmunidad de rebaño, que protege también a los bebés y a las personas que no pueden vacunarse. Gracias a las vacunas se erradicó la viruela (1980) y en Colombia casi desaparecieron enfermedades como el sarampión y la polio, que vuelven si baja la vacunación.",
+        "contexto": [
+          {
+            "titulo": "Edward Jenner, 1796",
+            "texto": "Notó que las ordeñadoras que se contagiaban la viruela de las vacas no enfermaban de viruela humana. De «vaca» viene la palabra vacuna."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "La vacuna enseña al cuerpo a reconocer un microbio sin enfermarse.",
+            "Deja linfocitos de memoria."
+          ],
+          "media": [
+            "Inmunidad de rebaño: si muchos se vacunan, el microbio no circula y protege a todos."
+          ],
+          "avanzada": [
+            "Tipos: microbio muerto o debilitado, una parte (antígeno) o ARN mensajero con las instrucciones."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué si una vacuna protege al que se la pone, hay que vacunar a casi todos?",
+          "actividad": "Con el simulador, buscar el porcentaje de vacunados a partir del cual el contagio casi nunca se riega (repetir con R); revisar el carné de vacunación propio.",
+          "errores": [
+            "Creer que las vacunas curan enfermedades que ya se tienen.",
+            "Pensar que si casi nadie se enferma ya no hace falta vacunar."
+          ],
+          "minutos": 35
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Un ensayo sin enfermedad",
+          "visual": {
+            "tipo": "escena",
+            "id": "inm-vacuna",
+            "fases": [
+              { "id": "sin", "nombre": "Sin vacuna", "texto": "La primera respuesta tarda y mientras tanto te enfermas." },
+              { "id": "vacuna", "nombre": "Con vacuna", "texto": "La vacuna provoca una respuesta pequeña, sin enfermedad." },
+              { "id": "segunda", "nombre": "El microbio llega", "texto": "La memoria responde rápido y fuerte: no alcanzas a enfermarte." }
+            ]
+          }
+        },
+        {
+          "titulo": "Protegerse es proteger",
+          "puntos": [
+            "Si muchos se vacunan, el microbio no tiene a quién pasar.",
+            "Así se protege a los bebés y a quien no puede vacunarse."
+          ],
+          "visual": { "tipo": "cifra", "icono": "🌍", "valor": "1980", "texto": "año en que se declaró erradicada la viruela gracias a las vacunas" }
+        }
+      ],
+      "juego": "vacunas-juego",
+      "preguntas": [
+        {
+          "id": "cu-in-9",
+          "enunciado": "¿Cómo protege una vacuna?",
+          "opciones": [
+            "Hace que el cuerpo forme memoria sin pasar por la enfermedad",
+            "Mata a todos los microbios del cuerpo",
+            "Reemplaza a los glóbulos blancos",
+            "Funciona como un antibiótico"
+          ],
+          "correcta": 0,
+          "explicacion": "El cuerpo aprende con un antígeno inofensivo."
+        },
+        {
+          "id": "cu-in-10",
+          "enunciado": "¿Qué es la inmunidad de rebaño?",
+          "opciones": [
+            "La protección de todos cuando una gran parte se vacuna",
+            "La inmunidad de los animales de granja",
+            "Enfermarse todos al mismo tiempo",
+            "Una vacuna para el ganado"
+          ],
+          "correcta": 0,
+          "explicacion": "El microbio deja de circular."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "fallas-inmune",
+      "titulo": "Cuando las defensas fallan",
+      "resumen": "Alergias, enfermedades autoinmunes e inmunodeficiencias; y por qué los antibióticos no sirven contra los virus.",
+      "anio": 6,
+      "etiqueta": "Paso 6",
+      "nivel": "intermedio",
+      "requiere": ["defensa-adaptativa"],
+      "ficha": {
+        "idea": "El sistema inmune también puede fallar. En las alergias reacciona de forma exagerada contra algo inofensivo, como el polen, el polvo, el maní o la picadura de una abeja; una reacción muy fuerte (anafilaxia) es una emergencia. En las enfermedades autoinmunes ataca células propias, como en la diabetes tipo 1, donde destruye las células del páncreas que hacen insulina. En las inmunodeficiencias queda débil, como cuando el VIH destruye los linfocitos T y aparecen infecciones que normalmente no enferman. Por último, los antibióticos matan bacterias pero no sirven contra los virus como la gripa; usarlos sin necesidad o no terminar el tratamiento selecciona bacterias resistentes, un problema grave de salud en todo el mundo.",
+        "cuaderno": {
+          "facil": [
+            "Alergia: reacción exagerada a algo inofensivo.",
+            "Los antibióticos no sirven contra los virus."
+          ],
+          "media": [
+            "Autoinmune: ataca al propio cuerpo. Inmunodeficiencia: defensas débiles (VIH)."
+          ],
+          "avanzada": [
+            "El mal uso de antibióticos selecciona bacterias resistentes."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Sirve tomar antibiótico para la gripa?",
+          "actividad": "Leer la etiqueta de un antibiótico y de un antigripal y comparar contra qué sirve cada uno; discutir por qué hay que terminar el tratamiento.",
+          "errores": [
+            "Creer que los antibióticos curan cualquier infección.",
+            "Pensar que la alergia es una infección."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Tres formas de fallar",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "🤧", "titulo": "Exagera", "texto": "Alergias: polen, polvo, maní." },
+              { "icono": "🎯", "titulo": "Se equivoca de blanco", "texto": "Autoinmunes: ataca al propio cuerpo." },
+              { "icono": "🪫", "titulo": "Queda débil", "texto": "Inmunodeficiencias, como por el VIH." }
+            ]
+          }
+        },
+        {
+          "titulo": "Antibióticos: solo contra bacterias",
+          "visual": {
+            "tipo": "compara",
+            "izq": { "icono": "🦠", "titulo": "Bacterias", "puntos": ["Infección de garganta por estreptococo.", "El antibiótico sirve si lo receta el médico."] },
+            "der": { "icono": "🤒", "titulo": "Virus", "puntos": ["Gripa, sarampión, dengue.", "El antibiótico no sirve; algunas tienen vacuna."] }
+          },
+          "atajo": { "texto": "Más sobre esto: bacterias resistentes", "tema": "seleccion-natural", "bloque": "hoy" }
+        }
+      ],
+      "juego": "fallas-inmune-juego",
+      "preguntas": [
+        {
+          "id": "cu-in-11",
+          "enunciado": "¿Qué es una alergia?",
+          "opciones": [
+            "Una reacción exagerada contra algo inofensivo",
+            "Una infección por virus",
+            "La falta de glóbulos blancos",
+            "Un efecto de las vacunas"
+          ],
+          "correcta": 0,
+          "explicacion": "El polen o el polvo no son dañinos, pero el cuerpo reacciona."
+        },
+        {
+          "id": "cu-in-12",
+          "enunciado": "¿Por qué no se debe tomar antibiótico para la gripa?",
+          "opciones": [
+            "Porque la gripa la causa un virus y el antibiótico solo mata bacterias",
+            "Porque la gripa es una alergia",
+            "Porque el antibiótico es una vacuna",
+            "Porque la gripa se cura con fiebre"
+          ],
+          "correcta": 0,
+          "explicacion": "Además, el mal uso crea bacterias resistentes."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}

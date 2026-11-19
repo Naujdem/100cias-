@@ -76,6 +76,8 @@ import SimuladorCo2 from './SimuladorCo2.tsx'
 import TermostatoCuerpo from './TermostatoCuerpo.tsx'
 import PulsoEjercicio from './PulsoEjercicio.tsx'
 import RinonAgua from './RinonAgua.tsx'
+import InmunidadRebano from './InmunidadRebano.tsx'
+import { LineasJuego, BarrerasJuego, InnataJuego, AnticuerposJuego, VacunasJuego, FallasInmuneJuego } from './JuegosInmune.tsx'
 import { ExcOrganosJuego, UrinarioJuego, NefronaJuego, OrinaJuego, PecesAguaJuego } from './JuegosExcrecion.tsx'
 import { VentilacionJuego, AlveoloJuego, CorazonJuego, VasosJuego, SangreCompJuego, RespAnimalesJuego } from './JuegosCirculacion.tsx'
 import { NutrientesJuego, DigRecorridoJuego, DigMecanicaJuego, DigAbsorcionJuego, DigAnimalesJuego } from './JuegosDigestion.tsx'
@@ -677,4 +679,11 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'nefrona-juego': NefronaJuego,
   'orina-juego': OrinaJuego,
   'peces-agua-juego': PecesAguaJuego,
+  'inmunidad-rebano': InmunidadRebano,
+  'lineas-juego': LineasJuego,
+  'barreras-juego': BarrerasJuego,
+  'innata-juego': InnataJuego,
+  'anticuerpos-juego': AnticuerposJuego,
+  'vacunas-juego': VacunasJuego,
+  'fallas-inmune-juego': FallasInmuneJuego,
 }
