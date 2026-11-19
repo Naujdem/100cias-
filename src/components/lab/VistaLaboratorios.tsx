@@ -39,6 +39,7 @@ import Colorimetria from './practicas/Colorimetria.tsx'
 import Antiacidos from './practicas/Antiacidos.tsx'
 import Polimeros from './practicas/Polimeros.tsx'
 import CurvaCalentamiento from './practicas/CurvaCalentamiento.tsx'
+import CalorReacciones from './practicas/CalorReacciones.tsx'
 
 // Laboratorios virtuales (PLAN-LABORATORIOS.md). Las prácticas listas van en PRACTICAS; las demás de la
 // ruta salen como «próximamente».
@@ -89,6 +90,7 @@ const PRACTICAS: Entrada[] = [
   { id: 'antiacidos', titulo: 'Antiácidos y amortiguadores', resumen: '¿Qué antiácido neutraliza más «ácido estomacal»? Con repollo morado y dosis contadas; en 11°, agua contra un amortiguador.', grupo: 'Química', desdeGrado: 9, Juego: Antiacidos },
   { id: 'polimeros', titulo: 'Polímeros: slime y bioplástico', resumen: 'Pegante y activador: la proporción decide líquido, slime o caucho. Y un plástico de fécula, con o sin glicerina.', grupo: 'Química', desdeGrado: 6, Juego: Polimeros },
   { id: 'curva-calentamiento', titulo: 'Curva de calentamiento del agua', resumen: 'Hielo al fuego, termómetro y libreta minuto a minuto: la gráfica muestra las mesetas de fusión y ebullición.', grupo: 'Química', desdeGrado: 6, Juego: CurvaCalentamiento },
+  { id: 'calor-reacciones', titulo: 'Reacciones que calientan o enfrían', resumen: 'Disuelve sustancias en vasos de icopor y mide si el agua sube o baja de temperatura: así funcionan las compresas.', grupo: 'Química', desdeGrado: 6, Juego: CalorReacciones },
   { id: 'solucion-molar', titulo: 'Prepara 100 mL de solución 0,5 M de sulfato de cobre', resumen: 'Pesa con la balanza, disuelve, pasa con el embudo, afora gota a gota e invierte el matraz. El color muestra la concentración.', grupo: 'Química', desdeGrado: 9, Juego: SolucionMolar },
 ]
 

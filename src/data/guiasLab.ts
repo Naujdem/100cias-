@@ -4,6 +4,30 @@ import type { Guia } from '../components/lab/GuiaLab.tsx'
 // cuando se crea o se convierte a mesa viva (PLAN-LABORATORIOS.md).
 
 export const GUIAS: Record<string, Guia> = {
+  'calor-reacciones': {
+    objetivo: ['Clasificar disoluciones y reacciones como exotérmicas o endotérmicas midiendo el cambio de temperatura.'],
+    fundamento: [
+      'Los cambios químicos y muchas disoluciones van acompañados de un intercambio de energía con el entorno.',
+      'Exotérmico: libera energía y el agua se calienta (cloruro de calcio, cal viva). Endotérmico: absorbe energía y el agua se enfría (urea, bicarbonato, nitrato de amonio).',
+      'Un vaso de icopor con tapa funciona como calorímetro casero porque pierde poco calor.',
+      'En 11°: q = m·c·ΔT y ΔH = −q ÷ n (kJ/mol).',
+    ],
+    materiales: ['4 vasos de icopor con tapa', 'Termómetro', 'Agua y vinagre', 'Cloruro de calcio (venta para quitar humedad)', 'Urea (abono)', 'Bicarbonato de sodio', 'Sal', 'Cuchara medidora o balanza', 'Varilla'],
+    procedimiento: [
+      'Pon 50 mL de agua en cada vaso y mide su temperatura inicial.',
+      'Agrega 5 g de una sustancia, tapa, revuelve y anota la temperatura más alta o más baja que alcance.',
+      'Repite con las otras sustancias en vasos distintos (bicarbonato también con vinagre).',
+      'Calcula ΔT = T final − T inicial y clasifica cada proceso.',
+      'Desde 11°: calcula q y ΔH por mol con tus datos.',
+    ],
+    seguridad: ['El cloruro de calcio y la cal viva calientan mucho: gafas y guantes; no se tocan con las manos mojadas.', 'La urea y el nitrato de amonio no se comen.', 'Las soluciones van al desagüe con bastante agua; la cal, a la caneca.'],
+    preguntas: [
+      '¿Qué sustancias calentaron el agua y cuáles la enfriaron?',
+      '¿Por qué hay que medir la temperatura antes de echar la sustancia?',
+      '¿Qué pondrías en una compresa caliente? ¿Y en una fría?',
+      'En 11°: calcula el ΔH del cloruro de calcio y compáralo con −81 kJ/mol. ¿Por qué no da igual?',
+    ],
+  },
   'curva-calentamiento': {
     objetivo: ['Construir la curva de calentamiento del agua desde hielo hasta la ebullición e identificar los cambios de estado.'],
     fundamento: [
