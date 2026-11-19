@@ -202,3 +202,55 @@ export function Elodea() {
     </g>
   )
 }
+
+/** tubo de ensayo (alto ≈ 90) con su contenido y una etiqueta corta debajo */
+export function Tubo({ color, etiqueta, capa }: { color: string; etiqueta?: string; capa?: string }) {
+  return (
+    <g>
+      <path d="M-11 4 V34 Q-11 45 0 45 Q11 45 11 34 V4 Z" fill={color} />
+      {capa && <rect x="-11" y="0" width="22" height="5" fill={capa} />}
+      <path d="M-12 -44 V34 Q-12 46 0 46 Q12 46 12 34 V-44" fill="rgba(255,255,255,0.35)" {...T} />
+      {etiqueta && <text y="62" textAnchor="middle" fontSize="10" fontWeight="700" fill="#3a2f22">{etiqueta}</text>}
+    </g>
+  )
+}
+
+/** baño María: olla con agua caliente (ancho ≈ 110) */
+export function BanoMaria({ dentro = false }: { dentro?: boolean }) {
+  return (
+    <g>
+      {dentro && [-24, 0, 24].map((x) => <path key={x} d={`M${x} -40 q6 -8 0 -16 q-6 -8 0 -16`} stroke="#bbb" strokeWidth="2.5" fill="none" />)}
+      <path d="M-52 -30 H52 V30 Q52 40 42 40 H-42 Q-52 40 -52 30 Z" fill="#c9ced3" {...T} />
+      <rect x="-48" y="-22" width="96" height="40" fill="#a9d3f5" opacity="0.8" />
+      {[-30, -8, 16, 34].map((x, k) => <circle key={x} cx={x} cy={8 - (k % 2) * 8} r="3" fill="#fff" opacity="0.8" />)}
+      <rect x="-56" y="40" width="112" height="8" fill="#555" />
+      <text y="64" textAnchor="middle" fontSize="10" fontWeight="700" fill="#3a2f22">{dentro ? 'Con la gradilla' : 'Baño María'}</text>
+    </g>
+  )
+}
+
+/** asa de la gradilla, para llevarla entera */
+export function AsaGradilla() {
+  return (
+    <g>
+      <rect x="-30" y="-6" width="60" height="12" rx="3" fill="#c8a06a" {...T} />
+      <path d="M-18 -6 V-22 H18 V-6" fill="none" {...T} strokeWidth="4" />
+      <text y="22" textAnchor="middle" fontSize="10" fontWeight="700" fill="#3a2f22">Gradilla</text>
+    </g>
+  )
+}
+
+/** hoja de papel con manchas de alimento (ancho ≈ 140) */
+export function HojaPapel({ manchas }: { manchas: { x: number; y: number; color: string; brillo: boolean }[] }) {
+  return (
+    <g>
+      <rect x="-70" y="-44" width="140" height="88" fill="#fdfcf6" {...T} strokeWidth={1.5} />
+      {manchas.map((m, k) => (
+        <g key={k}>
+          <circle cx={m.x} cy={m.y} r="9" fill={m.color} />
+          {m.brillo && <circle cx={m.x - 3} cy={m.y - 3} r="2.5" fill="rgba(255,255,255,0.8)" />}
+        </g>
+      ))}
+    </g>
+  )
+}
