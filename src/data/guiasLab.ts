@@ -4,6 +4,31 @@ import type { Guia } from '../components/lab/GuiaLab.tsx'
 // cuando se crea o se convierte a mesa viva (PLAN-LABORATORIOS.md).
 
 export const GUIAS: Record<string, Guia> = {
+  'seleccion-picos': {
+    objetivo: ['Simular cómo la selección natural cambia una población cuando el alimento disponible favorece una forma de pico.'],
+    fundamento: [
+      'En una población hay variación: no todos los individuos son iguales. Algunas diferencias, como la forma del pico, se heredan.',
+      'Los individuos con rasgos que les sirven mejor en su ambiente comen más, sobreviven y dejan más crías: ese rasgo se vuelve más común con las generaciones. Es la selección natural (Darwin y Wallace).',
+      'Si el ambiente cambia, puede ser favorecido otro rasgo. Ejemplo real: los pinzones de Galápagos estudiados por Peter y Rosemary Grant.',
+    ],
+    materiales: ['Pinzas de ropa, cucharas y pitillos (un «pico» por estudiante)', 'Arroz o lentejas (semillas pequeñas)', 'Fríjoles o maíz seco (semillas grandes)', 'Vasitos con agua y un tubo angosto (flores con néctar)', 'Vasos como «estómagos»', 'Cronómetro', 'Tabla de datos'],
+    procedimiento: [
+      'Repartan los picos: el mismo número de estudiantes con pinza, cuchara y pitillo.',
+      'Esparzan la comida sobre la mesa o el piso según el ambiente que elija el docente (lluvias, sequía o flores).',
+      'Durante 15 segundos, cada «ave» recoge comida solo con su pico y la pone en su vaso.',
+      'Cuenten lo recogido. Las aves que no alcanzan el mínimo «mueren»; las que comen más tienen una cría que hereda su pico (un compañero cambia a ese pico).',
+      'Repitan varias generaciones y anoten cuántas aves hay de cada pico.',
+      'Cambien el ambiente y repitan. Hagan una gráfica de barras por generación.',
+    ],
+    seguridad: ['La comida usada no se come.', 'Cuidado con las puntas de las pinzas.'],
+    preguntas: [
+      '¿Qué pico aumentó en cada ambiente? ¿Por qué?',
+      '¿Algún ave cambió su pico durante la actividad? Entonces, ¿qué es lo que cambia en la selección natural?',
+      '¿Qué se necesita para que haya selección natural?',
+      '¿Qué pasaría con un pico que hoy es raro si el ambiente cambia?',
+      'Busca el caso de los pinzones de Galápagos después de la sequía de 1977.',
+    ],
+  },
   potabilizacion: {
     objetivo: ['Aplicar en orden los pasos de potabilización a una muestra de agua turbia y comprobar su efecto en cada etapa.'],
     fundamento: [
