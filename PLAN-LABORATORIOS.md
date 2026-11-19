@@ -144,6 +144,17 @@ clásicas de los «201 experimentos»; las de bórax o similares, con aviso de s
 7. **Polímeros: slime y bioplástico** (área 5, desde 6°): pegante + bórax (la proporción decide líquido, slime o
    caucho) y bioplástico de fécula con o sin glicerina.
 
+**Más prácticas extra (aprobadas el 19 nov 2026, después de las 1–7):**
+8. **Curva de calentamiento del agua** (Química área 1, desde 6°; DBA 6°-2): hielo al fuego, termómetro minuto a minuto,
+   gráfica t–T con las mesetas de fusión y ebullición.
+9. **Reacciones que calientan o enfrían** (área 3, desde 6°): disolver sustancias y medir si el agua sube o baja de
+   temperatura (compresas frías y calientes); exotérmico y endotérmico.
+10. **Potabilización del agua** (desde 6°; PRAE): agua turbia de la quebrada → alumbre (coagulación) → sedimentar →
+    filtro casero de arena y carbón → desinfección.
+11. **Selección natural con picos** (Biología, área 4; DBA 9°-6): «aves» con pinza, cuchara o pitillo compiten por
+    semillas durante varias generaciones.
+12. **Muestreo con cuadrantes** (Biología, área 3): contar plantas en un potrero virtual; densidad y diversidad.
+
 ## Mesa libre (aprobada el 19 nov 2026)
 Decisiones de JuanMed: abierta desde el inicio (cada práctica suma reactivos al estante); primero solo la Fase 1;
 Supabase va mucho después; solo química por ahora (biología, si se hace, al final).
@@ -169,4 +180,4 @@ Supabase va mucho después; solo química por ahora (biología, si se hace, al f
 
 ## Orden de construcción
 Mesa (0.1) → Química 9 (piloto) → seguridad (0.2) → Biología 1–2 → el resto, una práctica por sesión,
-alternando química y biología → prácticas extra (1–7) → Mesa libre al final (aprobada: ver arriba).
+alternando química y biología → prácticas extra (1–12) → Mesa libre al final (aprobada: ver arriba).
