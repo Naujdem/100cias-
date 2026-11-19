@@ -437,4 +437,31 @@ export const GUIAS: Record<string, Guia> = {
       '¿Qué reactivo se acabó primero cuando quedó bicarbonato en el fondo?',
     ],
   },
+  'ensayo-llama': {
+    objetivo: ['Reconocer metales por el color que dan a la llama e identificar el metal de una muestra desconocida.'],
+    fundamento: [
+      'Al calentar una sal en la llama, los electrones del metal ganan energía y saltan a niveles más altos; al regresar, emiten esa energía como luz de un color característico.',
+      'Cada elemento tiene su propio color: litio, rojo carmín; sodio, amarillo intenso; potasio, violeta pálido; calcio, rojo anaranjado; estroncio, rojo intenso; cobre, verde azulado.',
+      'Con un espectroscopio se ven líneas brillantes en lugares fijos (espectro de emisión): es la huella de cada elemento y una prueba de que la energía de los electrones está cuantizada (modelo de Bohr).',
+      'El sodio da un amarillo tan fuerte que tapa a los demás; el vidrio de cobalto absorbe ese amarillo y deja ver, por ejemplo, el violeta del potasio.',
+    ],
+    materiales: ['Mechero', 'Asa de alambre de nicromo o platino', 'Ácido clorhídrico diluido en un vaso', 'Cloruros de litio, sodio, potasio, calcio, estroncio y cobre', 'Muestra desconocida', 'Vidrio de cobalto (11°)', 'Espectroscopio de mano (desde 9°)'],
+    procedimiento: [
+      'Enciende el mechero y regula una llama azul.',
+      'Limpia el asa metiéndola en el ácido y luego en la llama, hasta que la llama no cambie de color.',
+      'Toma un poco de la primera sal con el asa y llévala a la parte más caliente de la llama. Anota el color.',
+      'Limpia el asa antes de cada muestra nueva y repite con las demás sales.',
+      'Prueba la muestra desconocida y compara su color con tus observaciones.',
+      'Desde 9°, mira la llama con el espectroscopio; en 11°, observa también a través del vidrio de cobalto.',
+    ],
+    seguridad: ['Usa gafas y recógete el cabello: se trabaja con llama.', 'El ácido clorhídrico es corrosivo: no lo toques ni lo huelas directamente.', 'Las sales de litio, estroncio y cobre son tóxicas: no te lleves las manos a la boca y lávalas al terminar.'],
+    preguntas: [
+      '¿Qué color dio cada metal?',
+      '¿De qué metal es la muestra desconocida? ¿Cómo lo supiste?',
+      '¿Por qué hay que limpiar el asa entre una muestra y otra?',
+      '¿Por qué cada elemento da un color diferente?',
+      '¿Para qué sirve el vidrio de cobalto?',
+      '¿Dónde se aprovecha este fenómeno en la vida diaria?',
+    ],
+  },
 }
