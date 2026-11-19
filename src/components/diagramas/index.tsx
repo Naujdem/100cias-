@@ -78,6 +78,8 @@ import PulsoEjercicio from './PulsoEjercicio.tsx'
 import RinonAgua from './RinonAgua.tsx'
 import InmunidadRebano from './InmunidadRebano.tsx'
 import TiempoReaccion from './TiempoReaccion.tsx'
+import GlucosaDia from './GlucosaDia.tsx'
+import { HormonaQueJuego, GlandulasJuego, DiabetesJuego, EstresJuego, HormonasCrecimientoJuego, NervEndoJuego } from './JuegosEndocrino.tsx'
 import { NerMapaJuego, NeuronaJuego, SinapsisJuego, ReflejoJuego, EncefaloJuego, PsicoactivasJuego } from './JuegosNervioso.tsx'
 import { LineasJuego, BarrerasJuego, InnataJuego, AnticuerposJuego, VacunasJuego, FallasInmuneJuego } from './JuegosInmune.tsx'
 import { ExcOrganosJuego, UrinarioJuego, NefronaJuego, OrinaJuego, PecesAguaJuego } from './JuegosExcrecion.tsx'
@@ -695,4 +697,11 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'reflejo-juego': ReflejoJuego,
   'encefalo-juego': EncefaloJuego,
   'psicoactivas-juego': PsicoactivasJuego,
+  'glucosa-dia': GlucosaDia,
+  'hormona-que-juego': HormonaQueJuego,
+  'glandulas-juego': GlandulasJuego,
+  'diabetes-juego': DiabetesJuego,
+  'estres-juego': EstresJuego,
+  'hormonas-crecimiento-juego': HormonasCrecimientoJuego,
+  'nerv-endo-juego': NervEndoJuego,
 }

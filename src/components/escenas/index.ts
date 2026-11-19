@@ -28,6 +28,7 @@ import { EscenaBiodiversidadNiveles, EscenaMegadiversa, EscenaAmenazas, EscenaCo
 import { EscenaLinneo, EscenaLamarck, EscenaCuvier, EscenaLyell, EscenaBeagle, EscenaSeleccion, EscenaSintesis, EscenaRitmos, EscenaFosil, EscenaAnatomia, EscenaEmbriones, EscenaIslas, EscenaMolecular, EscenaPolillas, EscenaMaiz, EscenaResistencia, EscenaTiposSeleccion, EscenaAdaptacion, EscenaFrailejon, EscenaCactus, EscenaMigracion, EscenaMimetismo, EscenaAcervo, EscenaDeriva, EscenaFlujo, EscenaSexual, EscenaEspecie, EscenaAlopatrica, EscenaPoliploidia, EscenaRadiacion, EscenaCategorias, EscenaDominios, EscenaCladograma, EscenaArbolVida, EscenaOxigeno, EscenaTierraFirme, EscenaExtinciones, EscenaFosilesColombia, EscenaHomininos } from './EscenasEvolucion.tsx'
 import { EscenaTerritorio, EscenaCalendario, EscenaPolicultivo, EscenaDialogo } from './EscenasTerritorio.tsx'
 import { EscenaAguaPlaneta, EscenaCuenca, EscenaParamoEsponja } from './EscenasAgua.tsx'
+import { EscenaEndHormona, EscenaEndGlandulas, EscenaEndDiabetes, EscenaEndEstres } from './EscenasEndocrino.tsx'
 import { EscenaNerMapa, EscenaNerNeurona, EscenaNerSinapsis, EscenaNerReflejo, EscenaNerEncefalo } from './EscenasNervioso.tsx'
 import { EscenaInmLineas, EscenaInmFagocito, EscenaInmAnticuerpos, EscenaInmVacuna } from './EscenasInmune.tsx'
 import { EscenaExcOrganos, EscenaExcUrinario, EscenaExcNefrona, EscenaExcPeces } from './EscenasExcrecion.tsx'
@@ -382,4 +383,8 @@ export const ESCENAS: Record<string, ComponentType<{ fase: string }>> = {
   'ner-sinapsis': EscenaNerSinapsis,
   'ner-reflejo': EscenaNerReflejo,
   'ner-encefalo': EscenaNerEncefalo,
+  'end-hormona': EscenaEndHormona,
+  'end-glandulas': EscenaEndGlandulas,
+  'end-diabetes': EscenaEndDiabetes,
+  'end-estres': EscenaEndEstres,
 }

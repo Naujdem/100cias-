@@ -1,0 +1,482 @@
+{
+  "id": "sistema-endocrino",
+  "materia": "biologia",
+  "area": "cuerpo",
+  "titulo": "Sistema endocrino",
+  "subtema": "Las hormonas: mensajes por la sangre",
+  "orden": 67,
+  "etiqueta": "7",
+  "vistas": ["ruta"],
+  "tituloVista": "Ruta de las hormonas",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Explicar qué es una hormona y cómo llega a sus células diana.",
+    "Ubicar las principales glándulas endocrinas y sus hormonas.",
+    "Explicar la regulación de la glucosa y diferenciar la diabetes tipo 1 de la tipo 2.",
+    "Describir la respuesta al estrés y el papel de la adrenalina.",
+    "Reconocer las hormonas del crecimiento, la tiroides y la pubertad.",
+    "Comparar el sistema endocrino con el nervioso."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con un texto escolar de biología y los DBA de Ciencias Naturales 8°-4. Los valores de glucosa del simulador son redondos de clase, no valores médicos. Datos de diabetes: contrastar con el Ministerio de Salud y la OMS."
+  ],
+  "bloques": [
+    {
+      "id": "hormonas",
+      "titulo": "¿Qué es una hormona?",
+      "resumen": "Una glándula suelta una hormona a la sangre; viaja por todo el cuerpo, pero solo responden las células con su receptor.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "El sistema endocrino está formado por glándulas que fabrican hormonas, mensajeros químicos que sueltan directamente a la sangre. La sangre lleva la hormona a todo el cuerpo, pero solo responden las células diana, que tienen el receptor que encaja con ella, como una llave y su cerradura. Basta una cantidad muy pequeña para producir un efecto. Las hormonas actúan más despacio que los impulsos nerviosos, pero su efecto dura más y llega a muchos órganos a la vez: controlan el crecimiento, el metabolismo, la glucosa, la respuesta al estrés y la reproducción. Muchas se regulan por retroalimentación negativa, como se vio en homeostasis.",
+        "cuaderno": {
+          "facil": [
+            "Hormona: mensajero químico que viaja por la sangre.",
+            "Solo responden las células que tienen su receptor."
+          ],
+          "media": [
+            "Glándulas endocrinas: sueltan sus productos a la sangre."
+          ],
+          "avanzada": [
+            "Glándulas exocrinas (sudor, saliva) sueltan por conductos; el páncreas es las dos cosas."
+          ]
+        },
+        "docente": {
+          "abrir": "Si la hormona del crecimiento llega a todo el cuerpo por la sangre, ¿por qué no le crece todo igual a uno?",
+          "actividad": "Enviar «mensajes» en papelitos doblados que circulan por todo el salón; solo los estudiantes con la «cerradura» correcta (un color) pueden abrirlos y actuar.",
+          "errores": [
+            "Creer que las hormonas viajan por los nervios.",
+            "Pensar que todas las células responden a todas las hormonas."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Por dónde viaja una hormona?",
+            "opciones": ["Por la sangre", "Por los nervios", "Por el aire", "Por el sistema digestivo"],
+            "correcta": 0,
+            "explicacion": "La sangre la lleva a todo el cuerpo."
+          }
+        },
+        {
+          "titulo": "Un mensaje con destinatario",
+          "visual": {
+            "tipo": "escena",
+            "id": "end-hormona",
+            "fases": [
+              { "id": "glandula", "nombre": "Glándula", "texto": "La glándula fabrica la hormona." },
+              { "id": "sangre", "nombre": "Sangre", "texto": "La hormona viaja por la sangre a todo el cuerpo." },
+              { "id": "diana", "nombre": "Célula diana", "texto": "Solo la célula con el receptor correcto responde." }
+            ]
+          }
+        }
+      ],
+      "juego": "hormona-que-juego",
+      "preguntas": [
+        {
+          "id": "cu-en-1",
+          "enunciado": "¿Qué es una célula diana?",
+          "opciones": [
+            "Una célula con el receptor de una hormona",
+            "Una célula que fabrica hormonas",
+            "Un glóbulo blanco",
+            "Una neurona"
+          ],
+          "correcta": 0,
+          "explicacion": "Solo ella responde a esa hormona."
+        },
+        {
+          "id": "cu-en-2",
+          "enunciado": "Comparado con un impulso nervioso, el efecto de una hormona es…",
+          "opciones": ["más lento y duradero", "más rápido y corto", "igual de rápido", "solo eléctrico"],
+          "correcta": 0,
+          "explicacion": "Puede durar horas o incluso años."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "glandulas",
+      "titulo": "Las glándulas endocrinas",
+      "resumen": "Hipotálamo e hipófisis dirigen; tiroides, páncreas, suprarrenales y gónadas tienen sus propias tareas.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "requiere": ["hormonas"],
+      "ficha": {
+        "idea": "El hipotálamo, en el encéfalo, une el sistema nervioso con el endocrino: controla a la hipófisis, una glándula del tamaño de un garbanzo que dirige a muchas otras, como una directora de orquesta, y produce la hormona del crecimiento. La tiroides, en el cuello, fabrica hormonas que marcan el ritmo del metabolismo; necesita yodo, y por eso en Colombia la sal de cocina viene yodada. El páncreas suelta insulina y glucagón, que regulan la glucosa. Las suprarrenales, sobre los riñones, producen la adrenalina y el cortisol, hormonas del estrés. Los ovarios y los testículos (gónadas) producen las hormonas sexuales, que inician los cambios de la pubertad.",
+        "cuaderno": {
+          "facil": [
+            "Hipófisis: dirige otras glándulas y produce la hormona del crecimiento.",
+            "Tiroides: metabolismo. Páncreas: azúcar. Suprarrenales: estrés. Gónadas: pubertad."
+          ],
+          "media": [
+            "El hipotálamo une el sistema nervioso con el endocrino.",
+            "La tiroides necesita yodo: sal yodada."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Por qué el paquete de sal dice «yodada»?",
+          "actividad": "Ubicar las glándulas en una silueta pegando papelitos de colores y escribir al lado su hormona principal.",
+          "errores": [
+            "Ubicar el páncreas como parte del estómago.",
+            "Creer que las suprarrenales son parte del riñón y filtran sangre."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Un mapa de glándulas",
+          "visual": {
+            "tipo": "escena",
+            "id": "end-glandulas",
+            "fases": [
+              { "id": "todas", "nombre": "Todas", "texto": "Glándulas repartidas por todo el cuerpo." },
+              { "id": "hipofisis", "nombre": "Hipófisis", "texto": "Con el hipotálamo, dirige a las demás." },
+              { "id": "tiroides", "nombre": "Tiroides", "texto": "En el cuello: marca el ritmo del metabolismo." },
+              { "id": "suprarrenales", "nombre": "Suprarrenales", "texto": "Sobre los riñones: adrenalina y cortisol." },
+              { "id": "pancreas", "nombre": "Páncreas", "texto": "Insulina y glucagón para el azúcar." },
+              { "id": "gonadas", "nombre": "Ovarios y testículos", "texto": "Hormonas sexuales: la pubertad." }
+            ]
+          }
+        },
+        {
+          "titulo": "La sal yodada",
+          "visual": { "tipo": "cifra", "icono": "🧂", "valor": "yodo", "texto": "lo necesita la tiroides; sin él aparece el bocio (cuello hinchado)" }
+        }
+      ],
+      "juego": "glandulas-juego",
+      "preguntas": [
+        {
+          "id": "cu-en-3",
+          "enunciado": "¿Qué glándula dirige a muchas otras?",
+          "opciones": ["La hipófisis", "El páncreas", "La tiroides", "Las suprarrenales"],
+          "correcta": 0,
+          "explicacion": "Junto con el hipotálamo."
+        },
+        {
+          "id": "cu-en-4",
+          "enunciado": "¿Por qué la sal de cocina tiene yodo?",
+          "opciones": [
+            "Porque la tiroides lo necesita para fabricar sus hormonas",
+            "Para que sepa más salada",
+            "Para conservar los alimentos",
+            "Porque el páncreas lo necesita"
+          ],
+          "correcta": 0,
+          "explicacion": "Así se previene el bocio."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "insulina-diabetes",
+      "titulo": "Insulina y diabetes",
+      "resumen": "La insulina abre la puerta de las células a la glucosa; en la diabetes falta insulina (tipo 1) o las células no le responden (tipo 2).",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "intermedio",
+      "requiere": ["glandulas"],
+      "diagrama": "glucosa-dia",
+      "ficha": {
+        "idea": "Como se vio en homeostasis, después de comer el páncreas suelta insulina y la glucosa baja; en ayunas suelta glucagón y la glucosa sube. La insulina funciona como una llave: se une a su receptor en la célula y le abre la puerta a la glucosa. En la diabetes la glucosa se queda alta en la sangre. En la diabetes tipo 1, el sistema inmune destruye las células del páncreas que hacen insulina; suele empezar en la niñez o la juventud y se trata con insulina inyectada. En la diabetes tipo 2, la más común, hay insulina, pero las células no le responden bien; se relaciona con la herencia, el sobrepeso, la falta de actividad física y la mala alimentación, y en muchos casos se puede prevenir. Con el tiempo, la glucosa alta daña los vasos, los ojos, los riñones y los nervios; por eso es importante el control médico.",
+        "cuaderno": {
+          "facil": [
+            "La insulina abre la puerta de las células a la glucosa.",
+            "En la diabetes, la glucosa se queda alta en la sangre."
+          ],
+          "media": [
+            "Tipo 1: no hay insulina. Tipo 2: las células no responden bien a la insulina.",
+            "La tipo 2 se puede prevenir con actividad física y buena alimentación."
+          ],
+          "avanzada": [
+            "La tipo 1 es autoinmune; la glucosa alta daña vasos, ojos, riñones y nervios."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Conocen a alguien que se inyecte insulina? ¿Por qué lo necesita?",
+          "actividad": "Con el simulador, comparar un día con páncreas sano y un día sin insulina; luego leer etiquetas de bebidas y calcular cuántas cucharaditas de azúcar tienen (4 g por cucharadita).",
+          "errores": [
+            "Creer que la diabetes es contagiosa.",
+            "Pensar que solo da por comer dulces."
+          ],
+          "minutos": 35
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Llave y cerradura",
+          "visual": {
+            "tipo": "escena",
+            "id": "end-diabetes",
+            "fases": [
+              { "id": "normal", "nombre": "Sin diabetes", "texto": "La insulina abre la puerta y la glucosa entra a la célula." },
+              { "id": "tipo1", "nombre": "Diabetes tipo 1", "texto": "No hay insulina: la puerta no se abre." },
+              { "id": "tipo2", "nombre": "Diabetes tipo 2", "texto": "Hay insulina, pero la cerradura no responde bien." }
+            ]
+          },
+          "atajo": { "texto": "Más sobre esto: el azúcar en la sangre", "tema": "homeostasis", "bloque": "glucosa" }
+        },
+        {
+          "titulo": "Se puede prevenir",
+          "puntos": [
+            "Moverse todos los días.",
+            "Menos bebidas azucaradas y más agua.",
+            "Frutas, verduras y comida casera."
+          ],
+          "visual": { "tipo": "cifra", "icono": "🥤", "valor": "≈ 9 cucharaditas", "texto": "de azúcar puede tener una gaseosa de 400 mL (revisar la etiqueta)" }
+        }
+      ],
+      "juego": "diabetes-juego",
+      "preguntas": [
+        {
+          "id": "cu-en-5",
+          "enunciado": "En la diabetes tipo 1…",
+          "opciones": [
+            "el páncreas casi no produce insulina",
+            "las células no responden a la insulina",
+            "sobra insulina",
+            "la tiroides no funciona"
+          ],
+          "correcta": 0,
+          "explicacion": "Por eso se trata con insulina."
+        },
+        {
+          "id": "cu-en-6",
+          "enunciado": "¿Qué ayuda a prevenir la diabetes tipo 2?",
+          "opciones": ["Actividad física y alimentación sana", "Tomar más gaseosa", "Dormir menos", "No tomar agua"],
+          "correcta": 0,
+          "explicacion": "La herencia influye, pero los hábitos también."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "estres",
+      "titulo": "El estrés y la adrenalina",
+      "resumen": "En un susto, las suprarrenales sueltan adrenalina: el cuerpo se prepara para pelear o huir.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "basico",
+      "requiere": ["glandulas"],
+      "ficha": {
+        "idea": "Cuando hay un peligro, el cerebro avisa a las glándulas suprarrenales, que sueltan adrenalina. En segundos, el corazón late más rápido, la respiración se acelera, sube el azúcar en la sangre, las pupilas se agrandan y la sangre va a los músculos, mientras la digestión se frena: el cuerpo se prepara para pelear o huir. Aquí trabajan juntos el sistema nervioso, que da la alarma, y el endocrino, que la mantiene. Pasado el peligro, todo vuelve a la calma. Si el estrés dura semanas (exámenes, problemas en casa), las suprarrenales sueltan cortisol de forma continua, y eso puede afectar el sueño, las defensas y el ánimo. Dormir, moverse, hablar con alguien de confianza y organizar el tiempo ayudan a manejarlo.",
+        "cuaderno": {
+          "facil": [
+            "Adrenalina: hormona del susto; la producen las suprarrenales.",
+            "Prepara al cuerpo para pelear o huir."
+          ],
+          "media": [
+            "Efectos: corazón y respiración rápidos, más azúcar, pupilas grandes, digestión frenada."
+          ],
+          "avanzada": [
+            "Estrés prolongado: cortisol continuo; afecta el sueño, las defensas y el ánimo."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Qué le pasa a tu cuerpo justo antes de una exposición frente al curso?",
+          "actividad": "Tomar el pulso antes y después de un aplauso sorpresa muy fuerte (o un video de susto) y anotar qué otros cambios sintieron.",
+          "errores": [
+            "Creer que todo estrés es malo; el corto ayuda a reaccionar.",
+            "Pensar que la adrenalina la produce el corazón."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¡Un susto!",
+          "visual": {
+            "tipo": "escena",
+            "id": "end-estres",
+            "fases": [
+              { "id": "susto", "nombre": "El susto", "texto": "Un perro te ladra de repente." },
+              { "id": "adrenalina", "nombre": "Adrenalina", "texto": "El cerebro avisa y las suprarrenales sueltan adrenalina." },
+              { "id": "efectos", "nombre": "Pelear o huir", "texto": "Corazón, respiración, azúcar y pupilas se preparan." },
+              { "id": "calma", "nombre": "Calma", "texto": "Pasado el peligro, todo vuelve a la normalidad." }
+            ]
+          }
+        },
+        {
+          "titulo": "Cuando el estrés no para",
+          "nivel": "intermedio",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "😴", "titulo": "Dormir bien", "texto": "El cuerpo se repara." },
+              { "icono": "🏃", "titulo": "Moverse", "texto": "Baja la tensión." },
+              { "icono": "🗣️", "titulo": "Hablar", "texto": "Con alguien de confianza." },
+              { "icono": "🗓️", "titulo": "Organizarse", "texto": "Partir las tareas en pasos." }
+            ]
+          }
+        }
+      ],
+      "juego": "estres-juego",
+      "preguntas": [
+        {
+          "id": "cu-en-7",
+          "enunciado": "¿Qué glándulas producen la adrenalina?",
+          "opciones": ["Las suprarrenales", "La tiroides", "La hipófisis", "El páncreas"],
+          "correcta": 0,
+          "explicacion": "Están sobre los riñones."
+        },
+        {
+          "id": "cu-en-8",
+          "enunciado": "¿Cuál de estos NO es un efecto de la adrenalina?",
+          "opciones": ["Activar la digestión", "Acelerar el corazón", "Subir el azúcar en la sangre", "Agrandar las pupilas"],
+          "correcta": 0,
+          "explicacion": "En un susto, la digestión se frena."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "crecimiento",
+      "titulo": "Crecer y cambiar",
+      "resumen": "La hormona del crecimiento, las de la tiroides y las sexuales cambian el cuerpo a lo largo de la vida.",
+      "anio": 5,
+      "etiqueta": "Paso 5",
+      "nivel": "basico",
+      "requiere": ["glandulas"],
+      "ficha": {
+        "idea": "La hormona del crecimiento, de la hipófisis, hace crecer los huesos y los músculos; se suelta sobre todo durante el sueño profundo, por eso dormir bien es importante en la niñez y la adolescencia. Las hormonas de la tiroides marcan cuánta energía gasta el cuerpo y son necesarias para el desarrollo del cerebro y el crecimiento. En la pubertad, la hipófisis activa a los ovarios y los testículos, que producen las hormonas sexuales (estrógenos y progesterona, testosterona). Estas causan los cambios de la adolescencia: el estirón, el vello, los cambios de la voz y del cuerpo, la menstruación y la producción de espermatozoides. Cada persona tiene su propio ritmo: empezar antes o después es normal.",
+        "cuaderno": {
+          "facil": [
+            "Hormona del crecimiento: de la hipófisis; se suelta al dormir.",
+            "Las hormonas sexuales causan los cambios de la pubertad."
+          ],
+          "media": [
+            "Tiroides: metabolismo y desarrollo.",
+            "Cada persona tiene su propio ritmo en la pubertad."
+          ],
+          "avanzada": [
+            "Estrógenos y progesterona (ovarios), testosterona (testículos)."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Es cierto que uno crece mientras duerme?",
+          "actividad": "Hacer una línea de tiempo de los cambios del cuerpo de los 8 a los 18 años, sin edades fijas, resaltando que cada persona tiene su ritmo.",
+          "errores": [
+            "Creer que todos deben cambiar a la misma edad.",
+            "Pensar que la estatura depende solo de las hormonas; también influyen la herencia y la alimentación."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Tres hormonas que te cambian",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "📏", "titulo": "Crecimiento", "texto": "Hipófisis; sobre todo al dormir." },
+              { "icono": "🦋", "titulo": "Tiroides", "texto": "Metabolismo y desarrollo." },
+              { "icono": "🌱", "titulo": "Sexuales", "texto": "Los cambios de la pubertad." }
+            ]
+          }
+        },
+        {
+          "titulo": "Dormir para crecer",
+          "visual": { "tipo": "cifra", "icono": "😴", "valor": "8 a 10 horas", "texto": "de sueño recomendadas para adolescentes" }
+        }
+      ],
+      "juego": "hormonas-crecimiento-juego",
+      "preguntas": [
+        {
+          "id": "cu-en-9",
+          "enunciado": "¿Cuándo se suelta más la hormona del crecimiento?",
+          "opciones": ["Durante el sueño profundo", "Después de comer", "En un susto", "Al hacer tareas"],
+          "correcta": 0,
+          "explicacion": "Por eso dormir bien ayuda a crecer."
+        },
+        {
+          "id": "cu-en-10",
+          "enunciado": "¿Qué glándulas producen las hormonas sexuales?",
+          "opciones": ["Los ovarios y los testículos", "La tiroides", "Las suprarrenales", "El páncreas"],
+          "correcta": 0,
+          "explicacion": "La hipófisis las activa en la pubertad."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "nervioso-endocrino",
+      "titulo": "Nervioso y endocrino",
+      "resumen": "Los dos coordinan el cuerpo: el nervioso es rápido y puntual; el endocrino, lento, amplio y duradero.",
+      "anio": 6,
+      "etiqueta": "Paso 6",
+      "nivel": "basico",
+      "requiere": ["hormonas"],
+      "ficha": {
+        "idea": "El cuerpo tiene dos sistemas de coordinación que trabajan juntos. El sistema nervioso manda impulsos eléctricos por nervios hacia un músculo o una glándula concretos: es muy rápido (milisegundos) y su efecto dura poco, como un mensaje de texto a una persona. El sistema endocrino manda hormonas por la sangre a todo el cuerpo: es más lento (minutos a años) y su efecto dura más, como un anuncio por la radio que oye todo el que tenga el receptor encendido. El hipotálamo los une: es parte del encéfalo y controla a la hipófisis. En un susto se ven los dos juntos: el nervioso da la alarma inmediata y la adrenalina la sostiene.",
+        "cuaderno": {
+          "facil": [
+            "Nervioso: rápido, por nervios, efecto corto.",
+            "Endocrino: lento, por la sangre, efecto duradero."
+          ],
+          "media": [
+            "El hipotálamo une los dos sistemas."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Qué se parece más a un mensaje de WhatsApp y qué a un anuncio de radio?",
+          "actividad": "Completar en el tablero una tabla de diferencias entre los dos sistemas con ejemplos del día a día.",
+          "errores": [
+            "Creer que trabajan por separado.",
+            "Pensar que el endocrino es más importante porque dura más."
+          ],
+          "minutos": 15
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Dos formas de mandar mensajes",
+          "visual": {
+            "tipo": "compara",
+            "izq": { "icono": "⚡", "titulo": "Nervioso", "puntos": ["Impulsos por los nervios.", "Milisegundos.", "A un lugar preciso; dura poco."] },
+            "der": { "icono": "🧪", "titulo": "Endocrino", "puntos": ["Hormonas por la sangre.", "Minutos a años.", "A todo el cuerpo; dura más."] }
+          },
+          "atajo": { "texto": "Más sobre esto: sistema nervioso", "tema": "sistema-nervioso" }
+        },
+        {
+          "titulo": "Para comprobar",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Los cambios de la pubertad duran años. ¿Qué sistema los controla?",
+            "opciones": ["El endocrino", "El nervioso", "El digestivo", "El excretor"],
+            "correcta": 0,
+            "explicacion": "Son efectos lentos y duraderos de las hormonas sexuales."
+          }
+        }
+      ],
+      "juego": "nerv-endo-juego",
+      "preguntas": [
+        {
+          "id": "cu-en-11",
+          "enunciado": "¿Qué estructura une el sistema nervioso con el endocrino?",
+          "opciones": ["El hipotálamo", "El páncreas", "El cerebelo", "La tiroides"],
+          "correcta": 0,
+          "explicacion": "Está en el encéfalo y controla a la hipófisis."
+        },
+        {
+          "id": "cu-en-12",
+          "enunciado": "¿Cuál es más rápido?",
+          "opciones": ["El sistema nervioso", "El sistema endocrino", "Son igual de rápidos", "Depende de la glándula"],
+          "correcta": 0,
+          "explicacion": "Los impulsos tardan milisegundos."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}
