@@ -598,6 +598,33 @@ export const GUIAS: Record<string, Guia> = {
       'Da un ejemplo de la vida diaria en que se aproveche la temperatura para hacer más lenta o más rápida una reacción.',
     ],
   },
+  saponificacion: {
+    objetivo: ['Comprender la saponificación (simulada) y cómo la proporción entre la grasa y la base decide la calidad del jabón.'],
+    fundamento: [
+      'La saponificación es la reacción de una grasa o un aceite (triglicérido) con una base fuerte como el NaOH: se forman glicerina y sales de ácidos grasos, que son el jabón.',
+      'Triglicérido + 3 NaOH → glicerina + 3 R–COO⁻Na⁺. Es una hidrólisis básica de ésteres.',
+      'Cada gramo de aceite vegetal necesita unos 0,136 g de NaOH (índice de saponificación). Con poca base el jabón queda grasoso; con mucha, cáustico.',
+      'La reacción necesita calor y agitación hasta la «traza»: la mezcla espesa como una natilla. La sal separa el jabón de la glicerina.',
+      'La molécula de jabón tiene una cabeza polar (afín al agua) y una cola apolar (afín a la grasa): por eso arrastra la grasa con el agua.',
+    ],
+    materiales: ['Aceite vegetal', 'Solución de NaOH (solo en simulación)', 'Vaso en baño María y estufa', 'Varilla de vidrio', 'Sal común', 'Molde', 'Tiras de pH', 'Gafas y guantes'],
+    procedimiento: [
+      'Ponte gafas y guantes.',
+      'Echa el aceite en el vaso y luego la solución de NaOH, despacio (unos 13,6 g de NaOH por cada 100 g de aceite).',
+      'Calienta en baño María a unos 70 °C.',
+      'Agita sin parar hasta la traza (unos 20 minutos).',
+      'Desde 9°: agrega sal para separar el jabón de la glicerina.',
+      'Pasa la mezcla al molde, deja endurecer y mide el pH con una tira.',
+    ],
+    seguridad: ['SOLO SIMULACIÓN: la soda cáustica quema la piel y los ojos y no se manipula en el aula sin laboratorio ni docente a cargo.', 'Si la soda toca la piel: lavar con abundante agua durante 15 minutos.', 'Alternativa segura: jabón de glicerina para derretir y moldear.'],
+    preguntas: [
+      '¿Qué productos se forman en la saponificación?',
+      '¿Qué pasó cuando pusiste poca soda? ¿Y cuando pusiste demasiada?',
+      '¿Por qué hay que calentar y agitar?',
+      '¿Para qué sirve la sal al final?',
+      'Explica con la forma de la molécula de jabón por qué limpia la grasa.',
+    ],
+  },
   titulacion: {
     objetivo: ['Determinar la concentración de un ácido desconocido y la acidez del vinagre por titulación con NaOH 0,1 M y fenolftaleína.'],
     fundamento: [
