@@ -172,6 +172,7 @@ Supabase va mucho después; solo química por ahora (biología, si se hace, al f
 - Libreta de descubrimientos (colección) con las reacciones encontradas.
 - Orden: catálogo y estante → mesa con efectos → panel local con exportar/importar → libreta.
 - ✅ Parte 1 (19 nov 2026): `data/reaccionesLibre.ts` (31 reactivos, 40 reacciones, pH e indicadores, pendientes en el dispositivo) y `MesaLibre.tsx` con estante, 3 vasos, mechero y caneca; efectos básicos.
+- ✅ Parte 2 (19 nov 2026): `components/lab/EfectosVaso.tsx` (halo de calor/frío, remolino al mezclar, capas, disolución, precipitado que cae, metales que se cobrean, burbujas, espuma que se rebosa, humo/vapor —tóxico en verde amarillento—, ondas de calor, escarcha y llama).
 
 **Fase 2 — compartir (mucho después)**
 - Supabase con el login de SimulaPro: `lab_mezclas_pendientes` y `lab_reacciones` con RLS; solo el docente define;
