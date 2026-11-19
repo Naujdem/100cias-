@@ -1,0 +1,630 @@
+{
+  "id": "homeostasis",
+  "materia": "biologia",
+  "area": "cuerpo",
+  "titulo": "Homeostasis: el cuerpo se regula",
+  "subtema": "Cómo el cuerpo mantiene estable su medio interno",
+  "orden": 61,
+  "etiqueta": "1",
+  "vistas": ["ruta"],
+  "tituloVista": "Ruta de la homeostasis",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Explicar qué es la homeostasis y por qué es necesaria para vivir.",
+    "Identificar las partes de un asa de control: estímulo, receptor, centro de control, efector y respuesta.",
+    "Describir cómo el cuerpo regula la temperatura, el agua y el azúcar en la sangre.",
+    "Reconocer que los sistemas del cuerpo trabajan juntos para mantener el equilibrio."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con un texto escolar de biología (p. ej. Campbell, Biología, capítulo de homeostasis) y los DBA de Ciencias Naturales 8°-4. Los valores de glucosa y temperatura son rangos aproximados de referencia, no valores clínicos."
+  ],
+  "bloques": [
+    {
+      "id": "que-es-homeostasis",
+      "titulo": "¿Qué es la homeostasis?",
+      "resumen": "El cuerpo mantiene casi constantes su temperatura, su agua y su azúcar, aunque afuera todo cambie.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "Las células solo funcionan bien en ciertas condiciones: una temperatura cercana a 37 °C, suficiente agua, azúcar y oxígeno, y la acidez adecuada. Al líquido que rodea a las células (la sangre y el líquido entre ellas) se le llama medio interno. La homeostasis es la capacidad del cuerpo para mantener ese medio interno estable aunque el ambiente cambie: hace frío o calor, comemos o ayunamos, corremos o dormimos. No es algo quieto: los valores suben y bajan un poco, pero el cuerpo los devuelve una y otra vez a su rango normal. Por eso se dice que es un equilibrio dinámico. Si la homeostasis falla, aparecen la fiebre muy alta, la deshidratación o la diabetes.",
+        "contexto": [
+          {
+            "titulo": "Un nombre de 1926",
+            "texto": "El fisiólogo estadounidense Walter Cannon inventó la palabra «homeostasis» (del griego «igual» y «quieto») a partir de la idea de medio interno del francés Claude Bernard."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Homeostasis: mantener estable el medio interno del cuerpo.",
+            "Se regulan, entre otras cosas, la temperatura, el agua y el azúcar."
+          ],
+          "media": [
+            "Medio interno: la sangre y el líquido que rodea a las células.",
+            "Es un equilibrio dinámico: los valores oscilan dentro de un rango."
+          ],
+          "avanzada": [
+            "También se regulan el pH de la sangre, el oxígeno, el CO₂ y las sales."
+          ]
+        },
+        "docente": {
+          "abrir": "Si en la mañana hace 12 °C y al mediodía 30 °C, ¿por qué el termómetro en la axila marca casi lo mismo?",
+          "actividad": "Medir la temperatura de varios estudiantes antes y después de salir al patio (o de correr) y comparar con la del ambiente.",
+          "errores": [
+            "Creer que homeostasis significa que nada cambia; en realidad los valores oscilan y se corrigen.",
+            "Confundir el medio interno con el interior de los órganos."
+          ],
+          "minutos": 20
+        },
+        "analogia": {
+          "titulo": "Como una nevera",
+          "texto": "La nevera mantiene el frío por dentro aunque la cocina esté caliente: mide, compara y prende el motor cuando hace falta."
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "En la madrugada hace 12 °C y al mediodía 30 °C. ¿Qué pasa con la temperatura dentro de tu cuerpo?",
+            "opciones": ["Se queda cerca de 37 °C", "Baja a 12 °C y sube a 30 °C", "Sube y baja unos 10 °C", "Depende de lo que comas"],
+            "correcta": 0,
+            "explicacion": "El cuerpo la mantiene casi igual: eso es la homeostasis."
+          }
+        },
+        {
+          "titulo": "Un valor que se corrige",
+          "visual": {
+            "tipo": "escena",
+            "id": "homeo-equilibrio",
+            "fases": [
+              { "id": "punto", "nombre": "El punto ideal", "texto": "Por dentro, el cuerpo se mantiene cerca de 37 °C." },
+              { "id": "perturba", "nombre": "Un cambio", "texto": "Al salir al frío, la temperatura empieza a bajar." },
+              { "id": "corrige", "nombre": "La corrección", "texto": "El cuerpo responde y la devuelve a su valor." },
+              { "id": "rango", "nombre": "Equilibrio dinámico", "texto": "Sube y baja un poco, pero siempre dentro de un rango normal.", "nota": "Homeostasis no es quietud: es corregir todo el tiempo." }
+            ]
+          }
+        },
+        {
+          "titulo": "Lo que el cuerpo mantiene",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "🌡️", "titulo": "Temperatura", "texto": "Cerca de 37 °C." },
+              { "icono": "💧", "titulo": "Agua y sales", "texto": "Ni deshidratado ni con agua de más." },
+              { "icono": "🍬", "titulo": "Azúcar en la sangre", "texto": "Ni muy alta ni muy baja." },
+              { "icono": "🫁", "titulo": "Oxígeno", "texto": "Suficiente para todas las células." }
+            ]
+          }
+        },
+        {
+          "titulo": "El medio interno",
+          "nivel": "intermedio",
+          "puntos": [
+            "Es la sangre y el líquido que baña a las células.",
+            "Las células toman de ahí lo que necesitan.",
+            "Si ese líquido cambia mucho, las células dejan de funcionar."
+          ],
+          "visual": { "tipo": "cifra", "icono": "🧫", "valor": "≈ 60 %", "texto": "del cuerpo de un adulto es agua" }
+        }
+      ],
+      "juego": "homeo-equilibrio-juego",
+      "preguntas": [
+        {
+          "id": "cu-ho-1",
+          "enunciado": "¿Qué es la homeostasis?",
+          "opciones": [
+            "Mantener estable el medio interno aunque el ambiente cambie",
+            "Que el cuerpo cambie igual que el ambiente",
+            "Que la temperatura del cuerpo nunca se mueva ni una décima",
+            "Un órgano que regula la temperatura"
+          ],
+          "correcta": 0,
+          "explicacion": "Es una capacidad de todo el cuerpo, no un órgano, y admite pequeñas oscilaciones."
+        },
+        {
+          "id": "cu-ho-2",
+          "enunciado": "¿Por qué se dice que la homeostasis es un equilibrio dinámico?",
+          "opciones": [
+            "Porque los valores oscilan y el cuerpo los corrige todo el tiempo",
+            "Porque el cuerpo nunca cambia",
+            "Porque solo funciona cuando hacemos ejercicio",
+            "Porque depende del clima"
+          ],
+          "correcta": 0,
+          "explicacion": "Sube, baja y se corrige: por eso es dinámico."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "retroalimentacion",
+      "titulo": "El asa de control",
+      "resumen": "Un receptor detecta el cambio, un centro de control decide y un efector responde para corregirlo.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "requiere": ["que-es-homeostasis"],
+      "ficha": {
+        "idea": "Para mantener un valor estable, el cuerpo usa siempre el mismo esquema, llamado asa de control. Un estímulo (un cambio, como el frío) es detectado por un receptor (las terminaciones nerviosas de la piel). El receptor avisa al centro de control (el hipotálamo, en el cerebro), que compara con el valor ideal y manda una orden a un efector (los músculos, las glándulas del sudor). El efector produce una respuesta (temblar, sudar) que corrige el cambio. Como la respuesta va en contra del estímulo y lo apaga, se llama retroalimentación negativa: es la forma más común de homeostasis. Existe también la retroalimentación positiva, en la que la respuesta aumenta el estímulo hasta que algo termina el proceso; ocurre, por ejemplo, en las contracciones del parto y en la coagulación de la sangre.",
+        "contexto": [
+          {
+            "titulo": "El termostato del cuerpo",
+            "texto": "El hipotálamo es del tamaño de una almendra y funciona como el termostato de una nevera o de un aire acondicionado."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Asa de control: estímulo → receptor → centro de control → efector → respuesta.",
+            "El centro de control de la temperatura es el hipotálamo."
+          ],
+          "media": [
+            "Retroalimentación negativa: la respuesta va en contra del cambio y lo corrige."
+          ],
+          "avanzada": [
+            "Retroalimentación positiva: la respuesta aumenta el cambio (parto, coagulación) hasta que algo lo detiene."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Cómo sabe una nevera cuándo prender el motor?",
+          "actividad": "Representar el asa con cinco estudiantes que se pasan una pelota (estímulo, receptor, centro, efector, respuesta) y al final la pelota «apaga» el estímulo.",
+          "errores": [
+            "Pensar que «negativa» significa mala; quiere decir que la respuesta va en sentido contrario al cambio.",
+            "Confundir el receptor con el efector."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Cómo se corrige un cambio",
+          "visual": {
+            "tipo": "escena",
+            "id": "homeo-asa",
+            "fases": [
+              { "id": "estimulo", "nombre": "Estímulo", "texto": "Algo cambia: baja la temperatura." },
+              { "id": "receptor", "nombre": "Receptor", "texto": "La piel detecta el frío y avisa por los nervios." },
+              { "id": "control", "nombre": "Centro de control", "texto": "El hipotálamo compara con 37 °C y decide." },
+              { "id": "efector", "nombre": "Efector", "texto": "Manda la orden a los músculos." },
+              { "id": "respuesta", "nombre": "Respuesta", "texto": "Los músculos tiemblan y producen calor." },
+              { "id": "negativa", "nombre": "Retroalimentación negativa", "texto": "La respuesta apaga el estímulo: la temperatura vuelve a la normalidad.", "nota": "«Negativa» porque va en contra del cambio." },
+              { "id": "positiva", "nombre": "Retroalimentación positiva", "texto": "En el parto, cada contracción provoca otra más fuerte, hasta que nace el bebé.", "nivel": "avanzado" }
+            ]
+          }
+        },
+        {
+          "titulo": "Negativa y positiva",
+          "nivel": "avanzado",
+          "visual": {
+            "tipo": "compara",
+            "izq": { "icono": "↩️", "titulo": "Negativa", "puntos": ["La respuesta va en contra del cambio.", "Mantiene un valor estable.", "Temperatura, azúcar, agua."] },
+            "der": { "icono": "🔁", "titulo": "Positiva", "puntos": ["La respuesta aumenta el cambio.", "Termina cuando algo la detiene.", "Parto, coagulación de la sangre."] }
+          }
+        }
+      ],
+      "juego": "homeo-asa-juego",
+      "preguntas": [
+        {
+          "id": "cu-ho-3",
+          "enunciado": "En el control de la temperatura, ¿qué papel cumple el hipotálamo?",
+          "opciones": ["Centro de control", "Receptor", "Efector", "Estímulo"],
+          "correcta": 0,
+          "explicacion": "Compara la temperatura con el valor ideal y manda las órdenes."
+        },
+        {
+          "id": "cu-ho-4",
+          "enunciado": "¿Por qué el sudor es un ejemplo de retroalimentación negativa?",
+          "opciones": [
+            "Porque enfría el cuerpo cuando la temperatura sube",
+            "Porque es malo para la salud",
+            "Porque hace subir más la temperatura",
+            "Porque ocurre sin que haya estímulo"
+          ],
+          "correcta": 0,
+          "explicacion": "La respuesta va en sentido contrario al cambio y lo corrige."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "temperatura",
+      "titulo": "La temperatura",
+      "resumen": "Contra el calor, el cuerpo suda y abre los vasos de la piel; contra el frío, tiembla y los cierra.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "basico",
+      "requiere": ["retroalimentacion"],
+      "diagrama": "termostato-cuerpo",
+      "ficha": {
+        "idea": "El ser humano mantiene la temperatura interna cerca de 37 °C. Cuando hace calor o hacemos ejercicio, el cuerpo suda (al evaporarse, el sudor se lleva calor) y abre los vasos sanguíneos de la piel (vasodilatación), por eso la piel se pone roja y suelta calor. Cuando hace frío, cierra los vasos de la piel (vasoconstricción) para guardar el calor adentro, la piel se pone pálida, se eriza el vello (piel de gallina) y los músculos tiemblan para producir calor. Estas respuestas tienen un límite: con mucho calor y humedad el sudor no alcanza (golpe de calor), y con mucho frío la temperatura interna baja (hipotermia). Las aves y los mamíferos producen su propio calor (endotermos); los reptiles, anfibios, peces e insectos dependen del calor del ambiente (ectotermos) y lo regulan con su comportamiento, como la lagartija que se asolea.",
+        "contexto": [
+          {
+            "titulo": "¿Por qué la fiebre?",
+            "texto": "En la fiebre, el hipotálamo sube el valor ideal para ayudar a combatir una infección: por eso se siente frío y se tiembla aunque la temperatura esté subiendo."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Contra el calor: sudar y enrojecer la piel.",
+            "Contra el frío: temblar, palidecer y piel de gallina."
+          ],
+          "media": [
+            "Vasodilatación: los vasos se abren y sueltan calor; vasoconstricción: se cierran y lo guardan.",
+            "Endotermos producen su calor; ectotermos dependen del ambiente."
+          ],
+          "avanzada": [
+            "Golpe de calor e hipotermia: cuando las respuestas no alcanzan."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Para qué sirve sudar, si después uno queda mojado?",
+          "actividad": "Con el simulador, buscar la temperatura del ambiente en la que el cuerpo ya no logra mantener 37 °C, con y sin ejercicio.",
+          "errores": [
+            "Creer que el sudor enfría por estar frío; enfría porque se evapora.",
+            "Decir que los reptiles tienen la «sangre fría»: su temperatura depende del ambiente y al sol puede ser alta."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Calor y frío",
+          "visual": {
+            "tipo": "escena",
+            "id": "homeo-temperatura",
+            "fases": [
+              { "id": "normal", "nombre": "Normal", "texto": "Por dentro, el cuerpo está cerca de 37 °C." },
+              { "id": "calor", "nombre": "Mucho calor", "texto": "Suda y abre los vasos de la piel para soltar calor.", "marcas": [{ "x": 150, "y": 130, "texto": "El sudor enfría al evaporarse." }] },
+              { "id": "frio", "nombre": "Mucho frío", "texto": "Cierra los vasos de la piel y tiembla para producir calor.", "marcas": [{ "x": 105, "y": 120, "texto": "Temblar es mover músculos sin querer: producen calor." }] },
+              { "id": "ectotermo", "nombre": "Sangre «fría»", "texto": "La lagartija no produce su calor: lo toma del sol.", "nivel": "intermedio" }
+            ]
+          }
+        },
+        {
+          "titulo": "Endotermos y ectotermos",
+          "nivel": "intermedio",
+          "visual": {
+            "tipo": "compara",
+            "izq": { "icono": "🐕", "titulo": "Endotermos", "puntos": ["Producen su propio calor.", "Aves y mamíferos.", "Gastan mucha energía: comen más."] },
+            "der": { "icono": "🦎", "titulo": "Ectotermos", "puntos": ["Toman el calor del ambiente.", "Reptiles, anfibios, peces, insectos.", "Se regulan con el comportamiento: sol o sombra."] }
+          }
+        },
+        {
+          "titulo": "Cuando no alcanza",
+          "nivel": "avanzado",
+          "puntos": [
+            "Golpe de calor: con calor húmedo el sudor no se evapora.",
+            "Hipotermia: con mucho frío, la temperatura interna baja.",
+            "Por eso, en el sol: agua, sombra y descanso."
+          ],
+          "visual": { "tipo": "cifra", "icono": "🌡️", "valor": "> 40 °C", "texto": "de temperatura interna es una emergencia" }
+        }
+      ],
+      "juego": "homeo-temperatura-juego",
+      "preguntas": [
+        {
+          "id": "cu-ho-5",
+          "enunciado": "¿Por qué la piel se pone roja cuando hace mucho calor?",
+          "opciones": [
+            "Los vasos de la piel se abren para soltar calor",
+            "La sangre se calienta y cambia de color",
+            "La piel se quema siempre con el calor",
+            "Los vasos se cierran para guardar calor"
+          ],
+          "correcta": 0,
+          "explicacion": "Es la vasodilatación: más sangre cerca de la piel suelta más calor."
+        },
+        {
+          "id": "cu-ho-6",
+          "enunciado": "Una lagartija se pone al sol en la mañana. ¿Por qué?",
+          "opciones": [
+            "Es ectoterma: toma el calor del ambiente",
+            "Es endoterma y le sobra calor",
+            "Necesita broncearse",
+            "Porque está enferma"
+          ],
+          "correcta": 0,
+          "explicacion": "Los ectotermos regulan su temperatura con el comportamiento."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "agua-cuerpo",
+      "titulo": "El agua del cuerpo",
+      "resumen": "El agua que entra debe igualar a la que sale; la sed y los riñones se encargan del equilibrio.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "basico",
+      "requiere": ["retroalimentacion"],
+      "ficha": {
+        "idea": "El cuerpo gana agua con las bebidas y los alimentos, y la pierde por la orina, el sudor, el aliento y las heces. Para que la cantidad de agua se mantenga estable, lo que entra debe ser igual a lo que sale. Cuando falta agua, la sangre se vuelve más concentrada; el cerebro lo detecta, produce la sensación de sed y hace que los riñones ahorren agua: se orina poco y la orina sale oscura. Cuando sobra agua, los riñones eliminan más y la orina sale clara y abundante. Así, el color de la orina es una pista sencilla de cómo está la hidratación. La forma en que el riñón decide cuánta agua guardar se estudia a fondo en el tema de excreción.",
+        "contexto": [
+          {
+            "titulo": "Un aviso tardío",
+            "texto": "Cuando se siente sed, el cuerpo ya ha perdido algo de agua; en el deporte conviene tomar agua antes de sentirla."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "El agua entra con bebidas y comida, y sale por orina, sudor y aliento.",
+            "Si falta agua: sed y orina poca y oscura."
+          ],
+          "media": [
+            "Los riñones regulan cuánta agua se pierde en la orina."
+          ],
+          "avanzada": [
+            "La hormona antidiurética (ADH) le indica al riñón que ahorre agua."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué después de un partido al sol casi no dan ganas de orinar?",
+          "actividad": "Hacer una tabla de un día con lo que se bebe y lo que se pierde (estimado) y comparar entradas y salidas.",
+          "errores": [
+            "Creer que solo se pierde agua al orinar; también se pierde con el sudor y el aliento.",
+            "Pensar que solo las bebidas aportan agua; las frutas y la sopa también."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Entra y sale",
+          "visual": {
+            "tipo": "escena",
+            "id": "homeo-agua",
+            "fases": [
+              { "id": "entradas", "nombre": "Lo que entra", "texto": "Bebidas y alimentos: la sopa y la fruta también cuentan." },
+              { "id": "salidas", "nombre": "Lo que sale", "texto": "Orina, sudor, aliento y heces." },
+              { "id": "sed", "nombre": "La sed", "texto": "Si sale más de lo que entra, el cerebro lo nota y da sed." },
+              { "id": "rinon", "nombre": "El riñón ahorra", "texto": "Los riñones guardan agua: la orina sale poca y oscura." },
+              { "id": "equilibrio", "nombre": "Equilibrio", "texto": "Al beber, el agua vuelve a su nivel." }
+            ]
+          }
+        },
+        {
+          "titulo": "La orina avisa",
+          "visual": {
+            "tipo": "compara",
+            "izq": { "icono": "🟨", "titulo": "Clara y abundante", "puntos": ["Hay agua de sobra.", "El riñón la deja ir."] },
+            "der": { "icono": "🟧", "titulo": "Oscura y poca", "puntos": ["Falta agua.", "El riñón la está ahorrando: hay que beber."] }
+          }
+        },
+        {
+          "titulo": "Una hormona que ahorra agua",
+          "nivel": "avanzado",
+          "puntos": [
+            "Con poca agua, la hipófisis suelta ADH.",
+            "La ADH hace que el riñón devuelva agua a la sangre."
+          ],
+          "visual": { "tipo": "cifra", "icono": "🫘", "valor": "≈ 180 L", "texto": "de líquido filtran los riñones cada día; casi todo vuelve a la sangre" },
+          "atajo": { "texto": "Más sobre esto: excreción", "tema": "excrecion" }
+        }
+      ],
+      "juego": "homeo-agua-juego",
+      "preguntas": [
+        {
+          "id": "cu-ho-7",
+          "enunciado": "Después de sudar mucho, la orina sale poca y oscura. ¿Por qué?",
+          "opciones": [
+            "Los riñones están ahorrando agua",
+            "Los riñones dejaron de funcionar",
+            "Se tomó demasiada agua",
+            "El sudor se convierte en orina"
+          ],
+          "correcta": 0,
+          "explicacion": "Es la respuesta del cuerpo a la falta de agua."
+        },
+        {
+          "id": "cu-ho-8",
+          "enunciado": "¿Cuál de estas es una forma de perder agua?",
+          "opciones": ["Respirar", "Comer patilla", "Tomar sopa", "Beber jugo"],
+          "correcta": 0,
+          "explicacion": "El aliento lleva vapor de agua: por eso se empaña el vidrio."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "glucosa",
+      "titulo": "El azúcar en la sangre",
+      "resumen": "Tras comer, la insulina baja el azúcar; en ayunas, el glucagón lo sube. Las dos vienen del páncreas.",
+      "anio": 5,
+      "etiqueta": "Paso 5",
+      "nivel": "intermedio",
+      "requiere": ["retroalimentacion"],
+      "ficha": {
+        "idea": "Las células usan la glucosa (un azúcar) como combustible, así que su cantidad en la sangre debe mantenerse en un rango. Después de comer, la glucosa sube; el páncreas lo detecta y suelta insulina, una hormona que hace que las células tomen la glucosa y que el hígado y los músculos la guarden como glucógeno. Cuando se pasan muchas horas sin comer, la glucosa baja; el páncreas suelta entonces glucagón, que hace que el hígado devuelva glucosa a la sangre. Son dos hormonas con efectos opuestos que juntas mantienen el equilibrio. En la diabetes, el páncreas no produce suficiente insulina o las células no le responden, y la glucosa se queda alta. Las hormonas y la diabetes se estudian a fondo en el tema del sistema endocrino.",
+        "contexto": [
+          {
+            "titulo": "El hígado, una despensa",
+            "texto": "El hígado guarda glucosa como glucógeno y la va soltando de noche, mientras dormimos sin comer."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Insulina: baja el azúcar de la sangre.",
+            "Glucagón: sube el azúcar de la sangre."
+          ],
+          "media": [
+            "Las dos hormonas las produce el páncreas.",
+            "El hígado guarda la glucosa como glucógeno."
+          ],
+          "avanzada": [
+            "En la diabetes falla la insulina y la glucosa se queda alta."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué después de almorzar mucho da sueño, y con hambre uno se siente sin energía?",
+          "actividad": "Graficar en el tablero cómo cambiaría la glucosa en un día con desayuno, almuerzo y comida, marcando cuándo actúa cada hormona.",
+          "errores": [
+            "Creer que la insulina «es azúcar» o que sube el azúcar.",
+            "Pensar que la diabetes se debe solo a comer dulces."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Un día de azúcar",
+          "visual": {
+            "tipo": "escena",
+            "id": "homeo-glucosa",
+            "fases": [
+              { "id": "ayuno", "nombre": "Antes de comer", "texto": "La glucosa está en su rango normal." },
+              { "id": "comida", "nombre": "Después de comer", "texto": "El almuerzo hace subir la glucosa en la sangre." },
+              { "id": "insulina", "nombre": "Insulina", "texto": "El páncreas suelta insulina: las células toman la glucosa y el hígado la guarda." },
+              { "id": "glucagon", "nombre": "Glucagón", "texto": "Horas sin comer: el páncreas suelta glucagón y el hígado devuelve glucosa." }
+            ]
+          }
+        },
+        {
+          "titulo": "Dos hormonas opuestas",
+          "visual": {
+            "tipo": "compara",
+            "izq": { "icono": "⬇️", "titulo": "Insulina", "puntos": ["Cuando la glucosa sube.", "Las células la toman; el hígado la guarda."] },
+            "der": { "icono": "⬆️", "titulo": "Glucagón", "puntos": ["Cuando la glucosa baja.", "El hígado la suelta a la sangre."] }
+          }
+        },
+        {
+          "titulo": "Cuando falla: la diabetes",
+          "nivel": "avanzado",
+          "puntos": [
+            "Falta insulina o las células no le responden.",
+            "La glucosa se queda alta y daña los vasos y los órganos."
+          ],
+          "visual": { "tipo": "cifra", "icono": "🩸", "valor": "70–110", "texto": "mg/dL: rango aproximado de glucosa en ayunas" },
+          "atajo": { "texto": "Más sobre esto: sistema endocrino", "tema": "sistema-endocrino" }
+        }
+      ],
+      "juego": "homeo-glucosa-juego",
+      "preguntas": [
+        {
+          "id": "cu-ho-9",
+          "enunciado": "Acabas de almorzar. ¿Qué hormona suelta el páncreas?",
+          "opciones": ["Insulina", "Glucagón", "Adrenalina", "Ninguna"],
+          "correcta": 0,
+          "explicacion": "La insulina baja la glucosa que subió con la comida."
+        },
+        {
+          "id": "cu-ho-10",
+          "enunciado": "¿Qué hace el glucagón?",
+          "opciones": [
+            "Hace que el hígado suelte glucosa a la sangre",
+            "Hace que las células tomen glucosa",
+            "Digiere el azúcar en el estómago",
+            "Produce insulina"
+          ],
+          "correcta": 0,
+          "explicacion": "Actúa cuando la glucosa baja, por ejemplo en ayunas."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "sistemas-equipo",
+      "titulo": "Los sistemas trabajan en equipo",
+      "resumen": "Cada sistema del cuerpo cumple un trabajo, y todos juntos mantienen la homeostasis. Es el mapa del área.",
+      "anio": 6,
+      "etiqueta": "Paso 6",
+      "nivel": "basico",
+      "requiere": ["que-es-homeostasis"],
+      "ficha": {
+        "idea": "Ningún sistema del cuerpo trabaja solo. El sistema nervioso y el endocrino coordinan: el primero manda órdenes rápidas por los nervios y el segundo, órdenes más lentas y duraderas con hormonas que viajan por la sangre. El sistema digestivo y el respiratorio hacen entrar el alimento y el oxígeno; el circulatorio los reparte a todas las células; el excretor saca los desechos y el agua de más; el inmune defiende de los microbios, y los huesos y los músculos sostienen y mueven el cuerpo. Por ejemplo, al correr, los músculos gastan más oxígeno: el sistema nervioso acelera la respiración y el corazón, y la piel suda para soltar el calor. Esta área recorre cada sistema y lo compara con el de otros animales.",
+        "contexto": [
+          {
+            "titulo": "Una ciudad que funciona",
+            "texto": "Como en una ciudad, unos traen la comida, otros reparten, otros recogen la basura, otros vigilan y otros dan las órdenes."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Nervioso y endocrino coordinan; digestivo y respiratorio hacen entrar; circulatorio reparte.",
+            "Excretor saca los desechos; inmune defiende; huesos y músculos sostienen y mueven."
+          ],
+          "media": [
+            "Todos los sistemas juntos mantienen la homeostasis."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "Cuando corres, ¿qué cambia en tu cuerpo y qué sistema lo hace?",
+          "actividad": "Repartir un sistema por grupo y pedir que cada uno explique qué haría su sistema durante una carrera de 100 metros.",
+          "errores": [
+            "Pensar que cada sistema funciona de forma independiente.",
+            "Confundir el sistema respiratorio (pulmones) con la respiración celular (en las mitocondrias)."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Un equipo",
+          "visual": {
+            "tipo": "escena",
+            "id": "homeo-sistemas",
+            "fases": [
+              { "id": "equipo", "nombre": "Todos juntos", "texto": "Ocho sistemas trabajan juntos para mantener el equilibrio." },
+              { "id": "mandan", "nombre": "Coordinan", "texto": "Nervioso (rápido, por nervios) y endocrino (lento, con hormonas)." },
+              { "id": "transportan", "nombre": "Reparten", "texto": "El circulatorio lleva oxígeno y alimento a cada célula." },
+              { "id": "entran", "nombre": "Hacen entrar", "texto": "El digestivo trae el alimento; el respiratorio, el oxígeno." },
+              { "id": "salen", "nombre": "Sacan", "texto": "El excretor elimina los desechos y el agua de más." },
+              { "id": "defienden", "nombre": "Defienden", "texto": "El inmune ataca los microbios." },
+              { "id": "mueven", "nombre": "Mueven", "texto": "Huesos y músculos sostienen y mueven el cuerpo." }
+            ]
+          }
+        },
+        {
+          "titulo": "La ruta de esta área",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "🍽️", "titulo": "2 a 4. Entrar y salir", "texto": "Digestión, respiración y circulación, excreción." },
+              { "icono": "🛡️", "titulo": "5. Sistema inmune" },
+              { "icono": "🧠", "titulo": "6. Sistema nervioso" },
+              { "icono": "🧪", "titulo": "7. Sistema endocrino" },
+              { "icono": "🦴", "titulo": "8. Huesos y músculos" },
+              { "icono": "🏃", "titulo": "9. Cuerpo y salud", "texto": "Opcional." }
+            ]
+          },
+          "atajo": { "texto": "Más sobre esto: de la célula al organismo", "tema": "de-la-celula-al-organismo", "bloque": "organos-sistemas" }
+        },
+        {
+          "titulo": "Para comprobar",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Al correr, el corazón late más rápido. ¿Para qué?",
+            "opciones": [
+              "Para llevar más oxígeno a los músculos",
+              "Para bajar la temperatura",
+              "Para digerir más rápido",
+              "Para producir más orina"
+            ],
+            "correcta": 0,
+            "explicacion": "El circulatorio y el respiratorio trabajan juntos para dar oxígeno a los músculos."
+          }
+        }
+      ],
+      "juego": "homeo-sistemas-juego",
+      "preguntas": [
+        {
+          "id": "cu-ho-11",
+          "enunciado": "¿Qué dos sistemas coordinan el funcionamiento del cuerpo?",
+          "opciones": ["Nervioso y endocrino", "Digestivo y excretor", "Óseo y muscular", "Respiratorio y circulatorio"],
+          "correcta": 0,
+          "explicacion": "El nervioso con impulsos rápidos; el endocrino con hormonas."
+        },
+        {
+          "id": "cu-ho-12",
+          "enunciado": "¿Qué sistema reparte el oxígeno y los nutrientes a todas las células?",
+          "opciones": ["Circulatorio", "Respiratorio", "Digestivo", "Excretor"],
+          "correcta": 0,
+          "explicacion": "El respiratorio hace entrar el oxígeno, pero lo reparte la sangre."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}

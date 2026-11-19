@@ -1,0 +1,523 @@
+{
+  "id": "respiracion-circulacion",
+  "materia": "biologia",
+  "area": "cuerpo",
+  "titulo": "Respiración y circulación",
+  "subtema": "Cómo llega el oxígeno a cada célula",
+  "orden": 63,
+  "etiqueta": "3",
+  "vistas": ["ruta"],
+  "tituloVista": "Ruta del oxígeno",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Describir las vías respiratorias y cómo el diafragma mueve el aire.",
+    "Explicar el intercambio de gases en los alvéolos.",
+    "Reconocer las cámaras del corazón y la doble circulación.",
+    "Identificar los componentes de la sangre y sus funciones.",
+    "Comparar la respiración de peces, insectos y anfibios con la humana."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con un texto escolar de biología y los DBA de Ciencias Naturales 8°-4. Los valores de pulso, respiración y porcentajes de la sangre son aproximados de referencia."
+  ],
+  "bloques": [
+    {
+      "id": "ventilacion",
+      "titulo": "Las vías respiratorias",
+      "resumen": "El aire entra por la nariz, baja por la tráquea y los bronquios hasta los pulmones; el diafragma lo mueve.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "El sistema respiratorio hace entrar el oxígeno al cuerpo y sacar el dióxido de carbono. El aire entra por la nariz, donde se calienta, se humedece y se filtra con los pelitos y el moco; pasa por la faringe, la laringe (donde están las cuerdas vocales) y la tráquea, que se divide en dos bronquios, uno para cada pulmón. Los bronquios se ramifican en bronquiolos cada vez más finos que terminan en los alvéolos. Los pulmones no tienen músculos: los mueve el diafragma. En la inspiración, el diafragma se contrae y baja, el pecho se agranda y el aire entra; en la espiración, el diafragma se relaja y sube, el pecho se achica y el aire sale. Este movimiento del aire se llama ventilación; no hay que confundirlo con la respiración celular, que ocurre en las mitocondrias.",
+        "contexto": [
+          {
+            "titulo": "Un árbol al revés",
+            "texto": "Tráquea, bronquios y bronquiolos se ramifican como un árbol puesto de cabeza: por eso se habla del «árbol bronquial»."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Nariz → faringe → laringe → tráquea → bronquios → pulmones.",
+            "Inspiración: entra el aire. Espiración: sale el aire."
+          ],
+          "media": [
+            "El diafragma mueve los pulmones: baja al inspirar y sube al espirar."
+          ],
+          "avanzada": [
+            "Ventilación (mover aire) no es lo mismo que respiración celular (usar O₂ en la mitocondria)."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Los pulmones tienen músculos? ¿Cómo se inflan entonces?",
+          "actividad": "Armar el modelo de pulmón con una botella cortada, dos bombas y un guante como diafragma: al jalar el guante, las bombas se inflan.",
+          "errores": [
+            "Creer que los pulmones se inflan solos.",
+            "Pensar que el aire que sale no tiene nada de oxígeno: sale con menos, pero aún tiene."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Qué músculo hace que entre el aire a los pulmones?",
+            "opciones": ["El diafragma", "El corazón", "Los mismos pulmones", "El estómago"],
+            "correcta": 0,
+            "explicacion": "Los pulmones no tienen músculos; los mueve el diafragma."
+          }
+        },
+        {
+          "titulo": "Entra y sale el aire",
+          "visual": {
+            "tipo": "escena",
+            "id": "resp-ventilacion",
+            "fases": [
+              { "id": "vias", "nombre": "Las vías", "texto": "Nariz, tráquea, bronquios y pulmones; abajo, el diafragma." },
+              { "id": "inspiracion", "nombre": "Inspiración", "texto": "El diafragma baja, el pecho se agranda y entra el aire." },
+              { "id": "espiracion", "nombre": "Espiración", "texto": "El diafragma sube, el pecho se achica y sale el aire." }
+            ]
+          }
+        }
+      ],
+      "juego": "ventilacion-juego",
+      "preguntas": [
+        {
+          "id": "cu-rc-1",
+          "enunciado": "¿Qué pasa con el diafragma durante la inspiración?",
+          "opciones": ["Se contrae y baja", "Se relaja y sube", "No se mueve", "Empuja el aire hacia afuera"],
+          "correcta": 0,
+          "explicacion": "Al bajar, agranda el pecho y el aire entra."
+        },
+        {
+          "id": "cu-rc-2",
+          "enunciado": "¿En qué orden pasa el aire?",
+          "opciones": [
+            "Nariz, laringe, tráquea, bronquios, alvéolos",
+            "Nariz, bronquios, tráquea, laringe, alvéolos",
+            "Boca, esófago, estómago, pulmones",
+            "Tráquea, nariz, bronquios, alvéolos"
+          ],
+          "correcta": 0,
+          "explicacion": "El esófago es del sistema digestivo."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "intercambio",
+      "titulo": "El intercambio de gases",
+      "resumen": "En los alvéolos, el oxígeno pasa a la sangre y el dióxido de carbono sale al aire.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "requiere": ["ventilacion"],
+      "ficha": {
+        "idea": "Los alvéolos son bolsitas diminutas al final de los bronquiolos; cada pulmón tiene cientos de millones. Su pared es de una sola capa de células y está rodeada de capilares. El oxígeno del aire pasa a la sangre porque en el alvéolo hay más que en la sangre que llega; el dióxido de carbono hace el camino contrario. A esto se le llama difusión: los gases van de donde hay más a donde hay menos. En la sangre, el oxígeno se une a la hemoglobina de los glóbulos rojos y viaja hasta las células, que lo usan en las mitocondrias para sacar energía de la glucosa; el dióxido de carbono es el desecho de ese proceso, la respiración celular.",
+        "contexto": [
+          {
+            "titulo": "El humo del cigarrillo",
+            "texto": "El humo daña las paredes de los alvéolos; cuando se rompen, queda menos superficie para el intercambio y la persona se ahoga con poco esfuerzo (enfisema)."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "En los alvéolos, el O₂ pasa a la sangre y el CO₂ sale al aire.",
+            "La hemoglobina de los glóbulos rojos lleva el O₂."
+          ],
+          "media": [
+            "Difusión: los gases van de donde hay más a donde hay menos."
+          ],
+          "avanzada": [
+            "El CO₂ es el desecho de la respiración celular en las mitocondrias."
+          ]
+        },
+        "docente": {
+          "abrir": "Si el aire que sacamos tiene oxígeno, ¿por qué funciona la respiración boca a boca?",
+          "actividad": "Soplar con un pitillo en agua de cal (o con repollo morado) y ver el cambio que produce el CO₂ del aliento.",
+          "errores": [
+            "Creer que en los pulmones se produce el CO₂; se produce en todas las células.",
+            "Confundir el intercambio de gases con la respiración celular."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "En el alvéolo",
+          "visual": {
+            "tipo": "escena",
+            "id": "resp-alveolo",
+            "fases": [
+              { "id": "alveolo", "nombre": "El alvéolo", "texto": "Una bolsita de aire pegada a un capilar." },
+              { "id": "oxigeno", "nombre": "Entra el O₂", "texto": "El oxígeno cruza la pared y la sangre se vuelve roja brillante." },
+              { "id": "co2", "nombre": "Sale el CO₂", "texto": "El dióxido de carbono pasa al aire y sale al espirar." }
+            ]
+          }
+        },
+        {
+          "titulo": "¿Para qué tanto oxígeno?",
+          "puntos": [
+            "Cada célula lo usa en sus mitocondrias.",
+            "Con él saca energía de la glucosa y suelta CO₂."
+          ],
+          "visual": { "tipo": "cifra", "icono": "🫧", "valor": "≈ 480 millones", "texto": "de alvéolos hay en los pulmones de un adulto" },
+          "atajo": { "texto": "Más sobre esto: respiración celular", "tema": "metabolismo-celular", "bloque": "respiracion-fermentacion" }
+        }
+      ],
+      "juego": "alveolo-juego",
+      "preguntas": [
+        {
+          "id": "cu-rc-3",
+          "enunciado": "¿Por qué el oxígeno pasa del alvéolo a la sangre?",
+          "opciones": [
+            "Porque en el alvéolo hay más oxígeno que en la sangre que llega",
+            "Porque el corazón lo succiona",
+            "Porque la sangre lo produce",
+            "Porque el diafragma lo empuja"
+          ],
+          "correcta": 0,
+          "explicacion": "Es difusión: de donde hay más a donde hay menos."
+        },
+        {
+          "id": "cu-rc-4",
+          "enunciado": "¿Dónde se produce el dióxido de carbono que espiramos?",
+          "opciones": ["En todas las células", "En los pulmones", "En el corazón", "En la nariz"],
+          "correcta": 0,
+          "explicacion": "Es el desecho de la respiración celular."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "corazon",
+      "titulo": "El corazón",
+      "resumen": "Un músculo con cuatro cámaras: el lado derecho manda sangre a los pulmones y el izquierdo a todo el cuerpo.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "basico",
+      "requiere": ["intercambio"],
+      "diagrama": "pulso-ejercicio",
+      "ficha": {
+        "idea": "El corazón es un músculo del tamaño de un puño que funciona como dos bombas pegadas. Tiene cuatro cámaras: arriba, dos aurículas que reciben la sangre; abajo, dos ventrículos que la impulsan. El lado derecho recibe la sangre pobre en oxígeno que vuelve del cuerpo y la manda a los pulmones; el lado izquierdo recibe la sangre rica en oxígeno de los pulmones y la manda a todo el cuerpo. Por eso el ventrículo izquierdo tiene la pared más gruesa. Las válvulas, como puertas que solo abren hacia un lado, evitan que la sangre se devuelva; su cierre es el «pum-pum» que se oye. El ritmo del corazón cambia con la actividad: el sistema nervioso lo acelera cuando los músculos piden más oxígeno.",
+        "contexto": [
+          {
+            "titulo": "Sin descanso",
+            "texto": "A 70 latidos por minuto, el corazón late unas 100 000 veces al día y casi 3000 millones de veces en una vida."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Cuatro cámaras: dos aurículas (arriba) y dos ventrículos (abajo).",
+            "Derecho: sangre hacia los pulmones. Izquierdo: hacia el cuerpo."
+          ],
+          "media": [
+            "Las válvulas impiden que la sangre se devuelva."
+          ],
+          "avanzada": [
+            "El corazón tiene su propio marcapasos (nódulo sinusal); los nervios solo cambian el ritmo."
+          ]
+        },
+        "docente": {
+          "abrir": "Ponte la mano en el pecho. ¿Por qué late más rápido después del recreo?",
+          "actividad": "Tomar el pulso (15 segundos × 4) sentados, después de caminar y después de saltar 1 minuto; graficar en el tablero y comparar con el simulador.",
+          "errores": [
+            "Creer que el corazón está a la izquierda; está casi en el centro, un poco inclinado.",
+            "Pensar que la sangre sin oxígeno es azul; es roja oscura."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Dos bombas en una",
+          "visual": {
+            "tipo": "escena",
+            "id": "circ-corazon",
+            "fases": [
+              { "id": "camaras", "nombre": "Cuatro cámaras", "texto": "Dos aurículas reciben; dos ventrículos impulsan." },
+              { "id": "derecha", "nombre": "Lado derecho", "texto": "Recibe la sangre del cuerpo y la manda a los pulmones." },
+              { "id": "izquierda", "nombre": "Lado izquierdo", "texto": "Recibe la sangre de los pulmones y la manda a todo el cuerpo.", "nota": "Su ventrículo es el más fuerte." },
+              { "id": "valvulas", "nombre": "Válvulas", "texto": "Puertas de un solo sentido: su cierre es el «pum-pum»." }
+            ]
+          }
+        },
+        {
+          "titulo": "Tómate el pulso",
+          "visual": { "tipo": "cifra", "icono": "💓", "valor": "60–100", "texto": "latidos por minuto en reposo (aproximado)" },
+          "puntos": [
+            "Dos dedos en la muñeca o en el cuello.",
+            "Cuenta 15 segundos y multiplica por 4."
+          ]
+        }
+      ],
+      "juego": "corazon-juego",
+      "preguntas": [
+        {
+          "id": "cu-rc-5",
+          "enunciado": "¿A dónde manda la sangre el ventrículo derecho?",
+          "opciones": ["A los pulmones", "A todo el cuerpo", "Al cerebro solamente", "A la aurícula izquierda"],
+          "correcta": 0,
+          "explicacion": "Allí la sangre recoge oxígeno."
+        },
+        {
+          "id": "cu-rc-6",
+          "enunciado": "¿Para qué sirven las válvulas del corazón?",
+          "opciones": [
+            "Para que la sangre no se devuelva",
+            "Para producir sangre",
+            "Para filtrar la sangre",
+            "Para mezclar la sangre de los dos lados"
+          ],
+          "correcta": 0,
+          "explicacion": "Solo abren en un sentido."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "circulacion",
+      "titulo": "La doble circulación",
+      "resumen": "La sangre hace dos recorridos: corazón–pulmones (menor) y corazón–cuerpo (mayor), por arterias, capilares y venas.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "basico",
+      "requiere": ["corazon"],
+      "ficha": {
+        "idea": "En cada vuelta completa, la sangre pasa dos veces por el corazón; por eso se habla de circulación doble. En la circulación menor (pulmonar), el ventrículo derecho manda la sangre a los pulmones, donde recoge oxígeno, y vuelve a la aurícula izquierda. En la circulación mayor (sistémica), el ventrículo izquierdo la manda por la arteria aorta a todo el cuerpo, donde entrega oxígeno y nutrientes, y vuelve por las venas cavas a la aurícula derecha. Las arterias sacan la sangre del corazón y tienen paredes gruesas y elásticas; las venas la devuelven, tienen paredes delgadas y válvulas; los capilares, de una sola capa de células, unen las dos y son donde ocurre el intercambio con las células. Además, la circulación es cerrada: la sangre siempre va dentro de vasos.",
+        "cuaderno": {
+          "facil": [
+            "Arterias: salen del corazón. Venas: vuelven al corazón. Capilares: intercambian.",
+            "Circulación menor: corazón–pulmones. Mayor: corazón–cuerpo."
+          ],
+          "media": [
+            "La circulación humana es doble y cerrada."
+          ],
+          "avanzada": [
+            "Las arterias pulmonares llevan sangre sin oxígeno: «arteria» indica la dirección, no el oxígeno."
+          ]
+        },
+        "docente": {
+          "abrir": "Si todas las arterias llevan sangre con oxígeno, ¿qué lleva la arteria pulmonar?",
+          "actividad": "Dibujar en el piso del patio un corazón y dos circuitos con tiza; los estudiantes caminan como glóbulos rojos y cambian una ficha azul por una roja en los pulmones.",
+          "errores": [
+            "Creer que las arterias siempre llevan sangre con oxígeno.",
+            "Pensar que la sangre sale de los vasos para llegar a las células."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Dos recorridos",
+          "visual": {
+            "tipo": "escena",
+            "id": "circ-doble",
+            "fases": [
+              { "id": "menor", "nombre": "Circulación menor", "texto": "Del corazón a los pulmones y de vuelta: la sangre recoge O₂." },
+              { "id": "mayor", "nombre": "Circulación mayor", "texto": "Del corazón a todo el cuerpo y de vuelta: entrega O₂ y nutrientes." },
+              { "id": "vasos", "nombre": "Los vasos", "texto": "Arterias salen, venas vuelven y los capilares intercambian." }
+            ]
+          }
+        },
+        {
+          "titulo": "Una trampa",
+          "nivel": "avanzado",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "La arteria pulmonar lleva sangre…",
+            "opciones": ["pobre en oxígeno, hacia los pulmones", "rica en oxígeno, hacia el cuerpo", "rica en oxígeno, hacia el corazón", "pobre en oxígeno, hacia el corazón"],
+            "correcta": 0,
+            "explicacion": "Las arterias salen del corazón, lleven o no oxígeno."
+          }
+        }
+      ],
+      "juego": "vasos-juego",
+      "preguntas": [
+        {
+          "id": "cu-rc-7",
+          "enunciado": "¿En qué vasos ocurre el intercambio con las células?",
+          "opciones": ["Capilares", "Arterias", "Venas", "Aorta"],
+          "correcta": 0,
+          "explicacion": "Su pared es de una sola capa de células."
+        },
+        {
+          "id": "cu-rc-8",
+          "enunciado": "¿Por qué se dice que la circulación humana es doble?",
+          "opciones": [
+            "Porque la sangre pasa dos veces por el corazón en cada vuelta",
+            "Porque tenemos dos corazones",
+            "Porque la sangre va y vuelve por el mismo vaso",
+            "Porque hay dos tipos de sangre que nunca se juntan en el cuerpo"
+          ],
+          "correcta": 0,
+          "explicacion": "Un circuito va a los pulmones y otro al cuerpo."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "sangre",
+      "titulo": "La sangre",
+      "resumen": "Plasma, glóbulos rojos, glóbulos blancos y plaquetas: transporte, defensa y coagulación.",
+      "anio": 5,
+      "etiqueta": "Paso 5",
+      "nivel": "basico",
+      "requiere": ["circulacion"],
+      "ficha": {
+        "idea": "La sangre es un tejido líquido; un adulto tiene unos 5 litros. Si se deja reposar o se centrifuga, se separa en dos partes. El plasma (algo más de la mitad) es un líquido amarillento, casi todo agua, que transporta nutrientes, hormonas, sales y desechos. La parte de abajo son las células: los glóbulos rojos, los más abundantes, llevan el oxígeno gracias a la hemoglobina, que tiene hierro (en los mamíferos no tienen núcleo); los glóbulos blancos defienden al cuerpo de los microbios, y las plaquetas, pedacitos de células, forman el coágulo que tapa una herida. Todas se fabrican en la médula roja de los huesos.",
+        "contexto": [
+          {
+            "titulo": "Donar sangre",
+            "texto": "Una persona sana de 18 a 65 años puede donar unos 450 mL; el cuerpo los repone en pocas semanas y pueden salvar varias vidas."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Plasma: transporta. Glóbulos rojos: llevan O₂. Blancos: defienden. Plaquetas: coagulan.",
+            "Se fabrican en la médula roja de los huesos."
+          ],
+          "media": [
+            "La hemoglobina tiene hierro: por eso la falta de hierro produce anemia."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Por qué una herida pequeña deja de sangrar sola?",
+          "actividad": "Observar una lámina preparada de sangre al microscopio (o una foto) y contar cuántos glóbulos blancos hay por cada cien rojos.",
+          "errores": [
+            "Creer que la sangre es solo glóbulos rojos.",
+            "Pensar que las plaquetas son células completas."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿De qué está hecha?",
+          "visual": {
+            "tipo": "escena",
+            "id": "circ-sangre",
+            "fases": [
+              { "id": "tubo", "nombre": "Un tubo de sangre", "texto": "Parece un líquido rojo y parejo." },
+              { "id": "plasma", "nombre": "Plasma", "texto": "Al centrifugarla, arriba queda un líquido amarillento: el plasma." },
+              { "id": "rojos", "nombre": "Glóbulos rojos", "texto": "Abajo se van los glóbulos rojos, que llevan el oxígeno." },
+              { "id": "blancos", "nombre": "Blancos y plaquetas", "texto": "Una capita blanca en el medio: defensas y coagulación." }
+            ]
+          }
+        },
+        {
+          "titulo": "Los defensores",
+          "puntos": [
+            "Los glóbulos blancos atacan a los microbios.",
+            "Hay varios tipos, cada uno con su forma de defender."
+          ],
+          "visual": { "tipo": "cifra", "icono": "⚪", "valor": "1 de cada 700", "texto": "células de la sangre es un glóbulo blanco (aproximado)" },
+          "atajo": { "texto": "Más sobre esto: sistema inmune", "tema": "sistema-inmune" }
+        }
+      ],
+      "juego": "sangre-comp-juego",
+      "preguntas": [
+        {
+          "id": "cu-rc-9",
+          "enunciado": "¿Qué parte de la sangre transporta el oxígeno?",
+          "opciones": ["Los glóbulos rojos", "El plasma", "Las plaquetas", "Los glóbulos blancos"],
+          "correcta": 0,
+          "explicacion": "Su hemoglobina se une al oxígeno."
+        },
+        {
+          "id": "cu-rc-10",
+          "enunciado": "¿Dónde se fabrican las células de la sangre?",
+          "opciones": ["En la médula roja de los huesos", "En el corazón", "En el hígado de los adultos", "En los pulmones"],
+          "correcta": 0,
+          "explicacion": "La médula está dentro de huesos como el fémur y el esternón."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "resp-animales",
+      "titulo": "Otros animales respiran distinto",
+      "resumen": "Los peces usan branquias, los insectos tráqueas y las ranas sus pulmones y su piel.",
+      "anio": 6,
+      "etiqueta": "Paso 6",
+      "nivel": "intermedio",
+      "requiere": ["intercambio"],
+      "ficha": {
+        "idea": "Todos los animales necesitan intercambiar gases, pero lo hacen de formas distintas según dónde viven. Los peces usan branquias: láminas muy finas y llenas de capilares que toman el oxígeno disuelto en el agua; su corazón tiene dos cámaras y la sangre pasa una sola vez por él en cada vuelta (circulación simple). Los insectos tienen tráqueas: una red de tubitos que se abren en la superficie del cuerpo por los espiráculos y llevan el aire directamente a las células, sin usar la sangre para el oxígeno. Los anfibios, como la rana, respiran con pulmones sencillos y también a través de su piel húmeda; su corazón tiene tres cámaras. Las aves y los mamíferos tienen pulmones y un corazón de cuatro cámaras.",
+        "cuaderno": {
+          "facil": [
+            "Peces: branquias. Insectos: tráqueas. Rana: pulmones y piel."
+          ],
+          "media": [
+            "Corazón: pez 2 cámaras, rana 3, aves y mamíferos 4."
+          ],
+          "avanzada": [
+            "Circulación simple en peces; doble en anfibios, reptiles, aves y mamíferos."
+          ]
+        },
+        "docente": {
+          "abrir": "Si un pez tiene tanto oxígeno alrededor (en el H₂O), ¿por qué se ahoga fuera del agua?",
+          "actividad": "Observar las branquias de un pescado de la plaza de mercado: color, láminas y cómo se pegan fuera del agua.",
+          "errores": [
+            "Creer que los peces usan el oxígeno de la molécula de agua; usan el oxígeno disuelto.",
+            "Pensar que los insectos llevan el oxígeno en la sangre."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Branquias, tráqueas y piel",
+          "visual": {
+            "tipo": "escena",
+            "id": "resp-animales",
+            "fases": [
+              { "id": "pez", "nombre": "Pez", "texto": "Las branquias toman el oxígeno disuelto en el agua." },
+              { "id": "insecto", "nombre": "Insecto", "texto": "Las tráqueas llevan el aire directo a las células." },
+              { "id": "rana", "nombre": "Rana", "texto": "Respira con pulmones y con la piel, que debe estar húmeda." }
+            ]
+          }
+        },
+        {
+          "titulo": "Corazones distintos",
+          "nivel": "avanzado",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "🐟", "titulo": "Pez: 2 cámaras", "texto": "Circulación simple." },
+              { "icono": "🐸", "titulo": "Rana: 3 cámaras", "texto": "Doble, con algo de mezcla." },
+              { "icono": "🐦", "titulo": "Aves y mamíferos: 4", "texto": "Doble y sin mezcla." }
+            ]
+          }
+        }
+      ],
+      "juego": "resp-animales-juego",
+      "preguntas": [
+        {
+          "id": "cu-rc-11",
+          "enunciado": "¿Cómo llega el oxígeno a las células de un saltamontes?",
+          "opciones": ["Por las tráqueas", "Por branquias", "Por la sangre con hemoglobina", "Por pulmones"],
+          "correcta": 0,
+          "explicacion": "Los tubitos llevan el aire hasta las células."
+        },
+        {
+          "id": "cu-rc-12",
+          "enunciado": "¿Por qué la rana necesita mantener la piel húmeda?",
+          "opciones": [
+            "Porque también respira a través de ella",
+            "Para no tener frío",
+            "Para atrapar insectos",
+            "Porque no tiene pulmones"
+          ],
+          "correcta": 0,
+          "explicacion": "Los gases solo cruzan una superficie húmeda."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}
