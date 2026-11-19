@@ -63,7 +63,7 @@ Biología:
 
 Química:
 10. ~~Prepara 100 mL de solución 0,5 M~~ ✅ (18 nov 2026: espátula y microespátula cargadas en el frasco, vidrio de reloj a la balanza y TARA tocándola, quitar lo de más a residuos, jarra/piseta/gotero, varilla, embudo —sin él se derrama—, enjuague, lupa del menisco, tapón e inversiones tocando el matraz). Se retiró el motor viejo `Mesa.tsx`.
-11. Medición — llenar la pipeta, la probeta, el vaso y la taza y vaciarlos en la balanza; mover el ojo arrastrándolo.
+11. ~~Medición~~ ✅ (18 nov 2026: el ojo se arrastra hasta el nivel del menisco; cada instrumento se llena en el bidón y se vierte en el vaso de la balanza, que hay que tarar tocándola antes de cada medida; vertedero para vaciar).
 12. Densidades — objeto a la balanza, a la regla y a la probeta; alfiler; en la torre, verter cada líquido.
 13. Mezclas y separación — imán sobre la mezcla, tamiz, agua, embudo con filtro, embudo de decantación, estufa, destilador; tira de cromatografía al solvente.
 14. Conservación de la masa — echar vinagre y bicarbonato, poner globo o tapa, llevar a la balanza.

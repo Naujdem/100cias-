@@ -330,4 +330,31 @@ export const GUIAS: Record<string, Guia> = {
       '¿Cómo prepararías 250 mL de la misma solución?',
     ],
   },
+  medicion: {
+    objetivo: ['Leer correctamente el volumen en instrumentos de vidrio y distinguir entre precisión y exactitud al medir el mismo volumen con varios instrumentos.'],
+    fundamento: [
+      'El agua se pega al vidrio y forma una curva, el menisco. El volumen se lee en el fondo de la curva, con el ojo a la altura del líquido; si el ojo queda arriba o abajo se comete el error de paralaje.',
+      'Toda medida tiene una incertidumbre: la mitad de la división más pequeña de la escala.',
+      'Exactitud: qué tan cerca está el promedio de las medidas del valor real. Precisión: qué tan cerca están las medidas entre sí.',
+      'Un gramo de agua ocupa casi exactamente un mililitro, así que pesar el agua medida permite saber cuánto volumen se midió en realidad.',
+      'La pipeta aforada, la bureta y el matraz aforado son para medir con exactitud; la probeta, para medidas rápidas; el vaso de precipitados, solo para contener y mezclar.',
+    ],
+    materiales: ['Probetas de 100 mL y 10 mL', 'Bureta de 50 mL (desde 9°)', 'Pipeta aforada de 25 mL con pera', 'Vaso de precipitados', 'Taza de cocina', 'Balanza', 'Vaso para pesar', 'Bidón con agua'],
+    procedimiento: [
+      'Parte 1: pon el ojo a la altura del líquido, busca el fondo del menisco y anota la lectura con su incertidumbre.',
+      'Parte 2: pon el vaso para pesar sobre la balanza y tárala (0,00 g).',
+      'Llena el instrumento hasta la marca de 25 mL y vierte el agua en el vaso de la balanza.',
+      'Anota la masa (en gramos = mL), tara de nuevo y repite hasta tener cinco medidas con cada instrumento.',
+      'Calcula el promedio y el error porcentual de cada instrumento (en 11°, también la desviación estándar).',
+      'Clasifica cada instrumento: exacto y preciso, preciso pero no exacto, exacto pero no preciso, o ninguno.',
+    ],
+    seguridad: ['El material de vidrio se manipula con cuidado y se seca el agua derramada para no resbalar.', 'La pipeta se llena con la pera, nunca con la boca.'],
+    preguntas: [
+      '¿Por qué hay que poner el ojo a la altura del líquido?',
+      '¿Qué instrumento fue el más exacto? ¿Y el más preciso?',
+      '¿Qué tipo de error tiene la probeta con la marca corrida y cómo se corrige?',
+      '¿Por qué hay que tarar la balanza antes de cada medida?',
+      '¿Para qué sirve repetir una medida varias veces?',
+    ],
+  },
 }
