@@ -209,4 +209,31 @@ export const GUIAS: Record<string, Guia> = {
       '¿Qué otro producto forma la fermentación y dónde lo aprovechamos (pan, chicha, guarapo)?',
     ],
   },
+  'adn-fresa': {
+    objetivo: ['Extraer ADN de fresas con materiales caseros y observarlo a simple vista.'],
+    fundamento: [
+      'El ADN está dentro del núcleo de cada célula. Para sacarlo hay que romper el tejido (machacar) y las membranas, que son de lípidos: el jabón las disuelve.',
+      'La sal neutraliza las cargas negativas del ADN y ayuda a que sus hebras se junten.',
+      'El ADN no se disuelve en alcohol frío: al echarlo despacio forma una capa encima del extracto, y en el límite entre las dos aparecen las hebras blancas.',
+      'Las fresas son ideales porque cada célula tiene ocho copias de sus cromosomas.',
+    ],
+    materiales: ['Fresas', 'Bolsa con cierre', 'Agua', 'Jabón lavaplatos', 'Sal', 'Cuchara', 'Colador o filtro de café', 'Vaso transparente', 'Alcohol guardado en el congelador', 'Palillo', 'Temporizador'],
+    procedimiento: [
+      'Pon las fresas en la bolsa y machácalas bien.',
+      'Agrega agua, una cucharadita de jabón y una pizca de sal.',
+      'Mezcla suavemente con la cuchara, sin hacer espuma.',
+      'Filtra la mezcla al vaso con el colador.',
+      'Echa el alcohol muy frío despacio por la pared del vaso, hasta formar una capa.',
+      'Espera 5 minutos sin mover el vaso.',
+      'Enrolla con el palillo las hebras blancas que aparecen entre las capas.',
+    ],
+    seguridad: ['El alcohol es inflamable: lejos de llamas.', 'El alcohol no se bebe y la mezcla no se come.'],
+    preguntas: [
+      '¿Para qué se machacan las fresas?',
+      '¿Qué hacen el jabón y la sal?',
+      '¿Por qué el alcohol debe estar frío y echarse despacio?',
+      '¿Qué pasaría si mezclas con batidora?',
+      '¿Lo blanco que enrollaste es una sola molécula de ADN? Explica.',
+    ],
+  },
 }
