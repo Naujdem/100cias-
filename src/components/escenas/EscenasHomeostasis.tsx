@@ -85,7 +85,7 @@ export function EscenaHomeoAsa({ fase }: { fase: string }) {
     <svg viewBox="0 0 400 300" role="img" aria-label={`El asa de control: ${fase}`} className="h-full w-full">
       <rect x="-1500" y="-1500" width="3400" height="3300" fill={FONDO} />
       <defs>
-        <marker id="hasa" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#777" /></marker>
+        <marker id="hasa" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L12,6 L0,12 Z" fill="#777" /></marker><marker id="hasa-x" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#777" /></marker>
       </defs>
       {NODOS.slice(0, 4).map((a, k) => {
         const b = NODOS[k + 1]
