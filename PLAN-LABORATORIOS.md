@@ -139,7 +139,7 @@ clásicas de los «201 experimentos»; las de bórax o similares, con aviso de s
    tamaño y forma de los cristales.
 5. ~~**Colorimetría**~~ ✅ (19 nov 2026: `Colorimetria.tsx`) (área 4, desde 9°): escala de patrones de CuSO₄ para estimar una concentración desconocida;
    absorbancia y ley de Beer en 11° (versión escolar de la espectrofotometría de la guía Surcolombiana).
-6. **Antiácidos y soluciones amortiguadoras** (área 4, desde 9°): «ácido estomacal» con repollo morado y cuánto
+6. ~~**Antiácidos y soluciones amortiguadoras**~~ ✅ (19 nov 2026: `Antiacidos.tsx`) (área 4, desde 9°): «ácido estomacal» con repollo morado y cuánto
    neutraliza cada antiácido; en 11°, buffer frente a agua al agregar ácido.
 7. **Polímeros: slime y bioplástico** (área 5, desde 6°): pegante + bórax (la proporción decide líquido, slime o
    caucho) y bioplástico de fécula con o sin glicerina.

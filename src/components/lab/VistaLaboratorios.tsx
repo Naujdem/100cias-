@@ -36,6 +36,7 @@ import PilaLimones from './practicas/PilaLimones.tsx'
 import Corrosion from './practicas/Corrosion.tsx'
 import Cristalizacion from './practicas/Cristalizacion.tsx'
 import Colorimetria from './practicas/Colorimetria.tsx'
+import Antiacidos from './practicas/Antiacidos.tsx'
 
 // Laboratorios virtuales (PLAN-LABORATORIOS.md). Las prácticas listas van en PRACTICAS; las demás de la
 // ruta salen como «próximamente».
@@ -83,6 +84,7 @@ const PRACTICAS: Entrada[] = [
   { id: 'corrosion', titulo: 'Corrosión de clavos', resumen: 'Clavos en agua, sal, vinagre, aceite o aire seco durante una semana acelerada: ¿qué los oxida y qué los protege?', grupo: 'Química', desdeGrado: 6, Juego: Corrosion },
   { id: 'cristalizacion', titulo: 'Cristalización', resumen: 'Soluciones saturadas de sal, azúcar o alumbre que se enfrían rápido, lento o se evaporan: tamaño y forma de los cristales.', grupo: 'Química', desdeGrado: 6, Juego: Cristalizacion },
   { id: 'colorimetria', titulo: 'Colorimetría', resumen: 'Escala de patrones de sulfato de cobre para estimar la concentración de una muestra; en 11°, absorbancia y ley de Beer.', grupo: 'Química', desdeGrado: 9, Juego: Colorimetria },
+  { id: 'antiacidos', titulo: 'Antiácidos y amortiguadores', resumen: '¿Qué antiácido neutraliza más «ácido estomacal»? Con repollo morado y dosis contadas; en 11°, agua contra un amortiguador.', grupo: 'Química', desdeGrado: 9, Juego: Antiacidos },
   { id: 'solucion-molar', titulo: 'Prepara 100 mL de solución 0,5 M de sulfato de cobre', resumen: 'Pesa con la balanza, disuelve, pasa con el embudo, afora gota a gota e invierte el matraz. El color muestra la concentración.', grupo: 'Química', desdeGrado: 9, Juego: SolucionMolar },
 ]
 

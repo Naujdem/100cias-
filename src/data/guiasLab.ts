@@ -4,6 +4,31 @@ import type { Guia } from '../components/lab/GuiaLab.tsx'
 // cuando se crea o se convierte a mesa viva (PLAN-LABORATORIOS.md).
 
 export const GUIAS: Record<string, Guia> = {
+  antiacidos: {
+    objetivo: ['Comparar la capacidad de neutralización de varios antiácidos usando un indicador natural.', 'En 11°: comprobar cómo un amortiguador resiste los cambios de pH.'],
+    fundamento: [
+      'El jugo gástrico contiene ácido clorhídrico. Los antiácidos son bases o sales básicas que lo neutralizan: ácido + base → sal + agua.',
+      'Los carbonatos y el bicarbonato además liberan CO₂: NaHCO₃ + HCl → NaCl + H₂O + CO₂.',
+      'El repollo morado es rojo en ácido, morado cerca de neutro y azul-verde en base.',
+      'En 11°: un amortiguador es una mezcla de un ácido débil y su base conjugada que resiste cambios de pH; pH = pKa + log([base]/[ácido]).',
+    ],
+    materiales: ['Vinagre blanco como «ácido estomacal» (en el colegio no se usa HCl sin el docente)', 'Indicador de repollo morado', '5 vasos transparentes iguales', 'Leche de magnesia, bicarbonato, tabletas de carbonato de calcio, sal de frutas', 'Cuchara medidora y gotero', 'En 11°: indicador universal, agua destilada y una solución amortiguadora (o agua con bicarbonato y un poco de vinagre)'],
+    procedimiento: [
+      'Pon la misma cantidad de «ácido» en cada vaso y agrega 10 gotas de repollo morado.',
+      'Marca cada vaso con el antiácido que recibirá; uno solo lleva agua (control).',
+      'Agrega el antiácido de a una dosis igual, revolviendo, y anota el color después de cada dosis.',
+      'Cuenta las dosis hasta que el color pase a morado.',
+      'En 11°: agrega gota a gota el mismo ácido a agua y a la solución amortiguadora con indicador universal; anota el pH después de cada gota y grafica.',
+    ],
+    seguridad: ['Los antiácidos son medicamentos: no se prueban ni se toman en la práctica.', 'Gafas: el ácido salpica.', 'Las mezclas usadas van al desagüe con bastante agua.'],
+    preguntas: [
+      '¿Qué antiácido necesitó menos dosis? ¿Qué significa?',
+      '¿Por qué algunos antiácidos producen burbujas? Escribe la reacción.',
+      '¿Para qué sirve el vaso con agua?',
+      '¿Por qué no conviene tomar demasiado antiácido?',
+      'En 11°: ¿cuántas gotas aguantó el amortiguador frente al agua? ¿Qué amortiguador mantiene el pH de la sangre?',
+    ],
+  },
   colorimetria: {
     objetivo: ['Preparar una escala de patrones por dilución y estimar con ella la concentración de una solución desconocida.'],
     fundamento: [
