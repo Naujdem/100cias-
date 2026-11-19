@@ -183,6 +183,17 @@ const DEFS: Record<string, Def> = {
       c('🧈', 'Aceite líquido → margarina', 'h2', 'Se saturan los dobles enlaces.'),
       c('🧪', 'CH₃–CH=CH₂ → CH₃–CHCl–CH₃', 'hcl', 'El H va al carbono con más H (Markovnikov).'),
     ], 'Los alquenos suman; los alcanos no pueden porque no tienen enlace π.'],
+  'org-mecanismo-juego': ['¿Qué mecanismo?', '¿Por qué camino ocurre?', 'Radicales: el enlace se parte a la mitad (luz, calor). Iónico: un átomo se lleva el par. Pericíclico: todo en un solo paso cíclico.',
+    [o('rad', 'Radicales', '•'), o('ion', 'Iónico (polar)', '±'), o('peri', 'Pericíclico', '🔄')], [
+      c('☀️', 'El Cl₂ se parte con luz ultravioleta', 'rad', 'Homólisis: dos Cl•.'),
+      c('🧪', 'El HBr se separa en H⁺ y Br⁻', 'ion', 'Heterólisis.'),
+      c('🔥', 'Metano + cloro con luz → clorometano', 'rad', 'Sustitución por radicales.'),
+      c('🧪', 'Eteno + HBr → bromoetano', 'ion', 'Adición electrofílica con carbocatión.'),
+      c('🧪', 'CH₃Br + OH⁻ → CH₃OH + Br⁻', 'ion', 'Sustitución nucleofílica.'),
+      c('⬡', 'Un dieno y un alqueno forman un anillo de 6 en un solo paso', 'peri', 'Diels-Alder.'),
+      c('🌍', 'Los CFC sueltan Cl• en la estratosfera', 'rad', 'Por eso dañan el ozono.'),
+      c('🧈', 'El aceite se pone rancio con el aire', 'rad', 'Oxidación por radicales.'),
+    ], 'El mecanismo explica por qué una reacción necesita luz, ácido o calor.'],
   'org-plastico-juego': ['¿Qué plástico es?', '¿De qué plástico está hecho?', 'Polietileno (2, 4), PVC (3), polipropileno (5), poliestireno (6).',
     [o('pe', 'Polietileno', '🛍️'), o('pvc', 'PVC', '🚰'), o('pp', 'Polipropileno', '🪣'), o('ps', 'Poliestireno', '🥡')], [
       c('🛍️', 'Bolsa del supermercado', 'pe', 'Código 2 o 4.'),

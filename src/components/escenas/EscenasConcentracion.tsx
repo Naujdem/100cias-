@@ -147,3 +147,55 @@ export function EscenaDilucion({ fase }: { fase: string }) {
     </svg>
   )
 }
+
+const ET = ['marcas', 'cuenta', 'peligro']
+
+function Frasco({ x, marca, pct, ml, color }: { x: number; marca: string; pct: string; ml: string; color: string }) {
+  return (
+    <g>
+      <rect x={x + 30} y="52" width="30" height="16" rx="3" fill={color} stroke={TINTA} />
+      <path d={`M${x} 80 q0 -12 20 -12 h50 q20 0 20 12 v120 q0 10 -10 10 h-70 q-10 0 -10 -10 z`} fill="#f4f7fa" stroke={TINTA} strokeWidth="2.5" />
+      <rect x={x + 8} y="100" width="74" height="78" rx="5" fill="#fff" stroke={color} strokeWidth="2" />
+      <T x={x + 45} y={118} t={marca} s={12} c={color} />
+      <T x={x + 45} y={138} t="hipoclorito" s={9} peso={600} />
+      <T x={x + 45} y={154} t={pct} s={13} />
+      <T x={x + 45} y={172} t={ml} s={10} peso={600} />
+    </g>
+  )
+}
+
+export function EscenaEtiquetas({ fase }: { fase: string }) {
+  const i = idx(ET, fase)
+  return (
+    <svg viewBox="0 0 400 300" role="img" aria-label={`Comparar etiquetas: ${fase}`} className="h-full w-full">
+      <rect x="-1500" y="-1500" width="3400" height="3300" fill="#eef2f6" />
+      <g style={{ transition: suave, transform: i === 2 ? 'translateX(-70px)' : 'none' }}>
+        <Frasco x={70} marca="Marca A" pct="5,25 %" ml="1000 mL" color={AZUL} />
+        <g style={ver(i < 2)}><Frasco x={230} marca="Marca B" pct="3 %" ml="2000 mL" color={VERDE} /></g>
+      </g>
+      <g style={ver(i === 0)}>
+        <T x={200} y={250} t="Dos marcas del mismo blanqueador" s={14} />
+        <T x={200} y={272} t="¿Cuál trae más cloro activo? La etiqueta lo dice" s={11} peso={600} />
+      </g>
+      <g style={ver(i === 1)}>
+        <T x={115} y={235} t="5,25 g × 10 = 52,5 g" s={12} c={AZUL} />
+        <T x={275} y={235} t="3 g × 20 = 60 g" s={12} c={VERDE} />
+        <T x={200} y={262} t="B trae más en total, pero más diluido:" s={13} />
+        <T x={200} y={282} t="para el mismo trabajo hay que echar casi el doble" s={11} peso={600} />
+      </g>
+      <g style={ver(i === 2)}>
+        <g transform="translate(230 70)">
+          <rect x="0" y="0" width="56" height="56" fill="#fff" stroke={ROJO} strokeWidth="4" transform="rotate(45 28 28)" />
+          <path d="M14 22 h14 l-3 8 h-8 z M30 22 h14 l-3 8 h-8 z" fill={TINTA} />
+          <path d="M12 42 h32" stroke={TINTA} strokeWidth="3" />
+          <path d="M17 34 l-2 6 M37 34 l2 6" stroke={TINTA} strokeWidth="2" />
+        </g>
+        <T x={258} y={160} t="corrosivo" s={11} c={ROJO} />
+        <T x={300} y={190} t="No mezclar con ácidos ni amoníaco" s={11} c={ROJO} />
+        <T x={300} y={208} t="Lote y vencimiento: se debilita con el tiempo" s={10} peso={600} />
+        <T x={200} y={250} t="La etiqueta también dice cómo usarlo sin peligro" s={13} />
+        <T x={200} y={272} t="mezclado con otros limpiadores suelta gases tóxicos" s={11} peso={600} />
+      </g>
+    </svg>
+  )
+}

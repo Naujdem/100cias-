@@ -59,7 +59,7 @@ import { EscenaGasParticulas, EscenaGasVariables, EscenaKelvin, EscenaTorricelli
 import { EscenaBoyle, EscenaCharles, EscenaGayLussac, EscenaAvogadro, EscenaDaltonGraham } from './EscenasLeyesGases.tsx'
 import { EscenaAguaPuentes, EscenaTensionSuperficial, EscenaCalorEspecifico, EscenaHieloFlota, EscenaPresionVapor, EscenaSolidos } from './EscenasAgua2.tsx'
 import { EscenaDisolver, EscenaSaturacion, EscenaFactoresSolubilidad, EscenaCurvasSolubilidad, EscenaTiposMezcla } from './EscenasSoluciones.tsx'
-import { EscenaConcentracionColor, EscenaPpm, EscenaPrepararMolar, EscenaDilucion } from './EscenasConcentracion.tsx'
+import { EscenaConcentracionColor, EscenaPpm, EscenaPrepararMolar, EscenaDilucion, EscenaEtiquetas } from './EscenasConcentracion.tsx'
 import { EscenaVelocidadReaccion, EscenaFactoresVelocidad, EscenaColisiones, EscenaEnergiaActivacion, EscenaConservarAlimentos } from './EscenasCinetica.tsx'
 import { EscenaIdaVuelta, EscenaEquilibrioDinamico, EscenaLeChatelier, EscenaEquilibrioNaturaleza } from './EscenasEquilibrio.tsx'
 import { EscenaAcidoBase, EscenaRepolloIndicador, EscenaSueloPh, EscenaFuerteDebil, EscenaTitulacion } from './EscenasAcidosBases.tsx'
@@ -332,6 +332,7 @@ export const ESCENAS: Record<string, ComponentType<{ fase: string }>> = {
   'tipos-mezcla': EscenaTiposMezcla,
   'concentracion-color': EscenaConcentracionColor,
   'ppm-piscina': EscenaPpm,
+  'etiquetas-comparar': EscenaEtiquetas,
   'preparar-molar': EscenaPrepararMolar,
   dilucion: EscenaDilucion,
   'velocidad-reaccion': EscenaVelocidadReaccion,

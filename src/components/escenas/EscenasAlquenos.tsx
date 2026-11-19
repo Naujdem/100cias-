@@ -119,3 +119,45 @@ export function EscenaAlqPolimero({ fase }: { fase: string }) {
     </Lienzo>
   )
 }
+
+const MEC = ['homolisis', 'heterolisis', 'electrofilica']
+
+function Atomo({ x, y, s, c, e = '' }: { x: number; y: number; s: string; c: string; e?: string }) {
+  return (
+    <g style={{ transition: suave }}>
+      <circle cx={x} cy={y} r="20" fill={c} stroke={TINTA} strokeWidth="2" />
+      <T x={x} y={y + 5} t={s} s={14} c="#fff" />
+      {e && <T x={x + 24} y={y - 14} t={e} s={16} c={ROJO} />}
+    </g>
+  )
+}
+
+export function EscenaAlqMecanismo({ fase }: { fase: string }) {
+  const i = idx(MEC, fase)
+  return (
+    <Lienzo etiqueta={`Mecanismos de reacción: ${fase}`}>
+      <g style={ver(i === 0)}>
+        <T x={60} y={70} t="☀️ luz UV" s={13} />
+        <Atomo x={i === 0 ? 150 : 175} y={140} s="Cl" c={VERDE} e="•" />
+        <Atomo x={i === 0 ? 250 : 225} y={140} s="Cl" c={VERDE} e="•" />
+        <T x={200} y={195} t="Cl–Cl  →  Cl•  +  Cl•" s={15} c={ROJO} />
+      </g>
+      <g style={ver(i === 1)}>
+        <Atomo x={150} y={140} s="H" c={AZUL} e="+" />
+        <Atomo x={250} y={140} s="Br" c="#9a5a2a" e="−" />
+        <T x={250} y={105} t=":" s={18} c={ROJO} />
+        <T x={200} y={195} t="H–Br  →  H⁺  +  Br⁻" s={15} c={ROJO} />
+      </g>
+      <g style={ver(i === 2)}>
+        <T x={200} y={95} t="1) CH₂=CH₂ + H⁺  →  CH₃–CH₂⁺" s={14} />
+        <T x={200} y={118} t="el doble enlace ataca al H⁺ (electrófilo)" s={10} peso={600} c={AZUL} />
+        <T x={200} y={152} t="2) CH₃–CH₂⁺ + Br⁻  →  CH₃–CH₂Br" s={14} />
+        <T x={200} y={175} t="el Br⁻ (nucleófilo) cierra la reacción" s={10} peso={600} c={VERDE} />
+        <T x={200} y={205} t="CH₃–CH₂⁺ es un carbocatión: dura un instante" s={11} c={ROJO} />
+      </g>
+      <T x={200} y={40} t={['Homólisis: radicales libres', 'Heterólisis: iones', 'Adición electrofílica, paso a paso'][i]} s={16} c={[VERDE, AZUL, TINTA][i]} />
+      <T x={200} y={250} t={['Cada átomo se lleva uno de los dos electrones del enlace', 'Un átomo se lleva los dos electrones; el otro queda sin ninguno', 'El mecanismo cuenta qué enlaces se rompen y se forman, y en qué orden'][i]} s={12} />
+      <T x={200} y={272} t={['El radical (•) es muy reactivo: así empiezan la cloración del metano y el daño al ozono', 'Pasa en solventes polares; el átomo más electronegativo se queda con el par', 'Un mecanismo no se ve: se deduce de los productos y de la velocidad'][i]} s={10} peso={600} />
+    </Lienzo>
+  )
+}

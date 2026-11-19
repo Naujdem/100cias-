@@ -15,12 +15,15 @@ Competencias (Guía 7). Solo lo de biología y química: la física todavía no 
   experimental, informe) → laboratorios, sobre todo la práctica extra 1 (informe).
 
 ## Falta o queda corto
-- **8°-4 sistemas de órganos y regulación** (excretor, inmune, nervioso, endocrino, óseo y muscular): solo hay un
+- ~~**8°-4 sistemas de órganos y regulación**~~ ✅ (19 nov 2026): área 6 «Sistemas del cuerpo», 10 temas.
+  Antes: (excretor, inmune, nervioso, endocrino, óseo y muscular): solo hay un
   panorama en «De la célula al organismo». Es el hueco más grande de biología: no está en ninguna de las 5 áreas.
 - ~~**10°-4 biotecnología**~~ ✅ (19 nov 2026): se sumaron Clonación, Reproducción asistida y Terapia génica, y la
   bioética (cuatro principios) en «El debate».
-- **11°-4 mecanismos de reacción orgánica** (homólisis, heterólisis, pericíclicas): no aparecen en Química área 5.
-- Estándar 8°–9° «comparo la información química de las etiquetas» (y pH de productos cotidianos): podría ser una
+- ~~**11°-4 mecanismos de reacción orgánica**~~ ✅ (19 nov 2026): Paso 6 de «Alquenos y alquinos».
+  Antes: (homólisis, heterólisis, pericíclicas): no aparecen en Química área 5.
+- ~~Estándar 8°–9° etiquetas~~ ✅ (19 nov 2026): Paso 7 «Compara las etiquetas» en Concentración (el pH cotidiano ya estaba en Ácidos y bases).
+  Antes: «comparo la información química de las etiquetas» (y pH de productos cotidianos): podría ser una
   actividad corta.
 - **Física** (DBA 6°-1, 7°-1, 8°-1, 9°-1, 10°-1 y 2, 11°-1 a 3: cargas, energía, termodinámica, movimiento, fuerzas,
   ondas, circuitos): fuera de la app por ahora; sería la siguiente materia.

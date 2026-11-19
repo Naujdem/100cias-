@@ -16,7 +16,8 @@
     "Diferenciar soluciones diluidas y concentradas.",
     "Calcular concentraciones en porcentaje y en ppm a partir de situaciones cotidianas.",
     "Calcular la molaridad y preparar soluciones por dilución.",
-    "Usar la normalidad y la fracción molar en casos sencillos."
+    "Usar la normalidad y la fracción molar en casos sencillos.",
+    "Comparar la información química de las etiquetas de productos de distintas marcas."
   ],
   "fuentes": [
     "BORRADOR: verificar con un texto de química de bachillerato.",
@@ -698,6 +699,120 @@
           ],
           "correcta": 0,
           "explicacion": "2 / 4."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "etiquetas",
+      "titulo": "Compara las etiquetas",
+      "resumen": "Dos marcas del mismo producto: misma unidad, misma comparación.",
+      "anio": 7,
+      "etiqueta": "Paso 7",
+      "nivel": "intermedio",
+      "requiere": [
+        "porcentajes"
+      ],
+      "ficha": {
+        "idea": "Las etiquetas de los productos de aseo, los medicamentos y los alimentos traen información química: los ingredientes activos, su concentración, el contenido del envase, los pictogramas de peligro, cómo usarlo y el lote y la fecha de vencimiento. Para comparar dos marcas hay que poner la concentración en la misma unidad (%, g/L o ppm) y fijarse en el tamaño del envase. Un blanqueador al 5,25 % en 1 L trae 52,5 g de hipoclorito; uno al 3 % en 2 L trae 60 g, más en total, pero más diluido: para desinfectar lo mismo hay que usar casi el doble. La etiqueta también protege: el blanqueador no se mezcla con ácidos ni con amoníaco porque suelta gases tóxicos, y se debilita con el tiempo, por eso importa la fecha.",
+        "contexto": [
+          {
+            "titulo": "Misma sustancia, otro nombre",
+            "texto": "Hipoclorito de sodio = cloro de la ropa; ácido acético = vinagre; peróxido de hidrógeno = agua oxigenada; cloruro de sodio = sal."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "La etiqueta dice qué tiene el producto, cuánto y cómo usarlo sin peligro."
+          ],
+          "media": [
+            "Para comparar marcas: misma unidad de concentración y mismo volumen.",
+            "Cantidad de soluto = concentración × volumen."
+          ],
+          "avanzada": [
+            "Pasar g/L a % (÷10) y % a ppm (×10 000) para comparar."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Cuál blanqueador rinde más: el barato o el caro?",
+          "actividad": "Traer de casa dos marcas del mismo producto (blanqueador, vinagre, jabón o crema dental) y llenar una tabla: sustancia activa, concentración, contenido, cantidad de soluto, pictogramas y advertencias.",
+          "errores": [
+            "Comparar porcentajes sin mirar el tamaño del envase.",
+            "Creer que más concentrado siempre es mejor (el alcohol de 70 % desinfecta mejor que el de 96 %)."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Dos marcas, una pregunta",
+          "visual": {
+            "tipo": "escena",
+            "id": "etiquetas-comparar",
+            "fases": [
+              {
+                "id": "marcas",
+                "nombre": "Las etiquetas",
+                "texto": "5,25 % en 1 L y 3 % en 2 L."
+              },
+              {
+                "id": "cuenta",
+                "nombre": "La cuenta",
+                "texto": "52,5 g frente a 60 g de hipoclorito."
+              },
+              {
+                "id": "peligro",
+                "nombre": "Las advertencias",
+                "texto": "Pictograma, mezclas prohibidas y vencimiento."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre los pictogramas de peligro",
+            "tema": "que-es-quimica"
+          }
+        },
+        {
+          "titulo": "¿Cuál rinde más?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Vinagre A: 5 % en 500 mL. Vinagre B: 4 % en 1000 mL. ¿Cuál trae más ácido acético en total?",
+            "opciones": [
+              "B: 40 g",
+              "A: 25 g",
+              "Los dos igual",
+              "No se puede saber"
+            ],
+            "correcta": 0,
+            "explicacion": "5 × 5 = 25 g; 4 × 10 = 40 g. A está más concentrado, pero B trae más."
+          }
+        }
+      ],
+      "juego": "etiqueta-juego",
+      "preguntas": [
+        {
+          "id": "qm-co-13",
+          "enunciado": "¿Qué hay que hacer antes de comparar la concentración de dos etiquetas?",
+          "opciones": [
+            "Pasarlas a la misma unidad",
+            "Mirar el color del envase",
+            "Comparar los precios",
+            "Sumar los porcentajes"
+          ],
+          "correcta": 0,
+          "explicacion": "%, g/L o ppm, pero la misma en las dos."
+        },
+        {
+          "id": "qm-co-14",
+          "enunciado": "¿Por qué no se mezcla el blanqueador con otros limpiadores?",
+          "opciones": [
+            "Puede soltar gases tóxicos",
+            "Pierde el olor",
+            "Se vuelve más concentrado",
+            "Cambia de color"
+          ],
+          "correcta": 0,
+          "explicacion": "Con ácidos o amoníaco libera gases peligrosos."
         }
       ],
       "revisado": false

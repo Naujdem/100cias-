@@ -139,7 +139,7 @@ import { ColigativaJuego, CrioscopiaJuego, OsmosisJuego } from './JuegosColigati
 import { AcidoOBaseJuego, PhJuego, IndicadorJuego, SueloPhJuego, FuerteDebilJuego, BronstedJuego } from './JuegosAcidosBases.tsx'
 import { ReversibleJuego, EquilibrioJuego, ChatelierJuego, KcJuego, EquilibrioVidaJuego } from './JuegosEquilibrio.tsx'
 import { RapidaLentaJuego, MasRapidoJuego, ColisionJuego, ActivacionJuego, ConservarAlimentosJuego } from './JuegosCinetica.tsx'
-import { ConcentradaJuego, PorcentajeJuego, PpmJuego, MolaridadJuego, DilucionJuego, NormalidadJuego } from './JuegosConcentracion.tsx'
+import { ConcentradaJuego, PorcentajeJuego, PpmJuego, MolaridadJuego, DilucionJuego, NormalidadJuego, EtiquetaJuego } from './JuegosConcentracion.tsx'
 import { SeDisuelveJuego, SaturacionJuego, FactoresSolubilidadJuego, CurvaJuego, ColoideJuego } from './JuegosSoluciones.tsx'
 import { EnlacePuenteJuego, TensionJuego, CalorAguaJuego, HieloJuego, EbullicionJuego, SolidoJuego } from './JuegosAguaLiquidos.tsx'
 import { BoyleJuego, CharlesJuego, GayLussacJuego, CualLeyGasJuego, AvogadroJuego, GasIdealJuego } from './JuegosLeyesGases.tsx'
@@ -623,6 +623,7 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'molaridad-juego': MolaridadJuego,
   'dilucion-juego': DilucionJuego,
   'normalidad-juego': NormalidadJuego,
+  'etiqueta-juego': EtiquetaJuego,
   'reactor-colisiones': ReactorColisiones,
   'rapida-lenta-juego': RapidaLentaJuego,
   'mas-rapido-juego': MasRapidoJuego,
