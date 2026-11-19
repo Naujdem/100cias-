@@ -4,6 +4,32 @@ import type { Guia } from '../components/lab/GuiaLab.tsx'
 // cuando se crea o se convierte a mesa viva (PLAN-LABORATORIOS.md).
 
 export const GUIAS: Record<string, Guia> = {
+  colorimetria: {
+    objetivo: ['Preparar una escala de patrones por dilución y estimar con ella la concentración de una solución desconocida.'],
+    fundamento: [
+      'Una solución coloreada se ve más intensa cuanto más concentrada está, porque absorbe más luz.',
+      'Diluyendo una solución madre de concentración conocida se obtienen patrones: C₁·V₁ = C₂·V₂. Ej.: 4 mL de CuSO₄ 0,10 M + 6 mL de agua = 0,04 M.',
+      'La muestra se compara con los patrones sobre fondo blanco y se ubica entre los dos más parecidos.',
+      'En 11°: el colorímetro mide la absorbancia; por la ley de Beer-Lambert, A = ε·l·c. La gráfica A contra c de los patrones (curva de calibración) es una recta, y con la A de la muestra se calcula su concentración.',
+    ],
+    materiales: ['Solución madre de sulfato de cobre 0,10 M', 'Agua destilada en piseta', '6 tubos de ensayo iguales y gradilla', 'Pipeta graduada de 10 mL con pipeteador', 'Muestra desconocida', 'Hoja blanca', 'En 11°: colorímetro o app de colorímetro en el celular'],
+    procedimiento: [
+      'Numera cinco tubos. Pon en ellos 2, 4, 6, 8 y 10 mL de solución madre.',
+      'Completa cada tubo con agua hasta 10 mL y mezcla.',
+      'Calcula la concentración de cada patrón con C₁·V₁ = C₂·V₂ y anótala en una tabla.',
+      'Pon la muestra desconocida en un tubo igual y compárala con los patrones mirando de lado sobre la hoja blanca.',
+      'Estima su concentración y justifica entre qué patrones queda.',
+      'En 11°: mide la absorbancia de cada patrón y de la muestra, grafica A contra c, traza la recta y calcula la concentración de la muestra.',
+    ],
+    seguridad: ['El sulfato de cobre es tóxico si se ingiere y para los peces: guantes, nada a la boca y los residuos al frasco de metales, no al desagüe.', 'Nunca pipetees con la boca: usa el pipeteador.'],
+    preguntas: [
+      '¿Qué concentración tiene cada patrón? Muestra el cálculo.',
+      '¿Entre qué patrones quedó la muestra? ¿Cuál es tu estimación?',
+      '¿Por qué los tubos deben ser iguales y tener el mismo volumen?',
+      'En 11°: ¿la gráfica dio una recta? ¿Qué representa la pendiente?',
+      '¿En qué otros casos se mide una concentración por el color? (cloro del agua, glucosa, pH)',
+    ],
+  },
   cristalizacion: {
     objetivo: ['Preparar soluciones saturadas y obtener cristales, comparando su forma y su tamaño según cómo se enfríen o evaporen.'],
     fundamento: [
