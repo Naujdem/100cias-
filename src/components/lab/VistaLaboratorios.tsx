@@ -3,6 +3,8 @@ import type { ReactNode } from 'react'
 import { enlace } from '../../lib/ruta.ts'
 import { Migas } from '../Biblioteca.tsx'
 import Mesa from './Mesa.tsx'
+import GuiaLab from './GuiaLab.tsx'
+import { GUIAS } from '../../data/guiasLab.ts'
 import type { Nivel, Practica } from './Mesa.tsx'
 import solucionMolar from './practicas/solucionMolar.tsx'
 import Seguridad from './practicas/Seguridad.tsx'
@@ -109,7 +111,10 @@ function VistaPractica({ P, grado }: { P: Entrada; grado: number }) {
   return (
     <div>
       <Migas pasos={[{ texto: 'Inicio', a: enlace.inicio }, { texto: 'Laboratorios', a: enlace.lab() }, { texto: P.titulo }]} />
-      <h1 className="mt-1 text-2xl font-semibold sm:text-3xl">{P.titulo}</h1>
+      <div className="mt-1 flex flex-wrap items-center justify-between gap-3">
+        <h1 className="text-2xl font-semibold sm:text-3xl">{P.titulo}</h1>
+        {GUIAS[P.id] && <GuiaLab titulo={P.titulo} guia={GUIAS[P.id]} />}
+      </div>
       {P.mesa && <div className="mt-2 flex flex-wrap items-center gap-4 text-sm">
         <label className="flex items-center gap-2"><input type="checkbox" checked={calc} onChange={(e) => setCalc(e.target.checked)} /> Calculadora</label>
         <label className="flex items-center gap-2"><input type="checkbox" checked={pistas} onChange={(e) => setPistas(e.target.checked)} /> Pasos y pistas</label>
