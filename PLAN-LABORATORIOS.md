@@ -149,7 +149,7 @@ clásicas de los «201 experimentos»; las de bórax o similares, con aviso de s
    gráfica t–T con las mesetas de fusión y ebullición.
 9. ~~**Reacciones que calientan o enfrían**~~ ✅ (19 nov 2026: `CalorReacciones.tsx`) (área 3, desde 6°): disolver sustancias y medir si el agua sube o baja de
    temperatura (compresas frías y calientes); exotérmico y endotérmico.
-10. **Potabilización del agua** (desde 6°; PRAE): agua turbia de la quebrada → alumbre (coagulación) → sedimentar →
+10. ~~**Potabilización del agua**~~ ✅ (19 nov 2026: `Potabilizacion.tsx`) (desde 6°; PRAE): agua turbia de la quebrada → alumbre (coagulación) → sedimentar →
     filtro casero de arena y carbón → desinfección.
 11. **Selección natural con picos** (Biología, área 4; DBA 9°-6): «aves» con pinza, cuchara o pitillo compiten por
     semillas durante varias generaciones.
