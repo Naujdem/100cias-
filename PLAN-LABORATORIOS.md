@@ -66,7 +66,7 @@ Química:
 11. ~~Medición~~ ✅ (18 nov 2026: el ojo se arrastra hasta el nivel del menisco; cada instrumento se llena en el bidón y se vierte en el vaso de la balanza, que hay que tarar tocándola antes de cada medida; vertedero para vaciar).
 12. ~~Densidades~~ ✅ (18 nov 2026: cada objeto se lleva a la balanza, a la regla o a la probeta y se saca de ella tomándolo; el alfiler hunde lo que flota; en la torre se vierte cada frasco y se sueltan los objetos en el vaso).
 13. ~~Mezclas y separación~~ ✅ (18 nov 2026: imán y agua al vaso; el vaso se vierte en el tamiz, el embudo con filtro, el embudo de decantación, la estufa o el destilador; cromatografía con marcador a la tira, tira al vaso de agua o alcohol y tiempo real 1 s = 1 min).
-14. Conservación de la masa — echar vinagre y bicarbonato, poner globo o tapa, llevar a la balanza.
+14. ~~Conservación de la masa~~ ✅ (18 nov 2026: vinagre de a 25 mL y bicarbonato de a 1 g al papelito o al globo; recipiente y papelito a la balanza; globo o tapa a la botella; levantar el globo soltándolo otra vez; si se tapa tarde se escapa gas (tiempo real); la balanza se toca para anotar antes y después).
 
 Se quedan como están (son quices o tablas): Seguridad (preguntas; solo «Vístete» podría pasar a arrastrar la ropa a la figura), Reconoce tu material, Calidad del agua y del suelo.
 

@@ -411,4 +411,30 @@ export const GUIAS: Record<string, Guia> = {
       '¿Cuántos colorantes tenía cada tinta? ¿Por qué la tinta permanente no se movió con agua?',
     ],
   },
+  'conservacion-masa': {
+    objetivo: ['Comprobar la ley de conservación de la masa (Lavoisier) con la reacción entre vinagre y bicarbonato, comparando un sistema abierto con uno cerrado.'],
+    fundamento: [
+      'En una reacción química la masa no se crea ni se destruye: la masa de los reactivos es igual a la de los productos (Lavoisier, 1789).',
+      'El vinagre (ácido acético) y el bicarbonato de sodio reaccionan y forman acetato de sodio, agua y dióxido de carbono: NaHCO₃ + CH₃COOH → CH₃COONa + H₂O + CO₂.',
+      'En un sistema abierto el CO₂ se escapa al aire y la balanza marca menos; en un sistema cerrado (botella con globo o tapada) el gas queda adentro y la masa se mantiene.',
+      'El globo inflado desplaza aire y recibe un empuje hacia arriba, por eso la balanza puede marcar un poco menos aunque no se haya escapado nada.',
+      'Si se pone más bicarbonato del que el ácido alcanza a consumir, sobra en el fondo: el vinagre es el reactivo límite.',
+    ],
+    materiales: ['Balanza', 'Vaso', 'Botella plástica con tapa', 'Globo', 'Papelito', 'Vinagre', 'Bicarbonato de sodio'],
+    procedimiento: [
+      'Vaso abierto: echa el vinagre en el vaso y el bicarbonato en un papelito; pon los dos sobre la balanza y anota la masa.',
+      'Echa el bicarbonato en el vinagre, espera a que dejen de salir burbujas y vuelve a pesar todo.',
+      'Botella con globo: echa el vinagre en la botella y el bicarbonato dentro del globo; pon el globo en la boca sin dejar caer el polvo, pesa, levanta el globo para que caiga y vuelve a pesar.',
+      'Botella tapada: con el bicarbonato en el papelito, déjalo caer en la botella y tápala enseguida; pesa antes y después. Usa poco bicarbonato.',
+      'Compara la diferencia de masa en cada montaje y explícala.',
+    ],
+    seguridad: ['Con mucho bicarbonato la tapa puede salir disparada: apunta la botella lejos de la cara.', 'Usa gafas: el vinagre irrita los ojos.'],
+    preguntas: [
+      '¿En qué montaje disminuyó la masa? ¿A dónde se fue?',
+      '¿Por qué hay que poner el bicarbonato sobre la balanza antes de pesar?',
+      '¿Qué pasa si tapas la botella tarde?',
+      '¿Por qué la botella con globo marca un poco menos aunque no se escape el gas?',
+      '¿Qué reactivo se acabó primero cuando quedó bicarbonato en el fondo?',
+    ],
+  },
 }
