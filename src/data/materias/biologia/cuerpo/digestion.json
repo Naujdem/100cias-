@@ -1,0 +1,438 @@
+{
+  "id": "digestion",
+  "materia": "biologia",
+  "area": "cuerpo",
+  "titulo": "Nutrición y digestión",
+  "subtema": "Del plato a la célula",
+  "orden": 62,
+  "etiqueta": "2",
+  "vistas": ["ruta"],
+  "tituloVista": "Ruta del alimento",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Clasificar los nutrientes según su función: dar energía, construir y regular.",
+    "Describir el recorrido del alimento por el tubo digestivo y la función de cada órgano.",
+    "Diferenciar la digestión mecánica de la química y explicar el papel de las enzimas.",
+    "Explicar cómo los nutrientes pasan a la sangre en el intestino delgado.",
+    "Comparar el sistema digestivo humano con el de un rumiante y el de un ave."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con un texto escolar de biología y los DBA de Ciencias Naturales 8°-4. Longitudes y superficies del intestino son aproximadas (la superficie interna del intestino se estima hoy en unos 30 m², no en los 250 m² que traían textos viejos)."
+  ],
+  "bloques": [
+    {
+      "id": "nutrientes",
+      "titulo": "Nutrición y nutrientes",
+      "resumen": "Comemos para obtener nutrientes: unos dan energía, otros sirven para construir y otros regulan.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "La nutrición es el conjunto de procesos con los que el cuerpo obtiene y usa los nutrientes de los alimentos. Los carbohidratos (arroz, papa, plátano, panela) y las grasas dan sobre todo energía; las proteínas (huevo, carne, fríjol, leche) sirven para construir y reparar el cuerpo; las vitaminas y los minerales (frutas y verduras) regulan su funcionamiento, y el agua es el medio en el que todo ocurre. La fibra no se digiere, pero ayuda a que el intestino funcione. Para que las células puedan usar los nutrientes, primero hay que partirlos en moléculas pequeñas: eso es la digestión. En el sistema digestivo participan la nutrición, la respiración, la circulación y la excreción: por eso en esta área van juntos.",
+        "contexto": [
+          {
+            "titulo": "Nutrición no es solo comer",
+            "texto": "Incluye digerir, absorber, repartir los nutrientes a las células, usarlos y eliminar los desechos."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Nutrientes de energía: carbohidratos y grasas.",
+            "Nutrientes para construir: proteínas. Para regular: vitaminas y minerales."
+          ],
+          "media": [
+            "Digestión: partir los alimentos en moléculas pequeñas que las células puedan usar."
+          ],
+          "avanzada": [
+            "Almidón → glucosa; proteínas → aminoácidos; grasas → ácidos grasos y glicerol."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Qué tiene tu almuerzo de hoy que te sirve para crecer?",
+          "actividad": "Clasificar los alimentos del almuerzo escolar en energía, construcción y regulación, y ver si el plato está completo.",
+          "errores": [
+            "Creer que las grasas son siempre malas: son necesarias en cantidad moderada.",
+            "Confundir alimento con nutriente."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Te comes un huevo. ¿En qué se convierte la mayor parte de su proteína?",
+            "opciones": ["En parte de tus músculos y tejidos", "En grasa del cuerpo", "En orina enseguida", "En nada: se elimina"],
+            "correcta": 0,
+            "explicacion": "Las proteínas se digieren en aminoácidos y con ellos el cuerpo construye las suyas."
+          }
+        },
+        {
+          "titulo": "Tres trabajos",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "⚡", "titulo": "Energía", "texto": "Carbohidratos y grasas: arroz, papa, plátano, aceite." },
+              { "icono": "🧱", "titulo": "Construir", "texto": "Proteínas: huevo, carne, fríjol, leche." },
+              { "icono": "⚙️", "titulo": "Regular", "texto": "Vitaminas y minerales: frutas y verduras." },
+              { "icono": "💧", "titulo": "Agua y fibra", "texto": "El agua es el medio; la fibra ayuda al intestino." }
+            ]
+          }
+        },
+        {
+          "titulo": "De grande a pequeño",
+          "nivel": "intermedio",
+          "visual": {
+            "tipo": "compara",
+            "izq": { "icono": "🍽️", "titulo": "En el plato", "puntos": ["Almidón", "Proteínas", "Grasas"] },
+            "der": { "icono": "🧫", "titulo": "En la sangre", "puntos": ["Glucosa", "Aminoácidos", "Ácidos grasos y glicerol"] }
+          }
+        }
+      ],
+      "juego": "nutrientes-juego",
+      "preguntas": [
+        {
+          "id": "cu-di-1",
+          "enunciado": "¿Qué nutriente sirve sobre todo para construir y reparar el cuerpo?",
+          "opciones": ["Proteínas", "Carbohidratos", "Agua", "Fibra"],
+          "correcta": 0,
+          "explicacion": "Con los aminoácidos se arman las proteínas del cuerpo."
+        },
+        {
+          "id": "cu-di-2",
+          "enunciado": "¿Para qué sirve la digestión?",
+          "opciones": [
+            "Para partir los alimentos en moléculas que las células puedan usar",
+            "Para guardar el alimento en el estómago",
+            "Para producir energía en el estómago",
+            "Para eliminar toda la comida"
+          ],
+          "correcta": 0,
+          "explicacion": "Solo las moléculas pequeñas pasan a la sangre."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "recorrido",
+      "titulo": "El recorrido del alimento",
+      "resumen": "Boca, esófago, estómago, intestino delgado, intestino grueso y ano; el hígado y el páncreas ayudan.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "requiere": ["nutrientes"],
+      "ficha": {
+        "idea": "El sistema digestivo es un tubo de unos 8 metros con glándulas que le ayudan. En la boca, los dientes trituran el alimento y la saliva lo moja y empieza a digerir el almidón; la lengua forma el bolo. El esófago lo empuja hasta el estómago con contracciones (movimientos peristálticos). En el estómago, el jugo gástrico, muy ácido, mata microbios y empieza a digerir las proteínas; el bolo se vuelve una papilla. En el intestino delgado llegan la bilis (del hígado) y el jugo pancreático, se termina la digestión y los nutrientes pasan a la sangre. En el intestino grueso se recupera el agua, las bacterias de la microbiota fabrican algunas vitaminas y se forman las heces, que salen por el ano.",
+        "contexto": [
+          {
+            "titulo": "Cabeza abajo también funciona",
+            "texto": "Gracias a los movimientos peristálticos, un astronauta puede tragar en el espacio y una persona puede comer acostada."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Boca → esófago → estómago → intestino delgado → intestino grueso → ano.",
+            "Glándulas anexas: glándulas salivales, hígado y páncreas."
+          ],
+          "media": [
+            "Peristaltismo: contracciones que empujan el alimento.",
+            "Estómago: jugo ácido; intestino delgado: absorción; grueso: agua y heces."
+          ],
+          "avanzada": [
+            "El alimento tarda de uno a tres días en recorrer todo el tubo."
+          ]
+        },
+        "docente": {
+          "abrir": "Si te comes una mazorca, ¿por qué a veces salen granos enteros?",
+          "actividad": "Medir 8 metros de lana en el patio y marcar con cinta la longitud aproximada de cada órgano.",
+          "errores": [
+            "Creer que el alimento pasa por el corazón o los pulmones.",
+            "Pensar que la digestión termina en el estómago."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "El viaje del alimento",
+          "visual": {
+            "tipo": "escena",
+            "id": "dig-recorrido",
+            "fases": [
+              { "id": "boca", "nombre": "Boca", "texto": "Los dientes trituran y la saliva moja: se forma el bolo." },
+              { "id": "esofago", "nombre": "Esófago", "texto": "Contracciones empujan el bolo hacia el estómago.", "nota": "Peristaltismo: funciona incluso cabeza abajo." },
+              { "id": "estomago", "nombre": "Estómago", "texto": "El jugo ácido mata microbios y empieza a digerir proteínas." },
+              { "id": "delgado", "nombre": "Intestino delgado", "texto": "La bilis y el jugo del páncreas terminan la digestión; los nutrientes pasan a la sangre." },
+              { "id": "grueso", "nombre": "Intestino grueso", "texto": "Se recupera el agua y las bacterias trabajan." },
+              { "id": "ano", "nombre": "Ano", "texto": "Salen las heces: lo que no se pudo digerir." }
+            ]
+          }
+        },
+        {
+          "titulo": "Los ayudantes",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "💦", "titulo": "Glándulas salivales", "texto": "Saliva con amilasa." },
+              { "icono": "🟤", "titulo": "Hígado", "texto": "Fabrica la bilis; la vesícula la guarda." },
+              { "icono": "🟡", "titulo": "Páncreas", "texto": "Jugo con enzimas para todo tipo de alimento." }
+            ]
+          }
+        }
+      ],
+      "juego": "dig-recorrido-juego",
+      "preguntas": [
+        {
+          "id": "cu-di-3",
+          "enunciado": "¿En qué órgano pasan la mayoría de los nutrientes a la sangre?",
+          "opciones": ["Intestino delgado", "Estómago", "Intestino grueso", "Esófago"],
+          "correcta": 0,
+          "explicacion": "Allí están las vellosidades."
+        },
+        {
+          "id": "cu-di-4",
+          "enunciado": "¿Qué función principal tiene el intestino grueso?",
+          "opciones": ["Recuperar agua y formar las heces", "Digerir las proteínas", "Producir bilis", "Triturar el alimento"],
+          "correcta": 0,
+          "explicacion": "La bilis la hace el hígado; las proteínas se digieren en el estómago y el delgado."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "digestion-quimica",
+      "titulo": "Digestión mecánica y química",
+      "resumen": "Los dientes y el estómago parten el alimento; las enzimas cortan sus moléculas.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "basico",
+      "requiere": ["recorrido"],
+      "ficha": {
+        "idea": "La digestión mecánica parte el alimento en pedazos más pequeños sin cambiar su sustancia: la masticación y los movimientos del estómago. Así aumenta la superficie en la que pueden actuar las enzimas. La digestión química cambia las moléculas: las enzimas cortan las moléculas grandes en otras pequeñas. Cada enzima corta un solo tipo de molécula: la amilasa (de la saliva y del páncreas) corta el almidón en azúcares; la pepsina, en el estómago ácido, corta las proteínas; la lipasa del páncreas corta las grasas en ácidos grasos y glicerol. La bilis no es una enzima: parte la grasa en gotitas para que la lipasa la alcance mejor. Cómo funcionan las enzimas se explica a fondo en el tema de metabolismo celular.",
+        "cuaderno": {
+          "facil": [
+            "Mecánica: partir en pedazos (dientes, estómago).",
+            "Química: las enzimas cortan las moléculas."
+          ],
+          "media": [
+            "Amilasa: almidón. Pepsina: proteínas. Lipasa: grasas.",
+            "La bilis separa la grasa en gotitas, pero no es una enzima."
+          ],
+          "avanzada": [
+            "Cada enzima trabaja mejor en su pH: la pepsina en el ácido del estómago, las del páncreas en medio alcalino."
+          ]
+        },
+        "docente": {
+          "abrir": "Si masticas mucho tiempo un pedazo de arepa o de pan, ¿por qué empieza a saber dulce?",
+          "actividad": "Masticar un pedazo de galleta de soda durante un minuto y notar el sabor dulce: la amilasa convierte el almidón en azúcar.",
+          "errores": [
+            "Creer que la bilis digiere las grasas por sí sola.",
+            "Pensar que masticar es digestión química."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Partir y cortar",
+          "visual": {
+            "tipo": "escena",
+            "id": "dig-enzimas",
+            "fases": [
+              { "id": "mecanica", "nombre": "Mecánica", "texto": "Dientes y estómago parten el alimento: más superficie." },
+              { "id": "quimica", "nombre": "Química", "texto": "Las enzimas cortan las moléculas largas." },
+              { "id": "almidon", "nombre": "Almidón", "texto": "La amilasa lo corta en azúcares (boca y páncreas)." },
+              { "id": "proteina", "nombre": "Proteínas", "texto": "La pepsina empieza en el estómago; el páncreas termina." },
+              { "id": "grasa", "nombre": "Grasas", "texto": "La bilis las parte en gotitas y la lipasa las corta." }
+            ]
+          },
+          "atajo": { "texto": "Más sobre esto: las enzimas", "tema": "metabolismo-celular", "bloque": "enzimas" }
+        },
+        {
+          "titulo": "¿Por qué sabe dulce?",
+          "visual": { "tipo": "cifra", "icono": "🍘", "valor": "1 minuto", "texto": "masticando galleta de soda basta para sentir el azúcar que deja la amilasa" }
+        }
+      ],
+      "juego": "dig-mecanica-juego",
+      "preguntas": [
+        {
+          "id": "cu-di-5",
+          "enunciado": "¿Qué hace la amilasa?",
+          "opciones": ["Corta el almidón en azúcares", "Corta las proteínas", "Parte la grasa en gotitas", "Absorbe el agua"],
+          "correcta": 0,
+          "explicacion": "Está en la saliva y en el jugo del páncreas."
+        },
+        {
+          "id": "cu-di-6",
+          "enunciado": "Masticar es un ejemplo de digestión…",
+          "opciones": ["mecánica", "química", "enzimática", "celular"],
+          "correcta": 0,
+          "explicacion": "Parte el alimento sin cambiar sus moléculas."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "absorcion",
+      "titulo": "La absorción",
+      "resumen": "En el intestino delgado, pliegues y vellosidades multiplican la superficie para que los nutrientes pasen a la sangre.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "basico",
+      "requiere": ["digestion-quimica"],
+      "ficha": {
+        "idea": "Absorber es hacer pasar los nutrientes del intestino a la sangre. Ocurre sobre todo en el intestino delgado, un tubo de unos 6 metros. Por dentro tiene pliegues, y los pliegues están cubiertos de vellosidades: pequeñas salientes como dedos, cada una con capilares sanguíneos y un vaso linfático. Las células de las vellosidades tienen a su vez microvellosidades. Todo esto multiplica la superficie: si se extendiera, mediría unos 30 m², como un salón pequeño. La glucosa y los aminoácidos pasan a los capilares y van al hígado; los ácidos grasos pasan sobre todo a los vasos linfáticos. De ahí, la sangre los reparte a todas las células, como se ve en el tema de respiración y circulación.",
+        "cuaderno": {
+          "facil": [
+            "Absorción: los nutrientes pasan del intestino delgado a la sangre.",
+            "Las vellosidades aumentan la superficie."
+          ],
+          "media": [
+            "Glucosa y aminoácidos van a los capilares; las grasas, a los vasos linfáticos."
+          ],
+          "avanzada": [
+            "Pliegues, vellosidades y microvellosidades: tres niveles que multiplican la superficie."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué el intestino delgado no es un tubo liso?",
+          "actividad": "Comparar una toalla de cocina lisa con una toalla de felpa: cuál absorbe más agua y por qué.",
+          "errores": [
+            "Creer que los nutrientes se absorben en el estómago.",
+            "Pensar que la fibra pasa a la sangre."
+          ],
+          "minutos": 20
+        },
+        "analogia": {
+          "titulo": "Una toalla de felpa",
+          "texto": "La felpa absorbe más que una tela lisa porque sus hilitos tienen más superficie, como las vellosidades."
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Del intestino a la sangre",
+          "visual": {
+            "tipo": "escena",
+            "id": "dig-absorcion",
+            "fases": [
+              { "id": "tubo", "nombre": "El tubo", "texto": "El intestino delgado mide unos 6 metros." },
+              { "id": "pliegues", "nombre": "Pliegues", "texto": "Por dentro no es liso: tiene pliegues." },
+              { "id": "vellosidad", "nombre": "Vellosidad", "texto": "Cada pliegue tiene vellosidades con capilares y un vaso linfático." },
+              { "id": "sangre", "nombre": "A la sangre", "texto": "Las moléculas pequeñas cruzan y la sangre se las lleva." }
+            ]
+          }
+        },
+        {
+          "titulo": "Mucha superficie",
+          "visual": { "tipo": "cifra", "icono": "📐", "valor": "≈ 30 m²", "texto": "mide la superficie interna del intestino: como un salón pequeño" }
+        }
+      ],
+      "juego": "dig-absorcion-juego",
+      "preguntas": [
+        {
+          "id": "cu-di-7",
+          "enunciado": "¿Para qué sirven las vellosidades intestinales?",
+          "opciones": [
+            "Para aumentar la superficie de absorción",
+            "Para triturar el alimento",
+            "Para producir bilis",
+            "Para empujar las heces"
+          ],
+          "correcta": 0,
+          "explicacion": "Más superficie, más nutrientes absorbidos."
+        },
+        {
+          "id": "cu-di-8",
+          "enunciado": "¿Cuál de estas NO pasa a la sangre?",
+          "opciones": ["La fibra", "La glucosa", "Los aminoácidos", "El agua"],
+          "correcta": 0,
+          "explicacion": "No la digerimos: sigue hasta el intestino grueso."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "digestion-animales",
+      "titulo": "La digestión en otros animales",
+      "resumen": "La vaca tiene un estómago de cuatro cámaras y rumia; la gallina no tiene dientes y muele con la molleja.",
+      "anio": 5,
+      "etiqueta": "Paso 5",
+      "nivel": "intermedio",
+      "requiere": ["recorrido"],
+      "ficha": {
+        "idea": "El sistema digestivo de cada animal está adaptado a lo que come. Los rumiantes, como la vaca, la cabra y el venado, comen pasto, rico en celulosa, que ningún animal puede digerir por sí solo. Su estómago tiene cuatro cámaras: en el rumen, millones de bacterias y otros microbios fermentan la celulosa; el retículo forma bolas de pasto que la vaca devuelve a la boca para masticarlas otra vez (rumiar); el omaso absorbe agua, y el abomaso es el estómago verdadero, con jugo ácido. Las aves no tienen dientes: guardan el grano en el buche, lo humedecen con jugo en el proventrículo y lo muelen en la molleja, un músculo fuerte que a veces tiene piedritas tragadas. Los humanos somos omnívoros, con un estómago simple; la celulosa que comemos pasa como fibra.",
+        "contexto": [
+          {
+            "titulo": "El gas de la vaca",
+            "texto": "La fermentación del rumen produce metano, un gas de efecto invernadero: por eso la ganadería cuenta en el cambio climático."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Vaca: estómago de cuatro cámaras y rumia.",
+            "Gallina: sin dientes; buche y molleja."
+          ],
+          "media": [
+            "En el rumen, los microbios digieren la celulosa.",
+            "Los humanos no digerimos la celulosa: es la fibra."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "Si la vaca solo come pasto, ¿de dónde saca la proteína para su carne y su leche?",
+          "actividad": "Observar a una vaca o a un chivo rumiando (o un video) y contar cuántas veces mastica cada bolo.",
+          "errores": [
+            "Decir que la vaca tiene cuatro estómagos; es un estómago con cuatro cámaras.",
+            "Creer que la vaca digiere la celulosa con sus propias enzimas."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Tres sistemas digestivos",
+          "visual": {
+            "tipo": "escena",
+            "id": "dig-animales",
+            "fases": [
+              { "id": "humano", "nombre": "Persona", "texto": "Omnívoro con dientes y un estómago simple." },
+              { "id": "vaca", "nombre": "Vaca", "texto": "Rumen, retículo, omaso y abomaso: un estómago de cuatro cámaras.", "nota": "Las bacterias del rumen le dan también proteína: la vaca las digiere." },
+              { "id": "gallina", "nombre": "Gallina", "texto": "Buche para guardar, molleja para moler: no necesita dientes." }
+            ]
+          }
+        },
+        {
+          "titulo": "Para comprobar",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Por qué la gallina traga piedritas?",
+            "opciones": ["Para moler el grano en la molleja", "Para tener más calcio en el huevo", "Por error: no le sirven", "Para digerir la celulosa"],
+            "correcta": 0,
+            "explicacion": "Las piedritas reemplazan a los dientes."
+          }
+        }
+      ],
+      "juego": "dig-animales-juego",
+      "preguntas": [
+        {
+          "id": "cu-di-9",
+          "enunciado": "¿Quién digiere la celulosa en el rumen de la vaca?",
+          "opciones": ["Bacterias y otros microbios", "Las enzimas de la vaca", "El ácido del abomaso", "Los dientes"],
+          "correcta": 0,
+          "explicacion": "La vaca vive en simbiosis con esos microbios."
+        },
+        {
+          "id": "cu-di-10",
+          "enunciado": "¿Qué parte del sistema digestivo de la gallina muele el grano?",
+          "opciones": ["La molleja", "El buche", "El pico", "El proventrículo"],
+          "correcta": 0,
+          "explicacion": "Es un músculo fuerte, a veces con piedritas."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}

@@ -74,6 +74,7 @@ import PerfilSuelo from './PerfilSuelo.tsx'
 import { TiempoClimaJuego, InvernaderoJuego, CambioClimaticoJuego, NinoNinaJuego, MitigarAdaptarJuego } from './JuegosClima.tsx'
 import SimuladorCo2 from './SimuladorCo2.tsx'
 import TermostatoCuerpo from './TermostatoCuerpo.tsx'
+import { NutrientesJuego, DigRecorridoJuego, DigMecanicaJuego, DigAbsorcionJuego, DigAnimalesJuego } from './JuegosDigestion.tsx'
 import { HomeoEquilibrioJuego, HomeoAsaJuego, HomeoTemperaturaJuego, HomeoAguaJuego, HomeoGlucosaJuego, HomeoSistemasJuego } from './JuegosHomeostasis.tsx'
 import { QueEsContaminacionJuego, AguaContaminadaJuego, AireContaminadoJuego, MercurioJuego, EutrofizacionJuego, PlasticosJuego } from './JuegosContaminacion.tsx'
 import RioContaminado from './RioContaminado.tsx'
@@ -654,4 +655,9 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'homeo-agua-juego': HomeoAguaJuego,
   'homeo-glucosa-juego': HomeoGlucosaJuego,
   'homeo-sistemas-juego': HomeoSistemasJuego,
+  'nutrientes-juego': NutrientesJuego,
+  'dig-recorrido-juego': DigRecorridoJuego,
+  'dig-mecanica-juego': DigMecanicaJuego,
+  'dig-absorcion-juego': DigAbsorcionJuego,
+  'dig-animales-juego': DigAnimalesJuego,
 }
