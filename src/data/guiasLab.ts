@@ -236,4 +236,38 @@ export const GUIAS: Record<string, Guia> = {
       '¿Lo blanco que enrollaste es una sola molécula de ADN? Explica.',
     ],
   },
+  microbiologia: {
+    objetivo: [
+      'Comparar la cantidad de microbios en distintas fuentes sembrando cajas con técnica aséptica y contando las colonias.',
+      'Medir el efecto de distintas sustancias sobre el crecimiento de bacterias con el método de los discos (halos de inhibición).',
+    ],
+    fundamento: [
+      'Cada colonia de bacterias sale de una sola célula (UFC: unidad formadora de colonia), así que contarlas permite estimar cuántos microbios había en la fuente.',
+      'La técnica aséptica evita contaminar las cajas con microbios del ambiente. La caja de control, sin abrir, muestra si la técnica funcionó.',
+      'Si una sustancia frena a las bacterias, queda un halo sin crecimiento alrededor del disco; cuanto más grande, más efectiva.',
+      'Los hongos forman colonias algodonosas y las bacterias, redondas y brillantes.',
+    ],
+    materiales: ['Cajas de Petri con agar nutritivo', 'Alcohol', 'Guantes y tapabocas', 'Mechero', 'Hisopos estériles', 'Cinta adhesiva y marcador', 'Incubadora o lugar cálido y oscuro', 'Discos de papel de 6 mm y sustancias (agua, jabón, ajo, alcohol, enjuague bucal)', 'Regla'],
+    procedimiento: [
+      'Limpia la mesa con alcohol, lávate las manos, ponte guantes y tapabocas, y enciende el mechero.',
+      'Rotula seis cajas: manos sucias, manos lavadas, celular, moneda, aire y control.',
+      'Para cada fuente, toma un hisopo nuevo, frótalo en la fuente y siembra en su caja. Bota el hisopo.',
+      'Deja la caja del aire destapada 10 minutos. La del control no se abre.',
+      'Sella las cajas con cinta, rotúlalas, voltéalas (boca abajo) e incúbalas a temperatura ambiente.',
+      'Cada día, observa y cuenta las colonias de bacterias. Las algodonosas son hongos y no se cuentan.',
+      'Para los halos: extiende un césped de bacterias con el hisopo, pon los discos de cada sustancia, incuba 2 días y mide los halos con la regla.',
+    ],
+    seguridad: [
+      'Las cajas incubadas no se abren: lo que crece puede incluir microbios dañinos.',
+      'Lávate las manos al terminar. Al final, las cajas se desechan selladas después de tratarlas con cloro.',
+      'No incubes a 37 °C en el colegio: crecen más los microbios que nos enferman.',
+    ],
+    preguntas: [
+      '¿Qué fuente tuvo más colonias? ¿Y cuál tuvo menos? ¿Por qué?',
+      '¿Por qué la caja de control es importante?',
+      '¿Qué diferencia hay entre una colonia de bacteria y una de hongo?',
+      '¿Qué sustancia creó el halo más grande? ¿Qué significa?',
+      '¿Por qué hay que usar un hisopo nuevo para cada caja?',
+    ],
+  },
 }
