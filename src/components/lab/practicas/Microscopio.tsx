@@ -123,14 +123,14 @@ interface Obj {
   k: number // qué tan rápido se desenfoca (profundidad de campo)
   luz: number // luz que necesita
 }
-const OBJETIVOS: Obj[] = [
+export const OBJETIVOS: Obj[] = [
   { x: 4, ideal: 40, tope: 92, k: 0.35, luz: 0.35 },
   { x: 10, ideal: 55, tope: 80, k: 0.8, luz: 0.5 },
   { x: 40, ideal: 62, tope: 66, k: 2.2, luz: 0.75 },
   { x: 100, ideal: 64, tope: 64.6, k: 4, luz: 0.95 },
 ]
 
-interface Est {
+export interface Est {
   obj: number
   z: number
   luz: number
@@ -142,7 +142,7 @@ interface Est {
 }
 const INICIO: Est = { obj: 0, z: 20, luz: 0.3, aceite: false, rota: false, roturas: 0, usoMacroAlto: false, enfocados: [] }
 
-const desenfoque = (e: Est) => {
+export const desenfoque = (e: Est) => {
   const o = OBJETIVOS[e.obj]
   let b = Math.abs(e.z - o.ideal) * o.k
   if (o.x === 100 && !e.aceite) b = Math.max(b, 5)
@@ -188,7 +188,7 @@ function Vista({ e }: { e: Est }) {
   )
 }
 
-function useEnfoque(grado: number) {
+export function useEnfoque(grado: number) {
   const [e, setE] = useState<Est>(INICIO)
   const [msg, setMsg] = useState<{ t: string; aviso?: boolean } | null>(null)
   const maxObj = grado >= 11 ? 3 : 2

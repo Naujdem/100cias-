@@ -1,6 +1,9 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import MesaViva from '../MesaViva.tsx'
 import type { Pieza, Uso } from '../MesaViva.tsx'
+import MicroscopioPanel from '../MicroscopioPanel.tsx'
+import { desenfoque } from './Microscopio.tsx'
+import type { Est } from './Microscopio.tsx'
 import { Caneca, Cebolla, Gotero, MicroscopioMini, Palillo, Papa, Piseta, Portaobjetos, Reloj } from '../dibujos.tsx'
 import type { ReactNode } from 'react'
 
@@ -42,7 +45,8 @@ function tono(col: Col, a: number) {
   return `rgba(120, 120, 120, ${a})`
 }
 
-function VistaSimple({ s }: { s: S }) {
+/** dibujo de la muestra teñida (300 × 300) y el velo del fondo, para el microscopio */
+function muestraSimple(s: S): { dibujo: ReactNode; velo: { color: string; opacidad: number } } {
   const i = intensidad(s)
   const af = AFINIDAD[s.muestra][s.col]
   const contraste = s.col === 'ninguno' ? AFINIDAD[s.muestra].ninguno : Math.min(1, 0.15 + i * af)
@@ -95,18 +99,7 @@ function VistaSimple({ s }: { s: S }) {
       </g>
     )
   }
-  return (
-    <svg viewBox="0 0 300 300" className="w-full max-w-[300px]" role="img" aria-label="Muestra teñida al microscopio">
-      <clipPath id="ti-campo"><circle cx="150" cy="150" r="140" /></clipPath>
-      <rect width="300" height="300" fill="#111" />
-      <g clipPath="url(#ti-campo)">
-        <rect width="300" height="300" fill="#f7f6ef" />
-        {dibujo}
-        <rect width="300" height="300" fill={tono(s.col, 1)} opacity={fondo} />
-      </g>
-      <circle cx="150" cy="150" r="140" fill="none" stroke="#000" strokeWidth="4" />
-    </svg>
-  )
+  return { dibujo, velo: { color: tono(s.col, 1), opacidad: fondo } }
 }
 
 function revisarSimple(s: S): { ok: boolean; lineas: string[] } {
@@ -139,8 +132,25 @@ const VACIA: SM = { muestra: null, col: 'ninguno', t: 0, lavado: false, ver: fal
 function Simples({ grado }: { grado: number }) {
   const [s, setS] = useState<SM>(VACIA)
   const cambiar = (p: Partial<SM>) => setS((x) => ({ ...x, ver: false, ...p }))
+  // temporizador: cada toque suma 15 s a la cuenta regresiva; al llegar a 0 suena
+  const [cuenta, setCuenta] = useState(0)
+  const [alarma, setAlarma] = useState(false)
+  const actuando = s.col !== 'ninguno' && !s.lavado
+  useEffect(() => {
+    const id = window.setInterval(() => {
+      if (actuando) setS((x) => ({ ...x, t: x.t + 1 })) // el colorante actúa en tiempo real hasta lavar
+      setCuenta((c) => {
+        if (c === 1) setAlarma(true)
+        return Math.max(0, c - 1)
+      })
+    }, 1000)
+    return () => window.clearInterval(id)
+  }, [actuando])
   const sv: S = { muestra: s.muestra ?? 'cebolla', col: s.col, t: s.t, lavado: s.lavado }
   const r = revisarSimple(sv)
+  const vista = muestraSimple(sv)
+  const [est, setEst] = useState<Est | null>(null)
+  const listo = !!est && est.obj >= 2 && !est.rota && desenfoque(est) < 1.2
   const tinte = s.col !== 'ninguno' ? tono(s.col, Math.min(0.85, 0.2 + intensidad(sv) * 0.4)) : undefined
   const piezas: Pieza[] = [
     { id: 'cebolla', nombre: 'Cebolla', x: 70, y: 330, ancho: 70, alto: 50, tomable: true, dibujo: <Cebolla /> },
@@ -150,7 +160,7 @@ function Simples({ grado }: { grado: number }) {
     { id: 'azul', nombre: 'Azul de metileno', x: 415, y: 312, ancho: 50, alto: 96, tomable: true, color: GOTERO_COLOR.azul, dibujo: <Gotero color={GOTERO_COLOR.azul} etiqueta="AZUL" /> },
     { id: 'lamina', nombre: 'Lámina', x: 550, y: 345, ancho: 130, alto: 30, tomable: true, dibujo: <Portaobjetos muestra={s.muestra ? MUESTRA_COLOR[s.muestra] : undefined} tinte={tinte} charco={s.col !== 'ninguno' && !s.lavado ? tono(s.col, 0.8) : undefined} /> },
     { id: 'piseta', nombre: 'Piseta con agua', x: 680, y: 305, ancho: 60, alto: 106, tomable: true, color: '#a9d3f5', dibujo: <Piseta /> },
-    { id: 'reloj', nombre: 'Reloj (toca: +15 s)', x: 780, y: 300, ancho: 72, alto: 72, alTocar: () => { if (s.col !== 'ninguno' && !s.lavado) cambiar({ t: s.t + 15 }) }, dibujo: <Reloj s={s.t} /> },
+    { id: 'reloj', nombre: 'Temporizador (toca: +15 s)', x: 780, y: 300, ancho: 72, alto: 72, alTocar: () => { setAlarma(false); setCuenta((c) => c + 15) }, dibujo: <Reloj s={cuenta} alarma={alarma} /> },
     { id: 'micro', nombre: 'Microscopio', x: 880, y: 290, ancho: 90, alto: 140, dibujo: <MicroscopioMini lamina={s.ver} /> },
     { id: 'caneca', nombre: 'Residuos', x: 960, y: 325, ancho: 54, alto: 76, dibujo: <Caneca /> },
   ]
@@ -158,7 +168,7 @@ function Simples({ grado }: { grado: number }) {
   const soltar = (de: string, en: string): Uso | string => {
     if (de === 'lamina') {
       if (en === 'micro') return s.muestra ? { anim: 'poner', hecho: () => setS((x) => ({ ...x, ver: true })) } : 'La lámina está vacía: primero ponle una muestra.'
-      if (en === 'caneca') return { anim: 'poner', hecho: () => setS(VACIA) }
+      if (en === 'caneca') return { anim: 'poner', hecho: () => { setS(VACIA); setCuenta(0); setAlarma(false) } }
       return 'Lleva la lámina al microscopio para observarla, o a la caneca para empezar otra.'
     }
     if (en !== 'lamina') return 'Eso va sobre la lámina.'
@@ -182,20 +192,20 @@ function Simples({ grado }: { grado: number }) {
   return (
     <div className="flex flex-col gap-3">
       <p className="rounded-2xl bg-[var(--tarjeta)] p-4 text-sm">
-        Pon una muestra en la lámina, échale el colorante, toca el reloj para dejarlo actuar, lava el exceso con la piseta y lleva la lámina al microscopio. {s.muestra === 'mucosa' ? 'La mejilla se raspa suavemente con un palillo limpio, que luego se bota.' : ''}
+        Pon una muestra en la lámina y échale el colorante: empieza a actuar enseguida. Programa el temporizador (cada toque, 15 s), lava el exceso cuando suene con la piseta y lleva la lámina al microscopio. {s.muestra === 'mucosa' ? 'La mejilla se raspa suavemente con un palillo limpio, que luego se bota.' : ''}
       </p>
-      <div className="grid items-start gap-4 lg:grid-cols-[1fr_300px]">
-        <MesaViva desde={190} piezas={piezas} destinos={destinos} soltar={soltar} />
-        <div className="flex flex-col items-center gap-2">
-          <VistaSimple s={s.ver ? sv : { ...sv, col: 'ninguno', t: 0 }} />
-          <p className="text-sm font-semibold">{s.ver && s.muestra ? `${MUESTRAS[s.muestra]} · ${COLORANTES[s.col]} · 400x` : 'Lleva la lámina al microscopio'}</p>
-          {s.ver && (
+      <MesaViva desde={190} piezas={piezas} destinos={destinos} soltar={soltar} />
+      {s.col !== 'ninguno' && <p className="text-sm">{COLORANTES[s.col]} en contacto: <b>{s.t} s</b>{s.lavado ? ' (lavado: ya no actúa)' : ' y contando…'}{alarma ? <b className="ml-2 text-[#e0604a]">⏰ ¡Tiempo! Lava con la piseta.</b> : null}</p>}
+      {s.ver && <MicroscopioPanel grado={grado} muestra={vista.dibujo} velo={vista.velo} onEstado={setEst} />}
+      <div className="flex flex-col gap-2">
+          {s.ver && !listo && <p className="text-sm font-semibold">Enfoca la muestra con el objetivo de 40x (400x) para revisar la tinción.</p>}
+          {s.ver && listo && (
             <div className={`w-full rounded-xl border-2 p-3 text-sm ${r.ok ? 'border-[#2e7d5a] bg-[#eaf5ee]' : 'border-[#b5462c] bg-[#fbeee9]'}`}>
+              <p className="font-semibold">{MUESTRAS[s.muestra ?? 'cebolla']} · {COLORANTES[s.col]} · 400x</p>
               <ul className="list-disc pl-5">{r.lineas.map((x) => <li key={x}>{x}</li>)}</ul>
             </div>
           )}
           {grado < 11 && <p className="text-xs text-[var(--suave)]">Pista: el lugol actúa en unos 30 s y el azul de metileno en cerca de 1 minuto.</p>}
-        </div>
       </div>
     </div>
   )
@@ -254,6 +264,25 @@ function Gram() {
   const ok = pos.cv && !neg.cv && neg.safra && !lineas.length
   if (ok) lineas.push('¡Tinción correcta! Lactobacillus (Gram +) morados: su pared gruesa de peptidoglicano retiene el violeta. E. coli (Gram −) rosados: su pared delgada lo pierde con el alcohol y toma la safranina.')
 
+  const bacterias = (<g>
+            
+            {Array.from({ length: 9 }, (_, k) => {
+              const x = 30 + ((k * 71) % 230)
+              const y = 30 + ((k * 47) % 230)
+              return (
+                <g key={`p${k}`} transform={`rotate(${k * 40} ${x} ${y})`}>
+                  {[0, 1, 2].map((j) => <rect key={j} x={x + j * 24} y={y} width="22" height="7" rx="3.5" fill={colorDe(pos)} />)}
+                </g>
+              )
+            })}
+            {Array.from({ length: 16 }, (_, k) => {
+              const x = 20 + ((k * 89) % 260)
+              const y = 15 + ((k * 59) % 270)
+              return <rect key={`n${k}`} x={x} y={y} width="13" height="6" rx="3" transform={`rotate(${k * 67} ${x} ${y})`} fill={colorDe(neg)} />
+            })}
+</g>)
+  const [est, setEst] = useState<Est | null>(null)
+  const listo = !!est && est.obj === 3 && est.aceite && !est.rota && desenfoque(est) < 1.2
   const ultimo = [...pasos].reverse().find((p) => p.p !== 'lavar')
   const charco = pasos.length && pasos[pasos.length - 1].p !== 'lavar' ? GRAM_COLOR[pasos[pasos.length - 1].p] : undefined
   const piezas: Pieza[] = [
@@ -275,7 +304,7 @@ function Gram() {
     return { anim: 'gotas', gotas: de === 'alcohol' ? 1 : 3, hecho: () => agregar(de as Paso['p']) }
   }
   return (
-    <div className="grid items-start gap-4 lg:grid-cols-[1fr_300px]">
+    <div className="flex flex-col gap-4">
       <div className="flex flex-col gap-2">
         <p className="rounded-2xl bg-[var(--tarjeta)] p-4 text-sm">
           <b>Muestra:</b> frotis ya fijado con calor de <i>Lactobacillus</i> (del yogur) y <i>Escherichia coli</i>. Echa los reactivos sobre el frotis en el orden que creas y lava con la piseta. Cada gota de alcohol son 5 s de decoloración.
@@ -286,30 +315,10 @@ function Gram() {
         </ol>
         <p className="text-xs text-[var(--suave)]">⚠ El cristal violeta y la safranina manchan la piel y la ropa; el alcohol es inflamable: lejos del mechero.</p>
       </div>
-      <div className="flex flex-col items-center gap-2">
-        <svg viewBox="0 0 300 300" className="w-full max-w-[300px]" role="img" aria-label="Frotis al microscopio">
-          <clipPath id="gr-campo"><circle cx="150" cy="150" r="140" /></clipPath>
-          <rect width="300" height="300" fill="#111" />
-          <g clipPath="url(#gr-campo)">
-            <rect width="300" height="300" fill="#f7f6ef" />
-            {Array.from({ length: 9 }, (_, k) => {
-              const x = 30 + ((k * 71) % 230)
-              const y = 30 + ((k * 47) % 230)
-              return (
-                <g key={`p${k}`} transform={`rotate(${k * 40} ${x} ${y})`}>
-                  {[0, 1, 2].map((j) => <rect key={j} x={x + j * 24} y={y} width="22" height="7" rx="3.5" fill={ver ? colorDe(pos) : 'rgba(150,150,150,0.25)'} />)}
-                </g>
-              )
-            })}
-            {Array.from({ length: 16 }, (_, k) => {
-              const x = 20 + ((k * 89) % 260)
-              const y = 15 + ((k * 59) % 270)
-              return <rect key={`n${k}`} x={x} y={y} width="13" height="6" rx="3" transform={`rotate(${k * 67} ${x} ${y})`} fill={ver ? colorDe(neg) : 'rgba(150,150,150,0.25)'} />
-            })}
-          </g>
-          <circle cx="150" cy="150" r="140" fill="none" stroke="#000" strokeWidth="4" />
-        </svg>
-        {ver && (
+      <div className="flex flex-col gap-2 lg:col-span-2">
+        {ver && <MicroscopioPanel grado={11} maxObj={3} muestra={bacterias} onEstado={setEst} />}
+        {ver && !listo && <p className="text-sm font-semibold">Enfoca a 1000x: objetivo de 100x con una gota de aceite de inmersión.</p>}
+        {ver && listo && (
           <>
             <p className="text-sm">Lactobacillus (cadenas largas): <b>{nombreColor(pos)}</b> · E. coli (bastoncitos cortos): <b>{nombreColor(neg)}</b></p>
             <div className={`w-full rounded-xl border-2 p-3 text-sm ${ok ? 'border-[#2e7d5a] bg-[#eaf5ee]' : 'border-[#b5462c] bg-[#fbeee9]'}`}>

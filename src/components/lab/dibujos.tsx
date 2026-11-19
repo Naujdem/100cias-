@@ -44,17 +44,17 @@ export function Portaobjetos({ muestra, tinte, charco, cubre = true }: { muestra
   )
 }
 
-/** reloj de laboratorio que muestra segundos */
-export function Reloj({ s }: { s: number }) {
+/** temporizador: muestra los segundos que faltan; con alarma parpadea */
+export function Reloj({ s, alarma = false }: { s: number; alarma?: boolean }) {
   const a = ((s % 60) / 60) * 2 * Math.PI
   return (
     <g>
-      <circle r="34" fill="#fff" {...T} />
+      <circle r="34" fill={alarma ? '#ffd27a' : '#fff'} {...T}>{alarma && <animate attributeName="fill" values="#ffd27a;#fff;#ffd27a" dur="0.8s" repeatCount="indefinite" />}</circle>
       <circle r="34" fill="none" stroke="#e67e22" strokeWidth="4" />
       {Array.from({ length: 12 }, (_, k) => <line key={k} x1={28 * Math.sin((k * Math.PI) / 6)} y1={-28 * Math.cos((k * Math.PI) / 6)} x2={32 * Math.sin((k * Math.PI) / 6)} y2={-32 * Math.cos((k * Math.PI) / 6)} stroke="#333" strokeWidth="2" />)}
       <line x1="0" y1="0" x2={24 * Math.sin(a)} y2={-24 * Math.cos(a)} stroke="#c0392b" strokeWidth="3" strokeLinecap="round" style={{ transition: 'all 0.5s' }} />
       <circle r="3" fill="#333" />
-      <text y="52" textAnchor="middle" fontSize="13" fontWeight="800" fill="#3a2f22">{s} s</text>
+      <text y="52" textAnchor="middle" fontSize="13" fontWeight="800" fill={alarma ? '#c0392b' : '#3a2f22'}>{alarma ? '¡Lava!' : `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`}</text>
     </g>
   )
 }
