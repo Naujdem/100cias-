@@ -147,7 +147,7 @@ clásicas de los «201 experimentos»; las de bórax o similares, con aviso de s
 **Más prácticas extra (aprobadas el 19 nov 2026, después de las 1–7):**
 8. ~~**Curva de calentamiento del agua**~~ ✅ (19 nov 2026: `CurvaCalentamiento.tsx`) (Química área 1, desde 6°; DBA 6°-2): hielo al fuego, termómetro minuto a minuto,
    gráfica t–T con las mesetas de fusión y ebullición.
-9. **Reacciones que calientan o enfrían** (área 3, desde 6°): disolver sustancias y medir si el agua sube o baja de
+9. ~~**Reacciones que calientan o enfrían**~~ ✅ (19 nov 2026: `CalorReacciones.tsx`) (área 3, desde 6°): disolver sustancias y medir si el agua sube o baja de
    temperatura (compresas frías y calientes); exotérmico y endotérmico.
 10. **Potabilización del agua** (desde 6°; PRAE): agua turbia de la quebrada → alumbre (coagulación) → sedimentar →
     filtro casero de arena y carbón → desinfección.
