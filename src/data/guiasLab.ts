@@ -545,4 +545,32 @@ export const GUIAS: Record<string, Guia> = {
       '¿Por qué se usa la temperatura en kelvin en la ley de Charles?',
     ],
   },
+  'dilucion-solubilidad': {
+    objetivo: ['Preparar una solución diluida a partir de una solución madre y construir la curva de solubilidad de dos sales en función de la temperatura.'],
+    fundamento: [
+      'Al diluir, la cantidad de soluto no cambia: solo se reparte en más volumen. Por eso C₁·V₁ = C₂·V₂.',
+      'Para preparar 100 mL de solución 0,1 M a partir de una 0,5 M se toman 20 mL de la solución madre con pipeta y se completa con agua hasta el aforo del matraz.',
+      'La solubilidad es la máxima cantidad de soluto que se disuelve en 100 g de agua a cierta temperatura. Una solución con esa cantidad está saturada; con menos, insaturada.',
+      'En la mayoría de los sólidos la solubilidad aumenta con la temperatura, pero no en todos por igual: la del nitrato de potasio crece mucho y la del cloruro de sodio casi nada.',
+      'Si una solución saturada se enfría, el soluto que ya no cabe se separa en forma de cristales (cristalización).',
+    ],
+    materiales: ['Solución madre de sulfato de cobre 0,5 M', 'Pipetas aforadas de 5, 10 y 25 mL con pera', 'Matraz aforado de 100 mL con tapón', 'Agua destilada, piseta y gotero', 'Vaso con 100 g de agua', 'Nitrato de potasio y cloruro de sodio', 'Espátulas', 'Varilla de vidrio', 'Estufa o plancha', 'Termómetro'],
+    procedimiento: [
+      'Calcula con C₁·V₁ = C₂·V₂ cuánta solución madre necesitas.',
+      'Mide ese volumen con las pipetas y pásalo al matraz aforado.',
+      'Completa con agua hasta el aforo, al final con el gotero, y tapa e invierte el matraz varias veces.',
+      'Solubilidad: echa la sal en el vaso de agua de a poco, agitando, hasta que quede sólido sin disolver.',
+      'Anota la temperatura y cuánto se disolvió. Sube la temperatura, agita y repite.',
+      'Haz lo mismo con la otra sal en un vaso nuevo y grafica las dos curvas.',
+      'Apaga la estufa y observa qué pasa al enfriarse la solución de salitre.',
+    ],
+    seguridad: ['El sulfato de cobre es tóxico: sus restos van al frasco de residuos.', 'La pipeta se llena con la pera, nunca con la boca.', 'La estufa y el vaso caliente queman: usa pinzas.'],
+    preguntas: [
+      '¿Cuántos mL de solución madre usaste? Escribe el cálculo.',
+      '¿Por qué la solución diluida es de un azul más claro?',
+      '¿Cómo sabes que una solución está saturada?',
+      '¿Qué sal es más sensible a la temperatura? ¿Cómo se ve en la gráfica?',
+      '¿Por qué aparecen cristales al enfriar la solución de salitre?',
+    ],
+  },
 }
