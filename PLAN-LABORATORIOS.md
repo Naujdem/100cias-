@@ -59,7 +59,7 @@ Biología:
 6. ~~Fermentación~~ ✅ — echar levadura, azúcar y agua en cada botella, poner el globo; el tiempo corre.
 7. ~~Extracción de ADN~~ ✅ — machacar, echar agua, jabón y sal, filtrar, alcohol frío por la pared, enrollar con el palillo.
 8. ~~Microbiología~~ ✅ — hisopo, frotar la superficie, abrir la caja y sembrar, incubadora, contar colonias.
-9. El microscopio — partes y enfoque pasan a usar el MicroscopioPanel (unificar los dos microscopios).
+9. ~~El microscopio~~ ✅ — el enfoque y el reto usan el MicroscopioPanel (un solo motor de enfoque); las partes siguen como exploración.
 
 Química:
 10. Prepara 100 mL de solución 0,5 M — pasar a MesaViva (espátula con polvo, vidrio de reloj en la balanza, verter al matraz, piseta hasta el aforo).

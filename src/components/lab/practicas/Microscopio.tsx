@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from 'react'
 import type { ReactNode } from 'react'
+import MicroscopioPanel from '../MicroscopioPanel.tsx'
 
 // Laboratorio de Biología 1 (PLAN-LABORATORIOS.md): el microscopio. Partes (explorar y «toca el…»),
 // enfoque virtual (objetivos, macro y micrométrico, luz; se puede romper la lámina) y reto a 400x.
@@ -149,45 +150,6 @@ export const desenfoque = (e: Est) => {
   return Math.min(14, b)
 }
 
-function Vista({ e }: { e: Est }) {
-  const o = OBJETIVOS[e.obj]
-  const b = desenfoque(e)
-  const s = o.x / 40
-  const oscuro = Math.max(0, o.luz - e.luz) * 1.3
-  const claro = Math.max(0, e.luz - o.luz) * 0.9
-  return (
-    <svg viewBox="0 0 300 300" className="w-full max-w-[300px]" role="img" aria-label="Lo que se ve por el ocular">
-      <defs>
-        <filter id="mc-blur"><feGaussianBlur stdDeviation={b} /></filter>
-        <pattern id="mc-cebolla" width="140" height="70" patternUnits="userSpaceOnUse" patternTransform={`translate(150 150) scale(${s}) translate(-150 -150)`}>
-          <rect width="140" height="70" fill="#fbf1d9" />
-          <path d="M0 0 H140 M0 35 H140 M0 70 H140 M0 0 V35 M70 35 V70 M140 0 V35" stroke="#b07b2c" strokeWidth="3" />
-          <ellipse cx="44" cy="17" rx="7" ry="6" fill="#8a5a1e" />
-          <ellipse cx="112" cy="52" rx="7" ry="6" fill="#8a5a1e" />
-          <ellipse cx="44" cy="17" rx="2" ry="2" fill="#5a3810" />
-        </pattern>
-        <clipPath id="mc-campo"><circle cx="150" cy="150" r="140" /></clipPath>
-      </defs>
-      <rect width="300" height="300" fill="#111" />
-      <g clipPath="url(#mc-campo)">
-        {e.rota ? (
-          <g>
-            <rect width="300" height="300" fill="#ddd" />
-            <path d="M40 60 L150 150 L260 40 M150 150 L120 290 M150 150 L290 200 M150 150 L10 210" stroke="#555" strokeWidth="3" fill="none" />
-          </g>
-        ) : (
-          <g filter="url(#mc-blur)">
-            <rect width="300" height="300" fill="url(#mc-cebolla)" />
-          </g>
-        )}
-        <rect width="300" height="300" fill="#000" opacity={Math.min(0.9, oscuro)} />
-        <rect width="300" height="300" fill="#fff" opacity={Math.min(0.85, claro)} />
-      </g>
-      <circle cx="150" cy="150" r="140" fill="none" stroke="#000" strokeWidth="4" />
-    </svg>
-  )
-}
-
 export function useEnfoque(grado: number) {
   const [e, setE] = useState<Est>(INICIO)
   const [msg, setMsg] = useState<{ t: string; aviso?: boolean } | null>(null)
@@ -252,16 +214,38 @@ export function useEnfoque(grado: number) {
   return { e, setE, msg, setMsg, mover, objetivo, luz, cambiarLamina, aceite, maxObj }
 }
 
+/** células de cebolla a 40x (300 × 300): la muestra que se ve al microscopio en esta práctica */
+const CEBOLLA = (
+  <g>
+    {Array.from({ length: 7 }, (_, f) =>
+      Array.from({ length: 5 }, (_, c) => {
+        const x = c * 64 - (f % 2) * 32
+        const y = f * 46
+        return (
+          <g key={`${f}-${c}`}>
+            <rect x={x} y={y} width="64" height="46" fill="#fbf1d9" stroke="#b07b2c" strokeWidth="3" />
+            <ellipse cx={x + 22} cy={y + 20} rx="6" ry="5" fill="#8a5a1e" />
+          </g>
+        )
+      }),
+    )}
+  </g>
+)
+
+// «Aprende a enfocar» y el reto usan el mismo microscopio que las prácticas (MicroscopioPanel).
 function Enfoque({ grado, reto }: { grado: number; reto: boolean }) {
-  const { e, setE, msg, setMsg, mover, objetivo, luz, cambiarLamina, aceite, maxObj } = useEnfoque(grado)
+  const [e, setE] = useState<Est | null>(null)
+  const [clave, setClave] = useState(0)
   const [aumento, setAumento] = useState('')
   const [res, setRes] = useState<{ ok: boolean; lineas: string[] } | null>(null)
-  const o = OBJETIVOS[e.obj]
-  const b = desenfoque(e)
   const ayudas = grado < 11
+  const maxObj = grado >= 11 ? 3 : 2
   const btn = 'min-h-10 rounded-full border border-[var(--linea)] bg-[var(--tarjeta)] px-3 text-sm font-semibold hover:border-[var(--acento)]'
 
   const comprobar = () => {
+    if (!e) return
+    const o = OBJETIVOS[e.obj]
+    const b = desenfoque(e)
     const lineas: string[] = []
     let ok = true
     if (e.rota) { ok = false; lineas.push('La lámina está rota: cambia la lámina y vuelve a empezar desde 4x.') }
@@ -277,73 +261,28 @@ function Enfoque({ grado, reto }: { grado: number; reto: boolean }) {
   }
 
   return (
-    <div className="grid items-start gap-4 md:grid-cols-[300px_1fr]">
-      <div className="flex flex-col items-center gap-2">
-        <Vista e={e} />
-        <p className="text-sm font-semibold">
-          {ayudas || !reto ? `Aumento total: 10x × ${o.x}x = ${10 * o.x}x` : `Objetivo: ${o.x}x`}
+    <div className="flex flex-col gap-3">
+      {reto && (
+        <p className="rounded-xl bg-[var(--fondo)] p-3 text-sm">
+          <b>Reto:</b> observa las células de cebolla con el objetivo de <b>40x</b>, bien enfocadas y con la luz justa, sin romper la lámina. Luego escribe el aumento total y pulsa «Comprobar».
         </p>
+      )}
+      <MicroscopioPanel key={clave} grado={grado} maxObj={maxObj} muestra={CEBOLLA} onEstado={setE} />
+      {reto && (
+        <div className="flex flex-wrap items-center gap-2">
+          <label className="text-sm font-semibold">Aumento total (10x × objetivo): <input value={aumento} onChange={(x) => setAumento(x.target.value.replace(/\D/g, ''))} className="w-24 rounded-lg border border-[var(--linea)] bg-white px-2 py-1" /></label>
+          <button type="button" className={btn} onClick={comprobar}>Comprobar</button>
+          {res && (
+            <div className={`w-full rounded-xl border-2 p-3 text-sm ${res.ok ? 'border-[#2e7d5a] bg-[#eaf5ee]' : 'border-[#b5462c] bg-[#fbeee9]'}`}>
+              <ul className="list-disc pl-5">{res.lineas.map((l) => <li key={l}>{l}</li>)}</ul>
+            </div>
+          )}
+        </div>
+      )}
+      <div className="flex flex-wrap gap-2">
+        <button type="button" className={btn} onClick={() => { setClave((k) => k + 1); setRes(null); setAumento('') }}>Empezar de nuevo</button>
       </div>
-      <div className="flex flex-col gap-3 rounded-2xl border border-[var(--linea)] bg-[var(--tarjeta)] p-4">
-        {reto && (
-          <p className="rounded-xl bg-[var(--fondo)] p-3 text-sm">
-            <b>Reto:</b> observa las células de cebolla con el objetivo de <b>40x</b>, bien enfocadas y con la luz justa, sin romper la lámina. Luego escribe el aumento total y pulsa «Comprobar».
-          </p>
-        )}
-        <div>
-          <p className="text-sm font-semibold">Objetivo (revólver) · teclas 1–{maxObj + 1}</p>
-          <div className="mt-1 flex flex-wrap gap-2">
-            {OBJETIVOS.slice(0, maxObj + 1).map((x, k) => (
-              <button key={x.x} type="button" onClick={() => objetivo(k)} className={`${btn} ${e.obj === k ? '!border-[var(--acento)] !bg-[var(--acento)] !text-white' : ''}`}>{x.x}x</button>
-            ))}
-            {maxObj === 3 && (
-              <button type="button" onClick={aceite} disabled={e.aceite} className={btn}>{e.aceite ? 'Aceite puesto' : 'Gota de aceite'}</button>
-            )}
-          </div>
-        </div>
-        <div>
-          <p className="text-sm font-semibold">Macrométrico (↑/↓) · Micrométrico (W/S)</p>
-          <div className="mt-1 flex flex-wrap gap-2">
-            <button type="button" className={btn} onClick={() => mover(4, true)}>Macro ↑</button>
-            <button type="button" className={btn} onClick={() => mover(-4, true)}>Macro ↓</button>
-            <button type="button" className={btn} onClick={() => mover(0.4, false)}>Micro ↑</button>
-            <button type="button" className={btn} onClick={() => mover(-0.4, false)}>Micro ↓</button>
-          </div>
-          <div className="mt-2 h-3 w-full rounded-full bg-[var(--fondo)]" title="Altura de la platina">
-            <div className="h-3 rounded-full bg-[var(--acento)]" style={{ width: `${e.z}%` }} />
-          </div>
-          <p className="mt-1 text-xs text-[var(--suave)]">Altura de la platina (subir = acercar la lámina al objetivo).</p>
-        </div>
-        <div>
-          <p className="text-sm font-semibold">Diafragma / luz (L abre · K cierra)</p>
-          <div className="mt-1 flex gap-2">
-            <button type="button" className={btn} onClick={() => luz(-0.05)}>Menos luz</button>
-            <button type="button" className={btn} onClick={() => luz(0.05)}>Más luz</button>
-          </div>
-        </div>
-        {ayudas && !e.rota && (
-          <p className="text-sm text-[var(--suave)]">
-            {b < 1 ? '✔ Enfocado.' : b < 4 ? 'Casi: afina con el micrométrico.' : o.x >= 40 ? 'Muy borroso: con este objetivo solo usa el micrométrico.' : 'Borroso: sube la platina con el macrométrico, despacio.'}
-          </p>
-        )}
-        {msg && <p className={`text-sm ${msg.aviso ? 'font-semibold text-[#b5462c]' : ''}`}>{msg.aviso ? '⚠ ' : ''}{msg.t}</p>}
-        <div className="flex flex-wrap gap-2">
-          {e.rota && <button type="button" className={btn} onClick={cambiarLamina}>Cambiar la lámina</button>}
-          <button type="button" className={btn} onClick={() => { setE(INICIO); setMsg(null); setRes(null) }}>Empezar de nuevo</button>
-        </div>
-        {reto && (
-          <div className="flex flex-wrap items-center gap-2">
-            <label className="text-sm font-semibold">Aumento total: <input value={aumento} onChange={(ev) => setAumento(ev.target.value.replace(/\D/g, ''))} className="w-20 rounded-lg border border-[var(--linea)] bg-white px-2 py-1 text-right" />x</label>
-            <button type="button" onClick={comprobar} className="min-h-10 rounded-full bg-[var(--acento)] px-5 text-sm font-semibold text-white">Comprobar</button>
-          </div>
-        )}
-        {res && (
-          <div className={`rounded-xl border-2 p-3 text-sm ${res.ok ? 'border-[#2e7d5a] bg-[#eaf5ee]' : 'border-[#b5462c] bg-[#fbeee9]'}`}>
-            <b>{res.ok ? '¡Reto cumplido! 🔬' : 'Todavía no'}</b>
-            <ul className="mt-1 list-disc pl-5">{res.lineas.map((l) => <li key={l}>{l}</li>)}</ul>
-          </div>
-        )}
-      </div>
+      {ayudas && <p className="text-xs text-[var(--suave)]">Pistas activas (grados menores de 11°): el enfoque te indica si está enfocado, casi o borroso.</p>}
     </div>
   )
 }
