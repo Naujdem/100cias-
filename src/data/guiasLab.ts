@@ -625,6 +625,33 @@ export const GUIAS: Record<string, Guia> = {
       'Explica con la forma de la molécula de jabón por qué limpia la grasa.',
     ],
   },
+  combustion: {
+    objetivo: ['Diferenciar la combustión completa de la incompleta por el color de la llama y sus productos, y comprobar que el fuego necesita oxígeno.'],
+    fundamento: [
+      'La combustión es la reacción de un combustible con el oxígeno (comburente) que libera energía en forma de luz y calor. Para que haya fuego se necesitan combustible, comburente y calor (triángulo del fuego).',
+      'Con suficiente oxígeno la combustión es completa: llama azul, sin hollín, y produce dióxido de carbono y agua. CH₄ + 2 O₂ → CO₂ + 2 H₂O.',
+      'Con poco oxígeno es incompleta: llama amarilla y luminosa (partículas de carbono incandescentes), deja hollín y produce monóxido de carbono (CO), un gas venenoso.',
+      'El agua de cal se enturbia con el CO₂; un vaso frío se empaña con el vapor de agua que se forma.',
+      'La combustión es exotérmica: el metano libera unos 890 kJ/mol al quemarse completamente.',
+    ],
+    materiales: ['Mechero Bunsen con manguera y llave de gas', 'Fósforos', 'Cápsula de porcelana', 'Vaso de vidrio frío y seco', 'Vaso mojado con agua de cal', 'Pinza', 'Vela', 'Frascos pequeño y grande'],
+    procedimiento: [
+      'Con el anillo de aire cerrado, acerca el fósforo encendido al mechero y luego abre la llave de gas.',
+      'Observa la llama amarilla y sostén sobre ella, con la pinza, la cápsula, el vaso frío y el vaso con agua de cal. Anota lo que ves.',
+      'Abre el anillo de aire hasta tener llama azul y repite las tres pruebas.',
+      'Cierra la llave de gas.',
+      'Enciende la vela, tápala con el frasco pequeño y mide cuánto tarda en apagarse; desde 9°, repite con el frasco grande.',
+      'Clasifica cada llama como combustión completa o incompleta.',
+    ],
+    seguridad: ['Cabello recogido y nada inflamable cerca.', 'Primero el fósforo y luego el gas: nunca dejes salir gas sin llama.', 'La cápsula y los vasos se calientan: tómalos con pinza.', 'Al terminar, cierra bien la llave de gas.'],
+    preguntas: [
+      '¿Qué diferencias viste entre la llama amarilla y la azul?',
+      '¿Qué demuestra el hollín en la cápsula?',
+      '¿Cómo comprobaste que se forma agua? ¿Y CO₂?',
+      '¿Por qué se apagó la vela bajo el frasco? ¿Por qué duró más en el grande?',
+      '¿Por qué es peligrosa una estufa de gas con llama amarilla en una cocina sin ventilación?',
+    ],
+  },
   titulacion: {
     objetivo: ['Determinar la concentración de un ácido desconocido y la acidez del vinagre por titulación con NaOH 0,1 M y fenolftaleína.'],
     fundamento: [
