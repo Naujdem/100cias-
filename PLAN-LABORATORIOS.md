@@ -151,7 +151,7 @@ clásicas de los «201 experimentos»; las de bórax o similares, con aviso de s
    temperatura (compresas frías y calientes); exotérmico y endotérmico.
 10. ~~**Potabilización del agua**~~ ✅ (19 nov 2026: `Potabilizacion.tsx`) (desde 6°; PRAE): agua turbia de la quebrada → alumbre (coagulación) → sedimentar →
     filtro casero de arena y carbón → desinfección.
-11. **Selección natural con picos** (Biología, área 4; DBA 9°-6): «aves» con pinza, cuchara o pitillo compiten por
+11. ~~**Selección natural con picos**~~ ✅ (19 nov 2026: `SeleccionPicos.tsx`) (Biología, área 4; DBA 9°-6): «aves» con pinza, cuchara o pitillo compiten por
     semillas durante varias generaciones.
 12. **Muestreo con cuadrantes** (Biología, área 3): contar plantas en un potrero virtual; densidad y diversidad.
 
