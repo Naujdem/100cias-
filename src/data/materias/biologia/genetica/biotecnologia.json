@@ -15,7 +15,8 @@
   "objetivos": [
     "Distinguir biotecnología tradicional y moderna.",
     "Explicar el ADN recombinante, la PCR, los transgénicos y CRISPR.",
-    "Argumentar sobre beneficios y preocupaciones de la biotecnología."
+    "Describir la clonación, la reproducción asistida y la terapia génica.",
+    "Argumentar sobre beneficios, preocupaciones y principios bioéticos de la biotecnología."
   ],
   "fuentes": [
     "BORRADOR: verificar con un texto de bachillerato. A verificar: insulina recombinante (1982), PCR (Mullis, 1983, Nobel 1993), terapias CRISPR aprobadas (2023), siembra de algodón y maíz transgénicos en Colombia desde comienzos de los 2000, resguardos declarados territorios libres de transgénicos."
@@ -581,17 +582,439 @@
       "revisado": false
     },
     {
+      "id": "clonacion",
+      "titulo": "Clonación",
+      "resumen": "Dolly (1996) nació de un núcleo de célula adulta puesto en un óvulo sin núcleo; la clonación terapéutica busca tejidos, no individuos.",
+      "anio": 6,
+      "etiqueta": "Paso 6",
+      "nivel": "intermedio",
+      "requiere": [
+        "que-es"
+      ],
+      "ficha": {
+        "idea": "Clonar es obtener un ser vivo o unas células con el mismo ADN que otro. En 1996 nació la oveja Dolly: se tomó el núcleo de una célula de la ubre de una oveja adulta, se puso en un óvulo al que se le había quitado el núcleo, una descarga eléctrica los unió y el embrión creció en una madre sustituta. Dolly tenía el ADN de la donante. Eso es clonación reproductiva. En la clonación terapéutica el embrión no se deja desarrollar: se usan sus células madre para obtener tejidos (músculo, neuronas, piel) que no serían rechazados por el paciente.",
+        "contexto": [
+          {
+            "titulo": "Clones naturales",
+            "texto": "Los gemelos idénticos, los esquejes de una planta y las bacterias que se dividen son clones."
+          },
+          {
+            "titulo": "Un clon no es una copia exacta",
+            "texto": "Comparte el ADN, pero su ambiente y su historia son distintos: no tiene los recuerdos ni la personalidad del original."
+          },
+          {
+            "titulo": "Prohibida en humanos",
+            "texto": "La clonación humana reproductiva está prohibida en casi todo el mundo, también en Colombia."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Clonar es obtener un ser con el mismo ADN que otro.",
+            "Dolly fue el primer mamífero clonado de una célula adulta (1996)."
+          ],
+          "media": [
+            "Núcleo de célula adulta + óvulo sin núcleo → embrión → madre sustituta.",
+            "Reproductiva: un individuo. Terapéutica: células madre para tejidos."
+          ],
+          "avanzada": [
+            "La terapéutica evitaría el rechazo, pero usa embriones: por eso se buscan células madre inducidas (iPS) a partir de células adultas."
+          ]
+        },
+        "docente": {
+          "abrir": "Si clonaran a tu perro, ¿sería el mismo perro?",
+          "actividad": "Clonar una planta por esqueje (papa, poleo o sábila) y comparar con la clonación de Dolly.",
+          "errores": [
+            "Creer que el clon nace con la misma edad o los mismos recuerdos.",
+            "Pensar que clonar es lo mismo que modificar genes."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Sería el mismo perro?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "Si clonaran a tu perro, el clon tendría…",
+            "opciones": [
+              "Su mismo ADN, pero no sus recuerdos",
+              "Sus mismos recuerdos",
+              "Su misma edad",
+              "Un ADN distinto"
+            ],
+            "correcta": 0,
+            "explicacion": "Un clon comparte el ADN; lo vivido no está en los genes."
+          }
+        },
+        {
+          "titulo": "Así nació Dolly",
+          "visual": {
+            "tipo": "escena",
+            "id": "clonacion",
+            "fases": [
+              {
+                "id": "donante",
+                "nombre": "El núcleo",
+                "texto": "Se toma el núcleo de una célula de la ubre de la oveja A."
+              },
+              {
+                "id": "ovulo",
+                "nombre": "El óvulo",
+                "texto": "A un óvulo de la oveja B se le quita su núcleo."
+              },
+              {
+                "id": "fusion",
+                "nombre": "Unir",
+                "texto": "Una descarga eléctrica une el núcleo y el óvulo, que empieza a dividirse."
+              },
+              {
+                "id": "embrion",
+                "nombre": "Embrión",
+                "texto": "Se forma un embrión con el ADN de la oveja A."
+              },
+              {
+                "id": "reproductiva",
+                "nombre": "Dolly",
+                "texto": "Una madre sustituta lo gesta: nace Dolly, clon de la oveja A.",
+                "nota": "Hubo 277 intentos para lograrla."
+              },
+              {
+                "id": "terapeutica",
+                "nombre": "Terapéutica",
+                "texto": "Si no se deja desarrollar, sus células madre pueden dar tejidos para curar.",
+                "nivel": "avanzado"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Dos clonaciones",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "🐑",
+              "titulo": "Reproductiva",
+              "puntos": [
+                "Da un individuo completo",
+                "Dolly, monos, mascotas",
+                "Prohibida en humanos"
+              ]
+            },
+            "der": {
+              "icono": "🧫",
+              "titulo": "Terapéutica",
+              "puntos": [
+                "Da células y tejidos",
+                "Para curar sin rechazo",
+                "En investigación"
+              ]
+            }
+          }
+        }
+      ],
+      "juego": "clonacion-juego",
+      "preguntas": [
+        {
+          "id": "bt-cl-1",
+          "enunciado": "¿De quién tenía el ADN Dolly?",
+          "opciones": [
+            "De la oveja que donó el núcleo",
+            "De la oveja que donó el óvulo",
+            "De la madre sustituta",
+            "De las tres por igual"
+          ],
+          "correcta": 0,
+          "explicacion": "El ADN está en el núcleo, que venía de la célula de la ubre."
+        },
+        {
+          "id": "bt-cl-2",
+          "enunciado": "¿Qué busca la clonación terapéutica?",
+          "opciones": [
+            "Obtener tejidos para curar",
+            "Obtener un individuo completo",
+            "Mejorar las razas de ganado",
+            "Cambiar un gen"
+          ],
+          "correcta": 0,
+          "explicacion": "Usa células madre del embrión temprano."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "reproduccion-asistida",
+      "titulo": "Reproducción asistida",
+      "resumen": "En la fecundación in vitro el óvulo y el espermatozoide se unen en el laboratorio y el embrión se transfiere al útero.",
+      "anio": 7,
+      "etiqueta": "Paso 7",
+      "nivel": "intermedio",
+      "requiere": [
+        "que-es"
+      ],
+      "ficha": {
+        "idea": "La reproducción asistida ayuda a tener hijos cuando hay problemas de fertilidad. En la inseminación artificial los espermatozoides se depositan en el útero. En la fecundación in vitro (FIV) se estimulan los ovarios con hormonas, se extraen varios óvulos, se fecundan en una placa de laboratorio y, tras 3 a 5 días, uno o dos embriones se transfieren al útero. La primera bebé por FIV, Louise Brown, nació en 1978. Hoy han nacido así más de 12 millones de personas.",
+        "contexto": [
+          {
+            "titulo": "«In vitro»",
+            "texto": "Significa «en vidrio»: la fecundación ocurre fuera del cuerpo."
+          },
+          {
+            "titulo": "También en el campo",
+            "texto": "La inseminación artificial y la transferencia de embriones se usan en el ganado para mejorar la producción."
+          },
+          {
+            "titulo": "Preguntas éticas",
+            "texto": "Qué hacer con los embriones congelados que sobran, el costo del tratamiento y quién puede acceder a él."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "La reproducción asistida ayuda cuando hay problemas de fertilidad."
+          ],
+          "media": [
+            "FIV: estimular, extraer, fecundar en el laboratorio, cultivar y transferir el embrión."
+          ],
+          "avanzada": [
+            "Con el diagnóstico genético preimplantacional se revisan los embriones antes de transferirlos; su uso plantea debates bioéticos."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Qué significa «bebé probeta»? ¿Crece de verdad en una probeta?",
+          "actividad": "Ordenar tarjetas con los pasos de la FIV y comparar con la fecundación natural.",
+          "errores": [
+            "Creer que el bebé crece en el laboratorio.",
+            "Confundir la FIV con la clonación."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Fecundación in vitro",
+          "visual": {
+            "tipo": "escena",
+            "id": "fiv",
+            "fases": [
+              {
+                "id": "estimular",
+                "nombre": "Estimular",
+                "texto": "Con hormonas maduran varios óvulos a la vez."
+              },
+              {
+                "id": "extraer",
+                "nombre": "Extraer",
+                "texto": "Se sacan los óvulos con una aguja guiada por ecografía."
+              },
+              {
+                "id": "fecundar",
+                "nombre": "Fecundar",
+                "texto": "Óvulo y espermatozoides se unen en una placa de laboratorio."
+              },
+              {
+                "id": "cultivar",
+                "nombre": "Cultivar",
+                "texto": "El embrión se divide durante 3 a 5 días en una incubadora."
+              },
+              {
+                "id": "transferir",
+                "nombre": "Transferir",
+                "texto": "Se pone en el útero; si se implanta, hay embarazo.",
+                "nota": "El bebé crece en el útero, no en el laboratorio."
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Desde 1978",
+          "visual": {
+            "tipo": "cifra",
+            "icono": "👶",
+            "valor": "+12 millones",
+            "texto": "de personas han nacido por fecundación in vitro desde Louise Brown."
+          }
+        }
+      ],
+      "juego": "fiv-juego",
+      "preguntas": [
+        {
+          "id": "bt-ra-1",
+          "enunciado": "¿Dónde ocurre la fecundación en la FIV?",
+          "opciones": [
+            "En una placa de laboratorio",
+            "En el útero",
+            "En el ovario",
+            "En una incubadora durante 9 meses"
+          ],
+          "correcta": 0,
+          "explicacion": "«In vitro»: fuera del cuerpo."
+        },
+        {
+          "id": "bt-ra-2",
+          "enunciado": "¿Qué diferencia hay entre la FIV y la clonación?",
+          "opciones": [
+            "En la FIV se unen un óvulo y un espermatozoide",
+            "La FIV copia el ADN de un adulto",
+            "En la FIV no hay embrión",
+            "No hay diferencia"
+          ],
+          "correcta": 0,
+          "explicacion": "La FIV es reproducción sexual con ayuda; la clonación no usa espermatozoides."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "terapia-genica",
+      "titulo": "Terapia génica",
+      "resumen": "Llevar una copia sana de un gen a las células del paciente, con un virus como vector o corrigiéndolas fuera del cuerpo.",
+      "anio": 8,
+      "etiqueta": "Paso 8",
+      "nivel": "intermedio",
+      "requiere": [
+        "que-es"
+      ],
+      "ficha": {
+        "idea": "Algunas enfermedades hereditarias se deben a un gen con un error: la célula no fabrica una proteína que necesita. La terapia génica lleva una copia sana del gen a esas células. Lo más común es usar un virus al que se le quitó su ADN dañino (vector): entra a la célula y deja el gen sano. También se pueden sacar células del paciente, corregirlas en el laboratorio (por ejemplo con CRISPR) y devolverlas: es la terapia «ex vivo». Ya hay terapias aprobadas para una ceguera hereditaria (2017), la atrofia muscular espinal (2019) y la anemia falciforme (2023).",
+        "contexto": [
+          {
+            "titulo": "Solo en el paciente",
+            "texto": "Se cambian células del cuerpo (somáticas): el cambio no pasa a los hijos. Cambiar óvulos, espermatozoides o embriones está prohibido."
+          },
+          {
+            "titulo": "Muy costosa",
+            "texto": "Algunas cuestan más de un millón de dólares por paciente: ¿quién puede acceder a ellas?"
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "La terapia génica lleva un gen sano a las células enfermas."
+          ],
+          "media": [
+            "Un virus sin su ADN dañino sirve de vector.",
+            "Ex vivo: sacar células, corregirlas y devolverlas."
+          ],
+          "avanzada": [
+            "Terapia somática (no se hereda) frente a germinal (se heredaría, prohibida)."
+          ]
+        },
+        "docente": {
+          "abrir": "Si un error en una receta hace que salga mal un pastel, ¿qué es mejor: comprar el pastel cada día o corregir la receta?",
+          "actividad": "Comparar tratar una enfermedad con medicina diaria (insulina) y con terapia génica: ventajas, riesgos y costos.",
+          "errores": [
+            "Creer que la terapia génica cambia el ADN de todo el cuerpo.",
+            "Pensar que el cambio pasa a los hijos."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Llevar el gen sano",
+          "visual": {
+            "tipo": "escena",
+            "id": "terapia-genica",
+            "fases": [
+              {
+                "id": "error",
+                "nombre": "El error",
+                "texto": "Un gen con un error: la célula no fabrica una proteína."
+              },
+              {
+                "id": "vector",
+                "nombre": "El vector",
+                "texto": "Un virus sin su ADN dañino lleva una copia sana del gen."
+              },
+              {
+                "id": "entrega",
+                "nombre": "Entregar",
+                "texto": "El vector entra a la célula y deja el gen sano."
+              },
+              {
+                "id": "proteina",
+                "nombre": "La proteína",
+                "texto": "La célula ya fabrica la proteína que le faltaba."
+              },
+              {
+                "id": "ex-vivo",
+                "nombre": "Ex vivo",
+                "texto": "Otra forma: sacar células, corregirlas en el laboratorio y devolverlas.",
+                "nivel": "avanzado"
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre esto: CRISPR",
+            "tema": "biotecnologia",
+            "bloque": "crispr"
+          }
+        },
+        {
+          "titulo": "¿Se hereda?",
+          "nivel": "avanzado",
+          "visual": {
+            "tipo": "compara",
+            "izq": {
+              "icono": "🧍",
+              "titulo": "Somática",
+              "puntos": [
+                "Células del cuerpo",
+                "No pasa a los hijos",
+                "Permitida"
+              ]
+            },
+            "der": {
+              "icono": "🥚",
+              "titulo": "Germinal",
+              "puntos": [
+                "Óvulos, espermatozoides, embriones",
+                "Pasaría a los hijos",
+                "Prohibida"
+              ]
+            }
+          }
+        }
+      ],
+      "juego": "terapia-genica-juego",
+      "preguntas": [
+        {
+          "id": "bt-tg-1",
+          "enunciado": "¿Para qué se usa un virus en la terapia génica?",
+          "opciones": [
+            "Para llevar el gen sano a la célula",
+            "Para enfermar al paciente",
+            "Para fabricar insulina",
+            "Para cortar el ADN"
+          ],
+          "correcta": 0,
+          "explicacion": "Se le quita su ADN dañino y sirve de vector."
+        },
+        {
+          "id": "bt-tg-2",
+          "enunciado": "¿Por qué el cambio de una terapia génica en la médula no pasa a los hijos?",
+          "opciones": [
+            "Porque cambia células del cuerpo, no óvulos ni espermatozoides",
+            "Porque el gen se pierde",
+            "Porque los hijos no tienen médula",
+            "Porque es una vacuna"
+          ],
+          "correcta": 0,
+          "explicacion": "Es terapia somática."
+        }
+      ],
+      "revisado": false
+    },
+    {
       "id": "etica",
       "titulo": "El debate",
       "resumen": "La biotecnología trae beneficios y preocupaciones; decidir bien exige evidencia y escuchar a todos los afectados.",
-      "anio": 6,
-      "etiqueta": "Paso 6",
+      "anio": 9,
+      "etiqueta": "Paso 9",
       "nivel": "basico",
       "requiere": [
         "que-es"
       ],
       "ficha": {
-        "idea": "La biotecnología ha dado medicinas, vacunas, diagnósticos y cultivos más resistentes, pero también plantea preguntas: qué efectos tienen los cultivos transgénicos en el ambiente, quién es dueño de las semillas patentadas, cómo proteger los maíces nativos y hasta dónde se puede editar el ADN humano. Para decidir hace falta evidencia científica y escuchar a quienes se ven afectados: agricultores, comunidades, pacientes y científicos.",
+        "idea": "La biotecnología ha dado medicinas, vacunas, diagnósticos y cultivos más resistentes, pero también plantea preguntas: qué efectos tienen los cultivos transgénicos en el ambiente, quién es dueño de las semillas patentadas, cómo proteger los maíces nativos y hasta dónde se puede editar el ADN humano, si se debe clonar, qué hacer con los embriones que sobran de la FIV y quién puede pagar una terapia génica. Para decidir hace falta evidencia científica y escuchar a quienes se ven afectados: agricultores, comunidades, pacientes y científicos.",
         "contexto": [
           {
             "titulo": "Bioseguridad",
@@ -608,7 +1031,9 @@
             "Las decisiones necesitan evidencia y diálogo."
           ],
           "media": [],
-          "avanzada": []
+          "avanzada": [
+            "La bioética usa cuatro principios: autonomía, beneficencia, no maleficencia y justicia."
+          ]
         },
         "docente": {
           "abrir": "¿Quién debería decidir si se siembra un transgénico en una región?",
@@ -677,6 +1102,35 @@
               }
             ]
           }
+        },
+        {
+          "titulo": "Cuatro principios de la bioética",
+          "nivel": "avanzado",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "🙋",
+                "titulo": "Autonomía",
+                "texto": "Cada persona decide con información."
+              },
+              {
+                "icono": "💚",
+                "titulo": "Beneficencia",
+                "texto": "Buscar el bien del paciente."
+              },
+              {
+                "icono": "🛡️",
+                "titulo": "No hacer daño",
+                "texto": "Evitar riesgos innecesarios."
+              },
+              {
+                "icono": "⚖️",
+                "titulo": "Justicia",
+                "texto": "Que todos puedan acceder."
+              }
+            ]
+          }
         }
       ],
       "juego": "debate-juego",
@@ -704,6 +1158,18 @@
           ],
           "correcta": 0,
           "explicacion": "Decisiones informadas y con participación."
+        },
+        {
+          "id": "bt-et-3",
+          "enunciado": "Una terapia génica cuesta más de un millón de dólares. ¿Qué principio de la bioética está en juego?",
+          "opciones": [
+            "Justicia",
+            "Autonomía",
+            "Beneficencia",
+            "Ninguno"
+          ],
+          "correcta": 0,
+          "explicacion": "La justicia pide que el acceso no dependa solo del dinero."
         }
       ],
       "revisado": false

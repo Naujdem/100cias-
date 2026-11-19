@@ -43,7 +43,7 @@ import SimuladorPolillas from './SimuladorPolillas.tsx'
 import ExtremidadesHomologas from './ExtremidadesHomologas.tsx'
 import { TerritorioJuego, CalendarioJuego, PolicultivoJuego, DialogoJuego } from './JuegosTerritorio.tsx'
 import { ProductoresJuego, CadenaJuego, RedJuego, PiramideJuego } from './JuegosEnergia.tsx'
-import { BiotecQueJuego, InsulinaJuego, PcrJuego, TransgenicoJuego, EdicionJuego, DebateJuego } from './JuegosBiotec.tsx'
+import { BiotecQueJuego, InsulinaJuego, PcrJuego, TransgenicoJuego, EdicionJuego, DebateJuego, ClonacionJuego, FivJuego, TerapiaGenicaJuego } from './JuegosBiotec.tsx'
 import { QueEsMutacionJuego, PuntualesJuego, EfectosJuego, NumericasJuego, CromosomicasJuego, VariacionJuego } from './JuegosMutaciones.tsx'
 import { IncompletaJuego, CodominanciaJuego, SangreJuego, LigadaJuego, GenealogiaJuego, PoligenicaJuego } from './JuegosNoMendel.tsx'
 import FasesMitosis from './FasesMitosis.tsx'
@@ -290,6 +290,9 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'transgenico-juego': TransgenicoJuego,
   'edicion-juego': EdicionJuego,
   'debate-juego': DebateJuego,
+  'clonacion-juego': ClonacionJuego,
+  'fiv-juego': FivJuego,
+  'terapia-genica-juego': TerapiaGenicaJuego,
   'ecologia-que-juego': EcologiaQueJuego,
   'niveles-ecologicos-juego': NivelesEcologicosJuego,
   'habitat-nicho-juego': HabitatNichoJuego,
