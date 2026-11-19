@@ -4,6 +4,32 @@ import type { Guia } from '../components/lab/GuiaLab.tsx'
 // cuando se crea o se convierte a mesa viva (PLAN-LABORATORIOS.md).
 
 export const GUIAS: Record<string, Guia> = {
+  cuadrantes: {
+    objetivo: ['Estimar la densidad y la población de varias especies de plantas de un terreno mediante muestreo con cuadrantes.'],
+    fundamento: [
+      'Contar todos los individuos de un terreno es muy difícil; se cuentan los que hay en algunas parcelas pequeñas (cuadrantes) y se calcula.',
+      'Densidad = número de individuos ÷ área muestreada. Población estimada = densidad × área total.',
+      'Los cuadrantes deben ubicarse al azar para que la muestra represente todo el terreno; si se eligen a ojo, la muestra queda sesgada.',
+      'Desde 9°: frecuencia (en qué porcentaje de cuadrantes aparece una especie) y abundancia relativa. En 11°: índice de diversidad de Simpson.',
+    ],
+    materiales: ['Marco de 1 m × 1 m (de palos, tubos o pita con estacas)', 'Metro o cinta métrica', 'Dado o tabla de números al azar', 'Libreta y lápiz', 'Guía de las plantas comunes del lugar (o fotos)', 'Lupa'],
+    procedimiento: [
+      'Midan el terreno (potrero, zona verde o jardín) y divídanlo en una cuadrícula imaginaria de 1 m².',
+      'Escojan con el dado las coordenadas del primer cuadrante y pongan el marco.',
+      'Cuenten cada planta de cada especie dentro del marco, de una esquina a la otra, sin repetir.',
+      'Anoten los datos y repitan en al menos 5 cuadrantes al azar.',
+      'Calculen la densidad de cada especie y estimen su población en todo el terreno.',
+      'Desde 9°: calculen la frecuencia y la abundancia relativa. En 11°: el índice de Simpson.',
+    ],
+    seguridad: ['Usen ropa larga y zapatos cerrados; ojo con espinas, hormigas y abejas.', 'No arranquen las plantas: se cuentan donde están.', 'Lávense las manos al terminar.'],
+    preguntas: [
+      '¿Qué especie tuvo mayor densidad? ¿Y mayor frecuencia? ¿Son la misma?',
+      '¿Por qué los cuadrantes se ubican al azar?',
+      '¿Cómo cambia la estimación si haces más cuadrantes?',
+      '¿Alguna especie vive agrupada en una zona? ¿Qué condición del terreno lo explicaría?',
+      'En 11°: ¿qué tan diverso es el terreno según el índice de Simpson?',
+    ],
+  },
   'seleccion-picos': {
     objetivo: ['Simular cómo la selección natural cambia una población cuando el alimento disponible favorece una forma de pico.'],
     fundamento: [
