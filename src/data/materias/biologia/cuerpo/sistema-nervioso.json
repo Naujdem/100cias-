@@ -1,0 +1,513 @@
+{
+  "id": "sistema-nervioso",
+  "materia": "biologia",
+  "area": "cuerpo",
+  "titulo": "Sistema nervioso",
+  "subtema": "La red que recibe, decide y responde",
+  "orden": 66,
+  "etiqueta": "6",
+  "vistas": ["ruta"],
+  "tituloVista": "Ruta del impulso",
+  "unidad": "Paso",
+  "diapositivas": true,
+  "objetivos": [
+    "Diferenciar el sistema nervioso central del periférico y sus funciones.",
+    "Reconocer las partes de la neurona y cómo viaja el impulso nervioso.",
+    "Explicar la sinapsis y el papel de los neurotransmisores.",
+    "Describir el arco reflejo y compararlo con un acto voluntario.",
+    "Identificar las partes del encéfalo y sus funciones.",
+    "Explicar cómo actúan las sustancias psicoactivas en el cerebro y por qué el cerebro adolescente es más vulnerable."
+  ],
+  "fuentes": [
+    "BORRADOR: verificar con un texto escolar de biología y los DBA de Ciencias Naturales 8°-4. Velocidades y tiempos de reacción son aproximados. El paso de sustancias psicoactivas es preventivo; contrastar con los lineamientos del Ministerio de Salud y la línea de orientación de la Secretaría de Salud del Huila o del departamento."
+  ],
+  "bloques": [
+    {
+      "id": "funcion-nervioso",
+      "titulo": "Recibir, procesar y responder",
+      "resumen": "El sistema nervioso central (encéfalo y médula) decide; el periférico (los nervios) lleva y trae los mensajes.",
+      "anio": 1,
+      "etiqueta": "Paso 1",
+      "nivel": "basico",
+      "nucleo": true,
+      "ficha": {
+        "idea": "El sistema nervioso coordina todo el cuerpo y lo relaciona con el ambiente. Hace tres cosas: recibe información (por los sentidos y los receptores internos), la procesa (compara, decide, recuerda) y da una respuesta (mueve un músculo o hace trabajar una glándula). Se divide en dos partes. El sistema nervioso central (SNC), formado por el encéfalo, protegido por el cráneo, y la médula espinal, dentro de la columna, es el que procesa. El sistema nervioso periférico (SNP) son los nervios que salen del SNC hacia todo el cuerpo: los sensitivos traen la información y los motores llevan las órdenes. Una parte del periférico, el sistema autónomo, controla lo que no decidimos: el latido, la digestión, el sudor. Junto con el sistema endocrino, el nervioso mantiene la homeostasis.",
+        "cuaderno": {
+          "facil": [
+            "Funciones: recibir, procesar y responder.",
+            "Central: encéfalo y médula espinal. Periférico: los nervios."
+          ],
+          "media": [
+            "Nervios sensitivos traen información; nervios motores llevan órdenes."
+          ],
+          "avanzada": [
+            "Sistema autónomo: simpático (alerta, «pelear o huir») y parasimpático (calma, digestión)."
+          ]
+        },
+        "docente": {
+          "abrir": "Cuando alguien te lanza un balón, ¿qué pasa desde que lo ves hasta que lo atrapas?",
+          "actividad": "Representar el recorrido con cuatro estudiantes: ojo, nervio, cerebro, músculo; cronometrar cuánto tarda el mensaje en llegar.",
+          "errores": [
+            "Creer que el cerebro y el encéfalo son lo mismo; el cerebro es una parte del encéfalo.",
+            "Pensar que la médula espinal es hueso; es tejido nervioso dentro de la columna."
+          ],
+          "minutos": 20
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "¿Qué crees?",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Qué protege a la médula espinal?",
+            "opciones": ["La columna vertebral", "Las costillas", "El cráneo", "Nada: está debajo de la piel"],
+            "correcta": 0,
+            "explicacion": "Va por dentro de las vértebras; por eso una lesión de columna es tan grave."
+          }
+        },
+        {
+          "titulo": "Una red en todo el cuerpo",
+          "visual": {
+            "tipo": "escena",
+            "id": "ner-mapa",
+            "fases": [
+              { "id": "todo", "nombre": "La red", "texto": "Encéfalo, médula y nervios conectan todo el cuerpo." },
+              { "id": "central", "nombre": "Central", "texto": "Encéfalo y médula espinal: procesan y deciden." },
+              { "id": "periferico", "nombre": "Periférico", "texto": "Los nervios llevan y traen los mensajes." },
+              { "id": "recibe", "nombre": "Tres trabajos", "texto": "Recibir, procesar y responder." }
+            ]
+          }
+        },
+        {
+          "titulo": "Lo que no decides",
+          "nivel": "avanzado",
+          "visual": {
+            "tipo": "compara",
+            "izq": { "icono": "🐆", "titulo": "Simpático", "puntos": ["Alerta: «pelear o huir».", "Acelera el corazón, dilata las pupilas."] },
+            "der": { "icono": "😌", "titulo": "Parasimpático", "puntos": ["Calma y descanso.", "Baja el pulso, activa la digestión."] }
+          }
+        }
+      ],
+      "juego": "ner-mapa-juego",
+      "preguntas": [
+        {
+          "id": "cu-ne-1",
+          "enunciado": "¿Qué forma el sistema nervioso central?",
+          "opciones": ["El encéfalo y la médula espinal", "Los nervios", "El corazón y el cerebro", "Los sentidos"],
+          "correcta": 0,
+          "explicacion": "Los nervios forman el periférico."
+        },
+        {
+          "id": "cu-ne-2",
+          "enunciado": "¿Qué hacen los nervios motores?",
+          "opciones": [
+            "Llevan las órdenes a músculos y glándulas",
+            "Traen información de los sentidos",
+            "Guardan los recuerdos",
+            "Protegen la médula"
+          ],
+          "correcta": 0,
+          "explicacion": "Los sensitivos hacen el camino contrario."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "neurona",
+      "titulo": "La neurona y el impulso",
+      "resumen": "La neurona recibe por las dendritas y envía por el axón una señal eléctrica: el impulso nervioso.",
+      "anio": 2,
+      "etiqueta": "Paso 2",
+      "nivel": "basico",
+      "requiere": ["funcion-nervioso"],
+      "ficha": {
+        "idea": "La neurona es la célula del sistema nervioso; el encéfalo tiene unos 86 000 millones. Tiene un cuerpo celular con el núcleo; dendritas, ramitas cortas que reciben señales de otras neuronas, y un axón, una prolongación larga que lleva la señal hasta las terminales. La señal es el impulso nervioso: un pequeño cambio eléctrico que recorre la membrana del axón siempre en el mismo sentido, de las dendritas a las terminales. Muchos axones están cubiertos de mielina, una capa de grasa que los aísla como el plástico de un cable y hace que el impulso avance a saltos, mucho más rápido. Un nervio es un haz de muchos axones juntos. Las neuronas casi no se dividen; por eso una lesión nerviosa sana muy despacio o no sana.",
+        "cuaderno": {
+          "facil": [
+            "Partes de la neurona: dendritas, cuerpo, axón y terminales.",
+            "El impulso nervioso es una señal eléctrica."
+          ],
+          "media": [
+            "La mielina aísla el axón y hace el impulso más rápido.",
+            "Un nervio es un haz de axones."
+          ],
+          "avanzada": [
+            "El impulso es un cambio de carga en la membrana por la entrada de sodio y la salida de potasio."
+          ]
+        },
+        "docente": {
+          "abrir": "Si el cuerpo usa electricidad, ¿por qué no damos corrientazo?",
+          "actividad": "Hacer una fila de estudiantes de la mano: el primero aprieta y cada uno pasa el apretón; cronometrar y calcular la «velocidad» de la fila.",
+          "errores": [
+            "Creer que la señal viaja en ambos sentidos por el axón.",
+            "Pensar que nervio y neurona son lo mismo."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Una célula que conduce",
+          "visual": {
+            "tipo": "escena",
+            "id": "ner-neurona",
+            "fases": [
+              { "id": "partes", "nombre": "Partes", "texto": "Dendritas reciben, el cuerpo tiene el núcleo, el axón envía." },
+              { "id": "impulso", "nombre": "El impulso", "texto": "Una señal eléctrica recorre el axón en un solo sentido." },
+              { "id": "mielina", "nombre": "La mielina", "texto": "Aísla el axón y el impulso va a saltos, más rápido.", "nivel": "intermedio" }
+            ]
+          }
+        },
+        {
+          "titulo": "Muchísimas",
+          "visual": { "tipo": "cifra", "icono": "🧠", "valor": "≈ 86 000 millones", "texto": "de neuronas tiene el encéfalo humano" }
+        }
+      ],
+      "juego": "neurona-juego",
+      "preguntas": [
+        {
+          "id": "cu-ne-3",
+          "enunciado": "¿Qué parte de la neurona lleva el impulso hacia otras células?",
+          "opciones": ["El axón", "Las dendritas", "El núcleo", "La mielina"],
+          "correcta": 0,
+          "explicacion": "Las dendritas reciben; el axón envía."
+        },
+        {
+          "id": "cu-ne-4",
+          "enunciado": "¿Para qué sirve la mielina?",
+          "opciones": ["Aísla el axón y acelera el impulso", "Produce neurotransmisores", "Recibe las señales", "Alimenta a la neurona"],
+          "correcta": 0,
+          "explicacion": "Como el plástico de un cable."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "sinapsis",
+      "titulo": "La sinapsis",
+      "resumen": "Entre dos neuronas hay un espacio: el mensaje lo cruza con sustancias químicas llamadas neurotransmisores.",
+      "anio": 3,
+      "etiqueta": "Paso 3",
+      "nivel": "intermedio",
+      "requiere": ["neurona"],
+      "ficha": {
+        "idea": "Las neuronas no se tocan: entre las terminales de una y las dendritas de la siguiente hay un espacio muy pequeño. Esa unión se llama sinapsis. Cuando el impulso eléctrico llega al final del axón, la neurona suelta neurotransmisores, sustancias químicas guardadas en vesículas. Estas cruzan el espacio y se unen a receptores de la otra neurona, como llaves en sus cerraduras, y allí nace un nuevo impulso (o se frena, según el neurotransmisor). Después, los neurotransmisores se reciclan o se destruyen para que la señal no quede encendida. Algunos neurotransmisores conocidos son la dopamina (relacionada con la motivación y el placer), la serotonina (el ánimo) y la acetilcolina (los músculos). Una persona tiene billones de sinapsis, y aprender es, en buena parte, fortalecer algunas de ellas.",
+        "cuaderno": {
+          "facil": [
+            "Sinapsis: la unión entre dos neuronas.",
+            "Los neurotransmisores llevan el mensaje de una neurona a otra."
+          ],
+          "media": [
+            "Dentro de la neurona el mensaje es eléctrico; entre neuronas, químico."
+          ],
+          "avanzada": [
+            "Dopamina, serotonina y acetilcolina son neurotransmisores; aprender fortalece sinapsis."
+          ]
+        },
+        "docente": {
+          "abrir": "Si las neuronas no se tocan, ¿cómo pasa el mensaje de una a otra?",
+          "actividad": "Dos filas de estudiantes separadas por un pasillo: la primera lanza bolitas de papel (neurotransmisores) que la segunda debe atrapar con las manos en forma de «receptor».",
+          "errores": [
+            "Creer que las neuronas están conectadas como cables empalmados.",
+            "Pensar que la sinapsis funciona en ambos sentidos."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Un mensaje químico",
+          "visual": {
+            "tipo": "escena",
+            "id": "ner-sinapsis",
+            "fases": [
+              { "id": "llega", "nombre": "Llega el impulso", "texto": "El impulso eléctrico llega al final del axón." },
+              { "id": "suelta", "nombre": "Neurotransmisores", "texto": "Las vesículas sueltan neurotransmisores al espacio." },
+              { "id": "recibe", "nombre": "Receptores", "texto": "Se unen a los receptores y nace un nuevo impulso." },
+              { "id": "sustancias", "nombre": "Sustancias psicoactivas", "texto": "Algunas sustancias imitan, bloquean o aumentan a los neurotransmisores.", "nivel": "avanzado" }
+            ]
+          }
+        },
+        {
+          "titulo": "Aprender cambia el cerebro",
+          "puntos": [
+            "Practicar fortalece las sinapsis que se usan.",
+            "Dormir ayuda a guardar lo aprendido."
+          ],
+          "visual": { "tipo": "cifra", "icono": "🔗", "valor": "billones", "texto": "de sinapsis conectan las neuronas del encéfalo" }
+        }
+      ],
+      "juego": "sinapsis-juego",
+      "preguntas": [
+        {
+          "id": "cu-ne-5",
+          "enunciado": "¿Cómo pasa el mensaje de una neurona a otra?",
+          "opciones": [
+            "Por neurotransmisores que cruzan el espacio sináptico",
+            "Por un cable que las une",
+            "Por la sangre",
+            "Por la mielina"
+          ],
+          "correcta": 0,
+          "explicacion": "Es un mensaje químico."
+        },
+        {
+          "id": "cu-ne-6",
+          "enunciado": "¿Qué es un neurotransmisor?",
+          "opciones": [
+            "Una sustancia química que lleva el mensaje entre neuronas",
+            "Una neurona muy larga",
+            "Un tipo de hormona del páncreas",
+            "La capa que cubre el axón"
+          ],
+          "correcta": 0,
+          "explicacion": "Por ejemplo, la dopamina o la serotonina."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "reflejo",
+      "titulo": "El arco reflejo",
+      "resumen": "Ante un peligro, la médula responde sola, sin esperar al cerebro: es un reflejo.",
+      "anio": 4,
+      "etiqueta": "Paso 4",
+      "nivel": "basico",
+      "requiere": ["neurona"],
+      "diagrama": "tiempo-reaccion",
+      "ficha": {
+        "idea": "Un reflejo es una respuesta rápida, automática e involuntaria ante un estímulo, como retirar la mano de una olla caliente. El camino que sigue se llama arco reflejo: un receptor de la piel detecta el calor; una neurona sensitiva lleva el aviso a la médula espinal; allí, una neurona de conexión lo pasa directamente a una neurona motora, sin esperar al cerebro; la neurona motora lleva la orden al músculo, que se contrae y retira la mano. Todo tarda unos 50 milisegundos. El cerebro se entera después, y por eso el dolor se siente cuando la mano ya se retiró. En cambio, un acto voluntario, como atrapar un balón, pasa por el cerebro y tarda más. Los reflejos nos protegen: parpadear, toser, estornudar, la pierna que salta con el martillo del médico.",
+        "cuaderno": {
+          "facil": [
+            "Reflejo: respuesta rápida y automática que no pasa por el cerebro.",
+            "Arco reflejo: receptor → neurona sensitiva → médula → neurona motora → músculo."
+          ],
+          "media": [
+            "Un acto voluntario pasa por el cerebro y tarda más."
+          ],
+          "avanzada": []
+        },
+        "docente": {
+          "abrir": "¿Por qué uno quita la mano del fogón antes de sentir el dolor?",
+          "actividad": "Medir el tiempo de reacción con el juego de la app y con una regla que se deja caer entre los dedos; comparar con el reflejo rotuliano (golpe suave bajo la rodilla).",
+          "errores": [
+            "Creer que todos los movimientos rápidos son reflejos.",
+            "Pensar que el reflejo lo decide el cerebro."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Más rápido que pensar",
+          "visual": {
+            "tipo": "escena",
+            "id": "ner-reflejo",
+            "fases": [
+              { "id": "receptor", "nombre": "Receptor", "texto": "La piel detecta el calor del fogón." },
+              { "id": "sensitiva", "nombre": "Neurona sensitiva", "texto": "Lleva el aviso hasta la médula espinal." },
+              { "id": "medula", "nombre": "Médula", "texto": "Responde sola, sin consultar al cerebro." },
+              { "id": "motora", "nombre": "Neurona motora", "texto": "Lleva la orden al músculo del brazo." },
+              { "id": "musculo", "nombre": "Músculo", "texto": "Se contrae y la mano se retira." }
+            ]
+          }
+        },
+        {
+          "titulo": "Reflejo o voluntario",
+          "visual": {
+            "tipo": "compara",
+            "izq": { "icono": "⚡", "titulo": "Reflejo", "puntos": ["Lo resuelve la médula.", "≈ 50 milisegundos.", "No se decide."] },
+            "der": { "icono": "🧠", "titulo": "Voluntario", "puntos": ["Pasa por el cerebro.", "≈ 250 milisegundos.", "Se decide y se aprende."] }
+          }
+        }
+      ],
+      "juego": "reflejo-juego",
+      "preguntas": [
+        {
+          "id": "cu-ne-7",
+          "enunciado": "En el arco reflejo, ¿dónde se produce la respuesta?",
+          "opciones": ["En la médula espinal", "En el cerebro", "En el músculo", "En la piel"],
+          "correcta": 0,
+          "explicacion": "Por eso es tan rápido."
+        },
+        {
+          "id": "cu-ne-8",
+          "enunciado": "¿Cuál de estos es un reflejo?",
+          "opciones": ["Parpadear cuando algo se acerca al ojo", "Escribir en el cuaderno", "Patear un balón", "Levantar la mano para hablar"],
+          "correcta": 0,
+          "explicacion": "Es automático y protege el ojo."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "encefalo",
+      "titulo": "El encéfalo",
+      "resumen": "El cerebro piensa y decide, el cerebelo coordina y el tronco encefálico mantiene las funciones automáticas.",
+      "anio": 5,
+      "etiqueta": "Paso 5",
+      "nivel": "basico",
+      "requiere": ["funcion-nervioso"],
+      "ficha": {
+        "idea": "El encéfalo está dentro del cráneo, envuelto en membranas (las meninges) y flotando en un líquido que lo amortigua. Tiene tres partes principales. El cerebro, la más grande, tiene dos hemisferios y una capa arrugada, la corteza, donde ocurren el pensamiento, la memoria, el lenguaje, las sensaciones y los movimientos voluntarios. El cerebelo, atrás y abajo, coordina los movimientos y mantiene el equilibrio. El tronco encefálico une el encéfalo con la médula y controla funciones vitales automáticas: la respiración, el latido, la presión, tragar. En 11° se ven los lóbulos: frontal (planear, decidir, controlar impulsos), parietal (tacto), temporal (oído y memoria) y occipital (visión). El lóbulo frontal es el último en madurar, cerca de los 25 años.",
+        "cuaderno": {
+          "facil": [
+            "Cerebro: pensar, recordar, sentir y moverse a voluntad.",
+            "Cerebelo: equilibrio. Tronco encefálico: respiración y latido."
+          ],
+          "media": [
+            "El cráneo, las meninges y el líquido protegen al encéfalo."
+          ],
+          "avanzada": [
+            "Lóbulos: frontal, parietal, temporal y occipital; el frontal madura hacia los 25 años."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué el casco es obligatorio en moto y en bicicleta?",
+          "actividad": "Proteger un huevo crudo dentro de un frasco con agua (el «encéfalo» con su líquido) y sin agua, y dejarlo caer desde la misma altura.",
+          "errores": [
+            "Creer que solo usamos el 10 % del cerebro; usamos todo, aunque no al mismo tiempo.",
+            "Confundir cerebro con cerebelo."
+          ],
+          "minutos": 25
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Tres partes",
+          "visual": {
+            "tipo": "escena",
+            "id": "ner-encefalo",
+            "fases": [
+              { "id": "encefalo", "nombre": "El encéfalo", "texto": "Cerebro, cerebelo y tronco encefálico." },
+              { "id": "cerebro", "nombre": "Cerebro", "texto": "Pensar, recordar, hablar, sentir y mover a voluntad." },
+              { "id": "cerebelo", "nombre": "Cerebelo", "texto": "Equilibrio y coordinación." },
+              { "id": "tronco", "nombre": "Tronco encefálico", "texto": "Respirar, latir y tragar sin pensarlo." },
+              { "id": "lobulos", "nombre": "Lóbulos", "texto": "Frontal, parietal, temporal y occipital.", "nivel": "avanzado" }
+            ]
+          }
+        },
+        {
+          "titulo": "Un mito",
+          "visual": {
+            "tipo": "pregunta",
+            "enunciado": "¿Es verdad que solo usamos el 10 % del cerebro?",
+            "opciones": ["No: usamos todas sus partes", "Sí: el resto está dormido", "Sí, hasta los 18 años", "Depende de la inteligencia"],
+            "correcta": 0,
+            "explicacion": "Las imágenes del cerebro muestran actividad en todas sus zonas."
+          }
+        }
+      ],
+      "juego": "encefalo-juego",
+      "preguntas": [
+        {
+          "id": "cu-ne-9",
+          "enunciado": "¿Qué parte del encéfalo coordina el equilibrio?",
+          "opciones": ["El cerebelo", "El cerebro", "El tronco encefálico", "La médula"],
+          "correcta": 0,
+          "explicacion": "Por eso el alcohol, que lo afecta, hace tambalear."
+        },
+        {
+          "id": "cu-ne-10",
+          "enunciado": "¿Qué controla el tronco encefálico?",
+          "opciones": ["La respiración y el latido", "La memoria", "El lenguaje", "La visión"],
+          "correcta": 0,
+          "explicacion": "Funciones automáticas vitales."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "psicoactivas",
+      "titulo": "Sustancias psicoactivas",
+      "resumen": "Alteran la sinapsis; el cerebro adolescente, todavía en formación, es más vulnerable a sus efectos y a la dependencia.",
+      "anio": 6,
+      "etiqueta": "Paso 6",
+      "nivel": "intermedio",
+      "requiere": ["sinapsis"],
+      "ficha": {
+        "idea": "Una sustancia psicoactiva es la que actúa sobre el sistema nervioso y cambia cómo se siente, se piensa o se percibe. Lo hacen en la sinapsis: imitan a un neurotransmisor, lo bloquean o hacen que se suelte más. Según su efecto general se agrupan en depresoras, que vuelven lentas las neuronas (el alcohol); estimulantes, que las aceleran (la cafeína, la nicotina), y alucinógenas, que alteran la percepción. Muchas activan el sistema de recompensa del cerebro (dopamina); con el uso repetido, el cerebro se acostumbra, se necesita más para el mismo efecto (tolerancia) y aparece la necesidad de seguir usándola (dependencia). El cerebro, en especial el lóbulo frontal, que controla los impulsos, sigue madurando hasta cerca de los 25 años: por eso empezar en la adolescencia aumenta el riesgo. Si a alguien le preocupa su consumo o el de otra persona, lo más útil es hablar con un adulto de confianza, el orientador o una línea de ayuda de salud.",
+        "cuaderno": {
+          "facil": [
+            "Las sustancias psicoactivas cambian el funcionamiento del cerebro.",
+            "El cerebro madura hasta cerca de los 25 años: en la adolescencia es más vulnerable."
+          ],
+          "media": [
+            "Depresoras, estimulantes y alucinógenas.",
+            "Tolerancia: se necesita más. Dependencia: no se puede dejar."
+          ],
+          "avanzada": [
+            "Actúan sobre la sinapsis y el sistema de recompensa (dopamina)."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué el café quita el sueño?",
+          "actividad": "Analizar en grupos situaciones cotidianas (una fiesta, presión de amigos, manejar) y proponer cómo decir que no y a quién pedir ayuda. Tener a mano el contacto del orientador y de la línea de salud mental del departamento.",
+          "errores": [
+            "Creer que el alcohol es estimulante.",
+            "Pensar que lo «natural» o lo legal no hace daño.",
+            "Creer que la dependencia es falta de voluntad y no un cambio en el cerebro."
+          ],
+          "minutos": 35
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Actúan en la sinapsis",
+          "visual": {
+            "tipo": "escena",
+            "id": "ner-sinapsis",
+            "fases": [
+              { "id": "recibe", "nombre": "Sinapsis normal", "texto": "El neurotransmisor se une a su receptor." },
+              { "id": "sustancias", "nombre": "Con una sustancia", "texto": "La sustancia imita, bloquea o aumenta la señal." }
+            ]
+          },
+          "atajo": { "texto": "Más sobre esto: la sinapsis", "tema": "sistema-nervioso", "bloque": "sinapsis" }
+        },
+        {
+          "titulo": "Tres grupos según su efecto",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              { "icono": "🐢", "titulo": "Depresoras", "texto": "Vuelven lentas las neuronas: el alcohol." },
+              { "icono": "⚡", "titulo": "Estimulantes", "texto": "Las aceleran: la cafeína, la nicotina." },
+              { "icono": "🌀", "titulo": "Alucinógenas", "texto": "Alteran la percepción." }
+            ]
+          }
+        },
+        {
+          "titulo": "Un cerebro en obra",
+          "puntos": [
+            "El lóbulo frontal, que frena los impulsos, madura de último.",
+            "Por eso empezar joven aumenta el riesgo de dependencia.",
+            "Pedir ayuda a un adulto de confianza es lo más valiente."
+          ],
+          "visual": { "tipo": "cifra", "icono": "🧠", "valor": "≈ 25 años", "texto": "edad hasta la que sigue madurando el cerebro" }
+        }
+      ],
+      "juego": "psicoactivas-juego",
+      "preguntas": [
+        {
+          "id": "cu-ne-11",
+          "enunciado": "¿Por qué el cerebro adolescente es más vulnerable a las sustancias psicoactivas?",
+          "opciones": [
+            "Porque todavía está madurando, sobre todo el lóbulo frontal",
+            "Porque tiene menos neuronas",
+            "Porque no tiene sinapsis",
+            "Porque no tiene mielina"
+          ],
+          "correcta": 0,
+          "explicacion": "El control de los impulsos madura de último."
+        },
+        {
+          "id": "cu-ne-12",
+          "enunciado": "El alcohol es una sustancia…",
+          "opciones": ["depresora", "estimulante", "alucinógena", "que no actúa en el cerebro"],
+          "correcta": 0,
+          "explicacion": "Vuelve lentas las neuronas: reflejos y juicio."
+        }
+      ],
+      "revisado": false
+    }
+  ]
+}

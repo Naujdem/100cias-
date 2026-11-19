@@ -77,6 +77,8 @@ import TermostatoCuerpo from './TermostatoCuerpo.tsx'
 import PulsoEjercicio from './PulsoEjercicio.tsx'
 import RinonAgua from './RinonAgua.tsx'
 import InmunidadRebano from './InmunidadRebano.tsx'
+import TiempoReaccion from './TiempoReaccion.tsx'
+import { NerMapaJuego, NeuronaJuego, SinapsisJuego, ReflejoJuego, EncefaloJuego, PsicoactivasJuego } from './JuegosNervioso.tsx'
 import { LineasJuego, BarrerasJuego, InnataJuego, AnticuerposJuego, VacunasJuego, FallasInmuneJuego } from './JuegosInmune.tsx'
 import { ExcOrganosJuego, UrinarioJuego, NefronaJuego, OrinaJuego, PecesAguaJuego } from './JuegosExcrecion.tsx'
 import { VentilacionJuego, AlveoloJuego, CorazonJuego, VasosJuego, SangreCompJuego, RespAnimalesJuego } from './JuegosCirculacion.tsx'
@@ -686,4 +688,11 @@ export const DIAGRAMAS: Record<string, ComponentType> = {
   'anticuerpos-juego': AnticuerposJuego,
   'vacunas-juego': VacunasJuego,
   'fallas-inmune-juego': FallasInmuneJuego,
+  'tiempo-reaccion': TiempoReaccion,
+  'ner-mapa-juego': NerMapaJuego,
+  'neurona-juego': NeuronaJuego,
+  'sinapsis-juego': SinapsisJuego,
+  'reflejo-juego': ReflejoJuego,
+  'encefalo-juego': EncefaloJuego,
+  'psicoactivas-juego': PsicoactivasJuego,
 }
