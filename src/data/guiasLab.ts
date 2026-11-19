@@ -95,4 +95,31 @@ export const GUIAS: Record<string, Guia> = {
       '¿Por qué el suero que se pone en la vena tiene 0,9 % de sal?',
     ],
   },
+  biomoleculas: {
+    objetivo: ['Reconocer almidón, azúcares reductores, proteínas y lípidos en alimentos comunes mediante pruebas de color y la mancha en papel.'],
+    fundamento: [
+      'Lugol: el yodo se mete en la hélice del almidón y lo tiñe de azul oscuro o negro.',
+      'Benedict: con calor, los azúcares reductores (glucosa, fructosa, lactosa) reducen el cobre del reactivo y el color pasa de azul a verde, amarillo, naranja o rojo ladrillo según cuánto azúcar haya. La sacarosa (azúcar de mesa) no es reductora, salvo que se hidrolice.',
+      'Biuret: en medio básico (soda), el cobre se une a los enlaces peptídicos de las proteínas y da color violeta.',
+      'Lípidos: las grasas dejan en el papel una mancha translúcida que no se seca; el agua se evapora y la mancha desaparece.',
+      'El tubo con agua es el control: muestra el color del reactivo solo, para comparar.',
+    ],
+    materiales: ['Gradilla con tubos de ensayo de cada alimento (y uno con agua)', 'Lugol', 'Reactivo de Benedict', 'Soda cáustica (NaOH) y sulfato de cobre', 'Baño María', 'Hoja de papel', 'Temporizador'],
+    procedimiento: [
+      'Lugol: echa tres gotas en cada tubo y anota el color.',
+      'Benedict: echa el reactivo en cada tubo, lleva la gradilla al baño María 5 minutos, sácala y anota el color.',
+      'Biuret: en cada tubo echa primero unas gotas de soda y después unas gotas de sulfato de cobre; anota el color.',
+      'Lípidos: pon una gota de cada alimento en la hoja, deja secar 10 minutos y mírala a contraluz.',
+      'Compara cada tubo con el control y marca + o − en la tabla.',
+    ],
+    seguridad: ['La soda cáustica es corrosiva: usa gafas y guantes.', 'Los tubos calientes se toman con pinza.', 'No pruebes los alimentos del laboratorio.'],
+    preguntas: [
+      '¿Qué alimentos tienen almidón? ¿De qué color quedaron con lugol?',
+      '¿Por qué el azúcar de mesa da negativo con Benedict aunque sea dulce?',
+      '¿Qué pasa con el Benedict si no se calienta?',
+      '¿Qué alimentos tienen proteínas? ¿Y cuáles tienen grasa?',
+      '¿Para qué sirve el tubo con agua?',
+      '¿Qué biomoléculas tiene la leche según tus resultados?',
+    ],
+  },
 }

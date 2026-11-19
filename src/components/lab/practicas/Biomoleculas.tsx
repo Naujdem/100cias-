@@ -1,8 +1,12 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import MesaViva from '../MesaViva.tsx'
+import type { Pieza, Uso } from '../MesaViva.tsx'
+import { AsaGradilla, BanoMaria, Caneca, Gotero, HojaPapel, Reloj, Tubo } from '../dibujos.tsx'
 
-// Laboratorio de Biología 5 (PLAN-LABORATORIOS.md, del manual de Bioquímica): reconocimiento de biomoléculas.
-// Cuatro pruebas sobre una gradilla de alimentos: lugol (almidón), Benedict con baño María (azúcares
-// reductores), Biuret (proteínas) y mancha en papel (lípidos). El estudiante interpreta + / − y comprueba.
+// Laboratorio de Biología (PLAN-LABORATORIOS.md, del manual de Bioquímica): reconocimiento de biomoléculas,
+// en mesa viva («como Tinciones»). Cada reactivo se gotea tubo por tubo: lugol (almidón); Benedict y la
+// gradilla al baño María 5 min (acelerado: 1 s = 10 s); Biuret = soda y luego sulfato de cobre (proteínas);
+// lípidos = una gota de cada alimento en el papel y 10 min de secado (1 s = 20 s). Luego se interpreta + / −.
 
 type Prueba = 'lugol' | 'benedict' | 'biuret' | 'lipidos'
 interface Alimento {
@@ -41,15 +45,22 @@ const mezcla = (a: [number, number, number], b: [number, number, number], t: num
   return `rgb(${c[0]}, ${c[1]}, ${c[2]})`
 }
 
-function colorTubo(p: Prueba, a: Alimento, calor: boolean, hidrolizado: boolean) {
-  if (p === 'lugol') return mezcla([217, 164, 65], [30, 25, 60], a.almidon * 1.2)
-  if (p === 'biuret') return mezcla([111, 163, 224], [123, 63, 160], a.proteina * 1.3)
-  // Benedict: azul → verde → amarillo → naranja → rojo ladrillo, solo con calor
-  const r = a.id === 'azucar' && hidrolizado ? 0.9 : a.reductor
-  if (!calor || r < 0.1) return 'rgb(58, 123, 213)'
-  if (r < 0.35) return mezcla([58, 123, 213], [110, 170, 70], r / 0.35)
-  if (r < 0.65) return mezcla([110, 170, 70], [225, 170, 40], (r - 0.35) / 0.3)
-  return mezcla([225, 170, 40], [181, 64, 31], (r - 0.65) / 0.35)
+/** color del tubo según lo que se le echó; «calor» = segundos en el baño María */
+function colorTubo(p: Prueba, a: Alimento, r: string[], calor: number, hidrolizado: boolean) {
+  const base = 'rgb(242, 236, 217)'
+  if (p === 'lugol') return r.includes('lugol') ? mezcla([217, 164, 65], [30, 25, 60], a.almidon * 1.2) : base
+  if (p === 'biuret') {
+    if (!r.includes('cobre')) return r.includes('soda') ? 'rgb(236, 232, 214)' : base
+    return r.includes('soda') ? mezcla([111, 163, 224], [123, 63, 160], a.proteina * 1.3) : 'rgb(150, 190, 230)'
+  }
+  if (!r.includes('benedict')) return base
+  // Benedict: azul → verde → amarillo → naranja → rojo ladrillo, solo con calor y según el tiempo
+  const r0 = a.id === 'azucar' && hidrolizado ? 0.9 : a.reductor
+  const x = r0 * Math.min(1, calor / 300)
+  if (x < 0.1) return 'rgb(58, 123, 213)'
+  if (x < 0.35) return mezcla([58, 123, 213], [110, 170, 70], x / 0.35)
+  if (x < 0.65) return mezcla([110, 170, 70], [225, 170, 40], (x - 0.35) / 0.3)
+  return mezcla([225, 170, 40], [181, 64, 31], (x - 0.65) / 0.35)
 }
 
 const verdad = (p: Prueba, a: Alimento, hidrolizado: boolean) => {
@@ -58,79 +69,149 @@ const verdad = (p: Prueba, a: Alimento, hidrolizado: boolean) => {
 }
 
 type Marca = '?' | '+' | '−'
+interface TuboE { r: string[]; t: number }
+type Estado = Record<Prueba, Record<string, TuboE>>
+const NUEVO: Estado = { lugol: {}, benedict: {}, biuret: {}, lipidos: {} }
+const CORTO = (a: Alimento) => a.nombre.split(' (')[0].replace('Masa de ', '').replace('Jugo de ', '').replace('Clara de huevo', 'Clara').replace('Azúcar de mesa', 'Azúcar')
 
 export default function Biomoleculas({ grado }: { grado: number }) {
   const [prueba, setPrueba] = useState<Prueba>('lugol')
-  const [hecha, setHecha] = useState<Set<Prueba>>(new Set())
-  const [calor, setCalor] = useState(false)
-  const [hidrolizado, setHidrolizado] = useState(false)
+  const [est, setEst] = useState<Estado>(NUEVO)
+  const [enBano, setEnBano] = useState(false)
+  const [cuenta, setCuenta] = useState(0)
+  const [alarma, setAlarma] = useState(false)
   const [marcas, setMarcas] = useState<Record<string, Marca>>({})
   const [rev, setRev] = useState(false)
   const P = PRUEBAS[prueba]
   const lista = grado < 9 ? ALIMENTOS.filter((a) => ['agua', 'papa', 'azucar', 'miel', 'clara', 'aceite', 'leche'].includes(a.id)) : ALIMENTOS
   const pruebas = Object.keys(PRUEBAS) as Prueba[]
+  const hidrolizado = !!est.benedict.azucar?.r.includes('acido')
+  const T = (p: Prueba, id: string): TuboE => est[p][id] ?? { r: [], t: 0 }
+  const paso = prueba === 'benedict' ? 10 : prueba === 'lipidos' ? 20 : 0
+  const corre = (prueba === 'benedict' && enBano) || (prueba === 'lipidos' && Object.keys(est.lipidos).length > 0)
+  useEffect(() => {
+    if (!paso) return
+    const id = window.setInterval(() => {
+      if (corre)
+        setEst((e) => ({
+          ...e,
+          [prueba]: Object.fromEntries(Object.entries(e[prueba]).map(([k, v]) => [k, prueba === 'benedict' && !v.r.includes('benedict') ? v : { ...v, t: v.t + paso }])),
+        }))
+      setCuenta((c) => { if (c > 0 && c <= paso) setAlarma(true); return Math.max(0, c - paso) })
+    }, 1000)
+    return () => window.clearInterval(id)
+  }, [paso, corre, prueba])
+  const echar = (id: string, r: string) => setEst((e) => ({ ...e, [prueba]: { ...e[prueba], [id]: { ...T(prueba, id), r: [...T(prueba, id).r, r] } } }))
+  const cambiarPrueba = (p: Prueba) => { setPrueba(p); setEnBano(false); setCuenta(0); setAlarma(false) }
+
+  // ---- mesa ----
+  const paso0 = Math.min(56, 600 / lista.length)
+  const xTubo = (k: number) => 50 + k * paso0
+  const reactivos: { id: string; nombre: string; color: string; e: string; oscuro?: boolean }[] =
+    prueba === 'lugol' ? [{ id: 'lugol', nombre: 'Lugol', color: '#a0601a', e: 'LUGOL', oscuro: true }]
+    : prueba === 'biuret' ? [{ id: 'soda', nombre: 'Soda cáustica (NaOH)', color: '#eef2f4', e: 'NaOH' }, { id: 'cobre', nombre: 'Sulfato de cobre', color: '#6fa3e0', e: 'CuSO₄' }]
+    : prueba === 'benedict' ? [{ id: 'benedict', nombre: 'Reactivo de Benedict', color: '#3a7bd5', e: 'BENEDICT' }, ...(grado >= 11 ? [{ id: 'acido', nombre: 'Ácido diluido (para hidrolizar)', color: '#f0f0e0', e: 'ÁCIDO' }] : [])]
+    : []
+  const piezas: Pieza[] = []
+  if (prueba === 'lipidos') {
+    lista.forEach((a, k) => piezas.push({ id: `t-${a.id}`, nombre: a.nombre, x: xTubo(k), y: 335, ancho: paso0 - 4, alto: 100, tomable: true, dibujo: <Tubo color="rgb(242, 236, 217)" etiqueta={CORTO(a)} capa={a.lipido > 0.6 ? 'rgba(240,210,90,0.8)' : undefined} /> }))
+    const manchas = lista.flatMap((a, k) => {
+      const t = est.lipidos[a.id]
+      if (!t) return []
+      const seco = Math.min(1, t.t / 600)
+      const queda = a.lipido > 0.2 ? 0.15 + a.lipido * 0.6 : 0.6 * (1 - seco)
+      return [{ x: -56 + (k % 6) * 22, y: -24 + Math.floor(k / 6) * 40, color: `rgba(210, 195, 140, ${queda})`, brillo: a.lipido > 0.2 || seco < 0.9 }]
+    })
+    piezas.push({ id: 'papel', nombre: 'Hoja de papel', x: 760, y: 345, ancho: 150, alto: 96, dibujo: <HojaPapel manchas={manchas} /> })
+  } else {
+    lista.forEach((a, k) => {
+      const t = T(prueba, a.id)
+      piezas.push({ id: `t-${a.id}`, nombre: `Tubo: ${a.nombre}`, x: xTubo(k), y: enBano ? 318 : 335, ancho: paso0 - 4, alto: 100, dibujo: <Tubo color={colorTubo(prueba, a, t.r, t.t, hidrolizado)} etiqueta={CORTO(a)} capa={a.lipido > 0.6 && t.r.length ? 'rgba(240,210,90,0.8)' : undefined} /> })
+    })
+    reactivos.forEach((r, k) => piezas.push({ id: r.id, nombre: r.nombre, x: 680 + k * 66, y: 312, ancho: 50, alto: 96, tomable: true, color: r.color, dibujo: <Gotero color={r.color} etiqueta={r.e} oscuro={r.oscuro} /> }))
+    if (prueba === 'benedict') {
+      piezas.push({ id: 'asa', nombre: enBano ? 'Gradilla (sacar del baño)' : 'Gradilla (llevar al baño)', x: 50 + ((lista.length - 1) * paso0) / 2, y: 405, ancho: 80, alto: 34, tomable: true, dibujo: <AsaGradilla /> })
+      piezas.push({ id: 'bano', nombre: 'Baño María', x: 830, y: 345, ancho: 112, alto: 90, dibujo: <BanoMaria dentro={enBano} /> })
+    }
+  }
+  if (paso) piezas.push({ id: 'reloj', nombre: 'Temporizador (toca: +1 min)', x: prueba === 'lipidos' ? 900 : 945, y: prueba === 'lipidos' ? 330 : 250, ancho: 72, alto: 72, alTocar: () => { setAlarma(false); setCuenta((c) => c + 60) }, dibujo: <Reloj s={cuenta} alarma={alarma} aviso={prueba === 'lipidos' ? '¡Mira!' : '¡Saca!'} /> })
+  piezas.push({ id: 'caneca', nombre: 'Residuos (toca: vaciar y empezar esta prueba)', alTocar: () => { setEst((e) => ({ ...e, [prueba]: {} })); setEnBano(false); setCuenta(0); setAlarma(false); setRev(false) }, x: 960, y: prueba === 'lipidos' ? 430 : 360, ancho: 54, alto: 76, dibujo: <Caneca /> })
+
+  const destinos = (de: string) => {
+    if (de === 'asa') return ['bano']
+    if (prueba === 'lipidos') return ['papel']
+    return lista.map((a) => `t-${a.id}`)
+  }
+  const soltar = (de: string, en: string): Uso | string => {
+    if (de === 'asa') {
+      if (en !== 'bano') return 'La gradilla va al baño María (y se saca soltándola otra vez sobre él).'
+      if (!enBano && !lista.some((a) => T('benedict', a.id).r.includes('benedict'))) return 'Primero echa el reactivo de Benedict en los tubos.'
+      return { anim: 'poner', hecho: () => setEnBano((b) => !b) }
+    }
+    if (prueba === 'lipidos') {
+      if (en !== 'papel') return 'Pon una gota de cada alimento en la hoja de papel.'
+      const id = de.slice(2)
+      if (est.lipidos[id]) return 'Ese alimento ya tiene su mancha.'
+      return { anim: 'gotas', gotas: 1, hecho: () => setEst((e) => ({ ...e, lipidos: { ...e.lipidos, [id]: { r: ['gota'], t: 0 } } })) }
+    }
+    if (!en.startsWith('t-')) return 'El reactivo se echa en los tubos, uno por uno.'
+    const id = en.slice(2)
+    const t = T(prueba, id)
+    if (t.r.includes(de)) return 'Ese tubo ya tiene ese reactivo.'
+    if (de === 'acido') {
+      if (id !== 'azucar') return 'El ácido se usa solo en el tubo del azúcar de mesa, para partir la sacarosa.'
+      if (t.r.includes('benedict')) return 'Primero se hidroliza y luego se echa el Benedict.'
+    }
+    return { anim: 'gotas', gotas: 3, hecho: () => echar(id, de) }
+  }
+
+  // listo para interpretar: todos los tubos con su reactivo (y el Benedict calentado; las manchas secas)
+  const completo = (p: Prueba) =>
+    lista.every((a) => {
+      const t = est[p][a.id]
+      if (!t) return false
+      if (p === 'lugol') return t.r.includes('lugol')
+      if (p === 'biuret') return t.r.includes('soda') && t.r.includes('cobre')
+      if (p === 'benedict') return t.r.includes('benedict') && t.t > 0
+      return t.t >= 600
+    })
+  const listaPrueba = completo(prueba)
   const clave = (p: Prueba, a: Alimento) => `${p}:${a.id}`
   const ciclar = (p: Prueba, a: Alimento) => {
     setRev(false)
     setMarcas((m) => ({ ...m, [clave(p, a)]: m[clave(p, a)] === '+' ? '−' : m[clave(p, a)] === '−' ? '?' : '+' }))
   }
-  const hacer = () => setHecha((h) => new Set(h).add(prueba))
   const total = pruebas.length * lista.length
   const aciertos = pruebas.reduce((s, p) => s + lista.filter((a) => (marcas[clave(p, a)] === '+') === verdad(p, a, hidrolizado) && (marcas[clave(p, a)] ?? '?') !== '?').length, 0)
   const btn = 'min-h-10 rounded-full border px-3 text-sm font-semibold'
+  const avisos = [
+    ...(prueba === 'biuret' && lista.some((a) => { const r = T('biuret', a.id).r; return r.indexOf('cobre') >= 0 && (r.indexOf('soda') < 0 || r.indexOf('cobre') < r.indexOf('soda')) }) ? ['En algún tubo echaste el sulfato de cobre antes que la soda: el Biuret necesita medio básico primero.'] : []),
+    ...(prueba === 'benedict' && listaPrueba && !enBano && lista.some((a) => T('benedict', a.id).t < 300) ? ['Algunos tubos estuvieron menos de 5 minutos en el baño María: el color puede quedarse a medio camino.'] : []),
+  ]
 
   return (
     <div className="flex flex-col gap-4">
       <div className="flex flex-wrap gap-2">
         {pruebas.map((p) => (
-          <button key={p} type="button" onClick={() => setPrueba(p)} className={`${btn} ${prueba === p ? 'border-[var(--acento)] bg-[var(--acento)] text-white' : 'border-[var(--linea)] bg-[var(--tarjeta)]'}`}>
-            {PRUEBAS[p].busca} · {PRUEBAS[p].nombre}{hecha.has(p) ? ' ✔' : ''}
+          <button key={p} type="button" onClick={() => cambiarPrueba(p)} className={`${btn} ${prueba === p ? 'border-[var(--acento)] bg-[var(--acento)] text-white' : 'border-[var(--linea)] bg-[var(--tarjeta)]'}`}>
+            {PRUEBAS[p].busca} · {PRUEBAS[p].nombre}{completo(p) ? ' ✔' : ''}
           </button>
         ))}
       </div>
       <div className="rounded-2xl bg-[var(--tarjeta)] p-4 text-sm">
         <p><b>Busca:</b> {P.busca}. <b>Cómo:</b> {P.como}</p>
+        <p className="mt-1 text-[var(--suave)]">
+          {prueba === 'benedict' ? 'Echa el reactivo en cada tubo y lleva la gradilla (por el asa) al baño María. Programa 5 min en el temporizador (acelerado: 1 s = 10 s) y sácala cuando suene.'
+            : prueba === 'lipidos' ? 'Toma cada tubo y pon una gota en la hoja. Programa 10 min de secado (acelerado: 1 s = 20 s) y mira qué manchas quedan.'
+            : prueba === 'biuret' ? 'En cada tubo: primero la soda y después el sulfato de cobre.'
+            : 'Echa el lugol en cada tubo.'}
+        </p>
         {grado < 11 && <p className="mt-1"><b>Positivo:</b> {P.positivo}.</p>}
-        <div className="mt-3 flex flex-wrap items-center gap-2">
-          <button type="button" onClick={hacer} className={`${btn} border-[var(--acento)] bg-[var(--acento)] text-white`}>{hecha.has(prueba) ? 'Prueba hecha' : 'Hacer la prueba'}</button>
-          {prueba === 'benedict' && (
-            <button type="button" onClick={() => setCalor((c) => !c)} className={`${btn} ${calor ? 'border-[#c8781e] bg-[#fff1df]' : 'border-[var(--linea)]'}`}>{calor ? '🔥 En baño María' : 'Poner en baño María'}</button>
-          )}
-          {prueba === 'benedict' && grado >= 11 && (
-            <button type="button" disabled={hidrolizado} onClick={() => setHidrolizado(true)} className={`${btn} border-[var(--linea)]`}>{hidrolizado ? 'Azúcar hidrolizado ✔' : 'Hidrolizar el azúcar (hervir con ácido y neutralizar)'}</button>
-          )}
-        </div>
-        {prueba === 'benedict' && hecha.has('benedict') && !calor && <p className="mt-2 font-semibold text-[#b5462c]">⚠ Todos siguen azules: el reactivo de Benedict solo reacciona con calor.</p>}
+        {avisos.map((a) => <p key={a} className="mt-2 font-semibold text-[#b5462c]">⚠ {a}</p>)}
       </div>
-
-      <svg viewBox={`0 0 ${lista.length * 80 + 20} 230`} className="w-full rounded-2xl border border-[var(--linea)] bg-[#f4f1ea]" role="img" aria-label="Gradilla con los tubos">
-        {prueba !== 'lipidos' && <rect x="5" y="150" width={lista.length * 80 + 10} height="14" fill="#c8a06a" stroke="#7a5a2a" />}
-        {lista.map((a, k) => {
-          const x = 50 + k * 80
-          const hecho = hecha.has(prueba)
-          if (prueba === 'lipidos') {
-            const l = hecho ? a.lipido : 0.8
-            return (
-              <g key={a.id}>
-                <rect x={x - 34} y="40" width="68" height="90" fill="#fdfcf6" stroke="#bbb" />
-                <circle cx={x} cy="85" r="18" fill={hecho ? `rgba(220, 205, 150, ${0.15 + l * 0.6})` : 'rgba(200, 190, 150, 0.6)'} stroke={hecho && a.lipido > 0.2 ? '#b8a050' : 'none'} style={{ transition: 'all 1s' }} />
-                {hecho && a.lipido > 0.2 && <circle cx={x - 6} cy="80" r="5" fill="rgba(255,255,255,0.6)" />}
-                <text x={x} y="148" textAnchor="middle" fontSize="11" fontWeight="700">{a.nombre}</text>
-              </g>
-            )
-          }
-          return (
-            <g key={a.id}>
-              <path d={`M${x - 12} 40 V140 Q${x - 12} 152 ${x} 152 Q${x + 12} 152 ${x + 12} 140 V40`} fill="#fff" stroke="#3a3a3a" strokeWidth="2.5" />
-              <path d={`M${x - 11} 95 V140 Q${x - 11} 151 ${x} 151 Q${x + 11} 151 ${x + 11} 140 V95 Z`} fill={hecho ? colorTubo(prueba, a, calor, hidrolizado) : '#f2ecd9'} style={{ transition: 'fill 1.2s' }} />
-              {a.lipido > 0.6 && hecho && <rect x={x - 11} y="92" width="22" height="6" fill="rgba(240, 210, 90, 0.8)" />}
-              <text x={x} y="180" textAnchor="middle" fontSize="11" fontWeight="700">{a.nombre.split(' (')[0]}</text>
-            </g>
-          )
-        })}
-      </svg>
-
-      {hecha.has(prueba) && (
+      <MesaViva desde={190} piezas={piezas} destinos={destinos} soltar={soltar} />
+      {!listaPrueba && <p className="text-sm text-[var(--suave)]">Cuando todos los tubos tengan su prueba completa, podrás interpretarlos.</p>}
+      {listaPrueba && (
         <div className="flex flex-wrap gap-2">
           <span className="self-center text-sm font-semibold">Interpreta cada tubo (toca para cambiar ? → + → −):</span>
           {lista.map((a) => {
