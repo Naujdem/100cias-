@@ -72,7 +72,8 @@ Se quedan como están (son quices o tablas): Seguridad (preguntas; solo «Víste
 
 Prácticas nuevas hechas con la regla: ✅ Ensayo a la llama (18 nov 2026: mechero que se enciende tocándolo, asa al HCl para limpiar, a la sal y a la llama; el color dura 6 s reales y deja restos si no se limpia; muestra desconocida; espectroscopio desde 9°; cobalto y mezcla Na+K en 11°).
 ✅ Tipos de reacción (18 nov 2026: lija al clavo; hierro, zinc y cobre a vasos de CuSO₄ con tiempo real 1 s = 1 min; goteros a cuatro tubos con ocho parejas de precipitado; electrólisis con agua, bicarbonato y batería que se toca, gases 2:1 probados con fósforo y astilla).
-Prácticas nuevas pendientes (ya se hacen con la regla): Reactivo límite con globos, Gases, Dilución y solubilidad, Ácidos, bases y pH, Titulación, Velocidad de reacción, Saponificación, Combustión.
+✅ Reactivo límite con globos (18 nov 2026: vinagre de a 25 mL a cinco botellas, bicarbonato de a 1 g a cinco globos, globo a la botella y levantarlo soltándolo otra vez; se infla en tiempo real; cinta métrica; aviso si el vinagre no es igual).
+Prácticas nuevas pendientes (ya se hacen con la regla): Gases, Dilución y solubilidad, Ácidos, bases y pH, Titulación, Velocidad de reacción, Saponificación, Combustión.
 
 ## Fase 0 — Base común
 - 0.1 Mesa de laboratorio (motor reutilizable; cada práctica es configuración).
