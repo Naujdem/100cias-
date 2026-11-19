@@ -62,7 +62,7 @@ Biología:
 9. ~~El microscopio~~ ✅ — el enfoque y el reto usan el MicroscopioPanel (un solo motor de enfoque); las partes siguen como exploración.
 
 Química:
-10. Prepara 100 mL de solución 0,5 M — pasar a MesaViva (espátula con polvo, vidrio de reloj en la balanza, verter al matraz, piseta hasta el aforo).
+10. ~~Prepara 100 mL de solución 0,5 M~~ ✅ (18 nov 2026: espátula y microespátula cargadas en el frasco, vidrio de reloj a la balanza y TARA tocándola, quitar lo de más a residuos, jarra/piseta/gotero, varilla, embudo —sin él se derrama—, enjuague, lupa del menisco, tapón e inversiones tocando el matraz). Se retiró el motor viejo `Mesa.tsx`.
 11. Medición — llenar la pipeta, la probeta, el vaso y la taza y vaciarlos en la balanza; mover el ojo arrastrándolo.
 12. Densidades — objeto a la balanza, a la regla y a la probeta; alfiler; en la torre, verter cada líquido.
 13. Mezclas y separación — imán sobre la mezcla, tamiz, agua, embudo con filtro, embudo de decantación, estufa, destilador; tira de cromatografía al solvente.
