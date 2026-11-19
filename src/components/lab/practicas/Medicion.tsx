@@ -1,9 +1,14 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import type { ReactNode } from 'react'
+import MesaViva from '../MesaViva.tsx'
+import type { Pieza, Uso } from '../MesaViva.tsx'
+import { Balanza, Caneca } from '../dibujos.tsx'
 
 // Laboratorio de Química 1 (PLAN-LABORATORIOS.md): medición, precisión y exactitud.
-// Parte 1: leer el menisco (ojo al nivel, fondo del menisco, paralaje) en probeta de 100 mL, probeta de 10 mL
-// y bureta (desde 9°, escala que crece hacia abajo). Parte 2: medir 25 mL cinco veces con cuatro instrumentos,
-// pesar (agua: 1 g = 1 mL) y ver en la diana cuál es exacto y cuál preciso. Datos de modelo, no medidos.
+// Parte 1: leer el menisco (el ojo se arrastra hasta el nivel; fondo del menisco, paralaje) en probeta de 100 mL, probeta de 10 mL
+// y bureta (desde 9°, escala que crece hacia abajo). Parte 2, en mesa viva: llenar cada instrumento en el bidón,
+// tarar la balanza y verterlo en el vaso que está sobre ella, cinco veces (agua: 1 g = 1 mL); en la diana se ve
+// cuál es exacto y cuál preciso. Datos de modelo, no medidos.
 
 const f = (x: number, d = 1) => x.toLocaleString('es-CO', { minimumFractionDigits: d, maximumFractionDigits: d })
 
@@ -28,14 +33,18 @@ function Menisco({ grado }: { grado: number }) {
   const paso = I.div / 2
   const dec = I.div < 0.2 ? 2 : 1
   const [real, setReal] = useState(() => nuevoValor(I))
-  const [ojo, setOjo] = useState(2)
+  const [d, setD] = useState(-70)
+  const ojo = d < -12 ? 2 : d > 12 ? 0 : 1
+  const svg = useRef<SVGSVGElement>(null)
+  const arrastra = useRef(false)
+  const moverOjo = (v: number) => setD(Math.max(-110, Math.min(110, v)))
   const [lec, setLec] = useState(() => Math.round(nuevoValor(I) / paso) * paso)
   const [res, setRes] = useState<string[] | null>(null)
   const [puntos, setPuntos] = useState({ bien: 0, total: 0 })
 
   const nueva = (k = ii) => {
     const J = insts[k]
-    setIi(k); setReal(nuevoValor(J)); setLec(nuevoValor(J)); setOjo(Math.random() < 0.5 ? 0 : 2); setRes(null)
+    setIi(k); setReal(nuevoValor(J)); setLec(nuevoValor(J)); setD(Math.random() < 0.5 ? 70 : -70); setRes(null)
   }
   const anotar = () => {
     if (res) return
@@ -58,8 +67,8 @@ function Menisco({ grado }: { grado: number }) {
       const k = e.key.toLowerCase()
       const n = parseInt(k, 10)
       if (n >= 1 && n <= insts.length) nueva(n - 1)
-      else if (k === 'w' || k === 'arrowup') setOjo((o) => Math.min(2, o + 1))
-      else if (k === 's' || k === 'arrowdown') setOjo((o) => Math.max(0, o - 1))
+      else if (k === 'w' || k === 'arrowup') setD((v) => Math.max(-110, v - 8))
+      else if (k === 's' || k === 'arrowdown') setD((v) => Math.min(110, v + 8))
       else if (k === 'arrowright' || k === 'd') setLec((v) => +(v + paso).toFixed(2))
       else if (k === 'arrowleft' || k === 'a') setLec((v) => +Math.max(0, v - paso).toFixed(2))
       else if (k === 'enter') anotar()
@@ -79,11 +88,17 @@ function Menisco({ grado }: { grado: number }) {
   const borde = PX // el agua sube una división por el vidrio
   const marcas: number[] = []
   for (let k = -7; k <= 7; k++) marcas.push(+(c + k * I.div).toFixed(2))
-  const yOjo = yNivel + (1 - ojo) * 70
+  const yOjo = yNivel + d
   const esEtiqueta = (v: number) => Math.abs(v / I.etiqueta - Math.round(v / I.etiqueta)) < 1e-6
   return (
     <div className="grid gap-4 lg:grid-cols-[1fr_320px]">
-      <svg viewBox="0 0 520 320" className="w-full rounded-2xl border border-[var(--linea)] bg-[#f4f1ea]" role="img" aria-label={`Menisco en ${I.n}`}>
+      <svg ref={svg} viewBox="0 0 520 320" className="w-full touch-none select-none rounded-2xl border border-[var(--linea)] bg-[#f4f1ea]" role="img" aria-label={`Menisco en ${I.n}`}
+        onPointerMove={(e) => {
+          const m = svg.current?.getScreenCTM()
+          if (!arrastra.current || !m) return
+          moverOjo(new DOMPoint(e.clientX, e.clientY).matrixTransform(m.inverse()).y - yNivel)
+        }}
+        onPointerUp={() => { arrastra.current = false }} onPointerLeave={() => { arrastra.current = false }}>
         <clipPath id="ventana"><rect x="40" y="20" width="300" height="280" rx="14" /></clipPath>
         <g clipPath="url(#ventana)">
           <rect x="40" y="20" width="300" height="280" fill="#fff" />
@@ -104,11 +119,12 @@ function Menisco({ grado }: { grado: number }) {
         <rect x="40" y="20" width="300" height="280" rx="14" fill="none" stroke="#666" strokeWidth="2" />
         {/* ojo y línea de vista */}
         <line x1="470" y1={yOjo} x2="190" y2={yNivel} stroke="#c0392b" strokeWidth="1.5" strokeDasharray="6 5" opacity="0.8" />
-        <g transform={`translate(470 ${yOjo})`}>
+        <g transform={`translate(470 ${yOjo})`} style={{ cursor: 'ns-resize' }} onPointerDown={() => { arrastra.current = true }}>
+          <rect x="-30" y="-24" width="60" height="48" fill="transparent" />
           <ellipse rx="22" ry="12" fill="#fff" stroke="#333" strokeWidth="2" />
           <circle r="7" fill="#5a3e2b" /><circle r="3" fill="#111" />
         </g>
-        <text x="470" y="312" textAnchor="middle" fontSize="12" fill="#555">ojo {OJOS[ojo]}</text>
+        <text x="470" y="312" textAnchor="middle" fontSize="12" fill={ojo === 1 ? '#1e8449' : '#555'}>ojo {OJOS[ojo]} · arrástralo</text>
         <text x="190" y="14" textAnchor="middle" fontSize="12" fill="#555">{I.n} · cada rayita = {f(I.div, dec)} mL{I.abajo ? ' · la escala crece hacia abajo' : ''}</text>
         {res && <line x1="40" x2="340" y1={yNivel} y2={yNivel} stroke="#27ae60" strokeWidth="2" />}
       </svg>
@@ -118,7 +134,7 @@ function Menisco({ grado }: { grado: number }) {
             <button key={J.n} type="button" onClick={() => nueva(k)} className={`rounded-full border px-3 py-1 font-semibold ${k === ii ? 'border-[var(--acento)] bg-[var(--acento)] text-white' : 'border-[var(--linea)] bg-white'}`}>{k + 1} · {J.n}</button>
           ))}
         </div>
-        <p>Ojo: <button type="button" onClick={() => setOjo((o) => Math.max(0, o - 1))} className="rounded-full border border-[var(--linea)] px-3">bajar (S)</button> <button type="button" onClick={() => setOjo((o) => Math.min(2, o + 1))} className="rounded-full border border-[var(--linea)] px-3">subir (W)</button></p>
+        <p>Arrastra el ojo hacia arriba o hacia abajo (o W/S) hasta que quede a la altura del líquido.</p>
         <div className="flex items-center gap-2">
           <span>Tu lectura:</span>
           <button type="button" onClick={() => setLec((v) => +Math.max(0, v - paso).toFixed(2))} className="h-9 w-9 rounded-full border border-[var(--linea)] text-lg">−</button>
@@ -131,7 +147,7 @@ function Menisco({ grado }: { grado: number }) {
         </div>
         {res && <div className="rounded-xl bg-[var(--tarjeta)] p-3">{res.map((m) => <p key={m} className="mt-1 first:mt-0">{m}</p>)}</div>}
         <p className="text-[var(--suave)]">Lecturas bien hechas (valor y ojo al nivel): {puntos.bien} de {puntos.total}</p>
-        <p className="text-xs text-[var(--suave)]">Teclas: 1–{insts.length} instrumento · W/S ojo · ←/→ lectura · Enter anotar · N otra.</p>
+        <p className="text-xs text-[var(--suave)]">Teclas: 1–{insts.length} instrumento · W/S mover el ojo · ←/→ lectura · Enter anotar · N otra.</p>
       </div>
     </div>
   )
@@ -166,32 +182,67 @@ function Diana({ datos }: { datos: { m: Med; v: number[] }[] }) {
   )
 }
 
+const FORMAS: Record<number, (lleno: boolean) => ReactNode> = {
+  0: (l) => <g><circle cy="-62" r="9" fill="#c0392b" stroke="#2b2b2b" strokeWidth="1.5" /><rect x="-3" y="-54" width="6" height="40" fill={l ? '#a9d3f5' : '#f6f9fc'} stroke="#2b2b2b" strokeWidth="1.5" /><ellipse cy="0" rx="9" ry="14" fill={l ? '#a9d3f5' : '#f6f9fc'} stroke="#2b2b2b" strokeWidth="1.5" /><rect x="-2" y="14" width="4" height="48" fill={l ? '#a9d3f5' : '#f6f9fc'} stroke="#2b2b2b" strokeWidth="1.2" /><line x1="-6" x2="6" y1="-34" y2="-34" stroke="#c43c3c" strokeWidth="2" /></g>,
+  1: (l) => <g><rect x="-13" y="-58" width="26" height="110" fill="#f6f9fc" stroke="#2b2b2b" strokeWidth="2" />{l && <rect x="-12" y="10" width="24" height="41" fill="#a9d3f5" />}<rect x="-24" y="52" width="48" height="6" fill="#2b2b2b" />{[0, 1, 2, 3, 4].map((k) => <line key={k} x1="-13" x2="-4" y1={40 - k * 18} y2={40 - k * 18} stroke="#2b2b2b" />)}<text x="16" y="14" fontSize="9" fill="#8e44ad" fontWeight="800">25?</text></g>,
+  2: (l) => <g><path d="M-30 -30 L-26 -26 V34 H26 V-26 L30 -30" fill="#f6f9fc" stroke="#2b2b2b" strokeWidth="2.5" />{l && <rect x="-25" y="8" width="50" height="25" fill="#a9d3f5" />}<line x1="-26" x2="-14" y1="8" y2="8" stroke="#2b2b2b" /></g>,
+  3: (l) => <g><path d="M-26 -20 H26 L22 26 Q20 32 12 32 H-12 Q-20 32 -22 26 Z" fill="#f7e6c4" stroke="#2b2b2b" strokeWidth="2.5" />{l && <ellipse cy="-12" rx="23" ry="5" fill="#a9d3f5" />}<path d="M26 -12 Q42 -6 24 14" fill="none" stroke="#2b2b2b" strokeWidth="2.5" /></g>,
+}
+
 function PrecisionExactitud({ grado }: { grado: number }) {
   const [n, setN] = useState<number[]>(MEDS.map(() => 0))
+  const [lleno, setLleno] = useState<number | null>(null)
+  const [enVaso, setEnVaso] = useState(0) // gramos de agua en el vaso de la balanza
+  const [tara, setTara] = useState(0)
+  const [msg, setMsg] = useState<{ t: string; aviso?: boolean } | null>(null)
   const [elec, setElec] = useState<(number | null)[]>(MEDS.map(() => null))
   const [ver, setVer] = useState(false)
   const datos = MEDS.map((m, j) => ({ m, v: Array.from({ length: n[j] }, (_, k) => medida(m, k)) }))
   const listos = n.every((x) => x === 5)
-  const medir = (j: number) => setN((x) => x.map((c, i) => (i === j ? Math.min(5, c + 1) : c)))
-  useEffect(() => {
-    const h = (e: KeyboardEvent) => {
-      const k = parseInt(e.key, 10)
-      if (k >= 1 && k <= 4) { medir(k - 1); e.preventDefault() }
+  const VASO = 48.62
+  const lectura = VASO + enVaso - tara
+  const piezas: Pieza[] = [
+    { id: 'bidon', nombre: 'Bidón de agua (llena aquí)', x: 80, y: 300, ancho: 100, alto: 130, dibujo: <g><rect x="-42" y="-50" width="84" height="110" rx="10" fill="rgba(169,211,245,0.75)" stroke="#2b2b2b" strokeWidth="2.5" /><rect x="-14" y="-62" width="28" height="14" fill="#2e86c1" /><text y="10" textAnchor="middle" fontSize="11" fontWeight="800" fill="#1d4e74">AGUA</text></g> },
+    ...MEDS.map((m, j) => ({ id: `i${j}`, nombre: `${j + 1} · ${m.n}${lleno === j ? ' (lleno)' : ''}`, x: 230 + j * 120, y: [298, 302, 326, 328][j], ancho: 70, alto: [144, 116, 70, 60][j], tomable: n[j] < 5, color: '#a9d3f5', dibujo: FORMAS[j](lleno === j) })),
+    { id: 'balanza', nombre: 'Balanza (toca: TARA)', x: 780, y: 330, ancho: 150, alto: 80, alTocar: () => { setTara(VASO + enVaso); setMsg({ t: 'Taras: la balanza marca 0,00 g con el vaso encima.' }) }, dibujo: <g><Balanza lectura={f(lectura, 2)} /><g transform="translate(0 -28)"><path d="M-24 -24 V18 H24 V-24" fill="#f6f9fc" stroke="#2b2b2b" strokeWidth="2" />{enVaso > 0 && <rect x="-23" y={17 - Math.min(40, enVaso / 6)} width="46" height={Math.min(40, enVaso / 6)} fill="#a9d3f5" />}</g></g> },
+    { id: 'caneca', nombre: 'Vertedero (toca: vaciar el vaso de la balanza)', x: 940, y: 324, ancho: 54, alto: 76, alTocar: () => { setEnVaso(0); setMsg({ t: 'Vacías el vaso de la balanza. Vuelve a tarar antes de la próxima medida.' }) }, dibujo: <Caneca /> },
+  ]
+  const destinos = (de: string) => (lleno === +de.slice(1) ? ['balanza'] : ['bidon'])
+  const soltar = (de: string, en: string): Uso | string => {
+    const j = +de.slice(1)
+    if (en === 'bidon') {
+      if (lleno === j) return 'Ya está lleno: viértelo en el vaso de la balanza.'
+      if (lleno !== null) return `Primero vierte el agua del instrumento ${lleno + 1} en la balanza.`
+      return { anim: 'poner', hecho: () => { setLleno(j); setMsg({ t: j === 0 ? 'Llenas la pipeta con la pera hasta que el fondo del menisco toca la marca de 25 mL.' : 'Llenas hasta la marca de 25 mL, con el ojo al nivel.' }) } }
     }
-    window.addEventListener('keydown', h)
-    return () => window.removeEventListener('keydown', h)
-  })
+    if (en !== 'balanza') return 'El agua medida se vierte en el vaso que está sobre la balanza.'
+    if (lleno !== j) return 'Está vacío: llénalo primero en el bidón.'
+    return {
+      anim: 'verter',
+      hecho: () => {
+        const v = medida(MEDS[j], n[j])
+        const tarado = Math.abs(lectura) < 0.005
+        setEnVaso((x) => x + v)
+        setLleno(null)
+        if (!tarado) return setMsg({ t: `No taraste antes de verter: la balanza marca ${f(lectura + v, 2)} g, que no es solo esta medida. Esta no cuenta: vacía o tara y repite.`, aviso: true })
+        setN((x) => x.map((c, i) => (i === j ? c + 1 : c)))
+        setMsg({ t: `La balanza marca ${f(v, 2)} g → ${f(v, 2)} mL. Anotado en la tabla. Tara de nuevo antes de la siguiente.` })
+      },
+    }
+  }
   const prom = (v: number[]) => v.reduce((a, b) => a + b, 0) / v.length
   const desv = (v: number[]) => { const p = prom(v); return Math.sqrt(v.reduce((a, b) => a + (b - p) ** 2, 0) / (v.length - 1)) }
   return (
     <div className="flex flex-col gap-4">
       <p className="rounded-2xl bg-[var(--tarjeta)] p-4 text-sm">
-        Mide <b>25 mL de agua</b> cinco veces con cada instrumento y pésalos en la balanza (1 g de agua ocupa 1 mL). <b>Exacto</b>: el promedio cae cerca del valor real. <b>Preciso</b>: las medidas quedan cerca unas de otras. Teclas 1–4 miden con cada uno.
+        Mide <b>25 mL de agua</b> cinco veces con cada instrumento: llénalo en el bidón, <b>tara</b> la balanza tocándola y vierte el agua en su vaso (1 g de agua ocupa 1 mL). <b>Exacto</b>: el promedio cae cerca del valor real. <b>Preciso</b>: las medidas quedan cerca unas de otras.
       </p>
+      <MesaViva desde={170} piezas={piezas} destinos={destinos} soltar={soltar} />
+      {msg && <p className={`-mt-2 text-sm ${msg.aviso ? 'font-semibold text-[#b5462c]' : ''}`}>{msg.aviso ? '⚠ ' : '› '}{msg.t}</p>}
       <div className="grid gap-4 md:grid-cols-[1fr_280px]">
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
-            <thead><tr className="text-left"><th className="p-1">Instrumento</th>{[1, 2, 3, 4, 5].map((k) => <th key={k} className="p-1">{k}</th>)}{grado >= 9 && <th className="p-1">Promedio</th>}{grado >= 9 && <th className="p-1">Error %</th>}{grado >= 11 && <th className="p-1">Desv.</th>}<th /></tr></thead>
+            <thead><tr className="text-left"><th className="p-1">Instrumento</th>{[1, 2, 3, 4, 5].map((k) => <th key={k} className="p-1">{k}</th>)}{grado >= 9 && <th className="p-1">Promedio</th>}{grado >= 9 && <th className="p-1">Error %</th>}{grado >= 11 && <th className="p-1">Desv.</th>}</tr></thead>
             <tbody>
               {datos.map(({ m, v }, j) => (
                 <tr key={m.n} className="border-t border-[var(--linea)]">
@@ -200,7 +251,6 @@ function PrecisionExactitud({ grado }: { grado: number }) {
                   {grado >= 9 && <td className="p-1">{v.length ? f(prom(v), 2) : '—'}</td>}
                   {grado >= 9 && <td className="p-1">{v.length ? f((Math.abs(prom(v) - 25) / 25) * 100, 1) : '—'}</td>}
                   {grado >= 11 && <td className="p-1">{v.length > 1 ? f(desv(v), 2) : '—'}</td>}
-                  <td className="p-1"><button type="button" disabled={v.length >= 5} onClick={() => medir(j)} className="rounded-full border border-[var(--linea)] px-3 text-xs font-semibold disabled:opacity-40">Medir y pesar</button></td>
                 </tr>
               ))}
             </tbody>
@@ -225,7 +275,7 @@ function PrecisionExactitud({ grado }: { grado: number }) {
           {ver && <p className="mt-2 rounded-lg bg-[#eaf5ee] p-2"><b>Conclusión:</b> para medir un volumen con cuidado se usa pipeta, bureta o matraz aforado; la probeta sirve para medidas rápidas y el vaso de precipitados solo para contener. Repetir la medida muestra la precisión; compararla con un valor conocido, la exactitud.{grado >= 11 ? ' Los errores al azar se reducen promediando; los sistemáticos, no: hay que calibrar.' : ''}</p>}
         </div>
       )}
-      <button type="button" onClick={() => { setN(MEDS.map(() => 0)); setElec(MEDS.map(() => null)); setVer(false) }} className="self-start rounded-full border border-[var(--linea)] px-4 py-1 text-sm font-semibold">Empezar de nuevo</button>
+      <button type="button" onClick={() => { setN(MEDS.map(() => 0)); setLleno(null); setEnVaso(0); setTara(0); setMsg(null); setElec(MEDS.map(() => null)); setVer(false) }} className="self-start rounded-full border border-[var(--linea)] px-4 py-1 text-sm font-semibold">Empezar de nuevo</button>
     </div>
   )
 }
@@ -241,7 +291,7 @@ export default function Medicion({ grado }: { grado: number }) {
       </div>
       {parte === 0 ? (
         <>
-          <p className="rounded-2xl bg-[var(--tarjeta)] p-4 text-sm">El agua se pega al vidrio y forma una curva: el <b>menisco</b>. Se lee en el <b>fondo de la curva</b>, con el <b>ojo a la altura del líquido</b>. Sube o baja el ojo, escoge el valor y anótalo.</p>
+          <p className="rounded-2xl bg-[var(--tarjeta)] p-4 text-sm">El agua se pega al vidrio y forma una curva: el <b>menisco</b>. Se lee en el <b>fondo de la curva</b>, con el <b>ojo a la altura del líquido</b>. Arrastra el ojo hasta el nivel del líquido, escoge el valor y anótalo.</p>
           <Menisco key={grado} grado={grado} />
         </>
       ) : <PrecisionExactitud grado={grado} />}
