@@ -104,3 +104,20 @@ export function NormalidadJuego() {
       cierre="Las fracciones molares de una mezcla siempre suman 1." />
   )
 }
+
+export function EtiquetaJuego() {
+  return (
+    <JuegoDecide titulo="¿Cuál está más concentrado?" pregunta="Compara las dos etiquetas" instrucciones="Antes de comparar, pasa las dos a la misma unidad: %, g/L o ppm." clave="cien:etiqueta-mejor"
+      opciones={[o('a', 'El primero', '🅰️'), o('b', 'El segundo', '🅱️'), o('igual', 'Igual', '🟰')]}
+      cartas={[
+        c('🧴', 'Blanqueador 5,25 % · blanqueador 3 %', 'a', '5,25 % es más concentrado.'),
+        c('🍶', 'Vinagre 4 % · vinagre 5 %', 'b', '5 g de ácido acético en 100 mL.'),
+        c('🦷', 'Crema dental 1450 ppm de flúor · otra de 1000 ppm', 'a', 'Más ppm, más flúor.'),
+        c('💧', 'Suero 0,9 % de NaCl · suero de 9 g/L de NaCl', 'igual', '9 g en 1000 mL = 0,9 g en 100 mL.'),
+        c('🧼', 'Jabón con 2 g en 100 mL · jabón con 15 g por litro', 'a', '2 % frente a 1,5 %.'),
+        c('🩹', 'Alcohol 70 % · alcohol 96 %', 'b', 'Más concentrado, aunque el de 70 % desinfecta mejor la piel.'),
+        c('🧪', 'Agua oxigenada 3 % · agua oxigenada de 10 volúmenes', 'igual', '10 volúmenes es más o menos 3 %.'),
+      ]}
+      cierre="Más grande no siempre es más: mira la unidad y el tamaño del envase." />
+  )
+}

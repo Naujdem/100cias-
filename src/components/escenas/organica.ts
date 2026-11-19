@@ -3,7 +3,7 @@ import type { ComponentType } from 'react'
 import { EscenaWohler, EscenaCarbono, EscenaFormulas, EscenaHibridacion } from './EscenasCarbono.tsx'
 import { EscenaGrupoIdea, EscenaGrupoMapa } from './EscenasGrupos.tsx'
 import { EscenaAlcCocina, EscenaAlcRamificado, EscenaAlcIsomeros, EscenaAlcCombustion } from './EscenasAlcanos.tsx'
-import { EscenaAlqCotidiano, EscenaAlqCisTrans, EscenaAlqAdicion, EscenaAlqPolimero } from './EscenasAlquenos.tsx'
+import { EscenaAlqCotidiano, EscenaAlqCisTrans, EscenaAlqAdicion, EscenaAlqPolimero, EscenaAlqMecanismo } from './EscenasAlquenos.tsx'
 import { EscenaKekule, EscenaOrtoMetaPara, EscenaCfc } from './EscenasAromaticos.tsx'
 import { EscenaGuarapo, EscenaTiposAlcohol } from './EscenasAlcoholes.tsx'
 import { EscenaCarbonilo, EscenaJabon } from './EscenasCarbonilos.tsx'
@@ -24,6 +24,7 @@ export const ESCENAS_ORGANICA: Record<string, ComponentType<{ fase: string }>> =
   'alq-cotidiano': EscenaAlqCotidiano,
   'alq-cis-trans': EscenaAlqCisTrans,
   'alq-adicion': EscenaAlqAdicion,
+  'alq-mecanismo': EscenaAlqMecanismo,
   'alq-polimero': EscenaAlqPolimero,
   'aro-kekule': EscenaKekule,
   'aro-omp': EscenaOrtoMetaPara,

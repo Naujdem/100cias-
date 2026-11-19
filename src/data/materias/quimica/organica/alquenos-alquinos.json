@@ -15,7 +15,8 @@
   "objetivos": [
     "Reconocer alquenos (C=C) y alquinos (C≡C) como hidrocarburos insaturados y sus usos.",
     "Nombrar alquenos y alquinos indicando la posición del enlace múltiple.",
-    "Explicar la isomería cis-trans, las reacciones de adición y la formación de polímeros como el polietileno."
+    "Explicar la isomería cis-trans, las reacciones de adición y la formación de polímeros como el polietileno.",
+    "Distinguir homólisis y heterólisis y describir los mecanismos de reacción orgánica (radicales, iónicos y pericíclicos) (11°)."
   ],
   "fuentes": [
     "BORRADOR: verificar con un texto de química de bachillerato (llama oxiacetilénica ≈ 3100 °C; reacción del carburo de calcio con agua; etileno como hormona de maduración)."
@@ -574,6 +575,137 @@
           ],
           "correcta": 0,
           "explicacion": "Policloruro de vinilo."
+        }
+      ],
+      "revisado": false
+    },
+    {
+      "id": "mecanismos",
+      "titulo": "¿Cómo ocurre la reacción? Mecanismos",
+      "resumen": "Homólisis y heterólisis: radicales, iones y reacciones en un solo paso.",
+      "anio": 6,
+      "etiqueta": "Paso 6",
+      "nivel": "avanzado",
+      "requiere": [
+        "adicion"
+      ],
+      "ficha": {
+        "idea": "Una ecuación dice qué entra y qué sale; el mecanismo cuenta cómo pasa: qué enlaces se rompen, cuáles se forman y en qué orden. Todo empieza con la ruptura de un enlace, que es un par de electrones compartido. Si cada átomo se queda con uno de los dos electrones, la ruptura es homolítica (homólisis) y salen radicales libres, átomos con un electrón sin pareja, muy reactivos; suele necesitar luz o calor, como el cloro que se parte con luz ultravioleta. Si un átomo se lleva los dos electrones, la ruptura es heterolítica (heterólisis) y salen iones; pasa en solventes polares y el átomo más electronegativo se queda con el par. Con esto se arman los mecanismos: la sustitución por radicales (metano + cloro con luz), la adición electrofílica de los alquenos (el doble enlace ataca a un H⁺, se forma un carbocatión y luego llega el Br⁻) y la sustitución nucleofílica (un OH⁻ reemplaza a un halógeno). En las reacciones pericíclicas, como la de Diels-Alder, no hay radicales ni iones: los enlaces se rompen y se forman a la vez, en un solo paso cíclico.",
+        "contexto": [
+          {
+            "titulo": "Electrófilo y nucleófilo",
+            "texto": "Electrófilo: «amigo de los electrones», le faltan (H⁺, carbocatión). Nucleófilo: «amigo del núcleo», trae un par para dar (OH⁻, Br⁻, H₂O)."
+          },
+          {
+            "titulo": "Flechas curvas",
+            "texto": "Los químicos dibujan con flechas curvas cómo se mueven los electrones: flecha completa para un par, media flecha para uno solo."
+          }
+        ],
+        "cuaderno": {
+          "facil": [
+            "Mecanismo: el camino paso a paso de una reacción."
+          ],
+          "media": [
+            "Homólisis → radicales libres. Heterólisis → iones."
+          ],
+          "avanzada": [
+            "Tipos: sustitución por radicales, adición electrofílica (carbocatión), sustitución nucleofílica, pericíclicas (Diels-Alder).",
+            "Electrófilo acepta un par de electrones; nucleófilo lo dona."
+          ]
+        },
+        "docente": {
+          "abrir": "¿Por qué el cloro y el metano no reaccionan en la oscuridad y sí con luz?",
+          "actividad": "Dibujar en el tablero las flechas curvas de la adición de HBr al eteno y pedir que predigan el producto con propeno (Markovnikov).",
+          "errores": [
+            "Creer que los radicales son iones.",
+            "Pensar que el mecanismo se ve directamente: se deduce de los productos y la velocidad."
+          ],
+          "minutos": 30
+        }
+      },
+      "diapositivas": [
+        {
+          "titulo": "Romper un enlace: dos maneras",
+          "visual": {
+            "tipo": "escena",
+            "id": "alq-mecanismo",
+            "fases": [
+              {
+                "id": "homolisis",
+                "nombre": "Homólisis",
+                "texto": "Un electrón para cada átomo: radicales."
+              },
+              {
+                "id": "heterolisis",
+                "nombre": "Heterólisis",
+                "texto": "Los dos electrones para uno: iones."
+              },
+              {
+                "id": "electrofilica",
+                "nombre": "Adición electrofílica",
+                "texto": "Eteno + HBr pasando por un carbocatión."
+              }
+            ]
+          },
+          "atajo": {
+            "texto": "Más sobre los CFC y el ozono",
+            "tema": "aromaticos"
+          }
+        },
+        {
+          "titulo": "Cuatro caminos",
+          "visual": {
+            "tipo": "tarjetas",
+            "items": [
+              {
+                "icono": "•",
+                "titulo": "Sustitución por radicales",
+                "texto": "CH₄ + Cl₂ (luz) → CH₃Cl + HCl"
+              },
+              {
+                "icono": "⚡",
+                "titulo": "Adición electrofílica",
+                "texto": "Alqueno + HBr: carbocatión"
+              },
+              {
+                "icono": "🔁",
+                "titulo": "Sustitución nucleofílica",
+                "texto": "CH₃Br + OH⁻ → CH₃OH + Br⁻"
+              },
+              {
+                "icono": "🔄",
+                "titulo": "Pericíclica",
+                "texto": "Diels-Alder: un anillo en un paso"
+              }
+            ]
+          }
+        }
+      ],
+      "juego": "org-mecanismo-juego",
+      "preguntas": [
+        {
+          "id": "qm-or-q-11",
+          "enunciado": "¿Qué se forma en una ruptura homolítica?",
+          "opciones": [
+            "Radicales libres",
+            "Iones",
+            "Un carbocatión",
+            "Un polímero"
+          ],
+          "correcta": 0,
+          "explicacion": "Cada átomo se queda con un electrón."
+        },
+        {
+          "id": "qm-or-q-12",
+          "enunciado": "En la adición de HBr al eteno, ¿qué intermediario se forma?",
+          "opciones": [
+            "Un carbocatión",
+            "Un radical de cloro",
+            "Un anillo de benceno",
+            "Ninguno: es pericíclica"
+          ],
+          "correcta": 0,
+          "explicacion": "El doble enlace toma el H⁺ y queda un carbono con carga +."
         }
       ],
       "revisado": false
