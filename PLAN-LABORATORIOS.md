@@ -125,23 +125,29 @@ Prácticas nuevas pendientes (ya se hacen con la regla): Combustión.
 10. Microbiología: técnica aséptica, siembra en caja de Petri, colonias en tiempo acelerado; con/sin jabón.
 11. Opcional: calidad del agua y del suelo (área 5, PRAE).
 
-## Modo libre (propuesta, por decidir)
-Además de las prácticas guiadas, una **Mesa libre** que se desbloquea con las prácticas:
-- Usa el mismo motor e inventario de las prácticas ya hechas (no hay material nuevo).
-- Las mezclas salen de un catálogo de reacciones conocidas (las de las prácticas + algunas extra);
-  si la combinación no está en el catálogo → «se mezcla, no hay reacción visible».
-- **Mezclas por definir** (idea de JuanMed): cada combinación que no está en el catálogo se guarda en
-  Supabase (`lab_mezclas_pendientes`: ingredientes ordenados como clave, cuántas veces se intentó,
-  fecha). Sin conexión, se guarda en el dispositivo y se sube al volver la red.
-- **Panel del docente**: lista de mezclas pendientes (las más intentadas primero) → «Definir reacción»
-  (color, efecto SVG, gas/precipitado/calor, explicación por grado) o «Sin reacción» (para que deje de aparecer).
-  Lo definido va a `lab_reacciones` y desde ese momento cualquiera que repita la mezcla ve el efecto.
-  Solo el rol docente/administrador puede definir (RLS).
-- El catálogo base vive en el repo; lo agregado desde el panel vive en Supabase y se suma al cargar.
-- Libreta de descubrimientos: cada reacción nueva encontrada queda registrada (estilo colección).
-- Retos opcionales: «consigue una solución azul más clara», «haz que el globo se infle más».
-- Lo peligroso sigue siendo solo simulación, con aviso.
+## Mesa libre (aprobada el 19 nov 2026)
+Decisiones de JuanMed: abierta desde el inicio (cada práctica suma reactivos al estante); primero solo la Fase 1;
+Supabase va mucho después; solo química por ahora (biología, si se hace, al final).
+
+**Fase 1 — local, sin internet**
+- Mesa viva grande con recipientes vacíos (vasos, tubos, erlenmeyer), mechero, estufa y balanza; estante con los
+  reactivos de las prácticas de química (mismo motor y dibujos, nada nuevo que dibujar salvo lo mínimo).
+- Catálogo de reacciones en el repo (`data/reaccionesLibre.ts`): las de las 15 prácticas + algunas extra; cada una
+  con color, efecto SVG (burbujas, precipitado, calor, llama, espuma), condiciones (cantidad, exceso, temperatura),
+  explicación por grado y aviso «solo simulación» si es peligrosa.
+- Mezcla fuera del catálogo → «se mezcla, no hay reacción visible» y se guarda en el dispositivo como pendiente
+  (ingredientes ordenados como clave, cuántas veces, fecha).
+- Panel del docente (con el modo docente): pendientes, las más intentadas primero → «Definir reacción» o «Sin reacción».
+  Exportar lo definido a un archivo; importarlo al catálogo del repo para que lo vean todos.
+- Libreta de descubrimientos (colección) con las reacciones encontradas.
+- Orden: catálogo y estante → mesa con efectos → panel local con exportar/importar → libreta.
+
+**Fase 2 — compartir (mucho después)**
+- Supabase con el login de SimulaPro: `lab_mezclas_pendientes` y `lab_reacciones` con RLS; solo el docente define;
+  sin conexión se guarda y se sube al volver la red.
+
+**Más adelante:** retos opcionales («consigue un azul más claro», «infla más el globo»); mesa libre de biología.
 
 ## Orden de construcción
 Mesa (0.1) → Química 9 (piloto) → seguridad (0.2) → Biología 1–2 → el resto, una práctica por sesión,
-alternando química y biología → Mesa libre al final (si se aprueba).
+alternando química y biología → Mesa libre al final (aprobada: ver arriba).
