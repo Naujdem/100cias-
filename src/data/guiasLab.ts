@@ -4,6 +4,31 @@ import type { Guia } from '../components/lab/GuiaLab.tsx'
 // cuando se crea o se convierte a mesa viva (PLAN-LABORATORIOS.md).
 
 export const GUIAS: Record<string, Guia> = {
+  cristalizacion: {
+    objetivo: ['Preparar soluciones saturadas y obtener cristales, comparando su forma y su tamaño según cómo se enfríen o evaporen.'],
+    fundamento: [
+      'Una solución saturada tiene disuelto todo el soluto que admite a esa temperatura; en agua caliente cabe más.',
+      'Al enfriar o evaporar una solución saturada, el soluto que ya no cabe se separa y sus partículas se ordenan formando cristales con una forma propia: cubos (sal), octaedros (alumbre), prismas (azúcar).',
+      'Si el cambio es rápido se forman muchos cristales pequeños; si es lento, pocos y grandes. Un hilo (semilla) da un lugar donde crecer.',
+      'Desde 9°: la curva de solubilidad indica cuánto soluto cabe a cada temperatura. La de la sal es casi plana: para cristalizarla hay que evaporar.',
+    ],
+    materiales: ['Agua', 'Sal, azúcar y alumbre (de farmacia)', 'Olla o vaso resistente al calor y estufa', 'Cuchara o varilla', 'Frascos de vidrio limpios', 'Lápiz e hilo de algodón', 'Plato hondo', 'Nevera', 'Lupa'],
+    procedimiento: [
+      'Calienta 100 mL de agua sin dejarla hervir.',
+      'Agrega el soluto de a cucharadas y revuelve hasta que ya no se disuelva más y quede un poco en el fondo: está saturada.',
+      'Vierte con cuidado solo el líquido a un frasco limpio, sin el sólido del fondo.',
+      'Amarra el hilo al lápiz y cuélgalo dentro del frasco sin que toque el fondo ni las paredes.',
+      'Prepara tres montajes: uno en la nevera, uno tapado en la mesa y uno en un plato al aire.',
+      'Observa con la lupa cada día durante una semana; dibuja la forma de los cristales y mide el más grande.',
+    ],
+    seguridad: ['El agua caliente quema: usa guantes de cocina o un trapo.', 'El alumbre no se come.', 'No uses frascos de vidrio que estén rajados con líquidos calientes.'],
+    preguntas: [
+      '¿Qué forma tienen los cristales de cada sustancia?',
+      '¿Dónde salieron los cristales más grandes? ¿Por qué?',
+      '¿Por qué la sal casi no cristaliza en la nevera y sí en el plato?',
+      'Desde 9°: con la curva de solubilidad, ¿cuántos gramos de alumbre cristalizan al enfriar de 60 °C a 20 °C 100 mL de solución saturada?',
+    ],
+  },
   corrosion: {
     objetivo: ['Comparar la oxidación de clavos de hierro en distintos medios y reconocer qué la acelera y qué la evita.'],
     fundamento: [
